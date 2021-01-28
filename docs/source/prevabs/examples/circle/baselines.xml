@@ -1,4 +1,0 @@
-<baselines basepoints="basepoints">
-    <baseline name="blcircle1" type="circle">
-        <center>ct</center><radius>10</radius></baseline>
-</baselines>
