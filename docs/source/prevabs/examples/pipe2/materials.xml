@@ -1,0 +1,20 @@
+<materials>
+	<material name="iso5_1" type="engineering constants">
+		<density>1.86E+03</density>
+        <elastic>
+            <e1>20.59E+06</e1>
+            <e2>1.42E+06</e2>
+            <e3>1.42E+06</e3>
+            <g12>0.87E+06</g12>
+            <g13>0.87E+06</g13>
+            <g23>0.87E+06</g23>
+            <nu12>0.42</nu12>
+            <nu13>0.42</nu13>
+            <nu23>0.42</nu23>
+        </elastic>
+	</material>
+    <lamina name="la_iso5_1_01">
+        <material>iso5_1</material>
+        <thickness>0.1</thickness>
+    </lamina>
+</materials>

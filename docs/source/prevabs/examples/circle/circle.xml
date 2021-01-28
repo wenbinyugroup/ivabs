@@ -1,0 +1,22 @@
+<cross_section name="circle">
+    <include>
+        <baseline>baselines</baseline>
+        <material>materials</material>
+        <layup>layups</layup>
+    </include>
+    <general>
+        <origin>0.0 0.0</origin>
+        <scale>1.0</scale>
+        <rotation>0.0</rotation>
+        <mesh_size>0.2</mesh_size>
+        <element_type>linear</element_type>
+    </general>
+    <segments>
+        <segment name="blcircle1">
+            <baseline>blcircle1</baseline>
+            <layup>layup2</layup>
+            <layup_direction>right</layup_direction>
+            <level>1</level>
+        </segment>
+    </segments>
+</cross_section>

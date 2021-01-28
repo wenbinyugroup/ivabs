@@ -1,0 +1,26 @@
+<cross_section name="zbeam">
+    <include>
+        <baseline>baselines</baseline>
+        <material>materials</material>
+        <layup>layups</layup>
+    </include>
+    <general>
+        <origin>0.0 0.0</origin>
+        <scale>1.0</scale>
+        <rotation>0.0</rotation>
+        <mesh_size>0.005</mesh_size>
+        <element_type>linear</element_type>
+    </general>
+    <segments>
+        <segment name="sg1">
+            <baseline>bl1</baseline>
+            <layup>layup1</layup>
+            <layup_direction>right</layup_direction>
+        </segment>
+        <segment name="sg2">
+            <baseline>bl2</baseline>
+            <layup>layup2</layup>
+            <layup_direction>right</layup_direction>
+        </segment>
+    </segments>
+</cross_section>

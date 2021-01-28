@@ -1,0 +1,20 @@
+Utility Functions
+=================
+
+.. highlight:: python
+
+::
+
+    import msg.utilities
+
+.. autofunction:: msg.utilities.calcGeneralRotation3D
+
+.. autofunction:: msg.utilities.calcCab
+
+.. autofunction:: msg.utilities.textToMatrix
+
+.. autofunction:: msg.utilities.writeFormatIntegers
+
+.. autofunction:: msg.utilities.writeFormatFloats
+
+.. autofunction:: msg.utilities.updateXMLElement

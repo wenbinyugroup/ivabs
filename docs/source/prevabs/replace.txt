@@ -1,0 +1,29 @@
+.. |z1| replace:: :math:`z_1`
+.. |z2| replace:: :math:`z_2`
+.. |z3| replace:: :math:`z_3`
+.. |x1| replace:: :math:`x_1`
+.. |x2| replace:: :math:`x_2`
+.. |x3| replace:: :math:`x_3`
+.. |y1| replace:: :math:`y_1`
+.. |y2| replace:: :math:`y_2`
+.. |y3| replace:: :math:`y_3`
+.. |len_im| replace:: :math:`\mathrm{in}`
+.. |den_im| replace:: :math:`\mathrm{lb\cdot sec^2/in^4}`
+.. |mod_im| replace:: :math:`\mathrm{psi}`
+.. |len_si| replace:: :math:`\mathrm{m}`
+.. |den_si| replace:: :math:`\mathrm{kg/m^3}`
+.. |mod_si| replace:: :math:`\mathrm{Pa}`
+.. |stf0_im| replace:: :math:`\mathrm{lb}`
+.. |stf1_im| replace:: :math:`\mathrm{lb \cdot in}`
+.. |stf2_im| replace:: :math:`\mathrm{lb \cdot in^2}`
+.. |e| replace:: :math:`E`
+.. |nu| replace:: :math:`\nu`
+.. |e1| replace:: :math:`E_{1}`
+.. |e2| replace:: :math:`E_{2}`
+.. |e3| replace:: :math:`E_{3}`
+.. |g12| replace:: :math:`G_{12}`
+.. |g13| replace:: :math:`G_{13}`
+.. |g23| replace:: :math:`G_{23}`
+.. |nu12| replace:: :math:`\nu_{12}`
+.. |nu13| replace:: :math:`\nu_{13}`
+.. |nu23| replace:: :math:`\nu_{23}`

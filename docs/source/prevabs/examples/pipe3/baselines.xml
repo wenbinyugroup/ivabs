@@ -1,0 +1,12 @@
+<baselines basepoints="basepoints">
+    <baseline name="bl1" type="straight">
+        <points>bl,tl</points></baseline>
+    <baseline name="blarc1" type="arc">
+        <center>ct1</center><start>tl</start><end>tr</end>
+        <angle>180</angle><direction>cw</direction></baseline>    
+    <baseline name="bl2" type="straight">
+        <points>tr,br</points></baseline>
+    <baseline name="blarc2" type="arc">
+        <center>ct2</center><start>br</start><end>bl</end>
+        <angle>180</angle><direction>cw</direction></baseline>
+</baselines>

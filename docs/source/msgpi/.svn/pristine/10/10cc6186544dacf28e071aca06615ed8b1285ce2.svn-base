@@ -1,0 +1,276 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>analysis Module &mdash; msgpi  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Structure Module" href="ms_module.html" />
+    <link rel="prev" title="I/O Utility Functions" href="ioutils.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> msgpi
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="sg_module.html">SG Module</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sg.html">Class Module for MSM Structure Gene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="presg.html">presg Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iovabs.html">SG I/O Module for VABS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ioutils.html">I/O Utility Functions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">analysis Module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ms_module.html">Structure Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utility Functions</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">msgpi</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="sg_module.html">SG Module</a> &raquo;</li>
+        
+      <li>analysis Module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/analysis.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="analysis-module">
+<h1>analysis Module<a class="headerlink" href="#analysis-module" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">msgpi.analysis</span>
+</pre></div>
+</div>
+<dl class="function">
+<dt id="msgpi.analysis.solve">
+<code class="descclassname">msgpi.analysis.</code><code class="descname">solve</code><span class="sig-paren">(</span><em>sg_xml</em>, <em>analysis</em>, <em>ppcmd</em>, <em>solver</em>, <em>scrnout=True</em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.analysis.solve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Solve</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>sg_xml</strong> (<em>str</em>) – File name of SG design parameters (XML format).</li>
+<li><strong>analysis</strong> (<em>str</em>) – <p>Analysis to be carried out.</p>
+<ul>
+<li>h - homogenization</li>
+<li>d - dehomogenization/localization/recover</li>
+<li>f - initial failure strength</li>
+<li>fe - initial failure envelope</li>
+<li>fi - initial failure indices and strength ratios</li>
+</ul>
+</li>
+<li><strong>ppcmd</strong> (<em>str</em>) – Preprocessor command.</li>
+<li><strong>solver</strong> (<em>str</em>) – Format of the generated input file (‘vabs’ or ‘swiftcomp’).</li>
+<li><strong>scrnout</strong> (<em>bool</em><em>, </em><em>default True</em>) – Switch of printing solver messages.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msgpi.analysis.run">
+<code class="descclassname">msgpi.analysis.</code><code class="descname">run</code><span class="sig-paren">(</span><em>input_name</em>, <em>analysis</em>, <em>solver</em>, <em>smdim</em>, <em>scrnout=True</em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.analysis.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run codes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>input_name</strong> (<em>str</em>) – Name of the input file.</li>
+<li><strong>analysis</strong> (<em>{'h'</em><em>, </em><em>'d'</em><em>, </em><em>'l'</em><em>, </em><em>'f'</em><em>, </em><em>'fe'</em><em>, </em><em>'fi'}</em>) – <p>Analysis to be carried out.</p>
+<ul>
+<li>h - homogenization</li>
+<li>d or l - dehomogenization/localization/recover</li>
+<li>f - initial failure strength</li>
+<li>fe - initial failure envelope</li>
+<li>fi - initial failure indices and strength ratios</li>
+</ul>
+</li>
+<li><strong>solver</strong> (<em>{'swiftcomp'</em><em>, </em><em>'vabs'}</em>) – Excect command string of the code (‘vabs’ or ‘swiftcomp’).</li>
+<li><strong>smdim</strong> (<em>int</em>) – Dimension of the macroscopic structural model.</li>
+<li><strong>scrnout</strong> (<em>bool</em><em>, </em><em>default True</em>) – Switch of printing solver messages.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ms_module.html" class="btn btn-neutral float-right" title="Structure Module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ioutils.html" class="btn btn-neutral float-left" title="I/O Utility Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, msm group
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

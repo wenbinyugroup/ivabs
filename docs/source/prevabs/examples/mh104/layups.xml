@@ -1,0 +1,43 @@
+<layups>
+    <layup name="layup1">
+        <layer lamina="la_iso5_3_0381">0</layer>
+        <layer lamina="la_iso5_4_051">0</layer>
+        <!-- <layer lamina="la_iso5_2_053">20:18</layer> -->
+        <layer lamina="la_iso5_2_00095">20</layer>
+    </layup>
+    <layup name="layup2">
+        <layer lamina="la_iso5_3_0381">0</layer>
+        <layer lamina="la_iso5_4_051">0</layer>
+        <!-- <layer lamina="la_iso5_2_053">20:33</layer> -->
+        <layer lamina="la_iso5_2_001">20</layer>
+    </layup>
+    <layup name="layup3">
+        <layer lamina="la_iso5_3_0381">0</layer>
+        <layer lamina="la_iso5_4_051">0</layer>
+        <!-- <layer lamina="la_iso5_2_053">20:17</layer> -->
+        <layer lamina="la_iso5_2_00090">20</layer>
+        <!-- <layer lamina="la_iso5_1_053">30:38</layer> -->
+        <layer lamina="la_iso5_1_002">30</layer>
+        <layer lamina="la_iso5_5_3125">0</layer>
+        <!-- <layer lamina="la_iso5_1_053">30:37</layer> -->
+        <layer lamina="la_iso5_1_001">30</layer>
+        <!-- <layer lamina="la_iso5_2_053">20:16</layer> -->
+        <layer lamina="la_iso5_2_0008">20</layer>
+    </layup>
+    <layup name="layup4">
+        <layer lamina="la_iso5_3_0381">0</layer>
+        <layer lamina="la_iso5_4_051">0</layer>
+        <!-- <layer lamina="la_iso5_2_053">20:17</layer> -->
+        <layer lamina="la_iso5_2_00090">20</layer>
+        <layer lamina="la_iso5_5_3125">0</layer>
+        <!-- <layer lamina="la_iso5_2_053">0:16</layer> -->
+        <layer lamina="la_iso5_2_0008">0</layer>
+    </layup>
+    <layup name="layupWeb">
+        <!-- <layer lamina="la_iso5_1_053">0:38</layer> -->
+        <layer lamina="la_iso5_1_002">0</layer>
+        <layer lamina="la_iso5_5_3125">0</layer>
+        <!-- <layer lamina="la_iso5_1_053">0:38</layer> -->
+        <layer lamina="la_iso5_1_002">0</layer>
+    </layup>
+</layups>

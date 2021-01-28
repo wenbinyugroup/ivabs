@@ -1,0 +1,657 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Airfoil &mdash; iVABS 1.3 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "wenbinyugroup/ivabs");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Airfoil (Recover)" href="example_airfoil_recover.html" />
+    <link rel="prev" title="I-beam" href="example_ibeam.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> iVABS
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">iVABS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/install.html">Download and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/examples.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PreVABS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="rungui.html">Installation and Execution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preparecrosssection.html">Prepare Cross Section</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="examples.html">Examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="example_box.html">Box-beam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_pipe.html">Pipe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_tube.html">Circular tube</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_channel.html">Channel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_ibeam.html">I-beam</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Airfoil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_airfoil_recover.html">Airfoil (Recover)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MSGPI</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../msgpi/sg_module.html">SG Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../msgpi/ms_module.html">Structure Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../msgpi/utils.html">Utility Functions</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">iVABS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="examples.html">Examples</a> &raquo;</li>
+        
+      <li>Airfoil</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/prevabs/example_airfoil.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="airfoil">
+<span id="section-airfoil"></span><h1>Airfoil<a class="headerlink" href="#airfoil" title="Permalink to this headline">¶</a></h1>
+<p>This example demonstrates the capability of building a cross section having an airfoil shape, which is commonly seen on wind turbine blades or helicopter rotor blades. This example is also studied in <a class="reference internal" href="references.html#chen2010" id="id1"><span>[CHEN2010]</span></a>. A sketch of a cross section for a typical wind turbine blade is shown in <a class="reference internal" href="#fig-mh104-draw"><span class="std std-numref">Fig. 31</span></a>. The airfoil is MH 104 (<a class="reference external" href="http://m-selig.ae.illinois.edu/ads/coord_database.html#M">http://m-selig.ae.illinois.edu/ads/coord_database.html#M</a>). In this example, the chord length <span class="math">CL=1.9</span> m. The origin O is set to the point at 1/4 of the chord. Twist angle <span class="math">\theta</span> is <span class="math">0^\circ</span>. There are two webs, whose right boundaries are at the 20% and 50% location of the chord, respectively. Both low pressure and high pressure surfaces have four segments. The dividing points between segments are listed in <a class="reference internal" href="#table-div-pts"><span class="std std-numref">Table 17</span></a>. Materials are given in <a class="reference internal" href="#table-mh104-materials"><span class="std std-numref">Table 18</span></a> and layups are given in <a class="reference internal" href="#table-mh104-layups"><span class="std std-numref">Table 19</span></a>. A complete <span class="math">6\times 6</span> stiffness matrix is given in <a class="reference internal" href="#table-airfoil-result"><span class="std std-numref">Table 20</span></a>.
+Complete input files can be found in <code class="docutils literal notranslate"><span class="pre">examples\ex_airfoil\</span></code>, including <code class="docutils literal notranslate"><span class="pre">mh104.xml</span></code>, <code class="docutils literal notranslate"><span class="pre">basepoints.dat</span></code>, <code class="docutils literal notranslate"><span class="pre">baselines.xml</span></code>, <code class="docutils literal notranslate"><span class="pre">materials.xml</span></code>, and <code class="docutils literal notranslate"><span class="pre">layups.xml</span></code>.</p>
+<div class="figure align-default" id="fig-mh104-draw">
+<a class="reference internal image-reference" href="../_images/examplemh1040.png"><img alt="../_images/examplemh1040.png" src="../_images/examplemh1040.png" style="width: 5.5in;" /></a>
+<p class="caption"><span class="caption-number">Figure 31 </span><span class="caption-text">Sketch of a cross section for a typical wind turbine blade <a class="reference internal" href="references.html#chen2010" id="id2"><span>[CHEN2010]</span></a>.</span><a class="headerlink" href="#fig-mh104-draw" title="Permalink to this image">¶</a></p>
+</div>
+<table class="colwidths-auto docutils align-center" id="table-div-pts">
+<caption><span class="caption-number">Table 17 </span><span class="caption-text">Dividing points</span><a class="headerlink" href="#table-div-pts" title="Permalink to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Between segments</p></th>
+<th class="head"><p>Low pressure surface</p></th>
+<th class="head"><p>High pressure surface</p></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"><p><span class="math">(x, y)</span></p></th>
+<th class="head"><p><span class="math">(x, y)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>1 and 2</p></td>
+<td><p><span class="math">(0.004053940, 0.011734800)</span></p></td>
+<td><p><span class="math">(0.006824530, -0.009881650)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>2 and 3</p></td>
+<td><p><span class="math">(0.114739930, 0.074571970)</span></p></td>
+<td><p><span class="math">(0.126956710, -0.047620490)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>3 and 4</p></td>
+<td><p><span class="math">(0.536615950, 0.070226120)</span></p></td>
+<td><p><span class="math">(0.542952100, -0.044437080)</span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="figure align-default" id="fig-mh1041">
+<a class="reference internal image-reference" href="../_images/examplemh1041.png"><img alt="../_images/examplemh1041.png" src="../_images/examplemh1041.png" style="width: 6.5in;" /></a>
+<p class="caption"><span class="caption-number">Figure 32 </span><span class="caption-text"><em>Base point</em>s of the tube cross section.</span><a class="headerlink" href="#fig-mh1041" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="fig-mh1042">
+<a class="reference internal image-reference" href="../_images/examplemh1042.png"><img alt="../_images/examplemh1042.png" src="../_images/examplemh1042.png" style="width: 6.5in;" /></a>
+<p class="caption"><span class="caption-number">Figure 33 </span><span class="caption-text"><em>Base line</em>s of the tube cross section.</span><a class="headerlink" href="#fig-mh1042" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="fig-mh1043">
+<a class="reference internal image-reference" href="../_images/examplemh1043.png"><img alt="../_images/examplemh1043.png" src="../_images/examplemh1043.png" style="width: 6.5in;" /></a>
+<p class="caption"><span class="caption-number">Figure 34 </span><span class="caption-text"><em>Segment</em>s of the tube cross section.</span><a class="headerlink" href="#fig-mh1043" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="fig-mh104">
+<a class="reference internal image-reference" href="../_images/examplemh104.png"><img alt="../_images/examplemh104.png" src="../_images/examplemh104.png" style="width: 6.5in;" /></a>
+<p class="caption"><span class="caption-number">Figure 35 </span><span class="caption-text">Meshed cross section viewed in Gmsh.</span><a class="headerlink" href="#fig-mh104" title="Permalink to this image">¶</a></p>
+</div>
+<table class="colwidths-auto docutils align-center" id="table-mh104-materials">
+<caption><span class="caption-number">Table 18 </span><span class="caption-text">Material properties</span><a class="headerlink" href="#table-mh104-materials" title="Permalink to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Density</p></th>
+<th class="head"><p><span class="math">E_{1}</span></p></th>
+<th class="head"><p><span class="math">E_{2}</span> = <span class="math">E_{3}</span></p></th>
+<th class="head"><p><span class="math">G_{12}</span> = <span class="math">G_{13}</span> = <span class="math">G_{23}</span></p></th>
+<th class="head"><p><span class="math">\nu_{12}</span> = <span class="math">\nu_{13}</span> = <span class="math">\nu_{23}</span></p></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"></th>
+<th class="head"><p><span class="math">10^3</span> <span class="math">\mathrm{kg/m^3}</span></p></th>
+<th class="head"><p><span class="math">10^9</span> <span class="math">\mathrm{Pa}</span></p></th>
+<th class="head"><p><span class="math">10^9</span> <span class="math">\mathrm{Pa}</span></p></th>
+<th class="head"><p><span class="math">10^9</span> <span class="math">\mathrm{Pa}</span></p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>Uni-directional FRP</p></td>
+<td><p>orthotropic</p></td>
+<td><p>1.86</p></td>
+<td><p>37.0</p></td>
+<td><p>9.00</p></td>
+<td><p>4.00</p></td>
+<td><p>0.28</p></td>
+</tr>
+<tr class="row-even"><td><p>Double-bias FRP</p></td>
+<td><p>orthotropic</p></td>
+<td><p>1.83</p></td>
+<td><p>10.3</p></td>
+<td><p>10.3</p></td>
+<td><p>8.00</p></td>
+<td><p>0.30</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gelcoat</p></td>
+<td><p>orthotropic</p></td>
+<td><p>1.830</p></td>
+<td><p><span class="math">\mathrm{10^{-8}}</span></p></td>
+<td><p><span class="math">\mathrm{10^{-8}}</span></p></td>
+<td><p><span class="math">\mathrm{10^{-9}}</span></p></td>
+<td><p>0.30</p></td>
+</tr>
+<tr class="row-even"><td><p>Nexus</p></td>
+<td><p>orthotropic</p></td>
+<td><p>1.664</p></td>
+<td><p>10.3</p></td>
+<td><p>10.3</p></td>
+<td><p>8.00</p></td>
+<td><p>0.30</p></td>
+</tr>
+<tr class="row-odd"><td><p>Balsa</p></td>
+<td><p>orthotropic</p></td>
+<td><p>0.128</p></td>
+<td><p>0.01</p></td>
+<td><p>0.01</p></td>
+<td><p>0.0002</p></td>
+<td><p>0.30</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-center" id="table-mh104-layups">
+<caption><span class="caption-number">Table 19 </span><span class="caption-text">Layups</span><a class="headerlink" href="#table-mh104-layups" title="Permalink to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Layer</p></th>
+<th class="head"><p>Material</p></th>
+<th class="head"><p>Ply
+thickness</p></th>
+<th class="head"><p>Fiber
+orientation</p></th>
+<th class="head"><p>Number
+of plies</p></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"><p><span class="math">\mathrm{m}</span></p></th>
+<th class="head"><p><span class="math">\circ</span></p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td rowspan="3"><p>layup_1</p></td>
+<td><p>1</p></td>
+<td><p>iso5_3</p></td>
+<td><p>0.000381</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>iso5_4</p></td>
+<td><p>0.00051</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>iso5_2</p></td>
+<td><p>0.00053</p></td>
+<td><p>20</p></td>
+<td><p>18</p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><p>layup_2</p></td>
+<td><p>1</p></td>
+<td><p>iso5_3</p></td>
+<td><p>0.000381</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>iso5_4</p></td>
+<td><p>0.00051</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>iso5_2</p></td>
+<td><p>0.00053</p></td>
+<td><p>20</p></td>
+<td><p>33</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="7"><p>layup_3</p></td>
+<td><p>1</p></td>
+<td><p>iso5_3</p></td>
+<td><p>0.000381</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>iso5_4</p></td>
+<td><p>0.00051</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>iso5_2</p></td>
+<td><p>0.00053</p></td>
+<td><p>20</p></td>
+<td><p>17</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>iso5_1</p></td>
+<td><p>0.00053</p></td>
+<td><p>30</p></td>
+<td><p>38</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>iso5_5</p></td>
+<td><p>0.003125</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>iso5_1</p></td>
+<td><p>0.00053</p></td>
+<td><p>30</p></td>
+<td><p>37</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>iso5_2</p></td>
+<td><p>0.00053</p></td>
+<td><p>20</p></td>
+<td><p>16</p></td>
+</tr>
+<tr class="row-even"><td rowspan="5"><p>layup_4</p></td>
+<td><p>1</p></td>
+<td><p>iso5_3</p></td>
+<td><p>0.000381</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>iso5_4</p></td>
+<td><p>0.00051</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>iso5_2</p></td>
+<td><p>0.00053</p></td>
+<td><p>20</p></td>
+<td><p>17</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>iso5_5</p></td>
+<td><p>0.003125</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>iso5_2</p></td>
+<td><p>0.00053</p></td>
+<td><p>0</p></td>
+<td><p>16</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="3"><p>layup_web</p></td>
+<td><p>1</p></td>
+<td><p>iso5_1</p></td>
+<td><p>0.00053</p></td>
+<td><p>0</p></td>
+<td><p>38</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>iso5_5</p></td>
+<td><p>0.003125</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>iso5_1</p></td>
+<td><p>0.00053</p></td>
+<td><p>0</p></td>
+<td><p>38</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="table-airfoil-result">
+<caption><span class="caption-number">Table 20 </span><span class="caption-text">Results</span><a class="headerlink" href="#table-airfoil-result" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math">\phantom{-}2.411\times 10^9</span></p></td>
+<td><p><span class="math">\phantom{-}1.567\times 10^6</span></p></td>
+<td><p><span class="math">\phantom{-}1.125\times 10^7</span></p></td>
+<td><p><span class="math">-3.279\times 10^7</span></p></td>
+<td><p><span class="math">\phantom{-}6.857\times 10^7</span></p></td>
+<td><p><span class="math">-5.416\times 10^8</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math">\phantom{-}1.567\times 10^7</span></p></td>
+<td><p><span class="math">\phantom{-}4.435\times 10^8</span></p></td>
+<td><p><span class="math">-5.759\times 10^6</span></p></td>
+<td><p><span class="math">-2.018\times 10^7</span></p></td>
+<td><p><span class="math">\phantom{-}1.600\times 10^7</span></p></td>
+<td><p><span class="math">-1.093\times 10^6</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math">\phantom{-}1.125\times 10^7</span></p></td>
+<td><p><span class="math">-5.759\times 10^6</span></p></td>
+<td><p><span class="math">\phantom{-}2.701\times 10^7</span></p></td>
+<td><p><span class="math">-8.087\times 10^5</span></p></td>
+<td><p><span class="math">\phantom{-}1.612\times 10^5</span></p></td>
+<td><p><span class="math">-6.104\times 10^6</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math">-3.279\times 10^7</span></p></td>
+<td><p><span class="math">-2.018\times 10^7</span></p></td>
+<td><p><span class="math">-8.087\times 10^5</span></p></td>
+<td><p><span class="math">\phantom{-}2.156\times 10^7</span></p></td>
+<td><p><span class="math">-2.099\times 10^6</span></p></td>
+<td><p><span class="math">\phantom{-}8.969\times 10^5</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math">\phantom{-}6.857\times 10^7</span></p></td>
+<td><p><span class="math">\phantom{-}1.600\times 10^7</span></p></td>
+<td><p><span class="math">\phantom{-}1.612\times 10^5</span></p></td>
+<td><p><span class="math">-2.099\times 10^6</span></p></td>
+<td><p><span class="math">\phantom{-}2.153\times 10^7</span></p></td>
+<td><p><span class="math">-9.465\times 10^6</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math">-5.416\times 10^8</span></p></td>
+<td><p><span class="math">-1.093\times 10^6</span></p></td>
+<td><p><span class="math">-6.104\times 10^6</span></p></td>
+<td><p><span class="math">\phantom{-}8.969\times 10^5</span></p></td>
+<td><p><span class="math">-9.465\times 10^6</span></p></td>
+<td><p><span class="math">\phantom{-}4.772\times 10^8</span></p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="table-airfoil-result-ref">
+<caption><span class="caption-number">Table 21 </span><span class="caption-text">Results from reference <a class="reference internal" href="references.html#chen2010" id="id3"><span>[CHEN2010]</span></a></span><a class="headerlink" href="#table-airfoil-result-ref" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math">\phantom{-}2.389\times 10^9</span></p></td>
+<td><p><span class="math">\phantom{-}1.524\times 10^6</span></p></td>
+<td><p><span class="math">\phantom{-}6.734\times 10^6</span></p></td>
+<td><p><span class="math">-3.382\times 10^7</span></p></td>
+<td><p><span class="math">-2.627\times 10^7</span></p></td>
+<td><p><span class="math">-4.736\times 10^8</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math">\phantom{-}1.524\times 10^6</span></p></td>
+<td><p><span class="math">\phantom{-}4.334\times 10^8</span></p></td>
+<td><p><span class="math">-3.741\times 10^6</span></p></td>
+<td><p><span class="math">-2.935\times 10^5</span></p></td>
+<td><p><span class="math">\phantom{-}1.527\times 10^7</span></p></td>
+<td><p><span class="math">\phantom{-}3.835\times 10^5</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math">\phantom{-}6.734\times 10^6</span></p></td>
+<td><p><span class="math">-3.741\times 10^6</span></p></td>
+<td><p><span class="math">\phantom{-}2.743\times 10^7</span></p></td>
+<td><p><span class="math">-4.592\times 10^4</span></p></td>
+<td><p><span class="math">-6.869\times 10^2</span></p></td>
+<td><p><span class="math">-4.742\times 10^6</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math">-3.382\times 10^7</span></p></td>
+<td><p><span class="math">-2.935\times 10^5</span></p></td>
+<td><p><span class="math">-4.592\times 10^4</span></p></td>
+<td><p><span class="math">\phantom{-}2.167\times 10^7</span></p></td>
+<td><p><span class="math">-6.279\times 10^4</span></p></td>
+<td><p><span class="math">\phantom{-}1.430\times 10^6</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math">-2.627\times 10^7</span></p></td>
+<td><p><span class="math">\phantom{-}1.527\times 10^7</span></p></td>
+<td><p><span class="math">-6.869\times 10^2</span></p></td>
+<td><p><span class="math">-6.279\times 10^4</span></p></td>
+<td><p><span class="math">\phantom{-}1.970\times 10^7</span></p></td>
+<td><p><span class="math">\phantom{-}1.209\times 10^7</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math">-4.736\times 10^8</span></p></td>
+<td><p><span class="math">\phantom{-}3.835\times 10^5</span></p></td>
+<td><p><span class="math">-4.742\times 10^6</span></p></td>
+<td><p><span class="math">\phantom{-}1.430\times 10^6</span></p></td>
+<td><p><span class="math">\phantom{-}1.209\times 10^7</span></p></td>
+<td><p><span class="math">\phantom{-}4.406\times 10^8</span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The errors between the result and the reference are caused by the difference of modeling of the trailing edge. If reduce the trailing edge skin to a single thin layer, then the difference between the trailing edge shapes is minimized, and the two resulting stiffness matrices are basically the same, as shown in <a class="reference internal" href="#fig-mh104-comparison"><span class="std std-numref">Fig. 36</span></a>.</p>
+</div>
+<div class="figure align-default" id="fig-mh104-comparison">
+<a class="reference internal image-reference" href="../_images/examplemh104_comparison.png"><img alt="../_images/examplemh104_comparison.png" src="../_images/examplemh104_comparison.png" style="width: 6in;" /></a>
+<p class="caption"><span class="caption-number">Figure 36 </span><span class="caption-text">Comparison of stiffness matrices after modifying the trailing edge.</span><a class="headerlink" href="#fig-mh104-comparison" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="example_airfoil_recover.html" class="btn btn-neutral float-right" title="Airfoil (Recover)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="example_ibeam.html" class="btn btn-neutral float-left" title="I-beam" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Multiscale Structural Mechanics Group.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

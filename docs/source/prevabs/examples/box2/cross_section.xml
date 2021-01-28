@@ -1,0 +1,45 @@
+<cross_section name="box">
+    <include>
+        <baseline>baselines</baseline>
+        <material>materials</material>
+        <layup>layups</layup>
+    </include>
+    <general>
+        <origin>0.0 0.0</origin>
+        <scale>1.0</scale>
+        <rotation>0.0</rotation>
+        <mesh_size>0.01</mesh_size>
+        <element_type>linear</element_type>
+    </general>
+    <segments>
+        <segment name="sg1">
+            <baseline>bl1</baseline>
+            <layup>layup1</layup>
+            <layup_direction>right</layup_direction>
+            <level>1</level>
+        </segment>
+        <segment name="sg2">
+            <baseline>bl2</baseline>
+            <layup>layup2</layup>
+            <layup_direction>right</layup_direction>
+            <level>1</level>
+        </segment>
+        <segment name="sg3">
+            <baseline>bl3</baseline>
+            <layup>layup3</layup>
+            <layup_direction>right</layup_direction>
+            <level>1</level>
+        </segment>
+        <segment name="web">
+            <baseline>blweb</baseline>
+            <layup>layupweb</layup>
+            <layup_direction>left</layup_direction>
+            <level>10</level>
+            <!--
+            <connect></connect> defines the way of connection of this 
+            segment to another segment it will meet. "t" means this 
+            will be a "T" type connection.
+            -->
+        </segment>
+    </segments>
+</cross_section>

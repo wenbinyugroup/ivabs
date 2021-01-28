@@ -1,0 +1,10 @@
+<layups>
+    <layup name="layup1">
+        <layer lamina="la_iso5_1_02">90:2</layer>
+        <layer lamina="la_iso5_2_03">0</layer>
+    </layup>
+    <layup name="layup2">
+        <layer lamina="la_iso5_3_015">0:3</layer>
+        <layer lamina="la_iso5_4_02">90</layer>
+    </layup>
+</layups>

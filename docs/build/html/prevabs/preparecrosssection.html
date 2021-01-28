@@ -1,0 +1,311 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Prepare Cross Section &mdash; iVABS 1.3 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "wenbinyugroup/ivabs");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Coordinate systems" href="pre_coordinate.html" />
+    <link rel="prev" title="Installation and Execution" href="rungui.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> iVABS
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">iVABS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/install.html">Download and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/examples.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PreVABS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="rungui.html">Installation and Execution</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Prepare Cross Section</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pre_coordinate.html">Coordinate systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pre_shape.html">Geometry and shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pre_material.html">Materials and Layups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pre_segment.html">Segments and Connections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pre_others.html">Other components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pre_overall.html">Overall configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pre_recover.html">Specifications for recovery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MSGPI</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../msgpi/sg_module.html">SG Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../msgpi/ms_module.html">Structure Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../msgpi/utils.html">Utility Functions</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">iVABS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Prepare Cross Section</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/prevabs/preparecrosssection.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="prepare-cross-section">
+<h1>Prepare Cross Section<a class="headerlink" href="#prepare-cross-section" title="Permalink to this headline">¶</a></h1>
+<p>In PreVABS, a cross section is defined through three aspects: geometry, material and overall configuration, as shown in <a class="reference internal" href="#fig-csfiles1"><span class="std std-numref">Fig. 3</span></a>. The geometry aspect comprises definitions of base points and base lines. The material aspect includes material properties, lamina thicknesses, layup stacking sequences, etc. The overall configuration defines the general size of the cross section, position of the coordinate origin, mesh size and element type of the finite element model.</p>
+<div class="figure align-center" id="fig-csfiles1">
+<a class="reference internal image-reference" href="../_images/chart1.png"><img alt="../_images/chart1.png" src="../_images/chart1.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Figure 3 </span><span class="caption-text">Cross section definition in PreVABS.</span><a class="headerlink" href="#fig-csfiles1" title="Permalink to this image">¶</a></p>
+</div>
+<p>In PreVABS, the key to preparing input files for a cross section is defining <em>Segment</em>s. A <em>Segment</em> is a unique combination of a <em>Base line</em> and a <em>Layup</em>, as shown in <a class="reference internal" href="#fig-airfoil1"><span class="std std-numref">Fig. 4</span></a>. Another important concept is <em>Level</em>, which collects segments into different groups based on how they connect to each other. For regions like the leading and trailing edges of an airfoil, it is sometimes difficult to handle. PreVABS treats these <em>Connection</em>s separately and thus requires separate declarations of these joints between segments. More details about these concepts can be found in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Section</span> <span class="pre">%s</span></code>, <code class="xref std std-numref docutils literal notranslate"><span class="pre">Section</span> <span class="pre">%s</span></code> and <code class="xref std std-numref docutils literal notranslate"><span class="pre">Section</span> <span class="pre">%s</span></code>.</p>
+<div class="figure align-center" id="fig-airfoil1">
+<a class="reference internal image-reference" href="../_images/airfoil.png"><img alt="../_images/airfoil.png" src="../_images/airfoil.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-number">Figure 4 </span><span class="caption-text">Basic components in a typical cross section.</span><a class="headerlink" href="#fig-airfoil1" title="Permalink to this image">¶</a></p>
+</div>
+<p>To prepare the cross section, five input files are needed. Definitions of <em>Base point</em>s, <em>Base line</em>s, <em>Material</em>s and <em>Layup</em>s are stored in four input files separately. A top level <em>Cross section</em> file stores the definitions of <em>Segment</em>s and <em>Connection</em>s, overall configurations and references to other files. Except the <em>Base point</em>s file, which has a file extension .dat, all other files use an XML format.</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Subtopics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pre_coordinate.html">Coordinate systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pre_shape.html">Geometry and shapes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pre_shape.html#base-points">Base points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pre_shape.html#base-lines">Base lines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pre_shape.html#straight">Straight</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pre_shape.html#arc">Arc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pre_shape.html#circle">Circle</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pre_material.html">Materials and Layups</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pre_material.html#materials-and-laminas">Materials and Laminas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pre_material.html#layups">Layups</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pre_material.html#explicit-list">Explicit list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pre_material.html#stacking-sequence-code">Stacking sequence code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pre_material.html#ply-lamina-percentage-code">Ply/Lamina percentage code</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pre_segment.html">Segments and Connections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pre_others.html">Other components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pre_overall.html">Overall configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pre_recover.html">Specifications for recovery</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="pre_coordinate.html" class="btn btn-neutral float-right" title="Coordinate systems" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="rungui.html" class="btn btn-neutral float-left" title="Installation and Execution" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Multiscale Structural Mechanics Group.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

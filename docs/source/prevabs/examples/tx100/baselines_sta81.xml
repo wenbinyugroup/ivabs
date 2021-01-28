@@ -1,0 +1,12 @@
+<baselines basepoints="basepoints_sta81">
+    <baseline name="bl_lps_1" type="straight">
+        <points>le:l12</points></baseline>
+    <baseline name="bl_lps_2" type="straight">
+        <points>l12:lte</points></baseline>
+    <baseline name="bl_hps_3" type="straight">
+        <points>hte:h23</points></baseline>
+    <baseline name="bl_hps_2" type="straight">
+        <points>h23:h12</points></baseline>
+    <baseline name="bl_hps_1" type="straight">
+        <points>h12:le</points></baseline>
+</baselines>

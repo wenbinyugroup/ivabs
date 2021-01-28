@@ -1,0 +1,460 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>I-beam &mdash; iVABS 1.3 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "wenbinyugroup/ivabs");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Airfoil" href="example_airfoil.html" />
+    <link rel="prev" title="Channel" href="example_channel.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> iVABS
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">iVABS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/install.html">Download and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/examples.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PreVABS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="rungui.html">Installation and Execution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preparecrosssection.html">Prepare Cross Section</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="examples.html">Examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="example_box.html">Box-beam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_pipe.html">Pipe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_tube.html">Circular tube</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_channel.html">Channel</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">I-beam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_airfoil.html">Airfoil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_airfoil_recover.html">Airfoil (Recover)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MSGPI</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../msgpi/sg_module.html">SG Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../msgpi/ms_module.html">Structure Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../msgpi/utils.html">Utility Functions</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">iVABS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="examples.html">Examples</a> &raquo;</li>
+        
+      <li>I-beam</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/prevabs/example_ibeam.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="i-beam">
+<span id="example-i-beam"></span><h1>I-beam<a class="headerlink" href="#i-beam" title="Permalink to this headline">¶</a></h1>
+<p>This example has an I-shape cross section. The dimensions shown in <a class="reference internal" href="#fig-ibeam-draw"><span class="std std-numref">Fig. 28</span></a> are <span class="math">w_1=2.0</span> m, <span class="math">w_2=3.0</span> m, <span class="math">h=3.0</span> m, <span class="math">t_1=0.11</span> m, <span class="math">t_2=0.065</span> m, <span class="math">t_w=0.08</span> m. Materials and layups are given in <a class="reference internal" href="#table-ibeam-materials"><span class="std std-numref">Table 14</span></a> and <a class="reference internal" href="#table-ibeam-layups"><span class="std std-numref">Table 15</span></a>. The effective stiffness matrix is listed in <a class="reference internal" href="#table-ibeam-result"><span class="std std-numref">Table 16</span></a>.
+Complete input files can be found in <code class="docutils literal notranslate"><span class="pre">examples\ex_ibeam\</span></code>, including <code class="docutils literal notranslate"><span class="pre">ibeam.xml</span></code>, <code class="docutils literal notranslate"><span class="pre">basepoints.dat</span></code>, <code class="docutils literal notranslate"><span class="pre">baselines.xml</span></code>, <code class="docutils literal notranslate"><span class="pre">materials.xml</span></code>, and <code class="docutils literal notranslate"><span class="pre">layups.xml</span></code>.</p>
+<div class="figure align-default" id="fig-ibeam-draw">
+<a class="reference internal image-reference" href="../_images/exampleibeam0.png"><img alt="../_images/exampleibeam0.png" src="../_images/exampleibeam0.png" style="width: 6in;" /></a>
+<p class="caption"><span class="caption-number">Figure 28 </span><span class="caption-text">Meshed cross section viewed in Gmsh.</span><a class="headerlink" href="#fig-ibeam-draw" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="fig-ibeam1">
+<a class="reference internal image-reference" href="../_images/exampleibeam1.png"><img alt="../_images/exampleibeam1.png" src="../_images/exampleibeam1.png" style="width: 6in;" /></a>
+<p class="caption"><span class="caption-number">Figure 29 </span><span class="caption-text"><em>Base point</em>s, <em>Base line</em>s and <em>Segment</em>s of the I beam cross section.</span><a class="headerlink" href="#fig-ibeam1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="fig-ibeam">
+<a class="reference internal image-reference" href="../_images/exampleibeam.png"><img alt="../_images/exampleibeam.png" src="../_images/exampleibeam.png" style="width: 2in;" /></a>
+<p class="caption"><span class="caption-number">Figure 30 </span><span class="caption-text">Meshed cross section viewed in Gmsh.</span><a class="headerlink" href="#fig-ibeam" title="Permalink to this image">¶</a></p>
+</div>
+<table class="colwidths-auto docutils align-center" id="table-ibeam-materials">
+<caption><span class="caption-number">Table 14 </span><span class="caption-text">Material properties</span><a class="headerlink" href="#table-ibeam-materials" title="Permalink to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Density</p></th>
+<th class="head"><p><span class="math">E_{1}</span></p></th>
+<th class="head"><p><span class="math">E_{2}</span> = <span class="math">E_{3}</span></p></th>
+<th class="head"><p><span class="math">G_{12}</span> = <span class="math">G_{13}</span> = <span class="math">G_{23}</span></p></th>
+<th class="head"><p><span class="math">\nu_{12}</span> = <span class="math">\nu_{13}</span> = <span class="math">\nu_{23}</span></p></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"></th>
+<th class="head"><p><span class="math">10^3</span> <span class="math">\mathrm{kg/m^3}</span></p></th>
+<th class="head"><p><span class="math">10^9</span> <span class="math">\mathrm{Pa}</span></p></th>
+<th class="head"><p><span class="math">10^9</span> <span class="math">\mathrm{Pa}</span></p></th>
+<th class="head"><p><span class="math">10^9</span> <span class="math">\mathrm{Pa}</span></p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>iso5_1</p></td>
+<td><p>orthotropic</p></td>
+<td><p>1.86</p></td>
+<td><p>37.0</p></td>
+<td><p>9.00</p></td>
+<td><p>4.00</p></td>
+<td><p>0.28</p></td>
+</tr>
+<tr class="row-even"><td><p>iso5_2</p></td>
+<td><p>orthotropic</p></td>
+<td><p>1.83</p></td>
+<td><p>10.3</p></td>
+<td><p>10.3</p></td>
+<td><p>8.00</p></td>
+<td><p>0.30</p></td>
+</tr>
+<tr class="row-odd"><td><p>iso5_3</p></td>
+<td><p>orthotropic</p></td>
+<td><p>1.830</p></td>
+<td><p><span class="math">\mathrm{10^{-8}}</span></p></td>
+<td><p><span class="math">\mathrm{10^{-8}}</span></p></td>
+<td><p><span class="math">\mathrm{10^{-9}}</span></p></td>
+<td><p>0.30</p></td>
+</tr>
+<tr class="row-even"><td><p>iso5_4</p></td>
+<td><p>orthotropic</p></td>
+<td><p>1.664</p></td>
+<td><p>10.3</p></td>
+<td><p>10.3</p></td>
+<td><p>8.00</p></td>
+<td><p>0.30</p></td>
+</tr>
+<tr class="row-odd"><td><p>iso5_5</p></td>
+<td><p>orthotropic</p></td>
+<td><p>0.128</p></td>
+<td><p>0.01</p></td>
+<td><p>0.01</p></td>
+<td><p>0.0002</p></td>
+<td><p>0.30</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-center" id="table-ibeam-layups">
+<caption><span class="caption-number">Table 15 </span><span class="caption-text">Layups</span><a class="headerlink" href="#table-ibeam-layups" title="Permalink to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Layer</p></th>
+<th class="head"><p>Material</p></th>
+<th class="head"><p>Ply thickness</p></th>
+<th class="head"><p>Fiber orientation</p></th>
+<th class="head"><p>Number of plies</p></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"><p><span class="math">\mathrm{m}</span></p></th>
+<th class="head"><p><span class="math">\circ</span></p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>layup1</p></td>
+<td><p>1</p></td>
+<td><p>iso5_1</p></td>
+<td><p>0.03</p></td>
+<td><p>90</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>2</p></td>
+<td><p>iso5_2</p></td>
+<td><p>0.05</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>layup2</p></td>
+<td><p>1</p></td>
+<td><p>iso5_3</p></td>
+<td><p>0.015</p></td>
+<td><p>0</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>2</p></td>
+<td><p>iso5_4</p></td>
+<td><p>0.02</p></td>
+<td><p>90</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>layupweb</p></td>
+<td><p>1</p></td>
+<td><p>iso5_5</p></td>
+<td><p>0.02</p></td>
+<td><p>0</p></td>
+<td><p>4</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="table-ibeam-result">
+<caption><span class="caption-number">Table 16 </span><span class="caption-text">Results</span><a class="headerlink" href="#table-ibeam-result" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math">\phantom{-}2.749\times 10^9</span></p></td>
+<td><p><span class="math">-4.763\times 10^{-8}</span></p></td>
+<td><p><span class="math">-1.505\times 10^{-14}</span></p></td>
+<td><p><span class="math">-5.734\times 10^{-8}</span></p></td>
+<td><p><span class="math">-1.945\times 10^9</span></p></td>
+<td><p><span class="math">\phantom{-}2.779\times 10^3</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math">-4.763\times 10^{-8}</span></p></td>
+<td><p><span class="math">\phantom{-}1.362\times 10^9</span></p></td>
+<td><p><span class="math">\phantom{-}4.309\times 10^2</span></p></td>
+<td><p><span class="math">\phantom{-}1.645\times 10^9</span></p></td>
+<td><p><span class="math">\phantom{-}1.277\times 10^{-7}</span></p></td>
+<td><p><span class="math">-4.362\times 10^{-14}</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math">-1.505\times 10^{-14}</span></p></td>
+<td><p><span class="math">\phantom{-}4.309\times 10^2</span></p></td>
+<td><p><span class="math">\phantom{-}4.729\times 10^4</span></p></td>
+<td><p><span class="math">\phantom{-}5.201\times 10^2</span></p></td>
+<td><p><span class="math">\phantom{-}4.038\times 10^{-14}</span></p></td>
+<td><p><span class="math">-4.775\times 10^{-13}</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math">-5.734\times 10^{-8}</span></p></td>
+<td><p><span class="math">\phantom{-}1.645\times 10^9</span></p></td>
+<td><p><span class="math">\phantom{-}5.201\times 10^2</span></p></td>
+<td><p><span class="math">\phantom{-}1.990\times 10^9</span></p></td>
+<td><p><span class="math">\phantom{-}1.541\times 10^{-7}</span></p></td>
+<td><p><span class="math">\phantom{-}7.025\times 10^{-14}</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math">-1.945\times 10^9</span></p></td>
+<td><p><span class="math">\phantom{-}1.277\times 10^{-7}</span></p></td>
+<td><p><span class="math">\phantom{-}4.038\times 10^{-14}</span></p></td>
+<td><p><span class="math">\phantom{-}1.541\times 10^{-7}</span></p></td>
+<td><p><span class="math">\phantom{-}5.376\times 10^9</span></p></td>
+<td><p><span class="math">-5.274\times 10^2</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math">\phantom{-}2.779\times 10^3</span></p></td>
+<td><p><span class="math">-4.362\times 10^{-14}</span></p></td>
+<td><p><span class="math">-4.775\times 10^{-13}</span></p></td>
+<td><p><span class="math">\phantom{-}7.025\times 10^{-14}</span></p></td>
+<td><p><span class="math">-5.274\times 10^2</span></p></td>
+<td><p><span class="math">\phantom{-}1.173\times 10^9</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="example_airfoil.html" class="btn btn-neutral float-right" title="Airfoil" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="example_channel.html" class="btn btn-neutral float-left" title="Channel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Multiscale Structural Mechanics Group.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

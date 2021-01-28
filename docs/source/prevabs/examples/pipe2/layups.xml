@@ -1,0 +1,16 @@
+<!--
+a:s
+fiber orientation : stacking number of lamina
+default: 0:1
+e.g. 45:3, 3 layers of this lamina with angle 45 degrees
+-->
+<layups>
+    <layup name="layup1">
+        <layer lamina="la_iso5_1_01">0</layer>
+        <layer lamina="la_iso5_1_01">90</layer>
+    </layup>
+    <layup name="layup2">
+        <layer lamina="la_iso5_1_01">-45</layer>
+        <layer lamina="la_iso5_1_01">45</layer>
+    </layup>
+</layups>

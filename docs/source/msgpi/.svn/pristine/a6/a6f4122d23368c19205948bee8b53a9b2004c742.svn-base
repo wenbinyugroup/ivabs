@@ -1,0 +1,564 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Class Module for Beam &mdash; msgpi  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="I/O Module for GEBT" href="iogebt.html" />
+    <link rel="prev" title="Structure Module" href="ms_module.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> msgpi
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sg_module.html">SG Module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="ms_module.html">Structure Module</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Class Module for Beam</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#beam-segment">Beam segment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#beam">Beam</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iogebt.html">I/O Module for GEBT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prebeam.html">prebeam Module for GEBT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ms_analysis.html">analysis Module for GEBT</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utility Functions</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">msgpi</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="ms_module.html">Structure Module</a> &raquo;</li>
+        
+      <li>Class Module for Beam</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/beam.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-module-for-beam">
+<h1>Class Module for Beam<a class="headerlink" href="#class-module-for-beam" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">msgpi.ms.beam</span>
+</pre></div>
+</div>
+<div class="section" id="beam-segment">
+<h2>Beam segment<a class="headerlink" href="#beam-segment" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="msgpi.ms.beam.BeamSegment">
+<em class="property">class </em><code class="descclassname">msgpi.ms.beam.</code><code class="descname">BeamSegment</code><a class="headerlink" href="#msgpi.ms.beam.BeamSegment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for a beam segment.</p>
+<dl class="method">
+<dt id="msgpi.ms.beam.BeamSegment.calcLengthSq">
+<code class="descname">calcLengthSq</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.ms.beam.BeamSegment.calcLengthSq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the square of the segment length.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Squred length of the segment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="msgpi.ms.beam.BeamSegment.coords">
+<code class="descname">coords</code><em class="property"> = None</em><a class="headerlink" href="#msgpi.ms.beam.BeamSegment.coords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Coordinates of starting and ending points.
+<cite>[[x1, x2, x3], [x1, x2, x3]]</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list of lists of floats</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="msgpi.ms.beam.BeamSegment.css">
+<code class="descname">css</code><em class="property"> = None</em><a class="headerlink" href="#msgpi.ms.beam.BeamSegment.css" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cross-section labels.
+<cite>[starting, ending]</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list of ints</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="msgpi.ms.beam.BeamSegment.local_frame_id">
+<code class="descname">local_frame_id</code><em class="property"> = None</em><a class="headerlink" href="#msgpi.ms.beam.BeamSegment.local_frame_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Local frame id.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="msgpi.ms.beam.BeamSegment.num_divisions">
+<code class="descname">num_divisions</code><em class="property"> = None</em><a class="headerlink" href="#msgpi.ms.beam.BeamSegment.num_divisions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of division of the segment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="msgpi.ms.beam.BeamSegment.points">
+<code class="descname">points</code><em class="property"> = None</em><a class="headerlink" href="#msgpi.ms.beam.BeamSegment.points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Point labels.
+<cite>[starting point, ending point]</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list of ints</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="msgpi.ms.beam.BeamSegment.twist">
+<code class="descname">twist</code><em class="property"> = None</em><a class="headerlink" href="#msgpi.ms.beam.BeamSegment.twist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Twist.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="beam">
+<h2>Beam<a class="headerlink" href="#beam" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="msgpi.ms.beam.Beam">
+<em class="property">class </em><code class="descclassname">msgpi.ms.beam.</code><code class="descname">Beam</code><a class="headerlink" href="#msgpi.ms.beam.Beam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for a slender beam-like structure.</p>
+<p>This class is mainly for the GEBT code.</p>
+<dl class="attribute">
+<dt id="msgpi.ms.beam.Beam.analysis_type">
+<code class="descname">analysis_type</code><em class="property"> = None</em><a class="headerlink" href="#msgpi.ms.beam.Beam.analysis_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Analysis type (GEBT).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="msgpi.ms.beam.Beam.angular_velocity">
+<code class="descname">angular_velocity</code><em class="property"> = None</em><a class="headerlink" href="#msgpi.ms.beam.Beam.angular_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Angular velocity of the rotating beam.
+<cite>[wa1, wa2, wa3]</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list of floats</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="msgpi.ms.beam.Beam.echo">
+<code class="descname">echo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.ms.beam.Beam.echo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the beam data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="msgpi.ms.beam.Beam.findPtCoordByName">
+<code class="descname">findPtCoordByName</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.ms.beam.Beam.findPtCoordByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find key point coordinates by point id.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>int</em>) – Point id.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Point coordinates.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list of floats</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="msgpi.ms.beam.Beam.findSectionByName">
+<code class="descname">findSectionByName</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.ms.beam.Beam.findSectionByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find sectional properties by section id.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>int</em>) – Section id.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Sectional properties.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="sg.html#msgpi.sg.MaterialSection" title="msgpi.sg.MaterialSection">msgpi.sg.MaterialSection</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="msgpi.ms.beam.Beam.frames">
+<code class="descname">frames</code><em class="property"> = None</em><a class="headerlink" href="#msgpi.ms.beam.Beam.frames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Local self.frames</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="msgpi.ms.beam.Beam.linear_velocity">
+<code class="descname">linear_velocity</code><em class="property"> = None</em><a class="headerlink" href="#msgpi.ms.beam.Beam.linear_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Linear velocity of the first key point.
+<cite>[va1, va2, va3]</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list of floats</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="msgpi.ms.beam.Beam.max_iteration">
+<code class="descname">max_iteration</code><em class="property"> = None</em><a class="headerlink" href="#msgpi.ms.beam.Beam.max_iteration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Max iteration.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="msgpi.ms.beam.Beam.mconditions">
+<code class="descname">mconditions</code><em class="property"> = None</em><a class="headerlink" href="#msgpi.ms.beam.Beam.mconditions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Member conditions (B.C. and loads).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="msgpi.ms.beam.Beam.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#msgpi.ms.beam.Beam.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the beam.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="msgpi.ms.beam.Beam.num_eigens">
+<code class="descname">num_eigens</code><em class="property"> = None</em><a class="headerlink" href="#msgpi.ms.beam.Beam.num_eigens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of eigen analysis resutls.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="msgpi.ms.beam.Beam.num_steps">
+<code class="descname">num_steps</code><em class="property"> = None</em><a class="headerlink" href="#msgpi.ms.beam.Beam.num_steps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of analysis steps.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="msgpi.ms.beam.Beam.pconditions">
+<code class="descname">pconditions</code><em class="property"> = None</em><a class="headerlink" href="#msgpi.ms.beam.Beam.pconditions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Point conditions (B.C. and loads).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="msgpi.ms.beam.Beam.points">
+<code class="descname">points</code><em class="property"> = None</em><a class="headerlink" href="#msgpi.ms.beam.Beam.points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key point id and coordinates.
+<cite>{ptid: [x1, x2, x3], …}</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">dict of {int, list of floats}</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="msgpi.ms.beam.Beam.sections">
+<code class="descname">sections</code><em class="property"> = None</em><a class="headerlink" href="#msgpi.ms.beam.Beam.sections" title="Permalink to this definition">¶</a></dt>
+<dd><p>Effective properties of cross-sections.
+<cite>{sid: MaterialSection object, …}</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">dict of {int, msgpi.sg.MaterialSection}</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="msgpi.ms.beam.Beam.segments">
+<code class="descname">segments</code><em class="property"> = None</em><a class="headerlink" href="#msgpi.ms.beam.Beam.segments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Beam segments
+<cite>{bsid: BeamSegment object, …}</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">dict of {int, msgpi.ms.beam.BeamSegment}</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="iogebt.html" class="btn btn-neutral float-right" title="I/O Module for GEBT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ms_module.html" class="btn btn-neutral float-left" title="Structure Module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, msm group
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

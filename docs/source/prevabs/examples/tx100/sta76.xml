@@ -1,0 +1,80 @@
+<cross_section name="sta76" type="airfoil">
+    <include>
+        <baseline>baselines_sta76</baseline>
+        <material>materials</material>
+        <layup>layups</layup>
+    </include>
+    <general>
+        <origin>0.32  0.00</origin>
+        <scale>266.0</scale>
+        <rotation>-0.7</rotation>
+        <mesh_size>1.0</mesh_size>
+        <element_type>linear</element_type>
+    </general>
+    <segments>
+        <segment name="sgm_lps_1">
+            <baseline>bl_lps_1</baseline>
+            <layup>tx_upper_strip</layup>
+            <layup_direction>right</layup_direction>
+            <level>1</level>
+        </segment>
+        <segment name="sgm_lps_2">
+            <baseline>bl_lps_2</baseline>
+            <layup>tx_balsa_upper_strip</layup>
+            <layup_direction>right</layup_direction>
+            <level>1</level>
+        </segment>
+        <segment name="sgm_lps_3">
+            <baseline>bl_lps_3</baseline>
+            <layup>tx_balsa_upper</layup>
+            <layup_direction>right</layup_direction>
+            <level>1</level>
+        </segment>
+        <segment name="sgm_lps_4">
+            <baseline>bl_lps_4</baseline>
+            <layup>tx_upper</layup>
+            <layup_direction>right</layup_direction>
+            <level>1</level>
+        </segment>
+        <segment name="sgm_hps_5">
+            <baseline>bl_hps_5</baseline>
+            <layup>tx_upper</layup>
+            <layup_direction>right</layup_direction>
+            <level>1</level>
+        </segment>
+        <segment name="sgm_hps_4">
+            <baseline>bl_hps_4</baseline>
+            <layup>tx_balsa_upper</layup>
+            <layup_direction>right</layup_direction>
+            <level>1</level>
+        </segment>
+        <segment name="sgm_hps_3">
+            <baseline>bl_hps_3</baseline>
+            <layup>tx_balsa_upper_strip</layup>
+            <layup_direction>right</layup_direction>
+            <level>1</level>
+        </segment>
+        <segment name="sgm_hps_2">
+            <baseline>bl_hps_2</baseline>
+            <layup>tx_upper_strip</layup>
+            <layup_direction>right</layup_direction>
+            <level>1</level>
+        </segment>
+        <segment name="sgm_hps_1">
+            <baseline>bl_hps_1</baseline>
+            <layup>tx_upper_strip_x10</layup>
+            <layup_direction>right</layup_direction>
+            <level>1</level>
+        </segment>
+    </segments>
+    <connections>
+        <connection name="leading_edge">
+            <segment>sgm_lps_1</segment>
+            <segment>sgm_hps_1</segment>
+        </connection>
+        <connection name="trailing_edge">
+            <segment>sgm_lps_4</segment>
+            <segment>sgm_hps_5</segment>
+        </connection>
+    </connections>
+</cross_section>

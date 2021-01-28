@@ -1,0 +1,9 @@
+I/O Module for MSM Codes
+========================
+
+.. highlight:: python
+
+::
+
+    import msmio
+

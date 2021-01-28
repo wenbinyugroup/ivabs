@@ -1,0 +1,28 @@
+<cross_section name="tbeam">
+    <include>
+        <baseline>baselines</baseline>
+        <material>materials</material>
+        <layup>layups</layup>
+    </include>
+    <general>
+        <origin>0.0 0.0</origin>
+        <scale>1.0</scale>
+        <rotation>0.0</rotation>
+        <mesh_size>0.005</mesh_size>
+        <element_type>linear</element_type>
+    </general>
+    <segments>
+        <segment name="sg1">
+            <baseline>bl1</baseline>
+            <layup>layup1</layup>
+            <layup_direction>right</layup_direction>
+            <level>1</level>
+        </segment>
+        <segment name="web">
+            <baseline>blweb</baseline>
+            <layup>layupweb</layup>
+            <layup_direction>left</layup_direction>
+            <level>10</level>
+        </segment>
+    </segments>
+</cross_section>

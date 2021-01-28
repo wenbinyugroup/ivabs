@@ -1,0 +1,307 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>I/O Utility Functions &mdash; msgpi  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="analysis Module" href="analysis.html" />
+    <link rel="prev" title="SG I/O Module for VABS" href="iovabs.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> msgpi
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="sg_module.html">SG Module</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sg.html">Class Module for MSM Structure Gene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="presg.html">presg Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iovabs.html">SG I/O Module for VABS</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">I/O Utility Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis.html">analysis Module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ms_module.html">Structure Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utility Functions</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">msgpi</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="sg_module.html">SG Module</a> &raquo;</li>
+        
+      <li>I/O Utility Functions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/ioutils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="i-o-utility-functions">
+<h1>I/O Utility Functions<a class="headerlink" href="#i-o-utility-functions" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">msgpi.io.utils</span>
+</pre></div>
+</div>
+<dl class="function">
+<dt id="msgpi.io.utils.writeFormatIntegers">
+<code class="descclassname">msgpi.io.utils.</code><code class="descname">writeFormatIntegers</code><span class="sig-paren">(</span><em>file</em>, <em>numbers</em>, <em>fmt='8d'</em>, <em>newline=True</em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.io.utils.writeFormatIntegers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a list of integers into a file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>file</strong> (<em>file</em>) – The file object for writing.</li>
+<li><strong>numbers</strong> (<em>list of ints</em>) – The list of numbers that is going to be written.</li>
+<li><strong>fmt</strong> (<em>str</em>) – The desired format for each number.</li>
+<li><strong>newline</strong> (<em>bool</em>) – If append the character <code class="docutils literal notranslate"><span class="pre">\n</span></code> after writting all numbers or not.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msgpi.io.utils.writeFormatFloats">
+<code class="descclassname">msgpi.io.utils.</code><code class="descname">writeFormatFloats</code><span class="sig-paren">(</span><em>file</em>, <em>numbers</em>, <em>fmt='16.6E'</em>, <em>newline=True</em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.io.utils.writeFormatFloats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a list of floats into a file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>file</strong> (<em>file</em>) – The file object for writing.</li>
+<li><strong>numbers</strong> (<em>list of floats</em>) – The list of numbers that is going to be written.</li>
+<li><strong>fmt</strong> (<em>str</em>) – The desired format for each number.</li>
+<li><strong>newline</strong> (<em>bool</em>) – If append the character <code class="docutils literal notranslate"><span class="pre">\n</span></code> after writting all numbers or not.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msgpi.io.utils.writeFormatIntegersMatrix">
+<code class="descclassname">msgpi.io.utils.</code><code class="descname">writeFormatIntegersMatrix</code><span class="sig-paren">(</span><em>fobj</em>, <em>matrix</em>, <em>fmt='8d'</em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.io.utils.writeFormatIntegersMatrix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="msgpi.io.utils.writeFormatFloatsMatrix">
+<code class="descclassname">msgpi.io.utils.</code><code class="descname">writeFormatFloatsMatrix</code><span class="sig-paren">(</span><em>fobj</em>, <em>matrix</em>, <em>fmt='16.6E'</em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.io.utils.writeFormatFloatsMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a 2D list/array of float as a format matrix into file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>fobj</strong> (<em>file object</em>) – Output file.</li>
+<li><strong>matrix</strong> (<em>list/array</em>) – Matrix of float that is goint to be written into file.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="msgpi.io.utils.textToMatrix">
+<code class="descclassname">msgpi.io.utils.</code><code class="descname">textToMatrix</code><span class="sig-paren">(</span><em>textList</em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.io.utils.textToMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the text of a block of numbers into a matrix</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>textList</strong> (<em>list of strings</em>) – The block of text representing a matrix</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A matrix of numbers.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;1 2 3&#39;</span><span class="p">,</span> <span class="s1">&#39;4 5 6&#39;</span><span class="p">,</span> <span class="s1">&#39;7 8 9&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">utilities</span><span class="o">.</span><span class="n">textToMatrix</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+<span class="go">array([[1., 2., 3.],</span>
+<span class="go">        [4., 5., 6.],</span>
+<span class="go">        [7., 8., 9.]])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="analysis.html" class="btn btn-neutral float-right" title="analysis Module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="iovabs.html" class="btn btn-neutral float-left" title="SG I/O Module for VABS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, msm group
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<baselines basepoints="basepoints_sta76">
+    <baseline name="bl_lps_1" type="straight">
+        <points>lle:l12</points></baseline>
+    <baseline name="bl_lps_2" type="straight">
+        <points>l12:l23</points></baseline>
+    <baseline name="bl_lps_3" type="straight">
+        <points>l23:l34</points></baseline>
+    <baseline name="bl_lps_4" type="straight">
+        <points>l34:te</points></baseline>
+    <baseline name="bl_hps_5" type="straight">
+        <points>te:h45</points></baseline>
+    <baseline name="bl_hps_4" type="straight">
+        <points>h45:h34</points></baseline>
+    <baseline name="bl_hps_3" type="straight">
+        <points>h34:h23</points></baseline>
+    <baseline name="bl_hps_2" type="straight">
+        <points>h23:h12</points></baseline>
+    <baseline name="bl_hps_1" type="straight">
+        <points>h12:hle</points></baseline>
+</baselines>

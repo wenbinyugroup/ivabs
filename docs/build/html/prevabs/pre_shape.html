@@ -1,0 +1,471 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Geometry and shapes &mdash; iVABS 1.3 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "wenbinyugroup/ivabs");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Materials and Layups" href="pre_material.html" />
+    <link rel="prev" title="Coordinate systems" href="pre_coordinate.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> iVABS
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">iVABS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/install.html">Download and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/examples.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PreVABS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="rungui.html">Installation and Execution</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="preparecrosssection.html">Prepare Cross Section</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pre_coordinate.html">Coordinate systems</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Geometry and shapes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#base-points">Base points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#base-lines">Base lines</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#straight">Straight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#arc">Arc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#circle">Circle</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pre_material.html">Materials and Layups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pre_segment.html">Segments and Connections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pre_others.html">Other components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pre_overall.html">Overall configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pre_recover.html">Specifications for recovery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MSGPI</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../msgpi/sg_module.html">SG Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../msgpi/ms_module.html">Structure Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../msgpi/utils.html">Utility Functions</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">iVABS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="preparecrosssection.html">Prepare Cross Section</a> &raquo;</li>
+        
+      <li>Geometry and shapes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/prevabs/pre_shape.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="geometry-and-shapes">
+<span id="section-shape"></span><h1>Geometry and shapes<a class="headerlink" href="#geometry-and-shapes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="base-points">
+<h2>Base points<a class="headerlink" href="#base-points" title="Permalink to this headline">¶</a></h2>
+<p>Base points are used to draw base lines, which form the skeleton of a cross section. They can be either actually on the <em>Base line</em>s, or not, as reference points, for example the center of a circle. Points that are directly referred in the definitions of <em>Base line</em>s are called <em>Key point</em>s, such as starting and ending points of a line or an arc, or the center of a circle. The rest are <em>Normal point</em>s. The coordinates provided in the input file are defined in the basic frame <strong>z</strong> and then transformed into the cross-sectional frame <strong>x</strong>, through processes like translating, scaling and rotating. If none of those operations are needed, then those data also define the position of each point in the frame <strong>x</strong>.</p>
+<p>The file storing these data is a plain text file, with a file extension <code class="docutils literal notranslate"><span class="pre">.dat</span></code>. This block of data has three columns and <em>n</em> rows, where <em>n</em> is the number of <em>Base point</em>s. The three columns are arranged as</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">label</span>  <span class="n">z2</span>  <span class="n">z3</span>
+</pre></div>
+</div>
+<p>where the first column is the labels/names for each point, and the second and the third columns are the <span class="math">z_2</span> and <span class="math">z_3</span> coordinates, respectively. Some notes for this input file are:</p>
+<ul class="simple">
+<li><p>Three columns are separated by spaces;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> can be the combination of any letters, numbers and underscores “_”;</p></li>
+<li><p>Each <em>Key point</em>‘s name must be unique;</p></li>
+<li><p>Meaningful names for <em>Key point</em>s are highly recommended;</p></li>
+<li><p><em>Normal point</em>s’ names can be less meaningful, even identical;</p></li>
+<li><p>The order of the point list is important for those points belonging to a sublist defining the direction of a <em>Base line</em>, but it can be placed in any part of the big list.</p></li>
+</ul>
+</div>
+<div class="section" id="base-lines">
+<h2>Base lines<a class="headerlink" href="#base-lines" title="Permalink to this headline">¶</a></h2>
+<p><em>Base line</em>s form the skeleton of a cross section. PreVABS can handle three types of <em>Base line</em>s, straight, arc and circle, as shown in <a class="reference internal" href="#fig-baselinetypes"><span class="std std-numref">Fig. 7</span></a>. Spline are approximated by straight lines. Some types have several ways to define the <em>Base line</em>. In the end, all curved <em>Base line</em>s are converted into a chain of short straight lines in PreVABS. User can provide those short straight lines directly for spline, arc and circle. Or, for arc or circle, user can use simple rules to draw the shape first and then PreVABS will discretize it.</p>
+<p>Data for <em>Base line</em>s are stored in an XML formatted file. The general arrangement of data is shown in <a class="reference internal" href="#code-baseline-template"><span class="std std-numref">Listing 1</span></a>. All <em>Base line</em> definitions are stored in the root element <code class="docutils literal notranslate"><span class="pre">&lt;baselines&gt;</span></code>, which has one attribute <code class="docutils literal notranslate"><span class="pre">basepoints</span></code> indicating the name of <em>Base point</em> file used in this cross section. Each <code class="docutils literal notranslate"><span class="pre">&lt;baseline&gt;</span></code> element is the definition of a <em>Base line</em>. Each one has a unique <code class="docutils literal notranslate"><span class="pre">name</span></code> and a <code class="docutils literal notranslate"><span class="pre">type</span></code>, which can be <code class="docutils literal notranslate"><span class="pre">straight</span></code>, <code class="docutils literal notranslate"><span class="pre">arc</span></code> or <code class="docutils literal notranslate"><span class="pre">circle</span></code>. Inside the <code class="docutils literal notranslate"><span class="pre">baseline</span></code> element, the <code class="docutils literal notranslate"><span class="pre">straight</span></code> and <code class="docutils literal notranslate"><span class="pre">arc</span></code> types have several different ways of definition, and thus the arrangements of data are different, which will be explained in details below.</p>
+<div class="figure align-center" id="fig-baselinetypes">
+<a class="reference internal image-reference" href="../_images/baselinetypes.png"><img alt="../_images/baselinetypes.png" src="../_images/baselinetypes.png" style="width: 6in;" /></a>
+<p class="caption"><span class="caption-number">Figure 7 </span><span class="caption-text">Three types of <em>Base line</em>s in PreVABS.</span><a class="headerlink" href="#fig-baselinetypes" title="Permalink to this image">¶</a></p>
+</div>
+<div class="literal-block-wrapper docutils container" id="code-baseline-template">
+<div class="code-block-caption"><span class="caption-number">Listing 1 </span><span class="caption-text"><em>Base line</em> input file template.</span><a class="headerlink" href="#code-baseline-template" title="Permalink to this code">¶</a></div>
+<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;baselines</span> <span class="na">basepoints=</span><span class="s">&quot;basepoints&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;name1&quot;</span> <span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/baseline&gt;</span>
+  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;name2&quot;</span> <span class="na">type=</span><span class="s">&quot;arc&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/baseline&gt;</span>
+  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;name3&quot;</span> <span class="na">type=</span><span class="s">&quot;circle&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/baseline&gt;</span>
+  ...
+<span class="nt">&lt;/baselines&gt;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="straight">
+<h3>Straight<a class="headerlink" href="#straight" title="Permalink to this headline">¶</a></h3>
+<p>For the <em>Straight</em> type, the basic idea is to provide <em>Key point</em>s for the chain of straight lines and the direction of the <em>Base line</em> is defined by the order of the point list, as shown in <a class="reference internal" href="#fig-baselinestraight"><span class="std std-numref">Fig. 8</span></a>. Spline is also defined in this way. Some notes are:</p>
+<ul class="simple">
+<li><p>All <em>Key point</em>s are placed in the <code class="docutils literal notranslate"><span class="pre">&lt;points&gt;</span></code> element;</p></li>
+<li><p><em>Key point</em>s are separated by comma;</p></li>
+<li><p>Successive points can be included using two <em>Key point</em>s separated by colon;</p></li>
+<li><p>Space is not allowed;</p></li>
+<li><p>Above two methods can be used in combination.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">type=&quot;straight&quot;</span></code> for splines.</p>
+</div>
+<p>Besides, a simple straight line like (i) in <a class="reference internal" href="#fig-baselinestraight"><span class="std std-numref">Fig. 8</span></a> can also be defined using one <em>Key point</em> and an angle, which is shown as (iv) in the same figure. In this case, PreVABS will calculate the second <em>Key point</em> (a’) and generate the <em>Base line</em>. Some notes are:</p>
+<ul class="simple">
+<li><p>Two elements are used here, <code class="docutils literal notranslate"><span class="pre">&lt;point&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;angle&gt;</span></code>. The former element stores the user-provided <em>Key point</em> “a”, and the latter element stores the angle “theta”;</p></li>
+<li><p>The positive angle (degree) is defined from the positive <span class="math">z_2</span> axis, counterclockwise;</p></li>
+<li><p>The PreVABS-computed second <em>Key point</em> will always be “not lower” than the user-provided <em>Key point</em>, which means the <em>Base line</em> will always be pointing to the upper left or upper right, or to the right if it is horizontal;</p></li>
+<li><p>The two <em>Key point</em>s do not indicate the two ends of the <em>Base line</em>; or, in other words, <em>Base line</em> defined in this way is infinite.</p></li>
+</ul>
+<p>For the four <em>Base line</em>s in <a class="reference internal" href="#fig-baselinestraight"><span class="std std-numref">Fig. 8</span></a>, the sample input file is shown in <a class="reference internal" href="#code-baseline-straight"><span class="std std-numref">Listing 2</span></a>, assuming that there is a <em>Base point</em> file named “basepoints.dat” in the same folder.</p>
+<div class="figure align-center" id="fig-baselinestraight">
+<a class="reference internal image-reference" href="../_images/baselinestraight.png"><img alt="../_images/baselinestraight.png" src="../_images/baselinestraight.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-number">Figure 8 </span><span class="caption-text">Different ways of defining <em>Straight</em> <em>Base line</em>s in PreVABS.</span><a class="headerlink" href="#fig-baselinestraight" title="Permalink to this image">¶</a></p>
+</div>
+<div class="literal-block-wrapper docutils container" id="code-baseline-straight">
+<div class="code-block-caption"><span class="caption-number">Listing 2 </span><span class="caption-text">Sample input file for the <em>Base line</em>s shown in <a class="reference internal" href="#fig-baselinestraight"><span class="std std-numref">Fig. 8</span></a></span><a class="headerlink" href="#code-baseline-straight" title="Permalink to this code">¶</a></div>
+<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;baselines</span> <span class="na">basepoints=</span><span class="s">&quot;basepoints&quot;</span><span class="nt">&gt;</span>
+  ...
+  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;i&quot;</span> <span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;points&gt;</span>a,z<span class="nt">&lt;/points&gt;&lt;/baseline&gt;</span>
+  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;ii&quot;</span> <span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;points&gt;</span>a,b,c,z<span class="nt">&lt;/points&gt;&lt;/baseline&gt;</span>
+  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;iii&quot;</span> <span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;points&gt;</span>a:z<span class="nt">&lt;/points&gt;&lt;/baseline&gt;</span>
+  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;iv&quot;</span> <span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;point&gt;</span>a<span class="nt">&lt;/point&gt;&lt;angle&gt;</span>theta<span class="nt">&lt;/angle&gt;&lt;/baseline&gt;</span>
+  ...
+<span class="nt">&lt;/baselines&gt;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="arc">
+<h3>Arc<a class="headerlink" href="#arc" title="Permalink to this headline">¶</a></h3>
+<p>A real arc can also be created using a group of <em>Base point</em>s, in which case the <em>Straight</em> type should be used. The <em>Arc</em> type provides a parametric way to build this type of <em>Base line</em>, then PreVABS will discretize it. To uniquely define an arc, user needs to provide at least four of the following six items: center, starting point, ending point, radius, angle and direction, as shown in <a class="reference internal" href="#fig-baselinearc"><span class="std std-numref">Fig. 9</span></a>. Two possible ways of defining an arc are given in <a class="reference internal" href="#fig-baselinearc2"><span class="std std-numref">Fig. 10</span></a>, where the first one is defined by center, starting point, ending point and direction, and the second one is defined by center, starting point, angle and direction.</p>
+<p>For preparing the input file, some notes are:</p>
+<ul class="simple">
+<li><p>Element tags used for arc are <code class="docutils literal notranslate"><span class="pre">&lt;center&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;start&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;end&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;radius&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;angle&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;direction&gt;</span></code>;</p></li>
+<li><p>Not used elements should be deleted;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;center&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;start&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;end&gt;</span></code> store the <em>Key point</em> labels from the <em>Base point</em> file;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;angle&gt;</span></code> stores the angle in degrees greater than 0 and less than 360;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;direction&gt;</span></code> can only be <code class="docutils literal notranslate"><span class="pre">cw</span></code> for clockwise or <code class="docutils literal notranslate"><span class="pre">ccw</span></code> for counterclockwise. <code class="docutils literal notranslate"><span class="pre">ccw</span></code> is the default.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;radius&gt;</span></code> is ignored in the current version, and will be supported in a future version.</p>
+</div>
+<p>A sample input file for the two arcs shown in <a class="reference internal" href="#fig-baselinearc2"><span class="std std-numref">Fig. 10</span></a> is provided in <a class="reference internal" href="#code-baseline-arc"><span class="std std-numref">Listing 3</span></a>.</p>
+<div class="figure align-center" id="fig-baselinearc">
+<a class="reference internal image-reference" href="../_images/baselinearc.png"><img alt="../_images/baselinearc.png" src="../_images/baselinearc.png" style="width: 6in;" /></a>
+<p class="caption"><span class="caption-number">Figure 9 </span><span class="caption-text">Items in an arc.</span><a class="headerlink" href="#fig-baselinearc" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="fig-baselinearc2">
+<a class="reference internal image-reference" href="../_images/baselinearc2.png"><img alt="../_images/baselinearc2.png" src="../_images/baselinearc2.png" style="width: 6in;" /></a>
+<p class="caption"><span class="caption-number">Figure 10 </span><span class="caption-text">Two possible cases of defining an arc.</span><a class="headerlink" href="#fig-baselinearc2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="literal-block-wrapper docutils container" id="code-baseline-arc">
+<div class="code-block-caption"><span class="caption-number">Listing 3 </span><span class="caption-text">Sample input file for the <em>Base line</em>s shown in <a class="reference internal" href="#fig-baselinearc2"><span class="std std-numref">Fig. 10</span></a></span><a class="headerlink" href="#code-baseline-arc" title="Permalink to this code">¶</a></div>
+<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;baselines</span> <span class="na">basepoints=</span><span class="s">&quot;basepoints&quot;</span><span class="nt">&gt;</span>
+  ...
+  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;left&quot;</span> <span class="na">type=</span><span class="s">&quot;arc&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;center&gt;</span>c<span class="nt">&lt;/center&gt;</span>
+    <span class="nt">&lt;start&gt;</span>s<span class="nt">&lt;/start&gt;</span>
+    <span class="nt">&lt;end&gt;</span>e<span class="nt">&lt;/end&gt;</span>
+    <span class="nt">&lt;direction&gt;</span>ccw<span class="nt">&lt;/direction&gt;</span>
+  <span class="nt">&lt;/baseline&gt;</span>
+  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;right&quot;</span> <span class="na">type=</span><span class="s">&quot;arc&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;center&gt;</span>c<span class="nt">&lt;/center&gt;</span>
+    <span class="nt">&lt;start&gt;</span>s<span class="nt">&lt;/start&gt;</span>
+    <span class="nt">&lt;angle&gt;</span>a<span class="nt">&lt;/angle&gt;</span>
+    <span class="c">&lt;!-- here the direction is the default value &#39;ccw&#39; --&gt;</span>
+    <span class="nt">&lt;/baseline&gt;</span>
+  ...
+<span class="nt">&lt;/basepoints&gt;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="circle">
+<h3>Circle<a class="headerlink" href="#circle" title="Permalink to this headline">¶</a></h3>
+<p>Defining a circle is simpler than an arc. User only need to provide a center with radius or another point on the circle. The corresponding element tags are <code class="docutils literal notranslate"><span class="pre">&lt;center&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;radius&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;point&gt;</span></code>. A sample input file demonstrating the two methods is presented in <a class="reference internal" href="#code-baseline-circle"><span class="std std-numref">Listing 4</span></a>.</p>
+<div class="literal-block-wrapper docutils container" id="code-baseline-circle">
+<div class="code-block-caption"><span class="caption-number">Listing 4 </span><span class="caption-text">Sample input file for circles.</span><a class="headerlink" href="#code-baseline-circle" title="Permalink to this code">¶</a></div>
+<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;baselines</span> <span class="na">basepoints=</span><span class="s">&quot;basepoints&quot;</span><span class="nt">&gt;</span>
+  ...
+  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;circle1&quot;</span> <span class="na">type=</span><span class="s">&quot;circle&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;center&gt;</span>c<span class="nt">&lt;/center&gt;</span>
+    <span class="nt">&lt;radius&gt;</span>r<span class="nt">&lt;/radius&gt;</span>
+  <span class="nt">&lt;/baseline&gt;</span>
+  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;circle2&quot;</span> <span class="na">type=</span><span class="s">&quot;circle&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;center&gt;</span>c<span class="nt">&lt;/center&gt;</span>
+    <span class="nt">&lt;point&gt;</span>p<span class="nt">&lt;/point&gt;</span>
+  <span class="nt">&lt;/baseline&gt;</span>
+  ...
+<span class="nt">&lt;/baselines&gt;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="pre_material.html" class="btn btn-neutral float-right" title="Materials and Layups" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pre_coordinate.html" class="btn btn-neutral float-left" title="Coordinate systems" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Multiscale Structural Mechanics Group.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
