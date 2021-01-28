@@ -23,5 +23,5 @@ altogether.
 Documentation and tutorials
 ---------------------------
 
-For the documentation and tutorials, see the `iVABS Documentation <http://wenbinyugroup.github.io/>`_.
+For the documentation and tutorials, see the `iVABS Documentation <http://wenbinyugroup.github.io/ivabs>`_.
 
