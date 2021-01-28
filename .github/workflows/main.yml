@@ -17,6 +17,7 @@ jobs:
     - uses: ammaraskar/sphinx-action@master
       with:
         docs-folder: "docs/"
+        pre-build-command: "apt-get update -y && apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended"
     - name: Commit documentation changes
       run: |
         git clone https://github.com/wenbinyugroup/ivabs.git --branch gh-pages --single-branch gh-pages
