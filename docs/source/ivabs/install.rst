@@ -51,8 +51,6 @@ Linux installer
 
     - ``ivabs-folder\vendors`` should be in **PYTHONPATH**
 
-    - ``ivabs-folder\vendors`` should be in **PYTHONPATH**
-
   5. Python3 is needed. Necessary python package include: ``numpy, matplotlib``
 
 Linux portable archives
@@ -68,8 +66,6 @@ Linux portable archives
 
     - ``ivabs-folder\vendors\dakota\share\dakota\Python`` should be in **PYTHONPATH**. 
       Use your own Dakota PATH if you want to use your own Dakota.
-
-    - ``ivabs-folder\vendors`` should be in **PYTHONPATH**
 
     - ``ivabs-folder\vendors`` should be in **PYTHONPATH**
 
