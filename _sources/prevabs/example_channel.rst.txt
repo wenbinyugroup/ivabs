@@ -5,74 +5,55 @@
 Channel
 -------
 
-This example has a cross section of a highly heterogeneous channel. This cross section geometry can be defined as shown in :numref:`Fig. %s <fig_channel0>` [CHEN2010]_. The isotropic material properties are given in :numref:`Table %s <table_channel_materials>`. The layup is defined having a single layer with the thickness 0.001524 m. The result is shown in :numref:`Table %s <table_channel_result>` and compared with those in [CHEN2010]_.
-Complete input files can be found in ``examples\ex_channel\``, including ``channel.xml``, ``basepoints.dat``, ``baselines.xml``, ``materials.xml``,  and ``layups.xml``.
-
 .. figure:: figures/ex_channel_0.png
   :name: fig_channel0
   :width: 3in
+  :align: center
 
   Cross section of the pipe [CHEN2010]_.
+
+This example has a cross section of a highly heterogeneous channel.
+This cross section geometry can be defined as shown in
+:numref:`Fig. %s <fig_channel0>` [CHEN2010]_. The isotropic material
+properties are given in :numref:`Table %s <table_channel_materials>`.
+The layup is defined having a single layer with the thickness 0.001524 m.
+The result is shown in :numref:`Table %s <table_channel_result>` and
+compared with those in [CHEN2010]_.
+Complete input files can be found in ``examples\ex_channel\``, including
+``channel.xml``, ``basepoints.dat``, ``baselines.xml``, ``materials.xml``,
+and ``layups.xml``.
 
 .. figure:: figures/ex_channel_1.png
   :name: fig_channel1
   :width: 6in
+  :align: center
 
   *Base point*\ s, *Base line*\ s and *Segment*\ s of the channel cross section.
 
 .. figure:: figures/ex_channel_mesh.png
   :name: fig_channel_mesh
-  :width: 3in
+  :width: 4in
+  :align: center
 
   Meshed cross section viewed in Gmsh.
 
-.. list-table:: Material properties
+.. csv-table:: Material properties
   :name: table_channel_materials
-  :widths: auto
   :header-rows: 2
   :align: center
 
-  * - Name
-    - Type
-    - Density
-    - |e|
-    - |nu|
-  * - 
-    - 
-    - |den_si|
-    - :math:`10^9` |mod_si|
-    - 
-  * - mtr1
-    - isotropic
-    - 1068.69
-    - 206.843
-    - 0.49
+  "Name", "Type", "Density", |e|, |nu|
+   , , |den_si|, |mod_si_g|,
+  "mtr1", "isotropic", 1068.69, 206.843, 0.49
 
-.. list-table:: Layups
+.. csv-table:: Layups
   :name: table_channel_layups
-  :widths: auto
-  :header-rows: 1
+  :header-rows: 2
   :align: center
 
-  * - Name
-    - Layer
-    - Material
-    - Ply thickness
-    - Fiber orientation
-    - Number of plies
-  * - 
-    - 
-    - 
-    - |len_si|
-    - :math:`\circ`
-    - 
-  * - layup1
-    - 1
-    - mtr1
-    - 0.001524
-    - 0
-    - 1
-
+  "Name", "Layer", "Material", "Ply thickness", "Orientation", "Number of plies"
+  , , , |len_si|, :math:`\circ`,
+  "layup1", 1, "mtr1", 0.001524, 0, 1
 
 .. table:: Results
    :name: table_channel_result

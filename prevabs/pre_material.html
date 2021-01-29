@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Materials and Layups &mdash; iVABS 1.3 documentation</title>
+  <title>Materials and layups &mdash; iVABS 1.3 documentation</title>
   
 
   
@@ -67,13 +67,14 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Segments and Connections" href="pre_segment.html" />
+    <link rel="next" title="Components" href="pre_component.html" />
     <link rel="prev" title="Geometry and shapes" href="pre_shape.html" /> 
 </head>
 
@@ -130,27 +131,28 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 <p class="caption"><span class="caption-text">PreVABS</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="rungui.html">Installation and Execution</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="preparecrosssection.html">Prepare Cross Section</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Download and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="run.html">How to Run PreVABS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="guide.html">Guide for Preparing Input Files</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="pre_coordinate.html">Coordinate systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pre_shape.html">Geometry and shapes</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Materials and Layups</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#materials-and-laminas">Materials and Laminas</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Materials and layups</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#material-and-lamina">Material and lamina</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#layups">Layups</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#explicit-list">Explicit list</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#stacking-sequence-code">Stacking sequence code</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ply-lamina-percentage-code">Ply/Lamina percentage code</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="pre_segment.html">Segments and Connections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pre_others.html">Other components</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pre_overall.html">Overall configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pre_component.html">Components</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pre_recover.html">Specifications for recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pre_overall.html">Other input settings</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="xml.html">Introduction to XML</a></li>
 <li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 </ul>
 <p class="caption"><span class="caption-text">MSGPI</span></p>
@@ -206,9 +208,9 @@ commentsRunWhenDOMLoaded(addUtterances);
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="preparecrosssection.html">Prepare Cross Section</a> &raquo;</li>
+          <li><a href="guide.html">Guide for Preparing Input Files</a> &raquo;</li>
         
-      <li>Materials and Layups</li>
+      <li>Materials and layups</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -230,38 +232,25 @@ commentsRunWhenDOMLoaded(addUtterances);
            <div itemprop="articleBody">
             
   <div class="section" id="materials-and-layups">
-<span id="section-material-layup"></span><h1>Materials and Layups<a class="headerlink" href="#materials-and-layups" title="Permalink to this headline">¶</a></h1>
-<p>PreVABS uses the keyword <em>Material</em> for the physical properties attached to any materials, while <em>Lamina</em> for <em>Material</em> plus thickness, which in a sense is fixed by manufacturers. This can be thought as the basic commercially available “material”, such as a composite preprag. A <em>Layer</em> is a stack of <em>Lamina</em>s with the same fiber orientation. The thickness of a <em>Layer</em> can only be a multiplier of the <em>Lamina</em> thickness. <em>Layup</em> is several <em>Layer</em>s stacked together in a specific order. This relationship is illustrated in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 11</span></a>. More details can be found below.</p>
+<span id="section-material-layup"></span><h1>Materials and layups<a class="headerlink" href="#materials-and-layups" title="Permalink to this headline">¶</a></h1>
+<p>PreVABS uses the keyword <code class="docutils literal notranslate"><span class="pre">material</span></code> for the physical properties attached to any materials, while <code class="docutils literal notranslate"><span class="pre">lamina</span></code> for material plus thickness, which in a sense is fixed by manufacturers.
+This can be thought as the basic commercially available “material”, such as a composite preprag.
+A layer is a stack of laminae with the same fiber orientation.
+The thickness of a layer can only be a multiplier of the lamina thickness.
+Layup is several layers stacked together in a specific order.
+This relationship is illustrated in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 17</span></a>.
+More details can be found below.</p>
 <div class="figure align-center" id="fig-layup">
 <a class="reference internal image-reference" href="../_images/layup.png"><img alt="../_images/layup.png" src="../_images/layup.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 11 </span><span class="caption-text">Relationship between <em>Material</em>, <em>Lamina</em>, <em>Layer</em> and <em>Layup</em>.</span><a class="headerlink" href="#fig-layup" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 17 </span><span class="caption-text">Relationship between material, lamina, layer and layup.</span><a class="headerlink" href="#fig-layup" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="materials-and-laminas">
-<h2>Materials and Laminas<a class="headerlink" href="#materials-and-laminas" title="Permalink to this headline">¶</a></h2>
-<p>Both <em>Material</em>s and <em>Lamina</em>s are stored in one XML file, under the single root element <code class="docutils literal notranslate"><span class="pre">&lt;materials&gt;</span></code>. A template of this file is shown in <a class="reference internal" href="#code-material-temp"><span class="std std-numref">Listing 5</span></a>. Each <em>Material</em> must have a name and type. Under each <code class="docutils literal notranslate"><span class="pre">&lt;material&gt;</span></code> element, there are a <code class="docutils literal notranslate"><span class="pre">&lt;density&gt;</span></code> element and an <code class="docutils literal notranslate"><span class="pre">&lt;elastic&gt;</span></code> element. The arrangement of elastic properties is different for different types:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">isotropic</span></code> <em>Material</em> has 2 constants: <code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;nu&gt;</span></code>;</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">orthotropic</span></code> <em>Material</em> has 9 constants: <code class="docutils literal notranslate"><span class="pre">&lt;e1&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;e2&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;e3&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;g12&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;g13&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;g23&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;nu12&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;nu13&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;nu23&gt;</span></code>;</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">anisotropic</span></code> <em>Material</em> has 21 constants: <code class="docutils literal notranslate"><span class="pre">&lt;c11&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;c12&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;c13&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;c14&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;c15&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;c16&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;c22&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;c23&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;c24&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;c25&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;c26&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;c33&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;c34&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;c35&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;c36&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;c44&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;c45&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;c46&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;c55&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;c56&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;c66&gt;</span></code>. These constants are defined in Equation <a class="reference internal" href="#equation-hookeslaw">(1)</a>.</p></li>
-</ul>
-<div class="math" id="equation-hookeslaw">
-<p><span class="eqno">(1)<a class="headerlink" href="#equation-hookeslaw" title="Permalink to this equation">¶</a></span><span class="math">\begin{Bmatrix}
-  \sigma_{11} \\ \sigma_{12} \\ \sigma_{13} \\ \sigma_{22} \\ \sigma_{23} \\ \sigma_{33}
-\end{Bmatrix} =
-\begin{bmatrix}
-  c_{11} &amp; c_{12} &amp; c_{13} &amp; c_{14} &amp; c_{15} &amp; c_{16} \\
-  c_{12} &amp; c_{22} &amp; c_{23} &amp; c_{24} &amp; c_{25} &amp; c_{26} \\
-  c_{13} &amp; c_{23} &amp; c_{33} &amp; c_{34} &amp; c_{35} &amp; c_{36} \\
-  c_{14} &amp; c_{24} &amp; c_{34} &amp; c_{44} &amp; c_{45} &amp; c_{46} \\
-  c_{15} &amp; c_{25} &amp; c_{35} &amp; c_{45} &amp; c_{55} &amp; c_{56} \\
-  c_{16} &amp; c_{26} &amp; c_{36} &amp; c_{46} &amp; c_{56} &amp; c_{66}
-\end{bmatrix}
-\begin{Bmatrix}
-  \epsilon_{11} \\ 2\epsilon_{12} \\ 2\epsilon_{13} \\ \epsilon_{22} \\ 2\epsilon_{23} \\ \epsilon_{33}
-\end{Bmatrix}</span></p>
-</div><p>Each <code class="docutils literal notranslate"><span class="pre">&lt;lamina&gt;</span></code> element has a name, and contains a <em>Material</em> name and a value for thickness. The <em>Material</em> name is stored in the <code class="docutils literal notranslate"><span class="pre">&lt;material&gt;</span></code> element and the thickness is stored in the <code class="docutils literal notranslate"><span class="pre">&lt;thickness&gt;</span></code> element.</p>
+<div class="section" id="material-and-lamina">
+<h2>Material and lamina<a class="headerlink" href="#material-and-lamina" title="Permalink to this headline">¶</a></h2>
+<p>Both materials and laminae are stored in one XML file, under the single root element <code class="docutils literal notranslate"><span class="pre">&lt;materials&gt;</span></code>.
+A template of this file is shown in <a class="reference internal" href="#code-material-temp"><span class="std std-numref">Listing 14</span></a>.
+Each material must have a name and type. Under each <code class="docutils literal notranslate"><span class="pre">&lt;material&gt;</span></code> element, there are a <code class="docutils literal notranslate"><span class="pre">&lt;density&gt;</span></code> element and an <code class="docutils literal notranslate"><span class="pre">&lt;elastic&gt;</span></code> element.</p>
 <div class="literal-block-wrapper docutils container" id="code-material-temp">
-<div class="code-block-caption"><span class="caption-number">Listing 5 </span><span class="caption-text">A template for the <em>Material</em> and <em>Lamina</em> input file.</span><a class="headerlink" href="#code-material-temp" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 14 </span><span class="caption-text">Input syntax for materials.</span><a class="headerlink" href="#code-material-temp" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -312,12 +301,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 48
 49
 50
-51
-52
-53
-54
-55
-56</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;materials&gt;</span>
+51</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;materials&gt;</span>
   ...
   <span class="nt">&lt;material</span> <span class="na">name=</span><span class="s">&quot;iso1&quot;</span> <span class="na">type=</span><span class="s">&quot;isotropic&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;density&gt;</span>...<span class="nt">&lt;/density&gt;</span>
@@ -367,6 +351,56 @@ commentsRunWhenDOMLoaded(addUtterances);
     <span class="nt">&lt;/elastic&gt;</span>
   <span class="nt">&lt;/material&gt;</span>
   ...
+<span class="nt">&lt;/materials&gt;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<p><strong>Specification</strong></p>
+<ul class="simple">
+<li><p><strong>&lt;material&gt;</strong> - Root element for each material.</p>
+<ul>
+<li><p><em>name</em> - Required. Name of the material.</p></li>
+<li><p><em>type</em> - Required. Type of the material. Choose one from ‘isotropic’, ‘orthotropic’, ‘anisotropic’ and ‘lamina’.</p></li>
+</ul>
+</li>
+<li><p><strong>&lt;density&gt;</strong> - Optional. Density of the material. Defualt is 1.0.</p></li>
+<li><p><strong>&lt;elastic&gt;</strong> - Elastic properties of the material. Specifications are different for different types.</p>
+<ul>
+<li><p>If <em>type=”isotropic”</em> - 2 constants: ‘e’ and ‘nu’.</p></li>
+<li><p>If <em>type=”orthotropic”</em> - 9 constants: ‘e1’, ‘e2’, ‘e3’, ‘g12’, ‘g13’, ‘g23’, ‘nu12’, ‘nu13’ and ‘nu23’.</p></li>
+<li><p>If <em>type=”anisotropic”</em> - 21 constants: ‘c11’, ‘c12’, ‘c13’, ‘c14’, ‘c15’, ‘c16’, ‘c22’, ‘c23’, ‘c24’, ‘c25’, ‘c26’, ‘c33’, ‘c34’, ‘c35’, ‘c36’, ‘c44’, ‘c45’, ‘c46’, ‘c55’, ‘c56’ and ‘c66’. These constants are defined in Equation <a class="reference internal" href="#equation-hookeslaw">(1)</a>.</p></li>
+<li><p>If <em>type=”lamina”</em> - 4 constants: ‘e1’, ‘e2’, ‘g12’ and ‘nu12’. Internally, this type of material will be converted to the ‘orthotropic’ material. The default values for the rest components are: ‘e3=e2’, ‘nu13=nu12’, ‘nu23=0.3’, ‘g13=g12’ and ‘g23=e3/(2*(1+nu23))’. These default values can be overwritten by custom values.</p></li>
+</ul>
+</li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-hookeslaw">
+<span class="eqno">(1)<a class="headerlink" href="#equation-hookeslaw" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{Bmatrix}
+  \sigma_{11} \\ \sigma_{12} \\ \sigma_{13} \\ \sigma_{22} \\ \sigma_{23} \\ \sigma_{33}
+\end{Bmatrix} =
+\begin{bmatrix}
+  c_{11} &amp; c_{12} &amp; c_{13} &amp; c_{14} &amp; c_{15} &amp; c_{16} \\
+  c_{12} &amp; c_{22} &amp; c_{23} &amp; c_{24} &amp; c_{25} &amp; c_{26} \\
+  c_{13} &amp; c_{23} &amp; c_{33} &amp; c_{34} &amp; c_{35} &amp; c_{36} \\
+  c_{14} &amp; c_{24} &amp; c_{34} &amp; c_{44} &amp; c_{45} &amp; c_{46} \\
+  c_{15} &amp; c_{25} &amp; c_{35} &amp; c_{45} &amp; c_{55} &amp; c_{56} \\
+  c_{16} &amp; c_{26} &amp; c_{36} &amp; c_{46} &amp; c_{56} &amp; c_{66}
+\end{bmatrix}
+\begin{Bmatrix}
+  \epsilon_{11} \\ 2\epsilon_{12} \\ 2\epsilon_{13} \\ \epsilon_{22} \\ 2\epsilon_{23} \\ \epsilon_{33}
+\end{Bmatrix}\end{split}\]</div>
+<p>Each lamina element has a name, and contains a material name and a value for thickness.
+The input syntax is shown in <a class="reference internal" href="#code-lamina-temp"><span class="std std-numref">Listing 15</span></a>.</p>
+<div class="literal-block-wrapper docutils container" id="code-lamina-temp">
+<div class="code-block-caption"><span class="caption-number">Listing 15 </span><span class="caption-text">Input syntax for lamina.</span><a class="headerlink" href="#code-lamina-temp" title="Permalink to this code">¶</a></div>
+<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;materials&gt;</span>
+  ...
   <span class="nt">&lt;lamina</span> <span class="na">name=</span><span class="s">&quot;lamina1&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;material&gt;</span>orth1<span class="nt">&lt;/material&gt;</span>
     <span class="nt">&lt;thickness&gt;</span>...<span class="nt">&lt;/thickness&gt;</span>
@@ -376,16 +410,34 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </td></tr></table></div>
 </div>
+<p><strong>Specification</strong></p>
+<ul>
+<li><p><strong>&lt;lamina&gt;</strong> - Root element for the definition of each lamina.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><em>name</em> - Required. Name of the lamina.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>&lt;material&gt;</strong> - Name of the material of the lamina.</p></li>
+<li><p><strong>&lt;thickness&gt;</strong> - Thickness of the lamina.</p></li>
+</ul>
 </div>
 <div class="section" id="layups">
 <h2>Layups<a class="headerlink" href="#layups" title="Permalink to this headline">¶</a></h2>
-<p>In general, there are three ways to define a <em>Layup</em>, explicit list, stacking sequence code and ply (lamina) percentage code. For the explicit list, a laminate is laid onto the <em>Base line</em> from the first <em>Layer</em> in the list to the last one, in the direction given by the user. For the stacking sequence and ply percentage code, the <em>Layup</em> starts from left to the right. User should pay attention to the relations among the <em>Base line</em> direction, elemental frame <strong>y</strong> and fiber orientation <span class="math">\theta_3</span> of each <em>Layer</em>, as shown in <a class="reference internal" href="#fig-elementalframe"><span class="std std-numref">Fig. 12</span></a>. Change of direction of the <em>Base line</em> will change the elemental frame <strong>y</strong> as defined, which will further require the user to change the fiber orientations accordingly, even though nothing changes physically. All layup information are included in one XML file. A template of this file can be found in <a class="reference internal" href="#code-layup-temp"><span class="std std-numref">Listing 6</span></a>.</p>
+<p>In general, there are two ways to define a layup, explicit list and stacking sequence code.
+For the explicit list, a laminate is laid onto the base line from the first layer in the list to the last one, in the direction given by the user.
+For the stacking sequence, the layup starts from left to the right.
+User should pay attention to the relations among the base line direction, elemental frame <strong>y</strong> and fiber orientation <span class="math notranslate nohighlight">\(\theta_3\)</span> of each layer, as shown in <a class="reference internal" href="#fig-elementalframe"><span class="std std-numref">Fig. 18</span></a>.
+Change of direction of the base line will change the elemental frame <strong>y</strong> as defined, which will further require the user to change the fiber orientations accordingly, even though nothing changes physically.
+All layup information are included in one XML file.
+A template of this file can be found in <a class="reference internal" href="#code-layup-temp"><span class="std std-numref">Listing 16</span></a>.</p>
 <div class="figure align-center" id="fig-elementalframe">
 <a class="reference internal image-reference" href="../_images/elementalframe.png"><img alt="../_images/elementalframe.png" src="../_images/elementalframe.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 12 </span><span class="caption-text">Relations among the <em>Base line</em> direction, elemental frame <strong>y</strong> and fiber orientation (Note $y_2$ is parallel to the <em>Base line</em> direction).</span><a class="headerlink" href="#fig-elementalframe" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 18 </span><span class="caption-text">Relations among the base line direction, elemental frame <strong>y</strong> and fiber orientation (Note $y_2$ is parallel to the base line direction).</span><a class="headerlink" href="#fig-elementalframe" title="Permalink to this image">¶</a></p>
 </div>
 <div class="literal-block-wrapper docutils container" id="code-layup-temp">
-<div class="code-block-caption"><span class="caption-number">Listing 6 </span><span class="caption-text">A template for the <em>Layup</em> input file.</span><a class="headerlink" href="#code-layup-temp" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 16 </span><span class="caption-text">Input syntax for layups.</span><a class="headerlink" href="#code-layup-temp" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -406,50 +458,103 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </td></tr></table></div>
 </div>
-<div class="section" id="explicit-list">
-<h3>Explicit list<a class="headerlink" href="#explicit-list" title="Permalink to this headline">¶</a></h3>
-<p>This method requires user to write down the lamina name, fiber orientation and number of successive laminas with the same fiber orientation, layer by layer. A template for one layer is shown below.</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">&lt;layer</span> <span class="pre">lamina=&quot;lamina_name&quot;&gt;angle:stack&lt;/layer&gt;</span></code></p>
-</div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">lamina_name</span></code> is defined in the <em>Material</em> and <em>Lamina</em> file. <code class="docutils literal notranslate"><span class="pre">angle</span></code> is the fiber orientation defined as shown in <a class="reference internal" href="#fig-elementalframe"><span class="std std-numref">Fig. 12</span></a>. <code class="docutils literal notranslate"><span class="pre">stack</span></code> is the number of successive laminae with the same fiber orientation. Some notes are:</p>
+<p><strong>Specification</strong></p>
 <ul class="simple">
-<li><p>Default values are 0 for <code class="docutils literal notranslate"><span class="pre">angle</span></code> and 1 for <code class="docutils literal notranslate"><span class="pre">stack</span></code>;</p></li>
-<li><p>Omitted values are replaced by default values;</p></li>
-<li><p>If there is only one number presented in the <code class="docutils literal notranslate"><span class="pre">&lt;layer&gt;</span></code> element, then it is read in as <code class="docutils literal notranslate"><span class="pre">angle</span></code>, not <code class="docutils literal notranslate"><span class="pre">stack</span></code>, which is 1 by default;</p></li>
-<li><p>Empty input equals to <code class="docutils literal notranslate"><span class="pre">0:1</span></code>.</p></li>
-</ul>
-<p>An example for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 11</span></a> is given in <a class="reference internal" href="#code-material"><span class="std std-numref">Listing 7</span></a> and <a class="reference internal" href="#code-layup"><span class="std std-numref">Listing 8</span></a>.</p>
-</div>
-<div class="section" id="stacking-sequence-code">
-<h3>Stacking sequence code<a class="headerlink" href="#stacking-sequence-code" title="Permalink to this headline">¶</a></h3>
-<p>This method requires users to provide one lamina name and the stacking sequence code. A template is shown below.</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">&lt;layup</span> <span class="pre">name=&quot;...&quot;</span> <span class="pre">method=&quot;stack</span> <span class="pre">sequence&quot;&gt;</span></code></p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">&lt;lamina&gt;...&lt;/lamina&gt;</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;code&gt;...&lt;/code&gt;</span></code></p>
-</div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;/layup&gt;</span></code></p>
-</div></blockquote>
-<p>Some notes are:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">method</span></code> is required in this case, which should be <code class="docutils literal notranslate"><span class="pre">stack</span> <span class="pre">sequence</span></code> or <code class="docutils literal notranslate"><span class="pre">ss</span></code> for short;</p></li>
-<li><p>The element <code class="docutils literal notranslate"><span class="pre">&lt;code&gt;</span></code> stores the sequence of fiber orientations. Some rules and examples are given below.</p>
+<li><p><strong>&lt;layup&gt;</strong> - Root element for the definition of each layup.</p>
 <ul>
-<li><p>All fiber orientations should be put between a pair of square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code>;</p></li>
-<li><p>Different fiber orientations are separated by slash <code class="docutils literal notranslate"><span class="pre">/</span></code>;</p></li>
-<li><p>After the right bracket, user can add <code class="docutils literal notranslate"><span class="pre">ns</span></code> to indicate symmetry of the layup, where <code class="docutils literal notranslate"><span class="pre">n</span></code> is the number of the symmetry operations needed to generate the complete layup;</p></li>
-<li><p>Successive <em>Lamina</em>s with the same fiber orientation can be expressed using colon like <code class="docutils literal notranslate"><span class="pre">angle:stack</span></code>, where <code class="docutils literal notranslate"><span class="pre">angle</span></code> is the fiber orientation and <code class="docutils literal notranslate"><span class="pre">stack</span></code> is the number of plies;</p></li>
-<li><p>If a group of fiber orientations is repeated, user needs to close them in a pair of round brackets <code class="docutils literal notranslate"><span class="pre">()</span></code>.</p></li>
+<li><p><em>name</em> - Required. Name of the layup.</p></li>
+<li><p><em>method</em> - Optional. Method of defining the layup. Choose one from ‘layer list’ (or ‘ll’) and ‘stack sequence’ (or ‘ss’). Default is ‘layer list’.</p></li>
 </ul>
 </li>
 </ul>
+<div class="section" id="explicit-list">
+<h3>Explicit list<a class="headerlink" href="#explicit-list" title="Permalink to this headline">¶</a></h3>
+<p>This method requires user to write down the lamina name, fiber orientation
+and number of successive laminas with the same fiber orientation, layer
+by layer. Alternatively, a layer can also be defined by the name of a sublayup.
+A sublayup must appear before the layup where it is referenced.
+A template for one layer is shown below.</p>
+<div class="literal-block-wrapper docutils container" id="code-layup-ll-temp">
+<div class="code-block-caption"><span class="caption-number">Listing 17 </span><span class="caption-text">A template for the layup layer list input.</span><a class="headerlink" href="#code-layup-ll-temp" title="Permalink to this code">¶</a></div>
+<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;layups&gt;</span>
+  ...
+  <span class="nt">&lt;layup</span> <span class="na">name=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;layer</span> <span class="na">lamina=</span><span class="s">&quot;lamina_name&quot;</span><span class="nt">&gt;</span>angle:stack<span class="nt">&lt;/layer&gt;</span>
+    <span class="nt">&lt;layer</span> <span class="na">lamina=</span><span class="s">&quot;lamina_name&quot;</span><span class="nt">&gt;</span>angle:stack<span class="nt">&lt;/layer&gt;</span>
+    <span class="nt">&lt;layer</span> <span class="na">lamina=</span><span class="s">&quot;lamina_name&quot;</span><span class="nt">&gt;</span>angle:stack<span class="nt">&lt;/layer&gt;</span>
+    <span class="nt">&lt;layer</span> <span class="na">layup=</span><span class="s">&quot;sublayup_name&quot;</span><span class="nt">/&gt;</span>
+    ...
+  <span class="nt">&lt;/layup&gt;</span>
+  ...
+<span class="nt">&lt;/layups&gt;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<p><strong>Specification</strong></p>
+<ul class="simple">
+<li><p><strong>&lt;layer&gt;</strong> - Material orientation and number of plies separated by a colon ‘angle:stack’. Default values are 0 for ‘angle’ and 1 for ‘stack’. If there is only one number presented in this element, then it is read in as ‘angle’, not ‘stack’, which is 1 by default.</p>
+<ul>
+<li><p><em>lamina</em> - Optional. Name of the lamina used in the current layer.</p></li>
+<li><p><em>layup</em> - Optional. Name of the sublayup used in the current layer. One and only one of <em>lamina</em> and <em>layup</em> should be used. ‘angle’ and ‘stack’ are not needed when <em>layup</em> is used.</p></li>
+</ul>
+</li>
+</ul>
+<p>An example for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 17</span></a> is given
+in <a class="reference internal" href="#code-material"><span class="std std-numref">Listing 19</span></a> and <a class="reference internal" href="#code-layup"><span class="std std-numref">Listing 20</span></a>.</p>
+</div>
+<div class="section" id="stacking-sequence-code">
+<h3>Stacking sequence code<a class="headerlink" href="#stacking-sequence-code" title="Permalink to this headline">¶</a></h3>
+<p>This method requires users to provide one lamina name and the stacking
+sequence code. A template is shown below.</p>
+<div class="literal-block-wrapper docutils container" id="code-layup-ss-temp">
+<div class="code-block-caption"><span class="caption-number">Listing 18 </span><span class="caption-text">A template for the layup stacking sequence input.</span><a class="headerlink" href="#code-layup-ss-temp" title="Permalink to this code">¶</a></div>
+<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;layups&gt;</span>
+  ...
+  <span class="nt">&lt;layup</span> <span class="na">name=</span><span class="s">&quot;...&quot;</span> <span class="na">method=</span><span class="s">&quot;stack sequence&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;lamina&gt;</span>...<span class="nt">&lt;/lamina&gt;</span>
+    <span class="nt">&lt;code&gt;</span>...<span class="nt">&lt;/code&gt;</span>
+  <span class="nt">&lt;/layup&gt;</span>
+  ...
+<span class="nt">&lt;/layups&gt;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<p><strong>Specification</strong></p>
+<ul class="simple">
+<li><p><strong>&lt;lamina&gt;</strong> - Name of the lamina used.</p></li>
+<li><p><strong>&lt;code&gt;</strong> - Stacking sequency code. Explained below.</p></li>
+</ul>
+<p><strong>Rules of writing the stacking sequence code</strong></p>
+<ul class="simple">
+<li><p>All fiber orientations should be put between a pair of square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code>;</p></li>
+<li><p>Different fiber orientations are separated by slash <code class="docutils literal notranslate"><span class="pre">/</span></code>;</p></li>
+<li><p>After the right bracket, user can add <code class="docutils literal notranslate"><span class="pre">ns</span></code> to indicate symmetry of the layup, where <code class="docutils literal notranslate"><span class="pre">n</span></code> is the number of the symmetry operations needed to generate the complete layup;</p></li>
+<li><p>Successive laminae with the same fiber orientation can be expressed using colon like <code class="docutils literal notranslate"><span class="pre">angle:stack</span></code>, where <code class="docutils literal notranslate"><span class="pre">angle</span></code> is the fiber orientation and <code class="docutils literal notranslate"><span class="pre">stack</span></code> is the number of plies;</p></li>
+<li><p>If a group of fiber orientations is repeated, user needs to close them in a pair of round brackets <code class="docutils literal notranslate"><span class="pre">()</span></code>.</p></li>
+</ul>
 <p>Examples</p>
-<table class="docutils align-default">
+<table class="docutils align-center" id="id1">
+<caption><span class="caption-number">Table 7 </span><span class="caption-text">Examples of stacking sequence code</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 31%" />
-<col style="width: 69%" />
+<col style="width: 50%" />
+<col style="width: 50%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Code</p></th>
@@ -465,12 +570,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="ply-lamina-percentage-code">
-<h3>Ply/Lamina percentage code<a class="headerlink" href="#ply-lamina-percentage-code" title="Permalink to this headline">¶</a></h3>
-<p>(Will be available in a future version)</p>
 <div class="literal-block-wrapper docutils container" id="code-material">
-<div class="code-block-caption"><span class="caption-number">Listing 7 </span><span class="caption-text">Example <em>Material</em> and <em>Lamina</em> input file for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 11</span></a>.</span><a class="headerlink" href="#code-material" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 19 </span><span class="caption-text">Example material and lamina input file for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 17</span></a>.</span><a class="headerlink" href="#code-material" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -510,7 +611,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </td></tr></table></div>
 </div>
 <div class="literal-block-wrapper docutils container" id="code-layup">
-<div class="code-block-caption"><span class="caption-number">Listing 8 </span><span class="caption-text">Example <em>Layup</em> input file for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 11</span></a>.</span><a class="headerlink" href="#code-layup" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 20 </span><span class="caption-text">Example layup input file for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 17</span></a>.</span><a class="headerlink" href="#code-layup" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -557,7 +658,7 @@ commentsRunWhenDOMLoaded(addUtterances);
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="pre_segment.html" class="btn btn-neutral float-right" title="Segments and Connections" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pre_component.html" class="btn btn-neutral float-right" title="Components" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="pre_shape.html" class="btn btn-neutral float-left" title="Geometry and shapes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

@@ -21,10 +21,14 @@ Table of Contents:
    :maxdepth: 2
    :caption: PreVABS
 
-   prevabs/rungui
-   prevabs/preparecrosssection
+   prevabs/install
+   prevabs/run
+   prevabs/tutorial
+   prevabs/guide
    prevabs/examples
+   prevabs/xml
    prevabs/references
+
 
 .. toctree::
    :maxdepth: 2
@@ -33,10 +37,5 @@ Table of Contents:
    msgpi/sg_module
    msgpi/ms_module
    msgpi/utils
-..   cmake
-..   userinput
-   rapidxml
-   cgal
-   error
 
 

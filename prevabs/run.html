@@ -1,0 +1,450 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>How to Run PreVABS &mdash; iVABS 1.3 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "wenbinyugroup/ivabs");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tutorial" href="tutorial.html" />
+    <link rel="prev" title="Download and Installation" href="install.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> iVABS
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">iVABS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/install.html">Download and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/examples.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PreVABS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Download and Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How to Run PreVABS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#quick-start">Quick start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#command-line-options">Command line options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-cases">Running cases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#case-1-build-cross-section-from-parametric-input-files">Case 1: Build cross section from parametric input files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#case-2-carry-out-homogenization-without-visualization">Case 2: Carry out homogenization without visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#case-3-predict-3d-stress-strain-and-plot">Case 3: Predict 3D stress/strain and plot</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide.html">Guide for Preparing Input Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="xml.html">Introduction to XML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MSGPI</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../msgpi/sg_module.html">SG Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../msgpi/ms_module.html">Structure Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../msgpi/utils.html">Utility Functions</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">iVABS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>How to Run PreVABS</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/wenbinyugroup/ivabs/blob/main/docs/source/prevabs/run.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="how-to-run-prevabs">
+<span id="section-run"></span><h1>How to Run PreVABS<a class="headerlink" href="#how-to-run-prevabs" title="Permalink to this headline">¶</a></h1>
+<p>PreVABS is a command line based program which acts as a general-purpose
+preprocessor and postprocessor based on parametric inputs necessary for
+designing a cross section;</p>
+<p>Download the examples package from cdmHUB
+(<a class="reference external" href="https://cdmhub.org/resources/1597/supportingdocs">https://cdmhub.org/resources/1597/supportingdocs</a>), and unpack it to
+any location;</p>
+<div class="section" id="quick-start">
+<h2>Quick start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h2>
+<p>If you have already added the folder where you stored VABS, Gmsh and
+PreVABS to the system or user environment variable <code class="docutils literal notranslate"><span class="pre">PATH</span></code>, to execute
+PreVABS, you can open any command line tool (Command Prompt or PowerShell
+on Windows, Terminal on Linux), change directory to the root of the
+PreVABS package, and type the following command:</p>
+<ul>
+<li><p>On Windows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prevabs</span> <span class="o">-</span><span class="n">i</span> <span class="n">examples</span>\<span class="n">ex_airfoil</span>\<span class="n">mh104</span><span class="o">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">h</span> <span class="o">-</span><span class="n">v</span>
+</pre></div>
+</div>
+</li>
+<li><p>On Linux:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prevabs</span> <span class="o">-</span><span class="n">i</span> <span class="n">examples</span><span class="o">/</span><span class="n">ex_airfoil</span><span class="o">/</span><span class="n">mh104</span><span class="o">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">h</span> <span class="o">-</span><span class="n">v</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>The first option <code class="docutils literal notranslate"><span class="pre">-i</span></code> indicates the path and name for the cross section
+file (<code class="docutils literal notranslate"><span class="pre">ex_airfoil\mh104.xml</span></code> for this case). The second option <code class="docutils literal notranslate"><span class="pre">-h</span></code>
+indicates the analysis to compute cross-sectional properties (this
+analysis is also called homogenization), where meshed cross section will
+be built and VABS input file will be generated. The last option <code class="docutils literal notranslate"><span class="pre">-v</span></code>
+is for visualizing the meshed cross section.</p>
+<p>PreVABS will read the parametric input files and generate the meshed
+cross section;</p>
+<p>Once finished, PreVABS will invoke Gmsh, a tool for visualization, to
+show the cross section with the corresponding meshes, as shown in
+<a class="reference internal" href="#fig-quickstart"><span class="std std-numref">Fig. 1</span></a>. Three files are generated in the
+same location at this moment, a VABS input file <code class="docutils literal notranslate"><span class="pre">mh104.sg</span></code>, a
+Gmsh geometry file <code class="docutils literal notranslate"><span class="pre">mh104.geo</span></code>, a Gmsh mesh file <code class="docutils literal notranslate"><span class="pre">mh104.msh</span></code>, and
+a Gmsh option file <code class="docutils literal notranslate"><span class="pre">mh104.opt</span></code>.
+The geometry file is used to inspect errors when meshing cannot be
+accomplished. The latter three files are generated only when visualization
+is needed;</p>
+<p>Then user can run VABS using the generated input file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PreVABS and Gmsh are free and open source. The source codes
+of PreVABS and Gmsh are available on cdmHUB at <a class="reference external" href="https://cdmhub.org/resources/1597">https://cdmhub.org/resources/1597</a>.
+You can make changes to both codes by modifying its source codes.
+However, VABS is a commercial code and you need to request the code
+and a valid license from AnalySwift (<a class="reference external" href="http://analyswift.com/">http://analyswift.com/</a>).</p>
+</div>
+<div class="figure align-center" id="fig-quickstart">
+<a class="reference internal image-reference" href="../_images/rungui0.png"><img alt="../_images/rungui0.png" src="../_images/rungui0.png" style="width: 6.5in;" /></a>
+<p class="caption"><span class="caption-number">Figure 1 </span><span class="caption-text">Cross section with meshes generated by PreVABS and visualized by Gmsh.
+Example: <code class="docutils literal notranslate"><span class="pre">examples\ex_airfoil\mh104.xml</span></code>.</span><a class="headerlink" href="#fig-quickstart" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="command-line-options">
+<span id="section-command-option"></span><h2>Command line options<a class="headerlink" href="#command-line-options" title="Permalink to this headline">¶</a></h2>
+<p>PreVABS is executed using command <code class="docutils literal notranslate"><span class="pre">prevabs</span></code> with other options. If
+no option is given, a list of available arguments will be printed on
+the screen.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prevabs</span> <span class="o">-</span><span class="n">i</span> <span class="o">&lt;</span><span class="n">main_input_file_name</span><span class="o">.</span><span class="n">xml</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+</pre></div>
+</div>
+<table class="docutils align-center" id="id1">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Command line options</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 91%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Option</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-h</p></td>
+<td><p>Build cross section and generate VABS/SwiftComp input file
+for homogenization</p></td>
+</tr>
+<tr class="row-odd"><td><p>-d</p></td>
+<td><p>Read 1D beam analysis results and update VABS/SwiftComp
+input file for recovery</p></td>
+</tr>
+<tr class="row-even"><td><p>-v</p></td>
+<td><p>Visualize meshed cross section for homogenization or contour
+plots of stresses and strains after recovery</p></td>
+</tr>
+<tr class="row-odd"><td><p>-e</p></td>
+<td><p>Execute VABS/SwiftComp</p></td>
+</tr>
+<tr class="row-even"><td><p>-vabs</p></td>
+<td><p>Use VABS (Default)</p></td>
+</tr>
+<tr class="row-odd"><td><p>-sc</p></td>
+<td><p>Use SwiftComp</p></td>
+</tr>
+<tr class="row-even"><td><p>-f</p></td>
+<td><p>Initial failure strength analysis (SwiftComp only)</p></td>
+</tr>
+<tr class="row-odd"><td><p>-fe</p></td>
+<td><p>Initial failure envelope (SwiftComp only)</p></td>
+</tr>
+<tr class="row-even"><td><p>-fi</p></td>
+<td><p>Initial failure indices and strength ratios (SwiftComp only)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When VABS is called by PreVABS (using the option <code class="docutils literal notranslate"><span class="pre">-e</span></code>), the
+actual name of the executable used here is <code class="docutils literal notranslate"><span class="pre">VABSIII</span></code>.</p>
+</div>
+</div>
+<div class="section" id="running-cases">
+<h2>Running cases<a class="headerlink" href="#running-cases" title="Permalink to this headline">¶</a></h2>
+<p>Some possible use cases are given below.</p>
+<div class="section" id="case-1-build-cross-section-from-parametric-input-files">
+<h3>Case 1: Build cross section from parametric input files<a class="headerlink" href="#case-1-build-cross-section-from-parametric-input-files" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prevabs</span> <span class="o">-</span><span class="n">i</span> <span class="o">&lt;</span><span class="n">cross_section_file_name</span><span class="o">.</span><span class="n">xml</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">h</span> <span class="o">-</span><span class="n">v</span>
+</pre></div>
+</div>
+<p>In this case, parametric input files are prepared for the first time,
+and one may want to check the correctness of these files and whether
+the cross section can be built as designed. One may also want to try
+different meshing sizes before running the analysis.</p>
+</div>
+<div class="section" id="case-2-carry-out-homogenization-without-visualization">
+<h3>Case 2: Carry out homogenization without visualization<a class="headerlink" href="#case-2-carry-out-homogenization-without-visualization" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prevabs</span> <span class="o">-</span><span class="n">i</span> <span class="o">&lt;</span><span class="n">cross_section_file_name</span><span class="o">.</span><span class="n">xml</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">h</span> <span class="o">-</span><span class="n">e</span>
+</pre></div>
+</div>
+<p>The command will build the cross section model, generate the input, and
+run VABS to calculate the cross-sectional properties, without seeing
+the plot, since visualization needs extra computing time and resources.
+One can also make  modifications to the design (change the parametric
+inputs) and do this step repeatedly. If you already have generated the
+input file <em>cross_section_vabs.dat</em>, and want to only run VABS, you can
+invoke VABS directly using <code class="docutils literal notranslate"><span class="pre">VABS</span></code> <em>cross_section_vabs.dat</em>.</p>
+</div>
+<div class="section" id="case-3-predict-3d-stress-strain-and-plot">
+<h3>Case 3: Predict 3D stress/strain and plot<a class="headerlink" href="#case-3-predict-3d-stress-strain-and-plot" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prevabs</span> <span class="o">-</span><span class="n">i</span> <span class="o">&lt;</span><span class="n">cross_section_file_name</span><span class="o">.</span><span class="n">xml</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">e</span> <span class="o">-</span><span class="n">v</span>
+</pre></div>
+</div>
+<p>After getting the results from a 1D beam analysis, one may want to find
+the local strains and stresses of a cross section at some location along
+the beam. This command will let PreVABS read those results, update the
+VABS input file, carry out recovery analysis, and finally draw contour
+plots in Gmsh (<a class="reference internal" href="#fig-post"><span class="std std-numref">Fig. 2</span></a>). An example of the recover
+analysis can be found in <a class="reference internal" href="example_airfoil_recover.html#example-airfoil-recover"><span class="std std-ref">this example</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Before any recovery run, a homogenization (with option <code class="docutils literal notranslate"><span class="pre">-h</span></code>)
+run must be carried out first for a cross section file. In other words,
+the file <em>cross_section.dat.opt</em> must be generated before the recovery
+run. Besides, results from the 1D beam analysis need to be added into
+the <em>cross_section.xml</em> file. Preparation of this part of data is
+explained in Section: <a class="reference internal" href="pre_recover.html#section-recover"><span class="std std-ref">Specifications for recovery</span></a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Plotted data are the nodal strains and stresses in the global
+coordinate system.</p>
+</div>
+<div class="figure align-center" id="fig-post">
+<a class="reference internal image-reference" href="../_images/examplemh104r.png"><img alt="../_images/examplemh104r.png" src="../_images/examplemh104r.png" style="width: 6.5in;" /></a>
+<p class="caption"><span class="caption-number">Figure 2 </span><span class="caption-text">Visualization of strains and stresses in Gmsh.</span><a class="headerlink" href="#fig-post" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="tutorial.html" class="btn btn-neutral float-right" title="Tutorial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="install.html" class="btn btn-neutral float-left" title="Download and Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Multiscale Structural Mechanics Group.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

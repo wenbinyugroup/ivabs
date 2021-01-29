@@ -12,8 +12,17 @@ Box-beam
 
   Cross section of the box beam [YU2012]_.
 
-This example is a thin-walled box beam whose cross section is depicted in :numref:`Fig. %s <fig_box_draw>` [YU2012]_. The width :math:`a_2=0.953` in, height :math:`a_3=0.530` in, and thickness :math:`t=0.030` in. Each wall has six plies of the same composite material and the same fiber orientation of :math:`15^\circ`. Material properties and layup scheme are listed in :numref:`Table %s <table_box_materials>` and :numref:`Table %s <table_box_layups>`. Cross-sectional properties are given in :numref:`Table %s <table_box_result>` and compared with those in Ref. [YU2012]_. The tiny differences are due to different meshes.  
-Complete input files can be found in ``examples\ex_box\``, including ``box.xml``, ``basepoints.dat``, ``baselines.xml``, ``materials.xml``,  and ``layups.xml``.
+This example is a thin-walled box beam whose cross section is depicted
+in :numref:`Fig. %s <fig_box_draw>` [YU2012]_. The width :math:`a_2=0.953` in,
+height :math:`a_3=0.530` in, and thickness :math:`t=0.030` in. Each wall
+has six plies of the same composite material and the same fiber orientation
+of :math:`15^\circ`. Material properties and layup scheme are listed in
+:numref:`Table %s <table_box_materials>` and :numref:`Table %s <table_box_layups>`.
+Cross-sectional properties are given in :numref:`Table %s <table_box_result>`
+and compared with those in Ref. [YU2012]_. The tiny differences are due to
+different meshes. Complete input files can be found in ``examples\ex_box\``,
+including ``box.xml``, ``basepoints.dat``, ``baselines.xml``, ``materials.xml``,
+and ``layups.xml``.
 
 .. figure:: figures/examplebox1.png
   :name: fig_box1
@@ -24,73 +33,34 @@ Complete input files can be found in ``examples\ex_box\``, including ``box.xml``
 
 .. figure:: figures/examplebox.png
   :name: fig_box
-  :width: 2in
+  :width: 6in
   :align: center
 
   Meshed cross section viewed in Gmsh.
 
-.. list-table:: Material properties
+.. tabularcolumns:: |l|l|r|r|r|r|r|r|r|r|r|r|
+
+.. csv-table:: Material properties
   :name: table_box_materials
-  :widths: auto
   :header-rows: 2
   :align: center
 
-  * - Name
-    - Type
-    - Density
-    - |e1|
-    - |e2| = |e3|
-    - |g12| = |g13|
-    - |g23|
-    - |nu12| = |nu13|
-    - |nu23|
-  * - 
-    - 
-    - :math:`10^4` |den_im|
-    - :math:`10^6` |mod_im|
-    - :math:`10^6` |mod_im|
-    - :math:`10^6` |mod_im|
-    - :math:`10^6` |mod_im|
-    - 
-    - 
-  * - mat_1
-    - orthotropic
-    - 1.353
-    - 20.59
-    - 1.42
-    - 0.87
-    - 0.696
-    - 0.30
-    - 0.34
+  "Name", "Type", "Density", |e1|, |e2|, |e3|, |g12|, |g13|, |g23|, |nu12|, |nu13|, |nu23|
+   , , |den_im_k|, |mod_im_m|, |mod_im_m|, |mod_im_m|, |mod_im_m|, |mod_im_m|, |mod_im_m|, , ,
+  "mat_1", "orthotropic", 13.53, 20.59, 1.42, 1.42, 0.87, 0.87, 0.696, 0.30, 0.30, 0.34
 
-.. list-table:: Layups
+.. csv-table:: Layups
   :name: table_box_layups
-  :widths: auto
   :header-rows: 2
   :align: center
 
-  * - Name
-    - Layer
-    - Material
-    - Ply thickness
-    - Fiber orientation
-    - Number of plies
-  * - 
-    - 
-    - 
-    - |len_im|
-    - :math:`\circ`
-    - 
-  * - layup1
-    - 1
-    - mat_1
-    - 0.05
-    - -15
-    - 6
-
+  "Name", "Layer", "Material", "Ply thickness", "Orientation", "Number of plies"
+  , , , |len_im|, :math:`\circ`,
+  "layup1", 1, "mat_1", 0.05, -15, 6
 
 .. table:: Results
    :name: table_box_result
+   :align: center
 
    ========================= ==================================== ====================================
    Component                 Value                                Reference [YU2012]_
