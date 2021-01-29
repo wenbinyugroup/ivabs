@@ -2,33 +2,109 @@
 
 .. _section-overall:
 
-Overall configurations
-----------------------
+Other input settings
+====================
 
-The overall configurations contain two parts. First, user needs to tell PreVABS what the rest input files are, the *Base line* file, the *Material* file, and the *Layup* file. Second, user needs to set the overall geometry and meshing parameters, including three transformation operations, mesh size and element type. The three transformation operations have been discussed in :numref:`Section %s <section-coordinate>`. Although the two frames **z** and **x** have some distances between them, the *Translate* operation will actually move the geometry, instead of the coordinate system. Also, since the *Scale* operation is done in the second place, the absolute distances of translation are defined in the initial frame **z**. The rotation angle is counted from the positive direction of |x2| and follows the right-hand rule.
+There are three groups of these settings.
 
-These overall configurations are also stored in the main input file. A template is shown in :numref:`Listing %s <code_overall>`. All included files are placed in the ``<include>`` element. The geometry and meshing configurations are placed in the ``<general>`` element. Some notes are:
+Included files
+--------------
+
+This part contains file names for base lines, materials (local) and layups
+as shown in :numref:`Listing %s <code_include>`. The ``<material>``
+sub-element is optional. If this is included, PreVABS will read extra
+materials from this local file, besides the global material database
+(MaterialDB.xml). If there are materials and laminae with the same names,
+data in the local material file will overwrite those in the global
+database.
 
 - ``path`` in the ``<include>`` element is the relative path to the main input file;
-- File extensions ``.xml`` can be omitted;
-- ``e2`` and ``e3`` are distances before scaling. Default is (0.0, 0.0) if omitted;
-- Default for ``<scale>`` is 1.0 if omitted;
-- Default for ``<rotate>`` is 0.0 if omitted;
-- ``<mesh_size>`` is defined globally. The default size is the smallest thickness of layers used in the cross section;
-- ``<element_type>`` can only be ``linear`` or ``quadratic`` (default).
-
-.. note:: Only triangular element is available in the current version.
+- File extensions ``.xml`` can be omitted.
 
 .. code-block:: xml
   :linenos:
-  :name: code_overall
-  :caption: A template for the overall configurations in a main input file.
+  :name: code_include
+  :caption: Input syntax for the included files.
 
   <include>
     <baseline>path/baseline_file_name</baseline>
     <material>path/material_file_name</material>
     <layup>path/layup_file_name</layup>
   </include>
+
+**Specification**
+
+- **<baseline>** - Name of the included base line file.
+- **<material>** - Name of the included local material file.
+- **<layup>** - Name of the included layup file.
+
+
+
+
+
+
+
+
+
+
+Analysis options
+----------------
+
+The second part contains settings for the analysis in VABS.
+``<model>`` can be 0 for classical beam model, or 1 for refined (Timoshenko)
+model.
+
+.. code-block:: xml
+  :linenos:
+  :name: code_analysis
+  :caption: A template for the analysis options in a main input file.
+
+  <analysis>
+    <model>1</model>
+  </analysis>
+
+**Specification**
+
+- **<model>** - Beam model. Choose one from '0' (classical) and '1' (refined/Timoshenko).
+
+
+
+
+
+
+
+
+
+
+Global shape and mesh settings
+------------------------------
+
+The last part contains optional global geometry and meshing settings,
+which are all stored in a ``<general>`` sub-element.
+
+User can set the global transformations of the cross section.
+The three transformation operations have been
+discussed in Section: :ref:`section-coordinate`.
+
+- The order of transformation operation is: translating, scaling, and rotating;
+- All operations are performed on the cross section, not the frame;
+- The scaling operation will only scale the shape (base lines), and have
+  no effect on the thicknesses of laminae;
+- The rotating angle starts from the positive half of the |x2| axis,
+  and increases positively counter-clockwise (right-hand rule).
+
+There are two meshing options available now, global meshing size
+``<mesh_size>`` and type of elements ``<element_type>``.
+
+- If not setting, the global meshing size will be the minimum layer
+  thickness by default;
+- Two options for the element type are linear and quadratic.
+
+.. code-block:: xml
+  :linenos:
+  :name: code_general
+  :caption: A template for the global shape and mesh settings in a main input file.
+
   <general>
     <translate>e2  e3</translate>
     <scale>scaling_factor</scale>
@@ -37,22 +113,15 @@ These overall configurations are also stored in the main input file. A template 
     <element_type>quadratic</element_type>
   </general>
 
-A top level *Cross section* file stores all information discussed in this and previous  sections. A template for this file is shown in :numref:`Listing %s <code_crosssection>`. The root element ``<cross_section>`` has two attributes, ``name`` (required) and ``type`` (optional), and four child elements, ``<include>``, ``<general>``, ``<segments>`` and ``<connections>``. Some notes are:
+**Specification**
 
-- ``name`` will be used in file names of PreVABS outputs. For example, the ``name`` in the template is ``cs1``, then the generated VABS input file name will be ``cs1_vabs.dat`` and Gmsh file name will be ``cs1.msh``;
-- ``type`` can only be ``general`` (default) or ``airfoil``;
+- **<translate>**
+- **<scale>**
+- **<rotate>**
+- **<mesh_size>**
+- **<element_type>**
 
-.. code-block:: xml
-  :linenos:
-  :name: code_crosssection
-  :caption: A template for the *Cross section* file.
-
-  <cross_section name="cs1" type="airfoil">
-    <include>...</include>
-    <general>...</general>
-    <segments>...</segments>
-    <connections>...</connections>
-  </cross_section>
+.. note:: Only triangular element is available in the current version.
 
 
 

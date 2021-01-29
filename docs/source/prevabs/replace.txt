@@ -9,10 +9,17 @@
 .. |y3| replace:: :math:`y_3`
 .. |len_im| replace:: :math:`\mathrm{in}`
 .. |den_im| replace:: :math:`\mathrm{lb\cdot sec^2/in^4}`
+.. |den_im_k| replace:: :math:`10^3\ \mathrm{lb\cdot sec^2/in^4}`
 .. |mod_im| replace:: :math:`\mathrm{psi}`
+.. |mod_im_k| replace:: :math:`10^3\ \mathrm{psi}`
+.. |mod_im_m| replace:: :math:`10^6\ \mathrm{psi}`
 .. |len_si| replace:: :math:`\mathrm{m}`
 .. |den_si| replace:: :math:`\mathrm{kg/m^3}`
+.. |den_si_k| replace:: :math:`10^3\ \mathrm{kg/m^3}`
 .. |mod_si| replace:: :math:`\mathrm{Pa}`
+.. |mod_si_k| replace:: :math:`10^3\ \mathrm{Pa}`
+.. |mod_si_m| replace:: :math:`10^6\ \mathrm{Pa}`
+.. |mod_si_g| replace:: :math:`10^9\ \mathrm{Pa}`
 .. |stf0_im| replace:: :math:`\mathrm{lb}`
 .. |stf1_im| replace:: :math:`\mathrm{lb \cdot in}`
 .. |stf2_im| replace:: :math:`\mathrm{lb \cdot in^2}`
@@ -21,9 +28,12 @@
 .. |e1| replace:: :math:`E_{1}`
 .. |e2| replace:: :math:`E_{2}`
 .. |e3| replace:: :math:`E_{3}`
+.. |e2e3| replace:: :math:`E_2=E_3`
 .. |g12| replace:: :math:`G_{12}`
 .. |g13| replace:: :math:`G_{13}`
+.. |g12g13| replace:: :math:`G_{12}=G_{13}`
 .. |g23| replace:: :math:`G_{23}`
 .. |nu12| replace:: :math:`\nu_{12}`
 .. |nu13| replace:: :math:`\nu_{13}`
+.. |nu12nu13| replace:: :math:`\nu_{12}=\nu_{13}`
 .. |nu23| replace:: :math:`\nu_{23}`

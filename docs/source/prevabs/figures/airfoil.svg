@@ -14,7 +14,7 @@
    viewBox="0 0 215.9 279.40001"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.1 r15371"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="airfoil.svg"
    inkscape:export-filename="C:\Users\unita\sall\s02-study\s01-graduate\g01-projects\p02-v4d\doc\figures\baselinearc.png"
    inkscape:export-xdpi="254"
@@ -740,13 +740,13 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.5"
-     inkscape:cx="453.10692"
-     inkscape:cy="615.89254"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="353.37194"
+     inkscape:cy="875.11545"
      inkscape:document-units="in"
      inkscape:current-layer="g13743"
      showgrid="false"
-     showguides="true"
+     showguides="false"
      inkscape:guide-bbox="true"
      inkscape:window-width="1920"
      inkscape:window-height="1027"
@@ -1062,7 +1062,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1173,7 +1173,7 @@
      inkscape:label="airfoil"
      inkscape:groupmode="layer"
      id="layer1"
-     style="display:none"
+     style="display:inline"
      transform="translate(0,-17.599992)">
     <path
        style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1305,7 +1305,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;font-family:serif;-inkscape-font-specification:serif;stroke-width:0.26458332">Rotate</tspan></text>
   </g>
   <g
-     style="display:none"
+     style="display:inline"
      id="g4526"
      inkscape:groupmode="layer"
      inkscape:label="segment"
@@ -1462,7 +1462,7 @@
      inkscape:label="cooridnates"
      inkscape:groupmode="layer"
      id="g4713"
-     style="display:none"
+     style="display:inline"
      transform="translate(0,-17.599992)">
     <path
        style="fill:none;stroke:#888a85;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -2736,7 +2736,8 @@
      inkscape:groupmode="layer"
      id="layer9"
      inkscape:label="baseline arc"
-     transform="translate(0,-17.599992)">
+     transform="translate(0,-17.599992)"
+     style="display:none">
     <path
        style="display:inline;opacity:0.98999999;fill:none;fill-opacity:1;stroke:#ef2929;stroke-width:0.40000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
        id="path48350-0"

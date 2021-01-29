@@ -5,62 +5,46 @@
 Circular tube
 -------------
 
-This example has a cross section of a simple circular shape with radius :math:`r=10` m. This cross section geometry can be defined easily by a center and a radius. Material properties are given in :numref:`Table %s <table_tube_materials>`. The layup is defined using the stacking sequence code :math:`[\pm 45_2/0_2/90]_{2s}`. The result is given in :numref:`Table %s <table_tube_result>`.
-Complete input files can be found in ``examples\ex_tube\``, including ``tube.xml``, ``basepoints.dat``, ``baselines.xml``, ``materials.xml``,  and ``layups.xml``.
+This example has a cross section of a simple circular shape with radius
+:math:`r=10` m. This cross section geometry can be defined easily by a
+center and a radius. Material properties are given in
+:numref:`Table %s <table_tube_materials>`. The layup is defined using
+the stacking sequence code :math:`[\pm 45_2/0_2/90]_{2s}`. The result
+is given in :numref:`Table %s <table_tube_result>`.
+Complete input files can be found in ``examples\ex_tube\``, including
+``tube.xml``, ``basepoints.dat``, ``baselines.xml``, ``materials.xml``,
+and ``layups.xml``.
 
 .. figure:: figures/examplecircle1.png
   :name: fig_circle1
   :width: 6in
+  :align: center
 
   *Base point*\ s, *Base line*\ s and *Segment*\ s of the tube cross section.
 
 .. figure:: figures/examplecircle.png
   :name: fig_circle
-  :width: 2in
+  :width: 4in
+  :align: center
 
   Meshed cross section viewed in Gmsh.
 
-.. list-table:: Material properties
+.. csv-table:: Material properties
   :name: table_tube_materials
-  :widths: auto
   :header-rows: 2
   :align: center
 
-  * - Name
-    - Type
-    - Density
-    - |e1|
-    - |e2| = |e3|
-    - |g12| = |g13| = |g23|
-    - |nu12| = |nu13| = |nu23|
-  * - 
-    - 
-    - :math:`10^3` |den_si|
-    - :math:`10^9` |mod_si|
-    - :math:`10^9` |mod_si|
-    - :math:`10^9` |mod_si|
-    - 
-  * - iso5_4
-    - orthotropic
-    - 1.664
-    - 10.3
-    - 10.3
-    - 8.00
-    - 0.30
+  "Name", "Type", "Density", |e1|, |e2|, |e3|, |g12|, |g13|, |g23|, |nu12|, |nu13|, |nu23|
+   , , |den_si_k|, |mod_si_g|, |mod_si_g|, |mod_si_g|, |mod_si_g|, |mod_si_g|, |mod_si_g|, , ,
+  "iso5_4", "orthotropic", 1.664, 10.3, 10.3, 10.3, 8.0, 8.0, 8.0, 0.3, 0.3, 0.3
 
-.. list-table:: Layups
+.. csv-table:: Layups
   :name: table_tube_layups
-  :widths: auto
   :header-rows: 1
   :align: center
 
-  * - Name
-    - Material
-    - Stacking sequence (:math:`\circ`)
-  * - layup1
-    - iso5_4
-    - :math:`[\pm 45_2/0_2/90]_{s}`
-
+  "Name", "Material", "Stacking sequence"
+  "layup1", "iso5_4", :math:`[\pm 45_2/0_2/90]_{s}`
 
 .. table:: Results
    :name: table_tube_result
