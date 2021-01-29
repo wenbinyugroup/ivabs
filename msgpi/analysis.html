@@ -226,6 +226,56 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">msgpi.analysis</span>
 </pre></div>
 </div>
+<dl class="py function">
+<dt id="msgpi.analysis.solve">
+<code class="sig-prename descclassname">msgpi.analysis.</code><code class="sig-name descname">solve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sg_xml</span></em>, <em class="sig-param"><span class="n">analysis</span></em>, <em class="sig-param"><span class="n">ppcmd</span></em>, <em class="sig-param"><span class="n">solver</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">30</span></em>, <em class="sig-param"><span class="n">scrnout</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.analysis.solve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Solve</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sg_xml</strong> (<em>str</em>) – File name of SG design parameters (XML format).</p></li>
+<li><p><strong>analysis</strong> (<em>str</em>) – <p>Analysis to be carried out.</p>
+<ul>
+<li><p>h - homogenization</p></li>
+<li><p>d - dehomogenization/localization/recover</p></li>
+<li><p>f - initial failure strength</p></li>
+<li><p>fe - initial failure envelope</p></li>
+<li><p>fi - initial failure indices and strength ratios</p></li>
+</ul>
+</p></li>
+<li><p><strong>ppcmd</strong> (<em>str</em>) – Preprocessor command.</p></li>
+<li><p><strong>solver</strong> (<em>str</em>) – Format of the generated input file (‘vabs’ or ‘swiftcomp’).</p></li>
+<li><p><strong>scrnout</strong> (<em>bool</em><em>, </em><em>default True</em>) – Switch of printing solver messages.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="msgpi.analysis.run">
+<code class="sig-prename descclassname">msgpi.analysis.</code><code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_name</span></em>, <em class="sig-param"><span class="n">analysis</span></em>, <em class="sig-param"><span class="n">solver</span></em>, <em class="sig-param"><span class="n">smdim</span></em>, <em class="sig-param"><span class="n">scrnout</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.analysis.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run codes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_name</strong> (<em>str</em>) – Name of the input file.</p></li>
+<li><p><strong>analysis</strong> (<em>{'h'</em><em>, </em><em>'d'</em><em>, </em><em>'l'</em><em>, </em><em>'f'</em><em>, </em><em>'fe'</em><em>, </em><em>'fi'}</em>) – <p>Analysis to be carried out.</p>
+<ul>
+<li><p>h - homogenization</p></li>
+<li><p>d or l - dehomogenization/localization/recover</p></li>
+<li><p>f - initial failure strength</p></li>
+<li><p>fe - initial failure envelope</p></li>
+<li><p>fi - initial failure indices and strength ratios</p></li>
+</ul>
+</p></li>
+<li><p><strong>solver</strong> (<em>{'swiftcomp'</em><em>, </em><em>'vabs'}</em>) – Excect command string of the code (‘vabs’ or ‘swiftcomp’).</p></li>
+<li><p><strong>smdim</strong> (<em>int</em>) – Dimension of the macroscopic structural model.</p></li>
+<li><p><strong>scrnout</strong> (<em>bool</em><em>, </em><em>default True</em>) – Switch of printing solver messages.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

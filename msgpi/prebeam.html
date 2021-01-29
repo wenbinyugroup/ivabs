@@ -230,6 +230,29 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="section" id="preprocessing-function">
 <h2>Preprocessing Function<a class="headerlink" href="#preprocessing-function" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="msgpi.ms.prebeam.preBeam">
+<code class="sig-prename descclassname">msgpi.ms.prebeam.</code><code class="sig-name descname">preBeam</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fn_beam</span></em>, <em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">sections</span><span class="o">=</span><span class="default_value">[]</span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.ms.prebeam.preBeam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Preprocessor of GEBT</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fn_beam</strong> (<em>str</em>) – File name of the preGEBT main input file (.xml).</p></li>
+<li><p><strong>mode</strong> (<em>int</em>) – <p>Mode of preprocessing.</p>
+<blockquote>
+<div><ul>
+<li><p>1 - create SG (cross-section) input files</p></li>
+<li><p>2 - run SGs</p></li>
+<li><p>3 - create global 1D beam input file</p></li>
+</ul>
+</div></blockquote>
+</p></li>
+<li><p><strong>sections</strong> (<em>list of msgpi.sg.MaterialSection</em>) – List of sectional properties.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 </div>
 

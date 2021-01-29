@@ -231,9 +231,288 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="section" id="beam-segment">
 <h2>Beam segment<a class="headerlink" href="#beam-segment" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="msgpi.ms.beam.BeamSegment">
+<em class="property">class </em><code class="sig-prename descclassname">msgpi.ms.beam.</code><code class="sig-name descname">BeamSegment</code><a class="headerlink" href="#msgpi.ms.beam.BeamSegment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for a beam segment.</p>
+<dl class="py method">
+<dt id="msgpi.ms.beam.BeamSegment.calcLengthSq">
+<code class="sig-name descname">calcLengthSq</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.ms.beam.BeamSegment.calcLengthSq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the square of the segment length.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Squred length of the segment.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="msgpi.ms.beam.BeamSegment.coords">
+<code class="sig-name descname">coords</code><a class="headerlink" href="#msgpi.ms.beam.BeamSegment.coords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Coordinates of starting and ending points.
+<cite>[[x1, x2, x3], [x1, x2, x3]]</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list of lists of floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="msgpi.ms.beam.BeamSegment.css">
+<code class="sig-name descname">css</code><a class="headerlink" href="#msgpi.ms.beam.BeamSegment.css" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cross-section labels.
+<cite>[starting, ending]</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list of ints</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="msgpi.ms.beam.BeamSegment.local_frame_id">
+<code class="sig-name descname">local_frame_id</code><a class="headerlink" href="#msgpi.ms.beam.BeamSegment.local_frame_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Local frame id.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="msgpi.ms.beam.BeamSegment.num_divisions">
+<code class="sig-name descname">num_divisions</code><a class="headerlink" href="#msgpi.ms.beam.BeamSegment.num_divisions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of division of the segment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="msgpi.ms.beam.BeamSegment.points">
+<code class="sig-name descname">points</code><a class="headerlink" href="#msgpi.ms.beam.BeamSegment.points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Point labels.
+<cite>[starting point, ending point]</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list of ints</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="msgpi.ms.beam.BeamSegment.twist">
+<code class="sig-name descname">twist</code><a class="headerlink" href="#msgpi.ms.beam.BeamSegment.twist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Twist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="section" id="beam">
 <h2>Beam<a class="headerlink" href="#beam" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="msgpi.ms.beam.Beam">
+<em class="property">class </em><code class="sig-prename descclassname">msgpi.ms.beam.</code><code class="sig-name descname">Beam</code><a class="headerlink" href="#msgpi.ms.beam.Beam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for a slender beam-like structure.</p>
+<p>This class is mainly for the GEBT code.</p>
+<dl class="py attribute">
+<dt id="msgpi.ms.beam.Beam.analysis_type">
+<code class="sig-name descname">analysis_type</code><a class="headerlink" href="#msgpi.ms.beam.Beam.analysis_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Analysis type (GEBT).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="msgpi.ms.beam.Beam.angular_velocity">
+<code class="sig-name descname">angular_velocity</code><a class="headerlink" href="#msgpi.ms.beam.Beam.angular_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Angular velocity of the rotating beam.
+<cite>[wa1, wa2, wa3]</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list of floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="msgpi.ms.beam.Beam.echo">
+<code class="sig-name descname">echo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.ms.beam.Beam.echo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the beam data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="msgpi.ms.beam.Beam.findPtCoordByName">
+<code class="sig-name descname">findPtCoordByName</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.ms.beam.Beam.findPtCoordByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find key point coordinates by point id.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>int</em>) – Point id.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Point coordinates.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="msgpi.ms.beam.Beam.findSectionByName">
+<code class="sig-name descname">findSectionByName</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.ms.beam.Beam.findSectionByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find sectional properties by section id.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>int</em>) – Section id.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Sectional properties.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="sg.html#msgpi.sg.MaterialSection" title="msgpi.sg.MaterialSection">msgpi.sg.MaterialSection</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="msgpi.ms.beam.Beam.frames">
+<code class="sig-name descname">frames</code><a class="headerlink" href="#msgpi.ms.beam.Beam.frames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Local self.frames</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="msgpi.ms.beam.Beam.linear_velocity">
+<code class="sig-name descname">linear_velocity</code><a class="headerlink" href="#msgpi.ms.beam.Beam.linear_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Linear velocity of the first key point.
+<cite>[va1, va2, va3]</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list of floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="msgpi.ms.beam.Beam.max_iteration">
+<code class="sig-name descname">max_iteration</code><a class="headerlink" href="#msgpi.ms.beam.Beam.max_iteration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Max iteration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="msgpi.ms.beam.Beam.mconditions">
+<code class="sig-name descname">mconditions</code><a class="headerlink" href="#msgpi.ms.beam.Beam.mconditions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Member conditions (B.C. and loads).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="msgpi.ms.beam.Beam.name">
+<code class="sig-name descname">name</code><a class="headerlink" href="#msgpi.ms.beam.Beam.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the beam.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="msgpi.ms.beam.Beam.num_eigens">
+<code class="sig-name descname">num_eigens</code><a class="headerlink" href="#msgpi.ms.beam.Beam.num_eigens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of eigen analysis resutls.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="msgpi.ms.beam.Beam.num_steps">
+<code class="sig-name descname">num_steps</code><a class="headerlink" href="#msgpi.ms.beam.Beam.num_steps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of analysis steps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="msgpi.ms.beam.Beam.pconditions">
+<code class="sig-name descname">pconditions</code><a class="headerlink" href="#msgpi.ms.beam.Beam.pconditions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Point conditions (B.C. and loads).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="msgpi.ms.beam.Beam.points">
+<code class="sig-name descname">points</code><a class="headerlink" href="#msgpi.ms.beam.Beam.points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key point id and coordinates.
+<cite>{ptid: [x1, x2, x3], …}</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict of {int, list of floats}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="msgpi.ms.beam.Beam.sections">
+<code class="sig-name descname">sections</code><a class="headerlink" href="#msgpi.ms.beam.Beam.sections" title="Permalink to this definition">¶</a></dt>
+<dd><p>Effective properties of cross-sections.
+<cite>{sid: MaterialSection object, …}</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict of {int, msgpi.sg.MaterialSection}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="msgpi.ms.beam.Beam.segments">
+<code class="sig-name descname">segments</code><a class="headerlink" href="#msgpi.ms.beam.Beam.segments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Beam segments
+<cite>{bsid: BeamSegment object, …}</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict of {int, msgpi.ms.beam.BeamSegment}</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 </div>
 

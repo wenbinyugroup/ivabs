@@ -225,6 +225,69 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">msgpi.ms.analysis</span>
 </pre></div>
 </div>
+<dl class="py function">
+<dt id="msgpi.ms.analysis.solveGEBT">
+<code class="sig-prename descclassname">msgpi.ms.analysis.</code><code class="sig-name descname">solveGEBT</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">beam_xml</span></em>, <em class="sig-param"><span class="n">scrnout</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.ms.analysis.solveGEBT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carry out a global beam analysis using GEBT.</p>
+<p>This function includes the preprocessing of the input data,
+running GEBT and parsing the results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>beam_xml</strong> (<em>str</em>) – Beam xml input file.</p></li>
+<li><p><strong>scrnout</strong> (<em>bool</em>) – Switch for printing GEBT cmd outputs.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="msgpi.ms.analysis.runGEBT">
+<code class="sig-prename descclassname">msgpi.ms.analysis.</code><code class="sig-name descname">runGEBT</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fn_input</span></em>, <em class="sig-param"><span class="n">scrnout</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.ms.analysis.runGEBT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run GEBT analysis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fn_input</strong> (<em>str</em>) – File name of the GEBT input.</p></li>
+<li><p><strong>scrnout</strong> (<em>bool</em>) – Switch for printing GEBT cmd outputs.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>File name of the GEBT output.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="msgpi.ms.analysis.solvePLECS">
+<code class="sig-prename descclassname">msgpi.ms.analysis.</code><code class="sig-name descname">solvePLECS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">length</span></em>, <em class="sig-param"><span class="n">compliance</span></em>, <em class="sig-param"><span class="n">x1</span></em>, <em class="sig-param"><span class="n">f1</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">f2</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">f3</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">m1</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">m2</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">m3</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.ms.analysis.solvePLECS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Solve the static problem of a prismatic, linearly elastic,
+cantilever beam. Find the three displacements and three rotations
+of a point x1 given loads f1, f2, f3, m1, m2, m3 applied at the
+tip.</p>
+<p>Equations (5.59) and (5.61) from the book
+Nonlinear Composite Beam Theory by D. H. Hodges
+are used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>length</strong> (<em>float</em>) – Total length of the beam.</p></li>
+<li><p><strong>compliance</strong> (<em>list of lists of floats</em>) – The 6x6 compliance matrix of the beam cross-section.</p></li>
+<li><p><strong>x1</strong> (<em>float</em>) – The location where the result is wanted.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Results (displacement, rotations, forces, moments).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of lists of floats</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 
