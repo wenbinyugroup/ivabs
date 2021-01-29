@@ -14,10 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    - name: Clone MSGPI
+      run:  git clone https://github.itap.purdue.edu/wenbinyugroup/msgpi.git && mv msgpi docs
     - uses: ammaraskar/sphinx-action@master
       with:
         docs-folder: "docs/"
-        pre-build-command: "apt-get update -y && apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended && git clone https://github.itap.purdue.edu/wenbinyugroup/msgpi.git"
+        pre-build-command: "apt-get update -y && apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended"
     - name: Commit documentation changes
       run: |
         git clone https://github.com/wenbinyugroup/ivabs.git --branch gh-pages --single-branch gh-pages
