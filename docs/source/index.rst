@@ -37,5 +37,13 @@ Table of Contents:
    msgpi/sg_module
    msgpi/ms_module
    msgpi/utils
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: FAQ 
+
+   FAQ/contrib
+   
+   
 
 
