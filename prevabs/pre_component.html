@@ -235,7 +235,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span id="section-component"></span><h1>Components<a class="headerlink" href="#components" title="Permalink to this headline">¶</a></h1>
 <div class="literal-block-wrapper docutils container" id="code-component">
 <div class="code-block-caption"><span class="caption-number">Listing 21 </span><span class="caption-text">Input syntax for components.</span><a class="headerlink" href="#code-component" title="Permalink to this code">¶</a></div>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;&quot;</span> <span class="na">type=</span><span class="s">&quot;&quot;</span> <span class="na">depend=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/component&gt;</span>
+<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;&quot;</span> <span class="na">type=</span><span class="s">&quot;&quot;</span> <span class="na">depend=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/component&gt;</span>
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -291,37 +291,37 @@ These locations are normalized parametric positions on the base line, i.e., from
 Then PreVABS will split the base line, combine layups and create segments automatically.</p>
 <div class="literal-block-wrapper docutils container" id="code-segments">
 <div class="code-block-caption"><span class="caption-number">Listing 22 </span><span class="caption-text">Input syntax for the laminate-type components.</span><a class="headerlink" href="#code-segments" title="Permalink to this code">¶</a></div>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_surface&quot;</span><span class="nt">&gt;</span>
+<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_surface&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;segment</span> <span class="na">name=</span><span class="s">&quot;sgm_1&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;baseline&gt;</span>baseline1<span class="nt">&lt;/baseline&gt;</span>
     <span class="nt">&lt;layup</span> <span class="na">direction=</span><span class="s">&quot;right&quot;</span><span class="nt">&gt;</span>layup1<span class="nt">&lt;/layup&gt;</span>
@@ -417,19 +417,19 @@ cross section.</span><a class="headerlink" href="#fig-filling1" title="Permalink
 </div>
 <div class="literal-block-wrapper docutils container" id="code-fillings">
 <div class="code-block-caption"><span class="caption-number">Listing 23 </span><span class="caption-text">Input syntax for the fill-type components.</span><a class="headerlink" href="#code-fillings" title="Permalink to this code">¶</a></div>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_fill_1&quot;</span> <span class="na">type=</span><span class="s">&quot;fill&quot;</span><span class="nt">&gt;</span>
+<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_fill_1&quot;</span> <span class="na">type=</span><span class="s">&quot;fill&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;location&gt;</span>point_fill<span class="nt">&lt;/location&gt;</span>
   <span class="nt">&lt;material&gt;</span>material1<span class="nt">&lt;/material&gt;</span>
 <span class="nt">&lt;/component&gt;</span>
@@ -464,8 +464,8 @@ For the case shown in the figure, the creation of the thin vertical component (p
 Hence, in the definition of the purple component, a <code class="docutils literal notranslate"><span class="pre">depend</span></code> attribute should be specified as shown below.</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-number">Listing 24 </span><span class="caption-text">Dependency.</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_blue&quot;</span> <span class="na">type=</span><span class="s">&quot;laminate&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/component&gt;</span>
+<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_blue&quot;</span> <span class="na">type=</span><span class="s">&quot;laminate&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/component&gt;</span>
 <span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_purple&quot;</span> <span class="na">type=</span><span class="s">&quot;laminate&quot;</span> <span class="na">depend=</span><span class="s">&quot;cmp_blue&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/component&gt;</span>
 </pre></div>
 </td></tr></table></div>

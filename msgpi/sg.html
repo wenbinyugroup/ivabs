@@ -66,7 +66,6 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -234,7 +233,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2>Material Section<a class="headerlink" href="#material-section" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="msgpi.sg.MaterialSection">
-<em class="property">class </em><code class="sig-prename descclassname">msgpi.sg.</code><code class="sig-name descname">MaterialSection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">smdim</span><span class="o">=</span><span class="default_value">3</span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.sg.MaterialSection" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">msgpi.sg.</span></code><code class="sig-name descname"><span class="pre">MaterialSection</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">smdim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.sg.MaterialSection" title="Permalink to this definition">¶</a></dt>
 <dd><p>A macroscopic structure model. Stores material or structural
 properties.</p>
 <dl class="field-list simple">
@@ -246,7 +245,7 @@ Defualt to 3.</p>
 </dl>
 <dl class="py attribute">
 <dt id="msgpi.sg.MaterialSection.compliance">
-<code class="sig-name descname">compliance</code><a class="headerlink" href="#msgpi.sg.MaterialSection.compliance" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">compliance</span></code><a class="headerlink" href="#msgpi.sg.MaterialSection.compliance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compliance matrix.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -257,14 +256,14 @@ Defualt to 3.</p>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.MaterialSection.compliance_refined">
-<code class="sig-name descname">compliance_refined</code><a class="headerlink" href="#msgpi.sg.MaterialSection.compliance_refined" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">compliance_refined</span></code><a class="headerlink" href="#msgpi.sg.MaterialSection.compliance_refined" title="Permalink to this definition">¶</a></dt>
 <dd><p>list of lists of floats:
 (beam/plate/shell models) Refined compliance matrix</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.MaterialSection.constants">
-<code class="sig-name descname">constants</code><a class="headerlink" href="#msgpi.sg.MaterialSection.constants" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">constants</span></code><a class="headerlink" href="#msgpi.sg.MaterialSection.constants" title="Permalink to this definition">¶</a></dt>
 <dd><p>Engineering constants.
 Keys: <cite>e1</cite>, <cite>e2</cite>, <cite>e3</cite>, <cite>nu12</cite>, <cite>nu13</cite>, <cite>nu23</cite>, <cite>g12</cite>, <cite>g13</cite>, <cite>g23</cite></p>
 <dl class="field-list simple">
@@ -276,7 +275,7 @@ Keys: <cite>e1</cite>, <cite>e2</cite>, <cite>e3</cite>, <cite>nu12</cite>, <cit
 
 <dl class="py attribute">
 <dt id="msgpi.sg.MaterialSection.density">
-<code class="sig-name descname">density</code><a class="headerlink" href="#msgpi.sg.MaterialSection.density" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">density</span></code><a class="headerlink" href="#msgpi.sg.MaterialSection.density" title="Permalink to this definition">¶</a></dt>
 <dd><p>Density of the material/structure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -287,7 +286,7 @@ Keys: <cite>e1</cite>, <cite>e2</cite>, <cite>e3</cite>, <cite>nu12</cite>, <cit
 
 <dl class="py attribute">
 <dt id="msgpi.sg.MaterialSection.failure_criterion">
-<code class="sig-name descname">failure_criterion</code><a class="headerlink" href="#msgpi.sg.MaterialSection.failure_criterion" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">failure_criterion</span></code><a class="headerlink" href="#msgpi.sg.MaterialSection.failure_criterion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Failure criterion.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -298,7 +297,7 @@ Keys: <cite>e1</cite>, <cite>e2</cite>, <cite>e3</cite>, <cite>nu12</cite>, <cit
 
 <dl class="py attribute">
 <dt id="msgpi.sg.MaterialSection.gc">
-<code class="sig-name descname">gc</code><a class="headerlink" href="#msgpi.sg.MaterialSection.gc" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">gc</span></code><a class="headerlink" href="#msgpi.sg.MaterialSection.gc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Geometric center</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -309,7 +308,7 @@ Keys: <cite>e1</cite>, <cite>e2</cite>, <cite>e3</cite>, <cite>nu12</cite>, <cit
 
 <dl class="py method">
 <dt id="msgpi.sg.MaterialSection.getBeamProperty">
-<code class="sig-name descname">getBeamProperty</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">label</span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.sg.MaterialSection.getBeamProperty" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">getBeamProperty</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.sg.MaterialSection.getBeamProperty" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get beam properties using specific labels.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -351,7 +350,7 @@ Keys: <cite>e1</cite>, <cite>e2</cite>, <cite>e3</cite>, <cite>nu12</cite>, <cit
 
 <dl class="py attribute">
 <dt id="msgpi.sg.MaterialSection.mass_center">
-<code class="sig-name descname">mass_center</code><a class="headerlink" href="#msgpi.sg.MaterialSection.mass_center" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">mass_center</span></code><a class="headerlink" href="#msgpi.sg.MaterialSection.mass_center" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mass center. [x1, x2, x3]</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -362,7 +361,7 @@ Keys: <cite>e1</cite>, <cite>e2</cite>, <cite>e3</cite>, <cite>nu12</cite>, <cit
 
 <dl class="py attribute">
 <dt id="msgpi.sg.MaterialSection.mass_mc">
-<code class="sig-name descname">mass_mc</code><a class="headerlink" href="#msgpi.sg.MaterialSection.mass_mc" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">mass_mc</span></code><a class="headerlink" href="#msgpi.sg.MaterialSection.mass_mc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mass matrix at the mass center.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -373,7 +372,7 @@ Keys: <cite>e1</cite>, <cite>e2</cite>, <cite>e3</cite>, <cite>nu12</cite>, <cit
 
 <dl class="py attribute">
 <dt id="msgpi.sg.MaterialSection.mass_origin">
-<code class="sig-name descname">mass_origin</code><a class="headerlink" href="#msgpi.sg.MaterialSection.mass_origin" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">mass_origin</span></code><a class="headerlink" href="#msgpi.sg.MaterialSection.mass_origin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mass matrix at the origin.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -384,7 +383,7 @@ Keys: <cite>e1</cite>, <cite>e2</cite>, <cite>e3</cite>, <cite>nu12</cite>, <cit
 
 <dl class="py attribute">
 <dt id="msgpi.sg.MaterialSection.mmoi">
-<code class="sig-name descname">mmoi</code><a class="headerlink" href="#msgpi.sg.MaterialSection.mmoi" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">mmoi</span></code><a class="headerlink" href="#msgpi.sg.MaterialSection.mmoi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mass moments of inertia.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -395,7 +394,7 @@ Keys: <cite>e1</cite>, <cite>e2</cite>, <cite>e3</cite>, <cite>nu12</cite>, <cit
 
 <dl class="py attribute">
 <dt id="msgpi.sg.MaterialSection.mwrg">
-<code class="sig-name descname">mwrg</code><a class="headerlink" href="#msgpi.sg.MaterialSection.mwrg" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">mwrg</span></code><a class="headerlink" href="#msgpi.sg.MaterialSection.mwrg" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mass-weighted radius of gyration.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -406,7 +405,7 @@ Keys: <cite>e1</cite>, <cite>e2</cite>, <cite>e3</cite>, <cite>nu12</cite>, <cit
 
 <dl class="py attribute">
 <dt id="msgpi.sg.MaterialSection.name">
-<code class="sig-name descname">name</code><a class="headerlink" href="#msgpi.sg.MaterialSection.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">name</span></code><a class="headerlink" href="#msgpi.sg.MaterialSection.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the material/structure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -417,7 +416,7 @@ Keys: <cite>e1</cite>, <cite>e2</cite>, <cite>e3</cite>, <cite>nu12</cite>, <cit
 
 <dl class="py method">
 <dt id="msgpi.sg.MaterialSection.offsetBeamRefCenter">
-<code class="sig-name descname">offsetBeamRefCenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">offset_x2</span></em>, <em class="sig-param"><span class="n">offset_x3</span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.sg.MaterialSection.offsetBeamRefCenter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">offsetBeamRefCenter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offset_x2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_x3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.sg.MaterialSection.offsetBeamRefCenter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Offset the beam reference center and recalculate beam properties.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -431,7 +430,7 @@ Keys: <cite>e1</cite>, <cite>e2</cite>, <cite>e3</cite>, <cite>nu12</cite>, <cit
 
 <dl class="py attribute">
 <dt id="msgpi.sg.MaterialSection.shear_center">
-<code class="sig-name descname">shear_center</code><a class="headerlink" href="#msgpi.sg.MaterialSection.shear_center" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">shear_center</span></code><a class="headerlink" href="#msgpi.sg.MaterialSection.shear_center" title="Permalink to this definition">¶</a></dt>
 <dd><p>(beam model) Elastic axis/Shear center. [x1, x2, x3]</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -442,7 +441,7 @@ Keys: <cite>e1</cite>, <cite>e2</cite>, <cite>e3</cite>, <cite>nu12</cite>, <cit
 
 <dl class="py attribute">
 <dt id="msgpi.sg.MaterialSection.smdim">
-<code class="sig-name descname">smdim</code><a class="headerlink" href="#msgpi.sg.MaterialSection.smdim" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">smdim</span></code><a class="headerlink" href="#msgpi.sg.MaterialSection.smdim" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dimension of material/structure model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -453,7 +452,7 @@ Keys: <cite>e1</cite>, <cite>e2</cite>, <cite>e3</cite>, <cite>nu12</cite>, <cit
 
 <dl class="py attribute">
 <dt id="msgpi.sg.MaterialSection.stiffness">
-<code class="sig-name descname">stiffness</code><a class="headerlink" href="#msgpi.sg.MaterialSection.stiffness" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">stiffness</span></code><a class="headerlink" href="#msgpi.sg.MaterialSection.stiffness" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stiffness matrix.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -464,14 +463,14 @@ Keys: <cite>e1</cite>, <cite>e2</cite>, <cite>e3</cite>, <cite>nu12</cite>, <cit
 
 <dl class="py attribute">
 <dt id="msgpi.sg.MaterialSection.stiffness_refined">
-<code class="sig-name descname">stiffness_refined</code><a class="headerlink" href="#msgpi.sg.MaterialSection.stiffness_refined" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">stiffness_refined</span></code><a class="headerlink" href="#msgpi.sg.MaterialSection.stiffness_refined" title="Permalink to this definition">¶</a></dt>
 <dd><p>list of lists of floats:
 (beam/plate/shell models) Refined stiffness matrix</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.MaterialSection.strength">
-<code class="sig-name descname">strength</code><a class="headerlink" href="#msgpi.sg.MaterialSection.strength" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">strength</span></code><a class="headerlink" href="#msgpi.sg.MaterialSection.strength" title="Permalink to this definition">¶</a></dt>
 <dd><p>Strength properties.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -482,7 +481,7 @@ Keys: <cite>e1</cite>, <cite>e2</cite>, <cite>e3</cite>, <cite>nu12</cite>, <cit
 
 <dl class="py attribute">
 <dt id="msgpi.sg.MaterialSection.tension_center">
-<code class="sig-name descname">tension_center</code><a class="headerlink" href="#msgpi.sg.MaterialSection.tension_center" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">tension_center</span></code><a class="headerlink" href="#msgpi.sg.MaterialSection.tension_center" title="Permalink to this definition">¶</a></dt>
 <dd><p>(beam model) Neutral axes/Tension center. [x1, x2, x3]</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -493,7 +492,7 @@ Keys: <cite>e1</cite>, <cite>e2</cite>, <cite>e3</cite>, <cite>nu12</cite>, <cit
 
 <dl class="py attribute">
 <dt id="msgpi.sg.MaterialSection.type">
-<code class="sig-name descname">type</code><a class="headerlink" href="#msgpi.sg.MaterialSection.type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">type</span></code><a class="headerlink" href="#msgpi.sg.MaterialSection.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>(continuum model) Isotropy type.
 Isotropic (0), orthotropic (1), anisotropic (2).</p>
 <dl class="field-list simple">
@@ -510,7 +509,7 @@ Isotropic (0), orthotropic (1), anisotropic (2).</p>
 <h2>Structure Gene<a class="headerlink" href="#structure-gene" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="msgpi.sg.StructureGene">
-<em class="property">class </em><code class="sig-prename descclassname">msgpi.sg.</code><code class="sig-name descname">StructureGene</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">sgdim</span></em>, <em class="sig-param"><span class="n">smdim</span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.sg.StructureGene" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">msgpi.sg.</span></code><code class="sig-name descname"><span class="pre">StructureGene</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sgdim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smdim</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.sg.StructureGene" title="Permalink to this definition">¶</a></dt>
 <dd><p>A finite element level structure gene model in the theory of MSG.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -524,7 +523,7 @@ Beam (1), plate/shell (2), 3D continuum (3).</p></li>
 </dl>
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.analysis">
-<code class="sig-name descname">analysis</code><a class="headerlink" href="#msgpi.sg.StructureGene.analysis" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">analysis</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.analysis" title="Permalink to this definition">¶</a></dt>
 <dd><p>Analysis configurations</p>
 <ul class="simple">
 <li><p>0 - homogenization (default)</p></li>
@@ -540,7 +539,7 @@ Beam (1), plate/shell (2), 3D continuum (3).</p></li>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.degen_element">
-<code class="sig-name descname">degen_element</code><a class="headerlink" href="#msgpi.sg.StructureGene.degen_element" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">degen_element</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.degen_element" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flag of the type of elements (SC)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -551,7 +550,7 @@ Beam (1), plate/shell (2), 3D continuum (3).</p></li>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.elem_orient">
-<code class="sig-name descname">elem_orient</code><a class="headerlink" href="#msgpi.sg.StructureGene.elem_orient" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">elem_orient</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.elem_orient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Element local orientations.</p>
 <p><cite>{eid: [[a1, a2, a3], [b1, b2, b3], [c1, c2, c3]], …}</cite></p>
 <dl class="field-list simple">
@@ -563,7 +562,7 @@ Beam (1), plate/shell (2), 3D continuum (3).</p></li>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.elem_prop">
-<code class="sig-name descname">elem_prop</code><a class="headerlink" href="#msgpi.sg.StructureGene.elem_prop" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">elem_prop</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.elem_prop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Material/Combination id for each element.</p>
 <p><cite>{eid: mid/cid, …}</cite></p>
 <dl class="field-list simple">
@@ -575,7 +574,7 @@ Beam (1), plate/shell (2), 3D continuum (3).</p></li>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.elementids">
-<code class="sig-name descname">elementids</code><a class="headerlink" href="#msgpi.sg.StructureGene.elementids" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">elementids</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.elementids" title="Permalink to this definition">¶</a></dt>
 <dd><p>Element ids</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -586,7 +585,7 @@ Beam (1), plate/shell (2), 3D continuum (3).</p></li>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.elementids1d">
-<code class="sig-name descname">elementids1d</code><a class="headerlink" href="#msgpi.sg.StructureGene.elementids1d" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">elementids1d</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.elementids1d" title="Permalink to this definition">¶</a></dt>
 <dd><p>1D element ids</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -597,7 +596,7 @@ Beam (1), plate/shell (2), 3D continuum (3).</p></li>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.elementids2d">
-<code class="sig-name descname">elementids2d</code><a class="headerlink" href="#msgpi.sg.StructureGene.elementids2d" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">elementids2d</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.elementids2d" title="Permalink to this definition">¶</a></dt>
 <dd><p>2D element ids</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -608,7 +607,7 @@ Beam (1), plate/shell (2), 3D continuum (3).</p></li>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.elementids3d">
-<code class="sig-name descname">elementids3d</code><a class="headerlink" href="#msgpi.sg.StructureGene.elementids3d" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">elementids3d</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.elementids3d" title="Permalink to this definition">¶</a></dt>
 <dd><p>3D element ids</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -619,7 +618,7 @@ Beam (1), plate/shell (2), 3D continuum (3).</p></li>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.elements">
-<code class="sig-name descname">elements</code><a class="headerlink" href="#msgpi.sg.StructureGene.elements" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">elements</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.elements" title="Permalink to this definition">¶</a></dt>
 <dd><p>Elemental connectivities</p>
 <p><cite>{eid: [nid1, nid2, …], …}</cite>, no zeros</p>
 <dl class="field-list simple">
@@ -631,7 +630,7 @@ Beam (1), plate/shell (2), 3D continuum (3).</p></li>
 
 <dl class="py method">
 <dt id="msgpi.sg.StructureGene.findComboByMaterialOrientation">
-<code class="sig-name descname">findComboByMaterialOrientation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">angle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.sg.StructureGene.findComboByMaterialOrientation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">findComboByMaterialOrientation</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.sg.StructureGene.findComboByMaterialOrientation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find material-orientation combination.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -651,7 +650,7 @@ Beam (1), plate/shell (2), 3D continuum (3).</p></li>
 
 <dl class="py method">
 <dt id="msgpi.sg.StructureGene.findMaterialByName">
-<code class="sig-name descname">findMaterialByName</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.sg.StructureGene.findMaterialByName" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">findMaterialByName</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.sg.StructureGene.findMaterialByName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find material by name.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -668,13 +667,13 @@ Beam (1), plate/shell (2), 3D continuum (3).</p></li>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.fn_gmsh_msh">
-<code class="sig-name descname">fn_gmsh_msh</code><a class="headerlink" href="#msgpi.sg.StructureGene.fn_gmsh_msh" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">fn_gmsh_msh</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.fn_gmsh_msh" title="Permalink to this definition">¶</a></dt>
 <dd><p>File name of the Gmsh mesh file</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.global_displacements">
-<code class="sig-name descname">global_displacements</code><a class="headerlink" href="#msgpi.sg.StructureGene.global_displacements" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">global_displacements</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.global_displacements" title="Permalink to this definition">¶</a></dt>
 <dd><p>Global displacements.</p>
 <p><cite>[u1, u2, u3]</cite></p>
 <dl class="field-list simple">
@@ -686,7 +685,7 @@ Beam (1), plate/shell (2), 3D continuum (3).</p></li>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.global_loads">
-<code class="sig-name descname">global_loads</code><a class="headerlink" href="#msgpi.sg.StructureGene.global_loads" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">global_loads</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.global_loads" title="Permalink to this definition">¶</a></dt>
 <dd><p>Global loads</p>
 <table class="docutils align-default">
 <colgroup>
@@ -732,14 +731,14 @@ Beam (1), plate/shell (2), 3D continuum (3).</p></li>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.global_loads_dist">
-<code class="sig-name descname">global_loads_dist</code><a class="headerlink" href="#msgpi.sg.StructureGene.global_loads_dist" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">global_loads_dist</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.global_loads_dist" title="Permalink to this definition">¶</a></dt>
 <dd><p>list of lists of floats:
 Distributed loads for Timoshenko beam model (VABS only)</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.global_loads_type">
-<code class="sig-name descname">global_loads_type</code><a class="headerlink" href="#msgpi.sg.StructureGene.global_loads_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">global_loads_type</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.global_loads_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Global load type.</p>
 <ul class="simple">
 <li><p>0 - generalized stresses</p></li>
@@ -754,7 +753,7 @@ Distributed loads for Timoshenko beam model (VABS only)</p>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.global_rotations">
-<code class="sig-name descname">global_rotations</code><a class="headerlink" href="#msgpi.sg.StructureGene.global_rotations" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">global_rotations</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.global_rotations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Global rotation matrix.</p>
 <p><cite>[[C11, C12, C13], [C21, C22, C23], [C31, C32, C33]]</cite></p>
 <dl class="field-list simple">
@@ -766,7 +765,7 @@ Distributed loads for Timoshenko beam model (VABS only)</p>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.initial_curvature">
-<code class="sig-name descname">initial_curvature</code><a class="headerlink" href="#msgpi.sg.StructureGene.initial_curvature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">initial_curvature</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.initial_curvature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initial curvature</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -777,7 +776,7 @@ Distributed loads for Timoshenko beam model (VABS only)</p>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.initial_twist">
-<code class="sig-name descname">initial_twist</code><a class="headerlink" href="#msgpi.sg.StructureGene.initial_twist" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">initial_twist</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.initial_twist" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initial twist (beam only)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -788,7 +787,7 @@ Distributed loads for Timoshenko beam model (VABS only)</p>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.materials">
-<code class="sig-name descname">materials</code><a class="headerlink" href="#msgpi.sg.StructureGene.materials" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">materials</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.materials" title="Permalink to this definition">¶</a></dt>
 <dd><p>Materials</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -799,7 +798,7 @@ Distributed loads for Timoshenko beam model (VABS only)</p>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.mocombos">
-<code class="sig-name descname">mocombos</code><a class="headerlink" href="#msgpi.sg.StructureGene.mocombos" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">mocombos</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.mocombos" title="Permalink to this definition">¶</a></dt>
 <dd><p>Material-orientation combinations</p>
 <p><cite>{cid: [mid, orientation], …}</cite></p>
 <dl class="field-list simple">
@@ -811,7 +810,7 @@ Distributed loads for Timoshenko beam model (VABS only)</p>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.model">
-<code class="sig-name descname">model</code><a class="headerlink" href="#msgpi.sg.StructureGene.model" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">model</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Macroscopic structural model</p>
 <ul class="simple">
 <li><p>0 - classical (default)</p></li>
@@ -828,7 +827,7 @@ Distributed loads for Timoshenko beam model (VABS only)</p>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.name">
-<code class="sig-name descname">name</code><a class="headerlink" href="#msgpi.sg.StructureGene.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">name</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the SG.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -839,7 +838,7 @@ Distributed loads for Timoshenko beam model (VABS only)</p>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.nodes">
-<code class="sig-name descname">nodes</code><a class="headerlink" href="#msgpi.sg.StructureGene.nodes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">nodes</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.nodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Nodal coordinates</p>
 <ul class="simple">
 <li><p>3D SG: <cite>{nid: [y1, y2, y3], …}</cite></p></li>
@@ -855,7 +854,7 @@ Distributed loads for Timoshenko beam model (VABS only)</p>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.nonuniform_temperature">
-<code class="sig-name descname">nonuniform_temperature</code><a class="headerlink" href="#msgpi.sg.StructureGene.nonuniform_temperature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">nonuniform_temperature</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.nonuniform_temperature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flag of uniform temperature</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -866,7 +865,7 @@ Distributed loads for Timoshenko beam model (VABS only)</p>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.num_slavenodes">
-<code class="sig-name descname">num_slavenodes</code><a class="headerlink" href="#msgpi.sg.StructureGene.num_slavenodes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">num_slavenodes</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.num_slavenodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number of slave nodes</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -877,7 +876,7 @@ Distributed loads for Timoshenko beam model (VABS only)</p>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.oblique">
-<code class="sig-name descname">oblique</code><a class="headerlink" href="#msgpi.sg.StructureGene.oblique" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">oblique</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.oblique" title="Permalink to this definition">¶</a></dt>
 <dd><p>Oblique (beam only)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -888,7 +887,7 @@ Distributed loads for Timoshenko beam model (VABS only)</p>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.omega">
-<code class="sig-name descname">omega</code><a class="headerlink" href="#msgpi.sg.StructureGene.omega" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">omega</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.omega" title="Permalink to this definition">¶</a></dt>
 <dd><p>Omega (see SwiftComp manual).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -899,7 +898,7 @@ Distributed loads for Timoshenko beam model (VABS only)</p>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.physics">
-<code class="sig-name descname">physics</code><a class="headerlink" href="#msgpi.sg.StructureGene.physics" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">physics</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.physics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Physics included in the analysis</p>
 <ul class="simple">
 <li><p>0 - elastic (default)</p></li>
@@ -919,7 +918,7 @@ Distributed loads for Timoshenko beam model (VABS only)</p>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.prop_elem">
-<code class="sig-name descname">prop_elem</code><a class="headerlink" href="#msgpi.sg.StructureGene.prop_elem" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">prop_elem</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.prop_elem" title="Permalink to this definition">¶</a></dt>
 <dd><p>Element id for each material/combination.</p>
 <p><cite>{mid/cid: [eid, …], …}</cite></p>
 <dl class="field-list simple">
@@ -931,7 +930,7 @@ Distributed loads for Timoshenko beam model (VABS only)</p>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.sgdim">
-<code class="sig-name descname">sgdim</code><a class="headerlink" href="#msgpi.sg.StructureGene.sgdim" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">sgdim</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.sgdim" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dimension of the SG.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -942,7 +941,7 @@ Distributed loads for Timoshenko beam model (VABS only)</p>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.smdim">
-<code class="sig-name descname">smdim</code><a class="headerlink" href="#msgpi.sg.StructureGene.smdim" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">smdim</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.smdim" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dimension of the material/structural model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -953,13 +952,13 @@ Distributed loads for Timoshenko beam model (VABS only)</p>
 
 <dl class="py method">
 <dt id="msgpi.sg.StructureGene.summary">
-<code class="sig-name descname">summary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.sg.StructureGene.summary" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">summary</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.sg.StructureGene.summary" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print a brief summary of the SG.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="msgpi.sg.StructureGene.trans_element">
-<code class="sig-name descname">trans_element</code><a class="headerlink" href="#msgpi.sg.StructureGene.trans_element" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">trans_element</span></code><a class="headerlink" href="#msgpi.sg.StructureGene.trans_element" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flag of transformation of elements</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>

@@ -252,10 +252,10 @@ If none of those operations are needed, then those data also define the position
 This block of data has three columns for the name and coordinate in the cross-sectional plane.</p>
 <div class="literal-block-wrapper docutils container" id="code-point-template">
 <div class="code-block-caption"><span class="caption-number">Listing 8 </span><span class="caption-text">Template for a separate file of points (point_list_file_name.dat)</span><a class="headerlink" href="#code-point-template" title="Permalink to this code">¶</a></div>
-<div class="highlight-none notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span>label_1  z2  z3
+<div class="highlight-none notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>label_1  z2  z3
 label_2  z2  z3
 label_3  z2  z3
 ...
@@ -287,12 +287,12 @@ Otherwise, points can be arranged arbitrarily.</p>
 <p>In this method, all points are enclosed by the XML element <code class="docutils literal notranslate"><span class="pre">&lt;basepoints&gt;</span></code>.</p>
 <div class="literal-block-wrapper docutils container" id="code-basepoing-template">
 <div class="code-block-caption"><span class="caption-number">Listing 9 </span><span class="caption-text">Base points input file syntax.</span><a class="headerlink" href="#code-basepoing-template" title="Permalink to this code">¶</a></div>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;basepoints&gt;</span>
+<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;basepoints&gt;</span>
   <span class="nt">&lt;include&gt;</span>point_list_file_name<span class="nt">&lt;/include&gt;</span>
   <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;p1&quot;</span><span class="nt">&gt;</span>0 0<span class="nt">&lt;/point&gt;</span>
   <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;p2&quot;</span><span class="nt">&gt;</span>1 0<span class="nt">&lt;/point&gt;</span>
@@ -333,15 +333,15 @@ Inside the <code class="docutils literal notranslate"><span class="pre">baseline
 </div>
 <div class="literal-block-wrapper docutils container" id="code-baseline-template">
 <div class="code-block-caption"><span class="caption-number">Listing 10 </span><span class="caption-text"><em>Base line</em> input file template.</span><a class="headerlink" href="#code-baseline-template" title="Permalink to this code">¶</a></div>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;baselines&gt;</span>
+<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;baselines&gt;</span>
   <span class="nt">&lt;basepoints&gt;</span>
     ...
   <span class="nt">&lt;/basepoints&gt;</span>
@@ -384,18 +384,18 @@ The PreVABS-computed second key point will always be “not lower” than the us
 </div>
 <div class="literal-block-wrapper docutils container" id="code-baseline-straight">
 <div class="code-block-caption"><span class="caption-number">Listing 11 </span><span class="caption-text">Input syntax for the base lines shown in <a class="reference internal" href="#fig-baselinestraight"><span class="std std-numref">Fig. 14</span></a></span><a class="headerlink" href="#code-baseline-straight" title="Permalink to this code">¶</a></div>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;baselines&gt;</span>
+<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;baselines&gt;</span>
   ...
   <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;i&quot;</span> <span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;points&gt;</span>a,z<span class="nt">&lt;/points&gt;&lt;/baseline&gt;</span>
@@ -438,24 +438,24 @@ To uniquely define an arc, user needs to provide at least four of the following 
 </div>
 <div class="literal-block-wrapper docutils container" id="code-baseline-arc">
 <div class="code-block-caption"><span class="caption-number">Listing 12 </span><span class="caption-text">Input syntax for the base lines shown in <a class="reference internal" href="#fig-baselinearc2"><span class="std std-numref">Fig. 16</span></a></span><a class="headerlink" href="#code-baseline-arc" title="Permalink to this code">¶</a></div>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18</pre></div></td><td class="code"><div class="highlight"><pre><span></span>&lt;baselines&gt;
+<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>&lt;baselines&gt;
   ...
   &lt;baseline name=&quot;left&quot; type=&quot;arc&quot;&gt;
     &lt;center&gt;c&lt;/center&gt;
@@ -504,18 +504,18 @@ input file demonstrating the two methods is presented in
 </ul>
 <div class="literal-block-wrapper docutils container" id="code-baseline-circle">
 <div class="code-block-caption"><span class="caption-number">Listing 13 </span><span class="caption-text">Input syntax for the ‘circle’ type base line.</span><a class="headerlink" href="#code-baseline-circle" title="Permalink to this code">¶</a></div>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;baselines&gt;</span>
+<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;baselines&gt;</span>
   ...
   <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;circle1&quot;</span> <span class="na">type=</span><span class="s">&quot;circle&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;center&gt;</span>c<span class="nt">&lt;/center&gt;</span>
