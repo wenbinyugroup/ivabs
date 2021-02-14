@@ -20,10 +20,10 @@ The table below shows the 4x4 stiffness matrix for of classical beam model.
    :align: center
 
    ============================= ============================= ============================= =============================
-   :math:`4.2369\times 10^{7}`  :math:`-8.1467\times 10^{3}` :math:`4.6272\times 10^{5}`     :math:`-1.7006\times 10^{7}`
-   :math:`-8.1467\times 10^{3}` :math:`1.6166\times 10^{5}`  :math:`-7.2404\times 10^{1}`    :math:`2.2351\times 10^{3}`
-   :math:`4.6272\times 10^{5}`  :math:`-7.2404\times 10^{1}` :math:`1.4981\times 10^{5}`     :math:`-1.8577\times 10^{5}`
-   :math:`-1.7006\times 10^{7}` :math:`2.2351\times 10^{3}`  :math:`-1.8577\times 10^{5}`    :math:`1.2608\times 10^{7}`
+   :math:`4.2369\times 10^{7}`   :math:`-8.1467\times 10^{3}`  :math:`4.6272\times 10^{5}`   :math:`-1.7006\times 10^{7}`
+   :math:`-8.1467\times 10^{3}`  :math:`1.6166\times 10^{5}`   :math:`-7.2404\times 10^{1}`  :math:`2.2351\times 10^{3}`
+   :math:`4.6272\times 10^{5}`   :math:`-7.2404\times 10^{1}`  :math:`1.4981\times 10^{5}`   :math:`-1.8577\times 10^{5}`
+   :math:`-1.7006\times 10^{7}`  :math:`2.2351\times 10^{3}`   :math:`-1.8577\times 10^{5}`  :math:`1.2608\times 10^{7}`
    ============================= ============================= ============================= =============================
 
 PreVABS features non-structural mass, ply drops, filler materials, building layups from sub-layups, and topology library.
