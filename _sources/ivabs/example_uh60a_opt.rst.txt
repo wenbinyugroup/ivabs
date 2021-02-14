@@ -15,13 +15,13 @@ Among two laminas IM7 of 0.001 inch thickness and IM7 of 0.0008 inch thickness. 
    :name: orient_layer
    :align: center
 
-   ===============================
-   :math:`\phantom{+}76.717123936`
-   :math:`-47.058626057`
-   :math:`\phantom{+}4.0018921476`
-   :math:`-85.918454543`
-   :math:`\phantom{+}34.209723197`
-   ===============================
+    =================================
+     :math:`\phantom{+}76.717123936`
+     :math:`-47.058626057`
+     :math:`\phantom{+}4.0018921476`
+     :math:`-85.918454543`
+     :math:`\phantom{+}34.209723197`
+    =================================
 
 Overall, the desired stiffness is reached within 2% error.
 
