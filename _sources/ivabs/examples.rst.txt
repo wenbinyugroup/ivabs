@@ -7,3 +7,4 @@ Examples
 
    example_uh60a
    example_uh60a_sensi
+   example_uh60a_opt
