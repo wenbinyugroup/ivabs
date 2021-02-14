@@ -1,0 +1,28 @@
+Example 1: Capability of PreVABS (UH60A airfoil)
+------------------------------------------------
+
+.. figure:: figures/fig_uh60a_example.jpg
+  :name: fig_uh60a_example
+  :width: 5.5in
+  :align: center
+
+This figure shows the construction model of PreVABS input. You should prepare 5 input files: basepoints.dat, baseline.xml, layup.xml, material.xml, section.xml. Current version of PreVABS also support combining all inputs in a single XML file.
+
+1. Get into ``root-folder\examples\ex_uh60a``.
+2. Open a command prompt.
+3. Run ``prevabs -i uh60a_section.xml -h -v -e``.
+4. This will build the airfoil model and run VABS. The cross-sectional property will be stored in uh60a_section.sg.K. Gmsh GUI will be opened to display the model.
+
+The table below shows the 4x4 stiffness matrix for of classical beam model.
+
+.. table:: Beam stiffness of UH60A airfoil
+   :name: uh60a_stiffness
+   :align: center
+   ============================= ============================= ============================= =============================
+   :math:`4.2369\times 10\^{7}`  :math:`-8.1467\times 10\^{3}` :math:`4.6272\times 10\^{5}`  :math:`-1.7006\times 10\^{7}`
+   :math:`-8.1467\times 10\^{3}` :math:`1.6166\times 10\^{5}`  :math:`-7.2404\times 10\^{1}` :math:`2.2351\times 10\^{3}`
+   :math:`4.6272\times 10\^{5}`  :math:`-7.2404\times 10\^{1}` :math:`1.4981\times 10\^{5}`  :math:`-1.8577\times 10\^{5}`
+   :math:`-1.7006\times 10\^{7}` :math:`2.2351\times 10\^{3}`  :math:`-1.8577\times 10\^{5}` :math:`1.2608\times 10\^{7}`
+   ============================= ============================= ============================= =============================
+
+PreVABS features non-structural mass, ply drops, filler materials, building layups from sub-layups, and topology library.
