@@ -1,0 +1,40 @@
+# Build Sphinx
+name: build prevabs pdf
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+    - name: Install dependencies
+      run: |
+        python3 -m pip install --upgrade pip
+        pip install -r docs/requirements.txt
+        sudo apt-get update -y
+        sudo apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
+    - name: Build with sphinx
+      id: compile
+      run: |
+        python -msphinx -M latexpdf docs/source/prevabs docs/build
+    - name: commit
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add docs/build/latex/PreVABSManual.pdf
+        git commit -m "update pdf file"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        branch: main 
+        github_token: ${{ secrets.GITHUB_TOKEN }}
