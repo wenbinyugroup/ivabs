@@ -1,38 +1,40 @@
 
-
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" />
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Geometry and shapes &mdash; iVABS 1.3 documentation</title>
-  
 
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry and shapes &#8212; iVABS 0.2.0-alpha.2 documentation</title>
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script kind="utterances">
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
     if (document.readyState != 'loading') {
@@ -66,175 +68,379 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Materials and layups" href="pre_material.html" />
-    <link rel="prev" title="Coordinate systems" href="pre_coordinate.html" /> 
-</head>
+    <link rel="prev" title="Coordinate systems" href="pre_coordinate.html" />
 
-<body class="wy-body-for-nav">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
 
-   
-  <div class="wy-grid-for-nav">
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+
+    <div class="container-xl">
+      <div class="row">
           
-
-          
-            <a href="../index.html" class="icon icon-home"> iVABS
-          
-
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                1.3
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">iVABS</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../ivabs/install.html">Download and Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ivabs/examples.html">Examples</a></li>
-</ul>
-<p class="caption"><span class="caption-text">PreVABS</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="install.html">Download and Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="run.html">How to Run PreVABS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="guide.html">Guide for Preparing Input Files</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="pre_coordinate.html">Coordinate systems</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Geometry and shapes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#base-points">Base points</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#points-defined-in-a-data-file">Points defined in a data file</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#points-defined-in-the-xml-file">Points defined in the XML file</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#base-lines">Base lines</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#straight">Straight</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arc">Arc</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#circle">Circle</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="pre_material.html">Materials and layups</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pre_component.html">Components</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pre_recover.html">Specifications for recovery</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pre_overall.html">Other input settings</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="xml.html">Introduction to XML</a></li>
-<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
-</ul>
-<p class="caption"><span class="caption-text">MSGPI</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../msgpi/sg_module.html">SG Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../msgpi/ms_module.html">Structure Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../msgpi/utils.html">Utility Functions</a></li>
-</ul>
-
-            
-          
-        </div>
-        
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">iVABS</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
-          <li><a href="guide.html">Guide for Preparing Input Files</a> &raquo;</li>
-        
-      <li>Geometry and shapes</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-          
-            
-              <a href="https://github.com/wenbinyugroup/ivabs/blob/main/docs/source/prevabs/pre_shape.rst" class="fa fa-github"> Edit on GitHub</a>
-            
-          
-        
-      </li>
-    
-  </ul>
-
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
   
-  <hr/>
+  
+  <h1 class="site-logo" id="site-title">iVABS 0.2.0-alpha.2 documentation</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  iVABS
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ivabs/install.html">
+   Download and Installation
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../ivabs/examples.html">
+   Examples
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivabs/example_uh60a.html">
+     Example 1: Capability of PreVABS (UH60A airfoil)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivabs/example_uh60a_sensi.html">
+     Example 2: Sensitivity analysis of UH60A with Dakota
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivabs/example_uh60a_opt.html">
+     Example 3: Optimization of UH60A with Dakota
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  PreVABS
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="install.html">
+   Download and Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="run.html">
+   How to Run PreVABS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorial.html">
+   Tutorial
+  </a>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="guide.html">
+   Guide for Preparing Input Files
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="pre_coordinate.html">
+     Coordinate systems
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Geometry and shapes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pre_material.html">
+     Materials and layups
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pre_component.html">
+     Components
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pre_recover.html">
+     Specifications for recovery
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pre_overall.html">
+     Other input settings
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="examples.html">
+   Examples
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="example_box.html">
+     Box beam
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="example_pipe.html">
+     Pipe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="example_tube.html">
+     Circular tube
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="example_channel.html">
+     Channel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="example_airfoil.html">
+     Airfoil
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="example_airfoil_recover.html">
+     Airfoil (Recover)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="xml.html">
+   Introduction to XML
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="references.html">
+   References
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  MSGPI
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../msgpi/sg_module.html">
+   SG Module
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../msgpi/sg.html">
+     Class Module for MSM Structure Gene
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../msgpi/presg.html">
+     presg Module
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../msgpi/iovabs.html">
+     SG I/O Module for VABS
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../msgpi/ioutils.html">
+     I/O Utility Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../msgpi/analysis.html">
+     analysis Module
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../msgpi/ms_module.html">
+   Structure Module
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../msgpi/beam.html">
+     Class Module for Beam
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../msgpi/iogebt.html">
+     I/O Module for GEBT
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../msgpi/prebeam.html">
+     prebeam Module for GEBT
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../msgpi/ms_analysis.html">
+     analysis Module for GEBT
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../msgpi/utils.html">
+   Utility Functions
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/prevabs/pre_shape.rst.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#base-points">
+   Base points
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#points-defined-in-a-data-file">
+     Points defined in a data file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#points-defined-in-the-xml-file">
+     Points defined in the XML file
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#base-lines">
+   Base lines
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#straight">
+     Straight
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arc">
+     Arc
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#circle">
+     Circle
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
   <div class="section" id="geometry-and-shapes">
 <span id="section-shape"></span><h1>Geometry and shapes<a class="headerlink" href="#geometry-and-shapes" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="base-points">
@@ -546,51 +752,38 @@ input file demonstrating the two methods is presented in
 </div>
 
 
-           </div>
-           
-          </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="pre_material.html" class="btn btn-neutral float-right" title="Materials and layups" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="pre_coordinate.html" class="btn btn-neutral float-left" title="Coordinate systems" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="pre_coordinate.html" title="previous page">Coordinate systems</a>
+    <a class='right-next' id="next-link" href="pre_material.html" title="next page">Materials and layups</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Su Tian, Xin Liu, Haodong Du, Fei Tao and Wenbin Yu<br/>
+        
+            &copy; Copyright 2021, Multiscale Structural Mechanics Group, Purdue University.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
     </div>
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, Multiscale Structural Mechanics Group.
-
-    </p>
-  </div>
     
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
     
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-  
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
-    
-   
-
-</body>
+  </body>
 </html>

@@ -3,7 +3,10 @@
 .. _example-channel:
 
 Channel
--------
+=======
+
+Problem description
+-------------------
 
 .. figure:: figures/ex_channel_0.png
   :name: fig_channel0
@@ -13,15 +16,11 @@ Channel
   Cross section of the pipe [CHEN2010]_.
 
 This example has a cross section of a highly heterogeneous channel.
-This cross section geometry can be defined as shown in
-:numref:`Fig. %s <fig_channel0>` [CHEN2010]_. The isotropic material
-properties are given in :numref:`Table %s <table_channel_materials>`.
+This cross section geometry can be defined as shown in :numref:`Fig. %s <fig_channel0>` [CHEN2010]_.
+The isotropic material properties are given in :numref:`Table %s <table_channel_materials>`.
 The layup is defined having a single layer with the thickness 0.001524 m.
-The result is shown in :numref:`Table %s <table_channel_result>` and
-compared with those in [CHEN2010]_.
-Complete input files can be found in ``examples\ex_channel\``, including
-``channel.xml``, ``basepoints.dat``, ``baselines.xml``, ``materials.xml``,
-and ``layups.xml``.
+The result is shown in :numref:`Table %s <table_channel_result>` and compared with those in [CHEN2010]_.
+Complete input files can be found in ``examples\ex_channel\``, including ``channel.xml`` and ``materials.xml``.
 
 .. figure:: figures/ex_channel_1.png
   :name: fig_channel1
@@ -54,6 +53,12 @@ and ``layups.xml``.
   "Name", "Layer", "Material", "Ply thickness", "Orientation", "Number of plies"
   , , , |len_si|, :math:`\circ`,
   "layup1", 1, "mtr1", 0.001524, 0, 1
+
+
+
+
+Result
+------
 
 .. table:: Results
    :name: table_channel_result

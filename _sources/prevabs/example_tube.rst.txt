@@ -3,17 +3,19 @@
 .. _example-tube:
 
 Circular tube
--------------
+=============
 
-This example has a cross section of a simple circular shape with radius
-:math:`r=10` m. This cross section geometry can be defined easily by a
-center and a radius. Material properties are given in
-:numref:`Table %s <table_tube_materials>`. The layup is defined using
-the stacking sequence code :math:`[\pm 45_2/0_2/90]_{2s}`. The result
-is given in :numref:`Table %s <table_tube_result>`.
+Problem description
+-------------------
+
+
+This example has a cross section of a simple circular shape with radius :math:`r=10` m.
+This cross section geometry can be defined easily by a center and a radius.
+Material properties are given in :numref:`Table %s <table_tube_materials>`.
+The layup is defined using the stacking sequence code :math:`[\pm 45_2/0_2/90]_{2s}`.
+The result is given in :numref:`Table %s <table_tube_result>`.
 Complete input files can be found in ``examples\ex_tube\``, including
-``tube.xml``, ``basepoints.dat``, ``baselines.xml``, ``materials.xml``,
-and ``layups.xml``.
+``tube.xml`` and ``materials.xml``.
 
 .. figure:: figures/examplecircle1.png
   :name: fig_circle1
@@ -45,6 +47,13 @@ and ``layups.xml``.
 
   "Name", "Material", "Stacking sequence"
   "layup1", "iso5_4", :math:`[\pm 45_2/0_2/90]_{s}`
+
+
+
+
+
+Result
+------
 
 .. table:: Results
    :name: table_tube_result

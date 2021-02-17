@@ -3,7 +3,10 @@
 .. _example-airfoil-recover:
 
 Airfoil (Recover)
------------------
+=================
+
+Problem description
+-------------------
 
 This example continues from the  previous one to demonstrate the
 dehomogenization analysis. It is assumed that a 1D beam analysis has
@@ -33,6 +36,13 @@ Complete files can be found in ``examples\ex_airfoil_r\``, including
   ":math:`M_1`, Nm", 4
   ":math:`M_2`, Nm", 5
   ":math:`M_3`, Nm", 6
+
+
+
+
+
+Result
+------
 
 .. figure:: figures/examplemh104r.png
   :name: fig_mh104r

@@ -9,6 +9,6 @@ Examples
    example_pipe
    example_tube
    example_channel
-   example_ibeam
+   .. example_ibeam
    example_airfoil
    example_airfoil_recover
