@@ -3,7 +3,10 @@
 .. _section-airfoil:
 
 Airfoil
--------
+=======
+
+Problem description
+-------------------
 
 .. figure:: figures/examplemh1040.png
   :name: fig_mh104_draw
@@ -12,24 +15,19 @@ Airfoil
 
   Sketch of a cross section for a typical wind turbine blade [CHEN2010]_.
 
-This example demonstrates the capability of building a cross section
-having an airfoil shape, which is commonly seen on wind turbine blades
-or helicopter rotor blades. This example is also studied in [CHEN2010]_.
-A sketch of a cross section for a typical wind turbine blade is shown
-in :numref:`Fig. %s <fig_mh104_draw>`. The airfoil is MH 104
-(http://m-selig.ae.illinois.edu/ads/coord_database.html#M). In this
-example, the chord length :math:`CL=1.9` m. The origin O is set to the
-point at 1/4 of the chord. Twist angle :math:`\theta` is :math:`0^\circ`.
-There are two webs, whose right boundaries are at the 20% and 50% location
-of the chord, respectively. Both low pressure and high pressure surfaces
-have four segments. The dividing points between segments are listed in
-:numref:`Table %s <table_div_pts>`. Materials are given in
-:numref:`Table %s <table_mh104_materials>` and layups are given in
-:numref:`Table %s <table_mh104_layups>`. A complete :math:`6\times 6`
-stiffness matrix is given in :numref:`Table %s <table_airfoil_result>`.
-Complete input files can be found in ``examples\ex_airfoil\``, including
-``mh104.xml``, ``basepoints.dat``, ``baselines.xml``, ``materials.xml``,
-and ``layups.xml``.
+This example demonstrates the capability of building a cross section having an airfoil shape, which is commonly seen on wind turbine blades or helicopter rotor blades.
+This example is also studied in [CHEN2010]_.
+A sketch of a cross section for a typical wind turbine blade is shown in :numref:`Fig. %s <fig_mh104_draw>`.
+The airfoil is MH 104 (http://m-selig.ae.illinois.edu/ads/coord_database.html#M).
+In this example, the chord length :math:`CL=1.9` m.
+The origin O is set to the point at 1/4 of the chord.
+Twist angle :math:`\theta` is :math:`0^\circ`.
+There are two webs, whose right boundaries are at the 20% and 50% location of the chord, respectively.
+Both low pressure and high pressure surfaces have four segments.
+The dividing points between segments are listed in :numref:`Table %s <table_div_pts>`.
+Materials are given in :numref:`Table %s <table_mh104_materials>` and layups are given in :numref:`Table %s <table_mh104_layups>`.
+A complete :math:`6\times 6` stiffness matrix is given in :numref:`Table %s <table_airfoil_result>`.
+Complete input files can be found in ``examples\ex_airfoil\``, including ``mh104.xml``, ``basepoints.dat``, ``baselines.xml``, ``materials.xml``, and ``layups.xml``.
 
 .. csv-table:: Dividing points
   :name: table_div_pts
@@ -111,6 +109,13 @@ and ``layups.xml``.
   "layup_web", 1, "Uni-directional FRP", 0.00053, 0, 38
   ,            2, "Balsa",               0.003125, 0, 1
   ,            3, "Uni-directional FRP", 0.00053, 0, 38
+
+
+
+
+
+Result
+------
 
 .. table:: Effective Timoshenko stiffness matrix
    :name: table_airfoil_result

@@ -18,8 +18,8 @@
 .. |den_si_k| replace:: :math:`10^3\ \mathrm{kg/m^3}`
 .. |mod_si| replace:: :math:`\mathrm{Pa}`
 .. |mod_si_k| replace:: :math:`10^3\ \mathrm{Pa}`
-.. |mod_si_m| replace:: :math:`10^6\ \mathrm{Pa}`
-.. |mod_si_g| replace:: :math:`10^9\ \mathrm{Pa}`
+.. |mod_si_m| replace:: :math:`\mathrm{MPa}`
+.. |mod_si_g| replace:: :math:`\mathrm{GPa}`
 .. |stf0_im| replace:: :math:`\mathrm{lb}`
 .. |stf1_im| replace:: :math:`\mathrm{lb \cdot in}`
 .. |stf2_im| replace:: :math:`\mathrm{lb \cdot in^2}`

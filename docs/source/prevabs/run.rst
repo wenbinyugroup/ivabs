@@ -11,6 +11,14 @@ Download the examples package from cdmHUB
 (https://cdmhub.org/resources/1597/supportingdocs), and unpack it to
 any location;
 
+
+
+
+
+
+
+
+
 Quick start
 -----------
 
@@ -66,6 +74,12 @@ Then user can run VABS using the generated input file.
 
 
 
+
+
+
+
+
+
 .. _section-command-option:
 
 Command line options
@@ -102,6 +116,14 @@ the screen.
 .. note:: When VABS is called by PreVABS (using the option ``-e``), the
   actual name of the executable used here is ``VABSIII``.
 
+
+
+
+
+
+
+
+
 Running cases
 -------------
 
@@ -119,6 +141,9 @@ and one may want to check the correctness of these files and whether
 the cross section can be built as designed. One may also want to try
 different meshing sizes before running the analysis.
 
+
+
+
 Case 2: Carry out homogenization without visualization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -134,7 +159,10 @@ inputs) and do this step repeatedly. If you already have generated the
 input file *cross_section_vabs.dat*, and want to only run VABS, you can
 invoke VABS directly using ``VABS`` *cross_section_vabs.dat*.
 
-Case 3: Predict 3D stress/strain and plot
+
+
+
+Case 3: Recover 3D stress/strain and plot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ::
