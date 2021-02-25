@@ -1,0 +1,376 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Welcome to iVABS’ documentation! &mdash; iVABS 0.2.0-alpha.2 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "wenbinyugroup/ivabs");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Download and Installation" href="ivabs/install.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> iVABS
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2.0-a2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">iVABS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ivabs/install.html">Download and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ivabs/examples.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PreVABS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="prevabs/install.html">Download and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prevabs/run.html">How to Run PreVABS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prevabs/tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prevabs/guide.html">Guide for Preparing Input Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prevabs/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prevabs/changelog.html">Change log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prevabs/xml.html">Introduction to XML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prevabs/references.html">References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MSGPI</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msgpi/sg_module.html">SG Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msgpi/ms_module.html">Structure Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msgpi/utils.html">Utility Functions</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">iVABS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Welcome to iVABS’ documentation!</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/wenbinyugroup/ivabs/blob/main/docs/source/index.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="welcome-to-ivabs-documentation">
+<h1>Welcome to iVABS’ documentation!<a class="headerlink" href="#welcome-to-ivabs-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="ivabs-introduction">
+<h2>iVABS Introduction<a class="headerlink" href="#ivabs-introduction" title="Permalink to this headline">¶</a></h2>
+<p><strong>iVABS</strong> (integrated VABS) package bundles  <strong>PreVABS + VABS + gmsh + msgpi + GEBT
++ Dakota(optional)</strong> . <strong>PreVABS</strong> is a parametrized composite design tool.
+<strong>VABS</strong> is a commercial code for cross-sectional property analysis. <strong>msgpi</strong>
+is a Python interface for <strong>VABS</strong>. <strong>GEBT</strong> is a beam structural analysis tool.
+<strong>PreVABS</strong>, <strong>VABS</strong>, <strong>msgpi</strong>, and <strong>GEBT</strong>  are developed in Prof. Yu’s
+group. <strong>Gmsh</strong> is an open source CAD software. <strong>Dakota</strong> is an open source
+tool for optimization developed by Sandia national lab.</p>
+<div class="section" id="installation-instructions">
+<h3>Installation Instructions<a class="headerlink" href="#installation-instructions" title="Permalink to this headline">¶</a></h3>
+<p>It is recommended to use iVABS bundle installer. It provides all the packages
+altogether.</p>
+<ol class="arabic simple">
+<li><p>Download from <a class="reference external" href="https://github.com/wenbinyugroup/ivabs/releases">Github release page</a>.</p></li>
+<li><p>Follow instructions in the Documentation.</p></li>
+</ol>
+</div>
+<div class="section" id="documentation-and-tutorials">
+<h3>Documentation and tutorials<a class="headerlink" href="#documentation-and-tutorials" title="Permalink to this headline">¶</a></h3>
+<p>For the documentation and tutorials, see the <a class="reference external" href="http://wenbinyugroup.github.io/ivabs">iVABS Documentation</a>.</p>
+<p>You can also download <a class="reference external" href="https://github.com/wenbinyugroup/ivabs/raw/main/docs/build/latex/PreVABSManual.pdf">pdf documentation</a> for PreVABS.</p>
+</div>
+</div>
+</div>
+<div class="section" id="table-of-contents">
+<h1>Table of Contents:<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">iVABS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ivabs/install.html">Download and Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ivabs/install.html#windows-installer">Windows installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ivabs/install.html#windows-portable-archives">Windows portable archives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ivabs/install.html#linux-installer">Linux installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ivabs/install.html#linux-portable-archives">Linux portable archives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ivabs/install.html#request-vabs-license">Request VABS license</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ivabs/examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ivabs/example_uh60a.html">Example 1: Capability of PreVABS (UH60A airfoil)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ivabs/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ivabs/example_uh60a_opt.html">Example 3: Optimization of UH60A with Dakota</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">PreVABS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="prevabs/install.html">Download and Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="prevabs/install.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prevabs/install.html#install-binary">Install binary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="prevabs/run.html">How to Run PreVABS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="prevabs/run.html#quick-start">Quick start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prevabs/run.html#command-line-options">Command line options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prevabs/run.html#running-cases">Running cases</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="prevabs/tutorial.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="prevabs/tutorial.html#the-design-of-a-cross-section">The design of a cross section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prevabs/tutorial.html#steps-of-preparing-input-files">Steps of preparing input files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prevabs/tutorial.html#execution-and-results">Execution and results</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="prevabs/guide.html">Guide for Preparing Input Files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="prevabs/guide/pre_coordinate.html">Coordinate systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prevabs/guide/pre_shape.html">Geometry and shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prevabs/guide/pre_material.html">Materials and layups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prevabs/guide/pre_component.html">Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prevabs/guide/pre_recover.html">Specifications for recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prevabs/guide/pre_overall.html">Other input settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="prevabs/examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="prevabs/examples/example_box.html">Box beam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prevabs/examples/example_pipe.html">Pipe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prevabs/examples/example_tube.html">Circular tube</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prevabs/examples/example_channel.html">Channel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prevabs/examples/example_airfoil.html">Airfoil (MH-104)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prevabs/examples/example_airfoil_recover.html">Airfoil (Recover)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="prevabs/changelog.html">Change log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prevabs/xml.html">Introduction to XML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prevabs/references.html">References</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">MSGPI</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="msgpi/sg_module.html">SG Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="msgpi/sg.html">Class Module for MSM Structure Gene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="msgpi/presg.html">presg Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="msgpi/iovabs.html">SG I/O Module for VABS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="msgpi/ioutils.html">I/O Utility Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="msgpi/analysis.html">analysis Module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="msgpi/ms_module.html">Structure Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="msgpi/beam.html">Class Module for Beam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="msgpi/iogebt.html">I/O Module for GEBT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="msgpi/prebeam.html">prebeam Module for GEBT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="msgpi/ms_analysis.html">analysis Module for GEBT</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="msgpi/utils.html">Utility Functions</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="ivabs/install.html" class="btn btn-neutral float-right" title="Download and Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Multiscale Structural Mechanics Group, Purdue University.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

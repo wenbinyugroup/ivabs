@@ -1,0 +1,315 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Example 1: Capability of PreVABS (UH60A airfoil) &mdash; iVABS 0.2.0-alpha.2 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "wenbinyugroup/ivabs");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Example 2: Sensitivity analysis of UH60A with Dakota" href="example_uh60a_sensi.html" />
+    <link rel="prev" title="Examples" href="examples.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> iVABS
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2.0-a2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">iVABS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Download and Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="examples.html">Examples</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Example 1: Capability of PreVABS (UH60A airfoil)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_uh60a_opt.html">Example 3: Optimization of UH60A with Dakota</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">PreVABS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prevabs/install.html">Download and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prevabs/run.html">How to Run PreVABS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prevabs/tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prevabs/xml.html">Introduction to XML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prevabs/references.html">References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MSGPI</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../msgpi/sg_module.html">SG Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../msgpi/ms_module.html">Structure Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../msgpi/utils.html">Utility Functions</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">iVABS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="examples.html">Examples</a> &raquo;</li>
+        
+      <li>Example 1: Capability of PreVABS (UH60A airfoil)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/wenbinyugroup/ivabs/blob/main/docs/source/ivabs/example_uh60a.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="example-1-capability-of-prevabs-uh60a-airfoil">
+<h1>Example 1: Capability of PreVABS (UH60A airfoil)<a class="headerlink" href="#example-1-capability-of-prevabs-uh60a-airfoil" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-center" id="fig-uh60a-example">
+<a class="reference internal image-reference" href="../_images/fig_uh60a_example.jpg"><img alt="../_images/fig_uh60a_example.jpg" src="../_images/fig_uh60a_example.jpg" style="width: 5.5in;" /></a>
+</div>
+<p>This figure shows the construction model of PreVABS input. You should prepare 5 input files: basepoints.dat, baseline.xml, layup.xml, material.xml, section.xml. Current version of PreVABS also support combining all inputs in a single XML file.</p>
+<ol class="arabic simple">
+<li><p>Get into <code class="docutils literal notranslate"><span class="pre">root-folder\examples\ex_uh60a</span></code>.</p></li>
+<li><p>Open a command prompt.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">prevabs</span> <span class="pre">-i</span> <span class="pre">uh60a_section.xml</span> <span class="pre">-h</span> <span class="pre">-v</span> <span class="pre">-e</span></code>.</p></li>
+<li><p>This will build the airfoil model and run VABS. The cross-sectional property will be stored in uh60a_section.sg.K. Gmsh GUI will be opened to display the model.</p></li>
+</ol>
+<p>The table below shows the 4x4 stiffness matrix for of classical beam model.</p>
+<table class="docutils align-center" id="uh60a-stiffness">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Beam stiffness of UH60A airfoil</span><a class="headerlink" href="#uh60a-stiffness" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(4.2369\times 10^{7}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-8.1467\times 10^{3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(4.6272\times 10^{5}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-1.7006\times 10^{7}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(-8.1467\times 10^{3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.6166\times 10^{5}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-7.2404\times 10^{1}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2.2351\times 10^{3}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(4.6272\times 10^{5}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-7.2404\times 10^{1}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.4981\times 10^{5}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-1.8577\times 10^{5}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(-1.7006\times 10^{7}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2.2351\times 10^{3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-1.8577\times 10^{5}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.2608\times 10^{7}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>PreVABS features non-structural mass, ply drops, filler materials, building layups from sub-layups, and topology library.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="example_uh60a_sensi.html" class="btn btn-neutral float-right" title="Example 2: Sensitivity analysis of UH60A with Dakota" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="examples.html" class="btn btn-neutral float-left" title="Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Multiscale Structural Mechanics Group, Purdue University.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

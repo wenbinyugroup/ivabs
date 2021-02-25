@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>presg Module &mdash; iVABS 0.2.0-alpha.2 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "wenbinyugroup/ivabs");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SG I/O Module for VABS" href="iovabs.html" />
+    <link rel="prev" title="Class Module for MSM Structure Gene" href="sg.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> iVABS
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2.0-a2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">iVABS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/install.html">Download and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/examples.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PreVABS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prevabs/install.html">Download and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prevabs/run.html">How to Run PreVABS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prevabs/tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prevabs/guide.html">Guide for Preparing Input Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prevabs/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prevabs/xml.html">Introduction to XML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prevabs/references.html">References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MSGPI</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="sg_module.html">SG Module</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sg.html">Class Module for MSM Structure Gene</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">presg Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iovabs.html">SG I/O Module for VABS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ioutils.html">I/O Utility Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis.html">analysis Module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ms_module.html">Structure Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utility Functions</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">iVABS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="sg_module.html">SG Module</a> &raquo;</li>
+        
+      <li>presg Module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/wenbinyugroup/ivabs/blob/main/docs/source/msgpi/presg.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="presg-module">
+<h1>presg Module<a class="headerlink" href="#presg-module" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">msgpi.presg</span>
+</pre></div>
+</div>
+<dl class="py function">
+<dt id="msgpi.presg.readMaterialFromXMLElement">
+<code class="sig-prename descclassname">msgpi.presg.</code><code class="sig-name descname">readMaterialFromXMLElement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">xem</span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.presg.readMaterialFromXMLElement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read material data from XML elements.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="msgpi.presg.preSG1D">
+<code class="sig-prename descclassname">msgpi.presg.</code><code class="sig-name descname">preSG1D</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">xr_sg</span></em>, <em class="sig-param"><span class="n">smdim</span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.presg.preSG1D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Preprocessor of 1D SG.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xr_sg</strong> (<em>xml.etree.ElementTree.Element</em>) – Root element of the input file.</p></li>
+<li><p><strong>smdim</strong> (<em>int</em>) – Dimension of the material/structural model.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Structure Gene.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="sg.html#msgpi.sg.StructureGene" title="msgpi.sg.StructureGene">msgpi.sg.StructureGene</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="msgpi.presg.preSG">
+<code class="sig-prename descclassname">msgpi.presg.</code><code class="sig-name descname">preSG</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sg_xml</span></em>, <em class="sig-param"><span class="n">analysis</span></em>, <em class="sig-param"><span class="n">ppcmd</span><span class="o">=</span><span class="default_value">'prevabs'</span></em>, <em class="sig-param"><span class="n">solver</span><span class="o">=</span><span class="default_value">'swiftcomp'</span></em>, <em class="sig-param"><span class="n">write_input</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">30</span></em>, <em class="sig-param"><span class="n">scrnout</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.presg.preSG" title="Permalink to this definition">¶</a></dt>
+<dd><p>Preprocessor of a structure gene.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sg_xml</strong> (<em>str</em>) – File name of SG design parameters (XML format)</p></li>
+<li><p><strong>analysis</strong> (<em>str</em>) – <p>The analysis that will be carried out after the generation of
+the input file.</p>
+<ul>
+<li><p>h - homogenization</p></li>
+<li><p>d - dehomogenization/localization/recover</p></li>
+<li><p>f - initial failure strength</p></li>
+<li><p>fe - initial failure envelope</p></li>
+<li><p>fi - initial failure indices and strength ratios</p></li>
+</ul>
+</p></li>
+<li><p><strong>ppcmd</strong> (<em>str</em><em>, </em><em>default 'prevabs'</em>) – Preprocessor command.</p></li>
+<li><p><strong>solver</strong> (<em>str</em><em>, </em><em>default 'swiftcomp'</em>) – Format of the generated input file (‘vabs’ or ‘swiftcomp’)</p></li>
+<li><p><strong>write_input</strong> (<em>bool</em>) – Whether to write input file.</p></li>
+<li><p><strong>scrnout</strong> (<em>bool</em>) – Whether to print messages to the screen.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>str, int</em> – (If write_input True) Input file name, dimension of the material/structural model.</p></li>
+<li><p><em>msgpi.sg.StructureGene</em> – (If write_input False) Structure Gene.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="iovabs.html" class="btn btn-neutral float-right" title="SG I/O Module for VABS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="sg.html" class="btn btn-neutral float-left" title="Class Module for MSM Structure Gene" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Multiscale Structural Mechanics Group, Purdue University.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
