@@ -26,6 +26,7 @@ Table of Contents:
    prevabs/tutorial
    prevabs/guide
    prevabs/examples
+   prevabs/changelog
    prevabs/xml
    prevabs/references
 

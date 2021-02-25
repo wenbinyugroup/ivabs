@@ -1,4 +1,4 @@
-.. include:: replace.txt
+.. include:: ./replace.txt
 
 .. _tutorial:
 
@@ -11,7 +11,7 @@ PreVABS given a cross section design.
 The design of a cross section
 -----------------------------
 
-.. figure:: figures/tutorial_box_0.png
+.. figure:: ./figures/tutorial_box_0.png
   :name: fig_tutorial_box
   :width: 6in
   :align: center
@@ -101,7 +101,7 @@ webs and the walls. Then the order of creation should be: first creating
 the walls, then the webs, and at last the fill, as shown in
 :numref:`Fig. %s <fig_tutorial_box_order>`.
 
-.. figure:: figures/tutorial_box_order.png
+.. figure:: ./figures/tutorial_box_order.png
   :name: fig_tutorial_box_order
   :width: 6in
   :align: center
@@ -136,7 +136,7 @@ is placed at the centroid of the rectangular. Based on the design parameters
 :math:`w`, :math:`h` and :math:`d`, coordinates of all points are found
 and listed in :numref:`Table %s <table_tutorial_box_points>`.
 
-.. figure:: figures/tutorial_box_points.png
+.. figure:: ./figures/tutorial_box_points.png
   :name: fig_tutorial_box_points
   :width: 6in
   :align: center
@@ -171,7 +171,7 @@ is defined for each element.
 The completed input file for geometry is shown in
 :numref:`Listing %s <code_tutorial_box_baselines>`.
 
-.. figure:: figures/tutorial_box_lines.png
+.. figure:: ./figures/tutorial_box_lines.png
   :name: fig_tutorial_box_lines
   :width: 6in
   :align: center
@@ -326,7 +326,7 @@ inner boundary is needed to trim the base lines of both webs. Hence,
 each web component depends on the walls component, as shown in
 :numref:`Listing %s <code_tutorial_box_laminate>`.
 
-.. figure:: figures/tutorial_box_segments.png
+.. figure:: ./figures/tutorial_box_segments.png
   :name: fig_tutorial_box_segments
   :width: 6in
   :align: center
@@ -363,7 +363,7 @@ space in the middle enclosed by the walls and both webs. At the same
 time, the dependent components are also decided, as shown in
 :numref:`Listing %s <code_tutorial_box_fill>`.
 
-.. figure:: figures/tutorial_box_fill.png
+.. figure:: ./figures/tutorial_box_fill.png
   :name: fig_tutorial_box_fill
   :width: 6in
   :align: center
@@ -461,7 +461,7 @@ properties can be found in the file ``box.sg.K``. The effective Timoshenko
 stiffness matrix is listed in :numref:`Table %s <tutorial_stiffness>`.
 
 
-.. figure:: figures/tutorial_box.png
+.. figure:: ./figures/tutorial_box.png
   :name: fig_tutorial_box_plot
   :width: 6.5in
   :align: center

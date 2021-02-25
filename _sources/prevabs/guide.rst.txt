@@ -1,4 +1,4 @@
-.. include:: replace.txt
+.. include:: ./replace.txt
 
 Guide for Preparing Input Files
 ===============================
@@ -11,7 +11,7 @@ The material aspect includes material properties, lamina thicknesses,
 layup stacking sequences, etc. The global configuration contains the
 files included, transformation, meshing options, and analysis settings.
 
-.. figure:: figures/chart1.png
+.. figure:: ./figures/chart1.png
   :name: fig_csfiles1
   :width: 75%
   :align: center
@@ -55,25 +55,34 @@ The input syntax for this main file is shown in :numref:`Listing %s <code_crosss
     <include>...</include>
     <analysis>...</analysis>
     <general>...</general>
+    <baselines>...</baselines>
+    <layups>...</layups>
     <component>...</component>
     <component>...</component>
     ...
   </cross_section>
 
+
+Data of geometry and layup can be arranged in two ways, controlled by the attribute ``format``:
+
+* If omitted or set to 0, then the code will look for definitions of shapes and layups in separated files, specified in the element ``<include>``.
+* If set to 1, then the code will look for the definitions in the current main input file.
+
+
 **Specification**
 
 - **<cross_section>**
 
-  - *name*
-  - *format*
+  - *name* - Name of the cross-section.
+  - *format* - Format of the input file. See explaination above.
 
-- **<include>**
-- **<analysis>**
-- **<general>**
-- **<baselines>**
-- **<layups>**
-- **<component>**
-- **<recover>**
+- **<include>** - File names of separately stored data.
+- **<analysis>** - Configurations of cross-sectional analysis.
+- **<general>** - Overall settings of the cross-section.
+- **<baselines>** - Definitions of geometry and shape.
+- **<layups>** - Definitions of layups.
+- **<component>** - Definitions of cross-sectional components.
+- **<recover>** - Inputs for recovery.
 
 
 
@@ -82,11 +91,11 @@ The input syntax for this main file is shown in :numref:`Listing %s <code_crosss
     :maxdepth: 2
     :caption: Subtopics
 
-    pre_coordinate
-    pre_shape
-    pre_material
-    pre_component
-    pre_recover
-    pre_overall
+    guide/pre_coordinate
+    guide/pre_shape
+    guide/pre_material
+    guide/pre_component
+    guide/pre_recover
+    guide/pre_overall
 
 

@@ -2,13 +2,14 @@ Examples
 ========
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Table of Contents
 
-   example_box
-   example_pipe
-   example_tube
-   example_channel
-   .. example_ibeam
-   example_airfoil
-   example_airfoil_recover
+   examples/example_box
+   examples/example_pipe
+   examples/example_tube
+   examples/example_channel
+   examples/example_airfoil
+   examples/example_airfoil_recover
+
+.. example_ibeam

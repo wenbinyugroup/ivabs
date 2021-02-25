@@ -64,7 +64,7 @@ Then user can run VABS using the generated input file.
   However, VABS is a commercial code and you need to request the code
   and a valid license from AnalySwift (http://analyswift.com/).
 
-.. figure:: figures/rungui0.png
+.. figure:: ./figures/rungui0.png
   :name: fig_quickstart
   :width: 6.5in
   :align: center

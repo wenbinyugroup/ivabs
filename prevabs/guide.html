@@ -73,7 +73,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Coordinate systems" href="pre_coordinate.html" />
+    <link rel="next" title="Coordinate systems" href="guide/pre_coordinate.html" />
     <link rel="prev" title="Tutorial" href="tutorial.html" /> 
 </head>
 
@@ -134,15 +134,16 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toctree-l1"><a class="reference internal" href="run.html">How to Run PreVABS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Guide for Preparing Input Files</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="pre_coordinate.html">Coordinate systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pre_shape.html">Geometry and shapes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pre_material.html">Materials and layups</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pre_component.html">Components</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pre_recover.html">Specifications for recovery</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pre_overall.html">Other input settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide/pre_coordinate.html">Coordinate systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide/pre_shape.html">Geometry and shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide/pre_material.html">Materials and layups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide/pre_component.html">Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide/pre_recover.html">Specifications for recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide/pre_overall.html">Other input settings</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Change log</a></li>
 <li class="toctree-l1"><a class="reference internal" href="xml.html">Introduction to XML</a></li>
 <li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 </ul>
@@ -242,17 +243,21 @@ Except the base points file, which has a file extension .dat, all other files us
 The input syntax for this main file is shown in <a class="reference internal" href="#code-crosssection"><span class="std std-numref">Listing 7</span></a>.</p>
 <div class="literal-block-wrapper docutils container" id="code-crosssection">
 <div class="code-block-caption"><span class="caption-number">Listing 7 </span><span class="caption-text">Input syntax for the cross section file.</span><a class="headerlink" href="#code-crosssection" title="Permalink to this code">¶</a></div>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;cross_section</span> <span class="na">name=</span><span class="s">&quot;&quot;</span> <span class="na">format=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;cross_section</span> <span class="na">name=</span><span class="s">&quot;&quot;</span> <span class="na">format=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;include&gt;</span>...<span class="nt">&lt;/include&gt;</span>
   <span class="nt">&lt;analysis&gt;</span>...<span class="nt">&lt;/analysis&gt;</span>
   <span class="nt">&lt;general&gt;</span>...<span class="nt">&lt;/general&gt;</span>
+  <span class="nt">&lt;baselines&gt;</span>...<span class="nt">&lt;/baselines&gt;</span>
+  <span class="nt">&lt;layups&gt;</span>...<span class="nt">&lt;/layups&gt;</span>
   <span class="nt">&lt;component&gt;</span>...<span class="nt">&lt;/component&gt;</span>
   <span class="nt">&lt;component&gt;</span>...<span class="nt">&lt;/component&gt;</span>
   ...
@@ -260,47 +265,52 @@ The input syntax for this main file is shown in <a class="reference internal" hr
 </pre></div>
 </td></tr></table></div>
 </div>
+<p>Data of geometry and layup can be arranged in two ways, controlled by the attribute <code class="docutils literal notranslate"><span class="pre">format</span></code>:</p>
+<ul class="simple">
+<li><p>If omitted or set to 0, then the code will look for definitions of shapes and layups in separated files, specified in the element <code class="docutils literal notranslate"><span class="pre">&lt;include&gt;</span></code>.</p></li>
+<li><p>If set to 1, then the code will look for the definitions in the current main input file.</p></li>
+</ul>
 <p><strong>Specification</strong></p>
 <ul class="simple">
 <li><p><strong>&lt;cross_section&gt;</strong></p>
 <ul>
-<li><p><em>name</em></p></li>
-<li><p><em>format</em></p></li>
+<li><p><em>name</em> - Name of the cross-section.</p></li>
+<li><p><em>format</em> - Format of the input file. See explaination above.</p></li>
 </ul>
 </li>
-<li><p><strong>&lt;include&gt;</strong></p></li>
-<li><p><strong>&lt;analysis&gt;</strong></p></li>
-<li><p><strong>&lt;general&gt;</strong></p></li>
-<li><p><strong>&lt;baselines&gt;</strong></p></li>
-<li><p><strong>&lt;layups&gt;</strong></p></li>
-<li><p><strong>&lt;component&gt;</strong></p></li>
-<li><p><strong>&lt;recover&gt;</strong></p></li>
+<li><p><strong>&lt;include&gt;</strong> - File names of separately stored data.</p></li>
+<li><p><strong>&lt;analysis&gt;</strong> - Configurations of cross-sectional analysis.</p></li>
+<li><p><strong>&lt;general&gt;</strong> - Overall settings of the cross-section.</p></li>
+<li><p><strong>&lt;baselines&gt;</strong> - Definitions of geometry and shape.</p></li>
+<li><p><strong>&lt;layups&gt;</strong> - Definitions of layups.</p></li>
+<li><p><strong>&lt;component&gt;</strong> - Definitions of cross-sectional components.</p></li>
+<li><p><strong>&lt;recover&gt;</strong> - Inputs for recovery.</p></li>
 </ul>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Subtopics</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="pre_coordinate.html">Coordinate systems</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pre_shape.html">Geometry and shapes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="pre_shape.html#base-points">Base points</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pre_shape.html#base-lines">Base lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide/pre_coordinate.html">Coordinate systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide/pre_shape.html">Geometry and shapes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide/pre_shape.html#base-points">Base points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide/pre_shape.html#base-lines">Base lines</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="pre_material.html">Materials and layups</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="pre_material.html#material-and-lamina">Material and lamina</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pre_material.html#layups">Layups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide/pre_material.html">Materials and layups</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide/pre_material.html#material-and-lamina">Material and lamina</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide/pre_material.html#layups">Layups</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="pre_component.html">Components</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="pre_component.html#laminate-type-component">Laminate-type component</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pre_component.html#fill-type-component">Fill-type component</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pre_component.html#components-dependency">Components dependency</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide/pre_component.html">Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide/pre_component.html#laminate-type-component">Laminate-type component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide/pre_component.html#fill-type-component">Fill-type component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide/pre_component.html#components-dependency">Components dependency</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="pre_recover.html">Specifications for recovery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pre_overall.html">Other input settings</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="pre_overall.html#included-files">Included files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pre_overall.html#analysis-options">Analysis options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pre_overall.html#global-shape-and-mesh-settings">Global shape and mesh settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide/pre_recover.html">Specifications for recovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide/pre_overall.html">Other input settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide/pre_overall.html#included-files">Included files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide/pre_overall.html#analysis-options">Analysis options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide/pre_overall.html#global-shape-and-mesh-settings">Global shape and mesh settings</a></li>
 </ul>
 </li>
 </ul>
@@ -313,7 +323,7 @@ The input syntax for this main file is shown in <a class="reference internal" hr
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="pre_coordinate.html" class="btn btn-neutral float-right" title="Coordinate systems" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="guide/pre_coordinate.html" class="btn btn-neutral float-right" title="Coordinate systems" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="tutorial.html" class="btn btn-neutral float-left" title="Tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

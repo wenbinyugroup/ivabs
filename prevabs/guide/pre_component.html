@@ -1,0 +1,635 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Components &mdash; iVABS 0.2.0-alpha.2 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "wenbinyugroup/ivabs");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Specifications for recovery" href="pre_recover.html" />
+    <link rel="prev" title="Materials and layups" href="pre_material.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> iVABS
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2.0-a2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">iVABS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../ivabs/install.html">Download and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ivabs/examples.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PreVABS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Download and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../run.html">How to Run PreVABS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../guide.html">Guide for Preparing Input Files</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pre_coordinate.html">Coordinate systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pre_shape.html">Geometry and shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pre_material.html">Materials and layups</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#laminate-type-component">Laminate-type component</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#definition-1-define-segments-individually">DEFINITION 1: Define segments individually</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#definition-2-define-segments-collectively">DEFINITION 2: Define segments collectively</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#fill-type-component">Fill-type component</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#local-mesh-size">Local mesh size</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#components-dependency">Components dependency</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pre_recover.html">Specifications for recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pre_overall.html">Other input settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../xml.html">Introduction to XML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MSGPI</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../msgpi/sg_module.html">SG Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../msgpi/ms_module.html">Structure Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../msgpi/utils.html">Utility Functions</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">iVABS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../guide.html">Guide for Preparing Input Files</a> &raquo;</li>
+        
+      <li>Components</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/wenbinyugroup/ivabs/blob/main/docs/source/prevabs/guide/pre_component.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="components">
+<span id="section-component"></span><h1>Components<a class="headerlink" href="#components" title="Permalink to this headline">¶</a></h1>
+<div class="literal-block-wrapper docutils container" id="code-component">
+<div class="code-block-caption"><span class="caption-number">Listing 21 </span><span class="caption-text">Input syntax for components.</span><a class="headerlink" href="#code-component" title="Permalink to this code">¶</a></div>
+<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;&quot;</span> <span class="na">type=</span><span class="s">&quot;&quot;</span> <span class="na">depend=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/component&gt;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<p><strong>Specification</strong></p>
+<ul class="simple">
+<li><p><strong>&lt;component&gt;</strong> - Root element for the definition of each component.</p>
+<ul>
+<li><p><em>name</em> - Name of the component.</p></li>
+<li><p><em>type</em> - Type of the component. Choose one from ‘laminate’ and ‘fill’. Default is ‘laminate’.</p></li>
+<li><p><em>depend</em> - List of name of dependent components, delimited by commas.</p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="laminate-type-component">
+<h2>Laminate-type component<a class="headerlink" href="#laminate-type-component" title="Permalink to this headline">¶</a></h2>
+<p>For a cross section in PreVABS, laminates are created as segments.
+A segment is a unique combination of a base line and a layup.
+Segments are connected through different ways as shown in <a class="reference internal" href="#fig-joints"><span class="std std-numref">Fig. 20</span></a>.
+According to this, segments can be grouped into components.
+The rule of thumb is: if two segments are connected in the first two ways (‘V1’ and ‘V2’), then they belong to one component; if they are connected as the third way (‘T’), then they should be put into different components, and component 2 will be created after the finish of component 1.</p>
+<div class="figure align-center" id="fig-joints">
+<a class="reference internal image-reference" href="../../_images/joints.png"><img alt="../../_images/joints.png" src="../../_images/joints.png" style="width: 6in;" /></a>
+<p class="caption"><span class="caption-number">Figure 20 </span><span class="caption-text">Three types of connections that can be created in PreVABS.</span><a class="headerlink" href="#fig-joints" title="Permalink to this image">¶</a></p>
+</div>
+<p>A schematic plot of a segment is shown in <a class="reference internal" href="#fig-segment"><span class="std std-numref">Fig. 21</span></a>.
+The base line provides a reference for the position and direction of the layup.
+Layers can be laid to the left or right of the base line.
+The direction is defined as one’s left or right, assuming one is walking along the direction of the base line.</p>
+<div class="figure align-center" id="fig-segment">
+<a class="reference internal image-reference" href="../../_images/segment.png"><img alt="../../_images/segment.png" src="../../_images/segment.png" style="width: 6in;" /></a>
+<p class="caption"><span class="caption-number">Figure 21 </span><span class="caption-text">A typical segment in PreVABS and the relation between base line direction
+and layup direction.</span><a class="headerlink" href="#fig-segment" title="Permalink to this image">¶</a></p>
+</div>
+<p>All segments definitions are stored in the main input file.
+The complete format will be discussed later since the overall configurations are also included in this file, which will be explained in Section: <a class="reference internal" href="pre_overall.html#section-overall"><span class="std std-ref">Other input settings</span></a>.
+The input syntax for laminate-type components are given in <a class="reference internal" href="#code-segments"><span class="std std-numref">Listing 22</span></a>.
+Each component can have multiple segments.</p>
+<p>There are two ways to define segments.</p>
+<div class="section" id="definition-1-define-segments-individually">
+<h3>DEFINITION 1: Define segments individually<a class="headerlink" href="#definition-1-define-segments-individually" title="Permalink to this headline">¶</a></h3>
+<p>Use a base line and a single layup to create the segment.
+In this way, the layup covers the entire of the base line.
+Each <code class="docutils literal notranslate"><span class="pre">&lt;segment&gt;</span></code> element has one attribute, <code class="docutils literal notranslate"><span class="pre">name</span></code>, and two child elements, <code class="docutils literal notranslate"><span class="pre">&lt;baseline&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;layup&gt;</span></code>.
+The <code class="docutils literal notranslate"><span class="pre">&lt;layup&gt;</span></code> element has another attribute <code class="docutils literal notranslate"><span class="pre">direction</span></code> (see <a class="reference internal" href="#fig-segment"><span class="std std-numref">Fig. 21</span></a>).</p>
+<p>Joint of two connecting segments can be changed from ‘V2’ (default) to ‘V1’ by using a <code class="docutils literal notranslate"><span class="pre">&lt;joint&gt;</span></code> element.
+It requires the names of two segments, delimited by a comma (‘,’) and an attribute <code class="docutils literal notranslate"><span class="pre">style</span></code> specifying the joint type.</p>
+</div>
+<div class="section" id="definition-2-define-segments-collectively">
+<h3>DEFINITION 2: Define segments collectively<a class="headerlink" href="#definition-2-define-segments-collectively" title="Permalink to this headline">¶</a></h3>
+<p>Use a base line and multiple layups to create multiple segments.
+Each layup can be assigned to a portion of the base line, using a beginning and an ending locations.
+These locations are normalized parametric positions on the base line.
+The beginning location must be smaller than the ending one.
+If the line is open, the location can only be a number between 0 and 1.
+If the line is closed, the location can be any number, even negative, as long as the length is not greater than 1.
+Then PreVABS will split the base line, combine layups and create segments automatically.</p>
+<p>An example is provided below (<a class="reference internal" href="#fig-param-layup-example-define"><span class="std std-numref">Fig 22</span></a>, <a class="reference internal" href="#fig-param-layup-example-plot"><span class="std std-numref">Fig 23</span></a>, <a class="reference internal" href="#code-param-layup-example"><span class="std std-numref">Listing 23</span></a>).</p>
+<div class="literal-block-wrapper docutils container" id="code-segments">
+<div class="code-block-caption"><span class="caption-number">Listing 22 </span><span class="caption-text">Input syntax for the laminate-type components.</span><a class="headerlink" href="#code-segments" title="Permalink to this code">¶</a></div>
+<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_surface&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;segment</span> <span class="na">name=</span><span class="s">&quot;sgm_1&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;baseline&gt;</span> baseline1 <span class="nt">&lt;/baseline&gt;</span>
+    <span class="nt">&lt;layup</span> <span class="na">direction=</span><span class="s">&quot;right&quot;</span><span class="nt">&gt;</span> layup1 <span class="nt">&lt;/layup&gt;</span>
+  <span class="nt">&lt;/segment&gt;</span>
+  <span class="nt">&lt;segment</span> <span class="na">name=</span><span class="s">&quot;sgm_2&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;baseline&gt;</span>...<span class="nt">&lt;/baseline&gt;</span>
+    <span class="nt">&lt;layup&gt;</span>...<span class="nt">&lt;/layup&gt;</span>
+  <span class="nt">&lt;/segment&gt;</span>
+  ...
+  <span class="nt">&lt;joint</span> <span class="na">style=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span> sgm_1,sgm_2 <span class="nt">&lt;/joint&gt;</span>
+  ...
+<span class="nt">&lt;/component&gt;</span>
+
+
+<span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_web&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;segment&gt;</span>
+    <span class="nt">&lt;baseline&gt;</span> baseline2 <span class="nt">&lt;/baseline&gt;</span>
+    <span class="nt">&lt;layup</span> <span class="na">direction=</span><span class="s">&quot;left&quot;</span><span class="nt">&gt;</span> layup2 <span class="nt">&lt;/layup&gt;</span>
+  <span class="nt">&lt;/segment&gt;</span>
+  ...
+<span class="nt">&lt;/component&gt;</span>
+
+
+<span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;segments&gt;</span>
+    <span class="nt">&lt;baseline&gt;</span> base_line_3_name <span class="nt">&lt;/baseline&gt;</span>
+    <span class="nt">&lt;layup_side&gt;</span> left <span class="nt">&lt;/layup_side&gt;</span>
+    <span class="nt">&lt;layup&gt;</span> layup_1_name <span class="nt">&lt;/layup&gt;</span>
+    <span class="nt">&lt;layup</span> <span class="na">begin=</span><span class="s">&quot;0.1&quot;</span><span class="nt">&gt;</span> layup_2_name <span class="nt">&lt;/layup&gt;</span>
+    <span class="nt">&lt;layup</span> <span class="na">end=</span><span class="s">&quot;0.7&quot;</span><span class="nt">&gt;</span> layup_3_name <span class="nt">&lt;/layup&gt;</span>
+    <span class="nt">&lt;layup</span> <span class="na">begin=</span><span class="s">&quot;0.2&quot;</span> <span class="na">end=</span><span class="s">&quot;0.9&quot;</span><span class="nt">&gt;</span> layup_4_name <span class="nt">&lt;/layup&gt;</span>
+    ...
+  <span class="nt">&lt;/segments&gt;</span>
+<span class="nt">&lt;/component&gt;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="example">
+<h4>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
+<div class="figure align-center" id="id1">
+<span id="fig-param-layup-example-define"></span><a class="reference internal image-reference" href="../../_images/param_layup_example_design.png"><img alt="../../_images/param_layup_example_design.png" src="../../_images/param_layup_example_design.png" style="width: 4in;" /></a>
+<p class="caption"><span class="caption-number">Figure 22 </span><span class="caption-text">Segment layup range definition.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id2">
+<span id="fig-param-layup-example-plot"></span><a class="reference internal image-reference" href="../../_images/param_layup_example_plot.png"><img alt="../../_images/param_layup_example_plot.png" src="../../_images/param_layup_example_plot.png" style="width: 3in;" /></a>
+<p class="caption"><span class="caption-number">Figure 23 </span><span class="caption-text">Segments plot.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<span id="code-param-layup-example"></span><div class="code-block-caption"><span class="caption-number">Listing 23 </span><span class="caption-text">Example input.</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;segments&gt;</span>
+    <span class="nt">&lt;baseline&gt;</span> l <span class="nt">&lt;/baseline&gt;</span>
+    <span class="nt">&lt;layup&gt;</span> layup1 <span class="nt">&lt;/layup&gt;</span>
+    <span class="nt">&lt;layup</span> <span class="na">begin=</span><span class="s">&quot;0.2&quot;</span> <span class="na">end=</span><span class="s">&quot;0.75&quot;</span><span class="nt">&gt;</span> layup2 <span class="nt">&lt;/layup&gt;</span>
+    <span class="nt">&lt;layup</span> <span class="na">begin=</span><span class="s">&quot;-0.1&quot;</span> <span class="na">end=</span><span class="s">&quot;0.5&quot;</span><span class="nt">&gt;</span> layup3 <span class="nt">&lt;/layup&gt;</span>
+    <span class="nt">&lt;layup</span> <span class="na">begin=</span><span class="s">&quot;-0.6&quot;</span> <span class="na">end=</span><span class="s">&quot;-0.2&quot;</span><span class="nt">&gt;</span> layup4 <span class="nt">&lt;/layup&gt;</span>
+  <span class="nt">&lt;/segments&gt;</span>
+<span class="nt">&lt;/component&gt;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<p><strong>Specification</strong></p>
+<p><em>DEFINITION 1</em></p>
+<ul class="simple">
+<li><p><strong>&lt;segment&gt;</strong> - Root element of the definition of the segment.</p>
+<ul>
+<li><p><em>name</em> - Name of the segment.</p></li>
+</ul>
+</li>
+<li><p><strong>&lt;baseline&gt;</strong> - Name of the base line defining this segment.</p></li>
+<li><p><strong>&lt;layup&gt;</strong> - Name of the layup defining this segment.</p>
+<ul>
+<li><p><em>direction</em> - Direction of layup. Choose one from ‘left’ and ‘right’. Default is ‘left’.</p></li>
+</ul>
+</li>
+<li><p><strong>&lt;joint&gt;</strong> - Names of two segments delimited by a comma (‘,’) that will be joined.</p>
+<ul>
+<li><p><em>style</em> - Style of the joint. Choose one from ‘1’ and ‘2’. Default is ‘1’.</p></li>
+</ul>
+</li>
+</ul>
+<p><em>DEFINITION 2</em></p>
+<ul class="simple">
+<li><p><strong>&lt;segments&gt;</strong> - Root element of the definition.</p></li>
+<li><p><strong>&lt;baseline&gt;</strong> - Name of the base line definint these segments.</p></li>
+<li><p><strong>&lt;layup_side&gt;</strong> - Direction of the following layups. Choose one from ‘left’ and ‘right’. Default is ‘left’.</p></li>
+<li><p><strong>&lt;layup&gt;</strong> - Name of the layup.</p>
+<ul>
+<li><p><em>begin</em> - Normalized parametric beginning location of the layup on the base line. Defualt is ‘0.0’.</p></li>
+<li><p><em>end</em> - Normalized parametric ending location of the layup on the base line. Defualt is ‘1.0’.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="fill-type-component">
+<h2>Fill-type component<a class="headerlink" href="#fill-type-component" title="Permalink to this headline">¶</a></h2>
+<p>Besides creating laminates, user can use one material to fill a region.
+A typical usage is a nose mass in an airfoil type cross section.
+A schematic plot is shown in <a class="reference internal" href="#fig-filling1"><span class="std std-numref">Fig. 24</span></a>.</p>
+<p>The key to this type of component is the indication of the fill region.
+There are two things to pay attention to.
+First, make sure that the boundary of the region is well-defined.
+The region can be surrounded by a number of components.
+User can also create some extra base lines as new boundaries.
+Second, locate the region where the material will be filled into.
+Then can be done by using a point inside the region, or if there are extra base lines, user can indicate the fill side with respect to one of the lines, similar to defining layup side in a segment.</p>
+<p>Fill-type components are also defined in the main input file.
+A template is shown in <a class="reference internal" href="#code-fillings"><span class="std std-numref">Listing 24</span></a>.
+A fill-type component is indicated by the attribute <code class="docutils literal notranslate"><span class="pre">type=&quot;fill&quot;</span></code>.
+A <code class="docutils literal notranslate"><span class="pre">&lt;material&gt;</span></code> child element is required.
+A <code class="docutils literal notranslate"><span class="pre">&lt;baseline&gt;</span></code> element is optional and is used to create extra boundaries.
+This sub-element has one attribute <code class="docutils literal notranslate"><span class="pre">fillside</span></code>, which can be either left or right.
+A <code class="docutils literal notranslate"><span class="pre">&lt;location&gt;</span></code> element is used to store the name of a point that is inside the desired fill region, and is also optional.</p>
+<div class="figure align-center" id="fig-filling1">
+<a class="reference internal image-reference" href="../../_images/filling1.png"><img alt="../../_images/filling1.png" src="../../_images/filling1.png" style="width: 6in;" /></a>
+<p class="caption"><span class="caption-number">Figure 24 </span><span class="caption-text">Example usage of a fill-type component as a nose mass in an airfoil
+cross section.</span><a class="headerlink" href="#fig-filling1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="literal-block-wrapper docutils container" id="code-fillings">
+<div class="code-block-caption"><span class="caption-number">Listing 24 </span><span class="caption-text">Input syntax for the fill-type components.</span><a class="headerlink" href="#code-fillings" title="Permalink to this code">¶</a></div>
+<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_fill_1&quot;</span> <span class="na">type=</span><span class="s">&quot;fill&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;location&gt;</span> point_fill <span class="nt">&lt;/location&gt;</span>
+  <span class="nt">&lt;material&gt;</span> material1 <span class="nt">&lt;/material&gt;</span>
+<span class="nt">&lt;/component&gt;</span>
+
+
+<span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_fill_2&quot;</span> <span class="na">type=</span><span class="s">&quot;fill&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;baseline&gt;</span> bsl <span class="nt">&lt;/baseline&gt;</span>
+  <span class="nt">&lt;location&gt;</span> point_fill <span class="nt">&lt;/location&gt;</span>
+  <span class="nt">&lt;material&gt;</span> material1 <span class="nt">&lt;/material&gt;</span>
+  <span class="nt">&lt;mesh_size</span> <span class="na">at=</span><span class="s">&quot;p1,p2&quot;</span><span class="nt">&gt;</span> 0.1 <span class="nt">&lt;/mesh_size&gt;</span>
+<span class="nt">&lt;/component&gt;</span>
+
+
+<span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_fill_3&quot;</span> <span class="na">type=</span><span class="s">&quot;fill&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;baseline</span> <span class="na">fillside=</span><span class="s">&quot;right&quot;</span><span class="nt">&gt;</span> bsl_3 <span class="nt">&lt;/baseline&gt;</span>
+  <span class="nt">&lt;material&gt;</span> material1 <span class="nt">&lt;/material&gt;</span>
+<span class="nt">&lt;/component&gt;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="local-mesh-size">
+<h3>Local mesh size<a class="headerlink" href="#local-mesh-size" title="Permalink to this headline">¶</a></h3>
+<p>Besides the mesh size set globally in the main input file, filling type components can be assigned local mesh sizes.
+This is usually for the purpose of reducing the total number of elements and computational cost.
+This feature is based on the embedded objects (points and lines) provided by Gmsh.
+Hence, one or more points need to be specified as the ‘seed’ of local mesh sizes.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;mesh_size</span> <span class="na">at=</span><span class="s">&quot;p1,p2&quot;</span><span class="nt">&gt;</span>0.1<span class="nt">&lt;/mesh_size&gt;</span>
+</pre></div>
+</div>
+<p>The mesh size will vary gradually from the local to the global setting.
+Hence, if only one point is used, then the local mesh size will only affect a circular region.
+If multiple points are used, then lines will be created by connecting points seqentially and assigned the local mesh size as well.</p>
+<p>An example is provided below (<a class="reference internal" href="#fig-local-mesh-example-define"><span class="std std-numref">Fig 25</span></a>, <a class="reference internal" href="#fig-local-mesh-example-plot"><span class="std std-numref">Fig 26</span></a>, <a class="reference internal" href="#code-local-mesh-example"><span class="std std-numref">Listing 25</span></a>).</p>
+<div class="figure align-center" id="id4">
+<span id="fig-local-mesh-example-define"></span><a class="reference internal image-reference" href="../../_images/local_mesh_define_mark.png"><img alt="../../_images/local_mesh_define_mark.png" src="../../_images/local_mesh_define_mark.png" style="width: 3in;" /></a>
+<p class="caption"><span class="caption-number">Figure 25 </span><span class="caption-text">Local mesh definition.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id5">
+<span id="fig-local-mesh-example-plot"></span><a class="reference internal image-reference" href="../../_images/local_mesh.png"><img alt="../../_images/local_mesh.png" src="../../_images/local_mesh.png" style="width: 3in;" /></a>
+<p class="caption"><span class="caption-number">Figure 26 </span><span class="caption-text">Local mesh plot.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<span id="code-local-mesh-example"></span><div class="code-block-caption"><span class="caption-number">Listing 25 </span><span class="caption-text">Example input.</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;filling 1&quot;</span> <span class="na">type=</span><span class="s">&quot;fill&quot;</span> <span class="na">depend=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;location&gt;</span> A <span class="nt">&lt;/location&gt;</span>
+  <span class="nt">&lt;material&gt;</span> material1 <span class="nt">&lt;/material&gt;</span>
+  <span class="nt">&lt;mesh_size</span> <span class="na">at=</span><span class="s">&quot;A&quot;</span><span class="nt">&gt;</span> 0.2 <span class="nt">&lt;/mesh_size&gt;</span>
+<span class="nt">&lt;/component&gt;</span>
+
+<span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;filling 2&quot;</span> <span class="na">type=</span><span class="s">&quot;fill&quot;</span> <span class="na">depend=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;location&gt;</span> B <span class="nt">&lt;/location&gt;</span>
+  <span class="nt">&lt;material&gt;</span> material2 <span class="nt">&lt;/material&gt;</span>
+  <span class="nt">&lt;mesh_size</span> <span class="na">at=</span><span class="s">&quot;B,C&quot;</span><span class="nt">&gt;</span> 0.2 <span class="nt">&lt;/mesh_size&gt;</span>
+<span class="nt">&lt;/component&gt;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<p><strong>Specification</strong></p>
+<ul class="simple">
+<li><p><strong>&lt;material&gt;</strong> - Name of the material to be filled. Required.</p></li>
+<li><p><strong>&lt;location&gt;</strong> - Name of the point located in the fill region. Optional.</p></li>
+<li><p><strong>&lt;baseline&gt;</strong> - Name of the base line defining part or complete boundary. Optional.</p>
+<ul>
+<li><p><em>fillside</em> - Side of the fill with respect to the base line. Optional.</p></li>
+</ul>
+</li>
+<li><p><strong>&lt;mesh_size&gt;</strong> - Local mesh size. Optional.</p>
+<ul>
+<li><p><em>at</em> - A list of names of points where the local mesh size will be assgined. Required.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="components-dependency">
+<h2>Components dependency<a class="headerlink" href="#components-dependency" title="Permalink to this headline">¶</a></h2>
+<p>If two components are connected in the ‘T’ type (<a class="reference internal" href="#fig-joints"><span class="std std-numref">Fig. 20</span></a>), then the order of creation of the two components must be specified.
+This is done by specifying the dependency.
+For the case shown in the figure, the creation of the thin vertical component (purple) is dependent on the creation of the thick horizontal component (blue).
+Hence, in the definition of the purple component, a <code class="docutils literal notranslate"><span class="pre">depend</span></code> attribute should be specified as shown below.</p>
+<div class="literal-block-wrapper docutils container" id="code-depend">
+<div class="code-block-caption"><span class="caption-number">Listing 26 </span><span class="caption-text">Dependency.</span><a class="headerlink" href="#code-depend" title="Permalink to this code">¶</a></div>
+<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_blue&quot;</span> <span class="na">type=</span><span class="s">&quot;laminate&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/component&gt;</span>
+<span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_purple&quot;</span> <span class="na">type=</span><span class="s">&quot;laminate&quot;</span> <span class="na">depend=</span><span class="s">&quot;cmp_blue&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/component&gt;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<p>If a component is dependent on multiple components, their names shoule all be listed, delimited by comma.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="pre_recover.html" class="btn btn-neutral float-right" title="Specifications for recovery" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pre_material.html" class="btn btn-neutral float-left" title="Materials and layups" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Multiscale Structural Mechanics Group, Purdue University.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
