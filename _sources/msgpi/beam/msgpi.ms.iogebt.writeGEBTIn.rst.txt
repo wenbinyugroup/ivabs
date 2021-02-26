@@ -1,0 +1,6 @@
+﻿msgpi.ms.iogebt.writeGEBTIn
+===========================
+
+.. currentmodule:: msgpi.ms.iogebt
+
+.. autofunction:: writeGEBTIn

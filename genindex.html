@@ -138,8 +138,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 <p class="caption"><span class="caption-text">MSGPI</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="msgpi/sg_module.html">SG Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="msgpi/ms_module.html">Structure Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msgpi/sg_structuregene.html">StructureGene</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msgpi/sg_materialsection.html">MaterialSection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msgpi/methods.html">Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msgpi/beam.html">A Simple Beam Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msgpi/beam_methods.html">Beam Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="msgpi/utils.html">Utility Functions</a></li>
 </ul>
 
@@ -214,7 +217,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h1 id="index">Index</h1>
 
 <div class="genindex-jumpbox">
- <a href="#A"><strong>A</strong></a>
+ <a href="#_"><strong>_</strong></a>
+ | <a href="#A"><strong>A</strong></a>
  | <a href="#B"><strong>B</strong></a>
  | <a href="#C"><strong>C</strong></a>
  | <a href="#D"><strong>D</strong></a>
@@ -230,19 +234,40 @@ commentsRunWhenDOMLoaded(addUtterances);
  | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
  | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
  | <a href="#W"><strong>W</strong></a>
  
 </div>
+<h2 id="_">_</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="msgpi/beam/msgpi.ms.beam.Beam.html#msgpi.ms.beam.Beam.__init__">__init__() (msgpi.ms.beam.Beam method)</a>
+
+      <ul>
+        <li><a href="msgpi/beam/msgpi.ms.beam.BeamSegment.html#msgpi.ms.beam.BeamSegment.__init__">(msgpi.ms.beam.BeamSegment method)</a>
+</li>
+        <li><a href="msgpi/beam/msgpi.ms.iodymore.DymoreOutput.html#msgpi.ms.iodymore.DymoreOutput.__init__">(msgpi.ms.iodymore.DymoreOutput method)</a>
+</li>
+        <li><a href="msgpi/sg/msgpi.sg.MaterialSection.html#msgpi.sg.MaterialSection.__init__">(msgpi.sg.MaterialSection method)</a>
+</li>
+        <li><a href="msgpi/sg/msgpi.sg.StructureGene.html#msgpi.sg.StructureGene.__init__">(msgpi.sg.StructureGene method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
 <h2 id="A">A</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.analysis">analysis (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.analysis.html#msgpi.sg.StructureGene.analysis">analysis (msgpi.sg.StructureGene attribute)</a>
+</li>
+      <li><a href="msgpi/beam/msgpi.ms.beam.Beam.analysis_type.html#msgpi.ms.beam.Beam.analysis_type">analysis_type (msgpi.ms.beam.Beam attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/beam.html#msgpi.ms.beam.Beam.analysis_type">analysis_type (msgpi.ms.beam.Beam attribute)</a>
+      <li><a href="msgpi/utils/msgpi.utils.angleToCosine2D.html#msgpi.utils.angleToCosine2D">angleToCosine2D() (in module msgpi.utils)</a>
 </li>
-      <li><a href="msgpi/beam.html#msgpi.ms.beam.Beam.angular_velocity">angular_velocity (msgpi.ms.beam.Beam attribute)</a>
+      <li><a href="msgpi/beam/msgpi.ms.beam.Beam.angular_velocity.html#msgpi.ms.beam.Beam.angular_velocity">angular_velocity (msgpi.ms.beam.Beam attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -250,11 +275,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="B">B</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/beam.html#msgpi.ms.beam.Beam">Beam (class in msgpi.ms.beam)</a>
+      <li><a href="msgpi/beam/msgpi.ms.beam.Beam.html#msgpi.ms.beam.Beam">Beam (class in msgpi.ms.beam)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/beam.html#msgpi.ms.beam.BeamSegment">BeamSegment (class in msgpi.ms.beam)</a>
+      <li><a href="msgpi/beam/msgpi.ms.beam.BeamSegment.html#msgpi.ms.beam.BeamSegment">BeamSegment (class in msgpi.ms.beam)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -262,23 +287,29 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/utils.html#msgpi.utils.calcCab">calcCab() (in module msgpi.utils)</a>
+      <li><a href="msgpi/utils/msgpi.utils.calcBasicRotation3D.html#msgpi.utils.calcBasicRotation3D">calcBasicRotation3D() (in module msgpi.utils)</a>
 </li>
-      <li><a href="msgpi/beam.html#msgpi.ms.beam.BeamSegment.calcLengthSq">calcLengthSq() (msgpi.ms.beam.BeamSegment method)</a>
+      <li><a href="msgpi/utils/msgpi.utils.calcCab.html#msgpi.utils.calcCab">calcCab() (in module msgpi.utils)</a>
 </li>
-      <li><a href="msgpi/utils.html#msgpi.utils.calcRotationTensorFromParameters">calcRotationTensorFromParameters() (in module msgpi.utils)</a>
+      <li><a href="msgpi/utils/msgpi.utils.calcGeneralRotation3D.html#msgpi.utils.calcGeneralRotation3D">calcGeneralRotation3D() (in module msgpi.utils)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.MaterialSection.compliance">compliance (msgpi.sg.MaterialSection attribute)</a>
+      <li><a href="msgpi/beam/msgpi.ms.beam.BeamSegment.calcLengthSq.html#msgpi.ms.beam.BeamSegment.calcLengthSq">calcLengthSq() (msgpi.ms.beam.BeamSegment method)</a>
+</li>
+      <li><a href="msgpi/utils/msgpi.utils.calcRotationTensorFromParameters.html#msgpi.utils.calcRotationTensorFromParameters">calcRotationTensorFromParameters() (in module msgpi.utils)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/sg.html#msgpi.sg.MaterialSection.compliance_refined">compliance_refined (msgpi.sg.MaterialSection attribute)</a>
+      <li><a href="msgpi/beam/msgpi.ms.iodymore.calcVI.html#msgpi.ms.iodymore.calcVI">calcVI() (in module msgpi.ms.iodymore)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.MaterialSection.constants">constants (msgpi.sg.MaterialSection attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.MaterialSection.compliance.html#msgpi.sg.MaterialSection.compliance">compliance (msgpi.sg.MaterialSection attribute)</a>
 </li>
-      <li><a href="msgpi/beam.html#msgpi.ms.beam.BeamSegment.coords">coords (msgpi.ms.beam.BeamSegment attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.MaterialSection.compliance_refined.html#msgpi.sg.MaterialSection.compliance_refined">compliance_refined (msgpi.sg.MaterialSection attribute)</a>
 </li>
-      <li><a href="msgpi/beam.html#msgpi.ms.beam.BeamSegment.css">css (msgpi.ms.beam.BeamSegment attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.MaterialSection.constants.html#msgpi.sg.MaterialSection.constants">constants (msgpi.sg.MaterialSection attribute)</a>
+</li>
+      <li><a href="msgpi/beam/msgpi.ms.beam.BeamSegment.coords.html#msgpi.ms.beam.BeamSegment.coords">coords (msgpi.ms.beam.BeamSegment attribute)</a>
+</li>
+      <li><a href="msgpi/beam/msgpi.ms.beam.BeamSegment.css.html#msgpi.ms.beam.BeamSegment.css">css (msgpi.ms.beam.BeamSegment attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -286,11 +317,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="D">D</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.degen_element">degen_element (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.degen_element.html#msgpi.sg.StructureGene.degen_element">degen_element (msgpi.sg.StructureGene attribute)</a>
+</li>
+      <li><a href="msgpi/sg/msgpi.sg.MaterialSection.density.html#msgpi.sg.MaterialSection.density">density (msgpi.sg.MaterialSection attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/sg.html#msgpi.sg.MaterialSection.density">density (msgpi.sg.MaterialSection attribute)</a>
+      <li><a href="msgpi/utils/msgpi.utils.distance.html#msgpi.utils.distance">distance() (in module msgpi.utils)</a>
+</li>
+      <li><a href="msgpi/beam/msgpi.ms.iodymore.DymoreOutput.html#msgpi.ms.iodymore.DymoreOutput">DymoreOutput (class in msgpi.ms.iodymore)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -298,23 +333,21 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="E">E</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/beam.html#msgpi.ms.beam.Beam.echo">echo() (msgpi.ms.beam.Beam method)</a>
+      <li><a href="msgpi/beam/msgpi.ms.beam.Beam.echo.html#msgpi.ms.beam.Beam.echo">echo() (msgpi.ms.beam.Beam method)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.elem_orient">elem_orient (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.elem_prop.html#msgpi.sg.StructureGene.elem_prop">elem_prop (msgpi.sg.StructureGene attribute)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.elem_prop">elem_prop (msgpi.sg.StructureGene attribute)</a>
-</li>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.elementids">elementids (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.elementids.html#msgpi.sg.StructureGene.elementids">elementids (msgpi.sg.StructureGene attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.elementids1d">elementids1d (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.elementids1d.html#msgpi.sg.StructureGene.elementids1d">elementids1d (msgpi.sg.StructureGene attribute)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.elementids2d">elementids2d (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.elementids2d.html#msgpi.sg.StructureGene.elementids2d">elementids2d (msgpi.sg.StructureGene attribute)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.elementids3d">elementids3d (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.elementids3d.html#msgpi.sg.StructureGene.elementids3d">elementids3d (msgpi.sg.StructureGene attribute)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.elements">elements (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.elements.html#msgpi.sg.StructureGene.elements">elements (msgpi.sg.StructureGene attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -322,21 +355,17 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="F">F</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/sg.html#msgpi.sg.MaterialSection.failure_criterion">failure_criterion (msgpi.sg.MaterialSection attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.findComboByMaterialOrientation.html#msgpi.sg.StructureGene.findComboByMaterialOrientation">findComboByMaterialOrientation() (msgpi.sg.StructureGene method)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.findComboByMaterialOrientation">findComboByMaterialOrientation() (msgpi.sg.StructureGene method)</a>
-</li>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.findMaterialByName">findMaterialByName() (msgpi.sg.StructureGene method)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.findMaterialByName.html#msgpi.sg.StructureGene.findMaterialByName">findMaterialByName() (msgpi.sg.StructureGene method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/beam.html#msgpi.ms.beam.Beam.findPtCoordByName">findPtCoordByName() (msgpi.ms.beam.Beam method)</a>
+      <li><a href="msgpi/beam/msgpi.ms.beam.Beam.findPtCoordByName.html#msgpi.ms.beam.Beam.findPtCoordByName">findPtCoordByName() (msgpi.ms.beam.Beam method)</a>
 </li>
-      <li><a href="msgpi/beam.html#msgpi.ms.beam.Beam.findSectionByName">findSectionByName() (msgpi.ms.beam.Beam method)</a>
+      <li><a href="msgpi/beam/msgpi.ms.beam.Beam.findSectionByName.html#msgpi.ms.beam.Beam.findSectionByName">findSectionByName() (msgpi.ms.beam.Beam method)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.fn_gmsh_msh">fn_gmsh_msh (msgpi.sg.StructureGene attribute)</a>
-</li>
-      <li><a href="msgpi/beam.html#msgpi.ms.beam.Beam.frames">frames (msgpi.ms.beam.Beam attribute)</a>
+      <li><a href="msgpi/beam/msgpi.ms.beam.Beam.frames.html#msgpi.ms.beam.Beam.frames">frames (msgpi.ms.beam.Beam attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -344,21 +373,21 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="G">G</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/sg.html#msgpi.sg.MaterialSection.gc">gc (msgpi.sg.MaterialSection attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.MaterialSection.gc.html#msgpi.sg.MaterialSection.gc">gc (msgpi.sg.MaterialSection attribute)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.MaterialSection.getBeamProperty">getBeamProperty() (msgpi.sg.MaterialSection method)</a>
+      <li><a href="msgpi/sg/msgpi.sg.MaterialSection.getBeamProperty.html#msgpi.sg.MaterialSection.getBeamProperty">getBeamProperty() (msgpi.sg.MaterialSection method)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.global_displacements">global_displacements (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.global_displacements.html#msgpi.sg.StructureGene.global_displacements">global_displacements (msgpi.sg.StructureGene attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.global_loads">global_loads (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.global_loads.html#msgpi.sg.StructureGene.global_loads">global_loads (msgpi.sg.StructureGene attribute)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.global_loads_dist">global_loads_dist (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.global_loads_dist.html#msgpi.sg.StructureGene.global_loads_dist">global_loads_dist (msgpi.sg.StructureGene attribute)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.global_loads_type">global_loads_type (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.global_loads_type.html#msgpi.sg.StructureGene.global_loads_type">global_loads_type (msgpi.sg.StructureGene attribute)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.global_rotations">global_rotations (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.global_rotations.html#msgpi.sg.StructureGene.global_rotations">global_rotations (msgpi.sg.StructureGene attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -366,11 +395,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="I">I</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.initial_curvature">initial_curvature (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.initial_curvature.html#msgpi.sg.StructureGene.initial_curvature">initial_curvature (msgpi.sg.StructureGene attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.initial_twist">initial_twist (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.initial_twist.html#msgpi.sg.StructureGene.initial_twist">initial_twist (msgpi.sg.StructureGene attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -378,11 +407,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/beam.html#msgpi.ms.beam.Beam.linear_velocity">linear_velocity (msgpi.ms.beam.Beam attribute)</a>
+      <li><a href="msgpi/beam/msgpi.ms.beam.Beam.linear_velocity.html#msgpi.ms.beam.Beam.linear_velocity">linear_velocity (msgpi.ms.beam.Beam attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/beam.html#msgpi.ms.beam.BeamSegment.local_frame_id">local_frame_id (msgpi.ms.beam.BeamSegment attribute)</a>
+      <li><a href="msgpi/utils/msgpi.utils.listToString.html#msgpi.utils.listToString">listToString() (in module msgpi.utils)</a>
+</li>
+      <li><a href="msgpi/beam/msgpi.ms.beam.BeamSegment.local_frame_id.html#msgpi.ms.beam.BeamSegment.local_frame_id">local_frame_id (msgpi.ms.beam.BeamSegment attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -390,29 +421,31 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="M">M</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/sg.html#msgpi.sg.MaterialSection.mass_center">mass_center (msgpi.sg.MaterialSection attribute)</a>
+      <li><a href="msgpi/beam/msgpi.ms.iodymore.makeFile.html#msgpi.ms.iodymore.makeFile">makeFile() (in module msgpi.ms.iodymore)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.MaterialSection.mass_mc">mass_mc (msgpi.sg.MaterialSection attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.MaterialSection.mass_center.html#msgpi.sg.MaterialSection.mass_center">mass_center (msgpi.sg.MaterialSection attribute)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.MaterialSection.mass_origin">mass_origin (msgpi.sg.MaterialSection attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.MaterialSection.mass_mc.html#msgpi.sg.MaterialSection.mass_mc">mass_mc (msgpi.sg.MaterialSection attribute)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.materials">materials (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.MaterialSection.mass_origin.html#msgpi.sg.MaterialSection.mass_origin">mass_origin (msgpi.sg.MaterialSection attribute)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.MaterialSection">MaterialSection (class in msgpi.sg)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.materials.html#msgpi.sg.StructureGene.materials">materials (msgpi.sg.StructureGene attribute)</a>
+</li>
+      <li><a href="msgpi/sg/msgpi.sg.MaterialSection.html#msgpi.sg.MaterialSection">MaterialSection (class in msgpi.sg)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/beam.html#msgpi.ms.beam.Beam.max_iteration">max_iteration (msgpi.ms.beam.Beam attribute)</a>
+      <li><a href="msgpi/beam/msgpi.ms.beam.Beam.max_iteration.html#msgpi.ms.beam.Beam.max_iteration">max_iteration (msgpi.ms.beam.Beam attribute)</a>
 </li>
-      <li><a href="msgpi/beam.html#msgpi.ms.beam.Beam.mconditions">mconditions (msgpi.ms.beam.Beam attribute)</a>
+      <li><a href="msgpi/beam/msgpi.ms.beam.Beam.mconditions.html#msgpi.ms.beam.Beam.mconditions">mconditions (msgpi.ms.beam.Beam attribute)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.MaterialSection.mmoi">mmoi (msgpi.sg.MaterialSection attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.MaterialSection.mmoi.html#msgpi.sg.MaterialSection.mmoi">mmoi (msgpi.sg.MaterialSection attribute)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.mocombos">mocombos (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.mocombos.html#msgpi.sg.StructureGene.mocombos">mocombos (msgpi.sg.StructureGene attribute)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.model">model (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.model.html#msgpi.sg.StructureGene.model">model (msgpi.sg.StructureGene attribute)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.MaterialSection.mwrg">mwrg (msgpi.sg.MaterialSection attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.MaterialSection.mwrg.html#msgpi.sg.MaterialSection.mwrg">mwrg (msgpi.sg.MaterialSection attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -420,27 +453,27 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="N">N</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/beam.html#msgpi.ms.beam.Beam.name">name (msgpi.ms.beam.Beam attribute)</a>
+      <li><a href="msgpi/beam/msgpi.ms.beam.Beam.name.html#msgpi.ms.beam.Beam.name">name (msgpi.ms.beam.Beam attribute)</a>
 
       <ul>
-        <li><a href="msgpi/sg.html#msgpi.sg.MaterialSection.name">(msgpi.sg.MaterialSection attribute)</a>
+        <li><a href="msgpi/sg/msgpi.sg.MaterialSection.name.html#msgpi.sg.MaterialSection.name">(msgpi.sg.MaterialSection attribute)</a>
 </li>
-        <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.name">(msgpi.sg.StructureGene attribute)</a>
+        <li><a href="msgpi/sg/msgpi.sg.StructureGene.name.html#msgpi.sg.StructureGene.name">(msgpi.sg.StructureGene attribute)</a>
 </li>
       </ul></li>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.nodes">nodes (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.nodes.html#msgpi.sg.StructureGene.nodes">nodes (msgpi.sg.StructureGene attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.nonuniform_temperature">nonuniform_temperature (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.nonuniform_temperature.html#msgpi.sg.StructureGene.nonuniform_temperature">nonuniform_temperature (msgpi.sg.StructureGene attribute)</a>
 </li>
-      <li><a href="msgpi/beam.html#msgpi.ms.beam.BeamSegment.num_divisions">num_divisions (msgpi.ms.beam.BeamSegment attribute)</a>
+      <li><a href="msgpi/beam/msgpi.ms.beam.BeamSegment.num_divisions.html#msgpi.ms.beam.BeamSegment.num_divisions">num_divisions (msgpi.ms.beam.BeamSegment attribute)</a>
 </li>
-      <li><a href="msgpi/beam.html#msgpi.ms.beam.Beam.num_eigens">num_eigens (msgpi.ms.beam.Beam attribute)</a>
+      <li><a href="msgpi/beam/msgpi.ms.beam.Beam.num_eigens.html#msgpi.ms.beam.Beam.num_eigens">num_eigens (msgpi.ms.beam.Beam attribute)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.num_slavenodes">num_slavenodes (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.num_slavenodes.html#msgpi.sg.StructureGene.num_slavenodes">num_slavenodes (msgpi.sg.StructureGene attribute)</a>
 </li>
-      <li><a href="msgpi/beam.html#msgpi.ms.beam.Beam.num_steps">num_steps (msgpi.ms.beam.Beam attribute)</a>
+      <li><a href="msgpi/beam/msgpi.ms.beam.Beam.num_steps.html#msgpi.ms.beam.Beam.num_steps">num_steps (msgpi.ms.beam.Beam attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -448,13 +481,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="O">O</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.oblique">oblique (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.oblique.html#msgpi.sg.StructureGene.oblique">oblique (msgpi.sg.StructureGene attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/sg.html#msgpi.sg.MaterialSection.offsetBeamRefCenter">offsetBeamRefCenter() (msgpi.sg.MaterialSection method)</a>
-</li>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.omega">omega (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.omega.html#msgpi.sg.StructureGene.omega">omega (msgpi.sg.StructureGene attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -462,27 +493,29 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="P">P</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/utils.html#msgpi.utils.parseXML">parseXML() (in module msgpi.utils)</a>
+      <li><a href="msgpi/utils/msgpi.utils.parseLayupCode.html#msgpi.utils.parseLayupCode">parseLayupCode() (in module msgpi.utils)</a>
 </li>
-      <li><a href="msgpi/beam.html#msgpi.ms.beam.Beam.pconditions">pconditions (msgpi.ms.beam.Beam attribute)</a>
+      <li><a href="msgpi/utils/msgpi.utils.parseXML.html#msgpi.utils.parseXML">parseXML() (in module msgpi.utils)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.physics">physics (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/beam/msgpi.ms.beam.Beam.pconditions.html#msgpi.ms.beam.Beam.pconditions">pconditions (msgpi.ms.beam.Beam attribute)</a>
 </li>
-      <li><a href="msgpi/beam.html#msgpi.ms.beam.Beam.points">points (msgpi.ms.beam.Beam attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.physics.html#msgpi.sg.StructureGene.physics">physics (msgpi.sg.StructureGene attribute)</a>
+</li>
+      <li><a href="msgpi/beam/msgpi.ms.beam.Beam.points.html#msgpi.ms.beam.Beam.points">points (msgpi.ms.beam.Beam attribute)</a>
 
       <ul>
-        <li><a href="msgpi/beam.html#msgpi.ms.beam.BeamSegment.points">(msgpi.ms.beam.BeamSegment attribute)</a>
+        <li><a href="msgpi/beam/msgpi.ms.beam.BeamSegment.points.html#msgpi.ms.beam.BeamSegment.points">(msgpi.ms.beam.BeamSegment attribute)</a>
 </li>
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/prebeam.html#msgpi.ms.prebeam.preBeam">preBeam() (in module msgpi.ms.prebeam)</a>
+      <li><a href="msgpi/beam/msgpi.ms.prebeam.preBeam.html#msgpi.ms.prebeam.preBeam">preBeam() (in module msgpi.ms.prebeam)</a>
 </li>
-      <li><a href="msgpi/presg.html#msgpi.presg.preSG">preSG() (in module msgpi.presg)</a>
+      <li><a href="msgpi/presg/msgpi.presg.preSG.html#msgpi.presg.preSG">preSG() (in module msgpi.presg)</a>
 </li>
-      <li><a href="msgpi/presg.html#msgpi.presg.preSG1D">preSG1D() (in module msgpi.presg)</a>
+      <li><a href="msgpi/presg/msgpi.presg.preSG1D.html#msgpi.presg.preSG1D">preSG1D() (in module msgpi.presg)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.prop_elem">prop_elem (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.prop_elem.html#msgpi.sg.StructureGene.prop_elem">prop_elem (msgpi.sg.StructureGene attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -490,27 +523,37 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/iogebt.html#msgpi.ms.iogebt.readGEBTIn">readGEBTIn() (in module msgpi.ms.iogebt)</a>
+      <li><a href="msgpi/beam/msgpi.ms.iodymore.readEigOutput.html#msgpi.ms.iodymore.readEigOutput">readEigOutput() (in module msgpi.ms.iodymore)</a>
 </li>
-      <li><a href="msgpi/iogebt.html#msgpi.ms.iogebt.readGEBTOut">readGEBTOut() (in module msgpi.ms.iogebt)</a>
+      <li><a href="msgpi/beam/msgpi.ms.iodymore.readForce.html#msgpi.ms.iodymore.readForce">readForce() (in module msgpi.ms.iodymore)</a>
 </li>
-      <li><a href="msgpi/iogebt.html#msgpi.ms.iogebt.readGEBTOutEigen">readGEBTOutEigen() (in module msgpi.ms.iogebt)</a>
+      <li><a href="msgpi/beam/msgpi.ms.iogebt.readGEBTIn.html#msgpi.ms.iogebt.readGEBTIn">readGEBTIn() (in module msgpi.ms.iogebt)</a>
 </li>
-      <li><a href="msgpi/iogebt.html#msgpi.ms.iogebt.readGEBTOutNode">readGEBTOutNode() (in module msgpi.ms.iogebt)</a>
+      <li><a href="msgpi/beam/msgpi.ms.iogebt.readGEBTOut.html#msgpi.ms.iogebt.readGEBTOut">readGEBTOut() (in module msgpi.ms.iogebt)</a>
 </li>
-      <li><a href="msgpi/iogebt.html#msgpi.ms.iogebt.readGEBTOutStatic">readGEBTOutStatic() (in module msgpi.ms.iogebt)</a>
+      <li><a href="msgpi/beam/msgpi.ms.iogebt.readGEBTOutEigen.html#msgpi.ms.iogebt.readGEBTOutEigen">readGEBTOutEigen() (in module msgpi.ms.iogebt)</a>
+</li>
+      <li><a href="msgpi/beam/msgpi.ms.iogebt.readGEBTOutNode.html#msgpi.ms.iogebt.readGEBTOutNode">readGEBTOutNode() (in module msgpi.ms.iogebt)</a>
+</li>
+      <li><a href="msgpi/beam/msgpi.ms.iogebt.readGEBTOutStatic.html#msgpi.ms.iogebt.readGEBTOutStatic">readGEBTOutStatic() (in module msgpi.ms.iogebt)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/presg.html#msgpi.presg.readMaterialFromXMLElement">readMaterialFromXMLElement() (in module msgpi.presg)</a>
+      <li><a href="msgpi/presg/msgpi.presg.readMaterialFromXMLElement.html#msgpi.presg.readMaterialFromXMLElement">readMaterialFromXMLElement() (in module msgpi.presg)</a>
 </li>
-      <li><a href="msgpi/iovabs.html#msgpi.io.iovabs.readVABSIn">readVABSIn() (in module msgpi.io.iovabs)</a>
+      <li><a href="msgpi/io/msgpi.io.iovabs.readVABSIn.html#msgpi.io.iovabs.readVABSIn">readVABSIn() (in module msgpi.io.iovabs)</a>
 </li>
-      <li><a href="msgpi/iovabs.html#msgpi.io.iovabs.readVABSOutHomo">readVABSOutHomo() (in module msgpi.io.iovabs)</a>
+      <li><a href="msgpi/io/msgpi.io.iovabs.readVABSOutHomo.html#msgpi.io.iovabs.readVABSOutHomo">readVABSOutHomo() (in module msgpi.io.iovabs)</a>
 </li>
-      <li><a href="msgpi/analysis.html#msgpi.analysis.run">run() (in module msgpi.analysis)</a>
+      <li><a href="msgpi/utils/msgpi.utils.rotateVectorByAngle2D.html#msgpi.utils.rotateVectorByAngle2D">rotateVectorByAngle2D() (in module msgpi.utils)</a>
 </li>
-      <li><a href="msgpi/ms_analysis.html#msgpi.ms.analysis.runGEBT">runGEBT() (in module msgpi.ms.analysis)</a>
+      <li><a href="msgpi/analysis/msgpi.analysis.run.html#msgpi.analysis.run">run() (in module msgpi.analysis)</a>
+
+      <ul>
+        <li><a href="msgpi/utils/msgpi.utils.run.html#msgpi.utils.run">(in module msgpi.utils)</a>
+</li>
+      </ul></li>
+      <li><a href="msgpi/beam/msgpi.ms.analysis.runGEBT.html#msgpi.ms.analysis.runGEBT">runGEBT() (in module msgpi.ms.analysis)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -518,55 +561,67 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/beam.html#msgpi.ms.beam.Beam.sections">sections (msgpi.ms.beam.Beam attribute)</a>
+      <li><a href="msgpi/beam/msgpi.ms.beam.Beam.sections.html#msgpi.ms.beam.Beam.sections">sections (msgpi.ms.beam.Beam attribute)</a>
 </li>
-      <li><a href="msgpi/beam.html#msgpi.ms.beam.Beam.segments">segments (msgpi.ms.beam.Beam attribute)</a>
+      <li><a href="msgpi/beam/msgpi.ms.beam.Beam.segments.html#msgpi.ms.beam.Beam.segments">segments (msgpi.ms.beam.Beam attribute)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.sgdim">sgdim (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.sgdim.html#msgpi.sg.StructureGene.sgdim">sgdim (msgpi.sg.StructureGene attribute)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.MaterialSection.shear_center">shear_center (msgpi.sg.MaterialSection attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.MaterialSection.shear_center.html#msgpi.sg.MaterialSection.shear_center">shear_center (msgpi.sg.MaterialSection attribute)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.MaterialSection.smdim">smdim (msgpi.sg.MaterialSection attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.MaterialSection.smdim.html#msgpi.sg.MaterialSection.smdim">smdim (msgpi.sg.MaterialSection attribute)</a>
 
       <ul>
-        <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.smdim">(msgpi.sg.StructureGene attribute)</a>
+        <li><a href="msgpi/sg/msgpi.sg.StructureGene.smdim.html#msgpi.sg.StructureGene.smdim">(msgpi.sg.StructureGene attribute)</a>
 </li>
       </ul></li>
-      <li><a href="msgpi/analysis.html#msgpi.analysis.solve">solve() (in module msgpi.analysis)</a>
+      <li><a href="msgpi/analysis/msgpi.analysis.solve.html#msgpi.analysis.solve">solve() (in module msgpi.analysis)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/ms_analysis.html#msgpi.ms.analysis.solveGEBT">solveGEBT() (in module msgpi.ms.analysis)</a>
+      <li><a href="msgpi/beam/msgpi.ms.analysis.solveGEBT.html#msgpi.ms.analysis.solveGEBT">solveGEBT() (in module msgpi.ms.analysis)</a>
 </li>
-      <li><a href="msgpi/ms_analysis.html#msgpi.ms.analysis.solvePLECS">solvePLECS() (in module msgpi.ms.analysis)</a>
+      <li><a href="msgpi/beam/msgpi.ms.analysis.solvePLECS.html#msgpi.ms.analysis.solvePLECS">solvePLECS() (in module msgpi.ms.analysis)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.MaterialSection.stiffness">stiffness (msgpi.sg.MaterialSection attribute)</a>
+      <li><a href="msgpi/utils/msgpi.utils.ss.html#msgpi.utils.ss">ss() (in module msgpi.utils)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.MaterialSection.stiffness_refined">stiffness_refined (msgpi.sg.MaterialSection attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.MaterialSection.stiffness.html#msgpi.sg.MaterialSection.stiffness">stiffness (msgpi.sg.MaterialSection attribute)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.MaterialSection.strength">strength (msgpi.sg.MaterialSection attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.MaterialSection.stiffness_refined.html#msgpi.sg.MaterialSection.stiffness_refined">stiffness_refined (msgpi.sg.MaterialSection attribute)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene">StructureGene (class in msgpi.sg)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.html#msgpi.sg.StructureGene">StructureGene (class in msgpi.sg)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.summary">summary() (msgpi.sg.StructureGene method)</a>
+      <li><a href="msgpi/sg/msgpi.sg.MaterialSection.summary.html#msgpi.sg.MaterialSection.summary">summary() (msgpi.sg.MaterialSection method)</a>
+
+      <ul>
+        <li><a href="msgpi/sg/msgpi.sg.StructureGene.summary.html#msgpi.sg.StructureGene.summary">(msgpi.sg.StructureGene method)</a>
 </li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
 <h2 id="T">T</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/sg.html#msgpi.sg.MaterialSection.tension_center">tension_center (msgpi.sg.MaterialSection attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.MaterialSection.tension_center.html#msgpi.sg.MaterialSection.tension_center">tension_center (msgpi.sg.MaterialSection attribute)</a>
 </li>
-      <li><a href="msgpi/ioutils.html#msgpi.io.utils.textToMatrix">textToMatrix() (in module msgpi.io.utils)</a>
+      <li><a href="msgpi/utils/msgpi.io.utils.textToMatrix.html#msgpi.io.utils.textToMatrix">textToMatrix() (in module msgpi.io.utils)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/sg.html#msgpi.sg.StructureGene.trans_element">trans_element (msgpi.sg.StructureGene attribute)</a>
+      <li><a href="msgpi/utils/msgpi.utils.tilde.html#msgpi.utils.tilde">tilde() (in module msgpi.utils)</a>
 </li>
-      <li><a href="msgpi/beam.html#msgpi.ms.beam.BeamSegment.twist">twist (msgpi.ms.beam.BeamSegment attribute)</a>
+      <li><a href="msgpi/sg/msgpi.sg.StructureGene.trans_element.html#msgpi.sg.StructureGene.trans_element">trans_element (msgpi.sg.StructureGene attribute)</a>
 </li>
-      <li><a href="msgpi/sg.html#msgpi.sg.MaterialSection.type">type (msgpi.sg.MaterialSection attribute)</a>
+      <li><a href="msgpi/beam/msgpi.ms.beam.BeamSegment.twist.html#msgpi.ms.beam.BeamSegment.twist">twist (msgpi.ms.beam.BeamSegment attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="msgpi/utils/msgpi.utils.updateXMLElement.html#msgpi.utils.updateXMLElement">updateXMLElement() (in module msgpi.utils)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -574,31 +629,33 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="W">W</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/ioutils.html#msgpi.io.utils.writeFormatFloats">writeFormatFloats() (in module msgpi.io.utils)</a>
+      <li><a href="msgpi/beam/msgpi.ms.iodymore.writeDymoreMKUpdated.html#msgpi.ms.iodymore.writeDymoreMKUpdated">writeDymoreMKUpdated() (in module msgpi.ms.iodymore)</a>
 </li>
-      <li><a href="msgpi/ioutils.html#msgpi.io.utils.writeFormatFloatsMatrix">writeFormatFloatsMatrix() (in module msgpi.io.utils)</a>
+      <li><a href="msgpi/utils/msgpi.io.utils.writeFormatFloats.html#msgpi.io.utils.writeFormatFloats">writeFormatFloats() (in module msgpi.io.utils)</a>
 </li>
-      <li><a href="msgpi/ioutils.html#msgpi.io.utils.writeFormatIntegers">writeFormatIntegers() (in module msgpi.io.utils)</a>
+      <li><a href="msgpi/utils/msgpi.io.utils.writeFormatFloatsMatrix.html#msgpi.io.utils.writeFormatFloatsMatrix">writeFormatFloatsMatrix() (in module msgpi.io.utils)</a>
 </li>
-      <li><a href="msgpi/ioutils.html#msgpi.io.utils.writeFormatIntegersMatrix">writeFormatIntegersMatrix() (in module msgpi.io.utils)</a>
+      <li><a href="msgpi/utils/msgpi.io.utils.writeFormatIntegers.html#msgpi.io.utils.writeFormatIntegers">writeFormatIntegers() (in module msgpi.io.utils)</a>
 </li>
-      <li><a href="msgpi/iogebt.html#msgpi.ms.iogebt.writeGEBTIn">writeGEBTIn() (in module msgpi.ms.iogebt)</a>
+      <li><a href="msgpi/utils/msgpi.io.utils.writeFormatIntegersMatrix.html#msgpi.io.utils.writeFormatIntegersMatrix">writeFormatIntegersMatrix() (in module msgpi.io.utils)</a>
 </li>
-      <li><a href="msgpi/iovabs.html#msgpi.io.iovabs.writeVABSElementOrientations">writeVABSElementOrientations() (in module msgpi.io.iovabs)</a>
+      <li><a href="msgpi/beam/msgpi.ms.iogebt.writeGEBTIn.html#msgpi.ms.iogebt.writeGEBTIn">writeGEBTIn() (in module msgpi.ms.iogebt)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="msgpi/iovabs.html#msgpi.io.iovabs.writeVABSElements">writeVABSElements() (in module msgpi.io.iovabs)</a>
+      <li><a href="msgpi/io/msgpi.io.iovabs.writeVABSElementOrientations.html#msgpi.io.iovabs.writeVABSElementOrientations">writeVABSElementOrientations() (in module msgpi.io.iovabs)</a>
 </li>
-      <li><a href="msgpi/iovabs.html#msgpi.io.iovabs.writeVABSIn">writeVABSIn() (in module msgpi.io.iovabs)</a>
+      <li><a href="msgpi/io/msgpi.io.iovabs.writeVABSElements.html#msgpi.io.iovabs.writeVABSElements">writeVABSElements() (in module msgpi.io.iovabs)</a>
 </li>
-      <li><a href="msgpi/iovabs.html#msgpi.io.iovabs.writeVABSMacroData">writeVABSMacroData() (in module msgpi.io.iovabs)</a>
+      <li><a href="msgpi/io/msgpi.io.iovabs.writeVABSIn.html#msgpi.io.iovabs.writeVABSIn">writeVABSIn() (in module msgpi.io.iovabs)</a>
 </li>
-      <li><a href="msgpi/iovabs.html#msgpi.io.iovabs.writeVABSMaterials">writeVABSMaterials() (in module msgpi.io.iovabs)</a>
+      <li><a href="msgpi/io/msgpi.io.iovabs.writeVABSMacroData.html#msgpi.io.iovabs.writeVABSMacroData">writeVABSMacroData() (in module msgpi.io.iovabs)</a>
 </li>
-      <li><a href="msgpi/iovabs.html#msgpi.io.iovabs.writeVABSMOCombos">writeVABSMOCombos() (in module msgpi.io.iovabs)</a>
+      <li><a href="msgpi/io/msgpi.io.iovabs.writeVABSMaterials.html#msgpi.io.iovabs.writeVABSMaterials">writeVABSMaterials() (in module msgpi.io.iovabs)</a>
 </li>
-      <li><a href="msgpi/iovabs.html#msgpi.io.iovabs.writeVABSNodes">writeVABSNodes() (in module msgpi.io.iovabs)</a>
+      <li><a href="msgpi/io/msgpi.io.iovabs.writeVABSMOCombos.html#msgpi.io.iovabs.writeVABSMOCombos">writeVABSMOCombos() (in module msgpi.io.iovabs)</a>
+</li>
+      <li><a href="msgpi/io/msgpi.io.iovabs.writeVABSNodes.html#msgpi.io.iovabs.writeVABSNodes">writeVABSNodes() (in module msgpi.io.iovabs)</a>
 </li>
   </ul></td>
 </tr></table>

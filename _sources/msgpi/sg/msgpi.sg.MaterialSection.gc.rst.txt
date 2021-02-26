@@ -1,0 +1,6 @@
+﻿msgpi.sg.MaterialSection.gc
+===========================
+
+.. currentmodule:: msgpi.sg
+
+.. autoattribute:: MaterialSection.gc

@@ -1,0 +1,6 @@
+﻿msgpi.sg.MaterialSection.mmoi
+=============================
+
+.. currentmodule:: msgpi.sg
+
+.. autoattribute:: MaterialSection.mmoi

@@ -1,0 +1,26 @@
+﻿msgpi.sg.MaterialSection
+========================
+
+.. currentmodule:: msgpi.sg
+
+.. autoclass:: MaterialSection
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~MaterialSection.__init__
+      ~MaterialSection.calcOffsetBeamProperty
+      ~MaterialSection.getBeamProperty
+      ~MaterialSection.offsetBeamRefCenter
+      ~MaterialSection.summary
+   
+   
+
+   
+   
+   

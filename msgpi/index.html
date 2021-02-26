@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Welcome to Some scripts’s documentation! &mdash; iVABS 0.2.0-alpha.2 documentation</title>
+  <title>Welcome to msgpi documentation! &mdash; iVABS 0.2.0-alpha.2 documentation</title>
   
 
   
@@ -66,7 +66,6 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -133,13 +132,17 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toctree-l1"><a class="reference internal" href="../prevabs/tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../prevabs/guide.html">Guide for Preparing Input Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../prevabs/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prevabs/changelog.html">Change log</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../prevabs/xml.html">Introduction to XML</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../prevabs/references.html">References</a></li>
 </ul>
 <p class="caption"><span class="caption-text">MSGPI</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="sg_module.html">SG Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ms_module.html">Structure Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sg_structuregene.html">StructureGene</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sg_materialsection.html">MaterialSection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="methods.html">Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="beam.html">A Simple Beam Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="beam_methods.html">Beam Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">Utility Functions</a></li>
 </ul>
 
@@ -189,7 +192,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Welcome to Some scripts’s documentation!</li>
+      <li>Welcome to msgpi documentation!</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -210,27 +213,61 @@ commentsRunWhenDOMLoaded(addUtterances);
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="welcome-to-some-scripts-s-documentation">
-<h1>Welcome to Some scripts’s documentation!<a class="headerlink" href="#welcome-to-some-scripts-s-documentation" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="welcome-to-msgpi-documentation">
+<h1>Welcome to msgpi documentation!<a class="headerlink" href="#welcome-to-msgpi-documentation" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="sg_module.html">SG Module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sg.html">Class Module for MSM Structure Gene</a></li>
-<li class="toctree-l2"><a class="reference internal" href="presg.html">presg Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="iovabs.html">SG I/O Module for VABS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ioutils.html">I/O Utility Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis.html">analysis Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sg_structuregene.html">StructureGene</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sg_structuregene.html#constructor">Constructor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sg_structuregene.html#attributes">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sg_structuregene.html#methods">Methods</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ms_module.html">Structure Module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="beam.html">Class Module for Beam</a></li>
-<li class="toctree-l2"><a class="reference internal" href="iogebt.html">I/O Module for GEBT</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prebeam.html">prebeam Module for GEBT</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ms_analysis.html">analysis Module for GEBT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sg_materialsection.html">MaterialSection</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sg_materialsection.html#constructor">Constructor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sg_materialsection.html#attributes">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sg_materialsection.html#methods">Methods</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="methods.html">Methods</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="methods.html#input-output">Input/Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="methods.html#preprocessing">Preprocessing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="methods.html#analysis">Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="beam.html">A Simple Beam Class</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="beam.html#beamsegment">BeamSegment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beam.html#beam">Beam</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="beam_methods.html">Beam Methods</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="beam_methods_gebt.html">GEBT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beam_methods_dymore.html">Dymore</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utility Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="utils/msgpi.io.utils.writeFormatIntegers.html">msgpi.io.utils.writeFormatIntegers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils/msgpi.io.utils.writeFormatFloats.html">msgpi.io.utils.writeFormatFloats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils/msgpi.io.utils.writeFormatIntegersMatrix.html">msgpi.io.utils.writeFormatIntegersMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils/msgpi.io.utils.writeFormatFloatsMatrix.html">msgpi.io.utils.writeFormatFloatsMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils/msgpi.io.utils.textToMatrix.html">msgpi.io.utils.textToMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils/msgpi.utils.run.html">msgpi.utils.run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils/msgpi.utils.tilde.html">msgpi.utils.tilde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils/msgpi.utils.calcRotationTensorFromParameters.html">msgpi.utils.calcRotationTensorFromParameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils/msgpi.utils.listToString.html">msgpi.utils.listToString</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils/msgpi.utils.angleToCosine2D.html">msgpi.utils.angleToCosine2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils/msgpi.utils.calcBasicRotation3D.html">msgpi.utils.calcBasicRotation3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils/msgpi.utils.calcGeneralRotation3D.html">msgpi.utils.calcGeneralRotation3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils/msgpi.utils.rotateVectorByAngle2D.html">msgpi.utils.rotateVectorByAngle2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils/msgpi.utils.calcCab.html">msgpi.utils.calcCab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils/msgpi.utils.distance.html">msgpi.utils.distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils/msgpi.utils.ss.html">msgpi.utils.ss</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils/msgpi.utils.parseLayupCode.html">msgpi.utils.parseLayupCode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils/msgpi.utils.parseXML.html">msgpi.utils.parseXML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils/msgpi.utils.updateXMLElement.html">msgpi.utils.updateXMLElement</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
