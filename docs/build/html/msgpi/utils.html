@@ -73,7 +73,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="analysis Module for GEBT" href="ms_analysis.html" /> 
+    <link rel="prev" title="Dymore" href="beam_methods_dymore.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -134,13 +134,17 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toctree-l1"><a class="reference internal" href="../prevabs/tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../prevabs/guide.html">Guide for Preparing Input Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../prevabs/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prevabs/changelog.html">Change log</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../prevabs/xml.html">Introduction to XML</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../prevabs/references.html">References</a></li>
 </ul>
 <p class="caption"><span class="caption-text">MSGPI</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="sg_module.html">SG Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ms_module.html">Structure Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sg_structuregene.html">StructureGene</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sg_materialsection.html">MaterialSection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="methods.html">Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="beam.html">A Simple Beam Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="beam_methods.html">Beam Methods</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Utility Functions</a></li>
 </ul>
 
@@ -213,80 +217,28 @@ commentsRunWhenDOMLoaded(addUtterances);
             
   <div class="section" id="utility-functions">
 <h1>Utility Functions<a class="headerlink" href="#utility-functions" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">msgpi.io.utils</span>
+</pre></div>
+</div>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+</tbody>
+</table>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">msgpi.utils</span>
 </pre></div>
 </div>
-<dl class="py function">
-<dt id="msgpi.utils.calcRotationTensorFromParameters">
-<code class="sig-prename descclassname">msgpi.utils.</code><code class="sig-name descname">calcRotationTensorFromParameters</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">rp</span></em>, <em class="sig-param"><span class="n">method</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.utils.calcRotationTensorFromParameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calculate rotation tensor from rotation parameters.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>rp</strong> (<em>list of floats</em>) – Rotation parameters (3x1).</p></li>
-<li><p><strong>method</strong> (<em>str</em>) – <p>Rotation parameter type.</p>
-<ul>
-<li><p><cite>er</cite> - Eular-Rodrigues</p></li>
-<li><p><cite>wm</cite> - Wiener-Milenkovic</p></li>
-</ul>
-</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="msgpi.utils.calcCab">
-<code class="sig-prename descclassname">msgpi.utils.</code><code class="sig-name descname">calcCab</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">a</span></em>, <em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.utils.calcCab" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calculate the direction cosine matrix between frame a and b</p>
-<p><span class="math notranslate nohighlight">\(C_{ij} = a_i\ \cdot\ b_j\)</span></p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>a</strong> (<em>list of floats</em>) – List of three a basis (a_1, a_2, a_3).</p></li>
-<li><p><strong>b</strong> (<em>list of floats</em>) – List of three b basis (b_1, b_2, b_3).</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>3x3 matrix of the direction cosine.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>list of lists of floats</p>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span>
-<span class="gp">... </span>    <span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span>
-<span class="gp">... </span>    <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span>
-<span class="gp">... </span>    <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]</span>
-<span class="gp">... </span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="p">[</span>
-<span class="gp">... </span>    <span class="p">[],</span>
-<span class="gp">... </span>    <span class="p">[],</span>
-<span class="gp">... </span>    <span class="p">[]</span>
-<span class="gp">... </span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">utilities</span><span class="o">.</span><span class="n">calcCab</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py function">
-<dt id="msgpi.utils.parseXML">
-<code class="sig-prename descclassname">msgpi.utils.</code><code class="sig-name descname">parseXML</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fn_xml</span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.utils.parseXML" title="Permalink to this definition">¶</a></dt>
-<dd><p>Parse an XML file and get the root element</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>fn_xml</strong> (<em>str</em>) – File name of the XML file.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Root element of the XML tree.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>xml.etree.ElementTree.Element</p>
-</dd>
-</dl>
-</dd></dl>
-
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+</tbody>
+</table>
 </div>
 
 
@@ -295,7 +247,7 @@ commentsRunWhenDOMLoaded(addUtterances);
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="ms_analysis.html" class="btn btn-neutral float-left" title="analysis Module for GEBT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="beam_methods_dymore.html" class="btn btn-neutral float-left" title="Dymore" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

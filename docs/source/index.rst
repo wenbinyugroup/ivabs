@@ -35,8 +35,11 @@ Table of Contents:
    :maxdepth: 2
    :caption: MSGPI 
 
-   msgpi/sg_module
-   msgpi/ms_module
+   msgpi/sg_structuregene
+   msgpi/sg_materialsection
+   msgpi/methods
+   msgpi/beam
+   msgpi/beam_methods
    msgpi/utils
 
 
