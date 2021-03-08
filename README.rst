@@ -1,8 +1,13 @@
-**iVABS**, standing for integrated VABS, is a versatile design framework for composite slender structures such as helicopter rotor blades, wind turbine blades, high aspect ratio wings, bridges, shafts, etc. This framework bundles **PreVABS**, **VABS**, **GEBT**，**Dakota**.
+Intruduction 
+---------------
+
+**iVABS** (namely integrated VABS), is a versatile design framework for composite slender structures such as helicopter rotor blades, wind turbine blades, high aspect ratio wings, bridges, shafts, etc. This framework bundles **PreVABS**, **VABS**, **GEBT**，**Dakota**, along with many other scripts for integration among these codes and possibly other codes. All the codes are open source except VABS which is commerical code and a trial license or commerical license can be requested from `AnalySwift <http://analyswift.com/software-trial/>`_.  
 
 **PreVABS** is a versatile preprocessor to generate detailed composite sections based on a few design parameters including sectional geometry, topology, and material. 
 
-**VABS** is a world-known cross-sectional analysis code to to model composite slender structures as beams. It is based on decades of university research (Georgia Tech/Utah State/Purdue) sponsored by US Army.  It has been commercialized and a license can be requested from `AnalySwift <http://analyswift.com/software-trial/>`_.  
+**VABS** is a world-known cross-sectional analysis code to to model composite slender structures as beams. It is based on decades of university research (Georgia Tech/Utah State/Purdue) sponsored by US Army.  
+
+**GEBT** is a simple geometrical exact nonlinear beam analysis code for computing linear or nonlinear, static or dynamic behavior of composite beams. This code can be replaced with more sophicated codes such as `MBDyn<https://public.gitlab.polimi.it/DAER/mbdyn>`_, `RCAS<https://www.flightlab.com/grcas.html`_, `DYMORE<dymoresolutions.com>`_.
 
 bundles  **PreVABS + VABS + gmsh + msgpi + GEBT 
 + Dakota(optional)** . **PreVABS** is a parametrized composite design tool. 
