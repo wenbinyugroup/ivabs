@@ -2,7 +2,7 @@
 
 **PreVABS** is a versatile preprocessor to generate detailed composite sections based on a few design parameters including sectional geometry, topology, and material. 
 
-**VABS** is a world-known cross-sectional analysis code based on decades of  university research (Georgia Tech/Utah State/Purdue) commercialized by `AnalySwift LLC <https://analyswift.com/>`_, to model composite slender structures as beams. 
+**VABS** is a world-known cross-sectional analysis code to to model composite slender structures as beams. It is based on decades of university research (Georgia Tech/Utah State/Purdue) sponsored by US Army.  It has been commercialized and a license can be requested from `AnalySwift <http://analyswift.com/software-trial/>`_.  
 
 bundles  **PreVABS + VABS + gmsh + msgpi + GEBT 
 + Dakota(optional)** . **PreVABS** is a parametrized composite design tool. 
