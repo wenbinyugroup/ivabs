@@ -7,7 +7,7 @@ Welcome to iVABS Documentation
 =================
 .. include:: ../../README.rst
 
-Table of Contents:
+Table of Contents
 ===================
 .. toctree::
    :maxdepth: 2
