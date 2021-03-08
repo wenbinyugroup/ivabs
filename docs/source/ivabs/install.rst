@@ -74,6 +74,6 @@ Linux portable archives
 Request VABS license
 --------------------
 
-Request VABS license from http://analyswift.com/software-trial/.
-VABS is a commercial code. Put the license in ``ivabs-folder``.
+VABS is a commercial code. Please qequest VABS license from `AnalySwift <http://analyswift.com/software-trial/>`_.
+Put the license file in ``ivabs-folder``.
 
