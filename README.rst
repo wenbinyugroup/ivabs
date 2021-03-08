@@ -1,8 +1,10 @@
-==================
-iVABS Introduction
-==================
+**iVABS**, standing for integrated VABS, is a versatile design framework for composite slender structures such as helicopter rotor blades, wind turbine blades, high aspect ratio wings, bridges, shafts, etc. These structures are usually modeled as beams. 
 
-**iVABS** (integrated VABS) package bundles  **PreVABS + VABS + gmsh + msgpi + GEBT 
+**iVABS** uses **PreVABS** as a versatile preprocessor to generate detailed composite sections based on a few design parameters including sectional geometry, topology, and material. 
+
+**iVABS** uses **VABS**, a world-known cross-sectional analysis code based on decades of  research at Georgia Tech, Utah State, and Purdue, to model the composite slender structures as a beam. 
+
+bundles  **PreVABS + VABS + gmsh + msgpi + GEBT 
 + Dakota(optional)** . **PreVABS** is a parametrized composite design tool. 
 **VABS** is a commercial code for cross-sectional property analysis. **msgpi**
 is a Python interface for **VABS**. **GEBT** is a beam structural analysis tool.
