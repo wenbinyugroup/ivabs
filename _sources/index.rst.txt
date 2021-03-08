@@ -10,14 +10,14 @@ Welcome to iVABS Documentation
 Table of Contents:
 ===================
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: iVABS
 
    ivabs/install
    ivabs/examples 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: PreVABS
 
    prevabs/install
@@ -31,7 +31,7 @@ Table of Contents:
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: MSGPI 
 
    msgpi/sg_structuregene
