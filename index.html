@@ -216,9 +216,12 @@ commentsRunWhenDOMLoaded(addUtterances);
             
   <div class="section" id="welcome-to-ivabs-documentation">
 <h1>Welcome to iVABS documentation!<a class="headerlink" href="#welcome-to-ivabs-documentation" title="Permalink to this headline">¶</a></h1>
-<p><strong>iVABS</strong>, standing for integrated VABS, is a versatile design framework for composite slender structures such as helicopter rotor blades, wind turbine blades, high aspect ratio wings, bridges, shafts, etc. This framework bundles <strong>PreVABS</strong>, <strong>VABS</strong>, <strong>GEBT</strong>，<strong>Dakota</strong>.</p>
+<div class="section" id="intruduction">
+<h2>Intruduction<a class="headerlink" href="#intruduction" title="Permalink to this headline">¶</a></h2>
+<p><strong>iVABS</strong> (namely integrated VABS), is a versatile design framework for composite slender structures such as helicopter rotor blades, wind turbine blades, high aspect ratio wings, bridges, shafts, etc. This framework bundles <strong>PreVABS</strong>, <strong>VABS</strong>, <strong>GEBT</strong>，<strong>Dakota</strong>, along with many other scripts for integration among these codes and possibly other codes. All the codes are open source except VABS which is commerical code and a trial license or commerical license can be requested from <a class="reference external" href="http://analyswift.com/software-trial/">AnalySwift</a>.</p>
 <p><strong>PreVABS</strong> is a versatile preprocessor to generate detailed composite sections based on a few design parameters including sectional geometry, topology, and material.</p>
-<p><strong>VABS</strong> is a world-known cross-sectional analysis code to to model composite slender structures as beams. It is based on decades of university research (Georgia Tech/Utah State/Purdue) sponsored by US Army.  It has been commercialized and a license can be requested from <a class="reference external" href="http://analyswift.com/software-trial/">AnalySwift</a>.</p>
+<p><strong>VABS</strong> is a world-known cross-sectional analysis code to to model composite slender structures as beams. It is based on decades of university research (Georgia Tech/Utah State/Purdue) sponsored by US Army.</p>
+<p><strong>GEBT</strong> is a simple geometrical exact nonlinear beam analysis code for computing linear or nonlinear, static or dynamic behavior of composite beams. This code can be replaced with more sophicated codes such as <a href="#id1"><span class="problematic" id="id2">`MBDyn&lt;https://public.gitlab.polimi.it/DAER/mbdyn&gt;`_</span></a>, <a href="#id3"><span class="problematic" id="id4">`RCAS&lt;https://www.flightlab.com/grcas.html`_</span></a>, <a href="#id5"><span class="problematic" id="id6">`DYMORE&lt;dymoresolutions.com&gt;`_</span></a>.</p>
 <p>bundles  <strong>PreVABS + VABS + gmsh + msgpi + GEBT
 + Dakota(optional)</strong> . <strong>PreVABS</strong> is a parametrized composite design tool.
 <strong>VABS</strong> is a commercial code for cross-sectional property analysis. <strong>msgpi</strong>
@@ -226,6 +229,7 @@ is a Python interface for <strong>VABS</strong>. <strong>GEBT</strong> is a beam
 <strong>PreVABS</strong>, <strong>VABS</strong>, <strong>msgpi</strong>, and <strong>GEBT</strong>  are developed in Prof. Yu’s
 group. <strong>Gmsh</strong> is an open source CAD software. <strong>Dakota</strong> is an open source
 tool for optimization developed by Sandia national lab.</p>
+</div>
 <div class="section" id="installation-instructions">
 <h2>Installation Instructions<a class="headerlink" href="#installation-instructions" title="Permalink to this headline">¶</a></h2>
 <p>It is recommended to use iVABS bundle installer. It provides all the packages
