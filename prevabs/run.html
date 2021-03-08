@@ -71,9 +71,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
     
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Tutorial" href="tutorial.html" />
-    <link rel="prev" title="Download and Installation" href="install.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -122,37 +120,21 @@ commentsRunWhenDOMLoaded(addUtterances);
               
             
             
-              <p class="caption"><span class="caption-text">PreVABS</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="install.html">Download and Installation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">How to Run PreVABS</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#quick-start">Quick start</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#command-line-options">Command line options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#running-cases">Running cases</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#case-1-build-cross-section-from-parametric-input-files">Case 1: Build cross section from parametric input files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#case-2-carry-out-homogenization-without-visualization">Case 2: Carry out homogenization without visualization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#case-3-recover-3d-stress-strain-and-plot">Case 3: Recover 3D stress/strain and plot</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">How to Run PreVABS</a><ul>
+<li><a class="reference internal" href="#quick-start">Quick start</a></li>
+<li><a class="reference internal" href="#command-line-options">Command line options</a></li>
+<li><a class="reference internal" href="#running-cases">Running cases</a><ul>
+<li><a class="reference internal" href="#case-1-build-cross-section-from-parametric-input-files">Case 1: Build cross section from parametric input files</a></li>
+<li><a class="reference internal" href="#case-2-carry-out-homogenization-without-visualization">Case 2: Carry out homogenization without visualization</a></li>
+<li><a class="reference internal" href="#case-3-recover-3d-stress-strain-and-plot">Case 3: Recover 3D stress/strain and plot</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="guide.html">Guide for Preparing Input Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html">Change log</a></li>
-<li class="toctree-l1"><a class="reference internal" href="xml.html">Introduction to XML</a></li>
-<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 </ul>
-<p class="caption"><span class="caption-text">MSGPI</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../msgpi/sg_structuregene.html">StructureGene</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../msgpi/sg_materialsection.html">MaterialSection</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../msgpi/methods.html">Methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../msgpi/beam.html">A Simple Beam Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../msgpi/beam_methods.html">Beam Methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../msgpi/utils.html">Utility Functions</a></li>
-</ul>
-
+</div>
             
           
         </div>
@@ -257,7 +239,7 @@ is for visualizing the meshed cross section.</p>
 cross section;</p>
 <p>Once finished, PreVABS will invoke Gmsh, a tool for visualization, to
 show the cross section with the corresponding meshes, as shown in
-<a class="reference internal" href="#fig-quickstart"><span class="std std-numref">Fig. 1</span></a>. Three files are generated in the
+<code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code>. Three files are generated in the
 same location at this moment, a VABS input file <code class="docutils literal notranslate"><span class="pre">mh104.sg</span></code>, a
 Gmsh geometry file <code class="docutils literal notranslate"><span class="pre">mh104.geo</span></code>, a Gmsh mesh file <code class="docutils literal notranslate"><span class="pre">mh104.msh</span></code>, and
 a Gmsh option file <code class="docutils literal notranslate"><span class="pre">mh104.opt</span></code>.
@@ -275,7 +257,7 @@ and a valid license from AnalySwift (<a class="reference external" href="http://
 </div>
 <div class="figure align-center" id="fig-quickstart">
 <a class="reference internal image-reference" href="../_images/rungui0.png"><img alt="../_images/rungui0.png" src="../_images/rungui0.png" style="width: 6.5in;" /></a>
-<p class="caption"><span class="caption-number">Figure 1 </span><span class="caption-text">Cross section with meshes generated by PreVABS and visualized by Gmsh.
+<p class="caption"><span class="caption-text">Cross section with meshes generated by PreVABS and visualized by Gmsh.
 Example: <code class="docutils literal notranslate"><span class="pre">examples\ex_airfoil\mh104.xml</span></code>.</span><a class="headerlink" href="#fig-quickstart" title="Permalink to this image">¶</a></p>
 </div>
 </div>
@@ -288,7 +270,7 @@ the screen.</p>
 </pre></div>
 </div>
 <table class="docutils align-center" id="id1">
-<caption><span class="caption-number">Table 1 </span><span class="caption-text">Command line options</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-text">Command line options</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 9%" />
 <col style="width: 91%" />
@@ -372,7 +354,7 @@ invoke VABS directly using <code class="docutils literal notranslate"><span clas
 the local strains and stresses of a cross section at some location along
 the beam. This command will let PreVABS read those results, update the
 VABS input file, carry out recovery analysis, and finally draw contour
-plots in Gmsh (<a class="reference internal" href="#fig-post"><span class="std std-numref">Fig. 2</span></a>). An example of the recover
+plots in Gmsh (<code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code>). An example of the recover
 analysis can be found in <a class="reference internal" href="examples/example_airfoil_recover.html#example-airfoil-recover"><span class="std std-ref">this example</span></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -390,7 +372,7 @@ coordinate system.</p>
 </div>
 <div class="figure align-center" id="fig-post">
 <a class="reference internal image-reference" href="../_images/examplemh104r.png"><img alt="../_images/examplemh104r.png" src="../_images/examplemh104r.png" style="width: 6.5in;" /></a>
-<p class="caption"><span class="caption-number">Figure 2 </span><span class="caption-text">Visualization of strains and stresses in Gmsh.</span><a class="headerlink" href="#fig-post" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Visualization of strains and stresses in Gmsh.</span><a class="headerlink" href="#fig-post" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -401,10 +383,6 @@ coordinate system.</p>
            
           </div>
           <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="tutorial.html" class="btn btn-neutral float-right" title="Tutorial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="install.html" class="btn btn-neutral float-left" title="Download and Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-    </div>
 
   <hr/>
 

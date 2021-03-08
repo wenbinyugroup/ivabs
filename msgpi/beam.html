@@ -71,9 +71,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
     
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="msgpi.ms.beam.BeamSegment" href="beam/msgpi.ms.beam.BeamSegment.html" />
-    <link rel="prev" title="msgpi.analysis.run" href="analysis/msgpi.analysis.run.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -122,78 +120,25 @@ commentsRunWhenDOMLoaded(addUtterances);
               
             
             
-              <p class="caption"><span class="caption-text">PreVABS</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../prevabs/install.html">Download and Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../prevabs/run.html">How to Run PreVABS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../prevabs/tutorial.html">Tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../prevabs/guide.html">Guide for Preparing Input Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../prevabs/examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../prevabs/changelog.html">Change log</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../prevabs/xml.html">Introduction to XML</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../prevabs/references.html">References</a></li>
-</ul>
-<p class="caption"><span class="caption-text">MSGPI</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="sg_structuregene.html">StructureGene</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sg_materialsection.html">MaterialSection</a></li>
-<li class="toctree-l1"><a class="reference internal" href="methods.html">Methods</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">A Simple Beam Class</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#beamsegment">BeamSegment</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#constructor">Constructor</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.html">msgpi.ms.beam.BeamSegment</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">A Simple Beam Class</a><ul>
+<li><a class="reference internal" href="#beamsegment">BeamSegment</a><ul>
+<li><a class="reference internal" href="#constructor">Constructor</a></li>
+<li><a class="reference internal" href="#attributes-and-underlying-data">Attributes and underlying data</a></li>
+<li><a class="reference internal" href="#methods">Methods</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#attributes-and-underlying-data">Attributes and underlying data</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.points.html">msgpi.ms.beam.BeamSegment.points</a></li>
-<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.coords.html">msgpi.ms.beam.BeamSegment.coords</a></li>
-<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.css.html">msgpi.ms.beam.BeamSegment.css</a></li>
-<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.twist.html">msgpi.ms.beam.BeamSegment.twist</a></li>
-<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.local_frame_id.html">msgpi.ms.beam.BeamSegment.local_frame_id</a></li>
-<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.num_divisions.html">msgpi.ms.beam.BeamSegment.num_divisions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#methods">Methods</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.calcLengthSq.html">msgpi.ms.beam.BeamSegment.calcLengthSq</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#beam">Beam</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id1">Constructor</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.html">msgpi.ms.beam.Beam</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id2">Attributes and underlying data</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.name.html">msgpi.ms.beam.Beam.name</a></li>
-<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.analysis_type.html">msgpi.ms.beam.Beam.analysis_type</a></li>
-<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.max_iteration.html">msgpi.ms.beam.Beam.max_iteration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.num_steps.html">msgpi.ms.beam.Beam.num_steps</a></li>
-<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.num_eigens.html">msgpi.ms.beam.Beam.num_eigens</a></li>
-<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.angular_velocity.html">msgpi.ms.beam.Beam.angular_velocity</a></li>
-<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.linear_velocity.html">msgpi.ms.beam.Beam.linear_velocity</a></li>
-<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.points.html">msgpi.ms.beam.Beam.points</a></li>
-<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.segments.html">msgpi.ms.beam.Beam.segments</a></li>
-<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.pconditions.html">msgpi.ms.beam.Beam.pconditions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.mconditions.html">msgpi.ms.beam.Beam.mconditions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.sections.html">msgpi.ms.beam.Beam.sections</a></li>
-<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.frames.html">msgpi.ms.beam.Beam.frames</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">Methods</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.echo.html">msgpi.ms.beam.Beam.echo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.findPtCoordByName.html">msgpi.ms.beam.Beam.findPtCoordByName</a></li>
-<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.findSectionByName.html">msgpi.ms.beam.Beam.findSectionByName</a></li>
+<li><a class="reference internal" href="#beam">Beam</a><ul>
+<li><a class="reference internal" href="#id1">Constructor</a></li>
+<li><a class="reference internal" href="#id2">Attributes and underlying data</a></li>
+<li><a class="reference internal" href="#id3">Methods</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="beam_methods.html">Beam Methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="utils.html">Utility Functions</a></li>
-</ul>
-
+</div>
             
           
         </div>
@@ -420,10 +365,6 @@ commentsRunWhenDOMLoaded(addUtterances);
            
           </div>
           <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="beam/msgpi.ms.beam.BeamSegment.html" class="btn btn-neutral float-right" title="msgpi.ms.beam.BeamSegment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="analysis/msgpi.analysis.run.html" class="btn btn-neutral float-left" title="msgpi.analysis.run" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-    </div>
 
   <hr/>
 

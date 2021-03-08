@@ -7,37 +7,3 @@ Welcome to iVABS Documentation
 =================
 .. include:: ../../README.rst
 
-Table of Contents:
-===================
-.. toctree::
-   :maxdepth: 2
-   :caption: iVABS
-   ivabs/install
-   ivabs/examples 
-
-.. toctree::
-   :maxdepth: 2
-   :caption: PreVABS
-
-   prevabs/install
-   prevabs/run
-   prevabs/tutorial
-   prevabs/guide
-   prevabs/examples
-   prevabs/changelog
-   prevabs/xml
-   prevabs/references
-
-
-.. toctree::
-   :maxdepth: 2
-   :caption: MSGPI 
-
-   msgpi/sg_structuregene
-   msgpi/sg_materialsection
-   msgpi/methods
-   msgpi/beam
-   msgpi/beam_methods
-   msgpi/utils
-
-

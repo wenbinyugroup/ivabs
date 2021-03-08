@@ -72,9 +72,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Geometry and shapes" href="pre_shape.html" />
-    <link rel="prev" title="Guide for Preparing Input Files" href="../guide.html" /> 
+    <link rel="search" title="Search" href="../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -123,35 +121,11 @@ commentsRunWhenDOMLoaded(addUtterances);
               
             
             
-              <p class="caption"><span class="caption-text">PreVABS</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../install.html">Download and Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../run.html">How to Run PreVABS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../guide.html">Guide for Preparing Input Files</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Coordinate systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pre_shape.html">Geometry and shapes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pre_material.html">Materials and layups</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pre_component.html">Components</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pre_recover.html">Specifications for recovery</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pre_overall.html">Other input settings</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Coordinate systems</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change log</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../xml.html">Introduction to XML</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
-</ul>
-<p class="caption"><span class="caption-text">MSGPI</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../msgpi/sg_structuregene.html">StructureGene</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../msgpi/sg_materialsection.html">MaterialSection</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../msgpi/methods.html">Methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../msgpi/beam.html">A Simple Beam Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../msgpi/beam_methods.html">Beam Methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../msgpi/utils.html">Utility Functions</a></li>
-</ul>
-
+</div>
             
           
         </div>
@@ -198,8 +172,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="../guide.html">Guide for Preparing Input Files</a> &raquo;</li>
-        
       <li>Coordinate systems</li>
     
     
@@ -224,7 +196,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   <div class="section" id="coordinate-systems">
 <span id="section-coordinate"></span><h1>Coordinate systems<a class="headerlink" href="#coordinate-systems" title="Permalink to this headline">¶</a></h1>
 <p>There are three coordinate frames used in PreVABS as shown in
-<a class="reference internal" href="#fig-frames"><span class="std std-numref">Fig. 11</span></a>:</p>
+<code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code>:</p>
 <ul class="simple">
 <li><p><strong>z</strong> is a basic frame, for the normalized airfoil data points for instance;</p></li>
 <li><p><strong>x</strong> is the final frame;</p></li>
@@ -232,7 +204,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 <div class="figure align-center" id="fig-frames">
 <a class="reference internal image-reference" href="../../_images/frames.png"><img alt="../../_images/frames.png" src="../../_images/frames.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 11 </span><span class="caption-text">The basic, cross-sectional and elementary frames in a cross section.</span><a class="headerlink" href="#fig-frames" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">The basic, cross-sectional and elementary frames in a cross section.</span><a class="headerlink" href="#fig-frames" title="Permalink to this image">¶</a></p>
 </div>
 <p>Here, <span class="math notranslate nohighlight">\(z_1\)</span>, <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(y_1\)</span> are parallel to the tangent of the beam reference
 line and pointing out of the paper. The basic frame is where base points
@@ -244,12 +216,12 @@ airfoil cross section, airfoil surface data points downloaded from a
 database having chord length 1 are in the frame <strong>z</strong>, and they are
 transformed into the frame <strong>x</strong> through translation (re-define the
 origin), scaling (multiplied by the actual chord length), and rotation
-(attack angle) if necessary, as shown in <a class="reference internal" href="#fig-transforms"><span class="std std-numref">Fig. 12</span></a>.
+(attack angle) if necessary, as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code>.
 More details about this transformation can be found in Section:
 <a class="reference internal" href="pre_overall.html#section-overall"><span class="std std-ref">Other input settings</span></a> below.</p>
 <div class="figure align-center" id="fig-transforms">
 <a class="reference internal image-reference" href="../../_images/transforms.png"><img alt="../../_images/transforms.png" src="../../_images/transforms.png" style="width: 100%;" /></a>
-<p class="caption"><span class="caption-number">Figure 12 </span><span class="caption-text">Three manipulations to transform a cross section.</span><a class="headerlink" href="#fig-transforms" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Three manipulations to transform a cross section.</span><a class="headerlink" href="#fig-transforms" title="Permalink to this image">¶</a></p>
 </div>
 <p>In PreVABS, the definition of the elementary frame <strong>y</strong> follows the
 rule that the positive direction of <span class="math notranslate nohighlight">\(y_2\)</span> axis is always the same as the
@@ -263,10 +235,6 @@ line can be found in <a class="reference internal" href="pre_shape.html#section-
            
           </div>
           <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="pre_shape.html" class="btn btn-neutral float-right" title="Geometry and shapes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="../guide.html" class="btn btn-neutral float-left" title="Guide for Preparing Input Files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-    </div>
 
   <hr/>
 
