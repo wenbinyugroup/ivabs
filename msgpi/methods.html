@@ -71,7 +71,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 
     
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="msgpi.io.iovabs.readVABSIn" href="io/msgpi.io.iovabs.readVABSIn.html" />
+    <link rel="prev" title="msgpi.sg.MaterialSection.getBeamProperty" href="sg/msgpi.sg.MaterialSection.getBeamProperty.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -120,20 +122,63 @@ commentsRunWhenDOMLoaded(addUtterances);
               
             
             
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Methods</a><ul>
-<li><a class="reference internal" href="#input-output">Input/Output</a><ul>
-<li><a class="reference internal" href="#reading">Reading</a></li>
-<li><a class="reference internal" href="#writing">Writing</a></li>
+              <p class="caption"><span class="caption-text">iVABS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/install.html">Download and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/examples.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PreVABS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prevabs/install.html">Download and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prevabs/run.html">How to Run PreVABS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prevabs/tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prevabs/guide.html">Guide for Preparing Input Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prevabs/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prevabs/changelog.html">Change log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prevabs/xml.html">Introduction to XML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prevabs/references.html">References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MSGPI</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sg_structuregene.html">StructureGene</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sg_materialsection.html">MaterialSection</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Methods</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#input-output">Input/Output</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#reading">Reading</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="io/msgpi.io.iovabs.readVABSIn.html">msgpi.io.iovabs.readVABSIn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="io/msgpi.io.iovabs.readVABSOutHomo.html">msgpi.io.iovabs.readVABSOutHomo</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#preprocessing">Preprocessing</a></li>
-<li><a class="reference internal" href="#analysis">Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#writing">Writing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="io/msgpi.io.iovabs.writeVABSIn.html">msgpi.io.iovabs.writeVABSIn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="io/msgpi.io.iovabs.writeVABSNodes.html">msgpi.io.iovabs.writeVABSNodes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="io/msgpi.io.iovabs.writeVABSElements.html">msgpi.io.iovabs.writeVABSElements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="io/msgpi.io.iovabs.writeVABSElementOrientations.html">msgpi.io.iovabs.writeVABSElementOrientations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="io/msgpi.io.iovabs.writeVABSMOCombos.html">msgpi.io.iovabs.writeVABSMOCombos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="io/msgpi.io.iovabs.writeVABSMaterials.html">msgpi.io.iovabs.writeVABSMaterials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="io/msgpi.io.iovabs.writeVABSMacroData.html">msgpi.io.iovabs.writeVABSMacroData</a></li>
 </ul>
 </li>
 </ul>
-</div>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#preprocessing">Preprocessing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="presg/msgpi.presg.readMaterialFromXMLElement.html">msgpi.presg.readMaterialFromXMLElement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="presg/msgpi.presg.preSG1D.html">msgpi.presg.preSG1D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="presg/msgpi.presg.preSG.html">msgpi.presg.preSG</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#analysis">Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="analysis/msgpi.analysis.solve.html">msgpi.analysis.solve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="analysis/msgpi.analysis.run.html">msgpi.analysis.run</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="beam.html">A Simple Beam Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="beam_methods.html">Beam Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utility Functions</a></li>
+</ul>
+
             
           
         </div>
@@ -308,6 +353,10 @@ commentsRunWhenDOMLoaded(addUtterances);
            
           </div>
           <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="io/msgpi.io.iovabs.readVABSIn.html" class="btn btn-neutral float-right" title="msgpi.io.iovabs.readVABSIn" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="sg/msgpi.sg.MaterialSection.getBeamProperty.html" class="btn btn-neutral float-left" title="msgpi.sg.MaterialSection.getBeamProperty" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 

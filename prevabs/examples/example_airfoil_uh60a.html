@@ -121,15 +121,32 @@ commentsRunWhenDOMLoaded(addUtterances);
               
             
             
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Airfoil (UH-60A)</a><ul>
-<li><a class="reference internal" href="#problem-description">Problem description</a></li>
-<li><a class="reference internal" href="#result">Result</a></li>
+              <p class="caption"><span class="caption-text">iVABS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../ivabs/install.html">Download and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ivabs/examples.html">Examples</a></li>
 </ul>
-</li>
+<p class="caption"><span class="caption-text">PreVABS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Download and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../run.html">How to Run PreVABS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide.html">Guide for Preparing Input Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../xml.html">Introduction to XML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
 </ul>
-</div>
+<p class="caption"><span class="caption-text">MSGPI</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../msgpi/sg_structuregene.html">StructureGene</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../msgpi/sg_materialsection.html">MaterialSection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../msgpi/methods.html">Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../msgpi/beam.html">A Simple Beam Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../msgpi/beam_methods.html">Beam Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../msgpi/utils.html">Utility Functions</a></li>
+</ul>
+
             
           
         </div>
@@ -207,16 +224,16 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>This example demonstrates the capability of building a cross section having an airfoil shape, which is commonly seen on wind turbine blades or helicopter rotor blades.
 This example is also studied in <a class="reference internal" href="../references.html#chen2010" id="id2"><span>[CHEN2010]</span></a>.
-A sketch of a cross section for a typical wind turbine blade is shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code>.
+A sketch of a cross section for a typical wind turbine blade is shown in <a class="reference internal" href="example_airfoil.html#fig-mh104-draw"><span class="std std-numref">Fig. 39</span></a>.
 The airfoil is MH 104 (<a class="reference external" href="http://m-selig.ae.illinois.edu/ads/coord_database.html#M">http://m-selig.ae.illinois.edu/ads/coord_database.html#M</a>).
 In this example, the chord length <span class="math notranslate nohighlight">\(CL=1.9\)</span> m.
 The origin O is set to the point at 1/4 of the chord.
 Twist angle <span class="math notranslate nohighlight">\(\theta\)</span> is <span class="math notranslate nohighlight">\(0^\circ\)</span>.
 There are two webs, whose right boundaries are at the 20% and 50% location of the chord, respectively.
 Both low pressure and high pressure surfaces have four segments.
-The dividing points between segments are listed in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Table</span> <span class="pre">%s</span></code>.
-Materials are given in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Table</span> <span class="pre">%s</span></code> and layups are given in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Table</span> <span class="pre">%s</span></code>.
-A complete <span class="math notranslate nohighlight">\(6\times 6\)</span> stiffness matrix is given in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Table</span> <span class="pre">%s</span></code>.
+The dividing points between segments are listed in <a class="reference internal" href="example_airfoil.html#table-div-pts"><span class="std std-numref">Table 23</span></a>.
+Materials are given in <a class="reference internal" href="example_airfoil.html#table-mh104-materials"><span class="std std-numref">Table 24</span></a> and layups are given in <a class="reference internal" href="example_airfoil.html#table-mh104-layups"><span class="std std-numref">Table 25</span></a>.
+A complete <span class="math notranslate nohighlight">\(6\times 6\)</span> stiffness matrix is given in <a class="reference internal" href="example_airfoil.html#table-airfoil-result"><span class="std std-numref">Table 26</span></a>.
 Complete input files can be found in <code class="docutils literal notranslate"><span class="pre">examples\ex_airfoil\</span></code>, including <code class="docutils literal notranslate"><span class="pre">mh104.xml</span></code>, <code class="docutils literal notranslate"><span class="pre">basepoints.dat</span></code>, <code class="docutils literal notranslate"><span class="pre">baselines.xml</span></code>, <code class="docutils literal notranslate"><span class="pre">materials.xml</span></code>, and <code class="docutils literal notranslate"><span class="pre">layups.xml</span></code>.</p>
 <table class="docutils align-center" id="id5">
 <caption><span class="caption-text">Dividing points</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
@@ -669,7 +686,7 @@ Complete input files can be found in <code class="docutils literal notranslate">
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The errors between the result and the reference are caused by the difference of modeling of the trailing edge. If reduce the trailing edge skin to a single thin layer, then the difference between the trailing edge shapes is minimized, and the two resulting stiffness matrices are basically the same, as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code>.</p>
+<p>The errors between the result and the reference are caused by the difference of modeling of the trailing edge. If reduce the trailing edge skin to a single thin layer, then the difference between the trailing edge shapes is minimized, and the two resulting stiffness matrices are basically the same, as shown in <a class="reference internal" href="example_airfoil.html#fig-mh104-comparison"><span class="std std-numref">Fig. 44</span></a>.</p>
 </div>
 </div>
 </div>

@@ -72,7 +72,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Examples" href="../examples.html" />
+    <link rel="prev" title="Specifications for recovery" href="pre_recover.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -121,16 +123,45 @@ commentsRunWhenDOMLoaded(addUtterances);
               
             
             
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Other input settings</a><ul>
-<li><a class="reference internal" href="#included-files">Included files</a></li>
-<li><a class="reference internal" href="#analysis-options">Analysis options</a></li>
-<li><a class="reference internal" href="#global-shape-and-mesh-settings">Global shape and mesh settings</a></li>
+              <p class="caption"><span class="caption-text">iVABS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../ivabs/install.html">Download and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ivabs/examples.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PreVABS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Download and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../run.html">How to Run PreVABS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../guide.html">Guide for Preparing Input Files</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pre_coordinate.html">Coordinate systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pre_shape.html">Geometry and shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pre_material.html">Materials and layups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pre_component.html">Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pre_recover.html">Specifications for recovery</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Other input settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#included-files">Included files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analysis-options">Analysis options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#global-shape-and-mesh-settings">Global shape and mesh settings</a></li>
 </ul>
 </li>
 </ul>
-</div>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../xml.html">Introduction to XML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MSGPI</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../msgpi/sg_structuregene.html">StructureGene</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../msgpi/sg_materialsection.html">MaterialSection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../msgpi/methods.html">Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../msgpi/beam.html">A Simple Beam Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../msgpi/beam_methods.html">Beam Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../msgpi/utils.html">Utility Functions</a></li>
+</ul>
+
             
           
         </div>
@@ -177,6 +208,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
+          <li><a href="../guide.html">Guide for Preparing Input Files</a> &raquo;</li>
+        
       <li>Other input settings</li>
     
     
@@ -203,7 +236,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>There are three groups of these settings.</p>
 <div class="section" id="included-files">
 <h2>Included files<a class="headerlink" href="#included-files" title="Permalink to this headline">¶</a></h2>
-<p>This part contains file names for base lines, materials (local) and layups as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Listing</span> <span class="pre">%s</span></code>.
+<p>This part contains file names for base lines, materials (local) and layups as shown in <a class="reference internal" href="#code-include"><span class="std std-numref">Listing 28</span></a>.
 The <code class="docutils literal notranslate"><span class="pre">&lt;material&gt;</span></code> sub-element is optional.
 If this is included, PreVABS will read extra materials from this local file, besides the global material database (MaterialDB.xml).
 If there are materials and laminae with the same names, data in the local material file will overwrite those in the global database.</p>
@@ -212,7 +245,7 @@ If there are materials and laminae with the same names, data in the local materi
 <li><p>File extensions <code class="docutils literal notranslate"><span class="pre">.xml</span></code> can be omitted.</p></li>
 </ul>
 <div class="literal-block-wrapper docutils container" id="code-include">
-<div class="code-block-caption"><span class="caption-text">Input syntax for the included files.</span><a class="headerlink" href="#code-include" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 28 </span><span class="caption-text">Input syntax for the included files.</span><a class="headerlink" href="#code-include" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -237,7 +270,7 @@ If there are materials and laminae with the same names, data in the local materi
 <p>The second part contains settings for the analysis in VABS.
 <code class="docutils literal notranslate"><span class="pre">&lt;model&gt;</span></code> can be 0 for classical beam model, or 1 for refined (Timoshenko) model.</p>
 <div class="literal-block-wrapper docutils container" id="code-analysis">
-<div class="code-block-caption"><span class="caption-text">A template for the analysis options in a main input file.</span><a class="headerlink" href="#code-analysis" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 29 </span><span class="caption-text">A template for the analysis options in a main input file.</span><a class="headerlink" href="#code-analysis" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;analysis&gt;</span>
@@ -272,7 +305,7 @@ thickness by default;</p></li>
 <li><p>Two options for the element type are linear and quadratic.</p></li>
 </ul>
 <div class="literal-block-wrapper docutils container" id="code-general">
-<div class="code-block-caption"><span class="caption-text">A template for the global shape and mesh settings in a main input file.</span><a class="headerlink" href="#code-general" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 30 </span><span class="caption-text">A template for the global shape and mesh settings in a main input file.</span><a class="headerlink" href="#code-general" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -309,6 +342,10 @@ thickness by default;</p></li>
            
           </div>
           <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../examples.html" class="btn btn-neutral float-right" title="Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pre_recover.html" class="btn btn-neutral float-left" title="Specifications for recovery" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 
