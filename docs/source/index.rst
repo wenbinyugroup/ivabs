@@ -11,7 +11,6 @@ Table of Contents:
 ===================
 .. toctree::
    :maxdepth: 2
-   .. :caption: iVABS
 
    ivabs/install
    ivabs/examples 
