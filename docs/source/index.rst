@@ -15,8 +15,6 @@ GEBT is a geometrical exact nonlinear beam analysis code for computing linear or
 
 `Dakota <https://dakota.sandia.gov/>`_ is a multilevel, parallel, object-oriented framework for design optimization, parameter estimation, uncertainty quantification, and sensitivity analysis. 
 
-Table of Contents
-===================
 .. toctree::
    :hidden:
    :maxdepth: 2
