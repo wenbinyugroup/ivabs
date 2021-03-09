@@ -18,6 +18,7 @@ GEBT is a geometrical exact nonlinear beam analysis code for computing linear or
 Table of Contents
 ===================
 .. toctree::
+   :hidden:
    :maxdepth: 2
    :caption: iVABS
    
@@ -25,6 +26,7 @@ Table of Contents
    ivabs/examples 
 
 .. toctree::
+   :hidden:
    :maxdepth: 2
    :caption: PreVABS
 
@@ -39,6 +41,7 @@ Table of Contents
 
 
 .. toctree::
+   :hidden:
    :maxdepth: 2
    :caption: MSGPI 
 
