@@ -7,8 +7,6 @@ Welcome to iVABS Documentation
 =================
 iVABS (namely integrated VABS), is a design framework for composite slender structures such as helicopter rotor blades, wind turbine blades, high aspect ratio wings, bridges, shafts, etc. This framework bundles PreVABS, VABS, GEBT, Dakota, along with MSGPI for integration among these codes and other codes. PreVABS, VABS, GEBT, and MSGPI are developed by `Prof. Wenbin Yu's research group <https://cdmhub.org/groups/yugroup>`_. Dakota is developed by the `Sandia National Lab <https://dakota.sandia.gov/>`_. 
 
-All codes are open source except VABS which is a commerical code and a trial or commerical license can be requested from `AnalySwift <http://analyswift.com/software-trial/>`_. 
-
 PreVABS is a versatile preprocessor to generate detailed composite sections based on a few design parameters including sectional geometry, topology, and material. 
 
 VABS is a world-known cross-sectional analysis code to to model composite slender structures as beams. It is resulting from  decades of university research (Georgia Tech/Utah State/Purdue) sponsored by US Army.  
@@ -19,8 +17,6 @@ GEBT is a geometrical exact nonlinear beam analysis code for computing linear or
 
 MSGPI is a collection of phython scripts for integrating all the codes needed in iVABS and the scripts can be easily modified to integrate with other codes. To make use of the full functionality of iVABS, `Python3 <https://www.python.org/>`_ along with necessary packages (particularly ``numpy`` and ``matplotlib``) should have already been installed and working on your computer first. 
 
-Download and installation
-===================
 For download and installation information, refer to :doc:`ivabs/install`.
 
 
@@ -30,15 +26,15 @@ Contributing
 We would love to have you help us improve the iVABS documentation. You can contribute to the iVABS documentation in the following ways:
 
 #. You can comment on specific page on the `iVABS documentation website <http://wenbinyugroup.github.io/ivabs>`_. 
-#. Add an issue to this project.
-#. Participate in the discussions regarding this project. 
-#. Modify or contribute new files to this project.  
+#. `Add an issue <https://github.com/wenbinyugroup/ivabs/issues/new>`_ to this project for bug reports or feature request.
+#. `Start a new discussion <https://github.com/wenbinyugroup/ivabs/discussions/new>`_ if you need help running the program. 
+#. Modify existing files or contribute new files to this project.  
 
 License
 =============
 
 * iVABS (excluding VABS) and its documentation is copyrighted (C) 2021- by Purdue Research Foundation and is distributed under the terms of the GNU General Public License (GPL) (version 2 or later, with an exception to allow for easier linking with external libraries).
-* VABS is a commercial code nd a trial or paid license can be requested from `AnalySwift <http://analyswift.com/software-trial/>`_.
+* VABS is a commercial code and a trial or paid license can be requested from `AnalySwift <http://analyswift.com/software-trial/>`_.
 * iVABS makes use of two open source codes: `Gmsh <https://gmsh.info/>`_  and `Dakota <https://dakota.sandia.gov/>`_. 
 
 
