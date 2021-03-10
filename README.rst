@@ -6,10 +6,11 @@ This reporsitory stores the source files for iVABS documentation. Any changes ma
 Contributing
 ===================
 We would love to have you help us improve the iVABS documentation. You can contribute to the iVABS documentation in the following ways:
-* You can comment on specific page on the `iVABS documentation website <http://wenbinyugroup.github.io/ivabs>`_. 
-* Add an inssue to this project.
-* Participate in the discussions regarding this project. 
-* Modify or contribute new files to this project.  
+
+#. You can comment on specific page on the `iVABS documentation website <http://wenbinyugroup.github.io/ivabs>`_. 
+#. Add an inssue to this project.
+#. Participate in the discussions regarding this project. 
+#. Modify or contribute new files to this project.  
 
 License
 =============
