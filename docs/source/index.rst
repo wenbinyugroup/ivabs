@@ -7,6 +7,8 @@ Welcome to iVABS Documentation
 =================
 iVABS (namely integrated VABS), is a design framework for composite slender structures such as helicopter rotor blades, wind turbine blades, high aspect ratio wings, bridges, shafts, etc. This framework bundles PreVABS, VABS, GEBT, Dakota, along with MSGPI for integration among these codes and other codes. PreVABS, VABS, GEBT, and MSGPI are developed by `Prof. Wenbin Yu's research group <https://cdmhub.org/groups/yugroup>`_. Dakota is developed by the `Sandia National Lab <https://dakota.sandia.gov/>`_. 
 
+For download and install iVABS, refer to :doc:`ivabs/install`.
+
 PreVABS is a versatile preprocessor to generate detailed composite sections based on a few design parameters including sectional geometry, topology, and material. 
 
 VABS is a world-known cross-sectional analysis code to to model composite slender structures as beams. It is resulting from  decades of university research (Georgia Tech/Utah State/Purdue) sponsored by US Army.  
@@ -16,8 +18,6 @@ GEBT is a geometrical exact nonlinear beam analysis code for computing linear or
 `Dakota <https://dakota.sandia.gov/>`_ is a multilevel, parallel, object-oriented framework for design optimization, parameter estimation, uncertainty quantification, and sensitivity analysis. 
 
 MSGPI is a collection of phython scripts for integrating all the codes needed in iVABS and the scripts can be easily modified to integrate with other codes. To make use of the full functionality of iVABS, `Python3 <https://www.python.org/>`_ along with necessary packages (particularly ``numpy`` and ``matplotlib``) should have already been installed and working on your computer first. 
-
-For download and installation information, refer to :doc:`ivabs/install`.
 
 
 Contributing
