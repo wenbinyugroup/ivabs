@@ -1,7 +1,7 @@
 Download and Installation
 =========================
 
-iVABS can be dowloaded from `its Release page on github <https://github.com/wenbinyugroup/ivabs/releases>`_. Choose appropriate version based on your platform. Installer contains a single executable for installation while Portable Archive contains archived files which should be extracted for installation. Using Portable Archive, one can install iVABS without Administrator privilege. 
+iVABS can be dowloaded from `its Release page <https://github.com/wenbinyugroup/ivabs/releases>`_ on github. Choose appropriate version based on your platform. Installer contains a single executable for installation while Portable Archive contains archived files which should be extracted for installation. Using Portable Archive, one can install iVABS without Administrator privilege. 
 
 Windows installer
 -----------------
