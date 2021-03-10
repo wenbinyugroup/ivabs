@@ -7,7 +7,7 @@ Welcome to iVABS Documentation
 =================
 iVABS, namely integrated VABS, is a design framework for composite slender structures such as helicopter rotor blades, wind turbine blades, high aspect ratio wings, bridges, shafts, etc. This framework bundles PreVABS, VABS, GEBT, Dakota, along with MSGPI as integration scripts. All codes are open source except VABS which is a commerical code and a license can be requested from `AnalySwift <http://analyswift.com/software-trial/>`_.  PreVABS, VABS, GEBT, and MSGPI are developed in `Prof. Wenbin Yu's research group <https://cdmhub.org/groups/yugroup>`_. Dakota is developed by the `Sandia National Lab <https://dakota.sandia.gov/>`_. 
 
-iVABS can be downloaded from `its github repository <https://github.com/wenbinyugroup/ivabs/releases>`_. The detailed instruction is given in Download and Installation. 
+iVABS can be downloaded from `its github repository <https://github.com/wenbinyugroup/ivabs/releases>`_. More detailed instructions are given in Download and Installation. 
 
 PreVABS is a versatile preprocessor to generate cross sections based on design parameters including sectional geometry, topology, and material. 
 
