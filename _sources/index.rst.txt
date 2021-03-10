@@ -26,10 +26,10 @@ Contributing
 We would love to have you help us improve the iVABS documentation. You can contribute to the iVABS documentation in the following ways:
 
 #. You can comment on specific page on the `iVABS documentation website <http://wenbinyugroup.github.io/ivabs>`_. 
-#. `Add an issue <https://github.com/wenbinyugroup/ivabs/issues/new>`_ to  `the github repository <https://github.com/wenbinyugroup/ivabs>`_ for bug reports or feature request.
-#. `Start a new discussion <https://github.com/wenbinyugroup/ivabs/discussions/new>`_ if you need help running the program. 
-#. Modify existing files or contribute new files to `the github repository <https://github.com/wenbinyugroup/ivabs>`_.  
-
+#. `Add an issue <https://github.com/wenbinyugroup/ivabs/issues/new>`_ for bug reports or feature request. You need to signup on github. 
+#. `Start a new discussion <https://github.com/wenbinyugroup/ivabs/discussions/new>`_ if you need help running the program. You need to signup on github. 
+#. Modify existing files or contribute new files to `the github repository <https://github.com/wenbinyugroup/ivabs>`_.  You need to signup on github and join the project team. 
+ 
 License
 =============
 
