@@ -1,9 +1,7 @@
 Download and Installation
 =========================
 
-
-Download **iVABS** package from the Release page (https://github.com/wenbinyugroup/ivabs/releases).
-Choose appropriate version based on your platform.
+iVABS can be dowloaded from `its Release page on github <https://github.com/wenbinyugroup/ivabs/releases>`_. Choose appropriate version based on your platform. Installer  
 
 Windows installer
 -----------------
