@@ -19,13 +19,18 @@ GEBT is a geometrical exact nonlinear beam analysis code for computing linear or
 
 MSGPI is a collection of phython scripts for integrating all the codes needed in iVABS and the scripts can be easily modified to integrate with other codes. To make use of the full functionality of iVABS, `Python3 <https://www.python.org/>`_ along with necessary packages (particularly ``numpy`` and ``matplotlib``) should have already been installed and working on your computer first. 
 
+Download and installation
+===================
+For download and installation information, refer to :doc:`ivabs/install`.
+
+
 Contributing
 ===================
 
 We would love to have you help us improve the iVABS documentation. You can contribute to the iVABS documentation in the following ways:
 
 #. You can comment on specific page on the `iVABS documentation website <http://wenbinyugroup.github.io/ivabs>`_. 
-#. Add an inssue to this project.
+#. Add an issue to this project.
 #. Participate in the discussions regarding this project. 
 #. Modify or contribute new files to this project.  
 
