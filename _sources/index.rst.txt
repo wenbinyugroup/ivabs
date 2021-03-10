@@ -9,9 +9,9 @@ iVABS (namely integrated VABS), is a design framework for composite slender stru
 
 For download and install iVABS, refer to :doc:`ivabs/install`.
 
-PreVABS is a versatile preprocessor to generate detailed composite sections based on a few design parameters including sectional geometry, topology, and material. 
+PreVABS is a preprocessor to generate detailed composite sections based on a few design parameters including sectional geometry, topology, and material. 
 
-VABS is a world-known cross-sectional analysis code to to model composite slender structures as beams. It is resulting from  decades of university research (Georgia Tech/Utah State/Purdue) sponsored by US Army.  
+VABS is a  cross-sectional analysis code to to model composite slender structures as beams. It is resulting from  decades of university research (Georgia Tech/Utah State/Purdue) sponsored by US Army.  
 
 GEBT is a geometrical exact nonlinear beam analysis code for computing linear or nonlinear, static or dynamic behavior of composite beams. This code can be replaced with more sophicated codes such as `MBDyn <https://public.gitlab.polimi.it/DAER/mbdyn>`_, `RCAS <https://www.flightlab.com/grcas.html>`_, `DYMORE <http://www.dymoresolutions.com>`_, etc.
 
