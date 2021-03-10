@@ -17,7 +17,7 @@ GEBT is a geometrical exact nonlinear beam analysis code for computing linear or
 
 `Dakota <https://dakota.sandia.gov/>`_ is a multilevel, parallel, object-oriented framework for design optimization, parameter estimation, uncertainty quantification, and sensitivity analysis. 
 
-MSGPI is a collection of phython scripts for integrating all the codes needed in iVABS and the scripts can be easily modified to integrate with other codes. To make use of the full functionality of iVABS, `Python3 <https://www.python.org/>`_ along with necessary packages (particularly ``numpy`` and ``matplotlib``) should have already been installed and working on your computer first. 
+MSGPI is a collection of phython scripts for integrating the codes needed in iVABS and the scripts can be modified to integrate other codes. To make use of the full functionality of iVABS, `Python3 <https://www.python.org/>`_ along with necessary packages (particularly ``numpy`` and ``matplotlib``) should be installed and working on your computer. 
 
 
 Contributing
