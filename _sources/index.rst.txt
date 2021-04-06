@@ -23,7 +23,7 @@ MSGPI is a collection of phython scripts for integrating the codes needed in iVA
 Contributing
 ===================
 
-We would love to have you help us improve the iVABS documentation. You can contribute to the iVABS documentation in the following ways:
+You are welcome to contribute to the iVABS documentation in the following ways:
 
 #. You can comment on specific page on the `iVABS documentation website <http://wenbinyugroup.github.io/ivabs>`_. 
 #. `Add an issue <https://github.com/wenbinyugroup/ivabs/issues/new>`_ for bug reports or feature request. 
