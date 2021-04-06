@@ -6,32 +6,31 @@ iVABS can be dowloaded from `its Release Page on github <https://github.com/wenb
 Windows installer
 -----------------
 
-  1. Select your installation path. I will use ``ivabs-folder`` to denote the installation path;
+  1. Select the installation path of your own choice. 
 
-  2. Dakota is optional. But if you need Dakota(v6.8), you need to make sure Dakota binary and
-     Dakota python library are available in the path. Examples and help files are also optional;
+  2. Dakota is optional. But if you need Dakota, you need to make sure Dakota binary and
+     Dakota python library are available in the path. 
+     
+  3. Examples and help files are also optional;
 
-  3. Environment variables of **PATH** and **PYTHONPATH** can be updated automatically; this is
+  4. Environment variables of **PATH** and **PYTHONPATH** can be updated automatically; this is
      necessary if you want to use iVABS toolset from any command prompt.
 
-  4. A shortcut can be created in the Start Menu and Desktop, which provides the iVABS toolset.
+  5. A shortcut can be created in the Start Menu and Desktop, which provides a quick link to the iVABS toolset.
 
-  5. Python3 is needed. Necessary Python package include: ``numpy, matplotlib``.
+  6. Python3 is needed. Necessary Python package include: ``numpy, matplotlib``.
 
 Windows portable archives
 -------------------------
 
-  1. Extract the files to arbitray folder. I will use ``ivabs-folder`` to denote the installation
-     path;
+  1. Extract the archive to a folder of your own choice. 
 
-  2. Use the embeded ``env.cmd`` to set up environment variables.
-
-  3. OR you can set up environment variables manually according to ``env.cmd``.
+  2. Use the embeded ``env.cmd`` to automatically set up environment variables, or set up environment variables manually according to ``env.cmd``.
 
 Linux installer
 ---------------
 
-  1. Excute the installer ``bash installer.sh``;
+  1. Excute the installer ``bash installer.sh``.
 
   2. Select your installation path. ``ivabs-folder`` will be used to reference the path.
 
