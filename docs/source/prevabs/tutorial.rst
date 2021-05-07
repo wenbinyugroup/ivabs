@@ -120,10 +120,11 @@ A brief summary of these input files is listed below.
 - A main cross section file (*box.xml*), storing definitions of components
   and other configurations of modeling and analysis.
 
-All files can have arbitrary file names and be placed at any working
-directory, except the material database, which must be named as
-*MaterialDB.xml* and placed at the same location as where the PreVABS
-executable is.
+For this tutorial, all files can have arbitrary file names and be placed at any working directory, except the material database, which must be named as *MaterialDB.xml* and placed at the same location as where the PreVABS executable is.
+
+Another option is to use a local file in the working directory with an arbitrary name storing the material properties.
+The requirement of using this local file is to explicitly provide the material file name in the main input file.
+Please check Section: :ref:`section-overall`.
 
 Prepare geometric elements
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
