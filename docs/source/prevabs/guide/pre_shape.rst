@@ -370,6 +370,7 @@ There are two ways of defining a circle.
     <baseline name="circle2" type="circle">
       <center> c </center>
       <point> p </point>
+      <direction> cw </direction>
     </baseline>
     ...
   </baselines>
@@ -380,7 +381,8 @@ There are two ways of defining a circle.
 - **<center>** - Name of the center point.
 - **<radius>** - Radius of the circle.
 - **<point>** - Name of a point on the circle.
-- **<discrete>** - Number of discretization. If 'by="angle"', then new points are created every specified degrees of angle. If 'by="number"', then specified number of new points are created and evenly distributed on the arc.
+- **<direction>** - Direction of the circle. Choose from 'cw' (clockwise) and 'ccw' (counter-clockwise). Default is 'ccw'.
+- **<discrete>** - Number of discretization. If 'by="angle"', then new points are created every specified degrees of angle. If 'by="number"', then specified number of new points are created and evenly distributed on the circle.
 
   - *by* - Choose one from 'angle' and 'number'. Default is 'angle'.
 
