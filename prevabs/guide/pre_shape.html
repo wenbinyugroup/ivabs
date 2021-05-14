@@ -548,7 +548,8 @@ input file demonstrating the two methods is presented in
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;baselines&gt;</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;baselines&gt;</span>
   ...
   <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;circle1&quot;</span> <span class="na">type=</span><span class="s">&quot;circle&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;center&gt;</span> c <span class="nt">&lt;/center&gt;</span>
@@ -558,6 +559,7 @@ input file demonstrating the two methods is presented in
   <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;circle2&quot;</span> <span class="na">type=</span><span class="s">&quot;circle&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;center&gt;</span> c <span class="nt">&lt;/center&gt;</span>
     <span class="nt">&lt;point&gt;</span> p <span class="nt">&lt;/point&gt;</span>
+    <span class="nt">&lt;direction&gt;</span> cw <span class="nt">&lt;/direction&gt;</span>
   <span class="nt">&lt;/baseline&gt;</span>
   ...
 <span class="nt">&lt;/baselines&gt;</span>
@@ -569,7 +571,8 @@ input file demonstrating the two methods is presented in
 <li><p><strong>&lt;center&gt;</strong> - Name of the center point.</p></li>
 <li><p><strong>&lt;radius&gt;</strong> - Radius of the circle.</p></li>
 <li><p><strong>&lt;point&gt;</strong> - Name of a point on the circle.</p></li>
-<li><p><strong>&lt;discrete&gt;</strong> - Number of discretization. If ‘by=”angle”’, then new points are created every specified degrees of angle. If ‘by=”number”’, then specified number of new points are created and evenly distributed on the arc.</p>
+<li><p><strong>&lt;direction&gt;</strong> - Direction of the circle. Choose from ‘cw’ (clockwise) and ‘ccw’ (counter-clockwise). Default is ‘ccw’.</p></li>
+<li><p><strong>&lt;discrete&gt;</strong> - Number of discretization. If ‘by=”angle”’, then new points are created every specified degrees of angle. If ‘by=”number”’, then specified number of new points are created and evenly distributed on the circle.</p>
 <ul>
 <li><p><em>by</em> - Choose one from ‘angle’ and ‘number’. Default is ‘angle’.</p></li>
 </ul>
