@@ -5,19 +5,17 @@ iVABS can be dowloaded from `its Release Page on github <https://github.com/wenb
 
 Windows installer
 -----------------
-
 #. Select the installation folder of your own choice. The default folder is iVABS inside your home folder. Note, you should have writing permission for the folder to install iVABS. 
 #. Dakota is optional. If you would like to continue use the version of Dakota you already have on your computer. You need to uncheck the option. However, you need to make sure that Dakota binary and Dakota python library are available in the Path. 
 #. Environment variables of **PATH** and **PYTHONPATH** can be updated automatically. This is needed if you want to use iVABS toolset from the command prompt.
 #. A shortcut can be created in the Start Menu and Desktop.
 #. Python3 is needed for using MSGPI. Necessary Python package include: ``numpy, matplotlib``.
 
-Windows portable archives
+Windows portable archive
 -------------------------
 
-  1. Extract the archive to a folder of your own choice. 
-
-  2. Use the embeded ``env.cmd`` to automatically set up environment variables, or set up environment variables manually according to ``env.cmd``.
+  #. Extract the archive to a folder of your own choice. 
+  #. Use the embeded ``env.cmd`` to automatically set up environment variables, or set up environment variables manually according to ``env.cmd``.
 
 Linux installer
 ---------------
