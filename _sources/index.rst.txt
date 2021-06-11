@@ -35,7 +35,7 @@ License
 
 * iVABS (excluding VABS) and its documentation is copyrighted (C) 2021- by Purdue Research Foundation and is distributed under the terms of the GNU General Public License (GPL) (version 2 or later, with an exception to allow for easier linking with external libraries).
 * VABS is a commercial code and a trial or paid license can be requested from `AnalySwift <http://analyswift.com/software-trial/>`_.
-* iVABS makes use of four open source codes: `Gmsh <https://gmsh.info/>`_, `Dakota <https://dakota.sandia.gov/>`_, `RapidXml <http://rapidxml.sourceforge.net/>`_, and `Boost <https://www.boost.org/>`_
+* iVABS makes use of four open source codes: `Gmsh <https://gmsh.info/>`_, `Dakota <https://dakota.sandia.gov/>`_, `RapidXml <http://rapidxml.sourceforge.net/>`_, and `Boost <https://www.boost.org/>`_.
 
 
 .. toctree::
