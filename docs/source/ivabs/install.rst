@@ -1,24 +1,17 @@
 Download and Installation
 =========================
 
-iVABS can be dowloaded from `its Release Page on github <https://github.com/wenbinyugroup/ivabs/releases>`_. Installers contain a single executable for installation while Portable Archives contain all the files in an archive which should be extracted for installation. With Portable Archives, one can install iVABS without Administrator privilege. 
+iVABS can be dowloaded from `its Release Page on github <https://github.com/wenbinyugroup/ivabs/releases>`_. Installer contains a single executable for installation while Portable Archive contains all the files in an archive which should be extracted for installation.  
 
 Windows installer
 -----------------
 
-  1. Select the installation path of your own choice. 
-
-  2. Dakota is optional. But if you need Dakota, you need to make sure Dakota binary and
-     Dakota python library are available in the path. 
-     
-  3. Examples and help files are also optional;
-
-  4. Environment variables of **PATH** and **PYTHONPATH** can be updated automatically; this is
-     necessary if you want to use iVABS toolset from any command prompt.
-
-  5. A shortcut can be created in the Start Menu and Desktop, which provides a quick link to the iVABS toolset.
-
-  6. Python3 is needed. Necessary Python package include: ``numpy, matplotlib``.
+#. Select the installation folder of your own choice. The default folder is iVABS inside your home folder. Note, you should have writing permission for the folder to install iVABS. 
+#. Dakota is optional. If you would like to continue use the version of Dakota you already have on your computer. You need to uncheck the option. However, you need to make sure that Dakota binary and Dakota python library are available in the Path. 
+#. Environment variables of **PATH** and **PYTHONPATH** can be updated automatically. This is
+  needed if you want to use iVABS toolset from the command prompt.
+#. A shortcut can be created in the Start Menu and Desktop, which provides a quick link to the iVABS toolset.
+#. Python3 is needed. Necessary Python package include: ``numpy, matplotlib``.
 
 Windows portable archives
 -------------------------
