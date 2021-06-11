@@ -5,11 +5,11 @@ iVABS can be dowloaded from `its Release Page on github <https://github.com/wenb
 
 Windows installer
 -----------------
-#. Select the installation folder of your own choice. The default folder is ``iVABS`` inside your home folder. Note, you should have writing permission for the folder to install iVABS. 
+#. Select the installation folder of your own choice. The default folder is ``iVABS`` inside your home folder. You should have writing permission for the folder to install iVABS. 
 #. Dakota is optional. If you would like to continue use the version of Dakota you already have on your computer. You need to uncheck the option. However, you need to make sure that Dakota binary and Dakota python library are available in the Path. 
 #. Environment variables of **PATH** and **PYTHONPATH** can be updated automatically. This is needed if you want to use iVABS toolset from the command prompt.
 #. A shortcut can be created in the Start Menu and Desktop.
-#. Python3 is needed for using MSGPI. Necessary Python package include: ``numpy, matplotlib``.
+#. Python3 is needed for using MSGPI. Necessary Python packages include: ``numpy, matplotlib``.
 
 Windows portable archive
 -------------------------
@@ -46,6 +46,6 @@ Linux portable archives
 
 Request VABS license
 --------------------
-VABS is a commercial code. Please qequest VABS license from `AnalySwift <http://analyswift.com/software-trial/>`_.
-Put the license file in ``ivabs-folder``.
+VABS is a commercial code distributed along with iVABS. However, you need to request a license from `AnalySwift <http://analyswift.com/software-trial/>`_.
+Put the license file in ``ivabs``.
 
