@@ -4,7 +4,10 @@
    contain the root `toctree` directive.
 
 Welcome to iVABS Documentation
-=================
+===============================
+
+Introduction
+----------------------------------------
 iVABS (namely integrated VABS), is a design framework for composite slender structures such as helicopter rotor blades, wind turbine blades, high aspect ratio wings, bridges, shafts, etc. This framework bundles PreVABS, VABS, GEBT, Dakota, along with MSGPI for integration among these codes and other codes. PreVABS, VABS, GEBT, and MSGPI are developed by `Prof. Wenbin Yu's research group <https://cdmhub.org/groups/yugroup>`_. Dakota is developed by the `Sandia National Lab <https://dakota.sandia.gov/>`_. 
 
 For download and install iVABS, refer to :doc:`ivabs/install`.
@@ -21,7 +24,7 @@ MSGPI is a collection of phython scripts for integrating the codes needed in iVA
 
 
 Contributing
-===================
+-----------------
 
 You are welcome to contribute to the iVABS documentation in the following ways:
 
@@ -31,7 +34,7 @@ You are welcome to contribute to the iVABS documentation in the following ways:
 #. Modify existing files or contribute new files to `the github repository <https://github.com/wenbinyugroup/ivabs>`_.   
  
 License
-=============
+-----------------
 
 * iVABS (excluding VABS) and its documentation is copyrighted (C) 2021- by Purdue Research Foundation and is distributed under the terms of the GNU General Public License (GPL) (version 2 or later, with an exception to allow for easier linking with external libraries).
 * VABS is a commercial code and a trial or paid license can be requested from `AnalySwift <http://analyswift.com/software-trial/>`_.
