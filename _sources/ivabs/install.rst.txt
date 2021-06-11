@@ -10,7 +10,7 @@ Windows installer
 #. Dakota is optional. If you would like to continue use the version of Dakota you already have on your computer. You need to uncheck the option. However, you need to make sure that Dakota binary and Dakota python library are available in the Path. 
 #. Environment variables of **PATH** and **PYTHONPATH** can be updated automatically. This is needed if you want to use iVABS toolset from the command prompt.
 #. A shortcut can be created in the Start Menu and Desktop.
-#. Python3 is needed. Necessary Python package include: ``numpy, matplotlib``.
+#. Python3 is needed for using MSGPI. Necessary Python package include: ``numpy, matplotlib``.
 
 Windows portable archives
 -------------------------
