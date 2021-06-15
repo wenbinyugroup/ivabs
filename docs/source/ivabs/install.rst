@@ -30,18 +30,12 @@ Linux installer
 
 Linux portable archives
 -----------------------
-  #. Uncompress the archive: ``tar xJvf iVABS.tar.xz``. Move to your desired folder ``ivabs-folder``.
+  #. Uncompress the archive using ``tar xJvf iVABS.tar.xz`` to a folder of your own choice. 
   #. Environment variables of PATH and PYTHONPATH should be added manually. 
+    - ``ivabs\bin`` should be in **PATH**. Delete the ``dakota" shortcut inside ··bin" if you want the Dakota already installed on your computer. 
+    - ``ivabs\vendors\dakota\share\dakota\Python`` should be in **PYTHONPATH**. Use the corresponding Dakota Python PATH if you want to use the Dakota already installed on your computer.
+    - ``ivabs\vendors`` should be in **PYTHONPATH**.
 
-    - ``ivabs\bin`` should be in **PATH**. Delete dakota soft link if you want 
-      to use your own Dakota.
-
-    - ``ivabs-folder\vendors\dakota\share\dakota\Python`` should be in **PYTHONPATH**. 
-      Use your own Dakota PATH if you want to use your own Dakota.
-
-    - ``ivabs-folder\vendors`` should be in **PYTHONPATH**
-
-  #. Python3 is needed. Necessary python package include: ``numpy, matplotlib``.
 
 Request VABS license
 --------------------
