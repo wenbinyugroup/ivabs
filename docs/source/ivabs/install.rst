@@ -26,7 +26,7 @@ Linux installer
     - ``ivabs\vendors\dakota\share\dakota\Python`` should be in **PYTHONPATH**. Use the corresponding Dakota Python PATH if you want to use the Dakota already installed on your computer.
     - ``ivabs\vendors\msgpi`` should be in **PYTHONPATH**.
   5. Python3 is needed for using MSGPI. Necessary Python packages include: ``numpy, matplotlib``.
-  6. After installation, inside ``ivabs", there are six folders. The ``vendors" folder contains all the codes integrated in iVABS. The ``bin" folder contains shortcuts to the executables of different codes in ``vendors". If you want to use the Dakota already installed on your computer. please delete the shortcut ··dakota" inside the ``bin" folder. 
+  6. After installation, inside ``ivabs``, there are six folders. The ``vendors`` folder contains all the codes integrated in iVABS. The ``bin`` folder contains shortcuts to the executables of different codes in ``vendors``. If you want to use the Dakota already installed on your computer. please delete the shortcut ``dakota`` inside the ``bin`` folder. 
 
 Linux portable archives
 -----------------------
