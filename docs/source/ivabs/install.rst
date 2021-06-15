@@ -30,9 +30,9 @@ Linux installer
 
 Linux portable archives
 -----------------------
-  #. Uncompress the archive using ``tar xJvf iVABS.tar.xz`` to a folder of your own choice. 
+  #. Uncompress the archive using ``tar xzvf ivabs_x.x_linux64_portable.tar.gz`` to a folder of your own choice. 
   #. Environment variables of PATH and PYTHONPATH should be added manually. 
-    - ``ivabs\bin`` should be in **PATH**. Delete the ``dakota" shortcut inside ··bin" if you want the Dakota already installed on your computer. 
+    - ``ivabs\bin`` should be in **PATH**. Delete the ``dakota" shortcut inside ``bin`` if you want the Dakota already installed on your computer. 
     - ``ivabs\vendors\dakota\share\dakota\Python`` should be in **PYTHONPATH**. Use the corresponding Dakota Python PATH if you want to use the Dakota already installed on your computer.
     - ``ivabs\vendors`` should be in **PYTHONPATH**.
 
