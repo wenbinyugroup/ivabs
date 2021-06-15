@@ -72,8 +72,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="msgpi.io.iovabs.readVABSIn" href="io/msgpi.io.iovabs.readVABSIn.html" />
-    <link rel="prev" title="msgpi.sg.MaterialSection.getBeamProperty" href="sg/msgpi.sg.MaterialSection.getBeamProperty.html" /> 
+    <link rel="next" title="A Simple Beam Class" href="beam.html" />
+    <link rel="prev" title="MaterialSection" href="sg_materialsection.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -144,34 +144,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toctree-l1"><a class="reference internal" href="sg_materialsection.html">MaterialSection</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Methods</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#input-output">Input/Output</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#reading">Reading</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="io/msgpi.io.iovabs.readVABSIn.html">msgpi.io.iovabs.readVABSIn</a></li>
-<li class="toctree-l4"><a class="reference internal" href="io/msgpi.io.iovabs.readVABSOutHomo.html">msgpi.io.iovabs.readVABSOutHomo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reading">Reading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#writing">Writing</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#writing">Writing</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="io/msgpi.io.iovabs.writeVABSIn.html">msgpi.io.iovabs.writeVABSIn</a></li>
-<li class="toctree-l4"><a class="reference internal" href="io/msgpi.io.iovabs.writeVABSNodes.html">msgpi.io.iovabs.writeVABSNodes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="io/msgpi.io.iovabs.writeVABSElements.html">msgpi.io.iovabs.writeVABSElements</a></li>
-<li class="toctree-l4"><a class="reference internal" href="io/msgpi.io.iovabs.writeVABSElementOrientations.html">msgpi.io.iovabs.writeVABSElementOrientations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="io/msgpi.io.iovabs.writeVABSMOCombos.html">msgpi.io.iovabs.writeVABSMOCombos</a></li>
-<li class="toctree-l4"><a class="reference internal" href="io/msgpi.io.iovabs.writeVABSMaterials.html">msgpi.io.iovabs.writeVABSMaterials</a></li>
-<li class="toctree-l4"><a class="reference internal" href="io/msgpi.io.iovabs.writeVABSMacroData.html">msgpi.io.iovabs.writeVABSMacroData</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#preprocessing">Preprocessing</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="presg/msgpi.presg.readMaterialFromXMLElement.html">msgpi.presg.readMaterialFromXMLElement</a></li>
-<li class="toctree-l3"><a class="reference internal" href="presg/msgpi.presg.preSG1D.html">msgpi.presg.preSG1D</a></li>
-<li class="toctree-l3"><a class="reference internal" href="presg/msgpi.presg.preSG.html">msgpi.presg.preSG</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#analysis">Analysis</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="analysis/msgpi.analysis.solve.html">msgpi.analysis.solve</a></li>
-<li class="toctree-l3"><a class="reference internal" href="analysis/msgpi.analysis.run.html">msgpi.analysis.run</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#preprocessing">Preprocessing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#analysis">Analysis</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="beam.html">A Simple Beam Class</a></li>
@@ -261,12 +239,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="io/msgpi.io.iovabs.readVABSIn.html#msgpi.io.iovabs.readVABSIn" title="msgpi.io.iovabs.readVABSIn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readVABSIn</span></code></a>(fn_vabs_in)</p></td>
-<td><p>Read data from the VABS input file.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="io/msgpi.io.iovabs.readVABSOutHomo.html#msgpi.io.iovabs.readVABSOutHomo" title="msgpi.io.iovabs.readVABSOutHomo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readVABSOutHomo</span></code></a>(fn[, scrnout])</p></td>
-<td><p>Read VABS homogenization results</p></td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -278,27 +250,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="io/msgpi.io.iovabs.writeVABSIn.html#msgpi.io.iovabs.writeVABSIn" title="msgpi.io.iovabs.writeVABSIn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeVABSIn</span></code></a>(sg[, fn_vabs_in, fmt])</p></td>
-<td><p>Write SG to VABS input file</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="io/msgpi.io.iovabs.writeVABSNodes.html#msgpi.io.iovabs.writeVABSNodes" title="msgpi.io.iovabs.writeVABSNodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeVABSNodes</span></code></a>(sg, fobj, sfi, sff)</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="io/msgpi.io.iovabs.writeVABSElements.html#msgpi.io.iovabs.writeVABSElements" title="msgpi.io.iovabs.writeVABSElements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeVABSElements</span></code></a>(sg, fobj, sfi)</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="io/msgpi.io.iovabs.writeVABSElementOrientations.html#msgpi.io.iovabs.writeVABSElementOrientations" title="msgpi.io.iovabs.writeVABSElementOrientations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeVABSElementOrientations</span></code></a>(sg, fobj, sfi, …)</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="io/msgpi.io.iovabs.writeVABSMOCombos.html#msgpi.io.iovabs.writeVABSMOCombos" title="msgpi.io.iovabs.writeVABSMOCombos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeVABSMOCombos</span></code></a>(sg, fobj, sfi, sff)</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="io/msgpi.io.iovabs.writeVABSMaterials.html#msgpi.io.iovabs.writeVABSMaterials" title="msgpi.io.iovabs.writeVABSMaterials"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeVABSMaterials</span></code></a>(sg, fobj, sfi, sff)</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="io/msgpi.io.iovabs.writeVABSMacroData.html#msgpi.io.iovabs.writeVABSMacroData" title="msgpi.io.iovabs.writeVABSMacroData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeVABSMacroData</span></code></a>(sg, fobj, sff)</p></td>
-<td><p></p></td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -314,15 +265,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="presg/msgpi.presg.readMaterialFromXMLElement.html#msgpi.presg.readMaterialFromXMLElement" title="msgpi.presg.readMaterialFromXMLElement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readMaterialFromXMLElement</span></code></a>(xem)</p></td>
-<td><p>Read material data from XML elements.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="presg/msgpi.presg.preSG1D.html#msgpi.presg.preSG1D" title="msgpi.presg.preSG1D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">preSG1D</span></code></a>(xr_sg, smdim)</p></td>
-<td><p>Preprocessor of 1D SG.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="presg/msgpi.presg.preSG.html#msgpi.presg.preSG" title="msgpi.presg.preSG"><code class="xref py py-obj docutils literal notranslate"><span class="pre">preSG</span></code></a>(sg_xml, analysis[, ppcmd, solver, …])</p></td>
-<td><p>Preprocessor of a structure gene.</p></td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -337,12 +279,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="analysis/msgpi.analysis.solve.html#msgpi.analysis.solve" title="msgpi.analysis.solve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">solve</span></code></a>(sg_xml, analysis, ppcmd, solver[, …])</p></td>
-<td><p>Solve</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="analysis/msgpi.analysis.run.html#msgpi.analysis.run" title="msgpi.analysis.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(input_name, analysis, solver, smdim[, …])</p></td>
-<td><p>Run codes.</p></td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -354,8 +290,8 @@ commentsRunWhenDOMLoaded(addUtterances);
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="io/msgpi.io.iovabs.readVABSIn.html" class="btn btn-neutral float-right" title="msgpi.io.iovabs.readVABSIn" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="sg/msgpi.sg.MaterialSection.getBeamProperty.html" class="btn btn-neutral float-left" title="msgpi.sg.MaterialSection.getBeamProperty" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="beam.html" class="btn btn-neutral float-right" title="A Simple Beam Class" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="sg_materialsection.html" class="btn btn-neutral float-left" title="MaterialSection" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
