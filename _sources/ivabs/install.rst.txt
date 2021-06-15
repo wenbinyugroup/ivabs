@@ -24,9 +24,9 @@ Linux installer
   #. Environment variables of PATH and PYTHONPATH can be updated automatically (write to ``.bashrc`` or ``.zshrc`` file). However, if your linux box using a different file such as .bash_profile for storing these variables, you can set these environmental variables by yourself. 
     - ``ivabs\bin`` should be in **PATH**. 
     - ``ivabs\vendors\dakota\share\dakota\Python`` should be in **PYTHONPATH**. Use the corresponding Dakota Python PATH if you want to use the Dakota already installed on your computer.
-    - ``ivabs\vendors`` should be in **PYTHONPATH**.
-  #. Python3 is needed for using MSGPI. Necessary Python packages include: ``numpy, matplotlib``.
-  #. After installation, inside ``ivabs", there are six folders. The ``vendors" folder contains all the codes integrated in iVABS. The ``bin" folder contains shortcuts to the executables of different codes in ``vendors". If you want to use the Dakota already installed on your computer. please delete the shortcut ··dakota" inside the ``bin" folder. 
+    - ``ivabs\vendors\msgpi`` should be in **PYTHONPATH**.
+  5. Python3 is needed for using MSGPI. Necessary Python packages include: ``numpy, matplotlib``.
+  6. After installation, inside ``ivabs", there are six folders. The ``vendors" folder contains all the codes integrated in iVABS. The ``bin" folder contains shortcuts to the executables of different codes in ``vendors". If you want to use the Dakota already installed on your computer. please delete the shortcut ··dakota" inside the ``bin" folder. 
 
 Linux portable archives
 -----------------------
