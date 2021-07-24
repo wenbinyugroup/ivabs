@@ -1,7 +1,7 @@
 Download and Installation
 =========================
 
-iVABS can be dowloaded from `its Release Page on github <https://github.com/wenbinyugroup/ivabs/releases>`_ (click  `here <https://github.com/wenbinyugroup/ivabs/releases>`_). The folder ``Assets`` contains the installation files you need to download for different versions. Installer contains a single executable for installation while Portable Archive contains all the files in an archive which should be extracted for installation.  
+iVABS can be dowloaded from `its Release Page on github <https://github.com/wenbinyugroup/ivabs/releases>`_ (click  `here <https://github.com/wenbinyugroup/ivabs/releases>`_ ). The folder ``Assets`` contains the installation files you need to download for different versions. Installer contains a single executable for installation while Portable Archive contains all the files in an archive which should be extracted for installation.  
 
 Windows installer (files with extension ``exe``)
 -----------------
