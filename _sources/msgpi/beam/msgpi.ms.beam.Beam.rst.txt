@@ -14,9 +14,12 @@
    .. autosummary::
    
       ~Beam.__init__
-      ~Beam.echo
       ~Beam.findPtCoordByName
       ~Beam.findSectionByName
+      ~Beam.printResults
+      ~Beam.summary
+      ~Beam.writeGEBTIn
+      ~Beam.writeGmshMsh
    
    
 

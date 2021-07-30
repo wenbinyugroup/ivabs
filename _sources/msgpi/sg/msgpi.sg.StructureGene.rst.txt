@@ -17,6 +17,9 @@
       ~StructureGene.findComboByMaterialOrientation
       ~StructureGene.findMaterialByName
       ~StructureGene.summary
+      ~StructureGene.writeGmshElements
+      ~StructureGene.writeGmshMsh
+      ~StructureGene.writeGmshNodes
    
    
 

@@ -15,6 +15,7 @@
    
       ~BeamSegment.__init__
       ~BeamSegment.calcLengthSq
+      ~BeamSegment.summary
    
    
 

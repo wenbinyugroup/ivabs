@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>msgpi.ms.analysis.solvePLECS &mdash; iVABS 0.2.0-alpha.2 documentation</title>
+  <title>msgpi.ms.analysis.solvePLECS &mdash; iVABS  documentation</title>
   
 
   
@@ -71,9 +71,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Dymore" href="../beam_methods_dymore.html" />
-    <link rel="prev" title="msgpi.ms.analysis.runGEBT" href="msgpi.ms.analysis.runGEBT.html" /> 
+    <link rel="search" title="Search" href="../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -95,10 +93,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 
           
             
-            
-              <div class="version">
-                0.2.0-a2
-              </div>
             
           
 
@@ -126,6 +120,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/install.html">Download and Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ivabs/tutorial.html">Tutorial: Design A Composite Box Beam</a></li>
 </ul>
 <p class="caption"><span class="caption-text">PreVABS</span></p>
 <ul>
@@ -139,26 +134,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toctree-l1"><a class="reference internal" href="../../prevabs/references.html">References</a></li>
 </ul>
 <p class="caption"><span class="caption-text">MSGPI</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../sg_structuregene.html">StructureGene</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sg_materialsection.html">MaterialSection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../methods.html">Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../beam.html">A Simple Beam Class</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../beam_methods.html">Beam Methods</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../beam_methods_gebt.html">GEBT</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../beam_methods_gebt.html#input-output">Input/Output</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../beam_methods_gebt.html#preprocessing">Preprocessing</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../beam_methods_gebt.html#analysis">Analysis</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="msgpi.ms.analysis.solveGEBT.html">msgpi.ms.analysis.solveGEBT</a></li>
-<li class="toctree-l4"><a class="reference internal" href="msgpi.ms.analysis.runGEBT.html">msgpi.ms.analysis.runGEBT</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">msgpi.ms.analysis.solvePLECS</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../beam_methods_dymore.html">Dymore</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../beam_methods.html">Beam Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../utils.html">Utility Functions</a></li>
 </ul>
 
@@ -208,10 +189,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="../beam_methods.html">Beam Methods</a> &raquo;</li>
-        
-          <li><a href="../beam_methods_gebt.html">GEBT</a> &raquo;</li>
-        
       <li>msgpi.ms.analysis.solvePLECS</li>
     
     
@@ -235,33 +212,6 @@ commentsRunWhenDOMLoaded(addUtterances);
             
   <div class="section" id="msgpi-ms-analysis-solveplecs">
 <h1>msgpi.ms.analysis.solvePLECS<a class="headerlink" href="#msgpi-ms-analysis-solveplecs" title="Permalink to this headline">¶</a></h1>
-<dl class="py function">
-<dt id="msgpi.ms.analysis.solvePLECS">
-<code class="sig-prename descclassname"><span class="pre">msgpi.ms.analysis.</span></code><code class="sig-name descname"><span class="pre">solvePLECS</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">length</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compliance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.ms.analysis.solvePLECS" title="Permalink to this definition">¶</a></dt>
-<dd><p>Solve the static problem of a prismatic, linearly elastic,
-cantilever beam. Find the three displacements and three rotations
-of a point x1 given loads f1, f2, f3, m1, m2, m3 applied at the
-tip.</p>
-<p>Equations (5.59) and (5.61) from the book
-Nonlinear Composite Beam Theory by D. H. Hodges
-are used.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>length</strong> (<em>float</em>) – Total length of the beam.</p></li>
-<li><p><strong>compliance</strong> (<em>list of lists of floats</em>) – The 6x6 compliance matrix of the beam cross-section.</p></li>
-<li><p><strong>x1</strong> (<em>float</em>) – The location where the result is wanted.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Results (displacement, rotations, forces, moments).</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>list of lists of floats</p>
-</dd>
-</dl>
-</dd></dl>
-
 </div>
 
 
@@ -269,10 +219,6 @@ are used.</p>
            
           </div>
           <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../beam_methods_dymore.html" class="btn btn-neutral float-right" title="Dymore" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="msgpi.ms.analysis.runGEBT.html" class="btn btn-neutral float-left" title="msgpi.ms.analysis.runGEBT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-    </div>
 
   <hr/>
 
