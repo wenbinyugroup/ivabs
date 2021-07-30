@@ -47,7 +47,8 @@ License
    :caption: iVABS
    
    ivabs/install
-   ivabs/examples 
+   ivabs/examples
+   ivabs/tutorial
 
 .. toctree::
    :hidden:

@@ -7,12 +7,14 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>GEBT &mdash; iVABS 0.2.0-alpha.2 documentation</title>
+  <title>GEBT &mdash; iVABS  documentation</title>
   
 
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -66,14 +69,13 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Dymore" href="beam_methods_dymore.html" />
+    <link rel="next" title="msgpi.ms.iogebt.readGEBTIn" href="beam/msgpi.ms.iogebt.readGEBTIn.html" />
     <link rel="prev" title="Beam Methods" href="beam_methods.html" /> 
 </head>
 
@@ -96,10 +98,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 
           
             
-            
-              <div class="version">
-                0.2.0-a2
-              </div>
             
           
 
@@ -127,6 +125,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../ivabs/install.html">Download and Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ivabs/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/tutorial.html">Tutorial: Design A Box Beam</a></li>
 </ul>
 <p class="caption"><span class="caption-text">PreVABS</span></p>
 <ul>
@@ -152,8 +151,16 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toctree-l4"><a class="reference internal" href="#writing">Writing</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#preprocessing">Preprocessing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#analysis">Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#preprocessing">Preprocessing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.prebeam.preBeam.html">msgpi.ms.prebeam.preBeam</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#analysis">Analysis</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.analysis.solveGEBT.html">msgpi.ms.analysis.solveGEBT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.analysis.runGEBT.html">msgpi.ms.analysis.runGEBT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.analysis.solvePLECS.html">msgpi.ms.analysis.solvePLECS</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="beam_methods_dymore.html">Dymore</a></li>
@@ -246,6 +253,21 @@ commentsRunWhenDOMLoaded(addUtterances);
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="beam/msgpi.ms.iogebt.readGEBTIn.html#msgpi.ms.iogebt.readGEBTIn" title="msgpi.ms.iogebt.readGEBTIn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readGEBTIn</span></code></a>(fn_gebt_in)</p></td>
+<td><p>Read GEBT input.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="beam/msgpi.ms.iogebt.readGEBTOut.html#msgpi.ms.iogebt.readGEBTOut" title="msgpi.ms.iogebt.readGEBTOut"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readGEBTOut</span></code></a>(fn_gebt_out, beam[, method])</p></td>
+<td><p>Read GEBT results.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="beam/msgpi.ms.iogebt.readGEBTOutNode.html#msgpi.ms.iogebt.readGEBTOutNode" title="msgpi.ms.iogebt.readGEBTOutNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readGEBTOutNode</span></code></a>(lines, node_type, node_id[, …])</p></td>
+<td><p>Read GEBT nodal results.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="beam/msgpi.ms.iogebt.readGEBTOutStatic.html#msgpi.ms.iogebt.readGEBTOutStatic" title="msgpi.ms.iogebt.readGEBTOutStatic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readGEBTOutStatic</span></code></a>(fn_gebt_out, beam)</p></td>
+<td><p>Read GEBT results of static analysis.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="beam/msgpi.ms.iogebt.readGEBTOutEigen.html#msgpi.ms.iogebt.readGEBTOutEigen" title="msgpi.ms.iogebt.readGEBTOutEigen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readGEBTOutEigen</span></code></a>(fn_gebt_out, beam)</p></td>
+<td><p>Read GEBT results of eigen analysis.</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -272,6 +294,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="beam/msgpi.ms.prebeam.preBeam.html#msgpi.ms.prebeam.preBeam" title="msgpi.ms.prebeam.preBeam"><code class="xref py py-obj docutils literal notranslate"><span class="pre">preBeam</span></code></a>(fn_beam[, mode, sections])</p></td>
+<td><p>Preprocessor of GEBT</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -286,6 +311,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="beam/msgpi.ms.analysis.solveGEBT.html#msgpi.ms.analysis.solveGEBT" title="msgpi.ms.analysis.solveGEBT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">solveGEBT</span></code></a>(beam_xml[, scrnout])</p></td>
+<td><p>Carry out a global beam analysis using GEBT.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="beam/msgpi.ms.analysis.runGEBT.html#msgpi.ms.analysis.runGEBT" title="msgpi.ms.analysis.runGEBT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">runGEBT</span></code></a>(fn_input[, scrnout])</p></td>
+<td><p>Run GEBT analysis.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="beam/msgpi.ms.analysis.solvePLECS.html#msgpi.ms.analysis.solvePLECS" title="msgpi.ms.analysis.solvePLECS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">solvePLECS</span></code></a>(length, compliance, x1[, f1, f2, …])</p></td>
+<td><p>Solve the static problem of a prismatic, linearly elastic, cantilever beam.</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -297,7 +331,7 @@ commentsRunWhenDOMLoaded(addUtterances);
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="beam_methods_dymore.html" class="btn btn-neutral float-right" title="Dymore" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="beam/msgpi.ms.iogebt.readGEBTIn.html" class="btn btn-neutral float-right" title="msgpi.ms.iogebt.readGEBTIn" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="beam_methods.html" class="btn btn-neutral float-left" title="Beam Methods" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

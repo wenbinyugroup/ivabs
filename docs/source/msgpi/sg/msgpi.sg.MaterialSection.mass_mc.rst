@@ -1,0 +1,6 @@
+﻿msgpi.sg.MaterialSection.mass\_mc
+=================================
+
+.. currentmodule:: msgpi.sg
+
+.. autoattribute:: MaterialSection.mass_mc

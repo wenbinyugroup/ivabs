@@ -7,12 +7,14 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Geometry and shapes &mdash; iVABS 0.2.0-alpha.2 documentation</title>
+  <title>Geometry and shapes &mdash; iVABS  documentation</title>
   
 
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
@@ -66,7 +69,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -97,10 +100,6 @@ commentsRunWhenDOMLoaded(addUtterances);
           
             
             
-              <div class="version">
-                0.2.0-a2
-              </div>
-            
           
 
           
@@ -127,6 +126,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/install.html">Download and Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ivabs/tutorial.html">Tutorial: Design A Box Beam</a></li>
 </ul>
 <p class="caption"><span class="caption-text">PreVABS</span></p>
 <ul class="current">
@@ -256,15 +256,12 @@ If none of those operations are needed, then those data also define the position
 This block of data has three columns for the name and coordinate in the cross-sectional plane.</p>
 <div class="literal-block-wrapper docutils container" id="code-point-template">
 <div class="code-block-caption"><span class="caption-number">Listing 8 </span><span class="caption-text">Template for a separate file of points (point_list_file_name.dat)</span><a class="headerlink" href="#code-point-template" title="Permalink to this code">¶</a></div>
-<div class="highlight-none notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span>label_1  z2  z3
-label_2  z2  z3
-label_3  z2  z3
-...
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>label_1  z2  z3
+<span class="linenos">2</span>label_2  z2  z3
+<span class="linenos">3</span>label_3  z2  z3
+<span class="linenos">4</span>...
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <p><strong>Specification</strong></p>
 <ul class="simple">
@@ -291,21 +288,15 @@ Otherwise, points can be arranged arbitrarily.</p>
 <p>In this method, all points are enclosed by the XML element <code class="docutils literal notranslate"><span class="pre">&lt;basepoints&gt;</span></code>.</p>
 <div class="literal-block-wrapper docutils container" id="code-basepoing-template">
 <div class="code-block-caption"><span class="caption-number">Listing 9 </span><span class="caption-text">Base points input syntax.</span><a class="headerlink" href="#code-basepoing-template" title="Permalink to this code">¶</a></div>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;basepoints&gt;</span>
-  <span class="nt">&lt;include&gt;</span> point_list_file_name <span class="nt">&lt;/include&gt;</span>
-  <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;p1&quot;</span><span class="nt">&gt;</span> 0 0 <span class="nt">&lt;/point&gt;</span>
-  <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;p2&quot;</span><span class="nt">&gt;</span> 1 0 <span class="nt">&lt;/point&gt;</span>
-  <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;M&quot;</span> <span class="na">on=</span><span class="s">&quot;L&quot;</span> <span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span> 3 <span class="nt">&lt;/point&gt;</span>
-  ...
-<span class="nt">&lt;/basepoints&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;basepoints&gt;</span>
+<span class="linenos">2</span>  <span class="nt">&lt;include&gt;</span> point_list_file_name <span class="nt">&lt;/include&gt;</span>
+<span class="linenos">3</span>  <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;p1&quot;</span><span class="nt">&gt;</span> 0 0 <span class="nt">&lt;/point&gt;</span>
+<span class="linenos">4</span>  <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;p2&quot;</span><span class="nt">&gt;</span> 1 0 <span class="nt">&lt;/point&gt;</span>
+<span class="linenos">5</span>  <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;M&quot;</span> <span class="na">on=</span><span class="s">&quot;L&quot;</span> <span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span> 3 <span class="nt">&lt;/point&gt;</span>
+<span class="linenos">6</span>  ...
+<span class="linenos">7</span><span class="nt">&lt;/basepoints&gt;</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <p>Using the XML format, points can be defined in the following ways:</p>
 <ol class="arabic simple">
@@ -353,25 +344,17 @@ Inside the <code class="docutils literal notranslate"><span class="pre">baseline
 </div>
 <div class="literal-block-wrapper docutils container" id="code-baseline-template">
 <div class="code-block-caption"><span class="caption-number">Listing 10 </span><span class="caption-text"><em>Base line</em> input syntax.</span><a class="headerlink" href="#code-baseline-template" title="Permalink to this code">¶</a></div>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;baselines&gt;</span>
-  <span class="nt">&lt;basepoints&gt;</span>
-    ...
-  <span class="nt">&lt;/basepoints&gt;</span>
-  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;name1&quot;</span> <span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/baseline&gt;</span>
-  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;name2&quot;</span> <span class="na">type=</span><span class="s">&quot;arc&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/baseline&gt;</span>
-  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;name3&quot;</span> <span class="na">type=</span><span class="s">&quot;circle&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/baseline&gt;</span>
-  ...
-<span class="nt">&lt;/baselines&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;baselines&gt;</span>
+<span class="linenos">2</span>  <span class="nt">&lt;basepoints&gt;</span>
+<span class="linenos">3</span>    ...
+<span class="linenos">4</span>  <span class="nt">&lt;/basepoints&gt;</span>
+<span class="linenos">5</span>  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;name1&quot;</span> <span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">6</span>  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;name2&quot;</span> <span class="na">type=</span><span class="s">&quot;arc&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">7</span>  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;name3&quot;</span> <span class="na">type=</span><span class="s">&quot;circle&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">8</span>  ...
+<span class="linenos">9</span><span class="nt">&lt;/baselines&gt;</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <p><strong>Specification</strong></p>
 <ul class="simple">
@@ -404,47 +387,28 @@ The PreVABS-computed second key point will always be “not lower” than the us
 </div>
 <div class="literal-block-wrapper docutils container" id="code-baseline-straight">
 <div class="code-block-caption"><span class="caption-number">Listing 11 </span><span class="caption-text">Input syntax for the base lines shown in <a class="reference internal" href="#fig-baselinestraight"><span class="std std-numref">Fig. 15</span></a></span><a class="headerlink" href="#code-baseline-straight" title="Permalink to this code">¶</a></div>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;baselines&gt;</span>
-  ...
-  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;i&quot;</span> <span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;points&gt;</span> a,z <span class="nt">&lt;/points&gt;</span>
-  <span class="nt">&lt;/baseline&gt;</span>
-
-  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;ii&quot;</span> <span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;points&gt;</span> a,b,c,z <span class="nt">&lt;/points&gt;</span>
-  <span class="nt">&lt;/baseline&gt;</span>
-
-  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;iii&quot;</span> <span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;points&gt;</span> a:z <span class="nt">&lt;/points&gt;</span>
-  <span class="nt">&lt;/baseline&gt;</span>
-
-  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;iv&quot;</span> <span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;point&gt;</span> a <span class="nt">&lt;/point&gt;</span>
-    <span class="nt">&lt;angle&gt;</span> theta <span class="nt">&lt;/angle&gt;</span>
-  <span class="nt">&lt;/baseline&gt;</span>
-  ...
-<span class="nt">&lt;/baselines&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;baselines&gt;</span>
+<span class="linenos"> 2</span>  ...
+<span class="linenos"> 3</span>  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;i&quot;</span> <span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 4</span>    <span class="nt">&lt;points&gt;</span> a,z <span class="nt">&lt;/points&gt;</span>
+<span class="linenos"> 5</span>  <span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;ii&quot;</span> <span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 8</span>    <span class="nt">&lt;points&gt;</span> a,b,c,z <span class="nt">&lt;/points&gt;</span>
+<span class="linenos"> 9</span>  <span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span>  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;iii&quot;</span> <span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">12</span>    <span class="nt">&lt;points&gt;</span> a:z <span class="nt">&lt;/points&gt;</span>
+<span class="linenos">13</span>  <span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;iv&quot;</span> <span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">16</span>    <span class="nt">&lt;point&gt;</span> a <span class="nt">&lt;/point&gt;</span>
+<span class="linenos">17</span>    <span class="nt">&lt;angle&gt;</span> theta <span class="nt">&lt;/angle&gt;</span>
+<span class="linenos">18</span>  <span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">19</span>  ...
+<span class="linenos">20</span><span class="nt">&lt;/baselines&gt;</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <p><strong>Specification</strong></p>
 <ul class="simple">
@@ -474,39 +438,24 @@ To uniquely define an arc, user needs to provide at least four of the following 
 </div>
 <div class="literal-block-wrapper docutils container" id="code-baseline-arc">
 <div class="code-block-caption"><span class="caption-number">Listing 12 </span><span class="caption-text">Input syntax for the base lines shown in <a class="reference internal" href="#fig-baselinearc2"><span class="std std-numref">Fig. 17</span></a></span><a class="headerlink" href="#code-baseline-arc" title="Permalink to this code">¶</a></div>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;baselines&gt;</span>
-  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;left&quot;</span> <span class="na">type=</span><span class="s">&quot;arc&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;center&gt;</span> c <span class="nt">&lt;/center&gt;</span>
-    <span class="nt">&lt;start&gt;</span> s <span class="nt">&lt;/start&gt;</span>
-    <span class="nt">&lt;end&gt;</span> e <span class="nt">&lt;/end&gt;</span>
-    <span class="nt">&lt;direction&gt;</span> ccw <span class="nt">&lt;/direction&gt;</span>
-    <span class="nt">&lt;discrete</span> <span class="na">by=</span><span class="s">&quot;angle&quot;</span><span class="nt">&gt;</span> 9 <span class="nt">&lt;/discrete&gt;</span>
-  <span class="nt">&lt;/baseline&gt;</span>
-
-  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;right&quot;</span> <span class="na">type=</span><span class="s">&quot;arc&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;center&gt;</span> c <span class="nt">&lt;/center&gt;</span>
-    <span class="nt">&lt;start&gt;</span> s <span class="nt">&lt;/start&gt;</span>
-    <span class="nt">&lt;angle&gt;</span> a <span class="nt">&lt;/angle&gt;</span>
-    <span class="nt">&lt;discrete</span> <span class="na">by=</span><span class="s">&quot;number&quot;</span><span class="nt">&gt;</span> 10 <span class="nt">&lt;/discrete&gt;</span>
-  <span class="nt">&lt;/baseline&gt;</span>
-<span class="nt">&lt;/baselines&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;baselines&gt;</span>
+<span class="linenos"> 2</span>  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;left&quot;</span> <span class="na">type=</span><span class="s">&quot;arc&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 3</span>    <span class="nt">&lt;center&gt;</span> c <span class="nt">&lt;/center&gt;</span>
+<span class="linenos"> 4</span>    <span class="nt">&lt;start&gt;</span> s <span class="nt">&lt;/start&gt;</span>
+<span class="linenos"> 5</span>    <span class="nt">&lt;end&gt;</span> e <span class="nt">&lt;/end&gt;</span>
+<span class="linenos"> 6</span>    <span class="nt">&lt;direction&gt;</span> ccw <span class="nt">&lt;/direction&gt;</span>
+<span class="linenos"> 7</span>    <span class="nt">&lt;discrete</span> <span class="na">by=</span><span class="s">&quot;angle&quot;</span><span class="nt">&gt;</span> 9 <span class="nt">&lt;/discrete&gt;</span>
+<span class="linenos"> 8</span>  <span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;right&quot;</span> <span class="na">type=</span><span class="s">&quot;arc&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">11</span>    <span class="nt">&lt;center&gt;</span> c <span class="nt">&lt;/center&gt;</span>
+<span class="linenos">12</span>    <span class="nt">&lt;start&gt;</span> s <span class="nt">&lt;/start&gt;</span>
+<span class="linenos">13</span>    <span class="nt">&lt;angle&gt;</span> a <span class="nt">&lt;/angle&gt;</span>
+<span class="linenos">14</span>    <span class="nt">&lt;discrete</span> <span class="na">by=</span><span class="s">&quot;number&quot;</span><span class="nt">&gt;</span> 10 <span class="nt">&lt;/discrete&gt;</span>
+<span class="linenos">15</span>  <span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">16</span><span class="nt">&lt;/baselines&gt;</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <p><strong>Specification</strong></p>
 <ul class="simple">
@@ -536,40 +485,30 @@ input file demonstrating the two methods is presented in
 </ul>
 <div class="literal-block-wrapper docutils container" id="code-baseline-circle">
 <div class="code-block-caption"><span class="caption-number">Listing 13 </span><span class="caption-text">Input syntax for the ‘circle’ type base line.</span><a class="headerlink" href="#code-baseline-circle" title="Permalink to this code">¶</a></div>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;baselines&gt;</span>
-  ...
-  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;circle1&quot;</span> <span class="na">type=</span><span class="s">&quot;circle&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;center&gt;</span> c <span class="nt">&lt;/center&gt;</span>
-    <span class="nt">&lt;radius&gt;</span> r <span class="nt">&lt;/radius&gt;</span>
-  <span class="nt">&lt;/baseline&gt;</span>
-
-  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;circle2&quot;</span> <span class="na">type=</span><span class="s">&quot;circle&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;center&gt;</span> c <span class="nt">&lt;/center&gt;</span>
-    <span class="nt">&lt;point&gt;</span> p <span class="nt">&lt;/point&gt;</span>
-  <span class="nt">&lt;/baseline&gt;</span>
-  ...
-<span class="nt">&lt;/baselines&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;baselines&gt;</span>
+<span class="linenos"> 2</span>  ...
+<span class="linenos"> 3</span>  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;circle1&quot;</span> <span class="na">type=</span><span class="s">&quot;circle&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 4</span>    <span class="nt">&lt;center&gt;</span> c <span class="nt">&lt;/center&gt;</span>
+<span class="linenos"> 5</span>    <span class="nt">&lt;radius&gt;</span> r <span class="nt">&lt;/radius&gt;</span>
+<span class="linenos"> 6</span>  <span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;circle2&quot;</span> <span class="na">type=</span><span class="s">&quot;circle&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 9</span>    <span class="nt">&lt;center&gt;</span> c <span class="nt">&lt;/center&gt;</span>
+<span class="linenos">10</span>    <span class="nt">&lt;point&gt;</span> p <span class="nt">&lt;/point&gt;</span>
+<span class="linenos">11</span>    <span class="nt">&lt;direction&gt;</span> cw <span class="nt">&lt;/direction&gt;</span>
+<span class="linenos">12</span>  <span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">13</span>  ...
+<span class="linenos">14</span><span class="nt">&lt;/baselines&gt;</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <p><strong>Specification</strong></p>
 <ul class="simple">
 <li><p><strong>&lt;center&gt;</strong> - Name of the center point.</p></li>
 <li><p><strong>&lt;radius&gt;</strong> - Radius of the circle.</p></li>
 <li><p><strong>&lt;point&gt;</strong> - Name of a point on the circle.</p></li>
-<li><p><strong>&lt;discrete&gt;</strong> - Number of discretization. If ‘by=”angle”’, then new points are created every specified degrees of angle. If ‘by=”number”’, then specified number of new points are created and evenly distributed on the arc.</p>
+<li><p><strong>&lt;direction&gt;</strong> - Direction of the circle. Choose from ‘cw’ (clockwise) and ‘ccw’ (counter-clockwise). Default is ‘ccw’.</p></li>
+<li><p><strong>&lt;discrete&gt;</strong> - Number of discretization. If ‘by=”angle”’, then new points are created every specified degrees of angle. If ‘by=”number”’, then specified number of new points are created and evenly distributed on the circle.</p>
 <ul>
 <li><p><em>by</em> - Choose one from ‘angle’ and ‘number’. Default is ‘angle’.</p></li>
 </ul>

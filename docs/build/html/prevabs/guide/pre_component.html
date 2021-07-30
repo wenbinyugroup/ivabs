@@ -7,12 +7,14 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Components &mdash; iVABS 0.2.0-alpha.2 documentation</title>
+  <title>Components &mdash; iVABS  documentation</title>
   
 
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
@@ -66,7 +69,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -97,10 +100,6 @@ commentsRunWhenDOMLoaded(addUtterances);
           
             
             
-              <div class="version">
-                0.2.0-a2
-              </div>
-            
           
 
           
@@ -127,6 +126,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/install.html">Download and Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ivabs/tutorial.html">Tutorial: Design A Box Beam</a></li>
 </ul>
 <p class="caption"><span class="caption-text">PreVABS</span></p>
 <ul class="current">
@@ -242,9 +242,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span id="section-component"></span><h1>Components<a class="headerlink" href="#components" title="Permalink to this headline">¶</a></h1>
 <div class="literal-block-wrapper docutils container" id="code-component">
 <div class="code-block-caption"><span class="caption-number">Listing 21 </span><span class="caption-text">Input syntax for components.</span><a class="headerlink" href="#code-component" title="Permalink to this code">¶</a></div>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;&quot;</span> <span class="na">type=</span><span class="s">&quot;&quot;</span> <span class="na">depend=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/component&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;&quot;</span> <span class="na">type=</span><span class="s">&quot;&quot;</span> <span class="na">depend=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/component&gt;</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <p><strong>Specification</strong></p>
 <ul class="simple">
@@ -302,77 +302,43 @@ Then PreVABS will split the base line, combine layups and create segments automa
 <p>An example is provided below (<a class="reference internal" href="#fig-param-layup-example-define"><span class="std std-numref">Fig 22</span></a>, <a class="reference internal" href="#fig-param-layup-example-plot"><span class="std std-numref">Fig 23</span></a>, <a class="reference internal" href="#code-param-layup-example"><span class="std std-numref">Listing 23</span></a>).</p>
 <div class="literal-block-wrapper docutils container" id="code-segments">
 <div class="code-block-caption"><span class="caption-number">Listing 22 </span><span class="caption-text">Input syntax for the laminate-type components.</span><a class="headerlink" href="#code-segments" title="Permalink to this code">¶</a></div>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_surface&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;segment</span> <span class="na">name=</span><span class="s">&quot;sgm_1&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;baseline&gt;</span> baseline1 <span class="nt">&lt;/baseline&gt;</span>
-    <span class="nt">&lt;layup</span> <span class="na">direction=</span><span class="s">&quot;right&quot;</span><span class="nt">&gt;</span> layup1 <span class="nt">&lt;/layup&gt;</span>
-  <span class="nt">&lt;/segment&gt;</span>
-  <span class="nt">&lt;segment</span> <span class="na">name=</span><span class="s">&quot;sgm_2&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;baseline&gt;</span>...<span class="nt">&lt;/baseline&gt;</span>
-    <span class="nt">&lt;layup&gt;</span>...<span class="nt">&lt;/layup&gt;</span>
-  <span class="nt">&lt;/segment&gt;</span>
-  ...
-  <span class="nt">&lt;joint</span> <span class="na">style=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span> sgm_1,sgm_2 <span class="nt">&lt;/joint&gt;</span>
-  ...
-<span class="nt">&lt;/component&gt;</span>
-
-
-<span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_web&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;segment&gt;</span>
-    <span class="nt">&lt;baseline&gt;</span> baseline2 <span class="nt">&lt;/baseline&gt;</span>
-    <span class="nt">&lt;layup</span> <span class="na">direction=</span><span class="s">&quot;left&quot;</span><span class="nt">&gt;</span> layup2 <span class="nt">&lt;/layup&gt;</span>
-  <span class="nt">&lt;/segment&gt;</span>
-  ...
-<span class="nt">&lt;/component&gt;</span>
-
-
-<span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;segments&gt;</span>
-    <span class="nt">&lt;baseline&gt;</span> base_line_3_name <span class="nt">&lt;/baseline&gt;</span>
-    <span class="nt">&lt;layup_side&gt;</span> left <span class="nt">&lt;/layup_side&gt;</span>
-    <span class="nt">&lt;layup&gt;</span> layup_1_name <span class="nt">&lt;/layup&gt;</span>
-    <span class="nt">&lt;layup</span> <span class="na">begin=</span><span class="s">&quot;0.1&quot;</span><span class="nt">&gt;</span> layup_2_name <span class="nt">&lt;/layup&gt;</span>
-    <span class="nt">&lt;layup</span> <span class="na">end=</span><span class="s">&quot;0.7&quot;</span><span class="nt">&gt;</span> layup_3_name <span class="nt">&lt;/layup&gt;</span>
-    <span class="nt">&lt;layup</span> <span class="na">begin=</span><span class="s">&quot;0.2&quot;</span> <span class="na">end=</span><span class="s">&quot;0.9&quot;</span><span class="nt">&gt;</span> layup_4_name <span class="nt">&lt;/layup&gt;</span>
-    ...
-  <span class="nt">&lt;/segments&gt;</span>
-<span class="nt">&lt;/component&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_surface&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 2</span>  <span class="nt">&lt;segment</span> <span class="na">name=</span><span class="s">&quot;sgm_1&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 3</span>    <span class="nt">&lt;baseline&gt;</span> baseline1 <span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 4</span>    <span class="nt">&lt;layup</span> <span class="na">direction=</span><span class="s">&quot;right&quot;</span><span class="nt">&gt;</span> layup1 <span class="nt">&lt;/layup&gt;</span>
+<span class="linenos"> 5</span>  <span class="nt">&lt;/segment&gt;</span>
+<span class="linenos"> 6</span>  <span class="nt">&lt;segment</span> <span class="na">name=</span><span class="s">&quot;sgm_2&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 7</span>    <span class="nt">&lt;baseline&gt;</span>...<span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 8</span>    <span class="nt">&lt;layup&gt;</span>...<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos"> 9</span>  <span class="nt">&lt;/segment&gt;</span>
+<span class="linenos">10</span>  ...
+<span class="linenos">11</span>  <span class="nt">&lt;joint</span> <span class="na">style=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span> sgm_1,sgm_2 <span class="nt">&lt;/joint&gt;</span>
+<span class="linenos">12</span>  ...
+<span class="linenos">13</span><span class="nt">&lt;/component&gt;</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_web&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">17</span>  <span class="nt">&lt;segment&gt;</span>
+<span class="linenos">18</span>    <span class="nt">&lt;baseline&gt;</span> baseline2 <span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">19</span>    <span class="nt">&lt;layup</span> <span class="na">direction=</span><span class="s">&quot;left&quot;</span><span class="nt">&gt;</span> layup2 <span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">20</span>  <span class="nt">&lt;/segment&gt;</span>
+<span class="linenos">21</span>  ...
+<span class="linenos">22</span><span class="nt">&lt;/component&gt;</span>
+<span class="linenos">23</span>
+<span class="linenos">24</span>
+<span class="linenos">25</span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">26</span>  <span class="nt">&lt;segments&gt;</span>
+<span class="linenos">27</span>    <span class="nt">&lt;baseline&gt;</span> base_line_3_name <span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">28</span>    <span class="nt">&lt;layup_side&gt;</span> left <span class="nt">&lt;/layup_side&gt;</span>
+<span class="linenos">29</span>    <span class="nt">&lt;layup&gt;</span> layup_1_name <span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">30</span>    <span class="nt">&lt;layup</span> <span class="na">begin=</span><span class="s">&quot;0.1&quot;</span><span class="nt">&gt;</span> layup_2_name <span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">31</span>    <span class="nt">&lt;layup</span> <span class="na">end=</span><span class="s">&quot;0.7&quot;</span><span class="nt">&gt;</span> layup_3_name <span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">32</span>    <span class="nt">&lt;layup</span> <span class="na">begin=</span><span class="s">&quot;0.2&quot;</span> <span class="na">end=</span><span class="s">&quot;0.9&quot;</span><span class="nt">&gt;</span> layup_4_name <span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">33</span>    ...
+<span class="linenos">34</span>  <span class="nt">&lt;/segments&gt;</span>
+<span class="linenos">35</span><span class="nt">&lt;/component&gt;</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <div class="section" id="example">
 <h4>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
@@ -386,25 +352,17 @@ Then PreVABS will split the base line, combine layups and create segments automa
 </div>
 <div class="literal-block-wrapper docutils container" id="id3">
 <span id="code-param-layup-example"></span><div class="code-block-caption"><span class="caption-number">Listing 23 </span><span class="caption-text">Example input.</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;segments&gt;</span>
-    <span class="nt">&lt;baseline&gt;</span> l <span class="nt">&lt;/baseline&gt;</span>
-    <span class="nt">&lt;layup&gt;</span> layup1 <span class="nt">&lt;/layup&gt;</span>
-    <span class="nt">&lt;layup</span> <span class="na">begin=</span><span class="s">&quot;0.2&quot;</span> <span class="na">end=</span><span class="s">&quot;0.75&quot;</span><span class="nt">&gt;</span> layup2 <span class="nt">&lt;/layup&gt;</span>
-    <span class="nt">&lt;layup</span> <span class="na">begin=</span><span class="s">&quot;-0.1&quot;</span> <span class="na">end=</span><span class="s">&quot;0.5&quot;</span><span class="nt">&gt;</span> layup3 <span class="nt">&lt;/layup&gt;</span>
-    <span class="nt">&lt;layup</span> <span class="na">begin=</span><span class="s">&quot;-0.6&quot;</span> <span class="na">end=</span><span class="s">&quot;-0.2&quot;</span><span class="nt">&gt;</span> layup4 <span class="nt">&lt;/layup&gt;</span>
-  <span class="nt">&lt;/segments&gt;</span>
-<span class="nt">&lt;/component&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">2</span>  <span class="nt">&lt;segments&gt;</span>
+<span class="linenos">3</span>    <span class="nt">&lt;baseline&gt;</span> l <span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">4</span>    <span class="nt">&lt;layup&gt;</span> layup1 <span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">5</span>    <span class="nt">&lt;layup</span> <span class="na">begin=</span><span class="s">&quot;0.2&quot;</span> <span class="na">end=</span><span class="s">&quot;0.75&quot;</span><span class="nt">&gt;</span> layup2 <span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">6</span>    <span class="nt">&lt;layup</span> <span class="na">begin=</span><span class="s">&quot;-0.1&quot;</span> <span class="na">end=</span><span class="s">&quot;0.5&quot;</span><span class="nt">&gt;</span> layup3 <span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">7</span>    <span class="nt">&lt;layup</span> <span class="na">begin=</span><span class="s">&quot;-0.6&quot;</span> <span class="na">end=</span><span class="s">&quot;-0.2&quot;</span><span class="nt">&gt;</span> layup4 <span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">8</span>  <span class="nt">&lt;/segments&gt;</span>
+<span class="linenos">9</span><span class="nt">&lt;/component&gt;</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <p><strong>Specification</strong></p>
 <p><em>DEFINITION 1</em></p>
@@ -467,43 +425,26 @@ cross section.</span><a class="headerlink" href="#fig-filling1" title="Permalink
 </div>
 <div class="literal-block-wrapper docutils container" id="code-fillings">
 <div class="code-block-caption"><span class="caption-number">Listing 24 </span><span class="caption-text">Input syntax for the fill-type components.</span><a class="headerlink" href="#code-fillings" title="Permalink to this code">¶</a></div>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_fill_1&quot;</span> <span class="na">type=</span><span class="s">&quot;fill&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;location&gt;</span> point_fill <span class="nt">&lt;/location&gt;</span>
-  <span class="nt">&lt;material&gt;</span> material1 <span class="nt">&lt;/material&gt;</span>
-<span class="nt">&lt;/component&gt;</span>
-
-
-<span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_fill_2&quot;</span> <span class="na">type=</span><span class="s">&quot;fill&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;baseline&gt;</span> bsl <span class="nt">&lt;/baseline&gt;</span>
-  <span class="nt">&lt;location&gt;</span> point_fill <span class="nt">&lt;/location&gt;</span>
-  <span class="nt">&lt;material&gt;</span> material1 <span class="nt">&lt;/material&gt;</span>
-  <span class="nt">&lt;mesh_size</span> <span class="na">at=</span><span class="s">&quot;p1,p2&quot;</span><span class="nt">&gt;</span> 0.1 <span class="nt">&lt;/mesh_size&gt;</span>
-<span class="nt">&lt;/component&gt;</span>
-
-
-<span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_fill_3&quot;</span> <span class="na">type=</span><span class="s">&quot;fill&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;baseline</span> <span class="na">fillside=</span><span class="s">&quot;right&quot;</span><span class="nt">&gt;</span> bsl_3 <span class="nt">&lt;/baseline&gt;</span>
-  <span class="nt">&lt;material&gt;</span> material1 <span class="nt">&lt;/material&gt;</span>
-<span class="nt">&lt;/component&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_fill_1&quot;</span> <span class="na">type=</span><span class="s">&quot;fill&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 2</span>  <span class="nt">&lt;location&gt;</span> point_fill <span class="nt">&lt;/location&gt;</span>
+<span class="linenos"> 3</span>  <span class="nt">&lt;material&gt;</span> material1 <span class="nt">&lt;/material&gt;</span>
+<span class="linenos"> 4</span><span class="nt">&lt;/component&gt;</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_fill_2&quot;</span> <span class="na">type=</span><span class="s">&quot;fill&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 8</span>  <span class="nt">&lt;baseline&gt;</span> bsl <span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 9</span>  <span class="nt">&lt;location&gt;</span> point_fill <span class="nt">&lt;/location&gt;</span>
+<span class="linenos">10</span>  <span class="nt">&lt;material&gt;</span> material1 <span class="nt">&lt;/material&gt;</span>
+<span class="linenos">11</span>  <span class="nt">&lt;mesh_size</span> <span class="na">at=</span><span class="s">&quot;p1,p2&quot;</span><span class="nt">&gt;</span> 0.1 <span class="nt">&lt;/mesh_size&gt;</span>
+<span class="linenos">12</span><span class="nt">&lt;/component&gt;</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_fill_3&quot;</span> <span class="na">type=</span><span class="s">&quot;fill&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">16</span>  <span class="nt">&lt;baseline</span> <span class="na">fillside=</span><span class="s">&quot;right&quot;</span><span class="nt">&gt;</span> bsl_3 <span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">17</span>  <span class="nt">&lt;material&gt;</span> material1 <span class="nt">&lt;/material&gt;</span>
+<span class="linenos">18</span><span class="nt">&lt;/component&gt;</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <div class="section" id="local-mesh-size">
 <h3>Local mesh size<a class="headerlink" href="#local-mesh-size" title="Permalink to this headline">¶</a></h3>
@@ -528,29 +469,19 @@ If multiple points are used, then lines will be created by connecting points seq
 </div>
 <div class="literal-block-wrapper docutils container" id="id6">
 <span id="code-local-mesh-example"></span><div class="code-block-caption"><span class="caption-number">Listing 25 </span><span class="caption-text">Example input.</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;filling 1&quot;</span> <span class="na">type=</span><span class="s">&quot;fill&quot;</span> <span class="na">depend=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;location&gt;</span> A <span class="nt">&lt;/location&gt;</span>
-  <span class="nt">&lt;material&gt;</span> material1 <span class="nt">&lt;/material&gt;</span>
-  <span class="nt">&lt;mesh_size</span> <span class="na">at=</span><span class="s">&quot;A&quot;</span><span class="nt">&gt;</span> 0.2 <span class="nt">&lt;/mesh_size&gt;</span>
-<span class="nt">&lt;/component&gt;</span>
-
-<span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;filling 2&quot;</span> <span class="na">type=</span><span class="s">&quot;fill&quot;</span> <span class="na">depend=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;location&gt;</span> B <span class="nt">&lt;/location&gt;</span>
-  <span class="nt">&lt;material&gt;</span> material2 <span class="nt">&lt;/material&gt;</span>
-  <span class="nt">&lt;mesh_size</span> <span class="na">at=</span><span class="s">&quot;B,C&quot;</span><span class="nt">&gt;</span> 0.2 <span class="nt">&lt;/mesh_size&gt;</span>
-<span class="nt">&lt;/component&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;filling 1&quot;</span> <span class="na">type=</span><span class="s">&quot;fill&quot;</span> <span class="na">depend=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 2</span>  <span class="nt">&lt;location&gt;</span> A <span class="nt">&lt;/location&gt;</span>
+<span class="linenos"> 3</span>  <span class="nt">&lt;material&gt;</span> material1 <span class="nt">&lt;/material&gt;</span>
+<span class="linenos"> 4</span>  <span class="nt">&lt;mesh_size</span> <span class="na">at=</span><span class="s">&quot;A&quot;</span><span class="nt">&gt;</span> 0.2 <span class="nt">&lt;/mesh_size&gt;</span>
+<span class="linenos"> 5</span><span class="nt">&lt;/component&gt;</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;filling 2&quot;</span> <span class="na">type=</span><span class="s">&quot;fill&quot;</span> <span class="na">depend=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 8</span>  <span class="nt">&lt;location&gt;</span> B <span class="nt">&lt;/location&gt;</span>
+<span class="linenos"> 9</span>  <span class="nt">&lt;material&gt;</span> material2 <span class="nt">&lt;/material&gt;</span>
+<span class="linenos">10</span>  <span class="nt">&lt;mesh_size</span> <span class="na">at=</span><span class="s">&quot;B,C&quot;</span><span class="nt">&gt;</span> 0.2 <span class="nt">&lt;/mesh_size&gt;</span>
+<span class="linenos">11</span><span class="nt">&lt;/component&gt;</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <p><strong>Specification</strong></p>
 <ul class="simple">
@@ -577,11 +508,10 @@ For the case shown in the figure, the creation of the thin vertical component (p
 Hence, in the definition of the purple component, a <code class="docutils literal notranslate"><span class="pre">depend</span></code> attribute should be specified as shown below.</p>
 <div class="literal-block-wrapper docutils container" id="code-depend">
 <div class="code-block-caption"><span class="caption-number">Listing 26 </span><span class="caption-text">Dependency.</span><a class="headerlink" href="#code-depend" title="Permalink to this code">¶</a></div>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_blue&quot;</span> <span class="na">type=</span><span class="s">&quot;laminate&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/component&gt;</span>
-<span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_purple&quot;</span> <span class="na">type=</span><span class="s">&quot;laminate&quot;</span> <span class="na">depend=</span><span class="s">&quot;cmp_blue&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/component&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_blue&quot;</span> <span class="na">type=</span><span class="s">&quot;laminate&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/component&gt;</span>
+<span class="linenos">2</span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_purple&quot;</span> <span class="na">type=</span><span class="s">&quot;laminate&quot;</span> <span class="na">depend=</span><span class="s">&quot;cmp_blue&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/component&gt;</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <p>If a component is dependent on multiple components, their names shoule all be listed, delimited by comma.</p>
 </div>

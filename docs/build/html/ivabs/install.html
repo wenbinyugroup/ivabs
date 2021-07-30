@@ -7,12 +7,14 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Download and Installation &mdash; iVABS 0.2.0-alpha.2 documentation</title>
+  <title>Download and Installation &mdash; iVABS  documentation</title>
   
 
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -66,7 +69,6 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -74,7 +76,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Examples" href="examples.html" />
-    <link rel="prev" title="Welcome to iVABS’ documentation!" href="../index.html" /> 
+    <link rel="prev" title="Welcome to iVABS Documentation" href="../index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,10 +98,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 
           
             
-            
-              <div class="version">
-                0.2.0-a2
-              </div>
             
           
 
@@ -126,14 +124,15 @@ commentsRunWhenDOMLoaded(addUtterances);
               <p class="caption"><span class="caption-text">iVABS</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Download and Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#windows-installer">Windows installer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#windows-portable-archives">Windows portable archives</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#linux-installer">Linux installer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#linux-portable-archives">Linux portable archives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#windows-installer-files-with-extension-exe">Windows installer (files with extension <code class="docutils literal notranslate"><span class="pre">exe</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#windows-portable-archive-files-with-extension-7z">Windows portable archive (files with extension <code class="docutils literal notranslate"><span class="pre">7z</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#linux-installer-files-with-extension-sh">Linux installer (files with extension <code class="docutils literal notranslate"><span class="pre">sh</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#linux-portable-archives-files-with-extension-tar-gz">Linux portable archives (files with extension <code class="docutils literal notranslate"><span class="pre">tar.gz</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#request-vabs-license">Request VABS license</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial: Design A Box Beam</a></li>
 </ul>
 <p class="caption"><span class="caption-text">PreVABS</span></p>
 <ul>
@@ -225,84 +224,68 @@ commentsRunWhenDOMLoaded(addUtterances);
             
   <div class="section" id="download-and-installation">
 <h1>Download and Installation<a class="headerlink" href="#download-and-installation" title="Permalink to this headline">¶</a></h1>
-<p>Download <strong>iVABS</strong> package from the Release page (<a class="reference external" href="https://github.com/wenbinyugroup/ivabs/releases">https://github.com/wenbinyugroup/ivabs/releases</a>).
-Choose appropriate version based on your platform.</p>
-<div class="section" id="windows-installer">
-<h2>Windows installer<a class="headerlink" href="#windows-installer" title="Permalink to this headline">¶</a></h2>
+<p>iVABS can be dowloaded from <a class="reference external" href="https://github.com/wenbinyugroup/ivabs/releases">its Release Page on github</a> (click  <a class="reference external" href="https://github.com/wenbinyugroup/ivabs/releases">here</a> ). The folder <code class="docutils literal notranslate"><span class="pre">Assets</span></code> contains the installation files you need to download for different versions. Installer contains a single executable for installation while Portable Archive contains all the files in an archive which should be extracted for installation.</p>
+<div class="section" id="windows-installer-files-with-extension-exe">
+<h2>Windows installer (files with extension <code class="docutils literal notranslate"><span class="pre">exe</span></code>)<a class="headerlink" href="#windows-installer-files-with-extension-exe" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Select the installation folder of your own choice. The default folder is <code class="docutils literal notranslate"><span class="pre">iVABS</span></code> inside your home folder. You should have writing permission for the folder to install iVABS.</p></li>
+<li><p>Dakota is optional. If you would like to continue use the version of Dakota you already have on your computer, you need to uncheck the option. However, you need to make sure that Dakota binary and Dakota python library are available in the Path.</p></li>
+<li><p>Environment variables of <strong>PATH</strong> and <strong>PYTHONPATH</strong> can be updated automatically. This is needed if you want to use iVABS toolset from the command prompt.</p></li>
+<li><p>A shortcut can be created in the Start Menu and Desktop.</p></li>
+<li><p>Python3 is needed for using MSGPI. Necessary Python packages include: <code class="docutils literal notranslate"><span class="pre">numpy,</span> <span class="pre">matplotlib</span></code>.</p></li>
+</ol>
+</div>
+<div class="section" id="windows-portable-archive-files-with-extension-7z">
+<h2>Windows portable archive (files with extension <code class="docutils literal notranslate"><span class="pre">7z</span></code>)<a class="headerlink" href="#windows-portable-archive-files-with-extension-7z" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p>Select your installation path. I will use <code class="docutils literal notranslate"><span class="pre">ivabs-folder</span></code> to denote the installation path;</p></li>
-<li><p>Dakota is optional. But if you need Dakota(v6.8), you need to make sure Dakota binary and
-Dakota python library are available in the path. Examples and help files are also optional;</p></li>
-<li><p>Environment variables of <strong>PATH</strong> and <strong>PYTHONPATH</strong> can be updated automatically; this is
-necessary if you want to use iVABS toolset from any command prompt.</p></li>
-<li><p>A shortcut can be created in the Start Menu and Desktop, which provides the iVABS toolset.</p></li>
-<li><p>Python3 is needed. Necessary Python package include: <code class="docutils literal notranslate"><span class="pre">numpy,</span> <span class="pre">matplotlib</span></code>.</p></li>
+<li><p>Extract the archive to a folder of your own choice.</p></li>
+<li><p>Use the embeded <code class="docutils literal notranslate"><span class="pre">env.cmd</span></code> to automatically set up environment variables, or set up environment variables manually according to <code class="docutils literal notranslate"><span class="pre">env.cmd</span></code>.</p></li>
 </ol>
 </div></blockquote>
 </div>
-<div class="section" id="windows-portable-archives">
-<h2>Windows portable archives<a class="headerlink" href="#windows-portable-archives" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="linux-installer-files-with-extension-sh">
+<h2>Linux installer (files with extension <code class="docutils literal notranslate"><span class="pre">sh</span></code>)<a class="headerlink" href="#linux-installer-files-with-extension-sh" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p>Extract the files to arbitray folder. I will use <code class="docutils literal notranslate"><span class="pre">ivabs-folder</span></code> to denote the installation
-path;</p></li>
-<li><p>Use the embeded <code class="docutils literal notranslate"><span class="pre">env.cmd</span></code> to set up environment variables.</p></li>
-<li><p>OR you can set up environment variables manually according to <code class="docutils literal notranslate"><span class="pre">env.cmd</span></code>.</p></li>
-</ol>
-</div></blockquote>
-</div>
-<div class="section" id="linux-installer">
-<h2>Linux installer<a class="headerlink" href="#linux-installer" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><ol class="arabic simple">
-<li><p>Excute the installer <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">installer.sh</span></code>;</p></li>
-<li><p>Select your installation path. <code class="docutils literal notranslate"><span class="pre">ivabs-folder</span></code> will be used to reference the path.</p></li>
-<li><p>Dakota is optional. But if you need Dakota(v6.8), you need to make sure Dakota
-binary and Dakota python library are available in the path;</p></li>
-<li><p>Environment variables of PATH and PYTHONPATH can be updated automatically
-(write to <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> or <code class="docutils literal notranslate"><span class="pre">.zshrc</span></code> file).</p></li>
+<li><p>Excute the installer <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">installer.sh</span></code>.</p></li>
+<li><p>Select the installation folder of your own choice. The default folder is <code class="docutils literal notranslate"><span class="pre">iVABS</span></code> inside your home folder.</p></li>
+<li><p>Dakota is optional. If you would like to continue use the version of Dakota you already have on your computer, you need to uncheck the option. However, you need to make sure that Dakota binary and Dakota python library are available in the Path.</p></li>
+<li><p>Environment variables of PATH and PYTHONPATH can be updated automatically (write to <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> or <code class="docutils literal notranslate"><span class="pre">.zshrc</span></code> file). However, if your linux box using a different file such as .bash_profile for storing these variables, you can set these environmental variables by yourself.</p></li>
 </ol>
 <blockquote>
 <div><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ivabs-folder\bin</span></code> should be in <strong>PATH</strong>. Delete dakota soft link if you want
-to use your own Dakota.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ivabs-folder\vendors\dakota\share\dakota\Python</span></code> should be in <strong>PYTHONPATH</strong>.
-Use your own Dakota PATH if you want to use your own Dakota.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ivabs-folder\vendors</span></code> should be in <strong>PYTHONPATH</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ivabs\bin</span></code> should be in <strong>PATH</strong>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ivabs\vendors\dakota\share\dakota\Python</span></code> should be in <strong>PYTHONPATH</strong>. Use the corresponding Dakota Python PATH if you want to use the Dakota already installed on your computer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ivabs\vendors\msgpi</span></code> should be in <strong>PYTHONPATH</strong>.</p></li>
 </ul>
 </div></blockquote>
 <ol class="arabic simple" start="5">
-<li><p>Python3 is needed. Necessary python package include: <code class="docutils literal notranslate"><span class="pre">numpy,</span> <span class="pre">matplotlib</span></code></p></li>
+<li><p>Python3 is needed for using MSGPI. Necessary Python packages include: <code class="docutils literal notranslate"><span class="pre">numpy,</span> <span class="pre">matplotlib</span></code>.</p></li>
+<li><p>After installation, inside <code class="docutils literal notranslate"><span class="pre">ivabs</span></code>, there are six folders. The <code class="docutils literal notranslate"><span class="pre">vendors</span></code> folder contains all the codes integrated in iVABS. The <code class="docutils literal notranslate"><span class="pre">bin</span></code> folder contains shortcuts to the executables of different codes in <code class="docutils literal notranslate"><span class="pre">vendors</span></code>. If you want to use the Dakota already installed on your computer. please delete the shortcut <code class="docutils literal notranslate"><span class="pre">dakota</span></code> inside the <code class="docutils literal notranslate"><span class="pre">bin</span></code> folder.</p></li>
 </ol>
 </div></blockquote>
 </div>
-<div class="section" id="linux-portable-archives">
-<h2>Linux portable archives<a class="headerlink" href="#linux-portable-archives" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="linux-portable-archives-files-with-extension-tar-gz">
+<h2>Linux portable archives (files with extension <code class="docutils literal notranslate"><span class="pre">tar.gz</span></code>)<a class="headerlink" href="#linux-portable-archives-files-with-extension-tar-gz" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p>Uncompress the archive: <code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">xJvf</span> <span class="pre">iVABS.tar.xz</span></code>. Move to your desired folder
-<code class="docutils literal notranslate"><span class="pre">ivabs-folder</span></code>.</p></li>
+<li><p>Uncompress the archive using <code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">xzvf</span> <span class="pre">ivabs_x.x_linux64_portable.tar.gz</span></code> to a folder of your own choice.</p></li>
 <li><p>Environment variables of PATH and PYTHONPATH should be added manually.</p></li>
 </ol>
 <blockquote>
 <div><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ivabs-folder\bin</span></code> should be in <strong>PATH</strong>. Delete dakota soft link if you want
-to use your own Dakota.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ivabs-folder\vendors\dakota\share\dakota\Python</span></code> should be in <strong>PYTHONPATH</strong>.
-Use your own Dakota PATH if you want to use your own Dakota.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ivabs-folder\vendors</span></code> should be in <strong>PYTHONPATH</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ivabs\bin</span></code> should be in <strong>PATH</strong>. Delete the <code class="docutils literal notranslate"><span class="pre">dakota&quot;</span> <span class="pre">shortcut</span> <span class="pre">inside</span> <span class="pre">``bin</span></code> if you want the Dakota already installed on your computer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ivabs\vendors\dakota\share\dakota\Python</span></code> should be in <strong>PYTHONPATH</strong>. Use the corresponding Dakota Python PATH if you want to use the Dakota already installed on your computer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ivabs\vendors</span></code> should be in <strong>PYTHONPATH</strong>.</p></li>
 </ul>
 </div></blockquote>
-<ol class="arabic simple" start="3">
-<li><p>Python3 is needed. Necessary python package include: <code class="docutils literal notranslate"><span class="pre">numpy,</span> <span class="pre">matplotlib</span></code>.</p></li>
-</ol>
 </div></blockquote>
 </div>
 <div class="section" id="request-vabs-license">
 <h2>Request VABS license<a class="headerlink" href="#request-vabs-license" title="Permalink to this headline">¶</a></h2>
-<p>Request VABS license from <a class="reference external" href="http://analyswift.com/software-trial/">http://analyswift.com/software-trial/</a>.
-VABS is a commercial code. Put the license in <code class="docutils literal notranslate"><span class="pre">ivabs-folder</span></code>.</p>
+<p>VABS is a commercial code distributed along with iVABS. However, you need to request a license from <a class="reference external" href="http://analyswift.com/software-trial/">AnalySwift</a>.
+Put the license file in <code class="docutils literal notranslate"><span class="pre">ivabs</span></code>.</p>
 </div>
 </div>
 
@@ -313,7 +296,7 @@ VABS is a commercial code. Put the license in <code class="docutils literal notr
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="examples.html" class="btn btn-neutral float-right" title="Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to iVABS’ documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to iVABS Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

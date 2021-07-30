@@ -1,0 +1,6 @@
+﻿msgpi.sg.MaterialSection.stiffness\_refined
+===========================================
+
+.. currentmodule:: msgpi.sg
+
+.. autoattribute:: MaterialSection.stiffness_refined

@@ -1,0 +1,302 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>msgpi.ms.beam.Beam.findSectionByName &mdash; iVABS  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "wenbinyugroup/ivabs");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Beam Methods" href="../beam_methods.html" />
+    <link rel="prev" title="msgpi.ms.beam.Beam.findPtCoordByName" href="msgpi.ms.beam.Beam.findPtCoordByName.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> iVABS
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">iVABS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../ivabs/install.html">Download and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ivabs/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ivabs/tutorial.html">Tutorial: Design A Box Beam</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PreVABS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../prevabs/install.html">Download and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../prevabs/run.html">How to Run PreVABS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../prevabs/tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../prevabs/guide.html">Guide for Preparing Input Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../prevabs/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../prevabs/changelog.html">Change log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../prevabs/xml.html">Introduction to XML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../prevabs/references.html">References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MSGPI</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../sg_structuregene.html">StructureGene</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sg_materialsection.html">MaterialSection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../methods.html">Methods</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../beam.html">A Simple Beam Class</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../beam.html#beamsegment">BeamSegment</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../beam.html#beam">Beam</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../beam.html#id1">Constructor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../beam.html#id2">Attributes and underlying data</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../beam.html#id3">Methods</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="msgpi.ms.beam.Beam.findPtCoordByName.html">msgpi.ms.beam.Beam.findPtCoordByName</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">msgpi.ms.beam.Beam.findSectionByName</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../beam_methods.html">Beam Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utils.html">Utility Functions</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">iVABS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../beam.html">A Simple Beam Class</a> &raquo;</li>
+        
+      <li>msgpi.ms.beam.Beam.findSectionByName</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/wenbinyugroup/ivabs/blob/main/docs/source/msgpi/beam/msgpi.ms.beam.Beam.findSectionByName.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="msgpi-ms-beam-beam-findsectionbyname">
+<h1>msgpi.ms.beam.Beam.findSectionByName<a class="headerlink" href="#msgpi-ms-beam-beam-findsectionbyname" title="Permalink to this headline">¶</a></h1>
+<dl class="py method">
+<dt class="sig sig-object py" id="msgpi.ms.beam.Beam.findSectionByName">
+<span class="sig-prename descclassname"><span class="pre">Beam.</span></span><span class="sig-name descname"><span class="pre">findSectionByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.ms.beam.Beam.findSectionByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find sectional properties by section id.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>int</em>) – Section id.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Sectional properties.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../sg/msgpi.sg.MaterialSection.html#msgpi.sg.MaterialSection" title="msgpi.sg.MaterialSection">msgpi.sg.MaterialSection</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../beam_methods.html" class="btn btn-neutral float-right" title="Beam Methods" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="msgpi.ms.beam.Beam.findPtCoordByName.html" class="btn btn-neutral float-left" title="msgpi.ms.beam.Beam.findPtCoordByName" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Multiscale Structural Mechanics Group, Purdue University.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

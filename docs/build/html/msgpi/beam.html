@@ -7,12 +7,14 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>A Simple Beam Class &mdash; iVABS 0.2.0-alpha.2 documentation</title>
+  <title>A Simple Beam Class &mdash; iVABS  documentation</title>
   
 
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -66,15 +69,14 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Beam Methods" href="beam_methods.html" />
-    <link rel="prev" title="Methods" href="methods.html" /> 
+    <link rel="next" title="msgpi.ms.beam.BeamSegment" href="beam/msgpi.ms.beam.BeamSegment.html" />
+    <link rel="prev" title="msgpi.analysis.run" href="analysis/msgpi.analysis.run.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,10 +98,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 
           
             
-            
-              <div class="version">
-                0.2.0-a2
-              </div>
             
           
 
@@ -127,6 +125,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../ivabs/install.html">Download and Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ivabs/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/tutorial.html">Tutorial: Design A Box Beam</a></li>
 </ul>
 <p class="caption"><span class="caption-text">PreVABS</span></p>
 <ul>
@@ -146,15 +145,57 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toctree-l1"><a class="reference internal" href="methods.html">Methods</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">A Simple Beam Class</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#beamsegment">BeamSegment</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#constructor">Constructor</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#attributes-and-underlying-data">Attributes and underlying data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constructor">Constructor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.html">msgpi.ms.beam.BeamSegment</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#attributes-and-underlying-data">Attributes and underlying data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.points.html">msgpi.ms.beam.BeamSegment.points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.coords.html">msgpi.ms.beam.BeamSegment.coords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.css.html">msgpi.ms.beam.BeamSegment.css</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.rotate_a1.html">msgpi.ms.beam.BeamSegment.rotate_a1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.twist.html">msgpi.ms.beam.BeamSegment.twist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.local_frame_id.html">msgpi.ms.beam.BeamSegment.local_frame_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.frame_id.html">msgpi.ms.beam.BeamSegment.frame_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.curv_id.html">msgpi.ms.beam.BeamSegment.curv_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.num_divisions.html">msgpi.ms.beam.BeamSegment.num_divisions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#methods">Methods</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.calcLengthSq.html">msgpi.ms.beam.BeamSegment.calcLengthSq</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#beam">Beam</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id1">Constructor</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id2">Attributes and underlying data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Constructor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.html">msgpi.ms.beam.Beam</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Attributes and underlying data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.name.html">msgpi.ms.beam.Beam.name</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.analysis_type.html">msgpi.ms.beam.Beam.analysis_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.max_iteration.html">msgpi.ms.beam.Beam.max_iteration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.num_steps.html">msgpi.ms.beam.Beam.num_steps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.num_eigens.html">msgpi.ms.beam.Beam.num_eigens</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.angular_velocity.html">msgpi.ms.beam.Beam.angular_velocity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.linear_velocity.html">msgpi.ms.beam.Beam.linear_velocity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.points.html">msgpi.ms.beam.Beam.points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.segments.html">msgpi.ms.beam.Beam.segments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.pconditions.html">msgpi.ms.beam.Beam.pconditions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.mconditions.html">msgpi.ms.beam.Beam.mconditions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.sections.html">msgpi.ms.beam.Beam.sections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.frames.html">msgpi.ms.beam.Beam.frames</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.distrloads.html">msgpi.ms.beam.Beam.distrloads</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.timefunctions.html">msgpi.ms.beam.Beam.timefunctions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.initcurvatures.html">msgpi.ms.beam.Beam.initcurvatures</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Methods</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.findPtCoordByName.html">msgpi.ms.beam.Beam.findPtCoordByName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beam/msgpi.ms.beam.Beam.findSectionByName.html">msgpi.ms.beam.Beam.findSectionByName</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -245,6 +286,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.html#msgpi.ms.beam.BeamSegment" title="msgpi.ms.beam.BeamSegment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BeamSegment</span></code></a>()</p></td>
+<td><p>Class for a beam segment.</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -256,6 +300,33 @@ commentsRunWhenDOMLoaded(addUtterances);
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.points.html#msgpi.ms.beam.BeamSegment.points" title="msgpi.ms.beam.BeamSegment.points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BeamSegment.points</span></code></a></p></td>
+<td><p>Point labels.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.coords.html#msgpi.ms.beam.BeamSegment.coords" title="msgpi.ms.beam.BeamSegment.coords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BeamSegment.coords</span></code></a></p></td>
+<td><p>Coordinates of beginning and ending points.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.css.html#msgpi.ms.beam.BeamSegment.css" title="msgpi.ms.beam.BeamSegment.css"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BeamSegment.css</span></code></a></p></td>
+<td><p>Cross-section labels.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.rotate_a1.html#msgpi.ms.beam.BeamSegment.rotate_a1" title="msgpi.ms.beam.BeamSegment.rotate_a1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BeamSegment.rotate_a1</span></code></a></p></td>
+<td><p>Rotation around a1.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.twist.html#msgpi.ms.beam.BeamSegment.twist" title="msgpi.ms.beam.BeamSegment.twist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BeamSegment.twist</span></code></a></p></td>
+<td><p>Twist.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.local_frame_id.html#msgpi.ms.beam.BeamSegment.local_frame_id" title="msgpi.ms.beam.BeamSegment.local_frame_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BeamSegment.local_frame_id</span></code></a></p></td>
+<td><p>Local frame id.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.frame_id.html#msgpi.ms.beam.BeamSegment.frame_id" title="msgpi.ms.beam.BeamSegment.frame_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BeamSegment.frame_id</span></code></a></p></td>
+<td><p>Frame id</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.curv_id.html#msgpi.ms.beam.BeamSegment.curv_id" title="msgpi.ms.beam.BeamSegment.curv_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BeamSegment.curv_id</span></code></a></p></td>
+<td><p>Curvature id</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.num_divisions.html#msgpi.ms.beam.BeamSegment.num_divisions" title="msgpi.ms.beam.BeamSegment.num_divisions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BeamSegment.num_divisions</span></code></a></p></td>
+<td><p>Number of division of the segment.</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -267,6 +338,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.BeamSegment.calcLengthSq.html#msgpi.ms.beam.BeamSegment.calcLengthSq" title="msgpi.ms.beam.BeamSegment.calcLengthSq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BeamSegment.calcLengthSq</span></code></a>()</p></td>
+<td><p>Calculate the square of the segment length.</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -281,6 +355,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.Beam.html#msgpi.ms.beam.Beam" title="msgpi.ms.beam.Beam"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Beam</span></code></a>()</p></td>
+<td><p>Class for a slender beam-like structure.</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -292,6 +369,54 @@ commentsRunWhenDOMLoaded(addUtterances);
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.Beam.name.html#msgpi.ms.beam.Beam.name" title="msgpi.ms.beam.Beam.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Beam.name</span></code></a></p></td>
+<td><p>Name of the beam.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.Beam.analysis_type.html#msgpi.ms.beam.Beam.analysis_type" title="msgpi.ms.beam.Beam.analysis_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Beam.analysis_type</span></code></a></p></td>
+<td><p>Analysis type (GEBT).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.Beam.max_iteration.html#msgpi.ms.beam.Beam.max_iteration" title="msgpi.ms.beam.Beam.max_iteration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Beam.max_iteration</span></code></a></p></td>
+<td><p>Max iteration.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.Beam.num_steps.html#msgpi.ms.beam.Beam.num_steps" title="msgpi.ms.beam.Beam.num_steps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Beam.num_steps</span></code></a></p></td>
+<td><p>Number of analysis steps.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.Beam.num_eigens.html#msgpi.ms.beam.Beam.num_eigens" title="msgpi.ms.beam.Beam.num_eigens"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Beam.num_eigens</span></code></a></p></td>
+<td><p>Number of eigen analysis resutls.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.Beam.angular_velocity.html#msgpi.ms.beam.Beam.angular_velocity" title="msgpi.ms.beam.Beam.angular_velocity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Beam.angular_velocity</span></code></a></p></td>
+<td><p>Angular velocity of the rotating beam.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.Beam.linear_velocity.html#msgpi.ms.beam.Beam.linear_velocity" title="msgpi.ms.beam.Beam.linear_velocity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Beam.linear_velocity</span></code></a></p></td>
+<td><p>Linear velocity of the first key point.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.Beam.points.html#msgpi.ms.beam.Beam.points" title="msgpi.ms.beam.Beam.points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Beam.points</span></code></a></p></td>
+<td><p>Key point id and coordinates.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.Beam.segments.html#msgpi.ms.beam.Beam.segments" title="msgpi.ms.beam.Beam.segments"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Beam.segments</span></code></a></p></td>
+<td><p>Beam segments <cite>{bsid: BeamSegment object, …}</cite></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.Beam.pconditions.html#msgpi.ms.beam.Beam.pconditions" title="msgpi.ms.beam.Beam.pconditions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Beam.pconditions</span></code></a></p></td>
+<td><p>Point conditions (B.C.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.Beam.mconditions.html#msgpi.ms.beam.Beam.mconditions" title="msgpi.ms.beam.Beam.mconditions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Beam.mconditions</span></code></a></p></td>
+<td><p>Member conditions (B.C.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.Beam.sections.html#msgpi.ms.beam.Beam.sections" title="msgpi.ms.beam.Beam.sections"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Beam.sections</span></code></a></p></td>
+<td><p>Effective properties of cross-sections.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.Beam.frames.html#msgpi.ms.beam.Beam.frames" title="msgpi.ms.beam.Beam.frames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Beam.frames</span></code></a></p></td>
+<td><p>Local frames</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.Beam.distrloads.html#msgpi.ms.beam.Beam.distrloads" title="msgpi.ms.beam.Beam.distrloads"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Beam.distrloads</span></code></a></p></td>
+<td><p>Distribution loads</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.Beam.timefunctions.html#msgpi.ms.beam.Beam.timefunctions" title="msgpi.ms.beam.Beam.timefunctions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Beam.timefunctions</span></code></a></p></td>
+<td><p>Time functions</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.Beam.initcurvatures.html#msgpi.ms.beam.Beam.initcurvatures" title="msgpi.ms.beam.Beam.initcurvatures"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Beam.initcurvatures</span></code></a></p></td>
+<td><p>Initial curvatures</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -303,6 +428,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.Beam.findPtCoordByName.html#msgpi.ms.beam.Beam.findPtCoordByName" title="msgpi.ms.beam.Beam.findPtCoordByName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Beam.findPtCoordByName</span></code></a>(name)</p></td>
+<td><p>Find key point coordinates by point id.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="beam/msgpi.ms.beam.Beam.findSectionByName.html#msgpi.ms.beam.Beam.findSectionByName" title="msgpi.ms.beam.Beam.findSectionByName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Beam.findSectionByName</span></code></a>(name)</p></td>
+<td><p>Find sectional properties by section id.</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -315,8 +446,8 @@ commentsRunWhenDOMLoaded(addUtterances);
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="beam_methods.html" class="btn btn-neutral float-right" title="Beam Methods" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="methods.html" class="btn btn-neutral float-left" title="Methods" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="beam/msgpi.ms.beam.BeamSegment.html" class="btn btn-neutral float-right" title="msgpi.ms.beam.BeamSegment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="analysis/msgpi.analysis.run.html" class="btn btn-neutral float-left" title="msgpi.analysis.run" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

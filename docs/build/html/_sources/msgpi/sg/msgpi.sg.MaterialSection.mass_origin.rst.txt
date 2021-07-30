@@ -1,0 +1,6 @@
+﻿msgpi.sg.MaterialSection.mass\_origin
+=====================================
+
+.. currentmodule:: msgpi.sg
+
+.. autoattribute:: MaterialSection.mass_origin

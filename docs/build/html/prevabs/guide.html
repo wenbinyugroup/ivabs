@@ -7,12 +7,14 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Guide for Preparing Input Files &mdash; iVABS 0.2.0-alpha.2 documentation</title>
+  <title>Guide for Preparing Input Files &mdash; iVABS  documentation</title>
   
 
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -66,7 +69,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -97,10 +100,6 @@ commentsRunWhenDOMLoaded(addUtterances);
           
             
             
-              <div class="version">
-                0.2.0-a2
-              </div>
-            
           
 
           
@@ -127,6 +126,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../ivabs/install.html">Download and Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ivabs/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/tutorial.html">Tutorial: Design A Box Beam</a></li>
 </ul>
 <p class="caption"><span class="caption-text">PreVABS</span></p>
 <ul class="current">
@@ -246,27 +246,18 @@ Except the base points file, which has a file extension .dat, all other files us
 The input syntax for this main file is shown in <a class="reference internal" href="#code-crosssection"><span class="std std-numref">Listing 7</span></a>.</p>
 <div class="literal-block-wrapper docutils container" id="code-crosssection">
 <div class="code-block-caption"><span class="caption-number">Listing 7 </span><span class="caption-text">Input syntax for the cross section file.</span><a class="headerlink" href="#code-crosssection" title="Permalink to this code">¶</a></div>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;cross_section</span> <span class="na">name=</span><span class="s">&quot;&quot;</span> <span class="na">format=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;include&gt;</span>...<span class="nt">&lt;/include&gt;</span>
-  <span class="nt">&lt;analysis&gt;</span>...<span class="nt">&lt;/analysis&gt;</span>
-  <span class="nt">&lt;general&gt;</span>...<span class="nt">&lt;/general&gt;</span>
-  <span class="nt">&lt;baselines&gt;</span>...<span class="nt">&lt;/baselines&gt;</span>
-  <span class="nt">&lt;layups&gt;</span>...<span class="nt">&lt;/layups&gt;</span>
-  <span class="nt">&lt;component&gt;</span>...<span class="nt">&lt;/component&gt;</span>
-  <span class="nt">&lt;component&gt;</span>...<span class="nt">&lt;/component&gt;</span>
-  ...
-<span class="nt">&lt;/cross_section&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;cross_section</span> <span class="na">name=</span><span class="s">&quot;&quot;</span> <span class="na">format=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 2</span>  <span class="nt">&lt;include&gt;</span>...<span class="nt">&lt;/include&gt;</span>
+<span class="linenos"> 3</span>  <span class="nt">&lt;analysis&gt;</span>...<span class="nt">&lt;/analysis&gt;</span>
+<span class="linenos"> 4</span>  <span class="nt">&lt;general&gt;</span>...<span class="nt">&lt;/general&gt;</span>
+<span class="linenos"> 5</span>  <span class="nt">&lt;baselines&gt;</span>...<span class="nt">&lt;/baselines&gt;</span>
+<span class="linenos"> 6</span>  <span class="nt">&lt;layups&gt;</span>...<span class="nt">&lt;/layups&gt;</span>
+<span class="linenos"> 7</span>  <span class="nt">&lt;component&gt;</span>...<span class="nt">&lt;/component&gt;</span>
+<span class="linenos"> 8</span>  <span class="nt">&lt;component&gt;</span>...<span class="nt">&lt;/component&gt;</span>
+<span class="linenos"> 9</span>  ...
+<span class="linenos">10</span><span class="nt">&lt;/cross_section&gt;</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <p>Data of geometry and layup can be arranged in two ways, controlled by the attribute <code class="docutils literal notranslate"><span class="pre">format</span></code>:</p>
 <ul class="simple">

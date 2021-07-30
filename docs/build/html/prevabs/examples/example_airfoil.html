@@ -7,12 +7,14 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Airfoil (MH-104) &mdash; iVABS 0.2.0-alpha.2 documentation</title>
+  <title>Airfoil (MH-104) &mdash; iVABS  documentation</title>
   
 
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
@@ -66,7 +69,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -97,10 +100,6 @@ commentsRunWhenDOMLoaded(addUtterances);
           
             
             
-              <div class="version">
-                0.2.0-a2
-              </div>
-            
           
 
           
@@ -127,6 +126,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/install.html">Download and Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ivabs/tutorial.html">Tutorial: Design A Box Beam</a></li>
 </ul>
 <p class="caption"><span class="caption-text">PreVABS</span></p>
 <ul class="current">
@@ -235,7 +235,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="problem-description">
 <h2>Problem description<a class="headerlink" href="#problem-description" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center" id="fig-mh104-draw">
-<a class="reference internal image-reference" href="../../_images/examplemh10401.png"><img alt="../../_images/examplemh10401.png" src="../../_images/examplemh10401.png" style="width: 5.5in;" /></a>
+<a class="reference internal image-reference" href="../../_images/examplemh1040.png"><img alt="../../_images/examplemh1040.png" src="../../_images/examplemh1040.png" style="width: 5.5in;" /></a>
 <p class="caption"><span class="caption-number">Figure 39 </span><span class="caption-text">Sketch of a cross section for a typical wind turbine blade <a class="reference internal" href="../references.html#chen2010" id="id1"><span>[CHEN2010]</span></a>.</span><a class="headerlink" href="#fig-mh104-draw" title="Permalink to this image">¶</a></p>
 </div>
 <p>This example demonstrates the capability of building a cross section having an airfoil shape, which is commonly seen on wind turbine blades or helicopter rotor blades.
@@ -284,19 +284,19 @@ Complete input files can be found in <code class="docutils literal notranslate">
 </tbody>
 </table>
 <div class="figure align-center" id="fig-mh1041">
-<a class="reference internal image-reference" href="../../_images/examplemh10411.png"><img alt="../../_images/examplemh10411.png" src="../../_images/examplemh10411.png" style="width: 6.5in;" /></a>
+<a class="reference internal image-reference" href="../../_images/examplemh1041.png"><img alt="../../_images/examplemh1041.png" src="../../_images/examplemh1041.png" style="width: 6.5in;" /></a>
 <p class="caption"><span class="caption-number">Figure 40 </span><span class="caption-text"><em>Base point</em>s of the tube cross section.</span><a class="headerlink" href="#fig-mh1041" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="fig-mh1042">
-<a class="reference internal image-reference" href="../../_images/examplemh10421.png"><img alt="../../_images/examplemh10421.png" src="../../_images/examplemh10421.png" style="width: 6.5in;" /></a>
+<a class="reference internal image-reference" href="../../_images/examplemh1042.png"><img alt="../../_images/examplemh1042.png" src="../../_images/examplemh1042.png" style="width: 6.5in;" /></a>
 <p class="caption"><span class="caption-number">Figure 41 </span><span class="caption-text"><em>Base line</em>s of the tube cross section.</span><a class="headerlink" href="#fig-mh1042" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="fig-mh1043">
-<a class="reference internal image-reference" href="../../_images/examplemh10431.png"><img alt="../../_images/examplemh10431.png" src="../../_images/examplemh10431.png" style="width: 6.5in;" /></a>
+<a class="reference internal image-reference" href="../../_images/examplemh1043.png"><img alt="../../_images/examplemh1043.png" src="../../_images/examplemh1043.png" style="width: 6.5in;" /></a>
 <p class="caption"><span class="caption-number">Figure 42 </span><span class="caption-text"><em>Segment</em>s of the tube cross section.</span><a class="headerlink" href="#fig-mh1043" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="fig-mh104">
-<a class="reference internal image-reference" href="../../_images/examplemh10441.png"><img alt="../../_images/examplemh10441.png" src="../../_images/examplemh10441.png" style="width: 6.5in;" /></a>
+<a class="reference internal image-reference" href="../../_images/examplemh1044.png"><img alt="../../_images/examplemh1044.png" src="../../_images/examplemh1044.png" style="width: 6.5in;" /></a>
 <p class="caption"><span class="caption-number">Figure 43 </span><span class="caption-text">Meshed cross section viewed in Gmsh.</span><a class="headerlink" href="#fig-mh104" title="Permalink to this image">¶</a></p>
 </div>
 <table class="docutils align-center" id="table-mh104-materials">

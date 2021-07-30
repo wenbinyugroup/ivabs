@@ -1,0 +1,24 @@
+﻿msgpi.ms.beam.BeamSegment
+=========================
+
+.. currentmodule:: msgpi.ms.beam
+
+.. autoclass:: BeamSegment
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~BeamSegment.__init__
+      ~BeamSegment.calcLengthSq
+      ~BeamSegment.summary
+   
+   
+
+   
+   
+   

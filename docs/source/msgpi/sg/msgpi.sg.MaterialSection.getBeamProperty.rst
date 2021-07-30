@@ -1,0 +1,6 @@
+﻿msgpi.sg.MaterialSection.getBeamProperty
+========================================
+
+.. currentmodule:: msgpi.sg
+
+.. automethod:: MaterialSection.getBeamProperty
