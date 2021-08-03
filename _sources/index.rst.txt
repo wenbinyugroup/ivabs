@@ -14,7 +14,7 @@ For download and install iVABS, refer to :doc:`ivabs/install`.
 
 PreVABS is a preprocessor to generate composite sections with ply-level details based on a few design parameters including sectional geometry, topology, and material. 
 
-VABS is a  cross-sectional analysis code to to model composite slender structures as beams. It is resulting from  decades of university research (Georgia Tech/Utah State/Purdue) sponsored by US Army.  
+VABS is a cross-sectional analysis code to to model composite slender structures as beams. It is resulting from  decades of university research (Georgia Tech/Utah State/Purdue) sponsored by US Army.  
 
 GEBT is a geometrical exact nonlinear beam analysis code for computing linear or nonlinear, static or dynamic behavior of composite beams. This code can be replaced with more sophicated codes such as `MBDyn <https://public.gitlab.polimi.it/DAER/mbdyn>`_, `RCAS <https://www.flightlab.com/grcas.html>`_, `DYMORE <http://www.dymoresolutions.com>`_, `CAMRAD II <http://www.johnson-aeronautics.com/>`_, etc.
 
@@ -42,7 +42,6 @@ License
 
 
 .. toctree::
-   :hidden:
    :maxdepth: 2
    :caption: iVABS
    
@@ -50,29 +49,37 @@ License
    ivabs/examples
    ivabs/tutorial
 
-.. toctree::
-   :hidden:
-   :maxdepth: 2
-   :caption: PreVABS
-
-   prevabs/install
-   prevabs/run
-   prevabs/tutorial
-   prevabs/guide
-   prevabs/examples
-   prevabs/changelog
-   prevabs/xml
-   prevabs/references
-
 
 .. toctree::
-   :hidden:
    :maxdepth: 2
-   :caption: MSGPI 
+   :caption: Components
 
-   msgpi/sg_structuregene
-   msgpi/sg_materialsection
-   msgpi/methods
-   msgpi/beam
-   msgpi/beam_methods
-   msgpi/utils
+   prevabs/index
+   msgpi/index
+
+.. .. toctree::
+..    :hidden:
+..    :maxdepth: 2
+..    :caption: PreVABS
+
+..    prevabs/install
+..    prevabs/run
+..    prevabs/tutorial
+..    prevabs/guide
+..    prevabs/examples
+..    prevabs/changelog
+..    prevabs/xml
+..    prevabs/references
+
+
+.. .. toctree::
+..    :hidden:
+..    :maxdepth: 2
+..    :caption: MSGPI 
+
+..    msgpi/sg_structuregene
+..    msgpi/sg_materialsection
+..    msgpi/methods
+..    msgpi/beam
+..    msgpi/beam_methods
+..    msgpi/utils

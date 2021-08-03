@@ -5,13 +5,13 @@ Methods
 Input/Output
 ------------
 
-.. currentmodule:: msgpi.io.iovabs
+.. currentmodule:: msgpi.io
 
 .. highlight:: python
 
 ::
 
-    import msgpi.io.iovabs
+    import msgpi.io
 
 
 Reading
@@ -20,8 +20,15 @@ Reading
 .. autosummary::
     :toctree: io/
 
-    readVABSIn
-    readVABSOutHomo
+    iovabs.readVABSIn
+    iovabs.readVABSOut
+    iovabs.readVABSOutHomo
+    iovabs.readVABSOutStrengthRatio
+    iosc.readSCIn
+    iosc.readSCOut
+    iosc.readSCOutBeamProperty
+    iosc.readSCOutHomo
+    iosc.readSCOutFailure
 
 
 
@@ -32,13 +39,22 @@ Writing
 .. autosummary::
     :toctree: io/
 
-    writeVABSIn
-    writeVABSNodes
-    writeVABSElements
-    writeVABSElementOrientations
-    writeVABSMOCombos
-    writeVABSMaterials
-    writeVABSMacroData
+    iovabs.writeVABSIn
+    iovabs.writeVABSNodes
+    iovabs.writeVABSElements
+    iovabs.writeVABSElementOrientations
+    iovabs.writeVABSMOCombos
+    iovabs.writeVABSMaterials
+    iovabs.writeVABSMacroData
+    iosc.writeSCNodes
+    iosc.writeSCElements
+    iosc.writeSCElementOrientations
+    iosc.writeSCMOCombos
+    iosc.writeSCMaterials
+    iosc.writeSCInH
+    iosc.writeSCInD
+    iosc.writeSCInF
+    iosc.writeSCIn
 
 
 
@@ -92,5 +108,7 @@ Analysis
 
     solve
     run
+    runVABS
+    runSwiftComp
 
 
