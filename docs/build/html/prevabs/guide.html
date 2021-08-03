@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Guide for Preparing Input Files &mdash; iVABS  documentation</title>
+  <title>Guide for Preparing Input Files &mdash; iVABS 1.4 documentation</title>
   
 
   
@@ -75,9 +75,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
     
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Coordinate systems" href="guide/pre_coordinate.html" />
-    <link rel="prev" title="Tutorial" href="tutorial.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -99,6 +97,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 
           
             
+            
+              <div class="version">
+                1.4
+              </div>
             
           
 
@@ -124,37 +126,42 @@ commentsRunWhenDOMLoaded(addUtterances);
             
               <p class="caption"><span class="caption-text">iVABS</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../ivabs/install.html">Download and Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ivabs/examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ivabs/tutorial.html">Tutorial: Design A Box Beam</a></li>
-</ul>
-<p class="caption"><span class="caption-text">PreVABS</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="install.html">Download and Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="run.html">How to Run PreVABS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Guide for Preparing Input Files</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="guide/pre_coordinate.html">Coordinate systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="guide/pre_shape.html">Geometry and shapes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="guide/pre_material.html">Materials and layups</a></li>
-<li class="toctree-l2"><a class="reference internal" href="guide/pre_component.html">Components</a></li>
-<li class="toctree-l2"><a class="reference internal" href="guide/pre_recover.html">Specifications for recovery</a></li>
-<li class="toctree-l2"><a class="reference internal" href="guide/pre_overall.html">Other input settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/install.html">Download and Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/install.html#windows-installer-files-with-extension-exe">Windows installer (files with extension <code class="docutils literal notranslate"><span class="pre">exe</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/install.html#windows-portable-archive-files-with-extension-7z">Windows portable archive (files with extension <code class="docutils literal notranslate"><span class="pre">7z</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/install.html#linux-installer-files-with-extension-sh">Linux installer (files with extension <code class="docutils literal notranslate"><span class="pre">sh</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/install.html#linux-portable-archives-files-with-extension-tar-gz">Linux portable archives (files with extension <code class="docutils literal notranslate"><span class="pre">tar.gz</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/install.html#request-vabs-license">Request VABS license</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html">Change log</a></li>
-<li class="toctree-l1"><a class="reference internal" href="xml.html">Introduction to XML</a></li>
-<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/example_uh60a_opt.html">Example 3: Optimization of UH60A with Dakota</a></li>
 </ul>
-<p class="caption"><span class="caption-text">MSGPI</span></p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/tutorial.html">Tutorial: Design A Composite Box Beam</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/tutorial.html#problem-description">Problem Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/tutorial.html#optimization-setup">Optimization Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/tutorial.html#file-prepration">File Prepration</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Components</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../msgpi/sg_structuregene.html">StructureGene</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../msgpi/sg_materialsection.html">MaterialSection</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../msgpi/methods.html">Methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../msgpi/beam.html">A Simple Beam Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../msgpi/beam_methods.html">Beam Methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../msgpi/utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">PreVABS Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="run.html">How to Run PreVABS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html">Change log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xml.html">Introduction to XML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../msgpi/index.html">msgpi Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../msgpi/user_guide.html">User Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../msgpi/ref_manual.html">Reference</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -227,7 +234,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   <div class="section" id="guide-for-preparing-input-files">
 <h1>Guide for Preparing Input Files<a class="headerlink" href="#guide-for-preparing-input-files" title="Permalink to this headline">¶</a></h1>
 <p>In PreVABS, a cross section is defined through two aspects: components
-and global configuration, as shown in <a class="reference internal" href="#fig-csfiles1"><span class="std std-numref">Fig. 10</span></a>.
+and global configuration, as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code>.
 Components are built from geometry and materials
 The geometry aspect comprises definitions of base points and base lines.
 The material aspect includes material properties, lamina thicknesses,
@@ -235,7 +242,7 @@ layup stacking sequences, etc. The global configuration contains the
 files included, transformation, meshing options, and analysis settings.</p>
 <div class="figure align-center" id="fig-csfiles1">
 <a class="reference internal image-reference" href="../_images/chart1.png"><img alt="../_images/chart1.png" src="../_images/chart1.png" style="width: 75%;" /></a>
-<p class="caption"><span class="caption-number">Figure 10 </span><span class="caption-text">Cross section definition in PreVABS.</span><a class="headerlink" href="#fig-csfiles1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Cross section definition in PreVABS.</span><a class="headerlink" href="#fig-csfiles1" title="Permalink to this image">¶</a></p>
 </div>
 <p>To create the cross section, at least four input files are needed.
 Definitions of the geometry, materials and layups are stored in three files separately.
@@ -243,9 +250,9 @@ A top level cross section file stores the definitions of components and global c
 In some cases, a separate file storing base points is needed (such as an airfoil).
 Except the base points file, which has a file extension .dat, all other files use an XML format.</p>
 <p>A top level cross section file stores all information that will be discussed in the following sections.
-The input syntax for this main file is shown in <a class="reference internal" href="#code-crosssection"><span class="std std-numref">Listing 7</span></a>.</p>
+The input syntax for this main file is shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Listing</span> <span class="pre">%s</span></code>.</p>
 <div class="literal-block-wrapper docutils container" id="code-crosssection">
-<div class="code-block-caption"><span class="caption-number">Listing 7 </span><span class="caption-text">Input syntax for the cross section file.</span><a class="headerlink" href="#code-crosssection" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">Input syntax for the cross section file.</span><a class="headerlink" href="#code-crosssection" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;cross_section</span> <span class="na">name=</span><span class="s">&quot;&quot;</span> <span class="na">format=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 2</span>  <span class="nt">&lt;include&gt;</span>...<span class="nt">&lt;/include&gt;</span>
 <span class="linenos"> 3</span>  <span class="nt">&lt;analysis&gt;</span>...<span class="nt">&lt;/analysis&gt;</span>
@@ -316,10 +323,6 @@ The input syntax for this main file is shown in <a class="reference internal" hr
            
           </div>
           <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="guide/pre_coordinate.html" class="btn btn-neutral float-right" title="Coordinate systems" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="tutorial.html" class="btn btn-neutral float-left" title="Tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-    </div>
 
   <hr/>
 

@@ -3,29 +3,23 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to msgpi documentation!
-========================================
+.. _section-msgpi:
+
+msgpi Documentation
+===================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Table of Contents
 
-   sg_structuregene
-   sg_materialsection
-   methods
-   beam
-   beam_methods
-   utils
+   user_guide
+   ref_manual
 
 
 
-.. sg_module
-.. ms_module
-.. utils
+.. Indices and tables
+.. ==================
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`

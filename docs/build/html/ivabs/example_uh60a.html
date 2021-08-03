@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Example 1: Capability of PreVABS (UH60A airfoil) &mdash; iVABS  documentation</title>
+  <title>Example 1: Automatic Process of Cross-sectional Analysis &mdash; iVABS 1.4 documentation</title>
   
 
   
@@ -69,7 +69,6 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -100,6 +99,10 @@ commentsRunWhenDOMLoaded(addUtterances);
           
             
             
+              <div class="version">
+                1.4
+              </div>
+            
           
 
           
@@ -124,34 +127,42 @@ commentsRunWhenDOMLoaded(addUtterances);
             
               <p class="caption"><span class="caption-text">iVABS</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="install.html">Download and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Download and Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#windows-installer-files-with-extension-exe">Windows installer (files with extension <code class="docutils literal notranslate"><span class="pre">exe</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#windows-portable-archive-files-with-extension-7z">Windows portable archive (files with extension <code class="docutils literal notranslate"><span class="pre">7z</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#linux-installer-files-with-extension-sh">Linux installer (files with extension <code class="docutils literal notranslate"><span class="pre">sh</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#linux-portable-archives-files-with-extension-tar-gz">Linux portable archives (files with extension <code class="docutils literal notranslate"><span class="pre">tar.gz</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#request-vabs-license">Request VABS license</a></li>
+</ul>
+</li>
 <li class="toctree-l1 current"><a class="reference internal" href="examples.html">Examples</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Example 1: Capability of PreVABS (UH60A airfoil)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
 <li class="toctree-l2"><a class="reference internal" href="example_uh60a_opt.html">Example 3: Optimization of UH60A with Dakota</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial: Design A Box Beam</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial: Design A Composite Box Beam</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#problem-description">Problem Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#optimization-setup">Optimization Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#file-prepration">File Prepration</a></li>
 </ul>
-<p class="caption"><span class="caption-text">PreVABS</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../prevabs/install.html">Download and Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../prevabs/run.html">How to Run PreVABS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../prevabs/tutorial.html">Tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../prevabs/guide.html">Guide for Preparing Input Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../prevabs/examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../prevabs/changelog.html">Change log</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../prevabs/xml.html">Introduction to XML</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../prevabs/references.html">References</a></li>
+</li>
 </ul>
-<p class="caption"><span class="caption-text">MSGPI</span></p>
+<p class="caption"><span class="caption-text">Components</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../msgpi/sg_structuregene.html">StructureGene</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../msgpi/sg_materialsection.html">MaterialSection</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../msgpi/methods.html">Methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../msgpi/beam.html">A Simple Beam Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../msgpi/beam_methods.html">Beam Methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../msgpi/utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prevabs/index.html">PreVABS Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../prevabs/run.html">How to Run PreVABS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prevabs/tutorial.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prevabs/changelog.html">Change log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prevabs/xml.html">Introduction to XML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prevabs/references.html">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../msgpi/index.html">msgpi Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../msgpi/user_guide.html">User Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../msgpi/ref_manual.html">Reference</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -202,7 +213,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
           <li><a href="examples.html">Examples</a> &raquo;</li>
         
-      <li>Example 1: Capability of PreVABS (UH60A airfoil)</li>
+      <li>Example 1: Automatic Process of Cross-sectional Analysis</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -223,51 +234,62 @@ commentsRunWhenDOMLoaded(addUtterances);
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="example-1-capability-of-prevabs-uh60a-airfoil">
-<h1>Example 1: Capability of PreVABS (UH60A airfoil)<a class="headerlink" href="#example-1-capability-of-prevabs-uh60a-airfoil" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-center" id="fig-uh60a-example">
-<a class="reference internal image-reference" href="../_images/fig_uh60a_example.jpg"><img alt="../_images/fig_uh60a_example.jpg" src="../_images/fig_uh60a_example.jpg" style="width: 5.5in;" /></a>
+  <div class="section" id="example-1-automatic-process-of-cross-sectional-analysis">
+<h1>Example 1: Automatic Process of Cross-sectional Analysis<a class="headerlink" href="#example-1-automatic-process-of-cross-sectional-analysis" title="Permalink to this headline">¶</a></h1>
+<p>This example serves the purpose to demonstrate the workflow and scripting for running a cross-sectional analysis starting from passing in desgin parameters to extracting desired beam properties.
+This process will be the core of design optimizations of composite slender structures.</p>
+<div class="section" id="process-setup">
+<h2>Process setup<a class="headerlink" href="#process-setup" title="Permalink to this headline">¶</a></h2>
+<p>The cross-section input file template provides the overall design.
+Among all parameters in the file, fiber angles of the four layers of the box spar are selected as those parameters requiring a separate input.</p>
+<div class="figure align-center" id="fig-ex-cs-analysis">
+<a class="reference internal image-reference" href="../_images/ex_cs_analysis.png"><img alt="../_images/ex_cs_analysis.png" src="../_images/ex_cs_analysis.png" style="width: 6in;" /></a>
 </div>
-<p>This figure shows the construction model of PreVABS input. You should prepare 5 input files: basepoints.dat, baseline.xml, layup.xml, material.xml, section.xml. Current version of PreVABS also support combining all inputs in a single XML file.</p>
+<p>This process constains the following steps:</p>
 <ol class="arabic simple">
-<li><p>Get into <code class="docutils literal notranslate"><span class="pre">root-folder\examples\ex_uh60a</span></code>.</p></li>
-<li><p>Open a command prompt.</p></li>
-<li><p>Run <code class="docutils literal notranslate"><span class="pre">prevabs</span> <span class="pre">-i</span> <span class="pre">uh60a_section.xml</span> <span class="pre">-h</span> <span class="pre">-v</span> <span class="pre">-e</span></code>.</p></li>
-<li><p>This will build the airfoil model and run VABS. The cross-sectional property will be stored in uh60a_section.sg.K. Gmsh GUI will be opened to display the model.</p></li>
+<li><p>Assign/Get design parameters</p></li>
+<li><p>Substitute parameter tokens in the template file with given values, and create the true cross-sectional input file</p></li>
+<li><p>Run PreVABS and VABS for cross-sectional analysis</p></li>
+<li><p>Get desired beam properties</p></li>
 </ol>
-<p>The table below shows the 4x4 stiffness matrix for of classical beam model.</p>
-<table class="docutils align-center" id="uh60a-stiffness">
-<caption><span class="caption-number">Table 1 </span><span class="caption-text">Beam stiffness of UH60A airfoil</span><a class="headerlink" href="#uh60a-stiffness" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(4.2369\times 10^{7}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(-8.1467\times 10^{3}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(4.6272\times 10^{5}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(-1.7006\times 10^{7}\)</span></p></td>
-</tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(-8.1467\times 10^{3}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(1.6166\times 10^{5}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(-7.2404\times 10^{1}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(2.2351\times 10^{3}\)</span></p></td>
-</tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(4.6272\times 10^{5}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(-7.2404\times 10^{1}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(1.4981\times 10^{5}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(-1.8577\times 10^{5}\)</span></p></td>
-</tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(-1.7006\times 10^{7}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(2.2351\times 10^{3}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(-1.8577\times 10^{5}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(1.2608\times 10^{7}\)</span></p></td>
-</tr>
-</tbody>
-</table>
-<p>PreVABS features non-structural mass, ply drops, filler materials, building layups from sub-layups, and topology library.</p>
+<p>This example contains the following files:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">process.py</span></code>: Process script</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uh60a_section.xml.tmp</span></code>: Cross-sectional design input template</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sc1095.dat</span></code>: Airfoil data</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">material_database.xml</span></code>: Material database</p></li>
+</ul>
+</div>
+<div class="section" id="run">
+<h2>Run<a class="headerlink" href="#run" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Get into <code class="docutils literal notranslate"><span class="pre">{IVABS_ROOT}\examples\ex_uh60a_cs_analysis_auto</span></code>.</p></li>
+<li><p>Open a command prompt.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">process.py</span></code>.</p></li>
+</ol>
+</div>
+<div class="section" id="results">
+<h2>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
+<p>If everything runs successfully, the prompt will print the following lines:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">INFO</span>     <span class="o">|</span> <span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">03</span> <span class="mi">15</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">51</span> <span class="o">|</span> <span class="n">process</span><span class="o">.</span><span class="n">process</span> <span class="o">|</span> <span class="n">start</span>
+<span class="linenos"> 2</span><span class="n">INFO</span>     <span class="o">|</span> <span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">03</span> <span class="mi">15</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">51</span> <span class="o">|</span> <span class="n">analysis</span><span class="o">.</span><span class="n">solve</span> <span class="o">|</span> <span class="n">preprocessing</span><span class="o">...</span>
+<span class="linenos"> 3</span><span class="n">INFO</span>     <span class="o">|</span> <span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">03</span> <span class="mi">15</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">51</span> <span class="o">|</span> <span class="n">presg</span><span class="o">.</span><span class="n">preSG</span> <span class="o">|</span> <span class="n">prevabs</span><span class="o">.</span><span class="n">exe</span> <span class="o">-</span><span class="n">i</span> <span class="n">uh60a_section</span><span class="o">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">vabs</span> <span class="o">-</span><span class="n">h</span>
+<span class="linenos"> 4</span><span class="n">INFO</span>     <span class="o">|</span> <span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">03</span> <span class="mi">15</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">52</span> <span class="o">|</span> <span class="n">analysis</span><span class="o">.</span><span class="n">solve</span> <span class="o">|</span> <span class="n">running</span> <span class="n">analysis</span><span class="o">...</span>
+<span class="linenos"> 5</span><span class="n">INFO</span>     <span class="o">|</span> <span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">03</span> <span class="mi">15</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">52</span> <span class="o">|</span> <span class="n">analysis</span><span class="o">.</span><span class="n">runVABS</span> <span class="o">|</span> <span class="n">vabs</span> <span class="n">uh60a_section</span><span class="o">.</span><span class="n">sg</span>
+<span class="linenos"> 6</span><span class="n">INFO</span>     <span class="o">|</span> <span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">03</span> <span class="mi">15</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">54</span> <span class="o">|</span> <span class="n">analysis</span><span class="o">.</span><span class="n">solve</span> <span class="o">|</span> <span class="n">reading</span> <span class="n">results</span><span class="o">...</span>
+<span class="linenos"> 7</span><span class="n">INFO</span>     <span class="o">|</span> <span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">03</span> <span class="mi">15</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">54</span> <span class="o">|</span> <span class="n">process</span><span class="o">.</span><span class="n">process</span> <span class="o">|</span> <span class="n">finish</span>
+<span class="linenos"> 8</span><span class="n">EA</span> <span class="o">=</span> <span class="mf">42703405.884</span>
+<span class="linenos"> 9</span><span class="n">GJ</span> <span class="o">=</span> <span class="mf">19099828.485</span>
+<span class="linenos">10</span><span class="n">EI22</span> <span class="o">=</span> <span class="mf">24152439.987</span>
+<span class="linenos">11</span><span class="n">EI33</span> <span class="o">=</span> <span class="mf">841561460.1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="further-reading">
+<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
+<p>To understand more about how the cross-section is parameterized and how to prepare the design input file, please check <a class="reference internal" href="../prevabs/index.html#section-prevabs"><span class="std std-ref">PreVABS Documentation</span></a>.</p>
+<p>To understand more about how to extract extract beam properties, please check <a class="reference internal" href="../msgpi/index.html#section-msgpi"><span class="std std-ref">msgpi Documentation</span></a>.</p>
+</div>
 </div>
 
 

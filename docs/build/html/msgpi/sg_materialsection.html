@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>MaterialSection &mdash; iVABS  documentation</title>
+  <title>MaterialSection &mdash; iVABS 1.4 documentation</title>
   
 
   
@@ -99,6 +99,10 @@ commentsRunWhenDOMLoaded(addUtterances);
           
             
             
+              <div class="version">
+                1.4
+              </div>
+            
           
 
           
@@ -123,62 +127,42 @@ commentsRunWhenDOMLoaded(addUtterances);
             
               <p class="caption"><span class="caption-text">iVABS</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../ivabs/install.html">Download and Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ivabs/examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ivabs/tutorial.html">Tutorial: Design A Box Beam</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/install.html">Download and Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/install.html#windows-installer-files-with-extension-exe">Windows installer (files with extension <code class="docutils literal notranslate"><span class="pre">exe</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/install.html#windows-portable-archive-files-with-extension-7z">Windows portable archive (files with extension <code class="docutils literal notranslate"><span class="pre">7z</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/install.html#linux-installer-files-with-extension-sh">Linux installer (files with extension <code class="docutils literal notranslate"><span class="pre">sh</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/install.html#linux-portable-archives-files-with-extension-tar-gz">Linux portable archives (files with extension <code class="docutils literal notranslate"><span class="pre">tar.gz</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/install.html#request-vabs-license">Request VABS license</a></li>
 </ul>
-<p class="caption"><span class="caption-text">PreVABS</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../prevabs/install.html">Download and Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../prevabs/run.html">How to Run PreVABS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../prevabs/tutorial.html">Tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../prevabs/guide.html">Guide for Preparing Input Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../prevabs/examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../prevabs/changelog.html">Change log</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../prevabs/xml.html">Introduction to XML</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../prevabs/references.html">References</a></li>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/example_uh60a_opt.html">Example 3: Optimization of UH60A with Dakota</a></li>
 </ul>
-<p class="caption"><span class="caption-text">MSGPI</span></p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/tutorial.html">Tutorial: Design A Composite Box Beam</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/tutorial.html#problem-description">Problem Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/tutorial.html#optimization-setup">Optimization Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/tutorial.html#file-prepration">File Prepration</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Components</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="sg_structuregene.html">StructureGene</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">MaterialSection</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#constructor">Constructor</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="sg/msgpi.sg.MaterialSection.html">msgpi.sg.MaterialSection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prevabs/index.html">PreVABS Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../prevabs/run.html">How to Run PreVABS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prevabs/tutorial.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prevabs/changelog.html">Change log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prevabs/xml.html">Introduction to XML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prevabs/references.html">References</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#attributes">Attributes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="sg/msgpi.sg.MaterialSection.name.html">msgpi.sg.MaterialSection.name</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sg/msgpi.sg.MaterialSection.smdim.html">msgpi.sg.MaterialSection.smdim</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sg/msgpi.sg.MaterialSection.density.html">msgpi.sg.MaterialSection.density</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sg/msgpi.sg.MaterialSection.constants.html">msgpi.sg.MaterialSection.constants</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sg/msgpi.sg.MaterialSection.stiffness.html">msgpi.sg.MaterialSection.stiffness</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sg/msgpi.sg.MaterialSection.compliance.html">msgpi.sg.MaterialSection.compliance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#beam-properties">Beam properties</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="sg/msgpi.sg.MaterialSection.mass_origin.html">msgpi.sg.MaterialSection.mass_origin</a></li>
-<li class="toctree-l4"><a class="reference internal" href="sg/msgpi.sg.MaterialSection.mass_mc.html">msgpi.sg.MaterialSection.mass_mc</a></li>
-<li class="toctree-l4"><a class="reference internal" href="sg/msgpi.sg.MaterialSection.mmoi.html">msgpi.sg.MaterialSection.mmoi</a></li>
-<li class="toctree-l4"><a class="reference internal" href="sg/msgpi.sg.MaterialSection.mwrg.html">msgpi.sg.MaterialSection.mwrg</a></li>
-<li class="toctree-l4"><a class="reference internal" href="sg/msgpi.sg.MaterialSection.mass_center.html">msgpi.sg.MaterialSection.mass_center</a></li>
-<li class="toctree-l4"><a class="reference internal" href="sg/msgpi.sg.MaterialSection.tension_center.html">msgpi.sg.MaterialSection.tension_center</a></li>
-<li class="toctree-l4"><a class="reference internal" href="sg/msgpi.sg.MaterialSection.shear_center.html">msgpi.sg.MaterialSection.shear_center</a></li>
-<li class="toctree-l4"><a class="reference internal" href="sg/msgpi.sg.MaterialSection.gc.html">msgpi.sg.MaterialSection.gc</a></li>
-<li class="toctree-l4"><a class="reference internal" href="sg/msgpi.sg.MaterialSection.stiffness_refined.html">msgpi.sg.MaterialSection.stiffness_refined</a></li>
-<li class="toctree-l4"><a class="reference internal" href="sg/msgpi.sg.MaterialSection.compliance_refined.html">msgpi.sg.MaterialSection.compliance_refined</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">msgpi Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="user_guide.html">User Guide</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="ref_manual.html">Reference</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#methods">Methods</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="sg/msgpi.sg.MaterialSection.summary.html">msgpi.sg.MaterialSection.summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sg/msgpi.sg.MaterialSection.getBeamProperty.html">msgpi.sg.MaterialSection.getBeamProperty</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="methods.html">Methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="beam.html">A Simple Beam Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="beam_methods.html">Beam Methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="utils.html">Utility Functions</a></li>
 </ul>
 
             
@@ -226,6 +210,10 @@ commentsRunWhenDOMLoaded(addUtterances);
   <ul class="wy-breadcrumbs">
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">msgpi Documentation</a> &raquo;</li>
+        
+          <li><a href="ref_manual.html">Reference</a> &raquo;</li>
         
       <li>MaterialSection</li>
     
@@ -295,47 +283,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 </tr>
 </tbody>
 </table>
-<div class="section" id="beam-properties">
-<h3>Beam properties<a class="headerlink" href="#beam-properties" title="Permalink to this headline">¶</a></h3>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="sg/msgpi.sg.MaterialSection.mass_origin.html#msgpi.sg.MaterialSection.mass_origin" title="msgpi.sg.MaterialSection.mass_origin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaterialSection.mass_origin</span></code></a></p></td>
-<td><p>Mass matrix at the origin.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="sg/msgpi.sg.MaterialSection.mass_mc.html#msgpi.sg.MaterialSection.mass_mc" title="msgpi.sg.MaterialSection.mass_mc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaterialSection.mass_mc</span></code></a></p></td>
-<td><p>Mass matrix at the mass center.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="sg/msgpi.sg.MaterialSection.mmoi.html#msgpi.sg.MaterialSection.mmoi" title="msgpi.sg.MaterialSection.mmoi"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaterialSection.mmoi</span></code></a></p></td>
-<td><p>Mass moments of inertia.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="sg/msgpi.sg.MaterialSection.mwrg.html#msgpi.sg.MaterialSection.mwrg" title="msgpi.sg.MaterialSection.mwrg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaterialSection.mwrg</span></code></a></p></td>
-<td><p>Mass-weighted radius of gyration.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="sg/msgpi.sg.MaterialSection.mass_center.html#msgpi.sg.MaterialSection.mass_center" title="msgpi.sg.MaterialSection.mass_center"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaterialSection.mass_center</span></code></a></p></td>
-<td><p>Mass center.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="sg/msgpi.sg.MaterialSection.tension_center.html#msgpi.sg.MaterialSection.tension_center" title="msgpi.sg.MaterialSection.tension_center"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaterialSection.tension_center</span></code></a></p></td>
-<td><p>(beam model) Neutral axes/Tension center.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="sg/msgpi.sg.MaterialSection.shear_center.html#msgpi.sg.MaterialSection.shear_center" title="msgpi.sg.MaterialSection.shear_center"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaterialSection.shear_center</span></code></a></p></td>
-<td><p>(beam model) Elastic axis/Shear center.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="sg/msgpi.sg.MaterialSection.gc.html#msgpi.sg.MaterialSection.gc" title="msgpi.sg.MaterialSection.gc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaterialSection.gc</span></code></a></p></td>
-<td><p>Geometric center</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="sg/msgpi.sg.MaterialSection.stiffness_refined.html#msgpi.sg.MaterialSection.stiffness_refined" title="msgpi.sg.MaterialSection.stiffness_refined"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaterialSection.stiffness_refined</span></code></a></p></td>
-<td><p>list of lists of floats: (beam/plate/shell models) Refined stiffness matrix</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="sg/msgpi.sg.MaterialSection.compliance_refined.html#msgpi.sg.MaterialSection.compliance_refined" title="msgpi.sg.MaterialSection.compliance_refined"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaterialSection.compliance_refined</span></code></a></p></td>
-<td><p>list of lists of floats: (beam/plate/shell models) Refined compliance matrix</p></td>
-</tr>
-</tbody>
-</table>
-</div>
 </div>
 <div class="section" id="methods">
 <h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
@@ -347,9 +294,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="sg/msgpi.sg.MaterialSection.summary.html#msgpi.sg.MaterialSection.summary" title="msgpi.sg.MaterialSection.summary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaterialSection.summary</span></code></a>()</p></td>
 <td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="sg/msgpi.sg.MaterialSection.getBeamProperty.html#msgpi.sg.MaterialSection.getBeamProperty" title="msgpi.sg.MaterialSection.getBeamProperty"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaterialSection.getBeamProperty</span></code></a>(label)</p></td>
-<td><p>Get beam properties using specific labels.</p></td>
 </tr>
 </tbody>
 </table>
