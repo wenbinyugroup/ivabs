@@ -14,8 +14,8 @@ PreVABS Documentation
 
   run
   tutorial
-  guide/guide
-  examples/examples
+  guide
+  examples
   changelog
   xml
   references
