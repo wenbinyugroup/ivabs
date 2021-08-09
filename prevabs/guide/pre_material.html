@@ -136,7 +136,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/examples.html">Examples</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a_opt.html">Example 3: Optimization of UH60A with Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a_opt.html">Example 3: Optimization of a Cross-section using Dakota</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/tutorial.html">Tutorial: Design A Composite Box Beam</a><ul>
@@ -406,13 +406,13 @@ Each material must have a name and type. Under each <code class="docutils litera
 <li><p>If <em>type=”isotropic”</em> - 2 constants: ‘e’ and ‘nu’.</p></li>
 <li><p>If <em>type=”lamina”</em> - 4 constants: ‘e1’, ‘e2’, ‘nu12’ and ‘g12’.</p></li>
 <li><p>If <em>type=”orthotropic”</em> - 9 constants: ‘e1’, ‘e2’, ‘e3’, ‘g12’, ‘g13’, ‘g23’, ‘nu12’, ‘nu13’ and ‘nu23’.</p></li>
-<li><p>If <em>type=”anisotropic”</em> - 21 constants: ‘c11’, ‘c12’, ‘c13’, ‘c14’, ‘c15’, ‘c16’, ‘c22’, ‘c23’, ‘c24’, ‘c25’, ‘c26’, ‘c33’, ‘c34’, ‘c35’, ‘c36’, ‘c44’, ‘c45’, ‘c46’, ‘c55’, ‘c56’ and ‘c66’. These constants are defined in Equation <a class="reference internal" href="#equation-hookeslaw">(1)</a>.</p></li>
+<li><p>If <em>type=”anisotropic”</em> - 21 constants: ‘c11’, ‘c12’, ‘c13’, ‘c14’, ‘c15’, ‘c16’, ‘c22’, ‘c23’, ‘c24’, ‘c25’, ‘c26’, ‘c33’, ‘c34’, ‘c35’, ‘c36’, ‘c44’, ‘c45’, ‘c46’, ‘c55’, ‘c56’ and ‘c66’. These constants are defined in Equation <a class="reference internal" href="#equation-hookeslaw">(2)</a>.</p></li>
 <li><p>If <em>type=”lamina”</em> - 4 constants: ‘e1’, ‘e2’, ‘g12’ and ‘nu12’. Internally, this type of material will be converted to the ‘orthotropic’ material. The default values for the rest components are: ‘e3=e2’, ‘nu13=nu12’, ‘nu23=0.3’, ‘g13=g12’ and ‘g23=e3/(2*(1+nu23))’. These default values can be overwritten by custom values.</p></li>
 </ul>
 </li>
 </ul>
 <div class="math notranslate nohighlight" id="equation-hookeslaw">
-<span class="eqno">(1)<a class="headerlink" href="#equation-hookeslaw" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{Bmatrix}
+<span class="eqno">(2)<a class="headerlink" href="#equation-hookeslaw" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{Bmatrix}
   \sigma_{11} \\ \sigma_{12} \\ \sigma_{13} \\ \sigma_{22} \\ \sigma_{23} \\ \sigma_{33}
 \end{Bmatrix} =
 \begin{bmatrix}
@@ -589,7 +589,7 @@ sequence code. A template is shown below.</p>
 </ul>
 <p>Examples</p>
 <table class="docutils align-center" id="id1">
-<caption><span class="caption-number">Table 8 </span><span class="caption-text">Examples of stacking sequence code</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 11 </span><span class="caption-text">Examples of stacking sequence code</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />

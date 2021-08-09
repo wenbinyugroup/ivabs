@@ -136,7 +136,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/examples.html">Examples</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a_opt.html">Example 3: Optimization of UH60A with Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a_opt.html">Example 3: Optimization of a Cross-section using Dakota</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/tutorial.html">Tutorial: Design A Composite Box Beam</a><ul>
@@ -253,12 +253,12 @@ The origin O is set to the point at 1/4 of the chord.
 Twist angle <span class="math notranslate nohighlight">\(\theta\)</span> is <span class="math notranslate nohighlight">\(0^\circ\)</span>.
 There are two webs, whose right boundaries are at the 20% and 50% location of the chord, respectively.
 Both low pressure and high pressure surfaces have four segments.
-The dividing points between segments are listed in <a class="reference internal" href="#table-div-pts"><span class="std std-numref">Table 22</span></a>.
-Materials are given in <a class="reference internal" href="#table-mh104-materials"><span class="std std-numref">Table 23</span></a> and layups are given in <a class="reference internal" href="#table-mh104-layups"><span class="std std-numref">Table 24</span></a>.
-A complete <span class="math notranslate nohighlight">\(6\times 6\)</span> stiffness matrix is given in <a class="reference internal" href="#table-airfoil-result"><span class="std std-numref">Table 25</span></a>.
+The dividing points between segments are listed in <a class="reference internal" href="#table-div-pts"><span class="std std-numref">Table 25</span></a>.
+Materials are given in <a class="reference internal" href="#table-mh104-materials"><span class="std std-numref">Table 26</span></a> and layups are given in <a class="reference internal" href="#table-mh104-layups"><span class="std std-numref">Table 27</span></a>.
+A complete <span class="math notranslate nohighlight">\(6\times 6\)</span> stiffness matrix is given in <a class="reference internal" href="#table-airfoil-result"><span class="std std-numref">Table 28</span></a>.
 Complete input files can be found in <code class="docutils literal notranslate"><span class="pre">examples\ex_airfoil\</span></code>, including <code class="docutils literal notranslate"><span class="pre">mh104.xml</span></code>, <code class="docutils literal notranslate"><span class="pre">basepoints.dat</span></code>, <code class="docutils literal notranslate"><span class="pre">baselines.xml</span></code>, <code class="docutils literal notranslate"><span class="pre">materials.xml</span></code>, and <code class="docutils literal notranslate"><span class="pre">layups.xml</span></code>.</p>
 <table class="docutils align-center" id="table-div-pts">
-<caption><span class="caption-number">Table 22 </span><span class="caption-text">Dividing points</span><a class="headerlink" href="#table-div-pts" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 25 </span><span class="caption-text">Dividing points</span><a class="headerlink" href="#table-div-pts" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -306,7 +306,7 @@ Complete input files can be found in <code class="docutils literal notranslate">
 <p class="caption"><span class="caption-number">Figure 43 </span><span class="caption-text">Meshed cross section viewed in Gmsh.</span><a class="headerlink" href="#fig-mh104" title="Permalink to this image">¶</a></p>
 </div>
 <table class="docutils align-center" id="table-mh104-materials">
-<caption><span class="caption-number">Table 23 </span><span class="caption-text">Material properties</span><a class="headerlink" href="#table-mh104-materials" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 26 </span><span class="caption-text">Material properties</span><a class="headerlink" href="#table-mh104-materials" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 8%" />
@@ -418,7 +418,7 @@ Complete input files can be found in <code class="docutils literal notranslate">
 </tbody>
 </table>
 <table class="docutils align-center" id="table-mh104-layups">
-<caption><span class="caption-number">Table 24 </span><span class="caption-text">Layups</span><a class="headerlink" href="#table-mh104-layups" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 27 </span><span class="caption-text">Layups</span><a class="headerlink" href="#table-mh104-layups" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 17%" />
@@ -597,7 +597,7 @@ Complete input files can be found in <code class="docutils literal notranslate">
 <div class="section" id="result">
 <h2>Result<a class="headerlink" href="#result" title="Permalink to this headline">¶</a></h2>
 <table class="docutils align-default" id="table-airfoil-result">
-<caption><span class="caption-number">Table 25 </span><span class="caption-text">Effective Timoshenko stiffness matrix</span><a class="headerlink" href="#table-airfoil-result" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 28 </span><span class="caption-text">Effective Timoshenko stiffness matrix</span><a class="headerlink" href="#table-airfoil-result" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 17%" />
@@ -652,7 +652,7 @@ Complete input files can be found in <code class="docutils literal notranslate">
 </tbody>
 </table>
 <table class="docutils align-default" id="table-airfoil-result-ref">
-<caption><span class="caption-number">Table 26 </span><span class="caption-text">Results from reference <a class="reference internal" href="../references.html#chen2010" id="id3"><span>[CHEN2010]</span></a></span><a class="headerlink" href="#table-airfoil-result-ref" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 29 </span><span class="caption-text">Results from reference <a class="reference internal" href="../references.html#chen2010" id="id3"><span>[CHEN2010]</span></a></span><a class="headerlink" href="#table-airfoil-result-ref" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 17%" />

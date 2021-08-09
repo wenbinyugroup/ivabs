@@ -34,8 +34,8 @@ This example contains the following files:
 * ``material_database.xml``: Material database
 
 
-Run
------
+Running of the example
+----------------------
 
 1. Get into ``{IVABS_ROOT}\examples\ex_uh60a_cs_analysis_auto``.
 2. Open a command prompt.
@@ -63,12 +63,12 @@ If everything runs successfully, the prompt will print the following lines:
   EI33 = 841561460.1
 
 
-Further reading
----------------
+.. Further reading
+.. ---------------
 
-To understand more about how the cross-section is parameterized and how to prepare the design input file, please check :ref:`section-prevabs`.
+.. To understand more about how the cross-section is parameterized and how to prepare the design input file, please check :ref:`section-prevabs`.
 
-To understand more about how to extract extract beam properties, please check :ref:`section-msgpi`.
+.. To understand more about how to extract extract beam properties, please check :ref:`section-msgpi`.
 
 .. The cross-section input file template provides the overall design.
 .. Among all parameters in the file, fiber angles of the four layers of the box spar are selected as those parameters requiring a separate input (step 1).

@@ -136,7 +136,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/examples.html">Examples</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a_opt.html">Example 3: Optimization of UH60A with Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a_opt.html">Example 3: Optimization of a Cross-section using Dakota</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/tutorial.html">Tutorial: Design A Composite Box Beam</a><ul>
@@ -249,8 +249,8 @@ This cross section has two straight walls and two half circular walls.
 <span class="math notranslate nohighlight">\(r=1.0\)</span> in. and other dimensions are shown in the figure.
 Each wall has the layup having two layers made from one material.
 Fiber orientations for each layer are also given in the figure.
-Material properties and layups are given in <a class="reference internal" href="#table-pipe-materials"><span class="std std-numref">Table 12</span></a> and <a class="reference internal" href="#table-pipe-layups"><span class="std std-numref">Table 13</span></a>.
-Cross-sectional properties are given in <a class="reference internal" href="#table-pipe-result"><span class="std std-numref">Table 14</span></a> and compared with the results from <a class="reference internal" href="../references.html#yu2005" id="id3"><span>[YU2005]</span></a>.
+Material properties and layups are given in <a class="reference internal" href="#table-pipe-materials"><span class="std std-numref">Table 15</span></a> and <a class="reference internal" href="#table-pipe-layups"><span class="std std-numref">Table 16</span></a>.
+Cross-sectional properties are given in <a class="reference internal" href="#table-pipe-result"><span class="std std-numref">Table 17</span></a> and compared with the results from <a class="reference internal" href="../references.html#yu2005" id="id3"><span>[YU2005]</span></a>.
 The tiny differences are due to different meshes.
 Complete input files can be found in <code class="docutils literal notranslate"><span class="pre">examples\ex_pipe\</span></code>, including <code class="docutils literal notranslate"><span class="pre">pipe.xml</span></code>, <code class="docutils literal notranslate"><span class="pre">baselines.xml</span></code>, <code class="docutils literal notranslate"><span class="pre">materials.xml</span></code>, and <code class="docutils literal notranslate"><span class="pre">layups.xml</span></code>.</p>
 <div class="figure align-center" id="fig-pipe1">
@@ -266,7 +266,7 @@ Complete input files can be found in <code class="docutils literal notranslate">
 <p class="caption"><span class="caption-number">Figure 33 </span><span class="caption-text">Meshed cross section viewed in Gmsh.</span><a class="headerlink" href="#fig-pipe" title="Permalink to this image">¶</a></p>
 </div>
 <table class="docutils align-center" id="table-pipe-materials">
-<caption><span class="caption-number">Table 12 </span><span class="caption-text">Material properties</span><a class="headerlink" href="#table-pipe-materials" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 15 </span><span class="caption-text">Material properties</span><a class="headerlink" href="#table-pipe-materials" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 9%" />
 <col style="width: 9%" />
@@ -322,7 +322,7 @@ Complete input files can be found in <code class="docutils literal notranslate">
 </tbody>
 </table>
 <table class="docutils align-center" id="table-pipe-layups">
-<caption><span class="caption-number">Table 13 </span><span class="caption-text">Layups</span><a class="headerlink" href="#table-pipe-layups" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 16 </span><span class="caption-text">Layups</span><a class="headerlink" href="#table-pipe-layups" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 17%" />
@@ -382,7 +382,7 @@ Complete input files can be found in <code class="docutils literal notranslate">
 <div class="section" id="result">
 <h2>Result<a class="headerlink" href="#result" title="Permalink to this headline">¶</a></h2>
 <table class="docutils align-center" id="table-pipe-result">
-<caption><span class="caption-number">Table 14 </span><span class="caption-text">Results</span><a class="headerlink" href="#table-pipe-result" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 17 </span><span class="caption-text">Results</span><a class="headerlink" href="#table-pipe-result" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 25%" />
 <col style="width: 37%" />

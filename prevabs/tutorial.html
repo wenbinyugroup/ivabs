@@ -136,7 +136,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toctree-l1"><a class="reference internal" href="../ivabs/examples.html">Examples</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ivabs/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ivabs/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ivabs/example_uh60a_opt.html">Example 3: Optimization of UH60A with Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/example_uh60a_opt.html">Example 3: Optimization of a Cross-section using Dakota</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../ivabs/tutorial.html">Tutorial: Design A Composite Box Beam</a><ul>
@@ -260,12 +260,12 @@ values:</p>
 <li><p>The angle <span class="math notranslate nohighlight">\(a = 100^\circ\)</span>.</p></li>
 </ul>
 <p>The materials used in this cross section are listed in
-<a class="reference internal" href="#tutorial-materials-iso"><span class="std std-numref">Table 3</span></a> and
-<a class="reference internal" href="#tutorial-materials-ortho"><span class="std std-numref">Table 4</span></a>.
+<a class="reference internal" href="#tutorial-materials-iso"><span class="std std-numref">Table 6</span></a> and
+<a class="reference internal" href="#tutorial-materials-ortho"><span class="std std-numref">Table 7</span></a>.
 The layups used in this cross section are listed in
-<a class="reference internal" href="#tutorial-layups"><span class="std std-numref">Table 5</span></a>.</p>
+<a class="reference internal" href="#tutorial-layups"><span class="std std-numref">Table 8</span></a>.</p>
 <table class="docutils align-center" id="tutorial-materials-iso">
-<caption><span class="caption-number">Table 3 </span><span class="caption-text">Isotropic material properties</span><a class="headerlink" href="#tutorial-materials-iso" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 6 </span><span class="caption-text">Isotropic material properties</span><a class="headerlink" href="#tutorial-materials-iso" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 25%" />
 <col style="width: 25%" />
@@ -293,7 +293,7 @@ The layups used in this cross section are listed in
 </tbody>
 </table>
 <table class="docutils align-center" id="tutorial-materials-ortho">
-<caption><span class="caption-number">Table 4 </span><span class="caption-text">Orthotropic material properties</span><a class="headerlink" href="#tutorial-materials-ortho" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 7 </span><span class="caption-text">Orthotropic material properties</span><a class="headerlink" href="#tutorial-materials-ortho" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 9%" />
 <col style="width: 9%" />
@@ -361,7 +361,7 @@ The layups used in this cross section are listed in
 </tbody>
 </table>
 <table class="docutils align-center" id="tutorial-layups">
-<caption><span class="caption-number">Table 5 </span><span class="caption-text">Layups</span><a class="headerlink" href="#tutorial-layups" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 8 </span><span class="caption-text">Layups</span><a class="headerlink" href="#tutorial-layups" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 17%" />
@@ -485,13 +485,13 @@ the walls, p5 and p6 define the webs, and p0 indicates the space which
 should be filled with some material. The origin of the coordinate system
 is placed at the centroid of the rectangular. Based on the design parameters
 <span class="math notranslate nohighlight">\(w\)</span>, <span class="math notranslate nohighlight">\(h\)</span> and <span class="math notranslate nohighlight">\(d\)</span>, coordinates of all points are found
-and listed in <a class="reference internal" href="#table-tutorial-box-points"><span class="std std-numref">Table 6</span></a>.</p>
+and listed in <a class="reference internal" href="#table-tutorial-box-points"><span class="std std-numref">Table 9</span></a>.</p>
 <div class="figure align-center" id="fig-tutorial-box-points">
 <a class="reference internal image-reference" href="../_images/tutorial_box_points.png"><img alt="../_images/tutorial_box_points.png" src="../_images/tutorial_box_points.png" style="width: 6in;" /></a>
 <p class="caption"><span class="caption-number">Figure 5 </span><span class="caption-text">Key points defining the shape of the cross section.</span><a class="headerlink" href="#fig-tutorial-box-points" title="Permalink to this image">¶</a></p>
 </div>
 <table class="docutils align-center" id="table-tutorial-box-points">
-<caption><span class="caption-number">Table 6 </span><span class="caption-text">Key points</span><a class="headerlink" href="#table-tutorial-box-points" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 9 </span><span class="caption-text">Key points</span><a class="headerlink" href="#table-tutorial-box-points" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -599,7 +599,7 @@ under the <code class="docutils literal notranslate"><span class="pre">&lt;elast
 types, which can be isotropic, orthotropic, or anisotropic.</p>
 <p>Another part of the file is the lamina data. A lamina is a unique combination
 of material and ply thickness. For this example, according to the layup
-table (:<a class="reference internal" href="#tutorial-layups"><span class="std std-numref">Table 5</span></a>) given above, there are two
+table (:<a class="reference internal" href="#tutorial-layups"><span class="std std-numref">Table 8</span></a>) given above, there are two
 laminae. One has material m1 and thickness 0.02, and another one has
 material m2 and thickness 0.05. It is the lamina, instead of the material,
 that will be used to define each layer of the layup.</p>
@@ -926,13 +926,13 @@ will be plotted as shown in <a class="reference internal" href="#fig-tutorial-bo
 (the display of element edges is turned off in the figure for clarity),
 and VABS homogenization analysis will be carried out and effective beam
 properties can be found in the file <code class="docutils literal notranslate"><span class="pre">box.sg.K</span></code>. The effective Timoshenko
-stiffness matrix is listed in <a class="reference internal" href="#tutorial-stiffness"><span class="std std-numref">Table 7</span></a>.</p>
+stiffness matrix is listed in <a class="reference internal" href="#tutorial-stiffness"><span class="std std-numref">Table 10</span></a>.</p>
 <div class="figure align-center" id="fig-tutorial-box-plot">
 <a class="reference internal image-reference" href="../_images/tutorial_box.png"><img alt="../_images/tutorial_box.png" src="../_images/tutorial_box.png" style="width: 6.5in;" /></a>
 <p class="caption"><span class="caption-number">Figure 9 </span><span class="caption-text">The cross section created by PreVABS and plotted by Gmsh.</span><a class="headerlink" href="#fig-tutorial-box-plot" title="Permalink to this image">¶</a></p>
 </div>
 <table class="docutils align-center" id="tutorial-stiffness">
-<caption><span class="caption-number">Table 7 </span><span class="caption-text">Timoshenko stiffness matrix in the file <em>box.sg.K</em></span><a class="headerlink" href="#tutorial-stiffness" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 10 </span><span class="caption-text">Timoshenko stiffness matrix in the file <em>box.sg.K</em></span><a class="headerlink" href="#tutorial-stiffness" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 17%" />
