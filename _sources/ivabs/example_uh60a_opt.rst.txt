@@ -115,9 +115,14 @@ Method
 SOGA (single objective genetic algorithm) provided by Dakota is used.
 Method settings are:
 
-* Maximum number of functional evaluations: 10,000
-* Size of population: 100
+* Maximum number of functional evaluations: 20,000
+* Size of population: 200
 * Random seed: 1027
+* Convergence
+
+  * Type: average fitness tracker
+  * Percentage change: 10%
+  * Number of generations: 10
 
 The rest are default values given by Dakota.
 
@@ -143,6 +148,9 @@ Final design result can be found in the file ``finaldata1.dat``, which contains 
 Evoluation
 ~~~~~~~~~~
 
+The optimization process stops when reaching the convergence condition.
+The total number of functional evaluation is 15,060.
+
 Final design
 ~~~~~~~~~~~~
 
@@ -154,22 +162,22 @@ Final design
      - Value
      - Unit
    * - :math:`a_2^{wl}`
-     - 
+     - :math:`-0.137`
      - 1
    * - :math:`a_2^{wt}`
-     - 
+     - :math:`-0.364`
      - 1
    * - :math:`\theta_1`
-     - 
+     - :math:`-43`
      - degree
    * - :math:`\theta_2`
-     - 
+     - :math:`0`
      - degree
    * - :math:`\theta_3`
-     - 
+     - :math:`74`
      - degree
    * - :math:`\theta_4`
-     - 
+     - :math:`70`
      - degree
 
 
@@ -186,23 +194,23 @@ Final design
      - :math:`SC_2` [|len_im|]
      - :math:`MC_2` [|len_im|]
    * - Target
-     - :math:`\phantom{+}52.25 \times 10^6`
-     - :math:`\phantom{+}24.20 \times 10^6`
-     - :math:`\phantom{+}25.00 \times 10^6`
-     - :math:`\phantom{+}1.058 \times 10^9`
+     - :math:`52.25 \times 10^6`
+     - :math:`24.20 \times 10^6`
+     - :math:`25.00 \times 10^6`
+     - :math:`1.058 \times 10^9`
      - :math:`-5.253`
      - :math:`-5.972`
    * - Optimized
-     - :math:`\phantom{+} \times 10^6`
-     - :math:`\phantom{+} \times 10^6`
-     - :math:`\phantom{+} \times 10^6`
-     - :math:`\phantom{+} \times 10^9`
-     - :math:`-`
-     - :math:`-`
+     - :math:`52.16 \times 10^6`
+     - :math:`24.22 \times 10^6`
+     - :math:`24.95 \times 10^6`
+     - :math:`1.061 \times 10^9`
+     - :math:`-5.267`
+     - :math:`-5.960`
    * - Difference [%]
-     - :math:`100.00`
-     - :math:`100.00`
-     - :math:`100.00`
-     - :math:`100.00`
-     - :math:`100.00`
-     - :math:`100.00`
+     - :math:`0.172`
+     - :math:`0.074`
+     - :math:`-0.185`
+     - :math:`0.268`
+     - :math:`0.258`
+     - :math:`-0.201`
