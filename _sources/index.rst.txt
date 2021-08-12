@@ -43,7 +43,7 @@ License
 
 .. toctree::
    :maxdepth: 1
-   :caption: iVABS
+   :caption: iVABS Quick Start
    
    ivabs/install
    ivabs/examples
@@ -52,7 +52,7 @@ License
 
 .. toctree::
    :maxdepth: 1
-   :caption: Components
+   :caption: iVABS Components
 
    prevabs/index
    msgpi/index
