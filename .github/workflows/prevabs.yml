@@ -1,5 +1,5 @@
 # Build Sphinx
-name: build prevabs pdf
+name: build ivabs pdf
 on:
   push:
     branches: [ main ]
@@ -31,7 +31,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add docs/build/latex/PreVABSManual.pdf
+        git add -f docs/build/latex/PreVABSManual.pdf
         git commit -m "update pdf file"
     - name: Push changes
       uses: ad-m/github-push-action@master
