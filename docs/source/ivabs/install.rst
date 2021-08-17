@@ -34,9 +34,9 @@ Linux portable archives (files with extension ``tar.gz``)
 ---------------------------------------------------------
   #. Uncompress the archive using ``tar xzvf ivabs_x.x_linux64_portable.tar.gz`` to a folder of your own choice. 
   #. Environment variables of PATH and PYTHONPATH should be added manually. 
-    - ``ivabs\bin`` should be in **PATH**. Delete the ``dakota" shortcut inside ``bin`` if you want the Dakota already installed on your computer. 
-    - ``ivabs\vendors\dakota\share\dakota\Python`` should be in **PYTHONPATH**. Use the corresponding Dakota Python PATH if you want to use the Dakota already installed on your computer.
-    - ``ivabs\vendors`` should be in **PYTHONPATH**.
+    - ``ivabs/bin`` should be in **PATH**. Delete the ``dakota" shortcut inside ``bin`` if you want the Dakota already installed on your computer. 
+    - ``ivabs/vendors/dakota-{dakota-version}/share/dakota/Python`` should be in **PYTHONPATH**. Use the corresponding Dakota Python PATH if you want to use the Dakota already installed on your computer.
+    - ``ivabs/vendors/msgpi-{msgpi-version}`` should be in **PYTHONPATH**.
 
 
 Request VABS license
