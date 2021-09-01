@@ -1,4 +1,4 @@
-.. include:: ../replace.txt
+.. include:: /replace.txt
 
 .. _section-overall:
 
@@ -105,6 +105,7 @@ There are two meshing options available now, global meshing size
     <rotate> angle </rotate>
     <mesh_size> a </mesh_size>
     <element_type> quadratic </element_type>
+    <tolerance> 1e-9 </tolerance>
   </general>
 
 **Specification**
@@ -113,7 +114,8 @@ There are two meshing options available now, global meshing size
 - **<scale>** - Scaling factor of the cross-section.
 - **<rotate>** - Rotation angle of the cross-section.
 - **<mesh_size>** - Global mesh size.
-- **<element_type>** - Order of elements. ``linear`` or ``quadratic``.
+- **<element_type>** - Order of elements. ``linear`` or ``quadratic`` (default).
+- **<tolerance>** - Tolerance used in geometric computation. Optional. Default value is 1e-12.
 
 .. note:: Only triangular element is available in the current version.
 

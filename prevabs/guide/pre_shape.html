@@ -484,22 +484,28 @@ To uniquely define an arc, user needs to provide at least four of the following 
 <span class="normal">13</span>
 <span class="normal">14</span>
 <span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;baselines&gt;</span>
-  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;left&quot;</span> <span class="na">type=</span><span class="s">&quot;arc&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;center&gt;</span> c <span class="nt">&lt;/center&gt;</span>
-    <span class="nt">&lt;start&gt;</span> s <span class="nt">&lt;/start&gt;</span>
-    <span class="nt">&lt;end&gt;</span> e <span class="nt">&lt;/end&gt;</span>
-    <span class="nt">&lt;direction&gt;</span> ccw <span class="nt">&lt;/direction&gt;</span>
-    <span class="nt">&lt;discrete</span> <span class="na">by=</span><span class="s">&quot;angle&quot;</span><span class="nt">&gt;</span> 9 <span class="nt">&lt;/discrete&gt;</span>
-  <span class="nt">&lt;/baseline&gt;</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>&lt;baselines&gt;
+  ...
+  &lt;baseline name=&quot;left&quot; type=&quot;arc&quot;&gt;
+    &lt;center&gt; c &lt;/center&gt;
+    &lt;start&gt; s &lt;/start&gt;
+    &lt;end&gt; e &lt;/end&gt;
+    &lt;direction&gt; ccw &lt;/direction&gt;
+    &lt;discrete by=&quot;angle&gt; 9 &lt;/discrete&gt;
+  &lt;/baseline&gt;
 
-  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;right&quot;</span> <span class="na">type=</span><span class="s">&quot;arc&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;center&gt;</span> c <span class="nt">&lt;/center&gt;</span>
-    <span class="nt">&lt;start&gt;</span> s <span class="nt">&lt;/start&gt;</span>
-    <span class="nt">&lt;angle&gt;</span> a <span class="nt">&lt;/angle&gt;</span>
-    <span class="nt">&lt;discrete</span> <span class="na">by=</span><span class="s">&quot;number&quot;</span><span class="nt">&gt;</span> 10 <span class="nt">&lt;/discrete&gt;</span>
-  <span class="nt">&lt;/baseline&gt;</span>
-<span class="nt">&lt;/baselines&gt;</span>
+  &lt;baseline name=&quot;right&quot; type=&quot;arc&quot;&gt;
+    &lt;center&gt; c &lt;/center&gt;
+    &lt;start&gt; s &lt;/start&gt;
+    &lt;angle&gt; a &lt;/angle&gt;
+    &lt;!-- here the direction is the default value &#39;ccw&#39; --&gt;
+    &lt;discrete by=&quot;number&quot;&gt; 10 &lt;/discrete&gt;
+  &lt;/baseline&gt;
+  ...
+&lt;/basepoints&gt;
 </pre></div>
 </td></tr></table></div>
 </div>

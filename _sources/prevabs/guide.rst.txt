@@ -1,17 +1,14 @@
-.. include:: ./replace.txt
+.. include:: /replace.txt
 
 Guide for Preparing Input Files
 ===============================
 
-In PreVABS, a cross section is defined through two aspects: components
-and global configuration, as shown in :numref:`Fig. %s <fig_csfiles1>`.
-Components are built from geometry and materials
+In PreVABS, a cross section is defined through two aspects: components and global configuration, as shown in :numref:`Fig. %s <fig_csfiles1>`.
+Components are built from geometry and materials.
 The geometry aspect comprises definitions of base points and base lines.
-The material aspect includes material properties, lamina thicknesses,
-layup stacking sequences, etc. The global configuration contains the
-files included, transformation, meshing options, and analysis settings.
+The material aspect includes material properties, lamina thicknesses, layup stacking sequences, etc. The global configuration contains the files included, transformation, meshing options, and analysis settings.
 
-.. figure:: ./figures/chart1.png
+.. figure:: /figures/chart1.png
   :name: fig_csfiles1
   :width: 75%
   :align: center

@@ -1,4 +1,4 @@
-.. include:: ../replace.txt
+.. include:: /replace.txt
 
 .. _section-material-layup:
 
@@ -13,7 +13,7 @@ Layup is several layers stacked together in a specific order.
 This relationship is illustrated in :numref:`Fig. %s <fig_layup>`.
 More details can be found below.
 
-.. figure:: ../figures/layup.png
+.. figure:: /figures/layup.png
   :name: fig_layup
   :width: 6in
   :align: center
@@ -122,15 +122,14 @@ For the ``lamina`` type material, the code will internally convert it to the ``o
 
   - *name* - Name of the material.
   - *type* - Type of the material. Choose one from 'isotropic', 'orthotropic', 'anisotropic' and 'lamina'.
+  - **<density>** - Density of the material. Defualt is 1.0.
+  - **<elastic>** - Elastic properties of the material. Specifications are different for different types.
 
-- **<density>** - Density of the material. Defualt is 1.0.
-- **<elastic>** - Elastic properties of the material. Specifications are different for different types.
-
-  - If *type="isotropic"* - 2 constants: 'e' and 'nu'.
-  - If *type="lamina"* - 4 constants: 'e1', 'e2', 'nu12' and 'g12'.
-  - If *type="orthotropic"* - 9 constants: 'e1', 'e2', 'e3', 'g12', 'g13', 'g23', 'nu12', 'nu13' and 'nu23'.
-  - If *type="anisotropic"* - 21 constants: 'c11', 'c12', 'c13', 'c14', 'c15', 'c16', 'c22', 'c23', 'c24', 'c25', 'c26', 'c33', 'c34', 'c35', 'c36', 'c44', 'c45', 'c46', 'c55', 'c56' and 'c66'. These constants are defined in Equation :eq:`hookeslaw`.
-  - If *type="lamina"* - 4 constants: 'e1', 'e2', 'g12' and 'nu12'. Internally, this type of material will be converted to the 'orthotropic' material. The default values for the rest components are: 'e3=e2', 'nu13=nu12', 'nu23=0.3', 'g13=g12' and 'g23=e3/(2*(1+nu23))'. These default values can be overwritten by custom values.
+    - If *type="isotropic"* - 2 constants: 'e' and 'nu'.
+    - If *type="lamina"* - 4 constants: 'e1', 'e2', 'nu12' and 'g12'.
+    - If *type="orthotropic"* - 9 constants: 'e1', 'e2', 'e3', 'g12', 'g13', 'g23', 'nu12', 'nu13' and 'nu23'.
+    - If *type="anisotropic"* - 21 constants: 'c11', 'c12', 'c13', 'c14', 'c15', 'c16', 'c22', 'c23', 'c24', 'c25', 'c26', 'c33', 'c34', 'c35', 'c36', 'c44', 'c45', 'c46', 'c55', 'c56' and 'c66'. These constants are defined in Equation :eq:`hookeslaw`.
+    - If *type="lamina"* - 4 constants: 'e1', 'e2', 'g12' and 'nu12'. Internally, this type of material will be converted to the 'orthotropic' material. The default values for the rest components are: 'e3=e2', 'nu13=nu12', 'nu23=0.3', 'g13=g12' and 'g23=e3/(2*(1+nu23))'. These default values can be overwritten by custom values.
 
 .. math::
   :label: hookeslaw
@@ -198,7 +197,7 @@ Change of direction of the base line will change the elemental frame **y** as de
 All layup information are included in one XML file.
 A template of this file can be found in :numref:`Listing %s <code_layup_temp>`.
 
-.. figure:: ../figures/elementalframe.png
+.. figure:: /figures/elementalframe.png
   :name: fig_elementalframe
   :width: 6in
   :align: center
