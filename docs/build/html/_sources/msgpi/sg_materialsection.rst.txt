@@ -14,7 +14,8 @@ Constructor
 -----------
 
 .. autosummary::
-    :toctree: sg/
+    :toctree: _autogen/sg/
+    :recursive:
 
     MaterialSection
 
@@ -30,7 +31,8 @@ Attributes
 ----------
 
 .. autosummary::
-    :toctree: sg/
+    :toctree: _autogen/sg/
+    :recursive:
 
     MaterialSection.name
     MaterialSection.smdim
@@ -51,7 +53,8 @@ Methods
 -------
 
 .. autosummary::
-    :toctree: sg/
+    :toctree: _autogen/sg/
+    :recursive:
 
     MaterialSection.summary
 

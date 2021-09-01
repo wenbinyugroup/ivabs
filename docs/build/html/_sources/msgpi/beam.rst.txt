@@ -16,7 +16,8 @@ Constructor
 ^^^^^^^^^^^
 
 .. autosummary::
-    :toctree: beam/
+    :toctree: _autogen/beam/
+    :recursive:
 
     BeamSegment
 
@@ -25,7 +26,8 @@ Attributes and underlying data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. autosummary::
-    :toctree: beam/
+    :toctree: _autogen/beam/
+    :recursive:
 
     BeamSegment.points
     BeamSegment.coords
@@ -42,7 +44,8 @@ Methods
 ^^^^^^^
 
 .. autosummary::
-    :toctree: beam/
+    :toctree: _autogen/beam/
+    :recursive:
 
     BeamSegment.calcLengthSq
 
@@ -61,7 +64,8 @@ Constructor
 ^^^^^^^^^^^
 
 .. autosummary::
-    :toctree: beam/
+    :toctree: _autogen/beam/
+    :recursive:
 
     Beam
 
@@ -70,7 +74,8 @@ Attributes and underlying data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. autosummary::
-    :toctree: beam/
+    :toctree: _autogen/beam/
+    :recursive:
 
     Beam.name
     Beam.analysis_type
@@ -94,8 +99,11 @@ Methods
 ^^^^^^^
 
 .. autosummary::
-    :toctree: beam/
+    :toctree: _autogen/beam/
+    :recursive:
 
-    Beam.echo
+    Beam.summary
     Beam.findPtCoordByName
     Beam.findSectionByName
+    Beam.writeGmshMsh
+    Beam.writeGEBTIn

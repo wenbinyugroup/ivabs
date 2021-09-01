@@ -126,7 +126,7 @@ commentsRunWhenDOMLoaded(addUtterances);
               
             
             
-              <p class="caption"><span class="caption-text">iVABS</span></p>
+              <p class="caption" role="heading"><span class="caption-text">iVABS Quick Start</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/install.html">Download and Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../ivabs/install.html#windows-installer-files-with-extension-exe">Windows installer (files with extension <code class="docutils literal notranslate"><span class="pre">exe</span></code>)</a></li>
@@ -137,19 +137,17 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/examples.html">Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a_opt.html">Example 3: Optimization of a Cross-section using Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/examples/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/examples/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/examples/example_uh60a_opt.html">Example 3: Optimization of a Cross-section using Dakota</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../ivabs/tutorial.html">Tutorial: Design A Composite Box Beam</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/tutorial.html#problem-description">Problem Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/tutorial.html#optimization-setup">Optimization Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/tutorial.html#file-prepration">File Prepration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ivabs/tutorials.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/tutorials/opt_uh60a_2dv.html">Optimization of A Blade Spar</a></li>
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">iVABS Components</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">PreVABS Documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../run.html">How to Run PreVABS</a></li>
@@ -161,7 +159,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toctree-l2"><a class="reference internal" href="../references.html">References</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../msgpi/index.html">msgpi Documentation</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../msgpi/index.html">msgpi documentation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../msgpi/user_guide.html">User Guide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../msgpi/ref_manual.html">Reference</a></li>
 </ul>
@@ -265,7 +263,7 @@ in the direction cosine matrix are flattened into a single array in the
 <code class="docutils literal notranslate"><span class="pre">&lt;rotations&gt;</span></code> element. This matrix is defined in
 Eq. <a class="reference internal" href="#equation-eq-direction-cosine">(3)</a>. Note that displacements and rotations
 are needed only for recovering 3D displacements. A template for this
-part of data is shown in <a class="reference internal" href="#code-recover"><span class="std std-numref">Listing 27</span></a>. Numbers
+part of data is shown in <a class="reference internal" href="#code-recover"><span class="std std-numref">Listing 30</span></a>. Numbers
 in this template are defualt values. Once this file is updated correctly,
 the VABS recover analysis can be carried out as shown in Section:
 <a class="reference internal" href="../run.html#section-command-option"><span class="std std-ref">Command line options</span></a>.</p>
@@ -276,7 +274,7 @@ are the base vectors of the deformed triad and <span class="math notranslate noh
 <span class="math notranslate nohighlight">\(\mathbf{b}_2\)</span>, and <span class="math notranslate nohighlight">\(\mathbf{b}_3\)</span> are the base vectors of
 the undeformed triad.</p>
 <div class="literal-block-wrapper docutils container" id="code-recover">
-<div class="code-block-caption"><span class="caption-number">Listing 27 </span><span class="caption-text">A template for the recover data in a <em>Cross section</em> file.</span><a class="headerlink" href="#code-recover" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 30 </span><span class="caption-text">A template for the recover data in a <em>Cross section</em> file.</span><a class="headerlink" href="#code-recover" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;cross_section</span> <span class="na">name=</span><span class="s">&quot;cs1&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 2</span>  ...
 <span class="linenos"> 3</span>  <span class="nt">&lt;recover&gt;</span>

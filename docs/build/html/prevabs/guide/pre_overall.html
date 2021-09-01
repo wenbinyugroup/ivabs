@@ -126,7 +126,7 @@ commentsRunWhenDOMLoaded(addUtterances);
               
             
             
-              <p class="caption"><span class="caption-text">iVABS</span></p>
+              <p class="caption" role="heading"><span class="caption-text">iVABS Quick Start</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/install.html">Download and Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../ivabs/install.html#windows-installer-files-with-extension-exe">Windows installer (files with extension <code class="docutils literal notranslate"><span class="pre">exe</span></code>)</a></li>
@@ -137,19 +137,17 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/examples.html">Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a_opt.html">Example 3: Optimization of a Cross-section using Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/examples/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/examples/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/examples/example_uh60a_opt.html">Example 3: Optimization of a Cross-section using Dakota</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../ivabs/tutorial.html">Tutorial: Design A Composite Box Beam</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/tutorial.html#problem-description">Problem Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/tutorial.html#optimization-setup">Optimization Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/tutorial.html#file-prepration">File Prepration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ivabs/tutorials.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/tutorials/opt_uh60a_2dv.html">Optimization of A Blade Spar</a></li>
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">iVABS Components</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">PreVABS Documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../run.html">How to Run PreVABS</a></li>
@@ -161,7 +159,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toctree-l2"><a class="reference internal" href="../references.html">References</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../msgpi/index.html">msgpi Documentation</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../msgpi/index.html">msgpi documentation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../msgpi/user_guide.html">User Guide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../msgpi/ref_manual.html">Reference</a></li>
 </ul>
@@ -244,7 +242,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>There are three groups of these settings.</p>
 <div class="section" id="included-files">
 <h2>Included files<a class="headerlink" href="#included-files" title="Permalink to this headline">¶</a></h2>
-<p>This part contains file names for base lines, materials (local) and layups as shown in <a class="reference internal" href="#code-include"><span class="std std-numref">Listing 28</span></a>.
+<p>This part contains file names for base lines, materials (local) and layups as shown in <a class="reference internal" href="#code-include"><span class="std std-numref">Listing 31</span></a>.
 The <code class="docutils literal notranslate"><span class="pre">&lt;material&gt;</span></code> sub-element is optional.
 If this is included, PreVABS will read extra materials from this local file, besides the global material database (MaterialDB.xml).
 If there are materials and laminae with the same names, data in the local material file will overwrite those in the global database.</p>
@@ -253,7 +251,7 @@ If there are materials and laminae with the same names, data in the local materi
 <li><p>File extensions <code class="docutils literal notranslate"><span class="pre">.xml</span></code> can be omitted.</p></li>
 </ul>
 <div class="literal-block-wrapper docutils container" id="code-include">
-<div class="code-block-caption"><span class="caption-number">Listing 28 </span><span class="caption-text">Input syntax for the included files.</span><a class="headerlink" href="#code-include" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 31 </span><span class="caption-text">Input syntax for the included files.</span><a class="headerlink" href="#code-include" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;include&gt;</span>
 <span class="linenos">2</span>  <span class="nt">&lt;baseline&gt;</span> path/baseline_file_name <span class="nt">&lt;/baseline&gt;</span>
 <span class="linenos">3</span>  <span class="nt">&lt;material&gt;</span> path/material_file_name <span class="nt">&lt;/material&gt;</span>
@@ -274,7 +272,7 @@ If there are materials and laminae with the same names, data in the local materi
 <p>The second part contains settings for the analysis in VABS.
 <code class="docutils literal notranslate"><span class="pre">&lt;model&gt;</span></code> can be 0 for classical beam model, or 1 for refined (Timoshenko) model.</p>
 <div class="literal-block-wrapper docutils container" id="code-analysis">
-<div class="code-block-caption"><span class="caption-number">Listing 29 </span><span class="caption-text">A template for the analysis options in a main input file.</span><a class="headerlink" href="#code-analysis" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 32 </span><span class="caption-text">A template for the analysis options in a main input file.</span><a class="headerlink" href="#code-analysis" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;analysis&gt;</span>
 <span class="linenos">2</span>  <span class="nt">&lt;model&gt;</span> 1 <span class="nt">&lt;/model&gt;</span>
 <span class="linenos">3</span><span class="nt">&lt;/analysis&gt;</span>
@@ -307,7 +305,7 @@ thickness by default;</p></li>
 <li><p>Two options for the element type are linear and quadratic.</p></li>
 </ul>
 <div class="literal-block-wrapper docutils container" id="code-general">
-<div class="code-block-caption"><span class="caption-number">Listing 30 </span><span class="caption-text">A template for the global shape and mesh settings in a main input file.</span><a class="headerlink" href="#code-general" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 33 </span><span class="caption-text">A template for the global shape and mesh settings in a main input file.</span><a class="headerlink" href="#code-general" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;general&gt;</span>
 <span class="linenos">2</span>  <span class="nt">&lt;translate&gt;</span> e2  e3 <span class="nt">&lt;/translate&gt;</span>
 <span class="linenos">3</span>  <span class="nt">&lt;scale&gt;</span> scaling_factor <span class="nt">&lt;/scale&gt;</span>

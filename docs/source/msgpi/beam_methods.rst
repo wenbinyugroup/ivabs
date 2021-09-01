@@ -5,6 +5,7 @@ Beam Methods
    :maxdepth: 2
    :caption: Contents:
 
+   beam_methods_prepro
    beam_methods_gebt
    beam_methods_dymore
 

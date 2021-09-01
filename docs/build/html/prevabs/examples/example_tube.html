@@ -126,7 +126,7 @@ commentsRunWhenDOMLoaded(addUtterances);
               
             
             
-              <p class="caption"><span class="caption-text">iVABS</span></p>
+              <p class="caption" role="heading"><span class="caption-text">iVABS Quick Start</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/install.html">Download and Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../ivabs/install.html#windows-installer-files-with-extension-exe">Windows installer (files with extension <code class="docutils literal notranslate"><span class="pre">exe</span></code>)</a></li>
@@ -137,19 +137,17 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/examples.html">Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a_opt.html">Example 3: Optimization of a Cross-section using Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/examples/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/examples/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/examples/example_uh60a_opt.html">Example 3: Optimization of a Cross-section using Dakota</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../ivabs/tutorial.html">Tutorial: Design A Composite Box Beam</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/tutorial.html#problem-description">Problem Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/tutorial.html#optimization-setup">Optimization Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/tutorial.html#file-prepration">File Prepration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ivabs/tutorials.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/tutorials/opt_uh60a_2dv.html">Optimization of A Blade Spar</a></li>
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">iVABS Components</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">PreVABS Documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../run.html">How to Run PreVABS</a></li>
@@ -161,7 +159,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toctree-l2"><a class="reference internal" href="../references.html">References</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../msgpi/index.html">msgpi Documentation</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../msgpi/index.html">msgpi documentation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../msgpi/user_guide.html">User Guide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../msgpi/ref_manual.html">Reference</a></li>
 </ul>
@@ -245,21 +243,21 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2>Problem description<a class="headerlink" href="#problem-description" title="Permalink to this headline">¶</a></h2>
 <p>This example has a cross section of a simple circular shape with radius <span class="math notranslate nohighlight">\(r=10\)</span> m.
 This cross section geometry can be defined easily by a center and a radius.
-Material properties are given in <a class="reference internal" href="#table-tube-materials"><span class="std std-numref">Table 18</span></a>.
+Material properties are given in <a class="reference internal" href="#table-tube-materials"><span class="std std-numref">Table 28</span></a>.
 The layup is defined using the stacking sequence code <span class="math notranslate nohighlight">\([\pm 45_2/0_2/90]_{2s}\)</span>.
-The result is given in <a class="reference internal" href="#table-tube-result"><span class="std std-numref">Table 20</span></a>.
+The result is given in <a class="reference internal" href="#table-tube-result"><span class="std std-numref">Table 30</span></a>.
 Complete input files can be found in <code class="docutils literal notranslate"><span class="pre">examples\ex_tube\</span></code>, including
 <code class="docutils literal notranslate"><span class="pre">tube.xml</span></code> and <code class="docutils literal notranslate"><span class="pre">materials.xml</span></code>.</p>
 <div class="figure align-center" id="fig-circle1">
 <a class="reference internal image-reference" href="../../_images/examplecircle1.png"><img alt="../../_images/examplecircle1.png" src="../../_images/examplecircle1.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 34 </span><span class="caption-text"><em>Base point</em>s, <em>Base line</em>s and <em>Segment</em>s of the tube cross section.</span><a class="headerlink" href="#fig-circle1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 39 </span><span class="caption-text"><em>Base point</em>s, <em>Base line</em>s and <em>Segment</em>s of the tube cross section.</span><a class="headerlink" href="#fig-circle1" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="fig-circle">
 <a class="reference internal image-reference" href="../../_images/examplecircle.png"><img alt="../../_images/examplecircle.png" src="../../_images/examplecircle.png" style="width: 4in;" /></a>
-<p class="caption"><span class="caption-number">Figure 35 </span><span class="caption-text">Meshed cross section viewed in Gmsh.</span><a class="headerlink" href="#fig-circle" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 40 </span><span class="caption-text">Meshed cross section viewed in Gmsh.</span><a class="headerlink" href="#fig-circle" title="Permalink to this image">¶</a></p>
 </div>
 <table class="docutils align-center" id="table-tube-materials">
-<caption><span class="caption-number">Table 18 </span><span class="caption-text">Material properties</span><a class="headerlink" href="#table-tube-materials" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 28 </span><span class="caption-text">Material properties</span><a class="headerlink" href="#table-tube-materials" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 8%" />
@@ -319,7 +317,7 @@ Complete input files can be found in <code class="docutils literal notranslate">
 </tbody>
 </table>
 <table class="docutils align-center" id="table-tube-layups">
-<caption><span class="caption-number">Table 19 </span><span class="caption-text">Layups</span><a class="headerlink" href="#table-tube-layups" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 29 </span><span class="caption-text">Layups</span><a class="headerlink" href="#table-tube-layups" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -342,7 +340,7 @@ Complete input files can be found in <code class="docutils literal notranslate">
 <div class="section" id="result">
 <h2>Result<a class="headerlink" href="#result" title="Permalink to this headline">¶</a></h2>
 <table class="docutils align-default" id="table-tube-result">
-<caption><span class="caption-number">Table 20 </span><span class="caption-text">Results</span><a class="headerlink" href="#table-tube-result" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 30 </span><span class="caption-text">Results</span><a class="headerlink" href="#table-tube-result" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 17%" />

@@ -126,7 +126,7 @@ commentsRunWhenDOMLoaded(addUtterances);
               
             
             
-              <p class="caption"><span class="caption-text">iVABS</span></p>
+              <p class="caption" role="heading"><span class="caption-text">iVABS Quick Start</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/install.html">Download and Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../ivabs/install.html#windows-installer-files-with-extension-exe">Windows installer (files with extension <code class="docutils literal notranslate"><span class="pre">exe</span></code>)</a></li>
@@ -137,19 +137,17 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/examples.html">Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a_opt.html">Example 3: Optimization of a Cross-section using Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/examples/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/examples/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/examples/example_uh60a_opt.html">Example 3: Optimization of a Cross-section using Dakota</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../ivabs/tutorial.html">Tutorial: Design A Composite Box Beam</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/tutorial.html#problem-description">Problem Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/tutorial.html#optimization-setup">Optimization Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/tutorial.html#file-prepration">File Prepration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ivabs/tutorials.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/tutorials/opt_uh60a_2dv.html">Optimization of A Blade Spar</a></li>
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">iVABS Components</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">PreVABS Documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../run.html">How to Run PreVABS</a></li>
@@ -161,7 +159,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toctree-l2"><a class="reference internal" href="../references.html">References</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../msgpi/index.html">msgpi Documentation</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../msgpi/index.html">msgpi documentation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../msgpi/user_guide.html">User Guide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../msgpi/ref_manual.html">Reference</a></li>
 </ul>
@@ -246,19 +244,19 @@ This can be thought as the basic commercially available “material”, such as 
 A layer is a stack of laminae with the same fiber orientation.
 The thickness of a layer can only be a multiplier of the lamina thickness.
 Layup is several layers stacked together in a specific order.
-This relationship is illustrated in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 18</span></a>.
+This relationship is illustrated in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 23</span></a>.
 More details can be found below.</p>
 <div class="figure align-center" id="fig-layup">
 <a class="reference internal image-reference" href="../../_images/layup.png"><img alt="../../_images/layup.png" src="../../_images/layup.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 18 </span><span class="caption-text">Relationship between material, lamina, layer and layup.</span><a class="headerlink" href="#fig-layup" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 23 </span><span class="caption-text">Relationship between material, lamina, layer and layup.</span><a class="headerlink" href="#fig-layup" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="material-and-lamina">
 <h2>Material and lamina<a class="headerlink" href="#material-and-lamina" title="Permalink to this headline">¶</a></h2>
 <p>Both materials and laminae are stored in one XML file, under the single root element <code class="docutils literal notranslate"><span class="pre">&lt;materials&gt;</span></code>.
-A template of this file is shown in <a class="reference internal" href="#code-material-temp"><span class="std std-numref">Listing 14</span></a>.
+A template of this file is shown in <a class="reference internal" href="#code-material-temp"><span class="std std-numref">Listing 17</span></a>.
 Each material must have a name and type. Under each <code class="docutils literal notranslate"><span class="pre">&lt;material&gt;</span></code> element, there are a <code class="docutils literal notranslate"><span class="pre">&lt;density&gt;</span></code> element and an <code class="docutils literal notranslate"><span class="pre">&lt;elastic&gt;</span></code> element.</p>
 <div class="literal-block-wrapper docutils container" id="code-material-temp">
-<div class="code-block-caption"><span class="caption-number">Listing 14 </span><span class="caption-text">Input syntax for materials.</span><a class="headerlink" href="#code-material-temp" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 17 </span><span class="caption-text">Input syntax for materials.</span><a class="headerlink" href="#code-material-temp" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;materials&gt;</span>
 <span class="linenos"> 2</span>  ...
 <span class="linenos"> 3</span>  <span class="nt">&lt;material</span> <span class="na">name=</span><span class="s">&quot;iso1&quot;</span> <span class="na">type=</span><span class="s">&quot;isotropic&quot;</span><span class="nt">&gt;</span>
@@ -368,9 +366,9 @@ Each material must have a name and type. Under each <code class="docutils litera
   \epsilon_{11} \\ 2\epsilon_{12} \\ 2\epsilon_{13} \\ \epsilon_{22} \\ 2\epsilon_{23} \\ \epsilon_{33}
 \end{Bmatrix}\end{split}\]</div>
 <p>Each lamina element has a name, and contains a material name and a value for thickness.
-The input syntax is shown in <a class="reference internal" href="#code-lamina-temp"><span class="std std-numref">Listing 15</span></a>.</p>
+The input syntax is shown in <a class="reference internal" href="#code-lamina-temp"><span class="std std-numref">Listing 18</span></a>.</p>
 <div class="literal-block-wrapper docutils container" id="code-lamina-temp">
-<div class="code-block-caption"><span class="caption-number">Listing 15 </span><span class="caption-text">Input syntax for lamina.</span><a class="headerlink" href="#code-lamina-temp" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 18 </span><span class="caption-text">Input syntax for lamina.</span><a class="headerlink" href="#code-lamina-temp" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;materials&gt;</span>
 <span class="linenos">2</span>  ...
 <span class="linenos">3</span>  <span class="nt">&lt;lamina</span> <span class="na">name=</span><span class="s">&quot;lamina1&quot;</span><span class="nt">&gt;</span>
@@ -400,16 +398,16 @@ The input syntax is shown in <a class="reference internal" href="#code-lamina-te
 <p>In general, there are two ways to define a layup, explicit list and stacking sequence code.
 For the explicit list, a laminate is laid onto the base line from the first layer in the list to the last one, in the direction given by the user.
 For the stacking sequence, the layup starts from left to the right.
-User should pay attention to the relations among the base line direction, elemental frame <strong>y</strong> and fiber orientation <span class="math notranslate nohighlight">\(\theta_3\)</span> of each layer, as shown in <a class="reference internal" href="#fig-elementalframe"><span class="std std-numref">Fig. 19</span></a>.
+User should pay attention to the relations among the base line direction, elemental frame <strong>y</strong> and fiber orientation <span class="math notranslate nohighlight">\(\theta_3\)</span> of each layer, as shown in <a class="reference internal" href="#fig-elementalframe"><span class="std std-numref">Fig. 24</span></a>.
 Change of direction of the base line will change the elemental frame <strong>y</strong> as defined, which will further require the user to change the fiber orientations accordingly, even though nothing changes physically.
 All layup information are included in one XML file.
-A template of this file can be found in <a class="reference internal" href="#code-layup-temp"><span class="std std-numref">Listing 16</span></a>.</p>
+A template of this file can be found in <a class="reference internal" href="#code-layup-temp"><span class="std std-numref">Listing 19</span></a>.</p>
 <div class="figure align-center" id="fig-elementalframe">
 <a class="reference internal image-reference" href="../../_images/elementalframe.png"><img alt="../../_images/elementalframe.png" src="../../_images/elementalframe.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 19 </span><span class="caption-text">Relations among the base line direction, elemental frame <strong>y</strong> and fiber orientation (Note $y_2$ is parallel to the base line direction).</span><a class="headerlink" href="#fig-elementalframe" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 24 </span><span class="caption-text">Relations among the base line direction, elemental frame <strong>y</strong> and fiber orientation (Note $y_2$ is parallel to the base line direction).</span><a class="headerlink" href="#fig-elementalframe" title="Permalink to this image">¶</a></p>
 </div>
 <div class="literal-block-wrapper docutils container" id="code-layup-temp">
-<div class="code-block-caption"><span class="caption-number">Listing 16 </span><span class="caption-text">Input syntax for layups.</span><a class="headerlink" href="#code-layup-temp" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 19 </span><span class="caption-text">Input syntax for layups.</span><a class="headerlink" href="#code-layup-temp" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;layups&gt;</span>
 <span class="linenos">2</span>  <span class="nt">&lt;layup</span> <span class="na">name=</span><span class="s">&quot;layup1&quot;</span> <span class="na">method=</span><span class="s">&quot;explicit list&quot;</span><span class="nt">&gt;</span>
 <span class="linenos">3</span>    <span class="nt">&lt;layer</span> <span class="na">lamina=</span><span class="s">&quot;lamina1&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/layer&gt;</span>
@@ -439,7 +437,7 @@ by layer. Alternatively, a layer can also be defined by the name of a sublayup.
 A sublayup must appear before the layup where it is referenced.
 A template for one layer is shown below.</p>
 <div class="literal-block-wrapper docutils container" id="code-layup-ll-temp">
-<div class="code-block-caption"><span class="caption-number">Listing 17 </span><span class="caption-text">A template for the layup layer list input.</span><a class="headerlink" href="#code-layup-ll-temp" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 20 </span><span class="caption-text">A template for the layup layer list input.</span><a class="headerlink" href="#code-layup-ll-temp" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;layups&gt;</span>
 <span class="linenos"> 2</span>  ...
 <span class="linenos"> 3</span>  <span class="nt">&lt;layup</span> <span class="na">name=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
@@ -463,15 +461,15 @@ A template for one layer is shown below.</p>
 </ul>
 </li>
 </ul>
-<p>An example for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 18</span></a> is given
-in <a class="reference internal" href="#code-material"><span class="std std-numref">Listing 19</span></a> and <a class="reference internal" href="#code-layup"><span class="std std-numref">Listing 20</span></a>.</p>
+<p>An example for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 23</span></a> is given
+in <a class="reference internal" href="#code-material"><span class="std std-numref">Listing 22</span></a> and <a class="reference internal" href="#code-layup"><span class="std std-numref">Listing 23</span></a>.</p>
 </div>
 <div class="section" id="stacking-sequence-code">
 <h3>Stacking sequence code<a class="headerlink" href="#stacking-sequence-code" title="Permalink to this headline">¶</a></h3>
 <p>This method requires users to provide one lamina name and the stacking
 sequence code. A template is shown below.</p>
 <div class="literal-block-wrapper docutils container" id="code-layup-ss-temp">
-<div class="code-block-caption"><span class="caption-number">Listing 18 </span><span class="caption-text">A template for the layup stacking sequence input.</span><a class="headerlink" href="#code-layup-ss-temp" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 21 </span><span class="caption-text">A template for the layup stacking sequence input.</span><a class="headerlink" href="#code-layup-ss-temp" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;layups&gt;</span>
 <span class="linenos">2</span>  ...
 <span class="linenos">3</span>  <span class="nt">&lt;layup</span> <span class="na">name=</span><span class="s">&quot;...&quot;</span> <span class="na">method=</span><span class="s">&quot;stack sequence&quot;</span><span class="nt">&gt;</span>
@@ -498,7 +496,7 @@ sequence code. A template is shown below.</p>
 </ul>
 <p>Examples</p>
 <table class="docutils align-center" id="id1">
-<caption><span class="caption-number">Table 11 </span><span class="caption-text">Examples of stacking sequence code</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 21 </span><span class="caption-text">Examples of stacking sequence code</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -518,7 +516,7 @@ sequence code. A template is shown below.</p>
 </tbody>
 </table>
 <div class="literal-block-wrapper docutils container" id="code-material">
-<div class="code-block-caption"><span class="caption-number">Listing 19 </span><span class="caption-text">Example material and lamina input file for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 18</span></a>.</span><a class="headerlink" href="#code-material" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 22 </span><span class="caption-text">Example material and lamina input file for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 23</span></a>.</span><a class="headerlink" href="#code-material" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;materials&gt;</span>
 <span class="linenos"> 2</span>  <span class="nt">&lt;material</span> <span class="na">name=</span><span class="s">&quot;square&quot;</span> <span class="na">type=</span><span class="s">&quot;orthotropic&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 3</span>    <span class="nt">&lt;density&gt;</span>...<span class="nt">&lt;/density&gt;</span>
@@ -544,7 +542,7 @@ sequence code. A template is shown below.</p>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="code-layup">
-<div class="code-block-caption"><span class="caption-number">Listing 20 </span><span class="caption-text">Example layup input file for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 18</span></a>.</span><a class="headerlink" href="#code-layup" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 23 </span><span class="caption-text">Example layup input file for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 23</span></a>.</span><a class="headerlink" href="#code-layup" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;layups&gt;</span>
 <span class="linenos"> 2</span>  <span class="nt">&lt;layup</span> <span class="na">name=</span><span class="s">&quot;layup_el&quot;</span> <span class="na">method=</span><span class="s">&quot;explicit list&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 3</span>    <span class="nt">&lt;layer</span> <span class="na">lamina=</span><span class="s">&quot;la_hexagon_10&quot;</span><span class="nt">&gt;</span> 45:2 <span class="nt">&lt;/layer&gt;</span>

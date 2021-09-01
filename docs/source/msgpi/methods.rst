@@ -18,7 +18,8 @@ Reading
 ^^^^^^^
 
 .. autosummary::
-    :toctree: io/
+    :toctree: _autogen/io/
+    :recursive:
 
     iovabs.readVABSIn
     iovabs.readVABSOut
@@ -37,7 +38,8 @@ Writing
 ^^^^^^^
 
 .. autosummary::
-    :toctree: io/
+    :toctree: _autogen/io/
+    :recursive:
 
     iovabs.writeVABSIn
     iovabs.writeVABSNodes
@@ -77,7 +79,8 @@ Preprocessing
 
 
 .. autosummary::
-    :toctree: presg/
+    :toctree: _autogen/presg/
+    :recursive:
 
     readMaterialFromXMLElement
     preSG1D
@@ -104,7 +107,8 @@ Analysis
 
 
 .. autosummary::
-    :toctree: analysis/
+    :toctree: _autogen/analysis/
+    :recursive:
 
     solve
     run

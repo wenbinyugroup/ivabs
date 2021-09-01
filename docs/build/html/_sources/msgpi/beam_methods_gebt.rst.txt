@@ -17,22 +17,14 @@ Reading
 ^^^^^^^^
 
 .. autosummary::
-    :toctree: beam/
+    :toctree: _autogen/beam/
+    :recursive:
 
     readGEBTIn
     readGEBTOut
     readGEBTOutNode
     readGEBTOutStatic
     readGEBTOutEigen
-
-
-Writing
-^^^^^^^
-
-.. autosummary::
-    :toctree: beam/
-
-    writeGEBTIn
 
 
 
@@ -55,7 +47,8 @@ Preprocessing
 
 
 .. autosummary::
-    :toctree: beam/
+    :toctree: _autogen/beam/
+    :recursive:
 
     preBeam
 
@@ -80,7 +73,8 @@ Analysis
 
 
 .. autosummary::
-    :toctree: beam/
+    :toctree: _autogen/beam/
+    :recursive:
 
     solveGEBT
     runGEBT

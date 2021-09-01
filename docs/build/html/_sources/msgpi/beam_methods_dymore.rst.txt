@@ -15,7 +15,8 @@ Output class
 ------------
 
 .. autosummary::
-    :toctree: beam/
+    :toctree: _autogen/beam/
+    :recursive:
 
     DymoreOutput
 
@@ -31,7 +32,8 @@ Methods
 -------
 
 .. autosummary::
-    :toctree: beam/
+    :toctree: _autogen/beam/
+    :recursive:
 
     readEigOutput
     readForce

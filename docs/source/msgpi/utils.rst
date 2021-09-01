@@ -11,7 +11,8 @@ Utility Functions
     import msgpi.io.utils
 
 .. autosummary::
-    :toctree: utils/
+    :toctree: _autogen/utils/
+    :recursive:
 
     writeFormatIntegers
     writeFormatFloats
@@ -36,7 +37,8 @@ Utility Functions
     import msgpi.utils
 
 .. autosummary::
-    :toctree: utils/
+    :toctree: _autogen/utils/
+    :recursive:
 
     run
     tilde
@@ -52,3 +54,26 @@ Utility Functions
     parseLayupCode
     parseXML
     updateXMLElement
+
+
+
+
+
+
+
+
+
+.. currentmodule:: msgpi.logger
+
+.. highlight:: python
+
+::
+
+    import msgpi.logger
+
+.. autosummary::
+    :toctree: _autogen/utils/
+    :recursive:
+
+    initLogger
+

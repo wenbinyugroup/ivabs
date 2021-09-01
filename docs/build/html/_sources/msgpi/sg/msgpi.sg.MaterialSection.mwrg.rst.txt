@@ -1,6 +1,0 @@
-﻿msgpi.sg.MaterialSection.mwrg
-=============================
-
-.. currentmodule:: msgpi.sg
-
-.. autoattribute:: MaterialSection.mwrg

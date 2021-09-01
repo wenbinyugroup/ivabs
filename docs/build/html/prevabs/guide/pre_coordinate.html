@@ -126,7 +126,7 @@ commentsRunWhenDOMLoaded(addUtterances);
               
             
             
-              <p class="caption"><span class="caption-text">iVABS</span></p>
+              <p class="caption" role="heading"><span class="caption-text">iVABS Quick Start</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/install.html">Download and Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../ivabs/install.html#windows-installer-files-with-extension-exe">Windows installer (files with extension <code class="docutils literal notranslate"><span class="pre">exe</span></code>)</a></li>
@@ -137,19 +137,17 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/examples.html">Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a_opt.html">Example 3: Optimization of a Cross-section using Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/examples/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/examples/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/examples/example_uh60a_opt.html">Example 3: Optimization of a Cross-section using Dakota</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../ivabs/tutorial.html">Tutorial: Design A Composite Box Beam</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/tutorial.html#problem-description">Problem Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/tutorial.html#optimization-setup">Optimization Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/tutorial.html#file-prepration">File Prepration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ivabs/tutorials.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/tutorials/opt_uh60a_2dv.html">Optimization of A Blade Spar</a></li>
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">iVABS Components</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">PreVABS Documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../run.html">How to Run PreVABS</a></li>
@@ -161,7 +159,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toctree-l2"><a class="reference internal" href="../references.html">References</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../msgpi/index.html">msgpi Documentation</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../msgpi/index.html">msgpi documentation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../msgpi/user_guide.html">User Guide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../msgpi/ref_manual.html">Reference</a></li>
 </ul>
@@ -242,7 +240,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   <div class="section" id="coordinate-systems">
 <span id="section-coordinate"></span><h1>Coordinate systems<a class="headerlink" href="#coordinate-systems" title="Permalink to this headline">¶</a></h1>
 <p>There are three coordinate frames used in PreVABS as shown in
-<a class="reference internal" href="#fig-frames"><span class="std std-numref">Fig. 11</span></a>:</p>
+<a class="reference internal" href="#fig-frames"><span class="std std-numref">Fig. 16</span></a>:</p>
 <ul class="simple">
 <li><p><strong>z</strong> is a basic frame, for the normalized airfoil data points for instance;</p></li>
 <li><p><strong>x</strong> is the final frame;</p></li>
@@ -250,7 +248,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 <div class="figure align-center" id="fig-frames">
 <a class="reference internal image-reference" href="../../_images/frames.png"><img alt="../../_images/frames.png" src="../../_images/frames.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 11 </span><span class="caption-text">The basic, cross-sectional and elementary frames in a cross section.</span><a class="headerlink" href="#fig-frames" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 16 </span><span class="caption-text">The basic, cross-sectional and elementary frames in a cross section.</span><a class="headerlink" href="#fig-frames" title="Permalink to this image">¶</a></p>
 </div>
 <p>Here, <span class="math notranslate nohighlight">\(z_1\)</span>, <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(y_1\)</span> are parallel to the tangent of the beam reference
 line and pointing out of the paper. The basic frame is where base points
@@ -262,12 +260,12 @@ airfoil cross section, airfoil surface data points downloaded from a
 database having chord length 1 are in the frame <strong>z</strong>, and they are
 transformed into the frame <strong>x</strong> through translation (re-define the
 origin), scaling (multiplied by the actual chord length), and rotation
-(attack angle) if necessary, as shown in <a class="reference internal" href="#fig-transforms"><span class="std std-numref">Fig. 12</span></a>.
+(attack angle) if necessary, as shown in <a class="reference internal" href="#fig-transforms"><span class="std std-numref">Fig. 17</span></a>.
 More details about this transformation can be found in Section:
 <a class="reference internal" href="pre_overall.html#section-overall"><span class="std std-ref">Other input settings</span></a> below.</p>
 <div class="figure align-center" id="fig-transforms">
 <a class="reference internal image-reference" href="../../_images/transforms.png"><img alt="../../_images/transforms.png" src="../../_images/transforms.png" style="width: 100%;" /></a>
-<p class="caption"><span class="caption-number">Figure 12 </span><span class="caption-text">Three manipulations to transform a cross section.</span><a class="headerlink" href="#fig-transforms" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 17 </span><span class="caption-text">Three manipulations to transform a cross section.</span><a class="headerlink" href="#fig-transforms" title="Permalink to this image">¶</a></p>
 </div>
 <p>In PreVABS, the definition of the elementary frame <strong>y</strong> follows the
 rule that the positive direction of <span class="math notranslate nohighlight">\(y_2\)</span> axis is always the same as the

@@ -1,25 +1,14 @@
-.. Some scripts documentation master file, created by
-   sphinx-quickstart on Tue Sep  3 13:43:15 2019.
+.. msgpi documentation master file, created by
+   sphinx-quickstart on Tue Aug 31 20:55:49 2021.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. _section-msgpi:
-
-msgpi Documentation
+msgpi documentation
 ===================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Table of Contents
+    :maxdepth: 2
+    :caption: Content
 
-   user_guide
-   ref_manual
-
-
-
-.. Indices and tables
-.. ==================
-
-.. * :ref:`genindex`
-.. * :ref:`modindex`
-.. * :ref:`search`
+    user_guide
+    ref_manual
