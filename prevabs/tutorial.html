@@ -134,15 +134,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../ivabs/examples.html">Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ivabs/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ivabs/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ivabs/example_uh60a_opt.html">Example 3: Optimization of a Cross-section using Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/examples/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/examples/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/examples/example_uh60a_opt.html">Example 3: Optimization of a Cross-section using Dakota</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../ivabs/tutorial.html">Tutorial: Design A Composite Box Beam</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ivabs/tutorial.html#problem-description">Problem Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ivabs/tutorial.html#optimization-setup">Optimization Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ivabs/tutorial.html#file-prepration">File Prepration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/tutorials.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ivabs/tutorials/opt_uh60a_2dv.html">Optimization of A Blade Spar</a></li>
 </ul>
 </li>
 </ul>
@@ -158,7 +156,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toctree-l2"><a class="reference internal" href="references.html">References</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../msgpi/index.html">msgpi Documentation</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../msgpi/index.html">msgpi documentation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../msgpi/user_guide.html">User Guide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../msgpi/ref_manual.html">Reference</a></li>
 </ul>
@@ -242,9 +240,9 @@ PreVABS given a cross section design.</p>
 <h2>The design of a cross section<a class="headerlink" href="#the-design-of-a-cross-section" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center" id="fig-tutorial-box">
 <a class="reference internal image-reference" href="../_images/tutorial_box_0.png"><img alt="../_images/tutorial_box_0.png" src="../_images/tutorial_box_0.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 3 </span><span class="caption-text">A box-beam cross section.</span><a class="headerlink" href="#fig-tutorial-box" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 8 </span><span class="caption-text">A box-beam cross section.</span><a class="headerlink" href="#fig-tutorial-box" title="Permalink to this image">¶</a></p>
 </div>
-<p>The box-beam cross section shown in <a class="reference internal" href="#fig-tutorial-box"><span class="std std-numref">Fig. 3</span></a>
+<p>The box-beam cross section shown in <a class="reference internal" href="#fig-tutorial-box"><span class="std std-numref">Fig. 8</span></a>
 will be used in this tutorial. All four walls and two webs are made from
 composite laminates. The two webs are symmetric about a middle vertical
 line. They are inclined such that the upper portion of both webs are
@@ -260,12 +258,12 @@ values:</p>
 <li><p>The angle <span class="math notranslate nohighlight">\(a = 100^\circ\)</span>.</p></li>
 </ul>
 <p>The materials used in this cross section are listed in
-<a class="reference internal" href="#tutorial-materials-iso"><span class="std std-numref">Table 6</span></a> and
-<a class="reference internal" href="#tutorial-materials-ortho"><span class="std std-numref">Table 7</span></a>.
+<a class="reference internal" href="#tutorial-materials-iso"><span class="std std-numref">Table 16</span></a> and
+<a class="reference internal" href="#tutorial-materials-ortho"><span class="std std-numref">Table 17</span></a>.
 The layups used in this cross section are listed in
-<a class="reference internal" href="#tutorial-layups"><span class="std std-numref">Table 8</span></a>.</p>
+<a class="reference internal" href="#tutorial-layups"><span class="std std-numref">Table 18</span></a>.</p>
 <table class="docutils align-center" id="tutorial-materials-iso">
-<caption><span class="caption-number">Table 6 </span><span class="caption-text">Isotropic material properties</span><a class="headerlink" href="#tutorial-materials-iso" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 16 </span><span class="caption-text">Isotropic material properties</span><a class="headerlink" href="#tutorial-materials-iso" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 25%" />
 <col style="width: 25%" />
@@ -293,7 +291,7 @@ The layups used in this cross section are listed in
 </tbody>
 </table>
 <table class="docutils align-center" id="tutorial-materials-ortho">
-<caption><span class="caption-number">Table 7 </span><span class="caption-text">Orthotropic material properties</span><a class="headerlink" href="#tutorial-materials-ortho" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 17 </span><span class="caption-text">Orthotropic material properties</span><a class="headerlink" href="#tutorial-materials-ortho" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 9%" />
 <col style="width: 9%" />
@@ -361,7 +359,7 @@ The layups used in this cross section are listed in
 </tbody>
 </table>
 <table class="docutils align-center" id="tutorial-layups">
-<caption><span class="caption-number">Table 8 </span><span class="caption-text">Layups</span><a class="headerlink" href="#tutorial-layups" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 18 </span><span class="caption-text">Layups</span><a class="headerlink" href="#tutorial-layups" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 17%" />
@@ -456,10 +454,10 @@ components. For this example, the exact shape of each web depends on
 the shape of the walls, and the shape of the fill depends on both the
 webs and the walls. Then the order of creation should be: first creating
 the walls, then the webs, and at last the fill, as shown in
-<a class="reference internal" href="#fig-tutorial-box-order"><span class="std std-numref">Fig. 4</span></a>.</p>
+<a class="reference internal" href="#fig-tutorial-box-order"><span class="std std-numref">Fig. 9</span></a>.</p>
 <div class="figure align-center" id="fig-tutorial-box-order">
 <a class="reference internal image-reference" href="../_images/tutorial_box_order.png"><img alt="../_images/tutorial_box_order.png" src="../_images/tutorial_box_order.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 4 </span><span class="caption-text">Order of components creation.</span><a class="headerlink" href="#fig-tutorial-box-order" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 9 </span><span class="caption-text">Order of components creation.</span><a class="headerlink" href="#fig-tutorial-box-order" title="Permalink to this image">¶</a></p>
 </div>
 <p>The next step is to prepare various input files based on all design
 parameters listed above. In this example, all files are in the XML format.
@@ -479,19 +477,19 @@ The requirement of using this local file is to explicitly provide the material f
 Please check Section: <a class="reference internal" href="guide/pre_overall.html#section-overall"><span class="std std-ref">Other input settings</span></a>.</p>
 <div class="section" id="prepare-geometric-elements">
 <h3>Prepare geometric elements<a class="headerlink" href="#prepare-geometric-elements" title="Permalink to this headline">¶</a></h3>
-<p>As shown in <a class="reference internal" href="#fig-tutorial-box-points"><span class="std std-numref">Fig. 5</span></a>, seven points
+<p>As shown in <a class="reference internal" href="#fig-tutorial-box-points"><span class="std std-numref">Fig. 10</span></a>, seven points
 are used to define the shape of the cross section. Points p1 to p4 define
 the walls, p5 and p6 define the webs, and p0 indicates the space which
 should be filled with some material. The origin of the coordinate system
 is placed at the centroid of the rectangular. Based on the design parameters
 <span class="math notranslate nohighlight">\(w\)</span>, <span class="math notranslate nohighlight">\(h\)</span> and <span class="math notranslate nohighlight">\(d\)</span>, coordinates of all points are found
-and listed in <a class="reference internal" href="#table-tutorial-box-points"><span class="std std-numref">Table 9</span></a>.</p>
+and listed in <a class="reference internal" href="#table-tutorial-box-points"><span class="std std-numref">Table 19</span></a>.</p>
 <div class="figure align-center" id="fig-tutorial-box-points">
 <a class="reference internal image-reference" href="../_images/tutorial_box_points.png"><img alt="../_images/tutorial_box_points.png" src="../_images/tutorial_box_points.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 5 </span><span class="caption-text">Key points defining the shape of the cross section.</span><a class="headerlink" href="#fig-tutorial-box-points" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 10 </span><span class="caption-text">Key points defining the shape of the cross section.</span><a class="headerlink" href="#fig-tutorial-box-points" title="Permalink to this image">¶</a></p>
 </div>
 <table class="docutils align-center" id="table-tutorial-box-points">
-<caption><span class="caption-number">Table 9 </span><span class="caption-text">Key points</span><a class="headerlink" href="#table-tutorial-box-points" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 19 </span><span class="caption-text">Key points</span><a class="headerlink" href="#table-tutorial-box-points" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -526,7 +524,7 @@ and listed in <a class="reference internal" href="#table-tutorial-box-points"><s
 </tbody>
 </table>
 <p>Base lines are created based on key points defined above. As shown in
-<a class="reference internal" href="#fig-tutorial-box-lines"><span class="std std-numref">Fig. 6</span></a>, three lines are created.
+<a class="reference internal" href="#fig-tutorial-box-lines"><span class="std std-numref">Fig. 11</span></a>, three lines are created.
 Line 1 is defined by connecting the four points (p1 -&gt; p2 -&gt; p3 -&gt; p4 -&gt; p1).
 Line 2 and 3 are defined by a single point with an incline angle. For
 line 2, it is the point p5 with an angle of 100 degrees. For line 3, it is
@@ -535,13 +533,13 @@ the point p6 with an angle of 80 degrees.</p>
 laminate is created for each segment, and how the local coordinate system
 is defined for each element.</p>
 <p>The completed input file for geometry is shown in
-<a class="reference internal" href="#code-tutorial-box-baselines"><span class="std std-numref">Listing 1</span></a>.</p>
+<a class="reference internal" href="#code-tutorial-box-baselines"><span class="std std-numref">Listing 4</span></a>.</p>
 <div class="figure align-center" id="fig-tutorial-box-lines">
 <a class="reference internal image-reference" href="../_images/tutorial_box_lines.png"><img alt="../_images/tutorial_box_lines.png" src="../_images/tutorial_box_lines.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 6 </span><span class="caption-text">Base lines defining the shape of the cross section.</span><a class="headerlink" href="#fig-tutorial-box-lines" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 11 </span><span class="caption-text">Base lines defining the shape of the cross section.</span><a class="headerlink" href="#fig-tutorial-box-lines" title="Permalink to this image">¶</a></p>
 </div>
 <div class="literal-block-wrapper docutils container" id="code-tutorial-box-baselines">
-<div class="code-block-caption"><span class="caption-number">Listing 1 </span><span class="caption-text">Input file for geometric elements (<em>baseline.xml</em>).</span><a class="headerlink" href="#code-tutorial-box-baselines" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 4 </span><span class="caption-text">Input file for geometric elements (<em>baseline.xml</em>).</span><a class="headerlink" href="#code-tutorial-box-baselines" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -594,17 +592,17 @@ is defined for each element.</p>
 <p>Material data are stored in the material database. As stated above, this
 file must be named as <em>MaterialDB.xml</em> and placed at the directory where
 the PreVABS executable is. The format of this file is shown in
-<a class="reference internal" href="#code-tutorial-box-materials"><span class="std std-numref">Listing 2</span></a>. Arrangement of data
+<a class="reference internal" href="#code-tutorial-box-materials"><span class="std std-numref">Listing 5</span></a>. Arrangement of data
 under the <code class="docutils literal notranslate"><span class="pre">&lt;elastic&gt;</span></code> element are different for different material
 types, which can be isotropic, orthotropic, or anisotropic.</p>
 <p>Another part of the file is the lamina data. A lamina is a unique combination
 of material and ply thickness. For this example, according to the layup
-table (:<a class="reference internal" href="#tutorial-layups"><span class="std std-numref">Table 8</span></a>) given above, there are two
+table (:<a class="reference internal" href="#tutorial-layups"><span class="std std-numref">Table 18</span></a>) given above, there are two
 laminae. One has material m1 and thickness 0.02, and another one has
 material m2 and thickness 0.05. It is the lamina, instead of the material,
 that will be used to define each layer of the layup.</p>
 <div class="literal-block-wrapper docutils container" id="code-tutorial-box-materials">
-<div class="code-block-caption"><span class="caption-number">Listing 2 </span><span class="caption-text">Input file for materials (<em>MaterialDB.xml</em>).</span><a class="headerlink" href="#code-tutorial-box-materials" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 5 </span><span class="caption-text">Input file for materials (<em>MaterialDB.xml</em>).</span><a class="headerlink" href="#code-tutorial-box-materials" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -703,14 +701,14 @@ that will be used to define each layer of the layup.</p>
 </div>
 <p>Layup information is stored in a separate file. Based on the layup table,
 the input file can be prepared with the format shown in
-<a class="reference internal" href="#code-tutorial-box-layups"><span class="std std-numref">Listing 3</span></a>. The order of the layers
+<a class="reference internal" href="#code-tutorial-box-layups"><span class="std std-numref">Listing 6</span></a>. The order of the layers
 defines the laying sequence from the base line. The number in the <code class="docutils literal notranslate"><span class="pre">&lt;layer&gt;</span></code>
 element stands for the orientation. If there is a colon, then the number
 behind it stands for the number of plies in this layer. If there is no
 number at all, then by default this layer has only one ply with orientation
 of 0 degree.</p>
 <div class="literal-block-wrapper docutils container" id="code-tutorial-box-layups">
-<div class="code-block-caption"><span class="caption-number">Listing 3 </span><span class="caption-text">Input file for layups (<em>layups.xml</em>).</span><a class="headerlink" href="#code-tutorial-box-layups" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 6 </span><span class="caption-text">Input file for layups (<em>layups.xml</em>).</span><a class="headerlink" href="#code-tutorial-box-layups" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -753,17 +751,17 @@ segment is a unique combination of a base line and a layup. The layup
 can be created on either side of the base line. This is controlled by
 an attribute <code class="docutils literal notranslate"><span class="pre">direction</span></code>, which can be either left or right. This can
 be understood as the left- or right-hand side when walking along the
-base line, as shown in <a class="reference internal" href="#fig-tutorial-box-segments"><span class="std std-numref">Fig. 7</span></a>.</p>
+base line, as shown in <a class="reference internal" href="#fig-tutorial-box-segments"><span class="std std-numref">Fig. 12</span></a>.</p>
 <p>As for the ordering, the walls should be completed first, since its
 inner boundary is needed to trim the base lines of both webs. Hence,
 each web component depends on the walls component, as shown in
-<a class="reference internal" href="#code-tutorial-box-laminate"><span class="std std-numref">Listing 4</span></a>.</p>
+<a class="reference internal" href="#code-tutorial-box-laminate"><span class="std std-numref">Listing 7</span></a>.</p>
 <div class="figure align-center" id="fig-tutorial-box-segments">
 <a class="reference internal image-reference" href="../_images/tutorial_box_segments.png"><img alt="../_images/tutorial_box_segments.png" src="../_images/tutorial_box_segments.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 7 </span><span class="caption-text">Layup directions for each segment.</span><a class="headerlink" href="#fig-tutorial-box-segments" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 12 </span><span class="caption-text">Layup directions for each segment.</span><a class="headerlink" href="#fig-tutorial-box-segments" title="Permalink to this image">¶</a></p>
 </div>
 <div class="literal-block-wrapper docutils container" id="code-tutorial-box-laminate">
-<div class="code-block-caption"><span class="caption-number">Listing 4 </span><span class="caption-text">Input elements for the laminate-type components</span><a class="headerlink" href="#code-tutorial-box-laminate" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 7 </span><span class="caption-text">Input elements for the laminate-type components</span><a class="headerlink" href="#code-tutorial-box-laminate" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -806,13 +804,13 @@ each web component depends on the walls component, as shown in
 point p0 is used to indicate that the material should be filled in the
 space in the middle enclosed by the walls and both webs. At the same
 time, the dependent components are also decided, as shown in
-<a class="reference internal" href="#code-tutorial-box-fill"><span class="std std-numref">Listing 5</span></a>.</p>
+<a class="reference internal" href="#code-tutorial-box-fill"><span class="std std-numref">Listing 8</span></a>.</p>
 <div class="figure align-center" id="fig-tutorial-box-fill">
 <a class="reference internal image-reference" href="../_images/tutorial_box_fill.png"><img alt="../_images/tutorial_box_fill.png" src="../_images/tutorial_box_fill.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 8 </span><span class="caption-text">The fill-type component.</span><a class="headerlink" href="#fig-tutorial-box-fill" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 13 </span><span class="caption-text">The fill-type component.</span><a class="headerlink" href="#fig-tutorial-box-fill" title="Permalink to this image">¶</a></p>
 </div>
 <div class="literal-block-wrapper docutils container" id="code-tutorial-box-fill">
-<div class="code-block-caption"><span class="caption-number">Listing 5 </span><span class="caption-text">Input elements for the fill-type component</span><a class="headerlink" href="#code-tutorial-box-fill" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 8 </span><span class="caption-text">Input elements for the fill-type component</span><a class="headerlink" href="#code-tutorial-box-fill" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -839,9 +837,9 @@ be calculated.</p>
 part contains global configurations for the shape and meshing of the
 cross section. Here, the global mesh size is set to 0.02.</p>
 <p>The completed main input file for the cross section is shown in
-<a class="reference internal" href="#code-tutorial-box-main"><span class="std std-numref">Listing 6</span></a>.</p>
+<a class="reference internal" href="#code-tutorial-box-main"><span class="std std-numref">Listing 9</span></a>.</p>
 <div class="literal-block-wrapper docutils container" id="code-tutorial-box-main">
-<div class="code-block-caption"><span class="caption-number">Listing 6 </span><span class="caption-text">Input file for the cross section</span><a class="headerlink" href="#code-tutorial-box-main" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 9 </span><span class="caption-text">Input file for the cross section</span><a class="headerlink" href="#code-tutorial-box-main" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -922,17 +920,17 @@ homogenized using the following command:</p>
 </pre></div>
 </div>
 <p>If everything works successfully, Gmsh will be called and the cross section
-will be plotted as shown in <a class="reference internal" href="#fig-tutorial-box-plot"><span class="std std-numref">Fig. 9</span></a>
+will be plotted as shown in <a class="reference internal" href="#fig-tutorial-box-plot"><span class="std std-numref">Fig. 14</span></a>
 (the display of element edges is turned off in the figure for clarity),
 and VABS homogenization analysis will be carried out and effective beam
 properties can be found in the file <code class="docutils literal notranslate"><span class="pre">box.sg.K</span></code>. The effective Timoshenko
-stiffness matrix is listed in <a class="reference internal" href="#tutorial-stiffness"><span class="std std-numref">Table 10</span></a>.</p>
+stiffness matrix is listed in <a class="reference internal" href="#tutorial-stiffness"><span class="std std-numref">Table 20</span></a>.</p>
 <div class="figure align-center" id="fig-tutorial-box-plot">
 <a class="reference internal image-reference" href="../_images/tutorial_box.png"><img alt="../_images/tutorial_box.png" src="../_images/tutorial_box.png" style="width: 6.5in;" /></a>
-<p class="caption"><span class="caption-number">Figure 9 </span><span class="caption-text">The cross section created by PreVABS and plotted by Gmsh.</span><a class="headerlink" href="#fig-tutorial-box-plot" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 14 </span><span class="caption-text">The cross section created by PreVABS and plotted by Gmsh.</span><a class="headerlink" href="#fig-tutorial-box-plot" title="Permalink to this image">¶</a></p>
 </div>
 <table class="docutils align-center" id="tutorial-stiffness">
-<caption><span class="caption-number">Table 10 </span><span class="caption-text">Timoshenko stiffness matrix in the file <em>box.sg.K</em></span><a class="headerlink" href="#tutorial-stiffness" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 20 </span><span class="caption-text">Timoshenko stiffness matrix in the file <em>box.sg.K</em></span><a class="headerlink" href="#tutorial-stiffness" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 17%" />

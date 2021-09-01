@@ -1,0 +1,590 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Cross-section Airfoil Data (sc1095.dat) &mdash; iVABS 1.4 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "wenbinyugroup/ivabs");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Dakota Interface Scripts (interface.py)" href="inputs_interface.html" />
+    <link rel="prev" title="Material Database (material_database.xml)" href="inputs_cs_materials.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> iVABS
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">iVABS Quick Start</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Download and Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#windows-installer-files-with-extension-exe">Windows installer (files with extension <code class="docutils literal notranslate"><span class="pre">exe</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#windows-portable-archive-files-with-extension-7z">Windows portable archive (files with extension <code class="docutils literal notranslate"><span class="pre">7z</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#linux-installer-files-with-extension-sh">Linux installer (files with extension <code class="docutils literal notranslate"><span class="pre">sh</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#linux-portable-archives-files-with-extension-tar-gz">Linux portable archives (files with extension <code class="docutils literal notranslate"><span class="pre">tar.gz</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#request-vabs-license">Request VABS license</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example_uh60a_opt.html">Example 3: Optimization of a Cross-section using Dakota</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../tutorials.html">Tutorials</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../opt_uh60a_2dv.html">Optimization of A Blade Spar</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">iVABS Components</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../prevabs/index.html">PreVABS Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/run.html">How to Run PreVABS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/tutorial.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/guide.html">Guide for Preparing Input Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/changelog.html">Change log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/xml.html">Introduction to XML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/references.html">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../msgpi/index.html">msgpi documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../msgpi/user_guide.html">User Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../msgpi/ref_manual.html">Reference</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">iVABS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../tutorials.html">Tutorials</a> &raquo;</li>
+        
+          <li><a href="../opt_uh60a_2dv.html">Optimization of A Blade Spar</a> &raquo;</li>
+        
+          <li><a href="inputs.html">Preparation of Input Files</a> &raquo;</li>
+        
+      <li>Cross-section Airfoil Data (<code class="docutils literal notranslate"><span class="pre">sc1095.dat</span></code>)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/wenbinyugroup/ivabs/blob/main/docs/source/ivabs/tutorials/opt_uh60a_2dv/inputs_cs_airfoil.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cross-section-airfoil-data-sc1095-dat">
+<span id="sect-input-airfoil"></span><h1>Cross-section Airfoil Data (<code class="docutils literal notranslate"><span class="pre">sc1095.dat</span></code>)<a class="headerlink" href="#cross-section-airfoil-data-sc1095-dat" title="Permalink to this headline">¶</a></h1>
+<p>In this example, the base points are supplied via a separate base points file.
+The cross section are oriented to the right and points are given in the counterclockwise direction.
+This is shown in the figure below.
+The orientation of cross section and points order can also be chosen by your preference or convention.</p>
+<div class="figure align-center" id="uh60a-airfoil-points-order">
+<a class="reference internal image-reference" href="../../../_images/uh60a_point_order.jpg"><img alt="../../../_images/uh60a_point_order.jpg" src="../../../_images/uh60a_point_order.jpg" style="width: 6in;" /></a>
+</div>
+<p>The base points file includes arbitrary number of lines. each line includes</p>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">lable</span> <span class="n">x_2</span> <span class="n">x_3</span>
+</pre></div>
+</td></tr></table></div>
+<p>The label can be any number or just strings.
+You could assign a meaningful name for important points like intersections and
+assign numbers sequentially for other points.
+The label will be used to reference the points in building the cross section.</p>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="mi">1</span>  <span class="mi">0</span>  <span class="mi">0</span>
+<span class="mi">2</span>  <span class="o">-</span><span class="mf">0.000102</span>  <span class="mf">0.001466</span>
+<span class="mi">3</span>  <span class="o">-</span><span class="mf">0.000813</span>  <span class="mf">0.003959</span>
+<span class="mi">4</span>  <span class="o">-</span><span class="mf">0.002034</span>  <span class="mf">0.006255</span>
+<span class="mi">5</span>  <span class="o">-</span><span class="mf">0.004067</span>  <span class="mf">0.009133</span>
+<span class="mi">6</span>  <span class="o">-</span><span class="mf">0.006609</span>  <span class="mf">0.012145</span>
+<span class="mi">7</span>  <span class="o">-</span><span class="mf">0.009151</span>  <span class="mf">0.014727</span>
+<span class="mi">8</span>  <span class="o">-</span><span class="mf">0.012201</span>  <span class="mf">0.017476</span>
+<span class="mi">9</span>  <span class="o">-</span><span class="mf">0.018302</span>  <span class="mf">0.022201</span>
+<span class="mi">10</span>  <span class="o">-</span><span class="mf">0.024403</span>  <span class="mf">0.026083</span>
+<span class="mi">11</span>  <span class="o">-</span><span class="mf">0.030503</span>  <span class="mf">0.029338</span>
+<span class="mi">12</span>  <span class="o">-</span><span class="mf">0.036604</span>  <span class="mf">0.032084</span>
+<span class="mi">13</span>  <span class="o">-</span><span class="mf">0.042705</span>  <span class="mf">0.034427</span>
+<span class="mi">14</span>  <span class="o">-</span><span class="mf">0.050839</span>  <span class="mf">0.037069</span>
+<span class="mi">15</span>  <span class="o">-</span><span class="mf">0.061007</span>  <span class="mf">0.039788</span>
+<span class="mi">16</span>  <span class="o">-</span><span class="mf">0.071174</span>  <span class="mf">0.042051</span>
+<span class="mi">17</span>  <span class="o">-</span><span class="mf">0.081342</span>  <span class="mf">0.043977</span>
+<span class="mi">18</span>  <span class="o">-</span><span class="mf">0.09151</span>  <span class="mf">0.045624</span>
+<span class="mi">19</span>  <span class="o">-</span><span class="mf">0.101678</span>  <span class="mf">0.047049</span>
+<span class="mi">20</span>  <span class="o">-</span><span class="mf">0.116929</span>  <span class="mf">0.048852</span>
+<span class="mi">21</span>  <span class="o">-</span><span class="mf">0.132181</span>  <span class="mf">0.050333</span>
+<span class="mi">22</span>  <span class="o">-</span><span class="mf">0.147433</span>  <span class="mf">0.051581</span>
+<span class="mi">23</span>  <span class="o">-</span><span class="mf">0.162684</span>  <span class="mf">0.052648</span>
+<span class="mi">24</span>  <span class="o">-</span><span class="mf">0.177936</span>  <span class="mf">0.05354</span>
+<span class="mi">25</span>  <span class="o">-</span><span class="mf">0.193188</span>  <span class="mf">0.054258</span>
+<span class="mi">26</span>  <span class="o">-</span><span class="mf">0.208439</span>  <span class="mf">0.054802</span>
+<span class="mi">27</span>  <span class="o">-</span><span class="mf">0.223691</span>  <span class="mf">0.055178</span>
+<span class="mi">28</span>  <span class="o">-</span><span class="mf">0.238943</span>  <span class="mf">0.055414</span>
+<span class="mi">29</span>  <span class="o">-</span><span class="mf">0.254194</span>  <span class="mf">0.055527</span>
+<span class="mi">30</span>  <span class="o">-</span><span class="mf">0.269446</span>  <span class="mf">0.05554</span>
+<span class="mi">31</span>  <span class="o">-</span><span class="mf">0.284697</span>  <span class="mf">0.055472</span>
+<span class="mi">32</span>  <span class="o">-</span><span class="mf">0.305033</span>  <span class="mf">0.055281</span>
+<span class="mi">33</span>  <span class="o">-</span><span class="mf">0.325369</span>  <span class="mf">0.05498</span>
+<span class="mi">34</span>  <span class="o">-</span><span class="mf">0.345704</span>  <span class="mf">0.054576</span>
+<span class="mi">35</span>  <span class="o">-</span><span class="mf">0.36604</span>  <span class="mf">0.054074</span>
+<span class="mi">36</span>  <span class="o">-</span><span class="mf">0.386375</span>  <span class="mf">0.053479</span>
+<span class="mi">37</span>  <span class="o">-</span><span class="mf">0.406711</span>  <span class="mf">0.052796</span>
+<span class="mi">38</span>  <span class="o">-</span><span class="mf">0.427046</span>  <span class="mf">0.052028</span>
+<span class="mi">39</span>  <span class="o">-</span><span class="mf">0.447382</span>  <span class="mf">0.051176</span>
+<span class="mi">40</span>  <span class="o">-</span><span class="mf">0.467717</span>  <span class="mf">0.050241</span>
+<span class="mi">41</span>  <span class="o">-</span><span class="mf">0.488053</span>  <span class="mf">0.049223</span>
+<span class="mi">42</span>  <span class="o">-</span><span class="mf">0.508388</span>  <span class="mf">0.048123</span>
+<span class="mi">43</span>  <span class="o">-</span><span class="mf">0.528724</span>  <span class="mf">0.046942</span>
+<span class="mi">44</span>  <span class="o">-</span><span class="mf">0.549059</span>  <span class="mf">0.045679</span>
+<span class="mi">45</span>  <span class="o">-</span><span class="mf">0.569395</span>  <span class="mf">0.044336</span>
+<span class="mi">46</span>  <span class="o">-</span><span class="mf">0.589731</span>  <span class="mf">0.042911</span>
+<span class="mi">47</span>  <span class="o">-</span><span class="mf">0.610066</span>  <span class="mf">0.041404</span>
+<span class="mi">48</span>  <span class="o">-</span><span class="mf">0.630402</span>  <span class="mf">0.039817</span>
+<span class="mi">49</span>  <span class="o">-</span><span class="mf">0.650737</span>  <span class="mf">0.038149</span>
+<span class="mi">50</span>  <span class="o">-</span><span class="mf">0.671073</span>  <span class="mf">0.036402</span>
+<span class="mi">51</span>  <span class="o">-</span><span class="mf">0.691408</span>  <span class="mf">0.034577</span>
+<span class="mi">52</span>  <span class="o">-</span><span class="mf">0.711744</span>  <span class="mf">0.032673</span>
+<span class="mi">53</span>  <span class="o">-</span><span class="mf">0.732079</span>  <span class="mf">0.030696</span>
+<span class="mi">54</span>  <span class="o">-</span><span class="mf">0.752415</span>  <span class="mf">0.028652</span>
+<span class="mi">55</span>  <span class="o">-</span><span class="mf">0.77275</span>  <span class="mf">0.026547</span>
+<span class="mi">56</span>  <span class="o">-</span><span class="mf">0.793086</span>  <span class="mf">0.024387</span>
+<span class="mi">57</span>  <span class="o">-</span><span class="mf">0.813421</span>  <span class="mf">0.02218</span>
+<span class="mi">58</span>  <span class="o">-</span><span class="mf">0.833757</span>  <span class="mf">0.01993</span>
+<span class="mi">59</span>  <span class="o">-</span><span class="mf">0.854092</span>  <span class="mf">0.017642</span>
+<span class="mi">60</span>  <span class="o">-</span><span class="mf">0.874428</span>  <span class="mf">0.01532</span>
+<span class="mi">61</span>  <span class="o">-</span><span class="mf">0.894764</span>  <span class="mf">0.01297</span>
+<span class="mi">62</span>  <span class="o">-</span><span class="mf">0.915099</span>  <span class="mf">0.010595</span>
+<span class="mi">63</span>  <span class="o">-</span><span class="mf">0.925267</span>  <span class="mf">0.009393</span>
+<span class="mi">64</span>  <span class="o">-</span><span class="mf">0.935435</span>  <span class="mf">0.008179</span>
+<span class="mi">65</span>  <span class="o">-</span><span class="mf">0.945602</span>  <span class="mf">0.00695</span>
+<span class="mi">66</span>  <span class="o">-</span><span class="mf">0.95577</span>  <span class="mf">0.005702</span>
+<span class="mi">67</span>  <span class="o">-</span><span class="mf">0.965938</span>  <span class="mf">0.004433</span>
+<span class="mi">68</span>  <span class="o">-</span><span class="mf">0.976106</span>  <span class="mf">0.003603</span>
+<span class="mi">69</span>  <span class="o">-</span><span class="mf">0.986274</span>  <span class="mf">0.002805</span>
+<span class="mi">70</span>  <span class="o">-</span><span class="mf">0.996441</span>  <span class="mf">0.002008</span>
+<span class="mi">71</span>  <span class="o">-</span><span class="mi">1</span>  <span class="mf">0.001729</span>
+<span class="mi">72</span>  <span class="o">-</span><span class="mi">1</span>  <span class="o">-</span><span class="mf">0.001729</span>
+<span class="mi">73</span>  <span class="o">-</span><span class="mf">0.996441</span>  <span class="o">-</span><span class="mf">0.001875</span>
+<span class="mi">74</span>  <span class="o">-</span><span class="mf">0.986274</span>  <span class="o">-</span><span class="mf">0.002294</span>
+<span class="mi">75</span>  <span class="o">-</span><span class="mf">0.976106</span>  <span class="o">-</span><span class="mf">0.002713</span>
+<span class="mi">76</span>  <span class="o">-</span><span class="mf">0.965938</span>  <span class="o">-</span><span class="mf">0.003131</span>
+<span class="mi">77</span>  <span class="o">-</span><span class="mf">0.95577</span>  <span class="o">-</span><span class="mf">0.004019</span>
+<span class="mi">78</span>  <span class="o">-</span><span class="mf">0.945602</span>  <span class="o">-</span><span class="mf">0.004889</span>
+<span class="mi">79</span>  <span class="o">-</span><span class="mf">0.935435</span>  <span class="o">-</span><span class="mf">0.005745</span>
+<span class="mi">80</span>  <span class="o">-</span><span class="mf">0.925267</span>  <span class="o">-</span><span class="mf">0.006589</span>
+<span class="mi">81</span>  <span class="o">-</span><span class="mf">0.915099</span>  <span class="o">-</span><span class="mf">0.007424</span>
+<span class="mi">82</span>  <span class="o">-</span><span class="mf">0.894764</span>  <span class="o">-</span><span class="mf">0.009078</span>
+<span class="mi">83</span>  <span class="o">-</span><span class="mf">0.874428</span>  <span class="o">-</span><span class="mf">0.010723</span>
+<span class="mi">84</span>  <span class="o">-</span><span class="mf">0.854092</span>  <span class="o">-</span><span class="mf">0.012355</span>
+<span class="mi">85</span>  <span class="o">-</span><span class="mf">0.833757</span>  <span class="o">-</span><span class="mf">0.013971</span>
+<span class="mi">86</span>  <span class="o">-</span><span class="mf">0.813421</span>  <span class="o">-</span><span class="mf">0.015566</span>
+<span class="mi">87</span>  <span class="o">-</span><span class="mf">0.793086</span>  <span class="o">-</span><span class="mf">0.017137</span>
+<span class="mi">88</span>  <span class="o">-</span><span class="mf">0.77275</span>  <span class="o">-</span><span class="mf">0.018679</span>
+<span class="mi">89</span>  <span class="o">-</span><span class="mf">0.752415</span>  <span class="o">-</span><span class="mf">0.020187</span>
+<span class="mi">90</span>  <span class="o">-</span><span class="mf">0.732079</span>  <span class="o">-</span><span class="mf">0.021655</span>
+<span class="mi">91</span>  <span class="o">-</span><span class="mf">0.711744</span>  <span class="o">-</span><span class="mf">0.023078</span>
+<span class="mi">92</span>  <span class="o">-</span><span class="mf">0.691408</span>  <span class="o">-</span><span class="mf">0.024452</span>
+<span class="mi">93</span>  <span class="o">-</span><span class="mf">0.671073</span>  <span class="o">-</span><span class="mf">0.025771</span>
+<span class="mi">94</span>  <span class="o">-</span><span class="mf">0.650737</span>  <span class="o">-</span><span class="mf">0.027033</span>
+<span class="mi">95</span>  <span class="o">-</span><span class="mf">0.630402</span>  <span class="o">-</span><span class="mf">0.028238</span>
+<span class="mi">96</span>  <span class="o">-</span><span class="mf">0.610066</span>  <span class="o">-</span><span class="mf">0.029384</span>
+<span class="mi">97</span>  <span class="o">-</span><span class="mf">0.589731</span>  <span class="o">-</span><span class="mf">0.030467</span>
+<span class="mi">98</span>  <span class="o">-</span><span class="mf">0.569395</span>  <span class="o">-</span><span class="mf">0.031488</span>
+<span class="mi">99</span>  <span class="o">-</span><span class="mf">0.549059</span>  <span class="o">-</span><span class="mf">0.032448</span>
+<span class="mi">100</span>  <span class="o">-</span><span class="mf">0.528724</span>  <span class="o">-</span><span class="mf">0.033347</span>
+<span class="mi">101</span>  <span class="o">-</span><span class="mf">0.508388</span>  <span class="o">-</span><span class="mf">0.034186</span>
+<span class="mi">102</span>  <span class="o">-</span><span class="mf">0.488053</span>  <span class="o">-</span><span class="mf">0.034966</span>
+<span class="mi">103</span>  <span class="o">-</span><span class="mf">0.467717</span>  <span class="o">-</span><span class="mf">0.035688</span>
+<span class="mi">104</span>  <span class="o">-</span><span class="mf">0.447382</span>  <span class="o">-</span><span class="mf">0.03635</span>
+<span class="mi">105</span>  <span class="o">-</span><span class="mf">0.427046</span>  <span class="o">-</span><span class="mf">0.036952</span>
+<span class="mi">106</span>  <span class="o">-</span><span class="mf">0.406711</span>  <span class="o">-</span><span class="mf">0.037494</span>
+<span class="mi">107</span>  <span class="o">-</span><span class="mf">0.386375</span>  <span class="o">-</span><span class="mf">0.037974</span>
+<span class="mi">108</span>  <span class="o">-</span><span class="mf">0.36604</span>  <span class="o">-</span><span class="mf">0.038392</span>
+<span class="mi">109</span>  <span class="o">-</span><span class="mf">0.345704</span>  <span class="o">-</span><span class="mf">0.038744</span>
+<span class="mi">110</span>  <span class="o">-</span><span class="mf">0.325369</span>  <span class="o">-</span><span class="mf">0.039027</span>
+<span class="mi">111</span>  <span class="o">-</span><span class="mf">0.305033</span>  <span class="o">-</span><span class="mf">0.039236</span>
+<span class="mi">112</span>  <span class="o">-</span><span class="mf">0.284697</span>  <span class="o">-</span><span class="mf">0.039368</span>
+<span class="mi">113</span>  <span class="o">-</span><span class="mf">0.269446</span>  <span class="o">-</span><span class="mf">0.039414</span>
+<span class="mi">114</span>  <span class="o">-</span><span class="mf">0.254194</span>  <span class="o">-</span><span class="mf">0.03941</span>
+<span class="mi">115</span>  <span class="o">-</span><span class="mf">0.238943</span>  <span class="o">-</span><span class="mf">0.039348</span>
+<span class="mi">116</span>  <span class="o">-</span><span class="mf">0.223691</span>  <span class="o">-</span><span class="mf">0.039225</span>
+<span class="mi">117</span>  <span class="o">-</span><span class="mf">0.208439</span>  <span class="o">-</span><span class="mf">0.039032</span>
+<span class="mi">118</span>  <span class="o">-</span><span class="mf">0.193188</span>  <span class="o">-</span><span class="mf">0.038762</span>
+<span class="mi">119</span>  <span class="o">-</span><span class="mf">0.177936</span>  <span class="o">-</span><span class="mf">0.038406</span>
+<span class="mi">120</span>  <span class="o">-</span><span class="mf">0.162684</span>  <span class="o">-</span><span class="mf">0.037948</span>
+<span class="mi">121</span>  <span class="o">-</span><span class="mf">0.147433</span>  <span class="o">-</span><span class="mf">0.037372</span>
+<span class="mi">122</span>  <span class="o">-</span><span class="mf">0.132181</span>  <span class="o">-</span><span class="mf">0.03666</span>
+<span class="mi">123</span>  <span class="o">-</span><span class="mf">0.116929</span>  <span class="o">-</span><span class="mf">0.035795</span>
+<span class="mi">124</span>  <span class="o">-</span><span class="mf">0.101678</span>  <span class="o">-</span><span class="mf">0.03476</span>
+<span class="mi">125</span>  <span class="o">-</span><span class="mf">0.09151</span>  <span class="o">-</span><span class="mf">0.033965</span>
+<span class="mi">126</span>  <span class="o">-</span><span class="mf">0.081342</span>  <span class="o">-</span><span class="mf">0.033043</span>
+<span class="mi">127</span>  <span class="o">-</span><span class="mf">0.071174</span>  <span class="o">-</span><span class="mf">0.031911</span>
+<span class="mi">128</span>  <span class="o">-</span><span class="mf">0.061007</span>  <span class="o">-</span><span class="mf">0.03048</span>
+<span class="mi">129</span>  <span class="o">-</span><span class="mf">0.050839</span>  <span class="o">-</span><span class="mf">0.02862</span>
+<span class="mi">130</span>  <span class="o">-</span><span class="mf">0.042705</span>  <span class="o">-</span><span class="mf">0.026694</span>
+<span class="mi">131</span>  <span class="o">-</span><span class="mf">0.036604</span>  <span class="o">-</span><span class="mf">0.024941</span>
+<span class="mi">132</span>  <span class="o">-</span><span class="mf">0.030503</span>  <span class="o">-</span><span class="mf">0.022933</span>
+<span class="mi">133</span>  <span class="o">-</span><span class="mf">0.024403</span>  <span class="o">-</span><span class="mf">0.020662</span>
+<span class="mi">134</span>  <span class="o">-</span><span class="mf">0.018302</span>  <span class="o">-</span><span class="mf">0.01798</span>
+<span class="mi">135</span>  <span class="o">-</span><span class="mf">0.012201</span>  <span class="o">-</span><span class="mf">0.014526</span>
+<span class="mi">136</span>  <span class="o">-</span><span class="mf">0.009151</span>  <span class="o">-</span><span class="mf">0.01236</span>
+<span class="mi">137</span>  <span class="o">-</span><span class="mf">0.006609</span>  <span class="o">-</span><span class="mf">0.010198</span>
+<span class="mi">138</span>  <span class="o">-</span><span class="mf">0.004067</span>  <span class="o">-</span><span class="mf">0.007565</span>
+<span class="mi">139</span>  <span class="o">-</span><span class="mf">0.002034</span>  <span class="o">-</span><span class="mf">0.005099</span>
+<span class="mi">140</span>  <span class="o">-</span><span class="mf">0.000813</span>  <span class="o">-</span><span class="mf">0.003219</span>
+<span class="mi">141</span>  <span class="o">-</span><span class="mf">0.000102</span>  <span class="o">-</span><span class="mf">0.001117</span>
+<span class="mi">142</span>  <span class="mi">0</span>  <span class="mi">0</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="inputs_interface.html" class="btn btn-neutral float-right" title="Dakota Interface Scripts (interface.py)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="inputs_cs_materials.html" class="btn btn-neutral float-left" title="Material Database (material_database.xml)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Multiscale Structural Mechanics Group, Purdue University.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

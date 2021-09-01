@@ -1,0 +1,600 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Dakota Input File (cs_tm_opt_soga.dakota) &mdash; iVABS 1.4 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "wenbinyugroup/ivabs");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Cross-section Main Input Template (design/uh60a_section.xml.tmp)" href="inputs_cs_template.html" />
+    <link rel="prev" title="Preparation of Input Files" href="inputs.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> iVABS
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">iVABS Quick Start</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Download and Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#windows-installer-files-with-extension-exe">Windows installer (files with extension <code class="docutils literal notranslate"><span class="pre">exe</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#windows-portable-archive-files-with-extension-7z">Windows portable archive (files with extension <code class="docutils literal notranslate"><span class="pre">7z</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#linux-installer-files-with-extension-sh">Linux installer (files with extension <code class="docutils literal notranslate"><span class="pre">sh</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#linux-portable-archives-files-with-extension-tar-gz">Linux portable archives (files with extension <code class="docutils literal notranslate"><span class="pre">tar.gz</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#request-vabs-license">Request VABS license</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example_uh60a_opt.html">Example 3: Optimization of a Cross-section using Dakota</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../tutorials.html">Tutorials</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../opt_uh60a_2dv.html">Optimization of A Blade Spar</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">iVABS Components</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../prevabs/index.html">PreVABS Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/run.html">How to Run PreVABS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/tutorial.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/guide.html">Guide for Preparing Input Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/changelog.html">Change log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/xml.html">Introduction to XML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/references.html">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../msgpi/index.html">msgpi documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../msgpi/user_guide.html">User Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../msgpi/ref_manual.html">Reference</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">iVABS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../tutorials.html">Tutorials</a> &raquo;</li>
+        
+          <li><a href="../opt_uh60a_2dv.html">Optimization of A Blade Spar</a> &raquo;</li>
+        
+          <li><a href="inputs.html">Preparation of Input Files</a> &raquo;</li>
+        
+      <li>Dakota Input File (<code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.dakota</span></code>)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/wenbinyugroup/ivabs/blob/main/docs/source/ivabs/tutorials/opt_uh60a_2dv/inputs_dakota.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dakota-input-file-cs-tm-opt-soga-dakota">
+<span id="sect-input-dakota"></span><h1>Dakota Input File (<code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.dakota</span></code>)<a class="headerlink" href="#dakota-input-file-cs-tm-opt-soga-dakota" title="Permalink to this headline">¶</a></h1>
+<p>Dakota inputs are grouped into five sections: environment, method, model, variables, interface and responses.
+The general rule is to use keywords followed by values.
+The alignment of keywords and values are not important.
+They can share the same line or use multiple lines.
+Indentations are not required and used in this example only for clarity and showing the hierarchical relation of keywords.
+The equal sign <code class="docutils literal notranslate"><span class="pre">=</span></code> is also optional.
+Comments are specified by the character <code class="docutils literal notranslate"><span class="pre">#</span></code>.</p>
+<p>For more details on the input syntax and keywords, please check the Dakota user manual and reference manual.</p>
+<div class="section" id="environment">
+<span id="dakota-input-environment"></span><h2>Environment<a class="headerlink" href="#environment" title="Permalink to this headline">¶</a></h2>
+<p>This section starts with the keyword <code class="docutils literal notranslate"><span class="pre">environment</span></code>.
+This section configurs some general settings such as the names of various output files.</p>
+<p>The keyword <code class="docutils literal notranslate"><span class="pre">output_file</span></code> specifies the main output of the optimization.
+This file is given the name <code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.out</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">output_file</span> <span class="o">=</span> <span class="s1">&#39;cs_tm_opt_soga.out&#39;</span>
+</pre></div>
+</div>
+<p>The keyword <code class="docutils literal notranslate"><span class="pre">write_restart</span></code> specifies the file that is used to restart the optimization if it stops at some point for some reason.
+This file is given the name <code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.rst</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">write_restart</span> <span class="o">=</span> <span class="s1">&#39;cs_tm_opt_soga.rst&#39;</span>
+</pre></div>
+</div>
+<p>The keyword <code class="docutils literal notranslate"><span class="pre">error_file</span></code> specifies the file that stores the error messages if Dakota stops with some exceptions.
+This file is given the name <code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.err</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">error_file</span> <span class="o">=</span> <span class="s1">&#39;cs_tm_opt_soga.err&#39;</span>
+</pre></div>
+</div>
+<p>The keyword <code class="docutils literal notranslate"><span class="pre">tabular_data</span></code> specifies a file that writes tabular results of variable and response history.
+This file is given the name <code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga_tabular.dat</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tabular_data</span>
+  <span class="n">tabular_data_file</span> <span class="o">=</span> <span class="s1">&#39;cs_tm_opt_soga_tabular.dat&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="method">
+<span id="dakota-input-method"></span><h2>Method<a class="headerlink" href="#method" title="Permalink to this headline">¶</a></h2>
+<p>This section is specified by the keyword <code class="docutils literal notranslate"><span class="pre">method</span></code> and configures the optimization method.
+As stated earlier, this example will use Genetic Algorithm.
+For this single objective optimization problem, the specific method is SOGA (Single Objective Genetic Algorithm) and the corresponding keyword is <code class="docutils literal notranslate"><span class="pre">soga</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">method</span>
+  <span class="n">soga</span>
+</pre></div>
+</div>
+<p>The number of individual designs in a single generation is specified by the keyword <code class="docutils literal notranslate"><span class="pre">population_size</span></code>, which is set to 50:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">population_size</span> <span class="o">=</span> <span class="mi">50</span>
+</pre></div>
+</div>
+<p>The stopping condition of the optimization contains two aspects.
+One is the convergence checking and the other is the maximum number of functional evaluations.
+The settings are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">max_function_evaluations</span> <span class="o">=</span> <span class="mi">2000</span>
+<span class="n">convergence_type</span>
+  <span class="n">average_fitness_tracker</span>
+    <span class="n">percent_change</span> <span class="o">=</span> <span class="mf">0.1</span>
+    <span class="n">num_generations</span> <span class="o">=</span> <span class="mi">10</span>
+</pre></div>
+</div>
+<p>To control the randomness in the algorithm, a randomness seed is specified using the keyword <code class="docutils literal notranslate"><span class="pre">seed</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">seed</span> <span class="o">=</span> <span class="mi">1027</span>
+</pre></div>
+</div>
+<p>The following two settings can be used to provide more information of the optimization process.
+The keyword <code class="docutils literal notranslate"><span class="pre">print_each_pop</span></code> ask Dakota to write tabular data (variables and responses) into a file after each generation.
+The output file will be <code class="docutils literal notranslate"><span class="pre">population_i.dat</span></code>, where <code class="docutils literal notranslate"><span class="pre">i</span></code> is the generation number.
+The keyword <code class="docutils literal notranslate"><span class="pre">log_file</span></code> specifies the name for the file storing logging messages generated by SOGA.
+The inputs are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">print_each_pop</span>
+<span class="n">log_file</span> <span class="o">=</span> <span class="s1">&#39;cs_tm_opt_soga.log&#39;</span>
+</pre></div>
+</div>
+<p>For other settings that are not mentioned here, readers can go to the Dakota reference manual for their detailed usage and default values.</p>
+</div>
+<div class="section" id="model">
+<span id="dakota-input-model"></span><h2>Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">model</span></code> section configures how variables are mapped into responses.
+This example uses the default and simplest model: <code class="docutils literal notranslate"><span class="pre">single</span></code>, where variables are mapped to responses through the process specified in <code class="docutils literal notranslate"><span class="pre">interface</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">model</span>
+  <span class="n">single</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="variables">
+<span id="dakota-input-variables"></span><h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<p>This section specifies variables in this optimization problem, using the keyword <code class="docutils literal notranslate"><span class="pre">variables</span></code>.
+Following the terminology of Dakota, variables in this example can be grouped into two types, design variables and state variables.
+Design variables are those that will be changed in each iteration, while state variables are those that will be fixed in an optimization study.</p>
+<p>As stated in Section: <a class="reference internal" href="opt.html#opt"><span class="std std-ref">Optimization Formulation</span></a>, there are two continuous design variables in this example.
+The corresponding inputs are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">continuous_design</span> <span class="o">=</span> <span class="mi">2</span>
+  <span class="n">descriptors</span>     <span class="o">=</span>  <span class="s1">&#39;wl_x2&#39;</span>  <span class="s1">&#39;wt_x2&#39;</span>
+  <span class="n">upper_bounds</span>    <span class="o">=</span>   <span class="o">-</span><span class="mf">0.10</span>    <span class="o">-</span><span class="mf">0.30</span>
+  <span class="n">lower_bounds</span>    <span class="o">=</span>   <span class="o">-</span><span class="mf">0.20</span>    <span class="o">-</span><span class="mf">0.50</span>
+</pre></div>
+</div>
+<p>All other parameters mentioned in Section: <a class="reference internal" href="cs_param.html#sect-cs-param"><span class="std std-ref">Cross-sectional Parameterization and Beam Properties</span></a> are treated as state variables.
+The keyword <code class="docutils literal notranslate"><span class="pre">discrete_state_set</span></code> is used to specify their fixed values.
+There are eight real-type state variables:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">real</span> <span class="o">=</span> <span class="mi">8</span>
+  <span class="n">descriptors</span> <span class="o">=</span> <span class="s1">&#39;mesh_size&#39;</span>  <span class="s1">&#39;mesh_size_fill&#39;</span>
+                <span class="s1">&#39;pnsmc_x3&#39;</span>        <span class="s1">&#39;pfte2_x2&#39;</span>
+                <span class="s1">&#39;pnsmc_x2&#39;</span>            <span class="s1">&#39;nsmr&#39;</span>
+                    <span class="s1">&#39;chord&#39;</span>             <span class="s1">&#39;oa2&#39;</span>
+  <span class="n">elements</span>    <span class="o">=</span>       <span class="mf">0.04</span>               <span class="mf">0.3</span>
+                        <span class="mi">0</span>              <span class="o">-</span><span class="mf">0.9</span>
+                    <span class="o">-</span><span class="mf">0.046</span>            <span class="mf">0.0094</span>
+                    <span class="mf">20.76</span>             <span class="o">-</span><span class="mf">0.25</span>
+</pre></div>
+</div>
+<p>There are 15 integer-type state variables:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">integer</span> <span class="o">=</span> <span class="mi">15</span>
+  <span class="n">descriptors</span>  <span class="o">=</span> <span class="s1">&#39;mi_spar_1&#39;</span>  <span class="s1">&#39;mi_le&#39;</span>  <span class="s1">&#39;mi_te&#39;</span>
+                <span class="s1">&#39;np_spar_1&#39;</span>  <span class="s1">&#39;np_le&#39;</span>  <span class="s1">&#39;np_te&#39;</span>
+                <span class="s1">&#39;np_spar_2&#39;</span>
+                <span class="s1">&#39;np_spar_3&#39;</span>
+                <span class="s1">&#39;np_spar_4&#39;</span>
+                <span class="s1">&#39;fo_spar_1&#39;</span>  <span class="s1">&#39;fo_le&#39;</span>  <span class="s1">&#39;fo_te&#39;</span>
+                <span class="s1">&#39;fo_spar_2&#39;</span>
+                <span class="s1">&#39;fo_spar_3&#39;</span>
+                <span class="s1">&#39;fo_spar_4&#39;</span>
+  <span class="n">elements</span> <span class="o">=</span> <span class="mi">4</span> <span class="mi">1</span> <span class="mi">4</span>
+            <span class="mi">16</span> <span class="mi">16</span> <span class="mi">13</span>
+            <span class="mi">16</span>
+            <span class="mi">14</span>
+            <span class="mi">19</span>
+            <span class="mi">50</span> <span class="o">-</span><span class="mi">36</span> <span class="mi">71</span>
+            <span class="o">-</span><span class="mi">9</span>
+            <span class="mi">53</span>
+            <span class="o">-</span><span class="mi">44</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="interface">
+<span id="dakota-input-interface"></span><h2>Interface<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h2>
+<p>This section specifies how Dakota should run and change data with the analysis.
+The keyword is <code class="docutils literal notranslate"><span class="pre">interface</span></code>.
+The command used to call the analysis is specified by the keyword <code class="docutils literal notranslate"><span class="pre">analysis_driver</span></code>.
+Since the analysis is coded in a Python script and data (inputs/outputs) are transferred through files, the <code class="docutils literal notranslate"><span class="pre">fork</span></code> type is used for this analysis driver:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">analysis_driver</span> <span class="o">=</span> <span class="s1">&#39;python3 interface.py interface_args.json uh60a_section&#39;</span>
+  <span class="n">fork</span>
+</pre></div>
+</div>
+<p>The names of the parameters file (written by Dakota) and the results file (read by Dakota) are specified as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">parameters_file</span> <span class="o">=</span> <span class="s1">&#39;input.in&#39;</span>
+<span class="n">results_file</span> <span class="o">=</span> <span class="s1">&#39;output.out&#39;</span>
+</pre></div>
+</div>
+<p>Hence, the actual shell command called by Dakota will be</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python3 interface.py interface_args.json uh60a_section input.in output.out
+</pre></div>
+</div>
+<p>All files generated by the analysis can be saved by using the keyword <code class="docutils literal notranslate"><span class="pre">file_save</span></code>.
+If the storage is limited, then all files can be deleted after each successful evaluation by commenting out this keyword.</p>
+<p>To use the concurrent computing technique provided by Dakota, each individual analysis must be carried out in an isolated working directory.
+In this example, each analysis is done in a folder named <code class="docutils literal notranslate"><span class="pre">evals/eval_i</span></code>, where <code class="docutils literal notranslate"><span class="pre">i</span></code> is the <code class="docutils literal notranslate"><span class="pre">directory_tag</span></code>, which is also the evaluation number.
+Same as <code class="docutils literal notranslate"><span class="pre">file_save</span></code>, <code class="docutils literal notranslate"><span class="pre">directory_save</span></code> is also optional.
+This is specified as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">work_directory</span>
+  <span class="n">named</span> <span class="o">=</span> <span class="s1">&#39;evals/eval&#39;</span>
+  <span class="n">directory_tag</span>
+  <span class="n">directory_save</span>
+</pre></div>
+</div>
+<p>To make the analysis driver work, the final step is to specify all files needed by the analysis driver, using the keyword <code class="docutils literal notranslate"><span class="pre">link_file</span></code> (Linux) or <code class="docutils literal notranslate"><span class="pre">copy_file</span></code> (Windows):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">link_file</span> <span class="o">=</span> <span class="s1">&#39;interface.py&#39;</span>
+            <span class="s1">&#39;interface_args.json&#39;</span>
+            <span class="s1">&#39;data_proc_funcs.py&#39;</span>
+            <span class="s1">&#39;design/*&#39;</span>
+</pre></div>
+</div>
+<p>In this example, the following six files are needed:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">design/uh60a_section.xml.tmp</span></code> (see Section: <a class="reference internal" href="inputs_cs_template.html#sect-input-template"><span class="std std-ref">Cross-section Main Input Template (design/uh60a_section.xml.tmp)</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">design/material_database.xml</span></code> (see Section: <a class="reference internal" href="inputs_cs_materials.html#sect-input-material"><span class="std std-ref">Material Database (material_database.xml)</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">design/sc1095.dat</span></code> (see Section: <a class="reference internal" href="inputs_cs_airfoil.html#sect-input-airfoil"><span class="std std-ref">Cross-section Airfoil Data (sc1095.dat)</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interface.py</span></code> (see Section: <a class="reference internal" href="inputs_interface.html#sect-input-interface"><span class="std std-ref">Dakota Interface Scripts (interface.py)</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interface_args.json</span></code> (see Section: <a class="reference internal" href="inputs_arguments.html#sect-input-arguments"><span class="std std-ref">Interface Arguments (interface_args.json)</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code> (see Section: <a class="reference internal" href="inputs_data_process.html#sect-input-process"><span class="std std-ref">Data Processing Functions (data_proc_funcs.py)</span></a>)</p></li>
+</ol>
+<p>Finally, this example runs 20 concurrent analyses each time.
+This is specified as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">asynchronous</span>
+  <span class="n">evaluation_concurrency</span> <span class="o">=</span> <span class="mi">20</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="responses">
+<span id="dakota-input-responses"></span><h2>Responses<a class="headerlink" href="#responses" title="Permalink to this headline">¶</a></h2>
+<p>This section specifies the responses sent pack to Dakota from the analysis driver, including objectives and constraints.
+Based on the optimization formulation in Section: <a class="reference internal" href="opt.html#opt"><span class="std std-ref">Optimization Formulation</span></a>, Dakota will read two responses from the result file, one objective and one constraint:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">responses</span>
+  <span class="n">descriptors</span> <span class="o">=</span> <span class="s1">&#39;diff&#39;</span> <span class="s1">&#39;mpl&#39;</span>
+</pre></div>
+</div>
+<p>The objective is to minimize the difference between the calculated and target beam properties:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">objective_functions</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="n">sense</span> <span class="o">=</span> <span class="s1">&#39;min&#39;</span>
+</pre></div>
+</div>
+<p>The constraint is keep the calculated mass less than the target value:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nonlinear_inequality_constraints</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="n">upper_bounds</span> <span class="o">=</span>  <span class="mf">0.00149</span>
+  <span class="n">lower_bounds</span> <span class="o">=</span>        <span class="mi">0</span>
+</pre></div>
+</div>
+<p>Since the optimization method is Genetic Algorithm, there is no gradient and hessian results returned to Dakota.</p>
+</div>
+<div class="section" id="complete-file">
+<h2>Complete file<a class="headerlink" href="#complete-file" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># ====================================================================
+
+environment
+  output_file = &#39;cs_tm_opt_soga.out&#39;
+  write_restart = &#39;cs_tm_opt_soga.rst&#39;
+  error_file = &#39;cs_tm_opt_soga.err&#39;
+  tabular_data
+    tabular_data_file = &#39;cs_tm_opt_soga_tabular.dat&#39;
+
+# ====================================================================
+
+method
+  soga
+    max_function_evaluations = 2000
+    population_size = 50
+    seed = 1027
+    convergence_type
+      average_fitness_tracker  # default
+        percent_change = 0.1  # defualt: 0.1
+        num_generations = 10  # default: 10
+    print_each_pop
+    log_file = &#39;cs_tm_opt_soga.log&#39;
+
+# ====================================================================
+
+model
+  single
+
+# ====================================================================
+
+variables
+  active design
+
+  continuous_design = 2
+    descriptors     =  &#39;wl_x2&#39;  &#39;wt_x2&#39;
+    upper_bounds    =   -0.10    -0.30
+    lower_bounds    =   -0.20    -0.50
+
+  discrete_state_set
+    real = 8
+      descriptors = &#39;mesh_size&#39;  &#39;mesh_size_fill&#39;
+                    &#39;pnsmc_x3&#39;        &#39;pfte2_x2&#39;
+                    &#39;pnsmc_x2&#39;            &#39;nsmr&#39;
+                        &#39;chord&#39;             &#39;oa2&#39;
+      elements    =       0.04               0.3
+                            0              -0.9
+                        -0.046            0.0094
+                        20.76             -0.25
+    integer = 15
+      descriptors  = &#39;mi_spar_1&#39;  &#39;mi_le&#39;  &#39;mi_te&#39;
+                    &#39;np_spar_1&#39;  &#39;np_le&#39;  &#39;np_te&#39;
+                    &#39;np_spar_2&#39;
+                    &#39;np_spar_3&#39;
+                    &#39;np_spar_4&#39;
+                    &#39;fo_spar_1&#39;  &#39;fo_le&#39;  &#39;fo_te&#39;
+                    &#39;fo_spar_2&#39;
+                    &#39;fo_spar_3&#39;
+                    &#39;fo_spar_4&#39;
+      elements = 4 1 4
+                16 16 13
+                16
+                14
+                19
+                50 -36 71
+                -9
+                53
+                -44
+
+
+# ====================================================================
+
+interface
+  analysis_driver = &#39;python3 interface.py interface_args.json&#39;
+    fork
+      parameters_file = &#39;input.in&#39;
+      results_file = &#39;output.out&#39;
+      file_save
+      work_directory
+        named = &#39;evals/eval&#39;
+        directory_tag
+        directory_save
+        link_file = &#39;interface.py&#39;
+                    &#39;interface_args.json&#39;
+                    &#39;data_proc_funcs.py&#39;
+                    &#39;design/*&#39;
+  asynchronous
+    evaluation_concurrency = 20
+
+# ====================================================================
+
+responses
+  descriptors = &#39;diff&#39; &#39;mpl&#39;
+  objective_functions = 1
+    sense = &#39;min&#39;
+    nonlinear_inequality_constraints = 1
+      upper_bounds =  0.00149
+      lower_bounds =        0
+  no_gradients
+  no_hessians
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="inputs_cs_template.html" class="btn btn-neutral float-right" title="Cross-section Main Input Template (design/uh60a_section.xml.tmp)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="inputs.html" class="btn btn-neutral float-left" title="Preparation of Input Files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Multiscale Structural Mechanics Group, Purdue University.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>msgpi.cross_section.CrossSection.fn_sg &mdash; iVABS 1.4 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "wenbinyugroup/ivabs");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> iVABS
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">iVABS Quick Start</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ivabs/install.html">Download and Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../ivabs/install.html#windows-installer-files-with-extension-exe">Windows installer (files with extension <code class="docutils literal notranslate"><span class="pre">exe</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../ivabs/install.html#windows-portable-archive-files-with-extension-7z">Windows portable archive (files with extension <code class="docutils literal notranslate"><span class="pre">7z</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../ivabs/install.html#linux-installer-files-with-extension-sh">Linux installer (files with extension <code class="docutils literal notranslate"><span class="pre">sh</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../ivabs/install.html#linux-portable-archives-files-with-extension-tar-gz">Linux portable archives (files with extension <code class="docutils literal notranslate"><span class="pre">tar.gz</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../ivabs/install.html#request-vabs-license">Request VABS license</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ivabs/examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../ivabs/examples/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../ivabs/examples/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../ivabs/examples/example_uh60a_opt.html">Example 3: Optimization of a Cross-section using Dakota</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ivabs/tutorials.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../ivabs/tutorials/opt_uh60a_2dv.html">Optimization of A Blade Spar</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">iVABS Components</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../prevabs/index.html">PreVABS Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../prevabs/run.html">How to Run PreVABS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../prevabs/tutorial.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../prevabs/guide.html">Guide for Preparing Input Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../prevabs/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../prevabs/changelog.html">Change log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../prevabs/xml.html">Introduction to XML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../prevabs/references.html">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">msgpi documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../user_guide.html">User Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ref_manual.html">Reference</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">iVABS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>msgpi.cross_section.CrossSection.fn_sg</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/wenbinyugroup/ivabs/blob/main/docs/source/msgpi/_autogen/sg/cs/msgpi.cross_section.CrossSection.fn_sg.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="msgpi-cross-section-crosssection-fn-sg">
+<h1>msgpi.cross_section.CrossSection.fn_sg<a class="headerlink" href="#msgpi-cross-section-crosssection-fn-sg" title="Permalink to this headline">¶</a></h1>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Multiscale Structural Mechanics Group, Purdue University.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

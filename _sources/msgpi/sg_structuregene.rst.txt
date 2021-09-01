@@ -14,7 +14,8 @@ Constructor
 -----------
 
 .. autosummary::
-    :toctree: sg/
+    :toctree: _autogen/sg/
+    :recursive:
 
     StructureGene
 
@@ -30,7 +31,8 @@ Attributes
 ----------
 
 .. autosummary::
-    :toctree: sg/
+    :toctree: _autogen/sg/
+    :recursive:
 
     StructureGene.name
     StructureGene.sgdim
@@ -52,7 +54,8 @@ Meshing data
 ^^^^^^^^^^^^
 
 .. autosummary::
-    :toctree: sg/
+    :toctree: _autogen/sg/
+    :recursive:
 
     StructureGene.nodes
     StructureGene.elements
@@ -70,7 +73,8 @@ Dehomogenization data
 ^^^^^^^^^^^^^^^^^^^^^
 
 .. autosummary::
-    :toctree: sg/
+    :toctree: _autogen/sg/
+    :recursive:
 
     StructureGene.global_displacements
     StructureGene.global_rotations
@@ -90,7 +94,8 @@ Methods
 -------
 
 .. autosummary::
-    :toctree: sg/
+    :toctree: _autogen/sg/
+    :recursive:
 
     StructureGene.summary
     StructureGene.findMaterialByName

@@ -6,6 +6,7 @@ Reference
    :caption: Contents:
 
    sg_structuregene
+   sg_crosssection
    sg_materialsection
    sg_beamproperty
    methods

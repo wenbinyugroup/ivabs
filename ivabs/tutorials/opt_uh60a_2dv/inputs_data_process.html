@@ -1,0 +1,490 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Data Processing Functions (data_proc_funcs.py) &mdash; iVABS 1.4 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "wenbinyugroup/ivabs");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="PreVABS Documentation" href="../../../prevabs/index.html" />
+    <link rel="prev" title="Interface Arguments (interface_args.json)" href="inputs_arguments.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> iVABS
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">iVABS Quick Start</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Download and Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#windows-installer-files-with-extension-exe">Windows installer (files with extension <code class="docutils literal notranslate"><span class="pre">exe</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#windows-portable-archive-files-with-extension-7z">Windows portable archive (files with extension <code class="docutils literal notranslate"><span class="pre">7z</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#linux-installer-files-with-extension-sh">Linux installer (files with extension <code class="docutils literal notranslate"><span class="pre">sh</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#linux-portable-archives-files-with-extension-tar-gz">Linux portable archives (files with extension <code class="docutils literal notranslate"><span class="pre">tar.gz</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#request-vabs-license">Request VABS license</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example_uh60a_opt.html">Example 3: Optimization of a Cross-section using Dakota</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../tutorials.html">Tutorials</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../opt_uh60a_2dv.html">Optimization of A Blade Spar</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">iVABS Components</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../prevabs/index.html">PreVABS Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/run.html">How to Run PreVABS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/tutorial.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/guide.html">Guide for Preparing Input Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/changelog.html">Change log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/xml.html">Introduction to XML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/references.html">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../msgpi/index.html">msgpi documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../msgpi/user_guide.html">User Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../msgpi/ref_manual.html">Reference</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">iVABS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../tutorials.html">Tutorials</a> &raquo;</li>
+        
+          <li><a href="../opt_uh60a_2dv.html">Optimization of A Blade Spar</a> &raquo;</li>
+        
+          <li><a href="inputs.html">Preparation of Input Files</a> &raquo;</li>
+        
+      <li>Data Processing Functions (<code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code>)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/wenbinyugroup/ivabs/blob/main/docs/source/ivabs/tutorials/opt_uh60a_2dv/inputs_data_process.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-processing-functions-data-proc-funcs-py">
+<span id="sect-input-process"></span><h1>Data Processing Functions (<code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code>)<a class="headerlink" href="#data-processing-functions-data-proc-funcs-py" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="pre-processing">
+<span id="sect-input-process-pre"></span><h2>Pre-processing<a class="headerlink" href="#pre-processing" title="Permalink to this headline">¶</a></h2>
+<p>As mentioned in the previous two sections, there is one pre-processing function.</p>
+<div class="section" id="function-materialid2name">
+<h3>Function <code class="docutils literal notranslate"><span class="pre">materialId2Name</span></code><a class="headerlink" href="#function-materialid2name" title="Permalink to this headline">¶</a></h3>
+<p>This function converts a material id to a material name.
+Dakota generates the integer type material id, while preVABS requires the string type material name.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">materialId2Name</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">results</span><span class="p">,</span> <span class="n">interface_args</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>The mapping relation from an id to a name is defined first in this function:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;AS4 12k/E7K8_0.0054&#39;</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;S2/SP381_0.0092&#39;</span><span class="p">,</span>
+    <span class="mi">3</span><span class="p">:</span> <span class="s1">&#39;T650-35 12k/976_0.0052&#39;</span><span class="p">,</span>
+    <span class="mi">4</span><span class="p">:</span> <span class="s1">&#39;T700 24K/E765_0.0056&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Then, for material selection variable, store the corresponding material name in <code class="docutils literal notranslate"><span class="pre">params</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;mn_spar_1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mdb</span><span class="p">[</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;mi_spar_1&#39;</span><span class="p">]]</span>
+<span class="n">params</span><span class="p">[</span><span class="s1">&#39;mn_le&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mdb</span><span class="p">[</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;mi_le&#39;</span><span class="p">]]</span>
+<span class="n">params</span><span class="p">[</span><span class="s1">&#39;mn_te&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mdb</span><span class="p">[</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;mi_te&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="post-processing">
+<span id="sect-input-process-post"></span><h2>Post-processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">¶</a></h2>
+<p>There are two post-processing functions.
+One is the overall function that will be called in <code class="docutils literal notranslate"><span class="pre">interface.py</span></code>.
+Another is a specific function that calculates the relative difference between calculated and target beam properties.</p>
+<div class="section" id="function-postprocess">
+<h3>Function <code class="docutils literal notranslate"><span class="pre">postprocess</span></code><a class="headerlink" href="#function-postprocess" title="Permalink to this headline">¶</a></h3>
+<p>This is the function that manages all post-processing steps.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">postprocess</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">results</span><span class="p">,</span> <span class="n">interface_args</span><span class="p">,</span> <span class="n">cs_inputs</span><span class="p">,</span> <span class="n">cs_outputs</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>No matter how many processing steps there are, the key is to put results into <code class="docutils literal notranslate"><span class="pre">results['interim']</span></code> or <code class="docutils literal notranslate"><span class="pre">results['final']</span></code> properly and give final results the correct labels and order so that Dakota can retrieve them from <code class="docutils literal notranslate"><span class="pre">output.out</span></code> correctly.</p>
+<p>First create an empty list to store the differences of each beam properties:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+<p>Then loop for each output listed in <code class="docutils literal notranslate"><span class="pre">post_process</span></code> in <code class="docutils literal notranslate"><span class="pre">interface_args.json</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">pp</span> <span class="ow">in</span> <span class="n">interface_args</span><span class="p">[</span><span class="s1">&#39;post_process&#39;</span><span class="p">]:</span>
+</pre></div>
+</div>
+<p>As mentioned in Section: <a class="reference internal" href="inputs_arguments.html#sect-input-arguments"><span class="std std-ref">Interface Arguments (interface_args.json)</span></a>, for each output entry, the first item is the output name (descriptor), the second item is a function name, the third one is the arguments for the function, and the last one (if specified) indicates the group of the output, interim or final.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rn</span> <span class="o">=</span> <span class="n">pp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">fn</span> <span class="o">=</span> <span class="n">pp</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">args</span> <span class="o">=</span> <span class="n">pp</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">result_output</span> <span class="o">=</span> <span class="s1">&#39;final&#39;</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pp</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="n">result_output</span> <span class="o">=</span> <span class="n">pp</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Then, calculate the output based on the function.
+If the function name is <code class="docutils literal notranslate"><span class="pre">self</span></code>, then the value of the argument is directly copied to the output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">fn</span> <span class="o">==</span> <span class="s1">&#39;self&#39;</span><span class="p">:</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">cs_outputs</span><span class="p">[</span><span class="n">args</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>If the function name is anything other than <code class="docutils literal notranslate"><span class="pre">self</span></code>, then we need to execute that function.
+Since in this example the only specific function is <code class="docutils literal notranslate"><span class="pre">calcRelDiff</span></code>, we also need to add the calculated result to the list <code class="docutils literal notranslate"><span class="pre">diffs</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">else</span><span class="p">:</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">fn</span><span class="p">)(</span>
+        <span class="n">rn</span><span class="p">,</span> <span class="n">cs_inputs</span><span class="p">,</span> <span class="n">cs_outputs</span><span class="p">,</span> <span class="n">interface_args</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span>
+    <span class="p">)</span>
+    <span class="n">diffs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then the result needs to be added to the object <code class="docutils literal notranslate"><span class="pre">results</span></code> based on its type, interim or final.
+If the type is <code class="docutils literal notranslate"><span class="pre">final</span></code>, then the pair of result name and value (<code class="docutils literal notranslate"><span class="pre">[name,</span> <span class="pre">value]</span></code>) needs to be appended to the list <code class="docutils literal notranslate"><span class="pre">results['final']</span></code>.
+If the type is <code class="docutils literal notranslate"><span class="pre">interim</span></code>, then the key-value pair (<code class="docutils literal notranslate"><span class="pre">name:</span> <span class="pre">value</span></code>) needs to be added to the dictionary <code class="docutils literal notranslate"><span class="pre">results['interim']</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">result_output</span> <span class="o">==</span> <span class="s1">&#39;final&#39;</span><span class="p">:</span>
+    <span class="n">results</span><span class="p">[</span><span class="s1">&#39;final&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">rn</span><span class="p">,</span> <span class="n">r</span><span class="p">])</span>
+<span class="k">elif</span> <span class="n">result_output</span> <span class="o">==</span> <span class="s1">&#39;interim&#39;</span><span class="p">:</span>
+    <span class="n">results</span><span class="p">[</span><span class="s1">&#39;interim&#39;</span><span class="p">][</span><span class="n">rn</span><span class="p">]</span> <span class="o">=</span> <span class="n">r</span>
+</pre></div>
+</div>
+<p>Once the loop is done, the last step is to calculate the overall difference, which is also the objective <code class="docutils literal notranslate"><span class="pre">diff</span></code>.
+According to the formula displayed in Section: <a class="reference internal" href="opt.html#opt"><span class="std std-ref">Optimization Formulation</span></a>, the objective is actually the infinity norm of the vector containing the five differences.
+Hence, this value can be simply calculated using the build-in function <code class="docutils literal notranslate"><span class="pre">norm</span></code> in <code class="docutils literal notranslate"><span class="pre">numpy</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="n">diff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">diffs</span><span class="p">,</span> <span class="nb">ord</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Since this value is the first one in the response list of Dakota input, it needs to be inserted at the beginning of the final results list:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;final&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;diff&#39;</span><span class="p">,</span> <span class="n">diff</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="function-calcreldiff">
+<h3>Function <code class="docutils literal notranslate"><span class="pre">calcRelDiff</span></code><a class="headerlink" href="#function-calcreldiff" title="Permalink to this headline">¶</a></h3>
+<p>This function calculates the relative difference of a specific beam proeprty.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcRelDiff</span><span class="p">(</span><span class="n">response_name</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">results</span><span class="p">,</span> <span class="n">json_args</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Here, <code class="docutils literal notranslate"><span class="pre">response_name</span></code> is the name of the output (first item of the post-processing entry), such as <code class="docutils literal notranslate"><span class="pre">gj_diff</span></code>.
+<code class="docutils literal notranslate"><span class="pre">results</span></code> stores the calculated beam properties, which is a dictionary whose keys are those listed in <code class="docutils literal notranslate"><span class="pre">beam_properties</span></code> in the JSON file.
+<code class="docutils literal notranslate"><span class="pre">*args</span></code> is the list of arguments specified at the third place of the post-processing entry, such as <code class="docutils literal notranslate"><span class="pre">[&quot;gj&quot;,</span> <span class="pre">24.31e6]</span></code>.</p>
+<p>Hence, the first item of <code class="docutils literal notranslate"><span class="pre">*args</span></code> is the beam property name.
+The second one is the target value.
+The calculated value is retrieved from <code class="docutils literal notranslate"><span class="pre">results</span></code> using the beam property name as the key.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bp_name</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">target</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">value</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="n">bp_name</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>In this example, since the desired locations of the shear center and the mass center are measured from the leading edge, some special treatments are needed.</p>
+<p>For the horizontal shear center location, the target value is measured from the leading edge, while the calculated value is measured from the model center (quarter chord).
+Hence, we need to add the location of the model center measured from the leading edge to the calculated value.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">response_name</span> <span class="o">==</span> <span class="s1">&#39;sc2_le_diff&#39;</span><span class="p">:</span>
+    <span class="n">xo2_le</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;chord&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;oa2&#39;</span><span class="p">]</span>
+    <span class="n">value</span> <span class="o">+=</span> <span class="n">xo2_le</span>
+</pre></div>
+</div>
+<p>For the horizontal mass center location, the target value is measured from the shear center and the calculated value is measured from the model center.
+Hence, for the target value, we need to add the location of the shear center measured from the leading edge, and for the calculated value, we need to add the location of the model center measured from the leading edge.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">elif</span> <span class="n">response_name</span> <span class="o">==</span> <span class="s1">&#39;mc2_le_diff&#39;</span><span class="p">:</span>
+    <span class="n">xo2_le</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;chord&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;oa2&#39;</span><span class="p">]</span>
+    <span class="n">value</span> <span class="o">+=</span> <span class="n">xo2_le</span>
+    <span class="n">target</span> <span class="o">+=</span> <span class="n">args</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Finally, the relative difference is computed as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rv</span> <span class="o">=</span> <span class="p">(</span><span class="n">value</span> <span class="o">-</span> <span class="n">target</span><span class="p">)</span> <span class="o">/</span> <span class="n">target</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="complete-file">
+<h2>Complete file<a class="headerlink" href="#complete-file" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-number">Listing 3 </span><span class="caption-text">The complete script</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">materialId2Name</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">results</span><span class="p">,</span> <span class="n">interface_args</span><span class="p">):</span>
+    <span class="n">mdb</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;AS4 12k/E7K8_0.0054&#39;</span><span class="p">,</span>
+        <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;S2/SP381_0.0092&#39;</span><span class="p">,</span>
+        <span class="mi">3</span><span class="p">:</span> <span class="s1">&#39;T650-35 12k/976_0.0052&#39;</span><span class="p">,</span>
+        <span class="mi">4</span><span class="p">:</span> <span class="s1">&#39;T700 24K/E765_0.0056&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">params</span><span class="p">[</span><span class="s1">&#39;mn_spar_1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mdb</span><span class="p">[</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;mi_spar_1&#39;</span><span class="p">]]</span>
+    <span class="n">params</span><span class="p">[</span><span class="s1">&#39;mn_le&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mdb</span><span class="p">[</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;mi_le&#39;</span><span class="p">]]</span>
+    <span class="n">params</span><span class="p">[</span><span class="s1">&#39;mn_te&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mdb</span><span class="p">[</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;mi_te&#39;</span><span class="p">]]</span>
+
+
+<span class="k">def</span> <span class="nf">postprocess</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">results</span><span class="p">,</span> <span class="n">interface_args</span><span class="p">,</span> <span class="n">cs_inputs</span><span class="p">,</span> <span class="n">cs_outputs</span><span class="p">):</span>
+
+    <span class="n">diffs</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">pp</span> <span class="ow">in</span> <span class="n">interface_args</span><span class="p">[</span><span class="s1">&#39;post_process&#39;</span><span class="p">]:</span>
+        <span class="n">rn</span> <span class="o">=</span> <span class="n">pp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">fn</span> <span class="o">=</span> <span class="n">pp</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">args</span> <span class="o">=</span> <span class="n">pp</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="n">result_output</span> <span class="o">=</span> <span class="s1">&#39;final&#39;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pp</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">result_output</span> <span class="o">=</span> <span class="n">pp</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">fn</span> <span class="o">==</span> <span class="s1">&#39;self&#39;</span><span class="p">:</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="n">cs_outputs</span><span class="p">[</span><span class="n">args</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">fn</span><span class="p">)(</span>
+                <span class="n">rn</span><span class="p">,</span> <span class="n">cs_inputs</span><span class="p">,</span> <span class="n">cs_outputs</span><span class="p">,</span> <span class="n">interface_args</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span>
+            <span class="p">)</span>
+            <span class="n">diffs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">result_output</span> <span class="o">==</span> <span class="s1">&#39;final&#39;</span><span class="p">:</span>
+            <span class="n">results</span><span class="p">[</span><span class="s1">&#39;final&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">rn</span><span class="p">,</span> <span class="n">r</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="n">result_output</span> <span class="o">==</span> <span class="s1">&#39;interim&#39;</span><span class="p">:</span>
+            <span class="n">results</span><span class="p">[</span><span class="s1">&#39;interim&#39;</span><span class="p">][</span><span class="n">rn</span><span class="p">]</span> <span class="o">=</span> <span class="n">r</span>
+
+    <span class="n">diff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">diffs</span><span class="p">,</span> <span class="nb">ord</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">)</span>
+    <span class="n">results</span><span class="p">[</span><span class="s1">&#39;final&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;diff&#39;</span><span class="p">,</span> <span class="n">diff</span><span class="p">])</span>
+
+    <span class="k">return</span>
+
+
+<span class="k">def</span> <span class="nf">calcRelDiff</span><span class="p">(</span><span class="n">response_name</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">results</span><span class="p">,</span> <span class="n">json_args</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="n">bp_name</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">target</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">value</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="n">bp_name</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">response_name</span> <span class="o">==</span> <span class="s1">&#39;sc2_le_diff&#39;</span><span class="p">:</span>
+        <span class="n">xo2_le</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;chord&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;oa2&#39;</span><span class="p">]</span>
+        <span class="n">value</span> <span class="o">+=</span> <span class="n">xo2_le</span>
+    <span class="k">elif</span> <span class="n">response_name</span> <span class="o">==</span> <span class="s1">&#39;mc2_le_diff&#39;</span><span class="p">:</span>
+        <span class="n">xo2_le</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;chord&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;oa2&#39;</span><span class="p">]</span>
+        <span class="n">value</span> <span class="o">+=</span> <span class="n">xo2_le</span>
+        <span class="n">target</span> <span class="o">+=</span> <span class="n">args</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="n">rv</span> <span class="o">=</span> <span class="p">(</span><span class="n">value</span> <span class="o">-</span> <span class="n">target</span><span class="p">)</span> <span class="o">/</span> <span class="n">target</span>
+
+    <span class="k">return</span> <span class="n">rv</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../../../prevabs/index.html" class="btn btn-neutral float-right" title="PreVABS Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="inputs_arguments.html" class="btn btn-neutral float-left" title="Interface Arguments (interface_args.json)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Multiscale Structural Mechanics Group, Purdue University.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

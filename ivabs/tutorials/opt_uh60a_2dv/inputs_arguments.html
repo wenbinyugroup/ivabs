@@ -1,0 +1,439 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Interface Arguments (interface_args.json) &mdash; iVABS 1.4 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "wenbinyugroup/ivabs");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Data Processing Functions (data_proc_funcs.py)" href="inputs_data_process.html" />
+    <link rel="prev" title="Dakota Interface Scripts (interface.py)" href="inputs_interface.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> iVABS
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">iVABS Quick Start</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Download and Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#windows-installer-files-with-extension-exe">Windows installer (files with extension <code class="docutils literal notranslate"><span class="pre">exe</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#windows-portable-archive-files-with-extension-7z">Windows portable archive (files with extension <code class="docutils literal notranslate"><span class="pre">7z</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#linux-installer-files-with-extension-sh">Linux installer (files with extension <code class="docutils literal notranslate"><span class="pre">sh</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#linux-portable-archives-files-with-extension-tar-gz">Linux portable archives (files with extension <code class="docutils literal notranslate"><span class="pre">tar.gz</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#request-vabs-license">Request VABS license</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example_uh60a_opt.html">Example 3: Optimization of a Cross-section using Dakota</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../tutorials.html">Tutorials</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../opt_uh60a_2dv.html">Optimization of A Blade Spar</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">iVABS Components</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../prevabs/index.html">PreVABS Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/run.html">How to Run PreVABS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/tutorial.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/guide.html">Guide for Preparing Input Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/changelog.html">Change log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/xml.html">Introduction to XML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/references.html">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../msgpi/index.html">msgpi documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../msgpi/user_guide.html">User Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../msgpi/ref_manual.html">Reference</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">iVABS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../tutorials.html">Tutorials</a> &raquo;</li>
+        
+          <li><a href="../opt_uh60a_2dv.html">Optimization of A Blade Spar</a> &raquo;</li>
+        
+          <li><a href="inputs.html">Preparation of Input Files</a> &raquo;</li>
+        
+      <li>Interface Arguments (<code class="docutils literal notranslate"><span class="pre">interface_args.json</span></code>)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/wenbinyugroup/ivabs/blob/main/docs/source/ivabs/tutorials/opt_uh60a_2dv/inputs_arguments.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="interface-arguments-interface-args-json">
+<span id="sect-input-arguments"></span><h1>Interface Arguments (<code class="docutils literal notranslate"><span class="pre">interface_args.json</span></code>)<a class="headerlink" href="#interface-arguments-interface-args-json" title="Permalink to this headline">¶</a></h1>
+<p>This file stores all configurations and arguments that will be used in the interface script.
+All arguments can be roughly divided to three groups: general, cross-sectional analysis and post-processing.</p>
+<div class="section" id="general">
+<span id="sect-input-arguments-general"></span><h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<p>To control the screen output of preVABS and VABS, use the keyword <code class="docutils literal notranslate"><span class="pre">scrnout</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;scrnout&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+</pre></div>
+</div>
+<p>To control the level of logging message output, use the following keywords.
+<code class="docutils literal notranslate"><span class="pre">log_level_cmd</span></code> sets the output level to the screen.
+<code class="docutils literal notranslate"><span class="pre">log_level_file</span></code> sets the output level to the log file.
+The level can be one of the following: <code class="docutils literal notranslate"><span class="pre">debug</span></code>, <code class="docutils literal notranslate"><span class="pre">info</span></code>, <code class="docutils literal notranslate"><span class="pre">warning</span></code>, <code class="docutils literal notranslate"><span class="pre">error</span></code>, <code class="docutils literal notranslate"><span class="pre">critical</span></code>, with logging level increasing from the first to the last.
+<code class="docutils literal notranslate"><span class="pre">log_file_name</span></code> sets the log file name.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;log_level_cmd&quot;</span><span class="p">:</span> <span class="s2">&quot;critical&quot;</span><span class="p">,</span>
+<span class="s2">&quot;log_level_file&quot;</span><span class="p">:</span> <span class="s2">&quot;info&quot;</span><span class="p">,</span>
+<span class="s2">&quot;log_file_name&quot;</span><span class="p">:</span> <span class="s2">&quot;eval.log&quot;</span><span class="p">,</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">data_process_functions_file</span></code> sets the script file name (without file extension) storing data processing functions.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;data_process_functions_file&quot;</span><span class="p">:</span> <span class="s2">&quot;data_proc_funcs&quot;</span><span class="p">,</span>
+</pre></div>
+</div>
+<p>This file will be imported into the analysis script, see moduel loading in Section: <a class="reference internal" href="inputs_interface.html#sect-input-interface-init"><span class="std std-ref">Step 1: Initialization</span></a>.</p>
+</div>
+<div class="section" id="cross-sectional-analysis">
+<span id="sect-input-arguments-cs-analysis"></span><h2>Cross-sectional analysis<a class="headerlink" href="#cross-sectional-analysis" title="Permalink to this headline">¶</a></h2>
+<p>Corresponding to the cross-sectional analysis step in the interface script (Section: <a class="reference internal" href="inputs_interface.html#sect-input-interface-cs-analysis"><span class="std std-ref">Step 2: Cross-sectional analysis</span></a>), some arguments need to be configured here.</p>
+<p>First, names of pre-processing functions are given in a list after the keyword <code class="docutils literal notranslate"><span class="pre">cs_pre_process</span></code>.
+The order indicates the sequence the functions will be executed.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;cs_pre_process&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="s2">&quot;materialId2Name&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;calcEmbeddedPoint&quot;</span>
+<span class="p">],</span>
+</pre></div>
+</div>
+<p>Then, some execution-related settings are provided.
+Use the keywords <code class="docutils literal notranslate"><span class="pre">prevabs_cmd_win</span></code> and <code class="docutils literal notranslate"><span class="pre">prevabs_cmd_linux</span></code> to set the executable name of preVABS on Windows and Linux, respectively.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;prevabs_cmd_win&quot;</span><span class="p">:</span> <span class="s2">&quot;prevabs.exe&quot;</span><span class="p">,</span>
+<span class="s2">&quot;prevabs_cmd_linux&quot;</span><span class="p">:</span> <span class="s2">&quot;prevabs&quot;</span><span class="p">,</span>
+</pre></div>
+</div>
+<p>Use the keyword <code class="docutils literal notranslate"><span class="pre">solver</span></code> to set the executable name of VABS.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;solver&quot;</span><span class="p">:</span> <span class="s2">&quot;VABS&quot;</span><span class="p">,</span>
+</pre></div>
+</div>
+<p>The keyword <code class="docutils literal notranslate"><span class="pre">analysis</span></code> sets what analysis will be carried out by VABS.
+In this example, use <code class="docutils literal notranslate"><span class="pre">h</span></code> to indicate the cross-sectional analysis (homogenization).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;analysis&quot;</span><span class="p">:</span> <span class="s2">&quot;h&quot;</span><span class="p">,</span>
+</pre></div>
+</div>
+<p>The keyword <code class="docutils literal notranslate"><span class="pre">timeout</span></code> is used to prevent the preVABS from stucking in an infinite loop and kill the process when the time is expired.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;timeout&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+</pre></div>
+</div>
+<p>The keyword <code class="docutils literal notranslate"><span class="pre">cross-section_design_template</span></code> sets the cross-section template file name corresponding to a unique cross-section name.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;cross-section_design_template&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="s2">&quot;uh60a_section&quot;</span><span class="p">:</span> <span class="s2">&quot;uh60a_section.xml.tmp&quot;</span>
+<span class="p">},</span>
+</pre></div>
+</div>
+<p>The keyword <code class="docutils literal notranslate"><span class="pre">beam_properties</span></code> indicates the beam properties that will be needed for calculating objective and constraints.
+In this example, the properties listed in <a class="reference internal" href="cs_param.html#tab-props"><span class="std std-numref">Table 10</span></a> will be needed.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;beam_properties&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="s2">&quot;gj&quot;</span><span class="p">,</span> <span class="s2">&quot;ei22&quot;</span><span class="p">,</span> <span class="s2">&quot;ei33&quot;</span><span class="p">,</span> <span class="s2">&quot;sc2&quot;</span><span class="p">,</span> <span class="s2">&quot;mc2&quot;</span><span class="p">],</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="post-processing">
+<span id="sect-input-arguments-postpro"></span><h2>Post-processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">¶</a></h2>
+<p>The last part specifies how to calculate the interim and final outputs.
+Since the post-processing functions are mainly scripted by the user, the data structure of this part can be highly flexible and customizable.
+In other words, this part of the arguments only provides a place to conveniently make some changes for other similar optimization cases.
+User can also put these data in <code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code> completely.</p>
+<p>This tutorial only serves as an example.</p>
+<p>The keyword is <code class="docutils literal notranslate"><span class="pre">post_process</span></code> and all outputs are placed in a list.
+Each item in the list specifies one output and how to calculate it.
+The inputs for each item are arranged as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">output_label</span><span class="p">,</span> <span class="n">function</span><span class="p">,</span> <span class="n">arguments</span><span class="p">,</span> <span class="nb">type</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">output_label</span></code> should be the same as those in the Dakota input file if this is a ‘final’ output.
+<code class="docutils literal notranslate"><span class="pre">function</span></code> can be two types.
+If it is <code class="docutils literal notranslate"><span class="pre">self</span></code>, this means that the value of the <code class="docutils literal notranslate"><span class="pre">arguments</span></code> will be directly copied to <code class="docutils literal notranslate"><span class="pre">output_label</span></code>.
+Otherwise, this should be a function defined in the file <code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code>.
+In this case, <code class="docutils literal notranslate"><span class="pre">arguments</span></code> will be passed to the function.
+The last entry <code class="docutils literal notranslate"><span class="pre">type</span></code> indicates that this output is a final or interim one.</p>
+<p>For example, mass per unit length is a constraint and used directly.
+This is specified as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s2">&quot;mpl&quot;</span><span class="p">,</span> <span class="s2">&quot;self&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The difference between the calculated and target torsional stiffnesses is needed to compute the overall difference (<code class="docutils literal notranslate"><span class="pre">diff</span></code>).
+The function used is called <code class="docutils literal notranslate"><span class="pre">calcRelDiff</span></code> and coded in the file <code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code>.
+Arguments to this function are the beam property <code class="docutils literal notranslate"><span class="pre">gj</span></code> and the target value 24.31e6.
+This difference will be stored as an interim output.
+Hence, the above setting can be specified as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s2">&quot;gj_diff&quot;</span><span class="p">,</span> <span class="s2">&quot;calcRelDiff&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;gj&quot;</span><span class="p">,</span> <span class="mf">24.31e6</span><span class="p">],</span> <span class="s2">&quot;interim&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="complete-file">
+<h2>Complete file<a class="headerlink" href="#complete-file" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-number">Listing 2 </span><span class="caption-text">The complete file</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+
+  <span class="nt">&quot;scrnout&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&quot;log_level_cmd&quot;</span><span class="p">:</span> <span class="s2">&quot;critical&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;log_level_file&quot;</span><span class="p">:</span> <span class="s2">&quot;info&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;log_file_name&quot;</span><span class="p">:</span> <span class="s2">&quot;eval.log&quot;</span><span class="p">,</span>
+
+  <span class="nt">&quot;prevabs_cmd_win&quot;</span><span class="p">:</span> <span class="s2">&quot;prevabs.exe&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;prevabs_cmd_linux&quot;</span><span class="p">:</span> <span class="s2">&quot;prevabs&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;solver&quot;</span><span class="p">:</span> <span class="s2">&quot;VABS&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;analysis&quot;</span><span class="p">:</span> <span class="s2">&quot;h&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;timeout&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+
+
+  <span class="nt">&quot;cross-section_design_template&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;uh60a_section&quot;</span><span class="p">:</span> <span class="s2">&quot;uh60a_section.xml.tmp&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;beam_properties&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="s2">&quot;gj&quot;</span><span class="p">,</span> <span class="s2">&quot;ei22&quot;</span><span class="p">,</span> <span class="s2">&quot;ei33&quot;</span><span class="p">,</span> <span class="s2">&quot;sc2&quot;</span><span class="p">,</span> <span class="s2">&quot;mc2&quot;</span><span class="p">],</span>
+
+
+  <span class="nt">&quot;data_process_functions_file&quot;</span><span class="p">:</span> <span class="s2">&quot;data_proc_funcs&quot;</span><span class="p">,</span>
+
+  <span class="nt">&quot;cs_pre_process&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;materialId2Name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;calcEmbeddedPoint&quot;</span>
+  <span class="p">],</span>
+
+  <span class="nt">&quot;post_process&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">&quot;mpl&quot;</span><span class="p">,</span> <span class="s2">&quot;self&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;gj_diff&quot;</span><span class="p">,</span> <span class="s2">&quot;calcRelDiff&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;gj&quot;</span><span class="p">,</span> <span class="mf">24.31e6</span><span class="p">],</span> <span class="s2">&quot;interim&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;eiflap_diff&quot;</span><span class="p">,</span> <span class="s2">&quot;calcRelDiff&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;ei22&quot;</span><span class="p">,</span> <span class="mf">22.2e6</span><span class="p">],</span> <span class="s2">&quot;interim&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;eilag_diff&quot;</span><span class="p">,</span> <span class="s2">&quot;calcRelDiff&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;ei33&quot;</span><span class="p">,</span> <span class="mf">835e6</span><span class="p">],</span> <span class="s2">&quot;interim&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;sc2_le_diff&quot;</span><span class="p">,</span> <span class="s2">&quot;calcRelDiff&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;sc2&quot;</span><span class="p">,</span> <span class="mf">-5.19</span><span class="p">],</span> <span class="s2">&quot;interim&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;mc2_le_diff&quot;</span><span class="p">,</span> <span class="s2">&quot;calcRelDiff&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;mc2&quot;</span><span class="p">,</span> <span class="mf">-0.822</span><span class="p">,</span> <span class="mf">-5.19</span><span class="p">],</span> <span class="s2">&quot;interim&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;gj&quot;</span><span class="p">,</span> <span class="s2">&quot;self&quot;</span><span class="p">,</span> <span class="s2">&quot;gj&quot;</span><span class="p">,</span> <span class="s2">&quot;interim&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;eif&quot;</span><span class="p">,</span> <span class="s2">&quot;self&quot;</span><span class="p">,</span> <span class="s2">&quot;ei22&quot;</span><span class="p">,</span> <span class="s2">&quot;interim&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;eic&quot;</span><span class="p">,</span> <span class="s2">&quot;self&quot;</span><span class="p">,</span> <span class="s2">&quot;ei33&quot;</span><span class="p">,</span> <span class="s2">&quot;interim&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;sc2&quot;</span><span class="p">,</span> <span class="s2">&quot;self&quot;</span><span class="p">,</span> <span class="s2">&quot;sc2&quot;</span><span class="p">,</span> <span class="s2">&quot;interim&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;mc2&quot;</span><span class="p">,</span> <span class="s2">&quot;self&quot;</span><span class="p">,</span> <span class="s2">&quot;mc2&quot;</span><span class="p">,</span> <span class="s2">&quot;interim&quot;</span><span class="p">]</span>
+  <span class="p">]</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="inputs_data_process.html" class="btn btn-neutral float-right" title="Data Processing Functions (data_proc_funcs.py)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="inputs_interface.html" class="btn btn-neutral float-left" title="Dakota Interface Scripts (interface.py)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Multiscale Structural Mechanics Group, Purdue University.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

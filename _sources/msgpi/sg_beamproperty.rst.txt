@@ -14,7 +14,8 @@ Constructor
 -----------
 
 .. autosummary::
-    :toctree: sg/
+    :toctree: _autogen/sg/
+    :recursive:
 
     BeamProperty
 
@@ -30,7 +31,8 @@ Attributes
 ----------
 
 .. autosummary::
-    :toctree: sg/
+    :toctree: _autogen/sg/
+    :recursive:
 
     BeamProperty.xg2
     BeamProperty.xg3
@@ -41,7 +43,8 @@ Inertial properties
 ~~~~~~~~~~~~~~~~~~~
 
 .. autosummary::
-    :toctree: sg/
+    :toctree: _autogen/sg/
+    :recursive:
 
     BeamProperty.mass
     BeamProperty.mass_cs
@@ -58,7 +61,8 @@ Structural properties
 ~~~~~~~~~~~~~~~~~~~~~
 
 .. autosummary::
-    :toctree: sg/
+    :toctree: _autogen/sg/
+    :recursive:
 
     BeamProperty.stff
     BeamProperty.cmpl
@@ -89,7 +93,8 @@ Methods
 -------
 
 .. autosummary::
-    :toctree: sg/
+    :toctree: _autogen/sg/
+    :recursive:
 
     BeamProperty.print
     BeamProperty.get

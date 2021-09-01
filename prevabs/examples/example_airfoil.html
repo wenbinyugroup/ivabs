@@ -134,15 +134,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/examples.html">Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/example_uh60a_opt.html">Example 3: Optimization of a Cross-section using Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/examples/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/examples/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/examples/example_uh60a_opt.html">Example 3: Optimization of a Cross-section using Dakota</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../ivabs/tutorial.html">Tutorial: Design A Composite Box Beam</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/tutorial.html#problem-description">Problem Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/tutorial.html#optimization-setup">Optimization Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ivabs/tutorial.html#file-prepration">File Prepration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ivabs/tutorials.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/tutorials/opt_uh60a_2dv.html">Optimization of A Blade Spar</a></li>
 </ul>
 </li>
 </ul>
@@ -158,7 +156,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toctree-l2"><a class="reference internal" href="../references.html">References</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../msgpi/index.html">msgpi Documentation</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../msgpi/index.html">msgpi documentation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../msgpi/user_guide.html">User Guide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../msgpi/ref_manual.html">Reference</a></li>
 </ul>
@@ -242,23 +240,23 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2>Problem description<a class="headerlink" href="#problem-description" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center" id="fig-mh104-draw">
 <a class="reference internal image-reference" href="../../_images/examplemh1040.png"><img alt="../../_images/examplemh1040.png" src="../../_images/examplemh1040.png" style="width: 5.5in;" /></a>
-<p class="caption"><span class="caption-number">Figure 39 </span><span class="caption-text">Sketch of a cross section for a typical wind turbine blade <a class="reference internal" href="../references.html#chen2010" id="id1"><span>[CHEN2010]</span></a>.</span><a class="headerlink" href="#fig-mh104-draw" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 44 </span><span class="caption-text">Sketch of a cross section for a typical wind turbine blade <a class="reference internal" href="../references.html#chen2010" id="id1"><span>[CHEN2010]</span></a>.</span><a class="headerlink" href="#fig-mh104-draw" title="Permalink to this image">¶</a></p>
 </div>
 <p>This example demonstrates the capability of building a cross section having an airfoil shape, which is commonly seen on wind turbine blades or helicopter rotor blades.
 This example is also studied in <a class="reference internal" href="../references.html#chen2010" id="id2"><span>[CHEN2010]</span></a>.
-A sketch of a cross section for a typical wind turbine blade is shown in <a class="reference internal" href="#fig-mh104-draw"><span class="std std-numref">Fig. 39</span></a>.
+A sketch of a cross section for a typical wind turbine blade is shown in <a class="reference internal" href="#fig-mh104-draw"><span class="std std-numref">Fig. 44</span></a>.
 The airfoil is MH 104 (<a class="reference external" href="http://m-selig.ae.illinois.edu/ads/coord_database.html#M">http://m-selig.ae.illinois.edu/ads/coord_database.html#M</a>).
 In this example, the chord length <span class="math notranslate nohighlight">\(CL=1.9\)</span> m.
 The origin O is set to the point at 1/4 of the chord.
 Twist angle <span class="math notranslate nohighlight">\(\theta\)</span> is <span class="math notranslate nohighlight">\(0^\circ\)</span>.
 There are two webs, whose right boundaries are at the 20% and 50% location of the chord, respectively.
 Both low pressure and high pressure surfaces have four segments.
-The dividing points between segments are listed in <a class="reference internal" href="#table-div-pts"><span class="std std-numref">Table 25</span></a>.
-Materials are given in <a class="reference internal" href="#table-mh104-materials"><span class="std std-numref">Table 26</span></a> and layups are given in <a class="reference internal" href="#table-mh104-layups"><span class="std std-numref">Table 27</span></a>.
-A complete <span class="math notranslate nohighlight">\(6\times 6\)</span> stiffness matrix is given in <a class="reference internal" href="#table-airfoil-result"><span class="std std-numref">Table 28</span></a>.
+The dividing points between segments are listed in <a class="reference internal" href="#table-div-pts"><span class="std std-numref">Table 35</span></a>.
+Materials are given in <a class="reference internal" href="#table-mh104-materials"><span class="std std-numref">Table 36</span></a> and layups are given in <a class="reference internal" href="#table-mh104-layups"><span class="std std-numref">Table 37</span></a>.
+A complete <span class="math notranslate nohighlight">\(6\times 6\)</span> stiffness matrix is given in <a class="reference internal" href="#table-airfoil-result"><span class="std std-numref">Table 38</span></a>.
 Complete input files can be found in <code class="docutils literal notranslate"><span class="pre">examples\ex_airfoil\</span></code>, including <code class="docutils literal notranslate"><span class="pre">mh104.xml</span></code>, <code class="docutils literal notranslate"><span class="pre">basepoints.dat</span></code>, <code class="docutils literal notranslate"><span class="pre">baselines.xml</span></code>, <code class="docutils literal notranslate"><span class="pre">materials.xml</span></code>, and <code class="docutils literal notranslate"><span class="pre">layups.xml</span></code>.</p>
 <table class="docutils align-center" id="table-div-pts">
-<caption><span class="caption-number">Table 25 </span><span class="caption-text">Dividing points</span><a class="headerlink" href="#table-div-pts" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 35 </span><span class="caption-text">Dividing points</span><a class="headerlink" href="#table-div-pts" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -291,22 +289,22 @@ Complete input files can be found in <code class="docutils literal notranslate">
 </table>
 <div class="figure align-center" id="fig-mh1041">
 <a class="reference internal image-reference" href="../../_images/examplemh1041.png"><img alt="../../_images/examplemh1041.png" src="../../_images/examplemh1041.png" style="width: 6.5in;" /></a>
-<p class="caption"><span class="caption-number">Figure 40 </span><span class="caption-text"><em>Base point</em>s of the tube cross section.</span><a class="headerlink" href="#fig-mh1041" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 45 </span><span class="caption-text"><em>Base point</em>s of the tube cross section.</span><a class="headerlink" href="#fig-mh1041" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="fig-mh1042">
 <a class="reference internal image-reference" href="../../_images/examplemh1042.png"><img alt="../../_images/examplemh1042.png" src="../../_images/examplemh1042.png" style="width: 6.5in;" /></a>
-<p class="caption"><span class="caption-number">Figure 41 </span><span class="caption-text"><em>Base line</em>s of the tube cross section.</span><a class="headerlink" href="#fig-mh1042" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 46 </span><span class="caption-text"><em>Base line</em>s of the tube cross section.</span><a class="headerlink" href="#fig-mh1042" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="fig-mh1043">
 <a class="reference internal image-reference" href="../../_images/examplemh1043.png"><img alt="../../_images/examplemh1043.png" src="../../_images/examplemh1043.png" style="width: 6.5in;" /></a>
-<p class="caption"><span class="caption-number">Figure 42 </span><span class="caption-text"><em>Segment</em>s of the tube cross section.</span><a class="headerlink" href="#fig-mh1043" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 47 </span><span class="caption-text"><em>Segment</em>s of the tube cross section.</span><a class="headerlink" href="#fig-mh1043" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="fig-mh104">
 <a class="reference internal image-reference" href="../../_images/examplemh1044.png"><img alt="../../_images/examplemh1044.png" src="../../_images/examplemh1044.png" style="width: 6.5in;" /></a>
-<p class="caption"><span class="caption-number">Figure 43 </span><span class="caption-text">Meshed cross section viewed in Gmsh.</span><a class="headerlink" href="#fig-mh104" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 48 </span><span class="caption-text">Meshed cross section viewed in Gmsh.</span><a class="headerlink" href="#fig-mh104" title="Permalink to this image">¶</a></p>
 </div>
 <table class="docutils align-center" id="table-mh104-materials">
-<caption><span class="caption-number">Table 26 </span><span class="caption-text">Material properties</span><a class="headerlink" href="#table-mh104-materials" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 36 </span><span class="caption-text">Material properties</span><a class="headerlink" href="#table-mh104-materials" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 8%" />
@@ -418,7 +416,7 @@ Complete input files can be found in <code class="docutils literal notranslate">
 </tbody>
 </table>
 <table class="docutils align-center" id="table-mh104-layups">
-<caption><span class="caption-number">Table 27 </span><span class="caption-text">Layups</span><a class="headerlink" href="#table-mh104-layups" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 37 </span><span class="caption-text">Layups</span><a class="headerlink" href="#table-mh104-layups" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 17%" />
@@ -597,7 +595,7 @@ Complete input files can be found in <code class="docutils literal notranslate">
 <div class="section" id="result">
 <h2>Result<a class="headerlink" href="#result" title="Permalink to this headline">¶</a></h2>
 <table class="docutils align-default" id="table-airfoil-result">
-<caption><span class="caption-number">Table 28 </span><span class="caption-text">Effective Timoshenko stiffness matrix</span><a class="headerlink" href="#table-airfoil-result" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 38 </span><span class="caption-text">Effective Timoshenko stiffness matrix</span><a class="headerlink" href="#table-airfoil-result" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 17%" />
@@ -652,7 +650,7 @@ Complete input files can be found in <code class="docutils literal notranslate">
 </tbody>
 </table>
 <table class="docutils align-default" id="table-airfoil-result-ref">
-<caption><span class="caption-number">Table 29 </span><span class="caption-text">Results from reference <a class="reference internal" href="../references.html#chen2010" id="id3"><span>[CHEN2010]</span></a></span><a class="headerlink" href="#table-airfoil-result-ref" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 39 </span><span class="caption-text">Results from reference <a class="reference internal" href="../references.html#chen2010" id="id3"><span>[CHEN2010]</span></a></span><a class="headerlink" href="#table-airfoil-result-ref" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 17%" />
@@ -708,11 +706,11 @@ Complete input files can be found in <code class="docutils literal notranslate">
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The errors between the result and the reference are caused by the difference of modeling of the trailing edge. If reduce the trailing edge skin to a single thin layer, then the difference between the trailing edge shapes is minimized, and the two resulting stiffness matrices are basically the same, as shown in <a class="reference internal" href="#fig-mh104-comparison"><span class="std std-numref">Fig. 44</span></a>.</p>
+<p>The errors between the result and the reference are caused by the difference of modeling of the trailing edge. If reduce the trailing edge skin to a single thin layer, then the difference between the trailing edge shapes is minimized, and the two resulting stiffness matrices are basically the same, as shown in <a class="reference internal" href="#fig-mh104-comparison"><span class="std std-numref">Fig. 49</span></a>.</p>
 </div>
 <div class="figure align-center" id="fig-mh104-comparison">
 <a class="reference internal image-reference" href="../../_images/examplemh104_comparison.png"><img alt="../../_images/examplemh104_comparison.png" src="../../_images/examplemh104_comparison.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 44 </span><span class="caption-text">Comparison of stiffness matrices after modifying the trailing edge.</span><a class="headerlink" href="#fig-mh104-comparison" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 49 </span><span class="caption-text">Comparison of stiffness matrices after modifying the trailing edge.</span><a class="headerlink" href="#fig-mh104-comparison" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
