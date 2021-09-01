@@ -1,4 +1,4 @@
-.. include:: ../replace.txt
+.. include:: /replace.txt
 
 .. _example-airfoil-recover:
 
@@ -44,7 +44,7 @@ Complete files can be found in ``examples\ex_airfoil_r\``, including
 Result
 ------
 
-.. figure:: ../figures/examplemh104r.png
+.. figure:: /figures/examplemh104r.png
   :name: fig_mh104r
   :width: 6in
   :align: center

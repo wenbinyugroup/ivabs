@@ -12,4 +12,3 @@ Examples
    examples/example_airfoil
    examples/example_airfoil_recover
 
-.. example_ibeam

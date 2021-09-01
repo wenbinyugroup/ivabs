@@ -1,6 +1,27 @@
 Change log
 ==========
 
+**VERSION 1.4**
+
+* 1.4.1
+
+  * Fixed an issue in assigning theta1 and theta3 for filling components.
+
+* 1.4.0
+
+  * Added a new command option to run integrated VABS.
+  * Added new inputs for the rotor blade specific parameterization.
+  * Added new inputs for strength property of 'lamina' type materials.
+  * Added new inputs for assigning orientations for filling materials.
+  * Added a new input option for recover analysis in VABS. The default is linear beam theory.
+  * Added a new input option for setting the tolerance used in geometric computation.
+  * Added the capability of failure analysis using VABS.
+  * Updated the logging system.
+  * Changed the default element type to 'quadratic'.
+  * Unified the input syntax of recovery/dehomogenization of VABS/SwfitComp.
+  * Fixed the issue of incorrectly parsing numbers with more than one spaces between numbers.
+  * Fixed an issue in transforming an arc defined by center, start and radius.
+
 **VERSION 1.3**
 
 * 1.3.0

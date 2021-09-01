@@ -1,4 +1,4 @@
-.. include:: ../replace.txt
+.. include:: /replace.txt
 
 .. _example-channel:
 
@@ -8,7 +8,7 @@ Channel
 Problem description
 -------------------
 
-.. figure:: ../figures/ex_channel_0.png
+.. figure:: /figures/ex_channel_0.png
   :name: fig_channel0
   :width: 3in
   :align: center
@@ -22,14 +22,14 @@ The layup is defined having a single layer with the thickness 0.001524 m.
 The result is shown in :numref:`Table %s <table_channel_result>` and compared with those in [CHEN2010]_.
 Complete input files can be found in ``examples\ex_channel\``, including ``channel.xml`` and ``materials.xml``.
 
-.. figure:: ../figures/ex_channel_1.png
+.. figure:: /figures/ex_channel_1.png
   :name: fig_channel1
   :width: 6in
   :align: center
 
   *Base point*\ s, *Base line*\ s and *Segment*\ s of the channel cross section.
 
-.. figure:: ../figures/ex_channel_mesh.png
+.. figure:: /figures/ex_channel_mesh.png
   :name: fig_channel_mesh
   :width: 4in
   :align: center

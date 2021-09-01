@@ -1,4 +1,4 @@
-.. include:: ../replace.txt
+.. include:: /replace.txt
 
 .. _section-shape:
 
@@ -105,7 +105,7 @@ Using the XML format, points can be defined in the following ways:
 
 
 
-.. figure:: ../figures/point_on_line.png
+.. figure:: /figures/point_on_line.png
   :name: fig_point_on_line
   :width: 6in
   :align: center
@@ -161,7 +161,7 @@ Each one has a unique ``name`` and a ``type``, which can be ``straight``, ``arc`
 Inside the ``baseline`` element, the ``straight`` and ``arc`` types have several different ways of definition, and thus the arrangements of data are different, which will be explained in details below.
 
 
-.. figure:: ../figures/baselinetypes.png
+.. figure:: /figures/baselinetypes.png
   :name: fig_baselinetypes
   :width: 6in
   :align: center
@@ -214,7 +214,7 @@ There are three ways defining a base line of this type, as shown in :numref:`Fig
   The PreVABS-computed second key point will always be "not lower" than the user-provided key point, which means the base line will always be pointing to the upper left or upper right, or to the right if it is horizontal.
 
 
-.. figure:: ../figures/baselinestraight.png
+.. figure:: /figures/baselinestraight.png
   :name: fig_baselinestraight
   :width: 100%
   :align: center
@@ -280,7 +280,7 @@ There are two ways of defining an arc as shown in :numref:`Fig. %s <fig_baseline
 - Use center, starting point, angle and direction.
 
 
-.. figure:: ../figures/baselinearc.png
+.. figure:: /figures/baselinearc.png
   :name: fig_baselinearc
   :width: 6in
   :align: center
@@ -288,7 +288,7 @@ There are two ways of defining an arc as shown in :numref:`Fig. %s <fig_baseline
   Items in an arc.
 
 
-.. figure:: ../figures/baselinearc2.png
+.. figure:: /figures/baselinearc2.png
   :name: fig_baselinearc2
   :width: 6in
   :align: center
@@ -302,23 +302,24 @@ There are two ways of defining an arc as shown in :numref:`Fig. %s <fig_baseline
   :caption: Input syntax for the base lines shown in :numref:`Fig. %s <fig_baselinearc2>`
 
   <baselines>
+    ...
     <baseline name="left" type="arc">
       <center> c </center>
       <start> s </start>
       <end> e </end>
       <direction> ccw </direction>
-      <discrete by="angle"> 9 </discrete>
+      <discrete by="angle> 9 </discrete>
     </baseline>
-
+  
     <baseline name="right" type="arc">
       <center> c </center>
       <start> s </start>
       <angle> a </angle>
+      <!-- here the direction is the default value 'ccw' -->
       <discrete by="number"> 10 </discrete>
     </baseline>
-  </baselines>
-
-
+    ...
+  </basepoints>
 
 
 **Specification**

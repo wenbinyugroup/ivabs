@@ -1,4 +1,4 @@
-.. include:: ../replace.txt
+.. include:: /replace.txt
 
 .. _example-box-beam:
 
@@ -8,7 +8,7 @@ Box beam
 Problem description
 -------------------
 
-.. figure:: ../figures/examplebox0.png
+.. figure:: /figures/examplebox0.png
   :name: fig_box_draw
   :width: 4in
   :align: center
@@ -23,14 +23,14 @@ Cross-sectional properties are given in :numref:`Table %s <table_box_result>` an
 The tiny differences are due to different meshes.
 Complete input files can be found in ``examples\ex_box\``, including ``box.xml`` and ``materials.xml``.
 
-.. figure:: ../figures/examplebox1.png
+.. figure:: /figures/examplebox1.png
   :name: fig_box1
   :width: 6in
   :align: center
 
   *Base point*\ s, *Base line*\ s and *Segment*\ s of the box beam cross section.
 
-.. figure:: ../figures/examplebox.png
+.. figure:: /figures/examplebox.png
   :name: fig_box
   :width: 6in
   :align: center

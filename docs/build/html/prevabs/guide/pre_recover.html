@@ -239,6 +239,8 @@ commentsRunWhenDOMLoaded(addUtterances);
             
   <div class="section" id="specifications-for-recovery">
 <span id="section-recover"></span><h1>Specifications for recovery<a class="headerlink" href="#specifications-for-recovery" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="vabs">
+<h2>VABS<a class="headerlink" href="#vabs" title="Permalink to this headline">¶</a></h2>
 <p>Once the 1D beam analysis is finished, those results can be used to
 recover local 3D strains and stresses at every point of the cross section.
 As stated in the VABS manual, the following data are required to carry
@@ -257,7 +259,7 @@ Euler-Bernoulli model and Timoshenko model. If you want to perform
 recovery for other models such as the Vlasov model, please refer to
 the VABS manual to modify the input file yourself.</p>
 </div>
-<p>These data are included in a <code class="docutils literal notranslate"><span class="pre">&lt;recover&gt;</span></code> element, added into the
+<p>These data are included in a <code class="docutils literal notranslate"><span class="pre">&lt;global&gt;</span></code> element, added into the
 <code class="docutils literal notranslate"><span class="pre">&lt;cross_section&gt;</span></code> element in the main input file. The nine entries
 in the direction cosine matrix are flattened into a single array in the
 <code class="docutils literal notranslate"><span class="pre">&lt;rotations&gt;</span></code> element. This matrix is defined in
@@ -277,11 +279,11 @@ the undeformed triad.</p>
 <div class="code-block-caption"><span class="caption-number">Listing 30 </span><span class="caption-text">A template for the recover data in a <em>Cross section</em> file.</span><a class="headerlink" href="#code-recover" title="Permalink to this code">¶</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;cross_section</span> <span class="na">name=</span><span class="s">&quot;cs1&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 2</span>  ...
-<span class="linenos"> 3</span>  <span class="nt">&lt;recover&gt;</span>
-<span class="linenos"> 4</span>    <span class="nt">&lt;displacements&gt;</span> 0 0 0 <span class="nt">&lt;/displacements&gt;</span>
-<span class="linenos"> 5</span>    <span class="nt">&lt;rotations&gt;</span> 1 0 0 0 1 0 0 0 1 <span class="nt">&lt;/rotations&gt;</span>
-<span class="linenos"> 6</span>    <span class="nt">&lt;forces&gt;</span> 0 0 0 <span class="nt">&lt;/forces&gt;</span>
-<span class="linenos"> 7</span>    <span class="nt">&lt;moments&gt;</span> 0 0 0 <span class="nt">&lt;/moments&gt;</span>
+<span class="linenos"> 3</span>  <span class="nt">&lt;dehomo&gt;</span> 1 <span class="nt">&lt;/dehomo&gt;</span>
+<span class="linenos"> 4</span>  <span class="nt">&lt;global&gt;</span>
+<span class="linenos"> 5</span>    <span class="nt">&lt;displacements&gt;</span> 0 0 0 <span class="nt">&lt;/displacements&gt;</span>
+<span class="linenos"> 6</span>    <span class="nt">&lt;rotations&gt;</span> 1 0 0 0 1 0 0 0 1 <span class="nt">&lt;/rotations&gt;</span>
+<span class="linenos"> 7</span>    <span class="nt">&lt;loads&gt;</span> 0 0 0 0 0 0 <span class="nt">&lt;/loads&gt;</span>
 <span class="linenos"> 8</span>    <span class="nt">&lt;distributed&gt;</span>
 <span class="linenos"> 9</span>      <span class="nt">&lt;forces&gt;</span> 0 0 0 <span class="nt">&lt;/forces&gt;</span>
 <span class="linenos">10</span>      <span class="nt">&lt;forces_d1&gt;</span> 0 0 0 <span class="nt">&lt;/forces_d1&gt;</span>
@@ -292,10 +294,55 @@ the undeformed triad.</p>
 <span class="linenos">15</span>      <span class="nt">&lt;moments_d2&gt;</span> 0 0 0 <span class="nt">&lt;/moments_d2&gt;</span>
 <span class="linenos">16</span>      <span class="nt">&lt;moments_d3&gt;</span> 0 0 0 <span class="nt">&lt;/moments_d3&gt;</span>
 <span class="linenos">17</span>    <span class="nt">&lt;/distributed&gt;</span>
-<span class="linenos">18</span>  <span class="nt">&lt;/recover&gt;</span>
+<span class="linenos">18</span>  <span class="nt">&lt;/global&gt;</span>
 <span class="linenos">19</span><span class="nt">&lt;/cross_section&gt;</span>
 </pre></div>
 </div>
+</div>
+<p><strong>Specification</strong></p>
+<ul class="simple">
+<li><p><strong>&lt;global&gt;</strong> - Global analysis results. Required.</p></li>
+<li><p><strong>&lt;displacements&gt;</strong> - Three components (<span class="math notranslate nohighlight">\(u_1\)</span>, <span class="math notranslate nohighlight">\(u_2\)</span>, <span class="math notranslate nohighlight">\(u_3\)</span>) of the global displacements. Optional. Default values are {0, 0, 0}.</p></li>
+<li><p><strong>&lt;rotations&gt;</strong> - Nine components (<span class="math notranslate nohighlight">\(C_{11}\)</span>, <span class="math notranslate nohighlight">\(C_{12}\)</span>, <span class="math notranslate nohighlight">\(C_{13}\)</span>, <span class="math notranslate nohighlight">\(C_{21}\)</span>, <span class="math notranslate nohighlight">\(C_{22}\)</span>, <span class="math notranslate nohighlight">\(C_{23}\)</span>, <span class="math notranslate nohighlight">\(C_{31}\)</span>, <span class="math notranslate nohighlight">\(C_{32}\)</span>, <span class="math notranslate nohighlight">\(C_{33}\)</span>) of the global rotations (direction cosine matrix). Optional. Default values are {1, 0, 0, 0, 1, 0, 0, 0, 1}.</p></li>
+<li><p><strong>&lt;loads&gt;</strong> - The sectional loading components. For the Euler-Bernoulli model, four numbers (<span class="math notranslate nohighlight">\(F_1\)</span>, <span class="math notranslate nohighlight">\(M_1\)</span>, <span class="math notranslate nohighlight">\(M_2\)</span>, <span class="math notranslate nohighlight">\(M_3\)</span>) are needed. For the Timoshenko model, six numbers (<span class="math notranslate nohighlight">\(F_1\)</span>, <span class="math notranslate nohighlight">\(F_2\)</span>, <span class="math notranslate nohighlight">\(F_3\)</span>, <span class="math notranslate nohighlight">\(M_1\)</span>, <span class="math notranslate nohighlight">\(M_2\)</span>, <span class="math notranslate nohighlight">\(M_3\)</span>) are needed. Optional. Default values are zero loads.</p></li>
+<li><p><strong>&lt;distributed&gt;</strong> - Distributed sectional loads per unit span (Timoshenko model only). Optional. Default values are zero distributed loads.</p>
+<ul>
+<li><p><strong>&lt;forces&gt;</strong> - Distributed sectional forces (<span class="math notranslate nohighlight">\(f_1\)</span>, <span class="math notranslate nohighlight">\(f_2\)</span>, <span class="math notranslate nohighlight">\(f_3\)</span>).</p></li>
+<li><p><strong>&lt;forces_d1&gt;</strong> - First derivative of distributed sectional forces (<span class="math notranslate nohighlight">\(f'_1\)</span>, <span class="math notranslate nohighlight">\(f'_2\)</span>, <span class="math notranslate nohighlight">\(f'_3\)</span>).</p></li>
+<li><p><strong>&lt;forces_d2&gt;</strong> - Second derivative of distributed sectional forces (<span class="math notranslate nohighlight">\(f''_1\)</span>, <span class="math notranslate nohighlight">\(f''_2\)</span>, <span class="math notranslate nohighlight">\(f''_3\)</span>).</p></li>
+<li><p><strong>&lt;forces_d3&gt;</strong> - Third derivative of distributed sectional forces (<span class="math notranslate nohighlight">\(f'''_1\)</span>, <span class="math notranslate nohighlight">\(f'''_2\)</span>, <span class="math notranslate nohighlight">\(f'''_3\)</span>).</p></li>
+<li><p><strong>&lt;moments&gt;</strong> - Distributed sectional moments (<span class="math notranslate nohighlight">\(m_1\)</span>, <span class="math notranslate nohighlight">\(m_2\)</span>, <span class="math notranslate nohighlight">\(m_3\)</span>).</p></li>
+<li><p><strong>&lt;moments_d1&gt;</strong> - First derivative of distributed sectional moments (<span class="math notranslate nohighlight">\(m'_1\)</span>, <span class="math notranslate nohighlight">\(m'_2\)</span>, <span class="math notranslate nohighlight">\(m'_3\)</span>).</p></li>
+<li><p><strong>&lt;moments_d2&gt;</strong> - Second derivative of distributed sectional moments (<span class="math notranslate nohighlight">\(m''_1\)</span>, <span class="math notranslate nohighlight">\(m''_2\)</span>, <span class="math notranslate nohighlight">\(m''_3\)</span>).</p></li>
+<li><p><strong>&lt;moments_d3&gt;</strong> - Third derivative of distributed sectional moments (<span class="math notranslate nohighlight">\(m'''_1\)</span>, <span class="math notranslate nohighlight">\(m'''_2\)</span>, <span class="math notranslate nohighlight">\(m'''_3\)</span>).</p></li>
+</ul>
+</li>
+<li><p><strong>&lt;dehomo&gt;</strong> - Order of theory for dehomogenization, 1 for nonlinear beam theory and 2 for linear beam theory. Optional. Default is 2.</p></li>
+</ul>
+</div>
+<div class="section" id="swiftcomp">
+<h2>SwiftComp<a class="headerlink" href="#swiftcomp" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="code-dehomo-sc">
+<div class="code-block-caption"><span class="caption-number">Listing 31 </span><span class="caption-text">Syntax for the dehomogenization inputs for SwiftComp.</span><a class="headerlink" href="#code-dehomo-sc" title="Permalink to this code">¶</a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;global</span> <span class="na">measure=</span><span class="s">&quot;stress&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">2</span>  <span class="nt">&lt;displacements&gt;</span> 0 0 0 <span class="nt">&lt;/displacements&gt;</span>
+<span class="linenos">3</span>  <span class="nt">&lt;rotations&gt;</span> 1 0 0 0 1 0 0 0 1 <span class="nt">&lt;/rotations&gt;</span>
+<span class="linenos">4</span>  <span class="nt">&lt;loads&gt;</span> 0 0 0 0 0 0 <span class="nt">&lt;/loads&gt;</span>
+<span class="linenos">5</span><span class="nt">&lt;/global&gt;</span>
+</pre></div>
+</div>
+</div>
+<p><strong>Specification</strong></p>
+<ul class="simple">
+<li><p><strong>&lt;global&gt;</strong> - Global analysis results. Required.</p>
+<ul>
+<li><p><em>measure</em> - Type of the sectional loads, <code class="docutils literal notranslate"><span class="pre">stress</span></code> for generalized stresses and <code class="docutils literal notranslate"><span class="pre">strain</span></code> for generalized strains. Required.</p></li>
+</ul>
+</li>
+<li><p><strong>&lt;displacements&gt;</strong> - Three components (<span class="math notranslate nohighlight">\(u_1\)</span>, <span class="math notranslate nohighlight">\(u_2\)</span>, <span class="math notranslate nohighlight">\(u_3\)</span>) of the global displacements. Optional. Default values are {0, 0, 0}.</p></li>
+<li><p><strong>&lt;rotations&gt;</strong> - Nine components (<span class="math notranslate nohighlight">\(C_{11}\)</span>, <span class="math notranslate nohighlight">\(C_{12}\)</span>, <span class="math notranslate nohighlight">\(C_{13}\)</span>, <span class="math notranslate nohighlight">\(C_{21}\)</span>, <span class="math notranslate nohighlight">\(C_{22}\)</span>, <span class="math notranslate nohighlight">\(C_{23}\)</span>, <span class="math notranslate nohighlight">\(C_{31}\)</span>, <span class="math notranslate nohighlight">\(C_{32}\)</span>, <span class="math notranslate nohighlight">\(C_{33}\)</span>) of the global rotations (direction cosine matrix). Optional. Default values are {1, 0, 0, 0, 1, 0, 0, 0, 1}.</p></li>
+<li><p><strong>&lt;loads&gt;</strong> - The sectional loading components. For the Euler-Bernoulli model, four numbers (<span class="math notranslate nohighlight">\(F_1\)</span>, <span class="math notranslate nohighlight">\(M_1\)</span>, <span class="math notranslate nohighlight">\(M_2\)</span>, <span class="math notranslate nohighlight">\(M_3\)</span>) are needed. For the Timoshenko model, six numbers (<span class="math notranslate nohighlight">\(F_1\)</span>, <span class="math notranslate nohighlight">\(F_2\)</span>, <span class="math notranslate nohighlight">\(F_3\)</span>, <span class="math notranslate nohighlight">\(M_1\)</span>, <span class="math notranslate nohighlight">\(M_2\)</span>, <span class="math notranslate nohighlight">\(M_3\)</span>) are needed. Optional. Default values are zero loads.</p></li>
+</ul>
 </div>
 </div>
 

@@ -1,4 +1,4 @@
-.. include:: ../replace.txt
+.. include:: /replace.txt
 
 .. _section-component:
 
@@ -38,7 +38,7 @@ Segments are connected through different ways as shown in :numref:`Fig. %s <fig_
 According to this, segments can be grouped into components.
 The rule of thumb is: if two segments are connected in the first two ways ('V1' and 'V2'), then they belong to one component; if they are connected as the third way ('T'), then they should be put into different components, and component 2 will be created after the finish of component 1.
 
-.. figure:: ../figures/joints.png
+.. figure:: /figures/joints.png
   :name: fig_joints
   :width: 6in
   :align: center
@@ -50,7 +50,7 @@ The base line provides a reference for the position and direction of the layup.
 Layers can be laid to the left or right of the base line.
 The direction is defined as one's left or right, assuming one is walking along the direction of the base line.
 
-.. figure:: ../figures/segment.png
+.. figure:: /figures/segment.png
   :name: fig_segment
   :width: 6in
   :align: center
@@ -137,7 +137,7 @@ Example
 
 .. _fig-param-layup-example-define:
 
-.. figure:: ../figures/param_layup_example_design.png
+.. figure:: /figures/param_layup_example_design.png
   :width: 4in
   :align: center
 
@@ -146,7 +146,7 @@ Example
 
 .. _fig-param-layup-example-plot:
 
-.. figure:: ../figures/param_layup_example_plot.png
+.. figure:: /figures/param_layup_example_plot.png
   :width: 3in
   :align: center
 
@@ -243,7 +243,7 @@ A ``<baseline>`` element is optional and is used to create extra boundaries.
 This sub-element has one attribute ``fillside``, which can be either left or right.
 A ``<location>`` element is used to store the name of a point that is inside the desired fill region, and is also optional.
 
-.. figure:: ../figures/filling1.png
+.. figure:: /figures/filling1.png
   :name: fig_filling1
   :width: 6in
   :align: center
@@ -301,7 +301,7 @@ An example is provided below (:numref:`Fig %s <fig-local-mesh-example-define>`, 
 
 .. _fig-local-mesh-example-define:
 
-.. figure:: ../figures/local_mesh_define_mark.png
+.. figure:: /figures/local_mesh_define_mark.png
   :width: 3in
   :align: center
 
@@ -310,7 +310,7 @@ An example is provided below (:numref:`Fig %s <fig-local-mesh-example-define>`, 
 
 .. _fig-local-mesh-example-plot:
 
-.. figure:: ../figures/local_mesh.png
+.. figure:: /figures/local_mesh.png
   :width: 3in
   :align: center
 
@@ -354,6 +354,9 @@ An example is provided below (:numref:`Fig %s <fig-local-mesh-example-define>`, 
 - **<baseline>** - Name of the base line defining part or complete boundary. Optional.
 
   - *fillside* - Side of the fill with respect to the base line. Optional.
+
+- **<theta1>** - Rotating angle in degree about the |x1| axis. Optional. Default is 0 degree.
+- **<theta3>** - Rotating angle in degree about the |y3| axis. Optional. Default is 0 degree.
 
 - **<mesh_size>** - Local mesh size. Optional.
 

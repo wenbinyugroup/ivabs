@@ -1,4 +1,4 @@
-.. include:: ../replace.txt
+.. include:: /replace.txt
 
 .. _example-tube:
 
@@ -17,14 +17,14 @@ The result is given in :numref:`Table %s <table_tube_result>`.
 Complete input files can be found in ``examples\ex_tube\``, including
 ``tube.xml`` and ``materials.xml``.
 
-.. figure:: ../figures/examplecircle1.png
+.. figure:: /figures/examplecircle1.png
   :name: fig_circle1
   :width: 6in
   :align: center
 
   *Base point*\ s, *Base line*\ s and *Segment*\ s of the tube cross section.
 
-.. figure:: ../figures/examplecircle.png
+.. figure:: /figures/examplecircle.png
   :name: fig_circle
   :width: 4in
   :align: center

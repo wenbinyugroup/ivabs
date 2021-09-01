@@ -1,4 +1,4 @@
-.. include:: ../replace.txt
+.. include:: /replace.txt
 
 .. _example-pipe:
 
@@ -8,7 +8,7 @@ Pipe
 Probelm description
 -------------------
 
-.. figure:: ../figures/examplepipe0.png
+.. figure:: /figures/examplepipe0.png
   :name: fig_pipe_draw
   :width: 6in
   :align: center
@@ -25,21 +25,21 @@ Cross-sectional properties are given in :numref:`Table %s <table_pipe_result>` a
 The tiny differences are due to different meshes.
 Complete input files can be found in ``examples\ex_pipe\``, including ``pipe.xml``, ``baselines.xml``, ``materials.xml``, and ``layups.xml``.
 
-.. figure:: ../figures/examplepipe1.png
+.. figure:: /figures/examplepipe1.png
   :name: fig_pipe1
   :width: 6in
   :align: center
 
   *Base point*\ s and *Base line*\ s of the pipe cross section.
 
-.. figure:: ../figures/examplepipe2.png
+.. figure:: /figures/examplepipe2.png
   :name: fig_pipe2
   :width: 6in
   :align: center
 
   *Segment*\ s of the pipe cross section.
 
-.. figure:: ../figures/examplepipe.png
+.. figure:: /figures/examplepipe.png
   :name: fig_pipe
   :width: 6in
   :align: center

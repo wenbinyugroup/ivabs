@@ -337,8 +337,6 @@ Each material must have a name and type. Under each <code class="docutils litera
 <ul>
 <li><p><em>name</em> - Name of the material.</p></li>
 <li><p><em>type</em> - Type of the material. Choose one from ‘isotropic’, ‘orthotropic’, ‘anisotropic’ and ‘lamina’.</p></li>
-</ul>
-</li>
 <li><p><strong>&lt;density&gt;</strong> - Density of the material. Defualt is 1.0.</p></li>
 <li><p><strong>&lt;elastic&gt;</strong> - Elastic properties of the material. Specifications are different for different types.</p>
 <ul>
@@ -347,6 +345,8 @@ Each material must have a name and type. Under each <code class="docutils litera
 <li><p>If <em>type=”orthotropic”</em> - 9 constants: ‘e1’, ‘e2’, ‘e3’, ‘g12’, ‘g13’, ‘g23’, ‘nu12’, ‘nu13’ and ‘nu23’.</p></li>
 <li><p>If <em>type=”anisotropic”</em> - 21 constants: ‘c11’, ‘c12’, ‘c13’, ‘c14’, ‘c15’, ‘c16’, ‘c22’, ‘c23’, ‘c24’, ‘c25’, ‘c26’, ‘c33’, ‘c34’, ‘c35’, ‘c36’, ‘c44’, ‘c45’, ‘c46’, ‘c55’, ‘c56’ and ‘c66’. These constants are defined in Equation <a class="reference internal" href="#equation-hookeslaw">(2)</a>.</p></li>
 <li><p>If <em>type=”lamina”</em> - 4 constants: ‘e1’, ‘e2’, ‘g12’ and ‘nu12’. Internally, this type of material will be converted to the ‘orthotropic’ material. The default values for the rest components are: ‘e3=e2’, ‘nu13=nu12’, ‘nu23=0.3’, ‘g13=g12’ and ‘g23=e3/(2*(1+nu23))’. These default values can be overwritten by custom values.</p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

@@ -1,4 +1,4 @@
-.. include:: ../replace.txt
+.. include:: /replace.txt
 
 .. _section-coordinate:
 
@@ -12,7 +12,7 @@ There are three coordinate frames used in PreVABS as shown in
 - **x** is the final frame;
 - **y** is the local frame for each element.
 
-.. figure:: ../figures/frames.png
+.. figure:: /figures/frames.png
   :name: fig_frames
   :width: 6in
   :align: center
@@ -33,7 +33,7 @@ origin), scaling (multiplied by the actual chord length), and rotation
 More details about this transformation can be found in Section:
 :ref:`section-overall` below.
 
-.. figure:: ../figures/transforms.png
+.. figure:: /figures/transforms.png
   :name: fig_transforms
   :width: 100%
   :align: center

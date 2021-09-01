@@ -1,4 +1,4 @@
-.. include:: ../replace.txt
+.. include:: /replace.txt
 
 .. _section-airfoil:
 
@@ -8,7 +8,7 @@ Airfoil (MH-104)
 Problem description
 -------------------
 
-.. figure:: ../figures/examplemh1040.png
+.. figure:: /figures/examplemh1040.png
   :name: fig_mh104_draw
   :width: 5.5in
   :align: center
@@ -40,28 +40,28 @@ Complete input files can be found in ``examples\ex_airfoil\``, including ``mh104
   "2 and 3", "(0.114739930, 0.074571970)", "(0.126956710, -0.047620490)"
   "3 and 4", "(0.536615950, 0.070226120)", "(0.542952100, -0.044437080)"
 
-.. figure:: ../figures/examplemh1041.png
+.. figure:: /figures/examplemh1041.png
   :name: fig_mh1041
   :width: 6.5in
   :align: center
 
   *Base point*\ s of the tube cross section.
 
-.. figure:: ../figures/examplemh1042.png
+.. figure:: /figures/examplemh1042.png
   :name: fig_mh1042
   :width: 6.5in
   :align: center
 
   *Base line*\ s of the tube cross section.
 
-.. figure:: ../figures/examplemh1043.png
+.. figure:: /figures/examplemh1043.png
   :name: fig_mh1043
   :width: 6.5in
   :align: center
 
   *Segment*\ s of the tube cross section.
 
-.. figure:: ../figures/examplemh1044.png
+.. figure:: /figures/examplemh1044.png
   :name: fig_mh104
   :width: 6.5in
   :align: center
@@ -143,7 +143,7 @@ Result
 
 .. note:: The errors between the result and the reference are caused by the difference of modeling of the trailing edge. If reduce the trailing edge skin to a single thin layer, then the difference between the trailing edge shapes is minimized, and the two resulting stiffness matrices are basically the same, as shown in :numref:`Fig. %s <fig_mh104_comparison>`.
 
-.. figure:: ../figures/examplemh104_comparison.png
+.. figure:: /figures/examplemh104_comparison.png
   :name: fig_mh104_comparison
   :width: 6in
   :align: center
