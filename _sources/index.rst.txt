@@ -42,7 +42,7 @@ License
 
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: iVABS Quick Start
    
    ivabs/install
@@ -51,7 +51,7 @@ License
 
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: iVABS Components
 
    prevabs/index
