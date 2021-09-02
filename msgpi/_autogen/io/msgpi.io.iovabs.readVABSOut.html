@@ -71,7 +71,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 
     
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" /> 
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="msgpi.io.iovabs.readVABSOutHomo" href="msgpi.io.iovabs.readVABSOutHomo.html" />
+    <link rel="prev" title="msgpi.io.iovabs.readVABSIn" href="msgpi.io.iovabs.readVABSIn.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -142,7 +144,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </li>
 </ul>
 <p class="caption"><span class="caption-text">iVABS Components</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../prevabs/index.html">PreVABS Documentation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../prevabs/run.html">How to Run PreVABS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../prevabs/tutorial.html">Tutorial</a></li>
@@ -153,9 +155,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toctree-l2"><a class="reference internal" href="../../../prevabs/references.html">References</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../index.html">msgpi documentation</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">msgpi documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide.html">User Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ref_manual.html">Reference</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../ref_manual.html">Reference</a></li>
 </ul>
 </li>
 </ul>
@@ -206,6 +208,12 @@ commentsRunWhenDOMLoaded(addUtterances);
     
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
         
+          <li><a href="../../index.html">msgpi documentation</a> &raquo;</li>
+        
+          <li><a href="../../ref_manual.html">Reference</a> &raquo;</li>
+        
+          <li><a href="../../methods.html">Methods</a> &raquo;</li>
+        
       <li>msgpi.io.iovabs.readVABSOut</li>
     
     
@@ -229,6 +237,34 @@ commentsRunWhenDOMLoaded(addUtterances);
             
   <div class="section" id="msgpi-io-iovabs-readvabsout">
 <h1>msgpi.io.iovabs.readVABSOut<a class="headerlink" href="#msgpi-io-iovabs-readvabsout" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="msgpi.io.iovabs.readVABSOut">
+<code class="sig-prename descclassname"><span class="pre">msgpi.io.iovabs.</span></code><code class="sig-name descname"><span class="pre">readVABSOut</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">analysis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scrnout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.io.iovabs.readVABSOut" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read VABS outputs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fn_in</strong> (<em>str</em>) – VABS input file name.</p></li>
+<li><p><strong>analysis</strong> (<em>{0</em><em>, </em><em>1</em><em>, </em><em>2</em><em>, </em><em>3</em><em>, </em><em>''</em><em>, </em><em>'h'</em><em>, </em><em>'dn'</em><em>, </em><em>'dl'</em><em>, </em><em>'d'</em><em>, </em><em>'l'</em><em>, </em><em>'fi'}</em>) – <p>Analysis to be carried out.</p>
+<ul>
+<li><p>0 or ‘h’ or ‘’ - homogenization</p></li>
+<li><p>1 or ‘dn’ - dehomogenization (nonlinear)</p></li>
+<li><p>2 or ‘dl’ or ‘d’ or ‘l’ - dehomogenization (linear)</p></li>
+<li><p>3 or ‘fi’ - initial failure indices and strength ratios</p></li>
+</ul>
+</p></li>
+<li><p><strong>scrnout</strong> (<em>bool</em><em>, </em><em>optional</em>) – Switch of printing solver messages, by default True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Different analyses return different types of results.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>various</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 
@@ -236,6 +272,10 @@ commentsRunWhenDOMLoaded(addUtterances);
            
           </div>
           <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="msgpi.io.iovabs.readVABSOutHomo.html" class="btn btn-neutral float-right" title="msgpi.io.iovabs.readVABSOutHomo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="msgpi.io.iovabs.readVABSIn.html" class="btn btn-neutral float-left" title="msgpi.io.iovabs.readVABSIn" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 

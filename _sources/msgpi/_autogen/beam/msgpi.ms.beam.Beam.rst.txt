@@ -25,29 +25,4 @@
 
    
    
-   .. rubric:: Attributes
-
-   .. autosummary::
-   
-      ~Beam.name
-      ~Beam.analysis_type
-      ~Beam.max_iteration
-      ~Beam.num_steps
-      ~Beam.num_eigens
-      ~Beam.angular_velocity
-      ~Beam.av_tf
-      ~Beam.linear_velocity
-      ~Beam.lv_tf
-      ~Beam.points
-      ~Beam.segments
-      ~Beam.pconditions
-      ~Beam.mconditions
-      ~Beam.sections
-      ~Beam.frames
-      ~Beam.distrloads
-      ~Beam.timefunctions
-      ~Beam.initcurvatures
-      ~Beam.functions
-      ~Beam.distributions
-   
    
