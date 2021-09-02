@@ -1,5 +1,5 @@
 # Build Sphinx
-name: build ivabs pdf
+name: sphinx build pdf
 on:
   push:
     branches: [ main ]
@@ -26,6 +26,7 @@ jobs:
     - name: Build with sphinx
       id: compile
       run: |
+        cp -R docs/source/figures docs/source/prevabs/figures
         python -msphinx -M latexpdf docs/source/prevabs docs/build
     - name: commit
       run: |

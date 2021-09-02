@@ -1,5 +1,5 @@
 # Build Sphinx
-name: sphinx build
+name: sphinx build html
 on:
   push:
     branches: [ main ]
