@@ -109,8 +109,8 @@ html_theme = 'sphinx_rtd_theme'
 #
 html_theme_options = {
     'use_edit_page_button': True,
-    'collapse_navigation': False,
-    'navigation_depth': 2,
+    'collapse_navigation': True,
+    'navigation_depth': 4,
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
