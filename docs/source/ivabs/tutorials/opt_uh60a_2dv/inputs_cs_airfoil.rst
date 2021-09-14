@@ -172,4 +172,3 @@ The label will be used to reference the points in building the cross section.
   141  -0.000102  -0.001117
   142  0  0
 
-
