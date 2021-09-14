@@ -58,16 +58,16 @@ This part defines translation, scaling, rotating, global mesh size and element t
 The transformation is done in the order of translation, scaling and rotating. 
 The placeholder ``{}`` is put here for dakota to fill in with a number.
 
-Baseline definition
--------------------
+Basepoints definition
+---------------------
 
-Before we actually build baselines, let's first introduce some syntax for defining 
-basepoints and baselines.
+Before we actually start definition, let's first introduce the syntax.
 
 Syntax for basepoints
 ^^^^^^^^^^^^^^^^^^^^^
 
 We can include basepoints defined in another file.
+
 .. code-block:: xml
   :linenos:
 
@@ -98,6 +98,28 @@ By intersections:
 
 The points is the intersection of the "bsl_upper_surface" and "x2=-0.02". 
 This is done before any scaling, translating or rotating.
+
+Build basepoints
+^^^^^^^^^^^^^^^^
+
+.. code-block:: xml
+   :linenos:
+
+      <point name="p1" on="bsl_upper_surface" by="x2">{wl_a2}</point>
+      <point name="p2" on="bsl_upper_surface" by="x2">{wt_a2}</point>
+      <point name="p3" on="bsl_lower_surface" by="x2">{wt_a2}</point>
+      <point name="p4" on="bsl_lower_surface" by="x2">{wl_a2}</point>
+      <point name="p5" on="bsl_upper_surface" by="x2">-0.02</point>
+      <point name="p6" on="bsl_lower_surface" by="x2">-0.02</point>
+      <point name="p7" on="bsl_upper_surface" by="x2">-0.8</point>
+      <point name="p8" on="bsl_lower_surface" by="x2">-0.8</point>
+      <point name="pnsmc">{pnsmc_a2} {pnsmc_a3}</point>
+
+These points are as shown in :numref:`Fig. %s <fig_uh60a_baselines>`
+They will help with building the baselines.
+
+Baselines definition
+--------------------
 
 Syntax for baselines
 ^^^^^^^^^^^^^^^^^^^^
@@ -131,24 +153,6 @@ Define a circular baseline
 This is a circular baseline defined for the non-structural mass using a center and a radius.
 The discrete tag specifies number of lines this circle is divided into.
 
-Build basepoints
-^^^^^^^^^^^^^^^^
-
-.. code-block:: xml
-   :linenos:
-
-      <point name="p1" on="bsl_upper_surface" by="x2">{wl_a2}</point>
-      <point name="p2" on="bsl_upper_surface" by="x2">{wt_a2}</point>
-      <point name="p3" on="bsl_lower_surface" by="x2">{wt_a2}</point>
-      <point name="p4" on="bsl_lower_surface" by="x2">{wl_a2}</point>
-      <point name="p5" on="bsl_upper_surface" by="x2">-0.02</point>
-      <point name="p6" on="bsl_lower_surface" by="x2">-0.02</point>
-      <point name="p7" on="bsl_upper_surface" by="x2">-0.8</point>
-      <point name="p8" on="bsl_lower_surface" by="x2">-0.8</point>
-      <point name="pnsmc">{pnsmc_a2} {pnsmc_a3}</point>
-
-These points are as shown in :numref:`Fig. %s <fig_uh60a_baselines>`
-They will help with building the baselines.
 
 Build baselines
 ^^^^^^^^^^^^^^^

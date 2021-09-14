@@ -182,25 +182,19 @@ included in the main cross section definition file.</p>
 The transformation is done in the order of translation, scaling and rotating.
 The placeholder <code class="docutils literal notranslate"><span class="pre">{}</span></code> is put here for dakota to fill in with a number.</p>
 </div>
-<div class="section" id="baseline-definition">
-<h2>Baseline definition<a class="headerlink" href="#baseline-definition" title="Permalink to this headline">¶</a></h2>
-<p>Before we actually build baselines, let’s first introduce some syntax for defining
-basepoints and baselines.</p>
+<div class="section" id="basepoints-definition">
+<h2>Basepoints definition<a class="headerlink" href="#basepoints-definition" title="Permalink to this headline">¶</a></h2>
+<p>Before we actually start definition, let’s first introduce the syntax.</p>
 <div class="section" id="syntax-for-basepoints">
 <h3>Syntax for basepoints<a class="headerlink" href="#syntax-for-basepoints" title="Permalink to this headline">¶</a></h3>
-<p>We can include basepoints defined in another file.
-.. code-block:: xml</p>
-<blockquote>
-<div><dl class="field-list simple">
-<dt class="field-odd">linenos</dt>
-<dd class="field-odd"><p></p></dd>
-</dl>
-<dl class="simple">
-<dt>&lt;basepoints&gt;</dt><dd><p>&lt;include&gt;sc1095&lt;/include&gt;</p>
-</dd>
-</dl>
-<p>&lt;/basepoints&gt;</p>
-</div></blockquote>
+<p>We can include basepoints defined in another file.</p>
+<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;basepoints&gt;</span>
+    <span class="nt">&lt;include&gt;</span>sc1095<span class="nt">&lt;/include&gt;</span>
+<span class="nt">&lt;/basepoints&gt;</span>
+</pre></div>
+</td></tr></table></div>
 <p>This refers to sc1095.dat basepoints definition file. The extension is omitted here. The format
 of this file is introduced in <span class="xref std std-ref">_sect-input-airfoil</span>.</p>
 <p>We can also defined additonal basepoints by coordinates or by intersections.</p>
@@ -216,6 +210,33 @@ of this file is introduced in <span class="xref std std-ref">_sect-input-airfoil
 <p>The points is the intersection of the “bsl_upper_surface” and “x2=-0.02”.
 This is done before any scaling, translating or rotating.</p>
 </div>
+<div class="section" id="build-basepoints">
+<h3>Build basepoints<a class="headerlink" href="#build-basepoints" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>   <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;p1&quot;</span> <span class="na">on=</span><span class="s">&quot;bsl_upper_surface&quot;</span> <span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>{wl_a2}<span class="nt">&lt;/point&gt;</span>
+   <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;p2&quot;</span> <span class="na">on=</span><span class="s">&quot;bsl_upper_surface&quot;</span> <span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>{wt_a2}<span class="nt">&lt;/point&gt;</span>
+   <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;p3&quot;</span> <span class="na">on=</span><span class="s">&quot;bsl_lower_surface&quot;</span> <span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>{wt_a2}<span class="nt">&lt;/point&gt;</span>
+   <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;p4&quot;</span> <span class="na">on=</span><span class="s">&quot;bsl_lower_surface&quot;</span> <span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>{wl_a2}<span class="nt">&lt;/point&gt;</span>
+   <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;p5&quot;</span> <span class="na">on=</span><span class="s">&quot;bsl_upper_surface&quot;</span> <span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>-0.02<span class="nt">&lt;/point&gt;</span>
+   <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;p6&quot;</span> <span class="na">on=</span><span class="s">&quot;bsl_lower_surface&quot;</span> <span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>-0.02<span class="nt">&lt;/point&gt;</span>
+   <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;p7&quot;</span> <span class="na">on=</span><span class="s">&quot;bsl_upper_surface&quot;</span> <span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>-0.8<span class="nt">&lt;/point&gt;</span>
+   <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;p8&quot;</span> <span class="na">on=</span><span class="s">&quot;bsl_lower_surface&quot;</span> <span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>-0.8<span class="nt">&lt;/point&gt;</span>
+   <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;pnsmc&quot;</span><span class="nt">&gt;</span>{pnsmc_a2} {pnsmc_a3}<span class="nt">&lt;/point&gt;</span>
+</pre></div>
+</td></tr></table></div>
+<p>These points are as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code>
+They will help with building the baselines.</p>
+</div>
+</div>
+<div class="section" id="baselines-definition">
+<h2>Baselines definition<a class="headerlink" href="#baselines-definition" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="syntax-for-baselines">
 <h3>Syntax for baselines<a class="headerlink" href="#syntax-for-baselines" title="Permalink to this headline">¶</a></h3>
 <p>Now we will introduce the syntax for defining baselines.</p>
@@ -244,30 +265,6 @@ the points between the two points are included in the baseline.</p>
 </td></tr></table></div>
 <p>This is a circular baseline defined for the non-structural mass using a center and a radius.
 The discrete tag specifies number of lines this circle is divided into.</p>
-</div>
-<div class="section" id="build-basepoints">
-<h3>Build basepoints<a class="headerlink" href="#build-basepoints" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>   <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;p1&quot;</span> <span class="na">on=</span><span class="s">&quot;bsl_upper_surface&quot;</span> <span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>{wl_a2}<span class="nt">&lt;/point&gt;</span>
-   <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;p2&quot;</span> <span class="na">on=</span><span class="s">&quot;bsl_upper_surface&quot;</span> <span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>{wt_a2}<span class="nt">&lt;/point&gt;</span>
-   <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;p3&quot;</span> <span class="na">on=</span><span class="s">&quot;bsl_lower_surface&quot;</span> <span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>{wt_a2}<span class="nt">&lt;/point&gt;</span>
-   <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;p4&quot;</span> <span class="na">on=</span><span class="s">&quot;bsl_lower_surface&quot;</span> <span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>{wl_a2}<span class="nt">&lt;/point&gt;</span>
-   <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;p5&quot;</span> <span class="na">on=</span><span class="s">&quot;bsl_upper_surface&quot;</span> <span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>-0.02<span class="nt">&lt;/point&gt;</span>
-   <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;p6&quot;</span> <span class="na">on=</span><span class="s">&quot;bsl_lower_surface&quot;</span> <span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>-0.02<span class="nt">&lt;/point&gt;</span>
-   <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;p7&quot;</span> <span class="na">on=</span><span class="s">&quot;bsl_upper_surface&quot;</span> <span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>-0.8<span class="nt">&lt;/point&gt;</span>
-   <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;p8&quot;</span> <span class="na">on=</span><span class="s">&quot;bsl_lower_surface&quot;</span> <span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>-0.8<span class="nt">&lt;/point&gt;</span>
-   <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;pnsmc&quot;</span><span class="nt">&gt;</span>{pnsmc_a2} {pnsmc_a3}<span class="nt">&lt;/point&gt;</span>
-</pre></div>
-</td></tr></table></div>
-<p>These points are as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code>
-They will help with building the baselines.</p>
 </div>
 <div class="section" id="build-baselines">
 <h3>Build baselines<a class="headerlink" href="#build-baselines" title="Permalink to this headline">¶</a></h3>
