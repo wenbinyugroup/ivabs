@@ -14,7 +14,7 @@ Two parameters controlling the size and location of the box spar will be treated
     :align: center
     :header-rows: 1
 
-    * - Label
+    * - Name in input files
       - Design range
       - Variable type
       - Description
@@ -40,7 +40,7 @@ All other cross-sectional parameters are fixed and summarized in :numref:`Table 
     :align: center
     :header-rows: 1
 
-    * - Label
+    * - Name in input files
       - Value
       - Type
       - Description
