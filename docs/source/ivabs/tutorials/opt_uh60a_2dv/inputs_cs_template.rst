@@ -58,11 +58,15 @@ This part defines translation, scaling, rotating, global mesh size and element t
 The transformation is done in the order of translation, scaling and rotating. 
 The placeholder ``{}`` is put here for dakota to fill in with a number.
 
-Baseline definition
--------------------
+Basepoints definition
+---------------------
 
-Include base points
-^^^^^^^^^^^^^^^^^^^
+Before we actually start definition, let's first introduce the syntax.
+
+Syntax for basepoints
+^^^^^^^^^^^^^^^^^^^^^
+
+We can include basepoints defined in another file.
 
 .. code-block:: xml
   :linenos:
@@ -71,10 +75,10 @@ Include base points
       <include>sc1095</include>
   </basepoints>
 
-This refers to sc1095.dat basepoints definition file. The extension is omitted here.
+This refers to sc1095.dat basepoints definition file. The extension is omitted here. The format
+of this file is introduced in :ref:`sect-input-airfoil`.
 
-Individual base points
-^^^^^^^^^^^^^^^^^^^^^^
+We can also defined additonal basepoints by coordinates or by intersections.
 
 By coordinates:
 
@@ -85,18 +89,42 @@ By coordinates:
 
 A new point is defined by x2 and x3 coordinates
 
-By intersection:
+By intersections:
 
 .. code-block:: xml
   :linenos:
 
-  <point name="p5" on="bsl_lps" by="x2">-0.02</point>
+  <point name="p5" on="bsl_upper_surface" by="x2">-0.02</point>
 
-The points is the intersection of the "bsl_lps" and "x2=-0.02". 
+The points is the intersection of the "bsl_upper_surface" and "x2=-0.02". 
 This is done before any scaling, translating or rotating.
 
-Baselines
-^^^^^^^^^
+Build basepoints
+^^^^^^^^^^^^^^^^
+
+.. code-block:: xml
+   :linenos:
+
+      <point name="p1" on="bsl_upper_surface" by="x2">{wl_a2}</point>
+      <point name="p2" on="bsl_upper_surface" by="x2">{wt_a2}</point>
+      <point name="p3" on="bsl_lower_surface" by="x2">{wt_a2}</point>
+      <point name="p4" on="bsl_lower_surface" by="x2">{wl_a2}</point>
+      <point name="p5" on="bsl_upper_surface" by="x2">-0.02</point>
+      <point name="p6" on="bsl_lower_surface" by="x2">-0.02</point>
+      <point name="p7" on="bsl_upper_surface" by="x2">-0.8</point>
+      <point name="p8" on="bsl_lower_surface" by="x2">-0.8</point>
+      <point name="pnsmc">{pnsmc_a2} {pnsmc_a3}</point>
+
+These points are as shown in :numref:`Fig. %s <fig_uh60a_baselines>`
+They will help with building the baselines.
+
+Baselines definition
+--------------------
+
+Syntax for baselines
+^^^^^^^^^^^^^^^^^^^^
+
+In this section we will introduce the syntax for defining baselines.
 
 Define a straight baseline by a sequence of points
 
@@ -125,10 +153,11 @@ Define a circular baseline
 This is a circular baseline defined for the non-structural mass using a center and a radius.
 The discrete tag specifies number of lines this circle is divided into.
 
+
 Build baselines
 ^^^^^^^^^^^^^^^
 
-Now we have all the pieces. We can use the tags introduced to define some baselines. 
+Now we have all the pieces. We can start to actually build the baselines.
 The baselines and base points are illustrated in the figure below. 
 The point 1 is the rightmost point or starting point; 
 the point 71 is leftmost point on the upper half; 
@@ -140,16 +169,18 @@ the point 141 is the last point before getting back to the starting point.
   :width: 6in
   :align: center
 
-1. The lower half of the airfoil
+  Baselines and basepoints definition
+
+1. The upper half of the airfoil
 
    .. code-block:: xml
      :linenos:
 
-     <baseline name="bsl_lps" type="straight">
+     <baseline name="bsl_upper_surface" type="straight">
          <points>1:71</points>
      </baseline>
 
-2. The upper half of the airfoil
+2. The lower half of the airfoil
 
    .. code-block:: xml
      :linenos:
@@ -222,7 +253,7 @@ The components definition
 -------------------------
 There are 6 components in the cross section model: the spar box, the leading edge, the trailing edge, the non-structural mass, the filling on the leading and trailing edge.
 
-Component format
+Component syntax
 ^^^^^^^^^^^^^^^^
 
 .. code-block:: xml
@@ -385,20 +416,20 @@ Complete file
       <basepoints>
         <include>sc1095</include>
       </basepoints>
-      <baseline name="bsl_lps" type="straight">
+      <baseline name="bsl_upper_surface" type="straight">
         <points>1:71</points>
       </baseline>
-      <baseline name="bsl_hps" type="straight">
+      <baseline name="bsl_lower_surface" type="straight">
         <points>72:141,1</points>
       </baseline>
-      <point name="p1" on="bsl_lps" by="x2">{wl_a2}</point>
-      <point name="p2" on="bsl_lps" by="x2">{wt_a2}</point>
-      <point name="p3" on="bsl_hps" by="x2">{wt_a2}</point>
-      <point name="p4" on="bsl_hps" by="x2">{wl_a2}</point>
-      <point name="p5" on="bsl_lps" by="x2">-0.02</point>
-      <point name="p6" on="bsl_hps" by="x2">-0.02</point>
-      <point name="p7" on="bsl_lps" by="x2">-0.8</point>
-      <point name="p8" on="bsl_hps" by="x2">-0.8</point>
+      <point name="p1" on="bsl_upper_surface" by="x2">{wl_a2}</point>
+      <point name="p2" on="bsl_upper_surface" by="x2">{wt_a2}</point>
+      <point name="p3" on="bsl_lower_surface" by="x2">{wt_a2}</point>
+      <point name="p4" on="bsl_lower_surface" by="x2">{wl_a2}</point>
+      <point name="p5" on="bsl_upper_surface" by="x2">-0.02</point>
+      <point name="p6" on="bsl_lower_surface" by="x2">-0.02</point>
+      <point name="p7" on="bsl_upper_surface" by="x2">-0.8</point>
+      <point name="p8" on="bsl_lower_surface" by="x2">-0.8</point>
       <baseline name="bsl_spar_all" type="straight">
         <points>p1:p2,p3:p4,p1</points>
       </baseline>
