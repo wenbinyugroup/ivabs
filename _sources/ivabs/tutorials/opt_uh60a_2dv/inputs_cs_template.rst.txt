@@ -76,7 +76,7 @@ We can include basepoints defined in another file.
   </basepoints>
 
 This refers to sc1095.dat basepoints definition file. The extension is omitted here. The format
-of this file is introduced in :ref:`_sect-input-airfoil`.
+of this file is introduced in :ref:`sect-input-airfoil`.
 
 We can also defined additonal basepoints by coordinates or by intersections.
 
@@ -124,7 +124,7 @@ Baselines definition
 Syntax for baselines
 ^^^^^^^^^^^^^^^^^^^^
 
-Now we will introduce the syntax for defining baselines.
+In this section we will introduce the syntax for defining baselines.
 
 Define a straight baseline by a sequence of points
 
@@ -157,7 +157,7 @@ The discrete tag specifies number of lines this circle is divided into.
 Build baselines
 ^^^^^^^^^^^^^^^
 
-Now we have all the pieces. We can start to actually build the baselines
+Now we have all the pieces. We can start to actually build the baselines.
 The baselines and base points are illustrated in the figure below. 
 The point 1 is the rightmost point or starting point; 
 the point 71 is leftmost point on the upper half; 
@@ -168,6 +168,8 @@ the point 141 is the last point before getting back to the starting point.
   :name: fig_uh60a_baselines
   :width: 6in
   :align: center
+
+  Baselines and basepoints definition
 
 1. The upper half of the airfoil
 

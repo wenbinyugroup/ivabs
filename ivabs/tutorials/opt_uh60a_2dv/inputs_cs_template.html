@@ -196,7 +196,7 @@ The placeholder <code class="docutils literal notranslate"><span class="pre">{}<
 </pre></div>
 </td></tr></table></div>
 <p>This refers to sc1095.dat basepoints definition file. The extension is omitted here. The format
-of this file is introduced in <span class="xref std std-ref">_sect-input-airfoil</span>.</p>
+of this file is introduced in <a class="reference internal" href="inputs_cs_airfoil.html#sect-input-airfoil"><span class="std std-ref">Cross-section Airfoil Data (sc1095.dat)</span></a>.</p>
 <p>We can also defined additonal basepoints by coordinates or by intersections.</p>
 <p>By coordinates:</p>
 <div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;pnsmc&quot;</span><span class="nt">&gt;</span>{pnsmc_a2} {pnsmc_a3}<span class="nt">&lt;/point&gt;</span>
@@ -231,7 +231,7 @@ This is done before any scaling, translating or rotating.</p>
    <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;pnsmc&quot;</span><span class="nt">&gt;</span>{pnsmc_a2} {pnsmc_a3}<span class="nt">&lt;/point&gt;</span>
 </pre></div>
 </td></tr></table></div>
-<p>These points are as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code>
+<p>These points are as shown in <a class="reference internal" href="#fig-uh60a-baselines"><span class="std std-numref">Fig. 6</span></a>
 They will help with building the baselines.</p>
 </div>
 </div>
@@ -239,7 +239,7 @@ They will help with building the baselines.</p>
 <h2>Baselines definition<a class="headerlink" href="#baselines-definition" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="syntax-for-baselines">
 <h3>Syntax for baselines<a class="headerlink" href="#syntax-for-baselines" title="Permalink to this headline">¶</a></h3>
-<p>Now we will introduce the syntax for defining baselines.</p>
+<p>In this section we will introduce the syntax for defining baselines.</p>
 <p>Define a straight baseline by a sequence of points</p>
 <div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
@@ -268,7 +268,7 @@ The discrete tag specifies number of lines this circle is divided into.</p>
 </div>
 <div class="section" id="build-baselines">
 <h3>Build baselines<a class="headerlink" href="#build-baselines" title="Permalink to this headline">¶</a></h3>
-<p>Now we have all the pieces. We can start to actually build the baselines
+<p>Now we have all the pieces. We can start to actually build the baselines.
 The baselines and base points are illustrated in the figure below.
 The point 1 is the rightmost point or starting point;
 the point 71 is leftmost point on the upper half;
@@ -276,6 +276,7 @@ the point 72 is the leftmost point on the lower half (71 and 72 has the same x2 
 the point 141 is the last point before getting back to the starting point.</p>
 <div class="figure align-center" id="fig-uh60a-baselines">
 <a class="reference internal image-reference" href="../../../_images/uh60a_baselines.jpg"><img alt="../../../_images/uh60a_baselines.jpg" src="../../../_images/uh60a_baselines.jpg" style="width: 6in;" /></a>
+<p class="caption"><span class="caption-number">Figure 6 </span><span class="caption-text">Baselines and basepoints definition</span><a class="headerlink" href="#fig-uh60a-baselines" title="Permalink to this image">¶</a></p>
 </div>
 <ol class="arabic">
 <li><p>The upper half of the airfoil</p>
