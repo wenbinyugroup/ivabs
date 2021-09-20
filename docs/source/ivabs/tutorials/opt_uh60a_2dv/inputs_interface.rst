@@ -276,7 +276,8 @@ Complete file
 -------------
 
 .. code-block:: python
-    :caption: The complete script
+    :caption: interface.py
+    :name: code-interface
 
     import json
     import sys

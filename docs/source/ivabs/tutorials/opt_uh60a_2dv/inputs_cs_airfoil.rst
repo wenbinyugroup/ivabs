@@ -19,7 +19,7 @@ The base points file includes arbitrary number of lines. each line includes
 .. code-block::
   :linenos:
 
-  lable x_2 x_3
+  lable a_2 a_3
 
 The label can be any number or just strings. 
 You could assign a meaningful name for important points like intersections and
@@ -27,6 +27,8 @@ assign numbers sequentially for other points.
 The label will be used to reference the points in building the cross section.
 
 .. code-block::
+  :caption: sc1095.dat
+  :name: code-cs_airfoil
   :linenos:
 
   1  0  0
@@ -171,4 +173,5 @@ The label will be used to reference the points in building the cross section.
   140  -0.000813  -0.003219
   141  -0.000102  -0.001117
   142  0  0
+
 

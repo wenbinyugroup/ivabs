@@ -292,6 +292,8 @@ Complete file
 -------------
 
 .. code-block:: none
+    :caption: cs_tm_opt_soga.dakota
+    :name: code-dakota
 
     # ====================================================================
 

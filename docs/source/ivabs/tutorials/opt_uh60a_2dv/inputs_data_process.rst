@@ -166,7 +166,8 @@ Complete file
 -------------
 
 .. code-block:: python
-    :caption: The complete script
+    :caption: data_proc_funcs.py
+    :name: code-data_process
 
     import numpy as np
 
