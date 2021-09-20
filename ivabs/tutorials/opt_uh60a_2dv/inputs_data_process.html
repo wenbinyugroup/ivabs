@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Data Processing Functions (data_proc_funcs.py) &mdash; iVABS 1.4 documentation</title><link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <title>Data Processing Functions (data_proc_funcs.py) &mdash; iVABS 1.4 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/doctools.js"></script>
@@ -48,9 +50,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="PreVABS Documentation" href="../../../prevabs/index.html" />
-    <link rel="prev" title="Interface Arguments (interface_args.json)" href="inputs_arguments.html" /> 
+    <link rel="search" title="Search" href="../../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -71,32 +71,13 @@ commentsRunWhenDOMLoaded(addUtterances);
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">iVABS Quick Start</span></p>
-<ul class="current">
+              <p class="caption" role="heading"><span class="caption-text">iVABS Quick Start</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Download and Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../tutorials.html">Tutorials</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../opt_uh60a_2dv.html">Optimization of A Blade Spar</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="running.html">Running of The Tutorial</a></li>
-<li class="toctree-l3"><a class="reference internal" href="problem.html">Problem Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cs_param.html">Cross-sectional Parameterization and Beam Properties</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt.html">Optimization Formulation</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="inputs.html">Preparation of Input Files</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="inputs_dakota.html">Dakota Input File (<code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.dakota</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="inputs_cs_template.html">Cross-section Main Input Template (<code class="docutils literal notranslate"><span class="pre">design/uh60a_section.xml.tmp</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="inputs_cs_materials.html">Material Database (<code class="docutils literal notranslate"><span class="pre">material_database.xml</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="inputs_cs_airfoil.html">Cross-section Airfoil Data (<code class="docutils literal notranslate"><span class="pre">sc1095.dat</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="inputs_interface.html">Dakota Interface Scripts (<code class="docutils literal notranslate"><span class="pre">interface.py</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="inputs_arguments.html">Interface Arguments (<code class="docutils literal notranslate"><span class="pre">interface_args.json</span></code>)</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Data Processing Functions (<code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">iVABS Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">iVABS Components</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../prevabs/index.html">PreVABS Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../msgpi/index.html">msgpi documentation</a></li>
@@ -116,9 +97,6 @@ commentsRunWhenDOMLoaded(addUtterances);
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../tutorials.html">Tutorials</a> &raquo;</li>
-          <li><a href="../opt_uh60a_2dv.html">Optimization of A Blade Spar</a> &raquo;</li>
-          <li><a href="inputs.html">Preparation of Input Files</a> &raquo;</li>
       <li>Data Processing Functions (<code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code>)</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/wenbinyugroup/ivabs/blob/main/docs/source/ivabs/tutorials/opt_uh60a_2dv/inputs_data_process.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -130,12 +108,12 @@ commentsRunWhenDOMLoaded(addUtterances);
            <div itemprop="articleBody">
              
   <div class="section" id="data-processing-functions-data-proc-funcs-py">
-<span id="sect-input-process"></span><h1>Data Processing Functions (<code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code>)<a class="headerlink" href="#data-processing-functions-data-proc-funcs-py" title="Permalink to this headline">¶</a></h1>
+<span id="sect-input-process"></span><h1>Data Processing Functions (<code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code>)<a class="headerlink" href="#data-processing-functions-data-proc-funcs-py" title="Permalink to this headline"></a></h1>
 <div class="section" id="pre-processing">
-<span id="sect-input-process-pre"></span><h2>Pre-processing<a class="headerlink" href="#pre-processing" title="Permalink to this headline">¶</a></h2>
+<span id="sect-input-process-pre"></span><h2>Pre-processing<a class="headerlink" href="#pre-processing" title="Permalink to this headline"></a></h2>
 <p>As mentioned in the previous two sections, there is one pre-processing function.</p>
 <div class="section" id="function-materialid2name">
-<h3>Function <code class="docutils literal notranslate"><span class="pre">materialId2Name</span></code><a class="headerlink" href="#function-materialid2name" title="Permalink to this headline">¶</a></h3>
+<h3>Function <code class="docutils literal notranslate"><span class="pre">materialId2Name</span></code><a class="headerlink" href="#function-materialid2name" title="Permalink to this headline"></a></h3>
 <p>This function converts a material id to a material name.
 Dakota generates the integer type material id, while preVABS requires the string type material name.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">materialId2Name</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">results</span><span class="p">,</span> <span class="n">interface_args</span><span class="p">):</span>
@@ -159,12 +137,12 @@ Dakota generates the integer type material id, while preVABS requires the string
 </div>
 </div>
 <div class="section" id="post-processing">
-<span id="sect-input-process-post"></span><h2>Post-processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">¶</a></h2>
+<span id="sect-input-process-post"></span><h2>Post-processing<a class="headerlink" href="#post-processing" title="Permalink to this headline"></a></h2>
 <p>There are two post-processing functions.
 One is the overall function that will be called in <code class="docutils literal notranslate"><span class="pre">interface.py</span></code>.
 Another is a specific function that calculates the relative difference between calculated and target beam properties.</p>
 <div class="section" id="function-postprocess">
-<h3>Function <code class="docutils literal notranslate"><span class="pre">postprocess</span></code><a class="headerlink" href="#function-postprocess" title="Permalink to this headline">¶</a></h3>
+<h3>Function <code class="docutils literal notranslate"><span class="pre">postprocess</span></code><a class="headerlink" href="#function-postprocess" title="Permalink to this headline"></a></h3>
 <p>This is the function that manages all post-processing steps.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">postprocess</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">results</span><span class="p">,</span> <span class="n">interface_args</span><span class="p">,</span> <span class="n">cs_inputs</span><span class="p">,</span> <span class="n">cs_outputs</span><span class="p">)</span>
 </pre></div>
@@ -224,7 +202,7 @@ Hence, this value can be simply calculated using the build-in function <code cla
 </div>
 </div>
 <div class="section" id="function-calcreldiff">
-<h3>Function <code class="docutils literal notranslate"><span class="pre">calcRelDiff</span></code><a class="headerlink" href="#function-calcreldiff" title="Permalink to this headline">¶</a></h3>
+<h3>Function <code class="docutils literal notranslate"><span class="pre">calcRelDiff</span></code><a class="headerlink" href="#function-calcreldiff" title="Permalink to this headline"></a></h3>
 <p>This function calculates the relative difference of a specific beam proeprty.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcRelDiff</span><span class="p">(</span><span class="n">response_name</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">results</span><span class="p">,</span> <span class="n">json_args</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 </pre></div>
@@ -263,9 +241,9 @@ Hence, for the target value, we need to add the location of the shear center mea
 </div>
 </div>
 <div class="section" id="complete-file">
-<h2>Complete file<a class="headerlink" href="#complete-file" title="Permalink to this headline">¶</a></h2>
-<div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-number">Listing 3 </span><span class="caption-text">The complete script</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<h2>Complete file<a class="headerlink" href="#complete-file" title="Permalink to this headline"></a></h2>
+<div class="literal-block-wrapper docutils container" id="code-data-process">
+<div class="code-block-caption"><span class="caption-text">data_proc_funcs.py</span><a class="headerlink" href="#code-data-process" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">materialId2Name</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">results</span><span class="p">,</span> <span class="n">interface_args</span><span class="p">):</span>
@@ -336,10 +314,7 @@ Hence, for the target value, we need to add the location of the shear center mea
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="inputs_arguments.html" class="btn btn-neutral float-left" title="Interface Arguments (interface_args.json)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../../../prevabs/index.html" class="btn btn-neutral float-right" title="PreVABS Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

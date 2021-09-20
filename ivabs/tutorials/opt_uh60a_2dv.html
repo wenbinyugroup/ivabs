@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Optimization of A Blade Spar &mdash; iVABS 1.4 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <title>Tutorial &mdash; iVABS 1.4 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
@@ -49,7 +51,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Running of The Tutorial" href="opt_uh60a_2dv/running.html" />
+    <link rel="next" title="PreVABS Documentation" href="../../prevabs/index.html" />
     <link rel="prev" title="Tutorials" href="../tutorials.html" /> 
 </head>
 
@@ -71,23 +73,18 @@ commentsRunWhenDOMLoaded(addUtterances);
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">iVABS Quick Start</span></p>
+              <p class="caption" role="heading"><span class="caption-text">iVABS Quick Start</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Download and Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">Tutorials</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Optimization of A Blade Spar</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/running.html">Running of The Tutorial</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/problem.html">Problem Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/cs_param.html">Cross-sectional Parameterization and Beam Properties</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/opt.html">Optimization Formulation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs.html">Preparation of Input Files</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Tutorial</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">iVABS Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">iVABS Components</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../prevabs/index.html">PreVABS Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../msgpi/index.html">msgpi documentation</a></li>
@@ -108,7 +105,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../tutorials.html">Tutorials</a> &raquo;</li>
-      <li>Optimization of A Blade Spar</li>
+      <li>Tutorial</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/wenbinyugroup/ivabs/blob/main/docs/source/ivabs/tutorials/opt_uh60a_2dv.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -118,80 +115,9 @@ commentsRunWhenDOMLoaded(addUtterances);
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="optimization-of-a-blade-spar">
-<h1>Optimization of A Blade Spar<a class="headerlink" href="#optimization-of-a-blade-spar" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="tutorial">
+<h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline"></a></h1>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="opt_uh60a_2dv/running.html">Running of The Tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="opt_uh60a_2dv/problem.html">Problem Description</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="opt_uh60a_2dv/problem.html#scope-of-the-study">Scope of the study</a></li>
-<li class="toctree-l2"><a class="reference internal" href="opt_uh60a_2dv/problem.html#specifications">Specifications</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="opt_uh60a_2dv/cs_param.html">Cross-sectional Parameterization and Beam Properties</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="opt_uh60a_2dv/cs_param.html#parameterization">Parameterization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="opt_uh60a_2dv/cs_param.html#materials">Materials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="opt_uh60a_2dv/cs_param.html#properties">Properties</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="opt_uh60a_2dv/opt.html">Optimization Formulation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="opt_uh60a_2dv/opt.html#design-variables">Design variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="opt_uh60a_2dv/opt.html#fixed-parameters">Fixed parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="opt_uh60a_2dv/opt.html#objective">Objective</a></li>
-<li class="toctree-l2"><a class="reference internal" href="opt_uh60a_2dv/opt.html#method">Method</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="opt_uh60a_2dv/inputs.html">Preparation of Input Files</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="opt_uh60a_2dv/inputs_dakota.html">Dakota Input File (<code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.dakota</span></code>)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_dakota.html#environment">Environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_dakota.html#method">Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_dakota.html#model">Model</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_dakota.html#variables">Variables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_dakota.html#interface">Interface</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_dakota.html#responses">Responses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_dakota.html#complete-file">Complete file</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="opt_uh60a_2dv/inputs_cs_template.html">Cross-section Main Input Template (<code class="docutils literal notranslate"><span class="pre">design/uh60a_section.xml.tmp</span></code>)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_cs_template.html#initiation">Initiation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_cs_template.html#include-tag">Include tag</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_cs_template.html#analysis-tag">Analysis tag</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_cs_template.html#general-settings">General settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_cs_template.html#basepoints-definition">Basepoints definition</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_cs_template.html#baselines-definition">Baselines definition</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_cs_template.html#the-components-definition">The components definition</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_cs_template.html#complete-file">Complete file</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="opt_uh60a_2dv/inputs_cs_materials.html">Material Database (<code class="docutils literal notranslate"><span class="pre">material_database.xml</span></code>)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="opt_uh60a_2dv/inputs_cs_airfoil.html">Cross-section Airfoil Data (<code class="docutils literal notranslate"><span class="pre">sc1095.dat</span></code>)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="opt_uh60a_2dv/inputs_interface.html">Dakota Interface Scripts (<code class="docutils literal notranslate"><span class="pre">interface.py</span></code>)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_interface.html#data-management">Data management</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_interface.html#step-1-initialization">Step 1: Initialization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_interface.html#step-2-cross-sectional-analysis">Step 2: Cross-sectional analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_interface.html#step-3-post-processing">Step 3: Post-processing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_interface.html#step-4-writing-outputs">Step 4: Writing outputs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_interface.html#exception">Exception</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_interface.html#complete-file">Complete file</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="opt_uh60a_2dv/inputs_arguments.html">Interface Arguments (<code class="docutils literal notranslate"><span class="pre">interface_args.json</span></code>)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_arguments.html#general">General</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_arguments.html#cross-sectional-analysis">Cross-sectional analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_arguments.html#post-processing">Post-processing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_arguments.html#complete-file">Complete file</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="opt_uh60a_2dv/inputs_data_process.html">Data Processing Functions (<code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code>)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_data_process.html#pre-processing">Pre-processing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_data_process.html#post-processing">Post-processing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt_uh60a_2dv/inputs_data_process.html#complete-file">Complete file</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
 </div>
 </div>
 
@@ -200,7 +126,7 @@ commentsRunWhenDOMLoaded(addUtterances);
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../tutorials.html" class="btn btn-neutral float-left" title="Tutorials" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="opt_uh60a_2dv/running.html" class="btn btn-neutral float-right" title="Running of The Tutorial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../../prevabs/index.html" class="btn btn-neutral float-right" title="PreVABS Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

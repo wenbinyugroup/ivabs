@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Channel &mdash; iVABS 1.4 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <title>Channel &mdash; iVABS 1.4 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
@@ -46,7 +48,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -72,13 +74,13 @@ commentsRunWhenDOMLoaded(addUtterances);
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">iVABS Quick Start</span></p>
+              <p class="caption" role="heading"><span class="caption-text">iVABS Quick Start</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/install.html">Download and Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/tutorials.html">Tutorials</a></li>
 </ul>
-<p class="caption"><span class="caption-text">iVABS Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">iVABS Components</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">PreVABS Documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../run.html">How to Run PreVABS</a></li>
@@ -132,29 +134,29 @@ commentsRunWhenDOMLoaded(addUtterances);
            <div itemprop="articleBody">
              
   <div class="section" id="channel">
-<span id="example-channel"></span><h1>Channel<a class="headerlink" href="#channel" title="Permalink to this headline">¶</a></h1>
+<span id="example-channel"></span><h1>Channel<a class="headerlink" href="#channel" title="Permalink to this headline"></a></h1>
 <div class="section" id="problem-description">
-<h2>Problem description<a class="headerlink" href="#problem-description" title="Permalink to this headline">¶</a></h2>
+<h2>Problem description<a class="headerlink" href="#problem-description" title="Permalink to this headline"></a></h2>
 <div class="figure align-center" id="fig-channel0">
 <a class="reference internal image-reference" href="../../_images/ex_channel_0.png"><img alt="../../_images/ex_channel_0.png" src="../../_images/ex_channel_0.png" style="width: 3in;" /></a>
-<p class="caption"><span class="caption-number">Figure 42 </span><span class="caption-text">Cross section of the pipe <a class="reference internal" href="../references.html#chen2010" id="id1"><span>[CHEN2010]</span></a>.</span><a class="headerlink" href="#fig-channel0" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 36 </span><span class="caption-text">Cross section of the pipe <a class="reference internal" href="../references.html#chen2010" id="id1"><span>[CHEN2010]</span></a>.</span><a class="headerlink" href="#fig-channel0" title="Permalink to this image"></a></p>
 </div>
 <p>This example has a cross section of a highly heterogeneous channel.
-This cross section geometry can be defined as shown in <a class="reference internal" href="#fig-channel0"><span class="std std-numref">Fig. 42</span></a> <a class="reference internal" href="../references.html#chen2010" id="id2"><span>[CHEN2010]</span></a>.
-The isotropic material properties are given in <a class="reference internal" href="#table-channel-materials"><span class="std std-numref">Table 31</span></a>.
+This cross section geometry can be defined as shown in <a class="reference internal" href="#fig-channel0"><span class="std std-numref">Fig. 36</span></a> <a class="reference internal" href="../references.html#chen2010" id="id2"><span>[CHEN2010]</span></a>.
+The isotropic material properties are given in <a class="reference internal" href="#table-channel-materials"><span class="std std-numref">Table 21</span></a>.
 The layup is defined having a single layer with the thickness 0.001524 m.
-The result is shown in <a class="reference internal" href="#table-channel-result"><span class="std std-numref">Table 33</span></a> and compared with those in <a class="reference internal" href="../references.html#chen2010" id="id3"><span>[CHEN2010]</span></a>.
+The result is shown in <a class="reference internal" href="#table-channel-result"><span class="std std-numref">Table 23</span></a> and compared with those in <a class="reference internal" href="../references.html#chen2010" id="id3"><span>[CHEN2010]</span></a>.
 Complete input files can be found in <code class="docutils literal notranslate"><span class="pre">examples\ex_channel\</span></code>, including <code class="docutils literal notranslate"><span class="pre">channel.xml</span></code> and <code class="docutils literal notranslate"><span class="pre">materials.xml</span></code>.</p>
 <div class="figure align-center" id="fig-channel1">
 <a class="reference internal image-reference" href="../../_images/ex_channel_1.png"><img alt="../../_images/ex_channel_1.png" src="../../_images/ex_channel_1.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 43 </span><span class="caption-text"><em>Base point</em>s, <em>Base line</em>s and <em>Segment</em>s of the channel cross section.</span><a class="headerlink" href="#fig-channel1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 37 </span><span class="caption-text"><em>Base point</em>s, <em>Base line</em>s and <em>Segment</em>s of the channel cross section.</span><a class="headerlink" href="#fig-channel1" title="Permalink to this image"></a></p>
 </div>
 <div class="figure align-center" id="fig-channel-mesh">
 <a class="reference internal image-reference" href="../../_images/ex_channel_mesh.png"><img alt="../../_images/ex_channel_mesh.png" src="../../_images/ex_channel_mesh.png" style="width: 4in;" /></a>
-<p class="caption"><span class="caption-number">Figure 44 </span><span class="caption-text">Meshed cross section viewed in Gmsh.</span><a class="headerlink" href="#fig-channel-mesh" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 38 </span><span class="caption-text">Meshed cross section viewed in Gmsh.</span><a class="headerlink" href="#fig-channel-mesh" title="Permalink to this image"></a></p>
 </div>
 <table class="docutils align-center" id="table-channel-materials">
-<caption><span class="caption-number">Table 31 </span><span class="caption-text">Material properties</span><a class="headerlink" href="#table-channel-materials" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 21 </span><span class="caption-text">Material properties</span><a class="headerlink" href="#table-channel-materials" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 20%" />
 <col style="width: 20%" />
@@ -186,7 +188,7 @@ Complete input files can be found in <code class="docutils literal notranslate">
 </tbody>
 </table>
 <table class="docutils align-center" id="table-channel-layups">
-<caption><span class="caption-number">Table 32 </span><span class="caption-text">Layups</span><a class="headerlink" href="#table-channel-layups" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 22 </span><span class="caption-text">Layups</span><a class="headerlink" href="#table-channel-layups" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 17%" />
@@ -223,9 +225,9 @@ Complete input files can be found in <code class="docutils literal notranslate">
 </table>
 </div>
 <div class="section" id="result">
-<h2>Result<a class="headerlink" href="#result" title="Permalink to this headline">¶</a></h2>
+<h2>Result<a class="headerlink" href="#result" title="Permalink to this headline"></a></h2>
 <table class="docutils align-default" id="table-channel-result">
-<caption><span class="caption-number">Table 33 </span><span class="caption-text">Results</span><a class="headerlink" href="#table-channel-result" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 23 </span><span class="caption-text">Results</span><a class="headerlink" href="#table-channel-result" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 18%" />
 <col style="width: 12%" />
@@ -280,7 +282,7 @@ Complete input files can be found in <code class="docutils literal notranslate">
 </tbody>
 </table>
 <table class="docutils align-default" id="table-channel-result-ref">
-<caption><span class="caption-number">Table 34 </span><span class="caption-text">Results from reference <a class="reference internal" href="../references.html#chen2010" id="id4"><span>[CHEN2010]</span></a></span><a class="headerlink" href="#table-channel-result-ref" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 24 </span><span class="caption-text">Results from reference <a class="reference internal" href="../references.html#chen2010" id="id4"><span>[CHEN2010]</span></a></span><a class="headerlink" href="#table-channel-result-ref" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 18%" />
 <col style="width: 12%" />

@@ -20,4 +20,15 @@
 
    
    
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~CrossSection.name
+      ~CrossSection.fn_design_tmp
+      ~CrossSection.fn_design_xml
+      ~CrossSection.fn_sg
+      ~CrossSection.sg
+      ~CrossSection.props
+   
    

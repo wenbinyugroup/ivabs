@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dakota Input File (cs_tm_opt_soga.dakota) &mdash; iVABS 1.4 documentation</title><link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <title>Dakota Input File (cs_tm_opt_soga.dakota) &mdash; iVABS 1.4 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/doctools.js"></script>
@@ -48,9 +50,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Cross-section Main Input Template (design/uh60a_section.xml.tmp)" href="inputs_cs_template.html" />
-    <link rel="prev" title="Preparation of Input Files" href="inputs.html" /> 
+    <link rel="search" title="Search" href="../../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -71,32 +71,13 @@ commentsRunWhenDOMLoaded(addUtterances);
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">iVABS Quick Start</span></p>
-<ul class="current">
+              <p class="caption" role="heading"><span class="caption-text">iVABS Quick Start</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Download and Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../tutorials.html">Tutorials</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../opt_uh60a_2dv.html">Optimization of A Blade Spar</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="running.html">Running of The Tutorial</a></li>
-<li class="toctree-l3"><a class="reference internal" href="problem.html">Problem Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cs_param.html">Cross-sectional Parameterization and Beam Properties</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt.html">Optimization Formulation</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="inputs.html">Preparation of Input Files</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Dakota Input File (<code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.dakota</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="inputs_cs_template.html">Cross-section Main Input Template (<code class="docutils literal notranslate"><span class="pre">design/uh60a_section.xml.tmp</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="inputs_cs_materials.html">Material Database (<code class="docutils literal notranslate"><span class="pre">material_database.xml</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="inputs_cs_airfoil.html">Cross-section Airfoil Data (<code class="docutils literal notranslate"><span class="pre">sc1095.dat</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="inputs_interface.html">Dakota Interface Scripts (<code class="docutils literal notranslate"><span class="pre">interface.py</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="inputs_arguments.html">Interface Arguments (<code class="docutils literal notranslate"><span class="pre">interface_args.json</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="inputs_data_process.html">Data Processing Functions (<code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">iVABS Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">iVABS Components</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../prevabs/index.html">PreVABS Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../msgpi/index.html">msgpi documentation</a></li>
@@ -116,9 +97,6 @@ commentsRunWhenDOMLoaded(addUtterances);
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../tutorials.html">Tutorials</a> &raquo;</li>
-          <li><a href="../opt_uh60a_2dv.html">Optimization of A Blade Spar</a> &raquo;</li>
-          <li><a href="inputs.html">Preparation of Input Files</a> &raquo;</li>
       <li>Dakota Input File (<code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.dakota</span></code>)</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/wenbinyugroup/ivabs/blob/main/docs/source/ivabs/tutorials/opt_uh60a_2dv/inputs_dakota.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -130,7 +108,7 @@ commentsRunWhenDOMLoaded(addUtterances);
            <div itemprop="articleBody">
              
   <div class="section" id="dakota-input-file-cs-tm-opt-soga-dakota">
-<span id="sect-input-dakota"></span><h1>Dakota Input File (<code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.dakota</span></code>)<a class="headerlink" href="#dakota-input-file-cs-tm-opt-soga-dakota" title="Permalink to this headline">¶</a></h1>
+<span id="sect-input-dakota"></span><h1>Dakota Input File (<code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.dakota</span></code>)<a class="headerlink" href="#dakota-input-file-cs-tm-opt-soga-dakota" title="Permalink to this headline"></a></h1>
 <p>Dakota inputs are grouped into five sections: environment, method, model, variables, interface and responses.
 The general rule is to use keywords followed by values.
 The alignment of keywords and values are not important.
@@ -140,7 +118,7 @@ The equal sign <code class="docutils literal notranslate"><span class="pre">=</s
 Comments are specified by the character <code class="docutils literal notranslate"><span class="pre">#</span></code>.</p>
 <p>For more details on the input syntax and keywords, please check the Dakota user manual and reference manual.</p>
 <div class="section" id="environment">
-<span id="dakota-input-environment"></span><h2>Environment<a class="headerlink" href="#environment" title="Permalink to this headline">¶</a></h2>
+<span id="dakota-input-environment"></span><h2>Environment<a class="headerlink" href="#environment" title="Permalink to this headline"></a></h2>
 <p>This section starts with the keyword <code class="docutils literal notranslate"><span class="pre">environment</span></code>.
 This section configurs some general settings such as the names of various output files.</p>
 <p>The keyword <code class="docutils literal notranslate"><span class="pre">output_file</span></code> specifies the main output of the optimization.
@@ -166,7 +144,7 @@ This file is given the name <code class="docutils literal notranslate"><span cla
 </div>
 </div>
 <div class="section" id="method">
-<span id="dakota-input-method"></span><h2>Method<a class="headerlink" href="#method" title="Permalink to this headline">¶</a></h2>
+<span id="dakota-input-method"></span><h2>Method<a class="headerlink" href="#method" title="Permalink to this headline"></a></h2>
 <p>This section is specified by the keyword <code class="docutils literal notranslate"><span class="pre">method</span></code> and configures the optimization method.
 As stated earlier, this example will use Genetic Algorithm.
 For this single objective optimization problem, the specific method is SOGA (Single Objective Genetic Algorithm) and the corresponding keyword is <code class="docutils literal notranslate"><span class="pre">soga</span></code>:</p>
@@ -204,7 +182,7 @@ The inputs are:</p>
 <p>For other settings that are not mentioned here, readers can go to the Dakota reference manual for their detailed usage and default values.</p>
 </div>
 <div class="section" id="model">
-<span id="dakota-input-model"></span><h2>Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h2>
+<span id="dakota-input-model"></span><h2>Model<a class="headerlink" href="#model" title="Permalink to this headline"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">model</span></code> section configures how variables are mapped into responses.
 This example uses the default and simplest model: <code class="docutils literal notranslate"><span class="pre">single</span></code>, where variables are mapped to responses through the process specified in <code class="docutils literal notranslate"><span class="pre">interface</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">model</span>
@@ -213,7 +191,7 @@ This example uses the default and simplest model: <code class="docutils literal 
 </div>
 </div>
 <div class="section" id="variables">
-<span id="dakota-input-variables"></span><h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<span id="dakota-input-variables"></span><h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline"></a></h2>
 <p>This section specifies variables in this optimization problem, using the keyword <code class="docutils literal notranslate"><span class="pre">variables</span></code>.
 Following the terminology of Dakota, variables in this example can be grouped into two types, design variables and state variables.
 Design variables are those that will be changed in each iteration, while state variables are those that will be fixed in an optimization study.</p>
@@ -263,7 +241,7 @@ There are eight real-type state variables:</p>
 </div>
 </div>
 <div class="section" id="interface">
-<span id="dakota-input-interface"></span><h2>Interface<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h2>
+<span id="dakota-input-interface"></span><h2>Interface<a class="headerlink" href="#interface" title="Permalink to this headline"></a></h2>
 <p>This section specifies how Dakota should run and change data with the analysis.
 The keyword is <code class="docutils literal notranslate"><span class="pre">interface</span></code>.
 The command used to call the analysis is specified by the keyword <code class="docutils literal notranslate"><span class="pre">analysis_driver</span></code>.
@@ -302,7 +280,7 @@ This is specified as:</p>
 </div>
 <p>In this example, the following six files are needed:</p>
 <ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">design/uh60a_section.xml.tmp</span></code> (see Section: <a class="reference internal" href="inputs_cs_template.html#sect-input-template"><span class="std std-ref">Cross-section Main Input Template (design/uh60a_section.xml.tmp)</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">design/uh60a_section.xml.tmp</span></code> (see Section: <a class="reference internal" href="inputs_cs_template.html#sect-input-template"><span class="std std-ref">Cross-section Main Input Template (uh60a_section.xml.tmp)</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">design/material_database.xml</span></code> (see Section: <a class="reference internal" href="inputs_cs_materials.html#sect-input-material"><span class="std std-ref">Material Database (material_database.xml)</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">design/sc1095.dat</span></code> (see Section: <a class="reference internal" href="inputs_cs_airfoil.html#sect-input-airfoil"><span class="std std-ref">Cross-section Airfoil Data (sc1095.dat)</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">interface.py</span></code> (see Section: <a class="reference internal" href="inputs_interface.html#sect-input-interface"><span class="std std-ref">Dakota Interface Scripts (interface.py)</span></a>)</p></li>
@@ -317,7 +295,7 @@ This is specified as:</p>
 </div>
 </div>
 <div class="section" id="responses">
-<span id="dakota-input-responses"></span><h2>Responses<a class="headerlink" href="#responses" title="Permalink to this headline">¶</a></h2>
+<span id="dakota-input-responses"></span><h2>Responses<a class="headerlink" href="#responses" title="Permalink to this headline"></a></h2>
 <p>This section specifies the responses sent pack to Dakota from the analysis driver, including objectives and constraints.
 Based on the optimization formulation in Section: <a class="reference internal" href="opt.html#opt"><span class="std std-ref">Optimization Formulation</span></a>, Dakota will read two responses from the result file, one objective and one constraint:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">responses</span>
@@ -338,7 +316,9 @@ Based on the optimization formulation in Section: <a class="reference internal" 
 <p>Since the optimization method is Genetic Algorithm, there is no gradient and hessian results returned to Dakota.</p>
 </div>
 <div class="section" id="complete-file">
-<h2>Complete file<a class="headerlink" href="#complete-file" title="Permalink to this headline">¶</a></h2>
+<h2>Complete file<a class="headerlink" href="#complete-file" title="Permalink to this headline"></a></h2>
+<div class="literal-block-wrapper docutils container" id="code-dakota">
+<div class="code-block-caption"><span class="caption-text">cs_tm_opt_soga.dakota</span><a class="headerlink" href="#code-dakota" title="Permalink to this code"></a></div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span># ====================================================================
 
 environment
@@ -442,14 +422,12 @@ responses
 </div>
 </div>
 </div>
+</div>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="inputs.html" class="btn btn-neutral float-left" title="Preparation of Input Files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="inputs_cs_template.html" class="btn btn-neutral float-right" title="Cross-section Main Input Template (design/uh60a_section.xml.tmp)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

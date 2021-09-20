@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Methods &mdash; iVABS 1.4 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <title>Methods &mdash; iVABS 1.4 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -71,13 +73,13 @@ commentsRunWhenDOMLoaded(addUtterances);
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">iVABS Quick Start</span></p>
+              <p class="caption" role="heading"><span class="caption-text">iVABS Quick Start</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../ivabs/install.html">Download and Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ivabs/examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ivabs/tutorials.html">Tutorials</a></li>
 </ul>
-<p class="caption"><span class="caption-text">iVABS Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">iVABS Components</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../prevabs/index.html">PreVABS Documentation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">msgpi documentation</a><ul class="current">
@@ -129,14 +131,14 @@ commentsRunWhenDOMLoaded(addUtterances);
            <div itemprop="articleBody">
              
   <div class="section" id="methods">
-<h1>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h1>
+<h1>Methods<a class="headerlink" href="#methods" title="Permalink to this headline"></a></h1>
 <div class="section" id="input-output">
-<h2>Input/Output<a class="headerlink" href="#input-output" title="Permalink to this headline">¶</a></h2>
+<h2>Input/Output<a class="headerlink" href="#input-output" title="Permalink to this headline"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">msgpi.io</span>
 </pre></div>
 </div>
 <div class="section" id="reading">
-<h3>Reading<a class="headerlink" href="#reading" title="Permalink to this headline">¶</a></h3>
+<h3>Reading<a class="headerlink" href="#reading" title="Permalink to this headline"></a></h3>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -158,7 +160,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <tr class="row-odd"><td><p><a class="reference internal" href="_autogen/io/msgpi.io.iosc.readSCIn.html#msgpi.io.iosc.readSCIn" title="msgpi.io.iosc.readSCIn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iosc.readSCIn</span></code></a>(fn_sg, smdim)</p></td>
 <td><p>Read data from the SwiftComp input file</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autogen/io/msgpi.io.iosc.readSCOut.html#msgpi.io.iosc.readSCOut" title="msgpi.io.iosc.readSCOut"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iosc.readSCOut</span></code></a>(fn_in, smdim[, analysis, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autogen/io/msgpi.io.iosc.readSCOut.html#msgpi.io.iosc.readSCOut" title="msgpi.io.iosc.readSCOut"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iosc.readSCOut</span></code></a>(fn_in, smdim[, analysis, ...])</p></td>
 <td><p>Read SwiftComp outputs.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autogen/io/msgpi.io.iosc.readSCOutBeamProperty.html#msgpi.io.iosc.readSCOutBeamProperty" title="msgpi.io.iosc.readSCOutBeamProperty"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iosc.readSCOutBeamProperty</span></code></a>(fn[, scrnout, logger])</p></td>
@@ -167,14 +169,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 <tr class="row-even"><td><p><a class="reference internal" href="_autogen/io/msgpi.io.iosc.readSCOutHomo.html#msgpi.io.iosc.readSCOutHomo" title="msgpi.io.iosc.readSCOutHomo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iosc.readSCOutHomo</span></code></a>(fn, smdim[, scrnout, logger])</p></td>
 <td><p>Read SwiftComp homogenization results.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autogen/io/msgpi.io.iosc.readSCOutFailure.html#msgpi.io.iosc.readSCOutFailure" title="msgpi.io.iosc.readSCOutFailure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iosc.readSCOutFailure</span></code></a>(fn_sc_out_fi, …)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autogen/io/msgpi.io.iosc.readSCOutFailure.html#msgpi.io.iosc.readSCOutFailure" title="msgpi.io.iosc.readSCOutFailure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iosc.readSCOutFailure</span></code></a>(fn_sc_out_fi, ...)</p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="writing">
-<h3>Writing<a class="headerlink" href="#writing" title="Permalink to this headline">¶</a></h3>
+<h3>Writing<a class="headerlink" href="#writing" title="Permalink to this headline"></a></h3>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -190,7 +192,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <tr class="row-odd"><td><p><a class="reference internal" href="_autogen/io/msgpi.io.iovabs.writeVABSElements.html#msgpi.io.iovabs.writeVABSElements" title="msgpi.io.iovabs.writeVABSElements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iovabs.writeVABSElements</span></code></a>(sg, fobj, sfi)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autogen/io/msgpi.io.iovabs.writeVABSElementOrientations.html#msgpi.io.iovabs.writeVABSElementOrientations" title="msgpi.io.iovabs.writeVABSElementOrientations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iovabs.writeVABSElementOrientations</span></code></a>(sg, …)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autogen/io/msgpi.io.iovabs.writeVABSElementOrientations.html#msgpi.io.iovabs.writeVABSElementOrientations" title="msgpi.io.iovabs.writeVABSElementOrientations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iovabs.writeVABSElementOrientations</span></code></a>(sg, ...)</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autogen/io/msgpi.io.iovabs.writeVABSMOCombos.html#msgpi.io.iovabs.writeVABSMOCombos" title="msgpi.io.iovabs.writeVABSMOCombos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iovabs.writeVABSMOCombos</span></code></a>(sg, fobj, sfi, sff)</p></td>
@@ -208,7 +210,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <tr class="row-odd"><td><p><a class="reference internal" href="_autogen/io/msgpi.io.iosc.writeSCElements.html#msgpi.io.iosc.writeSCElements" title="msgpi.io.iosc.writeSCElements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iosc.writeSCElements</span></code></a>(sg, fobj, sfi)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autogen/io/msgpi.io.iosc.writeSCElementOrientations.html#msgpi.io.iosc.writeSCElementOrientations" title="msgpi.io.iosc.writeSCElementOrientations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iosc.writeSCElementOrientations</span></code></a>(sg, fobj, …)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autogen/io/msgpi.io.iosc.writeSCElementOrientations.html#msgpi.io.iosc.writeSCElementOrientations" title="msgpi.io.iosc.writeSCElementOrientations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iosc.writeSCElementOrientations</span></code></a>(sg, fobj, ...)</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autogen/io/msgpi.io.iosc.writeSCMOCombos.html#msgpi.io.iosc.writeSCMOCombos" title="msgpi.io.iosc.writeSCMOCombos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iosc.writeSCMOCombos</span></code></a>(sg, fobj, sfi, sff)</p></td>
@@ -234,7 +236,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="section" id="preprocessing">
-<h2>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline">¶</a></h2>
+<h2>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">msgpi.presg</span>
 </pre></div>
 </div>
@@ -250,14 +252,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 <tr class="row-even"><td><p><a class="reference internal" href="_autogen/presg/msgpi.presg.preSG1D.html#msgpi.presg.preSG1D" title="msgpi.presg.preSG1D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">preSG1D</span></code></a>(xr_sg, smdim)</p></td>
 <td><p>Preprocessor of 1D SG.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autogen/presg/msgpi.presg.preSG.html#msgpi.presg.preSG" title="msgpi.presg.preSG"><code class="xref py py-obj docutils literal notranslate"><span class="pre">preSG</span></code></a>(sg_xml, analysis[, ppcmd, solver, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autogen/presg/msgpi.presg.preSG.html#msgpi.presg.preSG" title="msgpi.presg.preSG"><code class="xref py py-obj docutils literal notranslate"><span class="pre">preSG</span></code></a>(sg_xml, analysis[, ppcmd, solver, ...])</p></td>
 <td><p>Preprocessor of a structure gene.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="analysis">
-<h2>Analysis<a class="headerlink" href="#analysis" title="Permalink to this headline">¶</a></h2>
+<h2>Analysis<a class="headerlink" href="#analysis" title="Permalink to this headline"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">msgpi.analysis</span>
 </pre></div>
 </div>
@@ -267,16 +269,16 @@ commentsRunWhenDOMLoaded(addUtterances);
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autogen/analysis/msgpi.analysis.solve.html#msgpi.analysis.solve" title="msgpi.analysis.solve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">solve</span></code></a>(sg_xml, analysis, ppcmd, solver[, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autogen/analysis/msgpi.analysis.solve.html#msgpi.analysis.solve" title="msgpi.analysis.solve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">solve</span></code></a>(sg_xml, analysis, ppcmd, solver[, ...])</p></td>
 <td><p>Solve</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autogen/analysis/msgpi.analysis.run.html#msgpi.analysis.run" title="msgpi.analysis.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(command, input_name, analysis[, smdim, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autogen/analysis/msgpi.analysis.run.html#msgpi.analysis.run" title="msgpi.analysis.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(command, input_name, analysis[, smdim, ...])</p></td>
 <td><p>Run codes.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autogen/analysis/msgpi.analysis.runVABS.html#msgpi.analysis.runVABS" title="msgpi.analysis.runVABS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">runVABS</span></code></a>(command, input_name, analysis[, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autogen/analysis/msgpi.analysis.runVABS.html#msgpi.analysis.runVABS" title="msgpi.analysis.runVABS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">runVABS</span></code></a>(command, input_name, analysis[, ...])</p></td>
 <td><p>Run VABS.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autogen/analysis/msgpi.analysis.runSwiftComp.html#msgpi.analysis.runSwiftComp" title="msgpi.analysis.runSwiftComp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">runSwiftComp</span></code></a>(command, input_name, analysis, …)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autogen/analysis/msgpi.analysis.runSwiftComp.html#msgpi.analysis.runSwiftComp" title="msgpi.analysis.runSwiftComp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">runSwiftComp</span></code></a>(command, input_name, analysis, ...)</p></td>
 <td><p>Run SwiftComp.</p></td>
 </tr>
 </tbody>

@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Example 3: Optimization of a Cross-section using Dakota &mdash; iVABS 1.4 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <title>Example 3: Optimization of a Cross-section using Dakota &mdash; iVABS 1.4 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
@@ -46,7 +48,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -72,7 +74,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">iVABS Quick Start</span></p>
+              <p class="caption" role="heading"><span class="caption-text">iVABS Quick Start</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Download and Installation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../examples.html">Examples</a><ul class="current">
@@ -99,7 +101,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
 </ul>
-<p class="caption"><span class="caption-text">iVABS Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">iVABS Components</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../prevabs/index.html">PreVABS Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../msgpi/index.html">msgpi documentation</a></li>
@@ -131,14 +133,14 @@ commentsRunWhenDOMLoaded(addUtterances);
            <div itemprop="articleBody">
              
   <div class="section" id="example-3-optimization-of-a-cross-section-using-dakota">
-<span id="example-ivabs-opt"></span><h1>Example 3: Optimization of a Cross-section using Dakota<a class="headerlink" href="#example-3-optimization-of-a-cross-section-using-dakota" title="Permalink to this headline">¶</a></h1>
+<span id="example-ivabs-opt"></span><h1>Example 3: Optimization of a Cross-section using Dakota<a class="headerlink" href="#example-3-optimization-of-a-cross-section-using-dakota" title="Permalink to this headline"></a></h1>
 <p>This example demonstrates the capability of optimization using the integrated toolset: iVABS within the Dakota framework.</p>
 <div class="section" id="problem-description">
-<h2>Problem description<a class="headerlink" href="#problem-description" title="Permalink to this headline">¶</a></h2>
+<h2>Problem description<a class="headerlink" href="#problem-description" title="Permalink to this headline"></a></h2>
 <p>The example problem is to design the composite structure of a helicopter rotor blade for some desired beam properties, which could be given from an old design or requirements of rotor simulation.</p>
 <p>The target beam properties are listed in the table below.</p>
 <table class="docutils align-center" id="id1">
-<caption><span class="caption-number">Table 1 </span><span class="caption-text">Target beam properties</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Target beam properties</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 25%" />
 <col style="width: 25%" />
@@ -187,13 +189,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </table>
 </div>
 <div class="section" id="optimization-setup">
-<h2>Optimization setup<a class="headerlink" href="#optimization-setup" title="Permalink to this headline">¶</a></h2>
+<h2>Optimization setup<a class="headerlink" href="#optimization-setup" title="Permalink to this headline"></a></h2>
 <div class="section" id="design-variables">
-<h3>Design variables<a class="headerlink" href="#design-variables" title="Permalink to this headline">¶</a></h3>
+<h3>Design variables<a class="headerlink" href="#design-variables" title="Permalink to this headline"></a></h3>
 <p>This example considers a specific spar design, which is a box beam.
 Since the spar is the main load-bearing component, the geometry and layup are considered as the design variables, which are listed in the table below.</p>
 <table class="docutils align-center" id="id2">
-<caption><span class="caption-number">Table 2 </span><span class="caption-text">Design variables</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">Design variables</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -237,18 +239,18 @@ Since the spar is the main load-bearing component, the geometry and layup are co
 </div>
 </div>
 <div class="section" id="objective-function">
-<h3>Objective function<a class="headerlink" href="#objective-function" title="Permalink to this headline">¶</a></h3>
+<h3>Objective function<a class="headerlink" href="#objective-function" title="Permalink to this headline"></a></h3>
 <p>To match the target beam properties, this example uses the min-max method, i.e., to minimize the maximum absolute value among the six differences of the calculated properties from the targets:</p>
 <div class="math notranslate nohighlight" id="equation-eq-ivabs-ex-opt-obj">
-<span class="eqno">(1)<a class="headerlink" href="#equation-eq-ivabs-ex-opt-obj" title="Permalink to this equation">¶</a></span>\[\mathrm{minimize} \quad \max \left\{ \left| \frac{d_i - \hat{d_i}}{\hat{d_i}} \right|,\ i = 1\ \mathrm{to}\ 6 \right\}\]</div>
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq-ivabs-ex-opt-obj" title="Permalink to this equation"></a></span>\[\mathrm{minimize} \quad \max \left\{ \left| \frac{d_i - \hat{d_i}}{\hat{d_i}} \right|,\ i = 1\ \mathrm{to}\ 6 \right\}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\hat{(\cdot)}\)</span> is the target value, and <span class="math notranslate nohighlight">\(d_1\)</span> to <span class="math notranslate nohighlight">\(d_6\)</span> are the six beam properties listed in the table above, respectively.</p>
 </div>
 <div class="section" id="constraints">
-<h3>Constraints<a class="headerlink" href="#constraints" title="Permalink to this headline">¶</a></h3>
+<h3>Constraints<a class="headerlink" href="#constraints" title="Permalink to this headline"></a></h3>
 <p>No other constraints are considered in this example beside the boundary constraints of design variables.</p>
 </div>
 <div class="section" id="method">
-<h3>Method<a class="headerlink" href="#method" title="Permalink to this headline">¶</a></h3>
+<h3>Method<a class="headerlink" href="#method" title="Permalink to this headline"></a></h3>
 <p>SOGA (single objective genetic algorithm) provided by Dakota is used.
 Method settings are:</p>
 <ul class="simple">
@@ -267,7 +269,7 @@ Method settings are:</p>
 </div>
 </div>
 <div class="section" id="running-of-the-example">
-<h2>Running of the example<a class="headerlink" href="#running-of-the-example" title="Permalink to this headline">¶</a></h2>
+<h2>Running of the example<a class="headerlink" href="#running-of-the-example" title="Permalink to this headline"></a></h2>
 <ol class="arabic simple">
 <li><p>Go to <code class="docutils literal notranslate"><span class="pre">{IVABS_ROOT}\examples\ex_uh60a_cs_opt</span></code>.</p></li>
 <li><p>Open a command prompt.</p></li>
@@ -275,19 +277,19 @@ Method settings are:</p>
 </ol>
 </div>
 <div class="section" id="results">
-<h2>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
+<h2>Results<a class="headerlink" href="#results" title="Permalink to this headline"></a></h2>
 <p>Total number of functional evaluations and running time can be found at the end of the file <code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga_{PLATFORM}.out</span></code>.</p>
 <p>Evolution results can be found in files <code class="docutils literal notranslate"><span class="pre">population_i.dat</span></code>, where <code class="docutils literal notranslate"><span class="pre">i</span></code> is the generation number.</p>
 <p>Final design result can be found in the file <code class="docutils literal notranslate"><span class="pre">finaldata1.dat</span></code>, which contains design variables, responses (objective and constraints) of the optimum desgin.</p>
 <div class="section" id="evoluation">
-<h3>Evoluation<a class="headerlink" href="#evoluation" title="Permalink to this headline">¶</a></h3>
+<h3>Evoluation<a class="headerlink" href="#evoluation" title="Permalink to this headline"></a></h3>
 <p>The optimization process stops when reaching the convergence condition.
 The total number of functional evaluation is 15,060.</p>
 </div>
 <div class="section" id="final-design">
-<h3>Final design<a class="headerlink" href="#final-design" title="Permalink to this headline">¶</a></h3>
+<h3>Final design<a class="headerlink" href="#final-design" title="Permalink to this headline"></a></h3>
 <table class="docutils align-center" id="id3">
-<caption><span class="caption-number">Table 3 </span><span class="caption-text">Final design</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 3 </span><span class="caption-text">Final design</span><a class="headerlink" href="#id3" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -327,7 +329,7 @@ The total number of functional evaluation is 15,060.</p>
 </tbody>
 </table>
 <table class="docutils align-center" id="id4">
-<caption><span class="caption-number">Table 4 </span><span class="caption-text">Comparison of final and target beam properties</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 4 </span><span class="caption-text">Comparison of final and target beam properties</span><a class="headerlink" href="#id4" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 14%" />

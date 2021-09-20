@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cross-sectional Parameterization and Beam Properties &mdash; iVABS 1.4 documentation</title><link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <title>Cross-sectional Parameterization and Beam Properties &mdash; iVABS 1.4 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/doctools.js"></script>
@@ -46,12 +48,10 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Optimization Formulation" href="opt.html" />
-    <link rel="prev" title="Problem Description" href="problem.html" /> 
+    <link rel="search" title="Search" href="../../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -72,28 +72,13 @@ commentsRunWhenDOMLoaded(addUtterances);
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">iVABS Quick Start</span></p>
-<ul class="current">
+              <p class="caption" role="heading"><span class="caption-text">iVABS Quick Start</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Download and Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../tutorials.html">Tutorials</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../opt_uh60a_2dv.html">Optimization of A Blade Spar</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="running.html">Running of The Tutorial</a></li>
-<li class="toctree-l3"><a class="reference internal" href="problem.html">Problem Description</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Cross-sectional Parameterization and Beam Properties</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#parameterization">Parameterization</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#materials">Materials</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#properties">Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
 </ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="opt.html">Optimization Formulation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="inputs.html">Preparation of Input Files</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">iVABS Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">iVABS Components</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../prevabs/index.html">PreVABS Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../msgpi/index.html">msgpi documentation</a></li>
@@ -113,8 +98,6 @@ commentsRunWhenDOMLoaded(addUtterances);
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../tutorials.html">Tutorials</a> &raquo;</li>
-          <li><a href="../opt_uh60a_2dv.html">Optimization of A Blade Spar</a> &raquo;</li>
       <li>Cross-sectional Parameterization and Beam Properties</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/wenbinyugroup/ivabs/blob/main/docs/source/ivabs/tutorials/opt_uh60a_2dv/cs_param.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -126,36 +109,142 @@ commentsRunWhenDOMLoaded(addUtterances);
            <div itemprop="articleBody">
              
   <div class="section" id="cross-sectional-parameterization-and-beam-properties">
-<span id="sect-cs-param"></span><h1>Cross-sectional Parameterization and Beam Properties<a class="headerlink" href="#cross-sectional-parameterization-and-beam-properties" title="Permalink to this headline">¶</a></h1>
-<p>The cross-section is comprised of the following components: box spar, cap, overwrap, fillings and non-structural mass, as shown in <a class="reference internal" href="#fig-cs-comp"><span class="std std-numref">Fig. 2</span></a>.</p>
+<span id="sect-cs-param"></span><h1>Cross-sectional Parameterization and Beam Properties<a class="headerlink" href="#cross-sectional-parameterization-and-beam-properties" title="Permalink to this headline"></a></h1>
+<p>The cross-section is comprised of the following components: box spar, front laminate, back laminate, front filling, back filling and non-structural mass, as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code>.</p>
 <div class="figure align-center" id="fig-cs-comp">
 <img alt="../../../_images/cs_comp.png" src="../../../_images/cs_comp.png" />
-<p class="caption"><span class="caption-number">Figure 2 </span><span class="caption-text">Components of the cross-section.</span><a class="headerlink" href="#fig-cs-comp" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Components of the cross-section.</span><a class="headerlink" href="#fig-cs-comp" title="Permalink to this image"></a></p>
 </div>
 <div class="section" id="parameterization">
-<h2>Parameterization<a class="headerlink" href="#parameterization" title="Permalink to this headline">¶</a></h2>
+<h2>Parameterization<a class="headerlink" href="#parameterization" title="Permalink to this headline"></a></h2>
 <p>Parameters can be in general grouped into two sets, geometry related and layup related.</p>
-<p>In this example, four geometric parameters are defined in the non-dimensional frame where the chord length is 1, as shown in <a class="reference internal" href="#fig-cs-param-geo"><span class="std std-numref">Fig. 3</span></a>.
+<div class="section" id="geometry">
+<h3>Geometry<a class="headerlink" href="#geometry" title="Permalink to this headline"></a></h3>
+<p>In this example, four geometric parameters are defined in the non-dimensional frame where the chord length is 1, as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code>.
 The origin of this frame is placed at the leading edge.
 The size and location of the box spar are defined by the two parameters <span class="math notranslate nohighlight">\(a_2^{wl}\)</span> and <span class="math notranslate nohighlight">\(a_2^{wt}\)</span>, which are in fact the horizontal coordinates of the leading and trailing webs, respectively.
 The non-structural mass is assumed to be a circular object in this example.
 Hence, the three parameters defining the size and location are the horizontal coordinate <span class="math notranslate nohighlight">\(a_2^{nsm}\)</span> and vertical coordinate <span class="math notranslate nohighlight">\(a_3^{nsm}\)</span> of the center, and the radius <span class="math notranslate nohighlight">\(r^{nsm}\)</span>.</p>
 <div class="figure align-center" id="fig-cs-param-geo">
 <img alt="../../../_images/cs_param_geo.png" src="../../../_images/cs_param_geo.png" />
-<p class="caption"><span class="caption-number">Figure 3 </span><span class="caption-text">Parameters for the geometry in the non-dimensional frame, where the chord length is 1.</span><a class="headerlink" href="#fig-cs-param-geo" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Parameters for the geometry in the non-dimensional frame, where the chord length is 1.</span><a class="headerlink" href="#fig-cs-param-geo" title="Permalink to this image"></a></p>
 </div>
+</div>
+<div class="section" id="layup">
+<h3>Layup<a class="headerlink" href="#layup" title="Permalink to this headline"></a></h3>
 <p>Layup related parameters are used to define materials (<span class="math notranslate nohighlight">\(l\)</span>), fiber angles (<span class="math notranslate nohighlight">\(\theta\)</span>) and numbers of plies (<span class="math notranslate nohighlight">\(n\)</span>) for the laminates of box spar, cap and overwrap.
 In this example, the box spar laminate is assumed to have four layers.
 All four layers have the same material (<span class="math notranslate nohighlight">\(l^s\)</span>), but can have different fiber angles (<span class="math notranslate nohighlight">\(\theta_1^s, \theta_2^s, \theta_3^s, \theta_4^s\)</span>) and numbers of plies (<span class="math notranslate nohighlight">\(n_1^s, n_2^s, n_3^s, n_4^s\)</span>).
 The cap laminate is assumed to have a single layer with three parameters: <span class="math notranslate nohighlight">\(l^c, \theta^c, n^c\)</span>.
 The overwrap laminate is also assumed having a single layer with three parameters: <span class="math notranslate nohighlight">\(l^o, \theta^o, n^o\)</span>.</p>
-<div class="figure align-center" id="fig-cs-param-layup">
-<img alt="../../../_images/cs_param_layup.png" src="../../../_images/cs_param_layup.png" />
-<p class="caption"><span class="caption-number">Figure 4 </span><span class="caption-text">Layups for the three components: cap, box and overwrap.</span><a class="headerlink" href="#fig-cs-param-layup" title="Permalink to this image">¶</a></p>
-</div>
-<p>A summary of the parameters is listed in <a class="reference internal" href="#tab-params"><span class="std std-numref">Table 6</span></a>.</p>
+<p>The overall layup design of the three lamiante components are listed in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Table</span> <span class="pre">%s</span></code>, <code class="xref std std-numref docutils literal notranslate"><span class="pre">Table</span> <span class="pre">%s</span></code> and <code class="xref std std-numref docutils literal notranslate"><span class="pre">Table</span> <span class="pre">%s</span></code>.</p>
+<table class="docutils align-center" id="tab-layup-box">
+<caption><span class="caption-text">Layup of the box spar laminate</span><a class="headerlink" href="#tab-layup-box" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Layer</p></th>
+<th class="head"><p>Lamina</p></th>
+<th class="head"><p>Fiber angle [deg]</p></th>
+<th class="head"><p>Ply count</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Base</p></td>
+<td><p>T300 15k/976</p></td>
+<td><p>0</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p><span class="math notranslate nohighlight">\(l^s\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\theta^s_1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(n^s_1\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p><span class="math notranslate nohighlight">\(l^s\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\theta^s_2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(n^s_2\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p><span class="math notranslate nohighlight">\(l^s\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\theta^s_3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(n^s_3\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p><span class="math notranslate nohighlight">\(l^s\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\theta^s_4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(n^s_4\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-center" id="tab-layup-front">
+<caption><span class="caption-text">Layup of the front laminate</span><a class="headerlink" href="#tab-layup-front" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Layer</p></th>
+<th class="head"><p>Lamina</p></th>
+<th class="head"><p>Fiber angle [deg]</p></th>
+<th class="head"><p>Ply count</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Cap</p></td>
+<td><p>Aluminum 8009</p></td>
+<td><p>0</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Base</p></td>
+<td><p>T300 15k/976</p></td>
+<td><p>0</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p><span class="math notranslate nohighlight">\(l^f\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\theta^f\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(n^f\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-center" id="tab-layup-back">
+<caption><span class="caption-text">Layup of the back laminate</span><a class="headerlink" href="#tab-layup-back" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Layer</p></th>
+<th class="head"><p>Lamina</p></th>
+<th class="head"><p>Fiber angle [deg]</p></th>
+<th class="head"><p>Ply count</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Base</p></td>
+<td><p>T300 15k/976</p></td>
+<td><p>0</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p><span class="math notranslate nohighlight">\(l^b\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\theta^b\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(n^b\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>A summary of the parameters is listed in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Table</span> <span class="pre">%s</span></code>.</p>
 <table class="docutils align-center" id="tab-params">
-<caption><span class="caption-number">Table 6 </span><span class="caption-text">Summary of parameters</span><a class="headerlink" href="#tab-params" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-text">Summary of parameters</span><a class="headerlink" href="#tab-params" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -163,7 +252,7 @@ The overwrap laminate is also assumed having a single layer with three parameter
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Symbol</p></th>
-<th class="head"><p>Label</p></th>
+<th class="head"><p>Name in input files</p></th>
 <th class="head"><p>Description</p></th>
 </tr>
 </thead>
@@ -252,13 +341,13 @@ The overwrap laminate is also assumed having a single layer with three parameter
 </table>
 <p>Some other parameters used are listed below:</p>
 <table class="docutils align-center" id="tab-params-others">
-<caption><span class="caption-number">Table 7 </span><span class="caption-text">Summary of other parameters</span><a class="headerlink" href="#tab-params-others" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-text">Summary of other parameters</span><a class="headerlink" href="#tab-params-others" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>Label</p></th>
+<tr class="row-odd"><th class="head"><p>Name in input files</p></th>
 <th class="head"><p>Description</p></th>
 </tr>
 </thead>
@@ -266,22 +355,26 @@ The overwrap laminate is also assumed having a single layer with three parameter
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">chord</span></code></p></td>
 <td><p>Chord length of the cross-section</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pfte2_a2</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">oa2</span></code></p></td>
+<td><p>Non-dimensional horizontal coordinate of the origin of the frame <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> used in VABS.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pfte2_a2</span></code></p></td>
 <td><p>Non-dimensional location of point marking the coarse meshes in the filling region</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mesh_size</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mesh_size</span></code></p></td>
 <td><p>Global mesh size</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mesh_size_fill</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mesh_size_fill</span></code></p></td>
 <td><p>Mesh size for the filling regions</p></td>
 </tr>
 </tbody>
 </table>
 </div>
+</div>
 <div class="section" id="materials">
-<h2>Materials<a class="headerlink" href="#materials" title="Permalink to this headline">¶</a></h2>
-<p>Materials used in this example are summarized in <a class="reference internal" href="#tab-materials"><span class="std std-numref">Table 8</span></a>.
-Lamina thickness is given in <a class="reference internal" href="#tab-thickness"><span class="std std-numref">Table 9</span></a>.
+<h2>Materials<a class="headerlink" href="#materials" title="Permalink to this headline"></a></h2>
+<p>Materials used in this example are summarized in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Table</span> <span class="pre">%s</span></code>.
+Lamina thickness is given in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Table</span> <span class="pre">%s</span></code>.
 ‘Aluminum 80009’ is used as the outermost layer of the cap.
 ‘Lead’ is used for the non-structural mass.
 ‘Rohacell 70’ is used at the leading filling region.
@@ -289,24 +382,22 @@ Lamina thickness is given in <a class="reference internal" href="#tab-thickness"
 ‘T300 15k/976’ is used as the base layer for the spar, cap and overwrap, to prevent zero layers during the optimization.
 The last four rows in the table are the candidate materials for the layup design of the three components.</p>
 <table class="docutils align-center" id="tab-materials">
-<caption><span class="caption-number">Table 8 </span><span class="caption-text">Material properties</span><a class="headerlink" href="#tab-materials" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-text">Material properties</span><a class="headerlink" href="#tab-materials" title="Permalink to this table"></a></caption>
 <colgroup>
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Material</p></th>
-<th class="head"><p>Type</p></th>
 <th class="head"><p>Density</p></th>
 <th class="head"><p><span class="math notranslate nohighlight">\(E_1\)</span></p></th>
 <th class="head"><p><span class="math notranslate nohighlight">\(E_2\)</span></p></th>
@@ -321,7 +412,6 @@ The last four rows in the table are the candidate materials for the layup design
 </thead>
 <tbody>
 <tr class="row-even"><td></td>
-<td></td>
 <td><p>[<span class="math notranslate nohighlight">\(\mathrm{lbf\cdot s^2/in^4}\)</span>]</p></td>
 <td><p>[<span class="math notranslate nohighlight">\(\mathrm{psi}\)</span>]</p></td>
 <td><p>[<span class="math notranslate nohighlight">\(\mathrm{psi}\)</span>]</p></td>
@@ -334,7 +424,6 @@ The last four rows in the table are the candidate materials for the layup design
 <td><p>[<span class="math notranslate nohighlight">\(\mathrm{psi}\)</span>]</p></td>
 </tr>
 <tr class="row-odd"><td><p>Aluminum 8009</p></td>
-<td><p>Isotropic</p></td>
 <td><p><span class="math notranslate nohighlight">\(0.271959\times 10^{-3}\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(13.1\times 10^6\)</span></p></td>
 <td></td>
@@ -347,7 +436,6 @@ The last four rows in the table are the candidate materials for the layup design
 <td></td>
 </tr>
 <tr class="row-even"><td><p>Lead</p></td>
-<td><p>Isotropic</p></td>
 <td><p><span class="math notranslate nohighlight">\(1.060957\times 10^{-3}\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(1.0\times 10^{-3}\)</span></p></td>
 <td></td>
@@ -360,7 +448,6 @@ The last four rows in the table are the candidate materials for the layup design
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>Rohacell 70</p></td>
-<td><p>Orthotropic</p></td>
 <td><p><span class="math notranslate nohighlight">\(7.040895\times 10^{-6}\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(13.125\times 10^3\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(13.125\times 10^3\)</span></p></td>
@@ -373,7 +460,6 @@ The last four rows in the table are the candidate materials for the layup design
 <td><p><span class="math notranslate nohighlight">\(4.118\times 10^3\)</span></p></td>
 </tr>
 <tr class="row-even"><td><p>Plascore PN2-3/16OX3.0</p></td>
-<td><p>Orthotropic</p></td>
 <td><p><span class="math notranslate nohighlight">\(4.509066\times 10^{-6}\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(1.0\times 10^3\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(1.0\times 10^3\)</span></p></td>
@@ -386,7 +472,6 @@ The last four rows in the table are the candidate materials for the layup design
 <td><p><span class="math notranslate nohighlight">\(5.799\times 10^3\)</span></p></td>
 </tr>
 <tr class="row-odd"><td><p>T300 15k/976</p></td>
-<td><p>Lamina</p></td>
 <td><p><span class="math notranslate nohighlight">\(0.149716\times 10^{-3}\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(19.6\times 10^6\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(1.34\times 10^6\)</span></p></td>
@@ -399,7 +484,6 @@ The last four rows in the table are the candidate materials for the layup design
 <td></td>
 </tr>
 <tr class="row-even"><td><p>AS4 12k/E7K8</p></td>
-<td><p>Lamina</p></td>
 <td><p><span class="math notranslate nohighlight">\(0.145973\times 10^{-3}\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(19.3\times 10^6\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(1.23\times 10^6\)</span></p></td>
@@ -412,7 +496,6 @@ The last four rows in the table are the candidate materials for the layup design
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>S2/SP381</p></td>
-<td><p>Lamina</p></td>
 <td><p><span class="math notranslate nohighlight">\(0.173109\times 10^{-3}\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(7.05\times 10^6\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(1.97\times 10^6\)</span></p></td>
@@ -425,7 +508,6 @@ The last four rows in the table are the candidate materials for the layup design
 <td></td>
 </tr>
 <tr class="row-even"><td><p>T650-35 12k/976</p></td>
-<td><p>Lamina</p></td>
 <td><p><span class="math notranslate nohighlight">\(0.148781\times 10^{-3}\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(22.0\times 10^6\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(1.30\times 10^6\)</span></p></td>
@@ -438,7 +520,6 @@ The last four rows in the table are the candidate materials for the layup design
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>T700 24K/E765</p></td>
-<td><p>Lamina</p></td>
 <td><p><span class="math notranslate nohighlight">\(0.145037\times 10^{-3}\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(18.71\times 10^6\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(1.36\times 10^6\)</span></p></td>
@@ -453,7 +534,7 @@ The last four rows in the table are the candidate materials for the layup design
 </tbody>
 </table>
 <table class="docutils align-center" id="tab-thickness">
-<caption><span class="caption-number">Table 9 </span><span class="caption-text">Lamina thickness</span><a class="headerlink" href="#tab-thickness" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-text">Lamina thickness</span><a class="headerlink" href="#tab-thickness" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -486,18 +567,18 @@ The last four rows in the table are the candidate materials for the layup design
 </table>
 </div>
 <div class="section" id="properties">
-<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
-<p>The beam properties calculated by VABS listed in <a class="reference internal" href="#tab-props"><span class="std std-numref">Table 10</span></a> will be needed in the optimization.
-<a class="reference internal" href="#fig-cs-props"><span class="std std-numref">Fig. 5</span></a> shows the points and axes with respect to which some properties are calculated.
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline"></a></h2>
+<p>The beam properties calculated by VABS listed in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Table</span> <span class="pre">%s</span></code> will be needed in the optimization.
+<code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code> shows the points and axes with respect to which some properties are calculated.
 The two bending stiffnesses are given with respect to the principal bending axes.
 The horizontal locations of the shear and mass centers are given with respect to the modeling origin, which is the quarder chord in this example.</p>
 <div class="figure align-center" id="fig-cs-props">
 <img alt="../../../_images/cs_prop.png" src="../../../_images/cs_prop.png" />
-<p class="caption"><span class="caption-number">Figure 5 </span><span class="caption-text">Beam properties and their reference of calculation.</span><a class="headerlink" href="#fig-cs-props" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Beam properties and their reference of calculation.</span><a class="headerlink" href="#fig-cs-props" title="Permalink to this image"></a></p>
 </div>
-<p>A summary of the properties is listed in <a class="reference internal" href="#tab-props"><span class="std std-numref">Table 10</span></a>.</p>
+<p>A summary of the properties is listed in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Table</span> <span class="pre">%s</span></code>.</p>
 <table class="docutils align-center" id="tab-props">
-<caption><span class="caption-number">Table 10 </span><span class="caption-text">Summary of properties</span><a class="headerlink" href="#tab-props" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-text">Summary of properties</span><a class="headerlink" href="#tab-props" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -505,7 +586,7 @@ The horizontal locations of the shear and mass centers are given with respect to
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Symbol</p></th>
-<th class="head"><p>Label</p></th>
+<th class="head"><p>Name in input files</p></th>
 <th class="head"><p>Description</p></th>
 </tr>
 </thead>
@@ -542,10 +623,7 @@ The horizontal locations of the shear and mass centers are given with respect to
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="problem.html" class="btn btn-neutral float-left" title="Problem Description" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="opt.html" class="btn btn-neutral float-right" title="Optimization Formulation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

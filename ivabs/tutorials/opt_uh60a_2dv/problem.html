@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Problem Description &mdash; iVABS 1.4 documentation</title><link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <title>Problem Description &mdash; iVABS 1.4 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/doctools.js"></script>
@@ -46,12 +48,10 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Cross-sectional Parameterization and Beam Properties" href="cs_param.html" />
-    <link rel="prev" title="Running of The Tutorial" href="running.html" /> 
+    <link rel="search" title="Search" href="../../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -72,27 +72,13 @@ commentsRunWhenDOMLoaded(addUtterances);
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">iVABS Quick Start</span></p>
-<ul class="current">
+              <p class="caption" role="heading"><span class="caption-text">iVABS Quick Start</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Download and Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../tutorials.html">Tutorials</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../opt_uh60a_2dv.html">Optimization of A Blade Spar</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="running.html">Running of The Tutorial</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Problem Description</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#scope-of-the-study">Scope of the study</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#specifications">Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
 </ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="cs_param.html">Cross-sectional Parameterization and Beam Properties</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt.html">Optimization Formulation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="inputs.html">Preparation of Input Files</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">iVABS Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">iVABS Components</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../prevabs/index.html">PreVABS Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../msgpi/index.html">msgpi documentation</a></li>
@@ -112,8 +98,6 @@ commentsRunWhenDOMLoaded(addUtterances);
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../tutorials.html">Tutorials</a> &raquo;</li>
-          <li><a href="../opt_uh60a_2dv.html">Optimization of A Blade Spar</a> &raquo;</li>
       <li>Problem Description</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/wenbinyugroup/ivabs/blob/main/docs/source/ivabs/tutorials/opt_uh60a_2dv/problem.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -125,23 +109,23 @@ commentsRunWhenDOMLoaded(addUtterances);
            <div itemprop="articleBody">
              
   <div class="section" id="problem-description">
-<h1>Problem Description<a class="headerlink" href="#problem-description" title="Permalink to this headline">¶</a></h1>
+<h1>Problem Description<a class="headerlink" href="#problem-description" title="Permalink to this headline"></a></h1>
 <p>The goal is to design the composite structure of a rotor blade to match some desired beam properties.</p>
 <div class="section" id="scope-of-the-study">
-<h2>Scope of the study<a class="headerlink" href="#scope-of-the-study" title="Permalink to this headline">¶</a></h2>
+<h2>Scope of the study<a class="headerlink" href="#scope-of-the-study" title="Permalink to this headline"></a></h2>
 <p>This example assumes a uniform design along the span of the blade.
-A specific topology which is a box spar design is considered for the structure, as shown in <a class="reference internal" href="#fig-cs-topo"><span class="std std-numref">Fig. 1</span></a>.
+A specific topology which is a box spar design is considered for the structure, as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code>.
 More details about the parameterization of the structure can be found in Section: <a class="reference internal" href="cs_param.html#sect-cs-param"><span class="std std-ref">Cross-sectional Parameterization and Beam Properties</span></a>.</p>
 <div class="figure align-center" id="fig-cs-topo">
 <img alt="../../../_images/cs_topo.png" src="../../../_images/cs_topo.png" />
-<p class="caption"><span class="caption-number">Figure 1 </span><span class="caption-text">Topology of the cross-section.</span><a class="headerlink" href="#fig-cs-topo" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Topology of the cross-section.</span><a class="headerlink" href="#fig-cs-topo" title="Permalink to this image"></a></p>
 </div>
 </div>
 <div class="section" id="specifications">
-<h2>Specifications<a class="headerlink" href="#specifications" title="Permalink to this headline">¶</a></h2>
-<p>Airfoil, chord length and target beam properties are summarized in <a class="reference internal" href="#tab-spec"><span class="std std-numref">Table 5</span></a>.</p>
+<h2>Specifications<a class="headerlink" href="#specifications" title="Permalink to this headline"></a></h2>
+<p>Airfoil, chord length and target beam properties are summarized in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Table</span> <span class="pre">%s</span></code>.</p>
 <table class="docutils align-center" id="tab-spec">
-<caption><span class="caption-number">Table 5 </span><span class="caption-text">Specifications</span><a class="headerlink" href="#tab-spec" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-text">Specifications</span><a class="headerlink" href="#tab-spec" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -179,10 +163,7 @@ More details about the parameterization of the structure can be found in Section
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="running.html" class="btn btn-neutral float-left" title="Running of The Tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="cs_param.html" class="btn btn-neutral float-right" title="Cross-sectional Parameterization and Beam Properties" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

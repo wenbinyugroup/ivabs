@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GEBT &mdash; iVABS 1.4 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <title>GEBT &mdash; iVABS 1.4 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -71,13 +73,13 @@ commentsRunWhenDOMLoaded(addUtterances);
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">iVABS Quick Start</span></p>
+              <p class="caption" role="heading"><span class="caption-text">iVABS Quick Start</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../ivabs/install.html">Download and Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ivabs/examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ivabs/tutorials.html">Tutorials</a></li>
 </ul>
-<p class="caption"><span class="caption-text">iVABS Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">iVABS Components</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../prevabs/index.html">PreVABS Documentation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">msgpi documentation</a><ul class="current">
@@ -130,14 +132,14 @@ commentsRunWhenDOMLoaded(addUtterances);
            <div itemprop="articleBody">
              
   <div class="section" id="gebt">
-<h1>GEBT<a class="headerlink" href="#gebt" title="Permalink to this headline">¶</a></h1>
+<h1>GEBT<a class="headerlink" href="#gebt" title="Permalink to this headline"></a></h1>
 <div class="section" id="input-output">
-<h2>Input/Output<a class="headerlink" href="#input-output" title="Permalink to this headline">¶</a></h2>
+<h2>Input/Output<a class="headerlink" href="#input-output" title="Permalink to this headline"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">msgpi.ms.iogebt</span>
 </pre></div>
 </div>
 <div class="section" id="reading">
-<h3>Reading<a class="headerlink" href="#reading" title="Permalink to this headline">¶</a></h3>
+<h3>Reading<a class="headerlink" href="#reading" title="Permalink to this headline"></a></h3>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -150,7 +152,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <tr class="row-even"><td><p><a class="reference internal" href="_autogen/beam/msgpi.ms.iogebt.readGEBTOut.html#msgpi.ms.iogebt.readGEBTOut" title="msgpi.ms.iogebt.readGEBTOut"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readGEBTOut</span></code></a>(fn_gebt_out, beam[, method])</p></td>
 <td><p>Read GEBT results.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autogen/beam/msgpi.ms.iogebt.readGEBTOutNode.html#msgpi.ms.iogebt.readGEBTOutNode" title="msgpi.ms.iogebt.readGEBTOutNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readGEBTOutNode</span></code></a>(lines, node_type, node_id[, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autogen/beam/msgpi.ms.iogebt.readGEBTOutNode.html#msgpi.ms.iogebt.readGEBTOutNode" title="msgpi.ms.iogebt.readGEBTOutNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readGEBTOutNode</span></code></a>(lines, node_type, node_id[, ...])</p></td>
 <td><p>Read GEBT nodal results.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autogen/beam/msgpi.ms.iogebt.readGEBTOutStatic.html#msgpi.ms.iogebt.readGEBTOutStatic" title="msgpi.ms.iogebt.readGEBTOutStatic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readGEBTOutStatic</span></code></a>(fn_gebt_out, beam)</p></td>
@@ -164,7 +166,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="section" id="preprocessing">
-<h2>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline">¶</a></h2>
+<h2>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">msgpi.ms.prebeam</span>
 </pre></div>
 </div>
@@ -181,7 +183,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </table>
 </div>
 <div class="section" id="analysis">
-<h2>Analysis<a class="headerlink" href="#analysis" title="Permalink to this headline">¶</a></h2>
+<h2>Analysis<a class="headerlink" href="#analysis" title="Permalink to this headline"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">msgpi.ms.analysis</span>
 </pre></div>
 </div>
@@ -197,7 +199,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <tr class="row-even"><td><p><a class="reference internal" href="_autogen/beam/msgpi.ms.analysis.runGEBT.html#msgpi.ms.analysis.runGEBT" title="msgpi.ms.analysis.runGEBT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">runGEBT</span></code></a>(fn_input[, scrnout])</p></td>
 <td><p>Run GEBT analysis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autogen/beam/msgpi.ms.analysis.solvePLECS.html#msgpi.ms.analysis.solvePLECS" title="msgpi.ms.analysis.solvePLECS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">solvePLECS</span></code></a>(length, compliance, x1[, f1, f2, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autogen/beam/msgpi.ms.analysis.solvePLECS.html#msgpi.ms.analysis.solvePLECS" title="msgpi.ms.analysis.solvePLECS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">solvePLECS</span></code></a>(length, compliance, x1[, f1, f2, ...])</p></td>
 <td><p>Solve the static problem of a prismatic, linearly elastic, cantilever beam.</p></td>
 </tr>
 </tbody>

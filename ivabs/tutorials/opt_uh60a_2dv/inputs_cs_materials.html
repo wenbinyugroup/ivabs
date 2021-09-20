@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Material Database (material_database.xml) &mdash; iVABS 1.4 documentation</title><link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <title>Material Database (material_database.xml) &mdash; iVABS 1.4 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/doctools.js"></script>
@@ -46,12 +48,10 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Cross-section Airfoil Data (sc1095.dat)" href="inputs_cs_airfoil.html" />
-    <link rel="prev" title="Cross-section Main Input Template (design/uh60a_section.xml.tmp)" href="inputs_cs_template.html" /> 
+    <link rel="search" title="Search" href="../../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -72,32 +72,13 @@ commentsRunWhenDOMLoaded(addUtterances);
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">iVABS Quick Start</span></p>
-<ul class="current">
+              <p class="caption" role="heading"><span class="caption-text">iVABS Quick Start</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Download and Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../tutorials.html">Tutorials</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../opt_uh60a_2dv.html">Optimization of A Blade Spar</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="running.html">Running of The Tutorial</a></li>
-<li class="toctree-l3"><a class="reference internal" href="problem.html">Problem Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cs_param.html">Cross-sectional Parameterization and Beam Properties</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt.html">Optimization Formulation</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="inputs.html">Preparation of Input Files</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="inputs_dakota.html">Dakota Input File (<code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.dakota</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="inputs_cs_template.html">Cross-section Main Input Template (<code class="docutils literal notranslate"><span class="pre">design/uh60a_section.xml.tmp</span></code>)</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Material Database (<code class="docutils literal notranslate"><span class="pre">material_database.xml</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="inputs_cs_airfoil.html">Cross-section Airfoil Data (<code class="docutils literal notranslate"><span class="pre">sc1095.dat</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="inputs_interface.html">Dakota Interface Scripts (<code class="docutils literal notranslate"><span class="pre">interface.py</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="inputs_arguments.html">Interface Arguments (<code class="docutils literal notranslate"><span class="pre">interface_args.json</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="inputs_data_process.html">Data Processing Functions (<code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">iVABS Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">iVABS Components</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../prevabs/index.html">PreVABS Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../msgpi/index.html">msgpi documentation</a></li>
@@ -117,9 +98,6 @@ commentsRunWhenDOMLoaded(addUtterances);
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../tutorials.html">Tutorials</a> &raquo;</li>
-          <li><a href="../opt_uh60a_2dv.html">Optimization of A Blade Spar</a> &raquo;</li>
-          <li><a href="inputs.html">Preparation of Input Files</a> &raquo;</li>
       <li>Material Database (<code class="docutils literal notranslate"><span class="pre">material_database.xml</span></code>)</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/wenbinyugroup/ivabs/blob/main/docs/source/ivabs/tutorials/opt_uh60a_2dv/inputs_cs_materials.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -131,113 +109,72 @@ commentsRunWhenDOMLoaded(addUtterances);
            <div itemprop="articleBody">
              
   <div class="section" id="material-database-material-database-xml">
-<span id="sect-input-material"></span><h1>Material Database (<code class="docutils literal notranslate"><span class="pre">material_database.xml</span></code>)<a class="headerlink" href="#material-database-material-database-xml" title="Permalink to this headline">¶</a></h1>
+<span id="sect-input-material"></span><h1>Material Database (<code class="docutils literal notranslate"><span class="pre">material_database.xml</span></code>)<a class="headerlink" href="#material-database-material-database-xml" title="Permalink to this headline"></a></h1>
 <p>The material database is a XML file. The format is</p>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;materials&gt;</span>
-<span class="c">&lt;!--You can put arbitrary number of material tags--&gt;</span>
-    <span class="nt">&lt;material</span> <span class="na">name=</span><span class="s">&quot;[string]&quot;</span> <span class="na">type=</span><span class="s">&quot;&lt;isotropic|orthotropic|lamina&gt;&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;density&gt;</span>[number]<span class="nt">&lt;/density&gt;</span>
-        <span class="nt">&lt;elastic&gt;</span>
-        <span class="c">&lt;!--For isotropic--&gt;</span>
-            <span class="nt">&lt;e&gt;</span>[number]<span class="nt">&lt;/e&gt;</span>
-            <span class="nt">&lt;nu&gt;</span>[number]<span class="nt">&lt;/nu&gt;</span>
-        <span class="c">&lt;!--For orthotropic--&gt;</span>
-            <span class="nt">&lt;e1&gt;</span>[number]<span class="nt">&lt;/e1&gt;</span>
-            <span class="nt">&lt;e2&gt;</span>[number]<span class="nt">&lt;/e2&gt;</span>
-            <span class="nt">&lt;e3&gt;</span>[number]<span class="nt">&lt;/e3&gt;</span>
-            <span class="nt">&lt;g12&gt;</span>[number]<span class="nt">&lt;/g12&gt;</span>
-            <span class="nt">&lt;g13&gt;</span>[number]<span class="nt">&lt;/g13&gt;</span>
-            <span class="nt">&lt;g23&gt;</span>[number]<span class="nt">&lt;/g23&gt;</span>
-            <span class="nt">&lt;nu12&gt;</span>[number]<span class="nt">&lt;/nu12&gt;</span>
-            <span class="nt">&lt;nu13&gt;</span>[number]<span class="nt">&lt;/nu13&gt;</span>
-            <span class="nt">&lt;nu23&gt;</span>[number]<span class="nt">&lt;/nu23&gt;</span>
-        <span class="c">&lt;!--For lamina or transverse isotropic--&gt;</span>
-            <span class="nt">&lt;e1&gt;</span>[number]<span class="nt">&lt;/e1&gt;</span>
-            <span class="nt">&lt;e2&gt;</span>[number]<span class="nt">&lt;/e2&gt;</span>
-            <span class="nt">&lt;g12&gt;</span>[number]<span class="nt">&lt;/g12&gt;</span>
-            <span class="nt">&lt;nu12&gt;</span>[number]<span class="nt">&lt;/nu12&gt;</span>
-        <span class="nt">&lt;/elastic&gt;</span>
-    <span class="nt">&lt;/material&gt;</span>
-<span class="c">&lt;!--You can put arbitrary number of lamina tags--&gt;</span>
-    <span class="nt">&lt;lamina</span> <span class="na">name=</span><span class="s">&quot;[string]&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;material&gt;</span>[string]<span class="nt">&lt;/material&gt;</span>
-        <span class="nt">&lt;thickness&gt;</span>[number]<span class="nt">&lt;/thickness&gt;</span>
-    <span class="nt">&lt;/lamina&gt;</span>
-<span class="nt">&lt;/materials&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;materials&gt;</span>
+<span class="linenos"> 2</span><span class="c">&lt;!--You can put arbitrary number of material tags--&gt;</span>
+<span class="linenos"> 3</span>    <span class="nt">&lt;material</span> <span class="na">name=</span><span class="s">&quot;[string]&quot;</span> <span class="na">type=</span><span class="s">&quot;&lt;isotropic|orthotropic|lamina&gt;&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 4</span>        <span class="nt">&lt;density&gt;</span>[number]<span class="nt">&lt;/density&gt;</span>
+<span class="linenos"> 5</span>        <span class="nt">&lt;elastic&gt;</span>
+<span class="linenos"> 6</span>        <span class="c">&lt;!--For isotropic--&gt;</span>
+<span class="linenos"> 7</span>            <span class="nt">&lt;e&gt;</span>[number]<span class="nt">&lt;/e&gt;</span>
+<span class="linenos"> 8</span>            <span class="nt">&lt;nu&gt;</span>[number]<span class="nt">&lt;/nu&gt;</span>
+<span class="linenos"> 9</span>        <span class="c">&lt;!--For orthotropic--&gt;</span>
+<span class="linenos">10</span>            <span class="nt">&lt;e1&gt;</span>[number]<span class="nt">&lt;/e1&gt;</span>
+<span class="linenos">11</span>            <span class="nt">&lt;e2&gt;</span>[number]<span class="nt">&lt;/e2&gt;</span>
+<span class="linenos">12</span>            <span class="nt">&lt;e3&gt;</span>[number]<span class="nt">&lt;/e3&gt;</span>
+<span class="linenos">13</span>            <span class="nt">&lt;g12&gt;</span>[number]<span class="nt">&lt;/g12&gt;</span>
+<span class="linenos">14</span>            <span class="nt">&lt;g13&gt;</span>[number]<span class="nt">&lt;/g13&gt;</span>
+<span class="linenos">15</span>            <span class="nt">&lt;g23&gt;</span>[number]<span class="nt">&lt;/g23&gt;</span>
+<span class="linenos">16</span>            <span class="nt">&lt;nu12&gt;</span>[number]<span class="nt">&lt;/nu12&gt;</span>
+<span class="linenos">17</span>            <span class="nt">&lt;nu13&gt;</span>[number]<span class="nt">&lt;/nu13&gt;</span>
+<span class="linenos">18</span>            <span class="nt">&lt;nu23&gt;</span>[number]<span class="nt">&lt;/nu23&gt;</span>
+<span class="linenos">19</span>        <span class="c">&lt;!--For lamina or transverse isotropic--&gt;</span>
+<span class="linenos">20</span>            <span class="nt">&lt;e1&gt;</span>[number]<span class="nt">&lt;/e1&gt;</span>
+<span class="linenos">21</span>            <span class="nt">&lt;e2&gt;</span>[number]<span class="nt">&lt;/e2&gt;</span>
+<span class="linenos">22</span>            <span class="nt">&lt;g12&gt;</span>[number]<span class="nt">&lt;/g12&gt;</span>
+<span class="linenos">23</span>            <span class="nt">&lt;nu12&gt;</span>[number]<span class="nt">&lt;/nu12&gt;</span>
+<span class="linenos">24</span>        <span class="nt">&lt;/elastic&gt;</span>
+<span class="linenos">25</span>    <span class="nt">&lt;/material&gt;</span>
+<span class="linenos">26</span><span class="c">&lt;!--You can put arbitrary number of lamina tags--&gt;</span>
+<span class="linenos">27</span>    <span class="nt">&lt;lamina</span> <span class="na">name=</span><span class="s">&quot;[string]&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">28</span>        <span class="nt">&lt;material&gt;</span>[string]<span class="nt">&lt;/material&gt;</span>
+<span class="linenos">29</span>        <span class="nt">&lt;thickness&gt;</span>[number]<span class="nt">&lt;/thickness&gt;</span>
+<span class="linenos">30</span>    <span class="nt">&lt;/lamina&gt;</span>
+<span class="linenos">31</span><span class="nt">&lt;/materials&gt;</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>The unit system works like in Abaqus.
 The user is responsible for keeping all the units consistent.
 For other format specifications, you can refer to the actual material database file and comments.
 Due to the file length, it’s not included here.</p>
 <p>For instance, Aluminum 8009 is used in the blade. The material property is <span class="math notranslate nohighlight">\(E=13.1\times10^6\ \mathrm{psi}\)</span>,
 <span class="math notranslate nohighlight">\(\nu=0.33\)</span>. Therefore, it’s declared in the database as</p>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;material</span> <span class="na">name=</span><span class="s">&quot;Aluminum 8009&quot;</span> <span class="na">type=</span><span class="s">&quot;isotropic&quot;</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!-- unit: lbf.sec^2/in^4 --&gt;</span>
-    <span class="nt">&lt;density&gt;</span>0.271959e-3<span class="nt">&lt;/density&gt;</span>
-    <span class="nt">&lt;elastic&gt;</span>
-        <span class="c">&lt;!--unit:psi --&gt;</span>
-        <span class="nt">&lt;e&gt;</span>13.1E+06<span class="nt">&lt;/e&gt;</span>
-        <span class="nt">&lt;nu&gt;</span>3.30E-01<span class="nt">&lt;/nu&gt;</span>
-    <span class="nt">&lt;/elastic&gt;</span>
-<span class="nt">&lt;/material&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;material</span> <span class="na">name=</span><span class="s">&quot;Aluminum 8009&quot;</span> <span class="na">type=</span><span class="s">&quot;isotropic&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">2</span>    <span class="c">&lt;!-- unit: lbf.sec^2/in^4 --&gt;</span>
+<span class="linenos">3</span>    <span class="nt">&lt;density&gt;</span>0.271959e-3<span class="nt">&lt;/density&gt;</span>
+<span class="linenos">4</span>    <span class="nt">&lt;elastic&gt;</span>
+<span class="linenos">5</span>        <span class="c">&lt;!--unit:psi --&gt;</span>
+<span class="linenos">6</span>        <span class="nt">&lt;e&gt;</span>13.1E+06<span class="nt">&lt;/e&gt;</span>
+<span class="linenos">7</span>        <span class="nt">&lt;nu&gt;</span>3.30E-01<span class="nt">&lt;/nu&gt;</span>
+<span class="linenos">8</span>    <span class="nt">&lt;/elastic&gt;</span>
+<span class="linenos">9</span><span class="nt">&lt;/material&gt;</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>We also define the lamina used with the material and a thickness</p>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;lamina</span> <span class="na">name=</span><span class="s">&quot;Aluminum 8009_0.01&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;material&gt;</span>Aluminum 8009<span class="nt">&lt;/material&gt;</span>
-    <span class="nt">&lt;thickness&gt;</span>0.01<span class="nt">&lt;/thickness&gt;</span>
-<span class="nt">&lt;/lamina&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;lamina</span> <span class="na">name=</span><span class="s">&quot;Aluminum 8009_0.01&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">2</span>    <span class="nt">&lt;material&gt;</span>Aluminum 8009<span class="nt">&lt;/material&gt;</span>
+<span class="linenos">3</span>    <span class="nt">&lt;thickness&gt;</span>0.01<span class="nt">&lt;/thickness&gt;</span>
+<span class="linenos">4</span><span class="nt">&lt;/lamina&gt;</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>The material definition is different for materials with different isotropy.
 A commonly used group of materials is the lamina type material, which is
 transversely isotropic. Only the elastic terms in fiber direction are of
 interest. For instance, the T650-35 12k/976 unidirectional tape’s material
 property is</p>
 <table class="docutils align-center" id="t650">
-<caption><span class="caption-number">Table 14 </span><span class="caption-text">T650-35 12k/976 Material Property (Psi)</span><a class="headerlink" href="#t650" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-text">T650-35 12k/976 Material Property (Psi)</span><a class="headerlink" href="#t650" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 25%" />
 <col style="width: 25%" />
@@ -260,39 +197,26 @@ property is</p>
 </tbody>
 </table>
 <p>It’s declaed as</p>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;material</span> <span class="na">name=</span><span class="s">&quot;T650-35 12k/976&quot;</span> <span class="na">type=</span><span class="s">&quot;lamina&quot;</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!-- unit: lbf.sec^2/in^4 --&gt;</span>
-    <span class="nt">&lt;density&gt;</span>0.148781e-3<span class="nt">&lt;/density&gt;</span>
-    <span class="nt">&lt;elastic&gt;</span>
-        <span class="c">&lt;!-- unit: lbf/in^2 --&gt;</span>
-        <span class="nt">&lt;e1&gt;</span>22.0E+06<span class="nt">&lt;/e1&gt;</span>
-        <span class="nt">&lt;e2&gt;</span>1.30E+06<span class="nt">&lt;/e2&gt;</span>
-        <span class="nt">&lt;g12&gt;</span>0.745E+06<span class="nt">&lt;/g12&gt;</span>
-        <span class="nt">&lt;nu12&gt;</span>1.150E-01<span class="nt">&lt;/nu12&gt;</span>
-    <span class="nt">&lt;/elastic&gt;</span>
-<span class="nt">&lt;/material&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;material</span> <span class="na">name=</span><span class="s">&quot;T650-35 12k/976&quot;</span> <span class="na">type=</span><span class="s">&quot;lamina&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 2</span>    <span class="c">&lt;!-- unit: lbf.sec^2/in^4 --&gt;</span>
+<span class="linenos"> 3</span>    <span class="nt">&lt;density&gt;</span>0.148781e-3<span class="nt">&lt;/density&gt;</span>
+<span class="linenos"> 4</span>    <span class="nt">&lt;elastic&gt;</span>
+<span class="linenos"> 5</span>        <span class="c">&lt;!-- unit: lbf/in^2 --&gt;</span>
+<span class="linenos"> 6</span>        <span class="nt">&lt;e1&gt;</span>22.0E+06<span class="nt">&lt;/e1&gt;</span>
+<span class="linenos"> 7</span>        <span class="nt">&lt;e2&gt;</span>1.30E+06<span class="nt">&lt;/e2&gt;</span>
+<span class="linenos"> 8</span>        <span class="nt">&lt;g12&gt;</span>0.745E+06<span class="nt">&lt;/g12&gt;</span>
+<span class="linenos"> 9</span>        <span class="nt">&lt;nu12&gt;</span>1.150E-01<span class="nt">&lt;/nu12&gt;</span>
+<span class="linenos">10</span>    <span class="nt">&lt;/elastic&gt;</span>
+<span class="linenos">11</span><span class="nt">&lt;/material&gt;</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>The lamina definition is similar</p>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;lamina</span> <span class="na">name=</span><span class="s">&quot;T650-35 12k/976_0.0052&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;material&gt;</span>T650-35 12k/976<span class="nt">&lt;/material&gt;</span>
-    <span class="nt">&lt;thickness&gt;</span>0.0052<span class="nt">&lt;/thickness&gt;</span>
-<span class="nt">&lt;/lamina&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;lamina</span> <span class="na">name=</span><span class="s">&quot;T650-35 12k/976_0.0052&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">2</span>    <span class="nt">&lt;material&gt;</span>T650-35 12k/976<span class="nt">&lt;/material&gt;</span>
+<span class="linenos">3</span>    <span class="nt">&lt;thickness&gt;</span>0.0052<span class="nt">&lt;/thickness&gt;</span>
+<span class="linenos">4</span><span class="nt">&lt;/lamina&gt;</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>Note that you can define multiple lamina types out of one material.
 The lamina is a hierarchy in building the cross section. It’s not the
 aforementioned lamina type material, which just indicates the isotropy
@@ -302,10 +226,7 @@ of the material.</p>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="inputs_cs_template.html" class="btn btn-neutral float-left" title="Cross-section Main Input Template (design/uh60a_section.xml.tmp)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="inputs_cs_airfoil.html" class="btn btn-neutral float-right" title="Cross-section Airfoil Data (sc1095.dat)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

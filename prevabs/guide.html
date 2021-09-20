@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guide for Preparing Input Files &mdash; iVABS 1.4 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <title>Guide for Preparing Input Files &mdash; iVABS 1.4 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -46,7 +48,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -72,13 +74,13 @@ commentsRunWhenDOMLoaded(addUtterances);
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">iVABS Quick Start</span></p>
+              <p class="caption" role="heading"><span class="caption-text">iVABS Quick Start</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../ivabs/install.html">Download and Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ivabs/examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ivabs/tutorials.html">Tutorials</a></li>
 </ul>
-<p class="caption"><span class="caption-text">iVABS Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">iVABS Components</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">PreVABS Documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="run.html">How to Run PreVABS</a></li>
@@ -127,14 +129,14 @@ commentsRunWhenDOMLoaded(addUtterances);
            <div itemprop="articleBody">
              
   <div class="section" id="guide-for-preparing-input-files">
-<h1>Guide for Preparing Input Files<a class="headerlink" href="#guide-for-preparing-input-files" title="Permalink to this headline">¶</a></h1>
-<p>In PreVABS, a cross section is defined through two aspects: components and global configuration, as shown in <a class="reference internal" href="#fig-csfiles1"><span class="std std-numref">Fig. 16</span></a>.
+<h1>Guide for Preparing Input Files<a class="headerlink" href="#guide-for-preparing-input-files" title="Permalink to this headline"></a></h1>
+<p>In PreVABS, a cross section is defined through two aspects: components and global configuration, as shown in <a class="reference internal" href="#fig-csfiles1"><span class="std std-numref">Fig. 10</span></a>.
 Components are built from geometry and materials.
 The geometry aspect comprises definitions of base points and base lines.
 The material aspect includes material properties, lamina thicknesses, layup stacking sequences, etc. The global configuration contains the files included, transformation, meshing options, and analysis settings.</p>
 <div class="figure align-center" id="fig-csfiles1">
 <a class="reference internal image-reference" href="../_images/chart1.png"><img alt="../_images/chart1.png" src="../_images/chart1.png" style="width: 75%;" /></a>
-<p class="caption"><span class="caption-number">Figure 16 </span><span class="caption-text">Cross section definition in PreVABS.</span><a class="headerlink" href="#fig-csfiles1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 10 </span><span class="caption-text">Cross section definition in PreVABS.</span><a class="headerlink" href="#fig-csfiles1" title="Permalink to this image"></a></p>
 </div>
 <p>To create the cross section, at least four input files are needed.
 Definitions of the geometry, materials and layups are stored in three files separately.
@@ -142,30 +144,21 @@ A top level cross section file stores the definitions of components and global c
 In some cases, a separate file storing base points is needed (such as an airfoil).
 Except the base points file, which has a file extension .dat, all other files use an XML format.</p>
 <p>A top level cross section file stores all information that will be discussed in the following sections.
-The input syntax for this main file is shown in <a class="reference internal" href="#code-crosssection"><span class="std std-numref">Listing 10</span></a>.</p>
+The input syntax for this main file is shown in <a class="reference internal" href="#code-crosssection"><span class="std std-numref">Listing 7</span></a>.</p>
 <div class="literal-block-wrapper docutils container" id="code-crosssection">
-<div class="code-block-caption"><span class="caption-number">Listing 10 </span><span class="caption-text">Input syntax for the cross section file.</span><a class="headerlink" href="#code-crosssection" title="Permalink to this code">¶</a></div>
-<div class="highlight-xml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;cross_section</span> <span class="na">name=</span><span class="s">&quot;&quot;</span> <span class="na">format=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;include&gt;</span>...<span class="nt">&lt;/include&gt;</span>
-  <span class="nt">&lt;analysis&gt;</span>...<span class="nt">&lt;/analysis&gt;</span>
-  <span class="nt">&lt;general&gt;</span>...<span class="nt">&lt;/general&gt;</span>
-  <span class="nt">&lt;baselines&gt;</span>...<span class="nt">&lt;/baselines&gt;</span>
-  <span class="nt">&lt;layups&gt;</span>...<span class="nt">&lt;/layups&gt;</span>
-  <span class="nt">&lt;component&gt;</span>...<span class="nt">&lt;/component&gt;</span>
-  <span class="nt">&lt;component&gt;</span>...<span class="nt">&lt;/component&gt;</span>
-  ...
-<span class="nt">&lt;/cross_section&gt;</span>
+<div class="code-block-caption"><span class="caption-number">Listing 7 </span><span class="caption-text">Input syntax for the cross section file.</span><a class="headerlink" href="#code-crosssection" title="Permalink to this code"></a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;cross_section</span> <span class="na">name=</span><span class="s">&quot;&quot;</span> <span class="na">format=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 2</span>  <span class="nt">&lt;include&gt;</span>...<span class="nt">&lt;/include&gt;</span>
+<span class="linenos"> 3</span>  <span class="nt">&lt;analysis&gt;</span>...<span class="nt">&lt;/analysis&gt;</span>
+<span class="linenos"> 4</span>  <span class="nt">&lt;general&gt;</span>...<span class="nt">&lt;/general&gt;</span>
+<span class="linenos"> 5</span>  <span class="nt">&lt;baselines&gt;</span>...<span class="nt">&lt;/baselines&gt;</span>
+<span class="linenos"> 6</span>  <span class="nt">&lt;layups&gt;</span>...<span class="nt">&lt;/layups&gt;</span>
+<span class="linenos"> 7</span>  <span class="nt">&lt;component&gt;</span>...<span class="nt">&lt;/component&gt;</span>
+<span class="linenos"> 8</span>  <span class="nt">&lt;component&gt;</span>...<span class="nt">&lt;/component&gt;</span>
+<span class="linenos"> 9</span>  ...
+<span class="linenos">10</span><span class="nt">&lt;/cross_section&gt;</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <p>Data of geometry and layup can be arranged in two ways, controlled by the attribute <code class="docutils literal notranslate"><span class="pre">format</span></code>:</p>
 <ul class="simple">
@@ -189,7 +182,7 @@ The input syntax for this main file is shown in <a class="reference internal" hr
 <li><p><strong>&lt;recover&gt;</strong> - Inputs for recovery.</p></li>
 </ul>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Subtopics</span></p>
+<p class="caption" role="heading"><span class="caption-text">Subtopics</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="guide/pre_coordinate.html">Coordinate systems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="guide/pre_shape.html">Geometry and shapes</a><ul>

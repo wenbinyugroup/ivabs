@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Example 1: Automatic Process of Cross-sectional Analysis &mdash; iVABS 1.4 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <title>Example 1: Automatic Process of Cross-sectional Analysis &mdash; iVABS 1.4 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
@@ -71,7 +73,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">iVABS Quick Start</span></p>
+              <p class="caption" role="heading"><span class="caption-text">iVABS Quick Start</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Download and Installation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../examples.html">Examples</a><ul class="current">
@@ -87,7 +89,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
 </ul>
-<p class="caption"><span class="caption-text">iVABS Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">iVABS Components</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../prevabs/index.html">PreVABS Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../msgpi/index.html">msgpi documentation</a></li>
@@ -119,11 +121,11 @@ commentsRunWhenDOMLoaded(addUtterances);
            <div itemprop="articleBody">
              
   <div class="section" id="example-1-automatic-process-of-cross-sectional-analysis">
-<h1>Example 1: Automatic Process of Cross-sectional Analysis<a class="headerlink" href="#example-1-automatic-process-of-cross-sectional-analysis" title="Permalink to this headline">¶</a></h1>
+<h1>Example 1: Automatic Process of Cross-sectional Analysis<a class="headerlink" href="#example-1-automatic-process-of-cross-sectional-analysis" title="Permalink to this headline"></a></h1>
 <p>This example serves the purpose to demonstrate the workflow and scripting for running a cross-sectional analysis starting from passing in desgin parameters to extracting desired beam properties.
 This process will be the core of design optimizations of composite slender structures.</p>
 <div class="section" id="process-setup">
-<h2>Process setup<a class="headerlink" href="#process-setup" title="Permalink to this headline">¶</a></h2>
+<h2>Process setup<a class="headerlink" href="#process-setup" title="Permalink to this headline"></a></h2>
 <p>The cross-section input file template provides the overall design.
 Among all parameters in the file, fiber angles of the four layers of the box spar are selected as those parameters requiring a separate input.</p>
 <div class="figure align-center" id="fig-ex-cs-analysis">
@@ -145,7 +147,7 @@ Among all parameters in the file, fiber angles of the four layers of the box spa
 </ul>
 </div>
 <div class="section" id="running-of-the-example">
-<h2>Running of the example<a class="headerlink" href="#running-of-the-example" title="Permalink to this headline">¶</a></h2>
+<h2>Running of the example<a class="headerlink" href="#running-of-the-example" title="Permalink to this headline"></a></h2>
 <ol class="arabic simple">
 <li><p>Get into <code class="docutils literal notranslate"><span class="pre">{IVABS_ROOT}\examples\ex_uh60a_cs_analysis_auto</span></code>.</p></li>
 <li><p>Open a command prompt.</p></li>
@@ -153,31 +155,21 @@ Among all parameters in the file, fiber angles of the four layers of the box spa
 </ol>
 </div>
 <div class="section" id="results">
-<h2>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
+<h2>Results<a class="headerlink" href="#results" title="Permalink to this headline"></a></h2>
 <p>If everything runs successfully, the prompt will print the following lines:</p>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">INFO</span>     <span class="o">|</span> <span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">03</span> <span class="mi">15</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">51</span> <span class="o">|</span> <span class="n">process</span><span class="o">.</span><span class="n">process</span> <span class="o">|</span> <span class="n">start</span>
-<span class="n">INFO</span>     <span class="o">|</span> <span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">03</span> <span class="mi">15</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">51</span> <span class="o">|</span> <span class="n">analysis</span><span class="o">.</span><span class="n">solve</span> <span class="o">|</span> <span class="n">preprocessing</span><span class="o">...</span>
-<span class="n">INFO</span>     <span class="o">|</span> <span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">03</span> <span class="mi">15</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">51</span> <span class="o">|</span> <span class="n">presg</span><span class="o">.</span><span class="n">preSG</span> <span class="o">|</span> <span class="n">prevabs</span><span class="o">.</span><span class="n">exe</span> <span class="o">-</span><span class="n">i</span> <span class="n">uh60a_section</span><span class="o">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">vabs</span> <span class="o">-</span><span class="n">h</span>
-<span class="n">INFO</span>     <span class="o">|</span> <span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">03</span> <span class="mi">15</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">52</span> <span class="o">|</span> <span class="n">analysis</span><span class="o">.</span><span class="n">solve</span> <span class="o">|</span> <span class="n">running</span> <span class="n">analysis</span><span class="o">...</span>
-<span class="n">INFO</span>     <span class="o">|</span> <span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">03</span> <span class="mi">15</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">52</span> <span class="o">|</span> <span class="n">analysis</span><span class="o">.</span><span class="n">runVABS</span> <span class="o">|</span> <span class="n">vabs</span> <span class="n">uh60a_section</span><span class="o">.</span><span class="n">sg</span>
-<span class="n">INFO</span>     <span class="o">|</span> <span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">03</span> <span class="mi">15</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">54</span> <span class="o">|</span> <span class="n">analysis</span><span class="o">.</span><span class="n">solve</span> <span class="o">|</span> <span class="n">reading</span> <span class="n">results</span><span class="o">...</span>
-<span class="n">INFO</span>     <span class="o">|</span> <span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">03</span> <span class="mi">15</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">54</span> <span class="o">|</span> <span class="n">process</span><span class="o">.</span><span class="n">process</span> <span class="o">|</span> <span class="n">finish</span>
-<span class="n">EA</span> <span class="o">=</span> <span class="mf">42703405.884</span>
-<span class="n">GJ</span> <span class="o">=</span> <span class="mf">19099828.485</span>
-<span class="n">EI22</span> <span class="o">=</span> <span class="mf">24152439.987</span>
-<span class="n">EI33</span> <span class="o">=</span> <span class="mf">841561460.1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">INFO</span>     <span class="o">|</span> <span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">03</span> <span class="mi">15</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">51</span> <span class="o">|</span> <span class="n">process</span><span class="o">.</span><span class="n">process</span> <span class="o">|</span> <span class="n">start</span>
+<span class="linenos"> 2</span><span class="n">INFO</span>     <span class="o">|</span> <span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">03</span> <span class="mi">15</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">51</span> <span class="o">|</span> <span class="n">analysis</span><span class="o">.</span><span class="n">solve</span> <span class="o">|</span> <span class="n">preprocessing</span><span class="o">...</span>
+<span class="linenos"> 3</span><span class="n">INFO</span>     <span class="o">|</span> <span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">03</span> <span class="mi">15</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">51</span> <span class="o">|</span> <span class="n">presg</span><span class="o">.</span><span class="n">preSG</span> <span class="o">|</span> <span class="n">prevabs</span><span class="o">.</span><span class="n">exe</span> <span class="o">-</span><span class="n">i</span> <span class="n">uh60a_section</span><span class="o">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">vabs</span> <span class="o">-</span><span class="n">h</span>
+<span class="linenos"> 4</span><span class="n">INFO</span>     <span class="o">|</span> <span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">03</span> <span class="mi">15</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">52</span> <span class="o">|</span> <span class="n">analysis</span><span class="o">.</span><span class="n">solve</span> <span class="o">|</span> <span class="n">running</span> <span class="n">analysis</span><span class="o">...</span>
+<span class="linenos"> 5</span><span class="n">INFO</span>     <span class="o">|</span> <span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">03</span> <span class="mi">15</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">52</span> <span class="o">|</span> <span class="n">analysis</span><span class="o">.</span><span class="n">runVABS</span> <span class="o">|</span> <span class="n">vabs</span> <span class="n">uh60a_section</span><span class="o">.</span><span class="n">sg</span>
+<span class="linenos"> 6</span><span class="n">INFO</span>     <span class="o">|</span> <span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">03</span> <span class="mi">15</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">54</span> <span class="o">|</span> <span class="n">analysis</span><span class="o">.</span><span class="n">solve</span> <span class="o">|</span> <span class="n">reading</span> <span class="n">results</span><span class="o">...</span>
+<span class="linenos"> 7</span><span class="n">INFO</span>     <span class="o">|</span> <span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">03</span> <span class="mi">15</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">54</span> <span class="o">|</span> <span class="n">process</span><span class="o">.</span><span class="n">process</span> <span class="o">|</span> <span class="n">finish</span>
+<span class="linenos"> 8</span><span class="n">EA</span> <span class="o">=</span> <span class="mf">42703405.884</span>
+<span class="linenos"> 9</span><span class="n">GJ</span> <span class="o">=</span> <span class="mf">19099828.485</span>
+<span class="linenos">10</span><span class="n">EI22</span> <span class="o">=</span> <span class="mf">24152439.987</span>
+<span class="linenos">11</span><span class="n">EI33</span> <span class="o">=</span> <span class="mf">841561460.1</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 </div>
 

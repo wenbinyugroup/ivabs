@@ -5,7 +5,7 @@ Cross-sectional Parameterization and Beam Properties
 ====================================================
 
 
-The cross-section is comprised of the following components: box spar, cap, overwrap, fillings and non-structural mass, as shown in :numref:`Fig. %s <fig-cs_comp>`.
+The cross-section is comprised of the following components: box spar, front laminate, back laminate, front filling, back filling and non-structural mass, as shown in :numref:`Fig. %s <fig-cs_comp>`.
 
 .. figure:: figures/cs_comp.png
     :name: fig-cs_comp
@@ -21,6 +21,9 @@ Parameterization
 
 Parameters can be in general grouped into two sets, geometry related and layup related.
 
+Geometry
+^^^^^^^^
+
 In this example, four geometric parameters are defined in the non-dimensional frame where the chord length is 1, as shown in :numref:`Fig. %s <fig-cs_param_geo>`.
 The origin of this frame is placed at the leading edge.
 The size and location of the box spar are defined by the two parameters :math:`a_2^{wl}` and :math:`a_2^{wt}`, which are in fact the horizontal coordinates of the leading and trailing webs, respectively.
@@ -33,6 +36,8 @@ Hence, the three parameters defining the size and location are the horizontal co
 
     Parameters for the geometry in the non-dimensional frame, where the chord length is 1.
 
+Layup
+^^^^^
 
 Layup related parameters are used to define materials (:math:`l`), fiber angles (:math:`\theta`) and numbers of plies (:math:`n`) for the laminates of box spar, cap and overwrap.
 In this example, the box spar laminate is assumed to have four layers.
@@ -40,11 +45,83 @@ All four layers have the same material (:math:`l^s`), but can have different fib
 The cap laminate is assumed to have a single layer with three parameters: :math:`l^c, \theta^c, n^c`.
 The overwrap laminate is also assumed having a single layer with three parameters: :math:`l^o, \theta^o, n^o`.
 
-.. figure:: figures/cs_param_layup.png
-    :name: fig-cs_param_layup
-    :align: center
+The overall layup design of the three lamiante components are listed in :numref:`Table %s <tab-layup-box>`, :numref:`Table %s <tab-layup-front>` and :numref:`Table %s <tab-layup-back>`.
 
-    Layups for the three components: cap, box and overwrap.
+.. list-table:: Layup of the box spar laminate
+    :name: tab-layup-box
+    :align: center
+    :header-rows: 1
+
+    * - Layer
+      - Lamina
+      - Fiber angle [deg]
+      - Ply count
+    * - Base
+      - T300 15k/976
+      - 0
+      - 2
+    * - 1
+      - :math:`l^s`
+      - :math:`\theta^s_1`
+      - :math:`n^s_1`
+    * - 2
+      - :math:`l^s`
+      - :math:`\theta^s_2`
+      - :math:`n^s_2`
+    * - 3
+      - :math:`l^s`
+      - :math:`\theta^s_3`
+      - :math:`n^s_3`
+    * - 4
+      - :math:`l^s`
+      - :math:`\theta^s_4`
+      - :math:`n^s_4`
+
+.. list-table:: Layup of the front laminate
+    :name: tab-layup-front
+    :align: center
+    :header-rows: 1
+
+    * - Layer
+      - Lamina
+      - Fiber angle [deg]
+      - Ply count
+    * - Cap
+      - Aluminum 8009
+      - 0
+      - 2
+    * - Base
+      - T300 15k/976
+      - 0
+      - 2
+    * - 1
+      - :math:`l^f`
+      - :math:`\theta^f`
+      - :math:`n^f`
+
+.. list-table:: Layup of the back laminate
+    :name: tab-layup-back
+    :align: center
+    :header-rows: 1
+
+    * - Layer
+      - Lamina
+      - Fiber angle [deg]
+      - Ply count
+    * - Base
+      - T300 15k/976
+      - 0
+      - 2
+    * - 1
+      - :math:`l^b`
+      - :math:`\theta^b`
+      - :math:`n^b`
+
+.. .. figure:: figures/cs_param_layup.png
+..     :name: fig-cs_param_layup
+..     :align: center
+
+..     Layups for the three components: cap, box and overwrap.
 
 
 A summary of the parameters is listed in :numref:`Table %s <tab-params>`.
@@ -55,7 +132,7 @@ A summary of the parameters is listed in :numref:`Table %s <tab-params>`.
     :header-rows: 1
 
     * - Symbol
-      - Label
+      - Name in input files
       - Description
     * - :math:`a_2^{wl}`
       - ``wl_a2``
@@ -125,10 +202,12 @@ Some other parameters used are listed below:
     :align: center
     :header-rows: 1
 
-    * - Label
+    * - Name in input files
       - Description
     * - ``chord``
       - Chord length of the cross-section
+    * - ``oa2``
+      - Non-dimensional horizontal coordinate of the origin of the frame :math:`\mathbf{x}` used in VABS.
     * - ``pfte2_a2``
       - Non-dimensional location of point marking the coarse meshes in the filling region
     * - ``mesh_size``
@@ -157,7 +236,6 @@ The last four rows in the table are the candidate materials for the layup design
     :header-rows: 1
 
     * - Material
-      - Type
       - Density
       - :math:`E_1`
       - :math:`E_2`
@@ -169,7 +247,6 @@ The last four rows in the table are the candidate materials for the layup design
       - :math:`G_{13}`
       - :math:`G_{23}`
     * - 
-      - 
       - [:math:`\mathrm{lbf\cdot s^2/in^4}`]
       - [:math:`\mathrm{psi}`]
       - [:math:`\mathrm{psi}`]
@@ -181,7 +258,6 @@ The last four rows in the table are the candidate materials for the layup design
       - [:math:`\mathrm{psi}`]
       - [:math:`\mathrm{psi}`]
     * - Aluminum 8009
-      - Isotropic
       - :math:`0.271959\times 10^{-3}`
       - :math:`13.1\times 10^6`
       -
@@ -193,7 +269,6 @@ The last four rows in the table are the candidate materials for the layup design
       -
       -
     * - Lead
-      - Isotropic
       - :math:`1.060957\times 10^{-3}`
       - :math:`1.0\times 10^{-3}`
       -
@@ -205,7 +280,6 @@ The last four rows in the table are the candidate materials for the layup design
       -
       -
     * - Rohacell 70
-      - Orthotropic
       - :math:`7.040895\times 10^{-6}`
       - :math:`13.125\times 10^3`
       - :math:`13.125\times 10^3`
@@ -217,7 +291,6 @@ The last four rows in the table are the candidate materials for the layup design
       - :math:`4.118\times 10^3`
       - :math:`4.118\times 10^3`
     * - Plascore PN2-3/16OX3.0
-      - Orthotropic
       - :math:`4.509066\times 10^{-6}`
       - :math:`1.0\times 10^3`
       - :math:`1.0\times 10^3`
@@ -229,7 +302,6 @@ The last four rows in the table are the candidate materials for the layup design
       - :math:`3.5\times 10^3`
       - :math:`5.799\times 10^3`
     * - T300 15k/976
-      - Lamina
       - :math:`0.149716\times 10^{-3}`
       - :math:`19.6\times 10^6`
       - :math:`1.34\times 10^6`
@@ -241,7 +313,6 @@ The last four rows in the table are the candidate materials for the layup design
       -
       -
     * - AS4 12k/E7K8
-      - Lamina
       - :math:`0.145973\times 10^{-3}`
       - :math:`19.3\times 10^6`
       - :math:`1.23\times 10^6`
@@ -253,7 +324,6 @@ The last four rows in the table are the candidate materials for the layup design
       -
       -
     * - S2/SP381
-      - Lamina
       - :math:`0.173109\times 10^{-3}`
       - :math:`7.05\times 10^6`
       - :math:`1.97\times 10^6`
@@ -265,7 +335,6 @@ The last four rows in the table are the candidate materials for the layup design
       -
       -
     * - T650-35 12k/976
-      - Lamina
       - :math:`0.148781\times 10^{-3}`
       - :math:`22.0\times 10^6`
       - :math:`1.30\times 10^6`
@@ -277,7 +346,6 @@ The last four rows in the table are the candidate materials for the layup design
       -
       -
     * - T700 24K/E765
-      - Lamina
       - :math:`0.145037\times 10^{-3}`
       - :math:`18.71\times 10^6`
       - :math:`1.36\times 10^6`
@@ -337,7 +405,7 @@ A summary of the properties is listed in :numref:`Table %s <tab-props>`.
     :header-rows: 1
 
     * - Symbol
-      - Label
+      - Name in input files
       - Description
     * - :math:`m`
       - ``mu``

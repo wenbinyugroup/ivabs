@@ -140,7 +140,8 @@ Complete file
 -------------
 
 .. code-block:: json
-    :caption: The complete file
+    :caption: interface_args.json
+    :name: code-arguments
 
     {
 

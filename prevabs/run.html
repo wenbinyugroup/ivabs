@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How to Run PreVABS &mdash; iVABS 1.4 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <title>How to Run PreVABS &mdash; iVABS 1.4 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -71,13 +73,13 @@ commentsRunWhenDOMLoaded(addUtterances);
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">iVABS Quick Start</span></p>
+              <p class="caption" role="heading"><span class="caption-text">iVABS Quick Start</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../ivabs/install.html">Download and Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ivabs/examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ivabs/tutorials.html">Tutorials</a></li>
 </ul>
-<p class="caption"><span class="caption-text">iVABS Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">iVABS Components</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">PreVABS Documentation</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">How to Run PreVABS</a><ul>
@@ -128,11 +130,11 @@ commentsRunWhenDOMLoaded(addUtterances);
            <div itemprop="articleBody">
              
   <div class="section" id="how-to-run-prevabs">
-<span id="section-run"></span><h1>How to Run PreVABS<a class="headerlink" href="#how-to-run-prevabs" title="Permalink to this headline">¶</a></h1>
+<span id="section-run"></span><h1>How to Run PreVABS<a class="headerlink" href="#how-to-run-prevabs" title="Permalink to this headline"></a></h1>
 <p>PreVABS is a command line based program which acts as a general-purpose preprocessor and postprocessor based on parametric inputs necessary for designing a cross section.</p>
 <p>Download the examples package from cdmHUB (<a class="reference external" href="https://cdmhub.org/resources/1597/supportingdocs">https://cdmhub.org/resources/1597/supportingdocs</a>), and unpack it to any location.</p>
 <div class="section" id="quick-start">
-<h2>Quick start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h2>
+<h2>Quick start<a class="headerlink" href="#quick-start" title="Permalink to this headline"></a></h2>
 <p>If you have already added the folder where you stored VABS, Gmsh and PreVABS to the system or user environment variable <code class="docutils literal notranslate"><span class="pre">PATH</span></code>, to execute PreVABS, you can open any command line tool (Command Prompt or PowerShell on Windows, Terminal on Linux), change directory to the root of the PreVABS package, and type the following command:</p>
 <ul>
 <li><p>On Windows:</p>
@@ -150,7 +152,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 The second option <code class="docutils literal notranslate"><span class="pre">-h</span></code> indicates the analysis to compute cross-sectional properties (this analysis is also called homogenization), where meshed cross section will be built and VABS input file will be generated.
 The last option <code class="docutils literal notranslate"><span class="pre">-v</span></code> is for visualizing the meshed cross section.</p>
 <p>PreVABS will read the parametric input files and generate the meshed cross section.</p>
-<p>Once finished, PreVABS will invoke Gmsh, a tool for visualization, to show the cross section with the corresponding meshes, as shown in <a class="reference internal" href="#fig-quickstart"><span class="std std-numref">Fig. 7</span></a>.
+<p>Once finished, PreVABS will invoke Gmsh, a tool for visualization, to show the cross section with the corresponding meshes, as shown in <a class="reference internal" href="#fig-quickstart"><span class="std std-numref">Fig. 1</span></a>.
 Three files are generated in the same location at this moment, a VABS input file <code class="docutils literal notranslate"><span class="pre">mh104.sg</span></code>, a Gmsh geometry file <code class="docutils literal notranslate"><span class="pre">mh104.geo</span></code>, a Gmsh mesh file <code class="docutils literal notranslate"><span class="pre">mh104.msh</span></code>, and a Gmsh option file <code class="docutils literal notranslate"><span class="pre">mh104.opt</span></code>.
 The geometry file is used to inspect errors when meshing cannot be accomplished.
 The latter three files are generated only when visualization is needed.</p>
@@ -165,19 +167,19 @@ and a valid license from AnalySwift (<a class="reference external" href="http://
 </div>
 <div class="figure align-center" id="fig-quickstart">
 <a class="reference internal image-reference" href="../_images/rungui0.png"><img alt="../_images/rungui0.png" src="../_images/rungui0.png" style="width: 6.5in;" /></a>
-<p class="caption"><span class="caption-number">Figure 7 </span><span class="caption-text">Cross section with meshes generated by PreVABS and visualized by Gmsh.
-Example: <code class="docutils literal notranslate"><span class="pre">examples\ex_airfoil\mh104.xml</span></code>.</span><a class="headerlink" href="#fig-quickstart" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 1 </span><span class="caption-text">Cross section with meshes generated by PreVABS and visualized by Gmsh.
+Example: <code class="docutils literal notranslate"><span class="pre">examples\ex_airfoil\mh104.xml</span></code>.</span><a class="headerlink" href="#fig-quickstart" title="Permalink to this image"></a></p>
 </div>
 </div>
 <div class="section" id="command-line-options">
-<span id="section-command-option"></span><h2>Command line options<a class="headerlink" href="#command-line-options" title="Permalink to this headline">¶</a></h2>
+<span id="section-command-option"></span><h2>Command line options<a class="headerlink" href="#command-line-options" title="Permalink to this headline"></a></h2>
 <p>PreVABS is executed using command <code class="docutils literal notranslate"><span class="pre">prevabs</span></code> with other options.
 If no option is given, a list of available arguments will be printed on the screen.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prevabs</span> <span class="o">-</span><span class="n">i</span> <span class="o">&lt;</span><span class="n">main_input_file_name</span><span class="o">.</span><span class="n">xml</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
 </pre></div>
 </div>
 <table class="docutils align-center" id="id1">
-<caption><span class="caption-number">Table 15 </span><span class="caption-text">Command line options</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 5 </span><span class="caption-text">Command line options</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 9%" />
 <col style="width: 91%" />
@@ -236,10 +238,10 @@ actual name of the executable used here is <code class="docutils literal notrans
 </div>
 </div>
 <div class="section" id="running-cases">
-<h2>Running cases<a class="headerlink" href="#running-cases" title="Permalink to this headline">¶</a></h2>
+<h2>Running cases<a class="headerlink" href="#running-cases" title="Permalink to this headline"></a></h2>
 <p>Some possible use cases are given below.</p>
 <div class="section" id="case-1-build-cross-section-from-parametric-input-files">
-<h3>Case 1: Build cross section from parametric input files<a class="headerlink" href="#case-1-build-cross-section-from-parametric-input-files" title="Permalink to this headline">¶</a></h3>
+<h3>Case 1: Build cross section from parametric input files<a class="headerlink" href="#case-1-build-cross-section-from-parametric-input-files" title="Permalink to this headline"></a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prevabs</span> <span class="o">-</span><span class="n">i</span> <span class="o">&lt;</span><span class="n">cross_section_file_name</span><span class="o">.</span><span class="n">xml</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">h</span> <span class="o">-</span><span class="n">v</span>
 </pre></div>
 </div>
@@ -247,7 +249,7 @@ actual name of the executable used here is <code class="docutils literal notrans
 One may also want to try different meshing sizes before running the analysis.</p>
 </div>
 <div class="section" id="case-2-carry-out-homogenization-without-visualization">
-<h3>Case 2: Carry out homogenization without visualization<a class="headerlink" href="#case-2-carry-out-homogenization-without-visualization" title="Permalink to this headline">¶</a></h3>
+<h3>Case 2: Carry out homogenization without visualization<a class="headerlink" href="#case-2-carry-out-homogenization-without-visualization" title="Permalink to this headline"></a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prevabs</span> <span class="o">-</span><span class="n">i</span> <span class="o">&lt;</span><span class="n">cross_section_file_name</span><span class="o">.</span><span class="n">xml</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">h</span> <span class="o">-</span><span class="n">e</span>
 </pre></div>
 </div>
@@ -263,12 +265,12 @@ The command is:</p>
 </div>
 </div>
 <div class="section" id="case-3-recover-3d-stress-strain-and-plot">
-<h3>Case 3: Recover 3D stress/strain and plot<a class="headerlink" href="#case-3-recover-3d-stress-strain-and-plot" title="Permalink to this headline">¶</a></h3>
+<h3>Case 3: Recover 3D stress/strain and plot<a class="headerlink" href="#case-3-recover-3d-stress-strain-and-plot" title="Permalink to this headline"></a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prevabs</span> <span class="o">-</span><span class="n">i</span> <span class="o">&lt;</span><span class="n">cross_section_file_name</span><span class="o">.</span><span class="n">xml</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">e</span> <span class="o">-</span><span class="n">v</span>
 </pre></div>
 </div>
 <p>After getting the results from a 1D beam analysis, one may want to find the local strains and stresses of a cross section at some location along the beam.
-This command will let PreVABS read those results, update the VABS input file, carry out recovery analysis, and finally draw contour plots in Gmsh (<a class="reference internal" href="#fig-post"><span class="std std-numref">Fig. 8</span></a>).
+This command will let PreVABS read those results, update the VABS input file, carry out recovery analysis, and finally draw contour plots in Gmsh (<a class="reference internal" href="#fig-post"><span class="std std-numref">Fig. 2</span></a>).
 An example of the recover analysis can be found in <a class="reference internal" href="examples/example_airfoil_recover.html#example-airfoil-recover"><span class="std std-ref">this example</span></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -286,7 +288,7 @@ coordinate system.</p>
 </div>
 <div class="figure align-center" id="fig-post">
 <a class="reference internal image-reference" href="../_images/examplemh104r.png"><img alt="../_images/examplemh104r.png" src="../_images/examplemh104r.png" style="width: 6.5in;" /></a>
-<p class="caption"><span class="caption-number">Figure 8 </span><span class="caption-text">Visualization of strains and stresses in Gmsh.</span><a class="headerlink" href="#fig-post" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 2 </span><span class="caption-text">Visualization of strains and stresses in Gmsh.</span><a class="headerlink" href="#fig-post" title="Permalink to this image"></a></p>
 </div>
 </div>
 </div>

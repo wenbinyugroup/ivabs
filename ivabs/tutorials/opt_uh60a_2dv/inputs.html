@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Preparation of Input Files &mdash; iVABS 1.4 documentation</title><link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <title>Preparation of Input Files &mdash; iVABS 1.4 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/doctools.js"></script>
@@ -48,9 +50,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Dakota Input File (cs_tm_opt_soga.dakota)" href="inputs_dakota.html" />
-    <link rel="prev" title="Optimization Formulation" href="opt.html" /> 
+    <link rel="search" title="Search" href="../../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -71,32 +71,13 @@ commentsRunWhenDOMLoaded(addUtterances);
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">iVABS Quick Start</span></p>
-<ul class="current">
+              <p class="caption" role="heading"><span class="caption-text">iVABS Quick Start</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Download and Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../tutorials.html">Tutorials</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../opt_uh60a_2dv.html">Optimization of A Blade Spar</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="running.html">Running of The Tutorial</a></li>
-<li class="toctree-l3"><a class="reference internal" href="problem.html">Problem Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cs_param.html">Cross-sectional Parameterization and Beam Properties</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opt.html">Optimization Formulation</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Preparation of Input Files</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="inputs_dakota.html">Dakota Input File (<code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.dakota</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="inputs_cs_template.html">Cross-section Main Input Template (<code class="docutils literal notranslate"><span class="pre">design/uh60a_section.xml.tmp</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="inputs_cs_materials.html">Material Database (<code class="docutils literal notranslate"><span class="pre">material_database.xml</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="inputs_cs_airfoil.html">Cross-section Airfoil Data (<code class="docutils literal notranslate"><span class="pre">sc1095.dat</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="inputs_interface.html">Dakota Interface Scripts (<code class="docutils literal notranslate"><span class="pre">interface.py</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="inputs_arguments.html">Interface Arguments (<code class="docutils literal notranslate"><span class="pre">interface_args.json</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="inputs_data_process.html">Data Processing Functions (<code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">iVABS Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">iVABS Components</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../prevabs/index.html">PreVABS Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../msgpi/index.html">msgpi documentation</a></li>
@@ -116,8 +97,6 @@ commentsRunWhenDOMLoaded(addUtterances);
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../tutorials.html">Tutorials</a> &raquo;</li>
-          <li><a href="../opt_uh60a_2dv.html">Optimization of A Blade Spar</a> &raquo;</li>
       <li>Preparation of Input Files</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/wenbinyugroup/ivabs/blob/main/docs/source/ivabs/tutorials/opt_uh60a_2dv/inputs.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -129,64 +108,53 @@ commentsRunWhenDOMLoaded(addUtterances);
            <div itemprop="articleBody">
              
   <div class="section" id="preparation-of-input-files">
-<h1>Preparation of Input Files<a class="headerlink" href="#preparation-of-input-files" title="Permalink to this headline">¶</a></h1>
+<h1>Preparation of Input Files<a class="headerlink" href="#preparation-of-input-files" title="Permalink to this headline"></a></h1>
 <p>This optimization study requires the following files as the inputs.</p>
 <table class="docutils align-center" id="id1">
-<caption><span class="caption-number">Table 13 </span><span class="caption-text">Input files</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-text">Input files</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.dakota</span></code></p></th>
-<th class="head"><p>Dakota input file; Specify optimization study setup</p></th>
+<tr class="row-odd"><th class="head"><p>File name</p></th>
+<th class="head"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>File name</p></td>
-<td><p>Description</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">uh60a_section.xml.tmp</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">uh60a_section.xml.tmp</span></code></p></td>
 <td><p>Cross-sectional design template</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">material_database.xml</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">material_database.xml</span></code></p></td>
 <td><p>Material database</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">sc1095.dat</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sc1095.dat</span></code></p></td>
 <td><p>Airfoil data</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">interface.py</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">interface.py</span></code></p></td>
 <td><p>Interface for Dakota to run the analysis</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">interface_args.json</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">interface_args.json</span></code></p></td>
 <td><p>Arguments for the analysis</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code></p></td>
 <td><p>Functions for processing data (input/output)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.dakota</span></code></p></td>
+<td><p>Dakota input file; Specify optimization study setup</p></td>
 </tr>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="inputs_dakota.html">Dakota Input File (<code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.dakota</span></code>)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="inputs_dakota.html#environment">Environment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="inputs_dakota.html#method">Method</a></li>
-<li class="toctree-l2"><a class="reference internal" href="inputs_dakota.html#model">Model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="inputs_dakota.html#variables">Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="inputs_dakota.html#interface">Interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="inputs_dakota.html#responses">Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="inputs_dakota.html#complete-file">Complete file</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="inputs_cs_template.html">Cross-section Main Input Template (<code class="docutils literal notranslate"><span class="pre">design/uh60a_section.xml.tmp</span></code>)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="inputs_cs_template.html#initiation">Initiation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="inputs_cs_template.html#include-tag">Include tag</a></li>
-<li class="toctree-l2"><a class="reference internal" href="inputs_cs_template.html#analysis-tag">Analysis tag</a></li>
-<li class="toctree-l2"><a class="reference internal" href="inputs_cs_template.html#general-settings">General settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="inputs_cs_template.html#basepoints-definition">Basepoints definition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="inputs_cs_template.html#baselines-definition">Baselines definition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="inputs_cs_template.html#the-components-definition">The components definition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inputs_cs_template.html">Cross-section Main Input Template (<code class="docutils literal notranslate"><span class="pre">uh60a_section.xml.tmp</span></code>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="inputs_cs_template.html#section-1-including-files">Section 1: Including files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inputs_cs_template.html#section-2-analysis-settings">Section 2: Analysis settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inputs_cs_template.html#section-3-general-settings">Section 3: General settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inputs_cs_template.html#section-4-geoemtry">Section 4: Geoemtry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inputs_cs_template.html#section-5-layups">Section 5: Layups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inputs_cs_template.html#section-6-components">Section 6: Components</a></li>
 <li class="toctree-l2"><a class="reference internal" href="inputs_cs_template.html#complete-file">Complete file</a></li>
 </ul>
 </li>
@@ -215,6 +183,16 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toctree-l2"><a class="reference internal" href="inputs_data_process.html#complete-file">Complete file</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="inputs_dakota.html">Dakota Input File (<code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.dakota</span></code>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="inputs_dakota.html#environment">Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inputs_dakota.html#method">Method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inputs_dakota.html#model">Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inputs_dakota.html#variables">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inputs_dakota.html#interface">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inputs_dakota.html#responses">Responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inputs_dakota.html#complete-file">Complete file</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -222,10 +200,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="opt.html" class="btn btn-neutral float-left" title="Optimization Formulation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="inputs_dakota.html" class="btn btn-neutral float-right" title="Dakota Input File (cs_tm_opt_soga.dakota)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 
