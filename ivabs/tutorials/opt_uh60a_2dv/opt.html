@@ -51,7 +51,9 @@ commentsRunWhenDOMLoaded(addUtterances);
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" /> 
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Preparation of Input Files" href="inputs.html" />
+    <link rel="prev" title="Cross-sectional Parameterization and Beam Properties" href="cs_param.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -73,10 +75,26 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">iVABS Quick Start</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Download and Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../tutorials.html">Tutorials</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../opt_uh60a_2dv.html">Optimization of a single UH-60A cross-section</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="running.html">Running of The Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="problem.html">Problem Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cs_param.html">Cross-sectional Parameterization and Beam Properties</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Optimization Formulation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#design-variables">Design variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fixed-parameters">Fixed parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#objective">Objective</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#method">Method</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="inputs.html">Preparation of Input Files</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">iVABS Components</span></p>
 <ul>
@@ -98,6 +116,8 @@ commentsRunWhenDOMLoaded(addUtterances);
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../tutorials.html">Tutorials</a> &raquo;</li>
+          <li><a href="../opt_uh60a_2dv.html">Optimization of a single UH-60A cross-section</a> &raquo;</li>
       <li>Optimization Formulation</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/wenbinyugroup/ivabs/blob/main/docs/source/ivabs/tutorials/opt_uh60a_2dv/opt.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -114,7 +134,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2>Design variables<a class="headerlink" href="#design-variables" title="Permalink to this headline"></a></h2>
 <p>Two parameters controlling the size and location of the box spar will be treated as design variables in this example.</p>
 <table class="docutils align-center" id="id1">
-<caption><span class="caption-text">Design variables</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
+<caption><span class="caption-number">Table 14 </span><span class="caption-text">Design variables</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 25%" />
 <col style="width: 25%" />
@@ -144,9 +164,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="section" id="fixed-parameters">
 <h2>Fixed parameters<a class="headerlink" href="#fixed-parameters" title="Permalink to this headline"></a></h2>
-<p>All other cross-sectional parameters are fixed and summarized in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Table</span> <span class="pre">%s</span></code></p>
+<p>All other cross-sectional parameters are fixed and summarized in <a class="reference internal" href="#tab-param-fixed"><span class="std std-numref">Table 15</span></a></p>
 <table class="docutils align-center" id="tab-param-fixed">
-<caption><span class="caption-text">Fixed parameters</span><a class="headerlink" href="#tab-param-fixed" title="Permalink to this table"></a></caption>
+<caption><span class="caption-number">Table 15 </span><span class="caption-text">Fixed parameters</span><a class="headerlink" href="#tab-param-fixed" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 25%" />
 <col style="width: 25%" />
@@ -311,7 +331,10 @@ The difference is measured as the maximum one among the differences (absolute va
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="cs_param.html" class="btn btn-neutral float-left" title="Cross-sectional Parameterization and Beam Properties" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="inputs.html" class="btn btn-neutral float-right" title="Preparation of Input Files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

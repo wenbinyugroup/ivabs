@@ -161,7 +161,7 @@ in the direction cosine matrix are flattened into a single array in the
 <code class="docutils literal notranslate"><span class="pre">&lt;rotations&gt;</span></code> element. This matrix is defined in
 Eq. <a class="reference internal" href="#equation-eq-direction-cosine">(3)</a>. Note that displacements and rotations
 are needed only for recovering 3D displacements. A template for this
-part of data is shown in <a class="reference internal" href="#code-recover"><span class="std std-numref">Listing 27</span></a>. Numbers
+part of data is shown in <a class="reference internal" href="#code-recover"><span class="std std-numref">Listing 33</span></a>. Numbers
 in this template are defualt values. Once this file is updated correctly,
 the VABS recover analysis can be carried out as shown in Section:
 <a class="reference internal" href="../run.html#section-command-option"><span class="std std-ref">Command line options</span></a>.</p>
@@ -172,7 +172,7 @@ are the base vectors of the deformed triad and <span class="math notranslate noh
 <span class="math notranslate nohighlight">\(\mathbf{b}_2\)</span>, and <span class="math notranslate nohighlight">\(\mathbf{b}_3\)</span> are the base vectors of
 the undeformed triad.</p>
 <div class="literal-block-wrapper docutils container" id="code-recover">
-<div class="code-block-caption"><span class="caption-number">Listing 27 </span><span class="caption-text">A template for the recover data in a <em>Cross section</em> file.</span><a class="headerlink" href="#code-recover" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 33 </span><span class="caption-text">A template for the recover data in a <em>Cross section</em> file.</span><a class="headerlink" href="#code-recover" title="Permalink to this code"></a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;cross_section</span> <span class="na">name=</span><span class="s">&quot;cs1&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 2</span>  ...
 <span class="linenos"> 3</span>  <span class="nt">&lt;dehomo&gt;</span> 1 <span class="nt">&lt;/dehomo&gt;</span>
@@ -219,7 +219,7 @@ the undeformed triad.</p>
 <div class="section" id="swiftcomp">
 <h2>SwiftComp<a class="headerlink" href="#swiftcomp" title="Permalink to this headline"></a></h2>
 <div class="literal-block-wrapper docutils container" id="code-dehomo-sc">
-<div class="code-block-caption"><span class="caption-number">Listing 28 </span><span class="caption-text">Syntax for the dehomogenization inputs for SwiftComp.</span><a class="headerlink" href="#code-dehomo-sc" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 34 </span><span class="caption-text">Syntax for the dehomogenization inputs for SwiftComp.</span><a class="headerlink" href="#code-dehomo-sc" title="Permalink to this code"></a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;global</span> <span class="na">measure=</span><span class="s">&quot;stress&quot;</span><span class="nt">&gt;</span>
 <span class="linenos">2</span>  <span class="nt">&lt;displacements&gt;</span> 0 0 0 <span class="nt">&lt;/displacements&gt;</span>
 <span class="linenos">3</span>  <span class="nt">&lt;rotations&gt;</span> 1 0 0 0 1 0 0 0 1 <span class="nt">&lt;/rotations&gt;</span>

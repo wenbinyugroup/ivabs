@@ -3,18 +3,18 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Tutorial
-====================================
+Optimization of a single UH-60A cross-section
+=============================================
 
 .. toctree::
    :maxdepth: 3
    :caption: Contents:
 
-   contents/running
-   contents/problem
-   contents/cs_param
-   contents/opt
-   contents/inputs
+   opt_uh60a_2dv/running
+   opt_uh60a_2dv/problem
+   opt_uh60a_2dv/cs_param
+   opt_uh60a_2dv/opt
+   opt_uh60a_2dv/inputs
 
 
 

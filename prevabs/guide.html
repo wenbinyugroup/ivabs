@@ -130,13 +130,13 @@ commentsRunWhenDOMLoaded(addUtterances);
              
   <div class="section" id="guide-for-preparing-input-files">
 <h1>Guide for Preparing Input Files<a class="headerlink" href="#guide-for-preparing-input-files" title="Permalink to this headline"></a></h1>
-<p>In PreVABS, a cross section is defined through two aspects: components and global configuration, as shown in <a class="reference internal" href="#fig-csfiles1"><span class="std std-numref">Fig. 10</span></a>.
+<p>In PreVABS, a cross section is defined through two aspects: components and global configuration, as shown in <a class="reference internal" href="#fig-csfiles1"><span class="std std-numref">Fig. 15</span></a>.
 Components are built from geometry and materials.
 The geometry aspect comprises definitions of base points and base lines.
 The material aspect includes material properties, lamina thicknesses, layup stacking sequences, etc. The global configuration contains the files included, transformation, meshing options, and analysis settings.</p>
 <div class="figure align-center" id="fig-csfiles1">
 <a class="reference internal image-reference" href="../_images/chart1.png"><img alt="../_images/chart1.png" src="../_images/chart1.png" style="width: 75%;" /></a>
-<p class="caption"><span class="caption-number">Figure 10 </span><span class="caption-text">Cross section definition in PreVABS.</span><a class="headerlink" href="#fig-csfiles1" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-number">Figure 15 </span><span class="caption-text">Cross section definition in PreVABS.</span><a class="headerlink" href="#fig-csfiles1" title="Permalink to this image"></a></p>
 </div>
 <p>To create the cross section, at least four input files are needed.
 Definitions of the geometry, materials and layups are stored in three files separately.
@@ -144,9 +144,9 @@ A top level cross section file stores the definitions of components and global c
 In some cases, a separate file storing base points is needed (such as an airfoil).
 Except the base points file, which has a file extension .dat, all other files use an XML format.</p>
 <p>A top level cross section file stores all information that will be discussed in the following sections.
-The input syntax for this main file is shown in <a class="reference internal" href="#code-crosssection"><span class="std std-numref">Listing 7</span></a>.</p>
+The input syntax for this main file is shown in <a class="reference internal" href="#code-crosssection"><span class="std std-numref">Listing 13</span></a>.</p>
 <div class="literal-block-wrapper docutils container" id="code-crosssection">
-<div class="code-block-caption"><span class="caption-number">Listing 7 </span><span class="caption-text">Input syntax for the cross section file.</span><a class="headerlink" href="#code-crosssection" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 13 </span><span class="caption-text">Input syntax for the cross section file.</span><a class="headerlink" href="#code-crosssection" title="Permalink to this code"></a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;cross_section</span> <span class="na">name=</span><span class="s">&quot;&quot;</span> <span class="na">format=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 2</span>  <span class="nt">&lt;include&gt;</span>...<span class="nt">&lt;/include&gt;</span>
 <span class="linenos"> 3</span>  <span class="nt">&lt;analysis&gt;</span>...<span class="nt">&lt;/analysis&gt;</span>

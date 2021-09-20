@@ -51,7 +51,9 @@ commentsRunWhenDOMLoaded(addUtterances);
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" /> 
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Cross-sectional Parameterization and Beam Properties" href="cs_param.html" />
+    <link rel="prev" title="Running of The Tutorial" href="running.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -73,10 +75,24 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">iVABS Quick Start</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Download and Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../tutorials.html">Tutorials</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../opt_uh60a_2dv.html">Optimization of a single UH-60A cross-section</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="running.html">Running of The Tutorial</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Problem Description</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#scope-of-the-study">Scope of the study</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#specifications">Specifications</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cs_param.html">Cross-sectional Parameterization and Beam Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opt.html">Optimization Formulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inputs.html">Preparation of Input Files</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">iVABS Components</span></p>
 <ul>
@@ -98,6 +114,8 @@ commentsRunWhenDOMLoaded(addUtterances);
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../tutorials.html">Tutorials</a> &raquo;</li>
+          <li><a href="../opt_uh60a_2dv.html">Optimization of a single UH-60A cross-section</a> &raquo;</li>
       <li>Problem Description</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/wenbinyugroup/ivabs/blob/main/docs/source/ivabs/tutorials/opt_uh60a_2dv/problem.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -114,18 +132,18 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="scope-of-the-study">
 <h2>Scope of the study<a class="headerlink" href="#scope-of-the-study" title="Permalink to this headline"></a></h2>
 <p>This example assumes a uniform design along the span of the blade.
-A specific topology which is a box spar design is considered for the structure, as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code>.
+A specific topology which is a box spar design is considered for the structure, as shown in <a class="reference internal" href="#fig-cs-topo"><span class="std std-numref">Fig. 1</span></a>.
 More details about the parameterization of the structure can be found in Section: <a class="reference internal" href="cs_param.html#sect-cs-param"><span class="std std-ref">Cross-sectional Parameterization and Beam Properties</span></a>.</p>
 <div class="figure align-center" id="fig-cs-topo">
 <img alt="../../../_images/cs_topo.png" src="../../../_images/cs_topo.png" />
-<p class="caption"><span class="caption-text">Topology of the cross-section.</span><a class="headerlink" href="#fig-cs-topo" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-number">Figure 1 </span><span class="caption-text">Topology of the cross-section.</span><a class="headerlink" href="#fig-cs-topo" title="Permalink to this image"></a></p>
 </div>
 </div>
 <div class="section" id="specifications">
 <h2>Specifications<a class="headerlink" href="#specifications" title="Permalink to this headline"></a></h2>
-<p>Airfoil, chord length and target beam properties are summarized in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Table</span> <span class="pre">%s</span></code>.</p>
+<p>Airfoil, chord length and target beam properties are summarized in <a class="reference internal" href="#tab-spec"><span class="std std-numref">Table 5</span></a>.</p>
 <table class="docutils align-center" id="tab-spec">
-<caption><span class="caption-text">Specifications</span><a class="headerlink" href="#tab-spec" title="Permalink to this table"></a></caption>
+<caption><span class="caption-number">Table 5 </span><span class="caption-text">Specifications</span><a class="headerlink" href="#tab-spec" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -163,7 +181,10 @@ More details about the parameterization of the structure can be found in Section
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="running.html" class="btn btn-neutral float-left" title="Running of The Tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cs_param.html" class="btn btn-neutral float-right" title="Cross-sectional Parameterization and Beam Properties" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

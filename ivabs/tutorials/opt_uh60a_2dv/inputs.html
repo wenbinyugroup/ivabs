@@ -50,7 +50,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" /> 
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Cross-section Main Input Template (uh60a_section.xml.tmp)" href="inputs_cs_template.html" />
+    <link rel="prev" title="Optimization Formulation" href="opt.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -72,10 +74,29 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">iVABS Quick Start</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Download and Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../tutorials.html">Tutorials</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../opt_uh60a_2dv.html">Optimization of a single UH-60A cross-section</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="running.html">Running of The Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="problem.html">Problem Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cs_param.html">Cross-sectional Parameterization and Beam Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opt.html">Optimization Formulation</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Preparation of Input Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="inputs_cs_template.html">Cross-section Main Input Template (<code class="docutils literal notranslate"><span class="pre">uh60a_section.xml.tmp</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="inputs_cs_materials.html">Material Database (<code class="docutils literal notranslate"><span class="pre">material_database.xml</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="inputs_cs_airfoil.html">Cross-section Airfoil Data (<code class="docutils literal notranslate"><span class="pre">sc1095.dat</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="inputs_interface.html">Dakota Interface Scripts (<code class="docutils literal notranslate"><span class="pre">interface.py</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="inputs_arguments.html">Interface Arguments (<code class="docutils literal notranslate"><span class="pre">interface_args.json</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="inputs_data_process.html">Data Processing Functions (<code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="inputs_dakota.html">Dakota Input File (<code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.dakota</span></code>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">iVABS Components</span></p>
 <ul>
@@ -97,6 +118,8 @@ commentsRunWhenDOMLoaded(addUtterances);
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../tutorials.html">Tutorials</a> &raquo;</li>
+          <li><a href="../opt_uh60a_2dv.html">Optimization of a single UH-60A cross-section</a> &raquo;</li>
       <li>Preparation of Input Files</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/wenbinyugroup/ivabs/blob/main/docs/source/ivabs/tutorials/opt_uh60a_2dv/inputs.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -111,7 +134,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h1>Preparation of Input Files<a class="headerlink" href="#preparation-of-input-files" title="Permalink to this headline"></a></h1>
 <p>This optimization study requires the following files as the inputs.</p>
 <table class="docutils align-center" id="id1">
-<caption><span class="caption-text">Input files</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
+<caption><span class="caption-number">Table 16 </span><span class="caption-text">Input files</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -200,7 +223,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="opt.html" class="btn btn-neutral float-left" title="Optimization Formulation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="inputs_cs_template.html" class="btn btn-neutral float-right" title="Cross-section Main Input Template (uh60a_section.xml.tmp)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

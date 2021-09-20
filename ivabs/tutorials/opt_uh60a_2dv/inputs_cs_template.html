@@ -50,7 +50,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" /> 
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Material Database (material_database.xml)" href="inputs_cs_materials.html" />
+    <link rel="prev" title="Preparation of Input Files" href="inputs.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -72,10 +74,29 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">iVABS Quick Start</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Download and Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../tutorials.html">Tutorials</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../opt_uh60a_2dv.html">Optimization of a single UH-60A cross-section</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="running.html">Running of The Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="problem.html">Problem Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cs_param.html">Cross-sectional Parameterization and Beam Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opt.html">Optimization Formulation</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="inputs.html">Preparation of Input Files</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Cross-section Main Input Template (<code class="docutils literal notranslate"><span class="pre">uh60a_section.xml.tmp</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="inputs_cs_materials.html">Material Database (<code class="docutils literal notranslate"><span class="pre">material_database.xml</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="inputs_cs_airfoil.html">Cross-section Airfoil Data (<code class="docutils literal notranslate"><span class="pre">sc1095.dat</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="inputs_interface.html">Dakota Interface Scripts (<code class="docutils literal notranslate"><span class="pre">interface.py</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="inputs_arguments.html">Interface Arguments (<code class="docutils literal notranslate"><span class="pre">interface_args.json</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="inputs_data_process.html">Data Processing Functions (<code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="inputs_dakota.html">Dakota Input File (<code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.dakota</span></code>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">iVABS Components</span></p>
 <ul>
@@ -97,6 +118,9 @@ commentsRunWhenDOMLoaded(addUtterances);
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../tutorials.html">Tutorials</a> &raquo;</li>
+          <li><a href="../opt_uh60a_2dv.html">Optimization of a single UH-60A cross-section</a> &raquo;</li>
+          <li><a href="inputs.html">Preparation of Input Files</a> &raquo;</li>
       <li>Cross-section Main Input Template (<code class="docutils literal notranslate"><span class="pre">uh60a_section.xml.tmp</span></code>)</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/wenbinyugroup/ivabs/blob/main/docs/source/ivabs/tutorials/opt_uh60a_2dv/inputs_cs_template.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -234,14 +258,14 @@ The discrete tag specifies number of lines this circle is divided into.</p>
 </pre></div>
 </div>
 <p>Now we have all the pieces. We can primitives and base points introduced to define some base lines.
-The base lines and base points are illustrated in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code>.
+The base lines and base points are illustrated in <a class="reference internal" href="#fig-uh60a-baselines"><span class="std std-numref">Fig. 5</span></a>.
 The point 1 is the rightmost point or starting point;
 the point 71 is leftmost point on the upper half;
 the point 72 is the leftmost point on the lower half (71 and 72 has the same x2 value);
 the point 141 is the last point before getting back to the starting point.</p>
 <div class="figure align-center" id="fig-uh60a-baselines">
 <a class="reference internal image-reference" href="../../../_images/uh60a_baselines.jpg"><img alt="../../../_images/uh60a_baselines.jpg" src="../../../_images/uh60a_baselines.jpg" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-text">Base lines and base points definition</span><a class="headerlink" href="#fig-uh60a-baselines" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-number">Figure 5 </span><span class="caption-text">Base lines and base points definition</span><a class="headerlink" href="#fig-uh60a-baselines" title="Permalink to this image"></a></p>
 </div>
 <ol class="arabic">
 <li><p>The upper half of the airfoil</p>
@@ -319,7 +343,7 @@ the point 141 is the last point before getting back to the starting point.</p>
 </div>
 <p>Each layup tag could include multiple layer tags.
 For each layer tag, you need to specify lamina as defined in material database, fiber orientation and number of plies.
-For definition of other layups, refer to the complete input file <code class="xref std std-numref docutils literal notranslate"><span class="pre">Listing</span> <span class="pre">%s</span></code>.</p>
+For definition of other layups, refer to the complete input file <a class="reference internal" href="#code-cs-tmp-complete"><span class="std std-numref">Listing 1</span></a>.</p>
 </div>
 <div class="section" id="section-6-components">
 <h2>Section 6: Components<a class="headerlink" href="#section-6-components" title="Permalink to this headline"></a></h2>
@@ -460,7 +484,7 @@ Local mesh size control is used to refine the mesh near the specified location.<
 <div class="section" id="complete-file">
 <h2>Complete file<a class="headerlink" href="#complete-file" title="Permalink to this headline"></a></h2>
 <div class="literal-block-wrapper docutils container" id="code-cs-tmp-complete">
-<div class="code-block-caption"><span class="caption-text">uh60a_section.xml.tmp</span><a class="headerlink" href="#code-cs-tmp-complete" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 1 </span><span class="caption-text">uh60a_section.xml.tmp</span><a class="headerlink" href="#code-cs-tmp-complete" title="Permalink to this code"></a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="nt">&lt;cross_section</span> <span class="na">name=</span><span class="s">&quot;uh60a_section&quot;</span> <span class="na">format=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
 <span class="linenos">  2</span>    <span class="nt">&lt;include&gt;</span>
 <span class="linenos">  3</span>        <span class="nt">&lt;material&gt;</span>material_database<span class="nt">&lt;/material&gt;</span>
@@ -622,7 +646,10 @@ Local mesh size control is used to refine the mesh near the specified location.<
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="inputs.html" class="btn btn-neutral float-left" title="Preparation of Input Files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="inputs_cs_materials.html" class="btn btn-neutral float-right" title="Material Database (material_database.xml)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
