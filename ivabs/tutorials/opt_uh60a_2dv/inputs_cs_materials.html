@@ -136,14 +136,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span id="sect-input-material"></span><h1>Material Database (<code class="docutils literal notranslate"><span class="pre">material_database.xml</span></code>)<a class="headerlink" href="#material-database-material-database-xml" title="Permalink to this headline"></a></h1>
 <p>The material database is a XML file. The format is</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;materials&gt;</span>
-<span class="linenos"> 2</span><span class="c">&lt;!--You can put arbitrary number of material tags--&gt;</span>
+<span class="linenos"> 2</span><span class="cm">&lt;!--You can put arbitrary number of material tags--&gt;</span>
 <span class="linenos"> 3</span>    <span class="nt">&lt;material</span> <span class="na">name=</span><span class="s">&quot;[string]&quot;</span> <span class="na">type=</span><span class="s">&quot;&lt;isotropic|orthotropic|lamina&gt;&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 4</span>        <span class="nt">&lt;density&gt;</span>[number]<span class="nt">&lt;/density&gt;</span>
 <span class="linenos"> 5</span>        <span class="nt">&lt;elastic&gt;</span>
-<span class="linenos"> 6</span>        <span class="c">&lt;!--For isotropic--&gt;</span>
+<span class="linenos"> 6</span>        <span class="cm">&lt;!--For isotropic--&gt;</span>
 <span class="linenos"> 7</span>            <span class="nt">&lt;e&gt;</span>[number]<span class="nt">&lt;/e&gt;</span>
 <span class="linenos"> 8</span>            <span class="nt">&lt;nu&gt;</span>[number]<span class="nt">&lt;/nu&gt;</span>
-<span class="linenos"> 9</span>        <span class="c">&lt;!--For orthotropic--&gt;</span>
+<span class="linenos"> 9</span>        <span class="cm">&lt;!--For orthotropic--&gt;</span>
 <span class="linenos">10</span>            <span class="nt">&lt;e1&gt;</span>[number]<span class="nt">&lt;/e1&gt;</span>
 <span class="linenos">11</span>            <span class="nt">&lt;e2&gt;</span>[number]<span class="nt">&lt;/e2&gt;</span>
 <span class="linenos">12</span>            <span class="nt">&lt;e3&gt;</span>[number]<span class="nt">&lt;/e3&gt;</span>
@@ -153,14 +153,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="linenos">16</span>            <span class="nt">&lt;nu12&gt;</span>[number]<span class="nt">&lt;/nu12&gt;</span>
 <span class="linenos">17</span>            <span class="nt">&lt;nu13&gt;</span>[number]<span class="nt">&lt;/nu13&gt;</span>
 <span class="linenos">18</span>            <span class="nt">&lt;nu23&gt;</span>[number]<span class="nt">&lt;/nu23&gt;</span>
-<span class="linenos">19</span>        <span class="c">&lt;!--For lamina or transverse isotropic--&gt;</span>
+<span class="linenos">19</span>        <span class="cm">&lt;!--For lamina or transverse isotropic--&gt;</span>
 <span class="linenos">20</span>            <span class="nt">&lt;e1&gt;</span>[number]<span class="nt">&lt;/e1&gt;</span>
 <span class="linenos">21</span>            <span class="nt">&lt;e2&gt;</span>[number]<span class="nt">&lt;/e2&gt;</span>
 <span class="linenos">22</span>            <span class="nt">&lt;g12&gt;</span>[number]<span class="nt">&lt;/g12&gt;</span>
 <span class="linenos">23</span>            <span class="nt">&lt;nu12&gt;</span>[number]<span class="nt">&lt;/nu12&gt;</span>
 <span class="linenos">24</span>        <span class="nt">&lt;/elastic&gt;</span>
 <span class="linenos">25</span>    <span class="nt">&lt;/material&gt;</span>
-<span class="linenos">26</span><span class="c">&lt;!--You can put arbitrary number of lamina tags--&gt;</span>
+<span class="linenos">26</span><span class="cm">&lt;!--You can put arbitrary number of lamina tags--&gt;</span>
 <span class="linenos">27</span>    <span class="nt">&lt;lamina</span> <span class="na">name=</span><span class="s">&quot;[string]&quot;</span><span class="nt">&gt;</span>
 <span class="linenos">28</span>        <span class="nt">&lt;material&gt;</span>[string]<span class="nt">&lt;/material&gt;</span>
 <span class="linenos">29</span>        <span class="nt">&lt;thickness&gt;</span>[number]<span class="nt">&lt;/thickness&gt;</span>
@@ -175,10 +175,10 @@ Due to the file length, it’s not included here.</p>
 <p>For instance, Aluminum 8009 is used in the blade. The material property is <span class="math notranslate nohighlight">\(E=13.1\times10^6\ \mathrm{psi}\)</span>,
 <span class="math notranslate nohighlight">\(\nu=0.33\)</span>. Therefore, it’s declared in the database as</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;material</span> <span class="na">name=</span><span class="s">&quot;Aluminum 8009&quot;</span> <span class="na">type=</span><span class="s">&quot;isotropic&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">2</span>    <span class="c">&lt;!-- unit: lbf.sec^2/in^4 --&gt;</span>
+<span class="linenos">2</span>    <span class="cm">&lt;!-- unit: lbf.sec^2/in^4 --&gt;</span>
 <span class="linenos">3</span>    <span class="nt">&lt;density&gt;</span>0.271959e-3<span class="nt">&lt;/density&gt;</span>
 <span class="linenos">4</span>    <span class="nt">&lt;elastic&gt;</span>
-<span class="linenos">5</span>        <span class="c">&lt;!--unit:psi --&gt;</span>
+<span class="linenos">5</span>        <span class="cm">&lt;!--unit:psi --&gt;</span>
 <span class="linenos">6</span>        <span class="nt">&lt;e&gt;</span>13.1E+06<span class="nt">&lt;/e&gt;</span>
 <span class="linenos">7</span>        <span class="nt">&lt;nu&gt;</span>3.30E-01<span class="nt">&lt;/nu&gt;</span>
 <span class="linenos">8</span>    <span class="nt">&lt;/elastic&gt;</span>
@@ -222,10 +222,10 @@ property is</p>
 </table>
 <p>It’s declaed as</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;material</span> <span class="na">name=</span><span class="s">&quot;T650-35 12k/976&quot;</span> <span class="na">type=</span><span class="s">&quot;lamina&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 2</span>    <span class="c">&lt;!-- unit: lbf.sec^2/in^4 --&gt;</span>
+<span class="linenos"> 2</span>    <span class="cm">&lt;!-- unit: lbf.sec^2/in^4 --&gt;</span>
 <span class="linenos"> 3</span>    <span class="nt">&lt;density&gt;</span>0.148781e-3<span class="nt">&lt;/density&gt;</span>
 <span class="linenos"> 4</span>    <span class="nt">&lt;elastic&gt;</span>
-<span class="linenos"> 5</span>        <span class="c">&lt;!-- unit: lbf/in^2 --&gt;</span>
+<span class="linenos"> 5</span>        <span class="cm">&lt;!-- unit: lbf/in^2 --&gt;</span>
 <span class="linenos"> 6</span>        <span class="nt">&lt;e1&gt;</span>22.0E+06<span class="nt">&lt;/e1&gt;</span>
 <span class="linenos"> 7</span>        <span class="nt">&lt;e2&gt;</span>1.30E+06<span class="nt">&lt;/e2&gt;</span>
 <span class="linenos"> 8</span>        <span class="nt">&lt;g12&gt;</span>0.745E+06<span class="nt">&lt;/g12&gt;</span>
