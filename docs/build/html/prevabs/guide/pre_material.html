@@ -1,41 +1,35 @@
 
-
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" />
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Materials and layups &mdash; iVABS 1.4 documentation</title>
-  
 
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Materials and layups &#8212; iVABS 0.6 documentation</title>
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script kind="utterances">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
     if (document.readyState != 'loading') {
@@ -69,138 +63,412 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
-</head>
-
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
 
-          
-            <a href="../../index.html" class="icon icon-home"> iVABS
-          
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
 
-          
-          </a>
+    
+    <div class="container-fluid" id="banner"></div>
 
-          
-            
-            
-              <div class="version">
-                1.4
-              </div>
-            
-          
+    
 
+    <div class="container-xl">
+      <div class="row">
           
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption" role="heading"><span class="caption-text">iVABS Quick Start</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../ivabs/install.html">Download and Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../ivabs/examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../ivabs/tutorials.html">Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../ivabs/main_input.html">Main Input File</a></li>
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">iVABS 0.6 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../ivabs/install.html">
+   Download and Installation
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../ivabs/examples.html">
+   Examples
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ivabs/examples/example_uh60a.html">
+     Example 1: Automatic Process of Cross-sectional Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ivabs/examples/example_uh60a_sensi.html">
+     Example 2: Sensitivity analysis of UH60A with Dakota
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ivabs/examples/example_uh60a_opt.html">
+     Example 3: Optimization of a Cross-section using Dakota
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../ivabs/main_input.html">
+   Guide to Main Input File
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ivabs/input_guide/input_design.html">
+     Design Parameters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ivabs/input_guide/input_analysis.html">
+     Analysis Steps
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ivabs/input_guide/input_study.html">
+     Design Study
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../ivabs/parameterization.html">
+   Parameterization of Composite Slender Structures
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../ivabs/cs_template.html">
+   Cross-sectional Design Template
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ivabs/cs_templates/airfoil_box_uni.html">
+     Airfoil Box-spar Uniform
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-          
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
         </div>
-        
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">iVABS</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
-      <li>Materials and layups</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-          
-            
-              <a href="https://github.com/wenbinyugroup/ivabs/blob/main/docs/source/prevabs/guide/pre_material.rst" class="fa fa-github"> Edit on GitHub</a>
-            
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
+    </div>
+    <div id="rtd-footer-container"></div>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/wenbinyugroup/ivabs"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/wenbinyugroup/ivabs/issues/new?title=Issue%20on%20page%20%2Fprevabs/guide/pre_material.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/wenbinyugroup/ivabs/edit/master/prevabs/guide/pre_material.rst"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/prevabs/guide/pre_material.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#material-and-lamina">
+   Material and lamina
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#layups">
+   Layups
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explicit-list">
+     Explicit list
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stacking-sequence-code">
+     Stacking sequence code
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Materials and layups</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#material-and-lamina">
+   Material and lamina
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#layups">
+   Layups
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explicit-list">
+     Explicit list
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stacking-sequence-code">
+     Stacking sequence code
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
   <div class="section" id="materials-and-layups">
-<span id="section-material-layup"></span><h1>Materials and layups<a class="headerlink" href="#materials-and-layups" title="Permalink to this headline">¶</a></h1>
+<span id="section-material-layup"></span><h1>Materials and layups<a class="headerlink" href="#materials-and-layups" title="Permalink to this headline">#</a></h1>
 <p>PreVABS uses the keyword <code class="docutils literal notranslate"><span class="pre">material</span></code> for the physical properties attached to any materials, while <code class="docutils literal notranslate"><span class="pre">lamina</span></code> for material plus thickness, which in a sense is fixed by manufacturers.
 This can be thought as the basic commercially available “material”, such as a composite preprag.
 A layer is a stack of laminae with the same fiber orientation.
@@ -210,15 +478,15 @@ This relationship is illustrated in <code class="xref std std-numref docutils li
 More details can be found below.</p>
 <div class="figure align-center" id="fig-layup">
 <a class="reference internal image-reference" href="../../_images/layup.png"><img alt="../../_images/layup.png" src="../../_images/layup.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-text">Relationship between material, lamina, layer and layup.</span><a class="headerlink" href="#fig-layup" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Relationship between material, lamina, layer and layup.</span><a class="headerlink" href="#fig-layup" title="Permalink to this image">#</a></p>
 </div>
 <div class="section" id="material-and-lamina">
-<h2>Material and lamina<a class="headerlink" href="#material-and-lamina" title="Permalink to this headline">¶</a></h2>
+<h2>Material and lamina<a class="headerlink" href="#material-and-lamina" title="Permalink to this headline">#</a></h2>
 <p>Both materials and laminae are stored in one XML file, under the single root element <code class="docutils literal notranslate"><span class="pre">&lt;materials&gt;</span></code>.
 A template of this file is shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Listing</span> <span class="pre">%s</span></code>.
 Each material must have a name and type. Under each <code class="docutils literal notranslate"><span class="pre">&lt;material&gt;</span></code> element, there are a <code class="docutils literal notranslate"><span class="pre">&lt;density&gt;</span></code> element and an <code class="docutils literal notranslate"><span class="pre">&lt;elastic&gt;</span></code> element.</p>
 <div class="literal-block-wrapper docutils container" id="code-material-temp">
-<div class="code-block-caption"><span class="caption-text">Input syntax for materials.</span><a class="headerlink" href="#code-material-temp" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">Input syntax for materials.</span><a class="headerlink" href="#code-material-temp" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;materials&gt;</span>
 <span class="linenos"> 2</span>  ...
 <span class="linenos"> 3</span>  <span class="nt">&lt;material</span> <span class="na">name=</span><span class="s">&quot;iso1&quot;</span> <span class="na">type=</span><span class="s">&quot;isotropic&quot;</span><span class="nt">&gt;</span>
@@ -313,7 +581,7 @@ Each material must have a name and type. Under each <code class="docutils litera
 </li>
 </ul>
 <div class="math notranslate nohighlight" id="equation-hookeslaw">
-<span class="eqno">()<a class="headerlink" href="#equation-hookeslaw" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{Bmatrix}
+<span class="eqno">()<a class="headerlink" href="#equation-hookeslaw" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{Bmatrix}
   \sigma_{11} \\ \sigma_{12} \\ \sigma_{13} \\ \sigma_{22} \\ \sigma_{23} \\ \sigma_{33}
 \end{Bmatrix} =
 \begin{bmatrix}
@@ -330,7 +598,7 @@ Each material must have a name and type. Under each <code class="docutils litera
 <p>Each lamina element has a name, and contains a material name and a value for thickness.
 The input syntax is shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Listing</span> <span class="pre">%s</span></code>.</p>
 <div class="literal-block-wrapper docutils container" id="code-lamina-temp">
-<div class="code-block-caption"><span class="caption-text">Input syntax for lamina.</span><a class="headerlink" href="#code-lamina-temp" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">Input syntax for lamina.</span><a class="headerlink" href="#code-lamina-temp" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;materials&gt;</span>
 <span class="linenos">2</span>  ...
 <span class="linenos">3</span>  <span class="nt">&lt;lamina</span> <span class="na">name=</span><span class="s">&quot;lamina1&quot;</span><span class="nt">&gt;</span>
@@ -356,7 +624,7 @@ The input syntax is shown in <code class="xref std std-numref docutils literal n
 </ul>
 </div>
 <div class="section" id="layups">
-<h2>Layups<a class="headerlink" href="#layups" title="Permalink to this headline">¶</a></h2>
+<h2>Layups<a class="headerlink" href="#layups" title="Permalink to this headline">#</a></h2>
 <p>In general, there are two ways to define a layup, explicit list and stacking sequence code.
 For the explicit list, a laminate is laid onto the base line from the first layer in the list to the last one, in the direction given by the user.
 For the stacking sequence, the layup starts from left to the right.
@@ -366,10 +634,10 @@ All layup information are included in one XML file.
 A template of this file can be found in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Listing</span> <span class="pre">%s</span></code>.</p>
 <div class="figure align-center" id="fig-elementalframe">
 <a class="reference internal image-reference" href="../../_images/elementalframe.png"><img alt="../../_images/elementalframe.png" src="../../_images/elementalframe.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-text">Relations among the base line direction, elemental frame <strong>y</strong> and fiber orientation (Note $y_2$ is parallel to the base line direction).</span><a class="headerlink" href="#fig-elementalframe" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Relations among the base line direction, elemental frame <strong>y</strong> and fiber orientation (Note $y_2$ is parallel to the base line direction).</span><a class="headerlink" href="#fig-elementalframe" title="Permalink to this image">#</a></p>
 </div>
 <div class="literal-block-wrapper docutils container" id="code-layup-temp">
-<div class="code-block-caption"><span class="caption-text">Input syntax for layups.</span><a class="headerlink" href="#code-layup-temp" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">Input syntax for layups.</span><a class="headerlink" href="#code-layup-temp" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;layups&gt;</span>
 <span class="linenos">2</span>  <span class="nt">&lt;layup</span> <span class="na">name=</span><span class="s">&quot;layup1&quot;</span> <span class="na">method=</span><span class="s">&quot;explicit list&quot;</span><span class="nt">&gt;</span>
 <span class="linenos">3</span>    <span class="nt">&lt;layer</span> <span class="na">lamina=</span><span class="s">&quot;lamina1&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/layer&gt;</span>
@@ -392,14 +660,14 @@ A template of this file can be found in <code class="xref std std-numref docutil
 </li>
 </ul>
 <div class="section" id="explicit-list">
-<h3>Explicit list<a class="headerlink" href="#explicit-list" title="Permalink to this headline">¶</a></h3>
+<h3>Explicit list<a class="headerlink" href="#explicit-list" title="Permalink to this headline">#</a></h3>
 <p>This method requires user to write down the lamina name, fiber orientation
 and number of successive laminas with the same fiber orientation, layer
 by layer. Alternatively, a layer can also be defined by the name of a sublayup.
 A sublayup must appear before the layup where it is referenced.
 A template for one layer is shown below.</p>
 <div class="literal-block-wrapper docutils container" id="code-layup-ll-temp">
-<div class="code-block-caption"><span class="caption-text">A template for the layup layer list input.</span><a class="headerlink" href="#code-layup-ll-temp" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">A template for the layup layer list input.</span><a class="headerlink" href="#code-layup-ll-temp" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;layups&gt;</span>
 <span class="linenos"> 2</span>  ...
 <span class="linenos"> 3</span>  <span class="nt">&lt;layup</span> <span class="na">name=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
@@ -427,11 +695,11 @@ A template for one layer is shown below.</p>
 in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Listing</span> <span class="pre">%s</span></code> and <code class="xref std std-numref docutils literal notranslate"><span class="pre">Listing</span> <span class="pre">%s</span></code>.</p>
 </div>
 <div class="section" id="stacking-sequence-code">
-<h3>Stacking sequence code<a class="headerlink" href="#stacking-sequence-code" title="Permalink to this headline">¶</a></h3>
+<h3>Stacking sequence code<a class="headerlink" href="#stacking-sequence-code" title="Permalink to this headline">#</a></h3>
 <p>This method requires users to provide one lamina name and the stacking
 sequence code. A template is shown below.</p>
 <div class="literal-block-wrapper docutils container" id="code-layup-ss-temp">
-<div class="code-block-caption"><span class="caption-text">A template for the layup stacking sequence input.</span><a class="headerlink" href="#code-layup-ss-temp" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">A template for the layup stacking sequence input.</span><a class="headerlink" href="#code-layup-ss-temp" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;layups&gt;</span>
 <span class="linenos">2</span>  ...
 <span class="linenos">3</span>  <span class="nt">&lt;layup</span> <span class="na">name=</span><span class="s">&quot;...&quot;</span> <span class="na">method=</span><span class="s">&quot;stack sequence&quot;</span><span class="nt">&gt;</span>
@@ -457,8 +725,8 @@ sequence code. A template is shown below.</p>
 <li><p>If a group of fiber orientations is repeated, user needs to close them in a pair of round brackets <code class="docutils literal notranslate"><span class="pre">()</span></code>.</p></li>
 </ul>
 <p>Examples</p>
-<table class="docutils align-center" id="id1">
-<caption><span class="caption-text">Examples of stacking sequence code</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<table class="table" id="id1">
+<caption><span class="caption-text">Examples of stacking sequence code</span><a class="headerlink" href="#id1" title="Permalink to this table">#</a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -478,7 +746,7 @@ sequence code. A template is shown below.</p>
 </tbody>
 </table>
 <div class="literal-block-wrapper docutils container" id="code-material">
-<div class="code-block-caption"><span class="caption-text">Example material and lamina input file for the layup shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code>.</span><a class="headerlink" href="#code-material" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">Example material and lamina input file for the layup shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code>.</span><a class="headerlink" href="#code-material" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;materials&gt;</span>
 <span class="linenos"> 2</span>  <span class="nt">&lt;material</span> <span class="na">name=</span><span class="s">&quot;square&quot;</span> <span class="na">type=</span><span class="s">&quot;orthotropic&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 3</span>    <span class="nt">&lt;density&gt;</span>...<span class="nt">&lt;/density&gt;</span>
@@ -504,7 +772,7 @@ sequence code. A template is shown below.</p>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="code-layup">
-<div class="code-block-caption"><span class="caption-text">Example layup input file for the layup shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code>.</span><a class="headerlink" href="#code-layup" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">Example layup input file for the layup shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code>.</span><a class="headerlink" href="#code-layup" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;layups&gt;</span>
 <span class="linenos"> 2</span>  <span class="nt">&lt;layup</span> <span class="na">name=</span><span class="s">&quot;layup_el&quot;</span> <span class="na">method=</span><span class="s">&quot;explicit list&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 3</span>    <span class="nt">&lt;layer</span> <span class="na">lamina=</span><span class="s">&quot;la_hexagon_10&quot;</span><span class="nt">&gt;</span> 45:2 <span class="nt">&lt;/layer&gt;</span>
@@ -531,47 +799,36 @@ sequence code. A template is shown below.</p>
 </div>
 
 
-           </div>
-           
-          </div>
-          <footer>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, Multiscale Structural Mechanics Group, Purdue University.
-
-    </p>
-  </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
         </div>
-      </div>
-
-    </section>
-
-  </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
   
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
+    By Su Tian, Xin Liu, Haodong Du, Fei Tao and Wenbin Yu<br/>
   
-  
+      &copy; Copyright 2021, Multiscale Structural Mechanics Group, Purdue University.<br/>
+</p>
+        </footer>
+    </div>
     
-   
+</div>
 
-</body>
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
 </html>

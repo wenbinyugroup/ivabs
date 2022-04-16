@@ -1,7 +1,7 @@
-Main Input File
-===============
+Guide to Main Input File
+========================
 
-The main input file uses the format YAML.
+The main input file uses the format `YAML <https://yaml.org/>`_.
 
 Overall layout of the main input file:
 
@@ -12,11 +12,22 @@ Overall layout of the main input file:
     setting:
         # setting block
     design:
-        # design block
+        # design parameter block
     model:
         # model block
     analysis:
-        # analysis block
+        # analysis steps block
     study:
-        # dakota study block
+        # design study block
+
+
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Guide to each input block
+   
+   input_guide/input_design
+   input_guide/input_analysis
+   input_guide/input_study
 
