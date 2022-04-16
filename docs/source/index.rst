@@ -48,14 +48,15 @@ License
    ivabs/install
    ivabs/examples
    ivabs/tutorials
+   ivabs/main_input
 
 
-.. toctree::
-   :maxdepth: 1
-   :caption: iVABS Components
+.. .. toctree::
+..    :maxdepth: 1
+..    :caption: iVABS Components
 
-   prevabs/index
-   msgpi/index
+..    prevabs/index
+..    msgpi/index
 
 .. .. toctree::
 ..    :hidden:

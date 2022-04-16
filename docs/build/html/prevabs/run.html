@@ -74,9 +74,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
     
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Tutorial" href="tutorial.html" />
-    <link rel="prev" title="PreVABS Documentation" href="index.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -127,42 +125,10 @@ commentsRunWhenDOMLoaded(addUtterances);
             
               <p class="caption" role="heading"><span class="caption-text">iVABS Quick Start</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../ivabs/install.html">Download and Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ivabs/install.html#windows-installer-files-with-extension-exe">Windows installer (files with extension <code class="docutils literal notranslate"><span class="pre">exe</span></code>)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ivabs/install.html#windows-portable-archive-files-with-extension-7z">Windows portable archive (files with extension <code class="docutils literal notranslate"><span class="pre">7z</span></code>)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ivabs/install.html#linux-installer-files-with-extension-sh">Linux installer (files with extension <code class="docutils literal notranslate"><span class="pre">sh</span></code>)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ivabs/install.html#linux-portable-archives-files-with-extension-tar-gz">Linux portable archives (files with extension <code class="docutils literal notranslate"><span class="pre">tar.gz</span></code>)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ivabs/install.html#request-vabs-license">Request VABS license</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../ivabs/examples.html">Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ivabs/examples/example_uh60a.html">Example 1: Automatic Process of Cross-sectional Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ivabs/examples/example_uh60a_sensi.html">Example 2: Sensitivity analysis of UH60A with Dakota</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ivabs/examples/example_uh60a_opt.html">Example 3: Optimization of a Cross-section using Dakota</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../ivabs/tutorials.html">Tutorials</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ivabs/tutorials/opt_uh60a_2dv.html">Optimization of A Blade Spar</a></li>
-</ul>
-</li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">iVABS Components</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">PreVABS Documentation</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">How to Run PreVABS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="guide.html">Guide for Preparing Input Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html">Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html">Change log</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xml.html">Introduction to XML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="references.html">References</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../msgpi/index.html">msgpi documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../msgpi/user_guide.html">User Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../msgpi/ref_manual.html">Reference</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/install.html">Download and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/main_input.html">Main Input File</a></li>
 </ul>
 
             
@@ -211,8 +177,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="index.html">PreVABS Documentation</a> &raquo;</li>
-        
       <li>How to Run PreVABS</li>
     
     
@@ -257,7 +221,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 The second option <code class="docutils literal notranslate"><span class="pre">-h</span></code> indicates the analysis to compute cross-sectional properties (this analysis is also called homogenization), where meshed cross section will be built and VABS input file will be generated.
 The last option <code class="docutils literal notranslate"><span class="pre">-v</span></code> is for visualizing the meshed cross section.</p>
 <p>PreVABS will read the parametric input files and generate the meshed cross section.</p>
-<p>Once finished, PreVABS will invoke Gmsh, a tool for visualization, to show the cross section with the corresponding meshes, as shown in <a class="reference internal" href="#fig-quickstart"><span class="std std-numref">Fig. 6</span></a>.
+<p>Once finished, PreVABS will invoke Gmsh, a tool for visualization, to show the cross section with the corresponding meshes, as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code>.
 Three files are generated in the same location at this moment, a VABS input file <code class="docutils literal notranslate"><span class="pre">mh104.sg</span></code>, a Gmsh geometry file <code class="docutils literal notranslate"><span class="pre">mh104.geo</span></code>, a Gmsh mesh file <code class="docutils literal notranslate"><span class="pre">mh104.msh</span></code>, and a Gmsh option file <code class="docutils literal notranslate"><span class="pre">mh104.opt</span></code>.
 The geometry file is used to inspect errors when meshing cannot be accomplished.
 The latter three files are generated only when visualization is needed.</p>
@@ -272,7 +236,7 @@ and a valid license from AnalySwift (<a class="reference external" href="http://
 </div>
 <div class="figure align-center" id="fig-quickstart">
 <a class="reference internal image-reference" href="../_images/rungui0.png"><img alt="../_images/rungui0.png" src="../_images/rungui0.png" style="width: 6.5in;" /></a>
-<p class="caption"><span class="caption-number">Figure 6 </span><span class="caption-text">Cross section with meshes generated by PreVABS and visualized by Gmsh.
+<p class="caption"><span class="caption-text">Cross section with meshes generated by PreVABS and visualized by Gmsh.
 Example: <code class="docutils literal notranslate"><span class="pre">examples\ex_airfoil\mh104.xml</span></code>.</span><a class="headerlink" href="#fig-quickstart" title="Permalink to this image">¶</a></p>
 </div>
 </div>
@@ -284,7 +248,7 @@ If no option is given, a list of available arguments will be printed on the scre
 </pre></div>
 </div>
 <table class="docutils align-center" id="id1">
-<caption><span class="caption-number">Table 15 </span><span class="caption-text">Command line options</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-text">Command line options</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 9%" />
 <col style="width: 91%" />
@@ -375,7 +339,7 @@ The command is:</p>
 </pre></div>
 </div>
 <p>After getting the results from a 1D beam analysis, one may want to find the local strains and stresses of a cross section at some location along the beam.
-This command will let PreVABS read those results, update the VABS input file, carry out recovery analysis, and finally draw contour plots in Gmsh (<a class="reference internal" href="#fig-post"><span class="std std-numref">Fig. 7</span></a>).
+This command will let PreVABS read those results, update the VABS input file, carry out recovery analysis, and finally draw contour plots in Gmsh (<code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code>).
 An example of the recover analysis can be found in <a class="reference internal" href="examples/example_airfoil_recover.html#example-airfoil-recover"><span class="std std-ref">this example</span></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -393,7 +357,7 @@ coordinate system.</p>
 </div>
 <div class="figure align-center" id="fig-post">
 <a class="reference internal image-reference" href="../_images/examplemh104r.png"><img alt="../_images/examplemh104r.png" src="../_images/examplemh104r.png" style="width: 6.5in;" /></a>
-<p class="caption"><span class="caption-number">Figure 7 </span><span class="caption-text">Visualization of strains and stresses in Gmsh.</span><a class="headerlink" href="#fig-post" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Visualization of strains and stresses in Gmsh.</span><a class="headerlink" href="#fig-post" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -404,10 +368,6 @@ coordinate system.</p>
            
           </div>
           <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="tutorial.html" class="btn btn-neutral float-right" title="Tutorial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="index.html" class="btn btn-neutral float-left" title="PreVABS Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-    </div>
 
   <hr/>
 
