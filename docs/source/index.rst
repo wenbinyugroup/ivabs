@@ -27,25 +27,8 @@ This code can be replaced with more sophicated codes such as `MBDyn <https://pub
 This code can be easily replaced by other design and optimization framework such as `OpenMADO <https://openmdao.org/>`_.
 
 MSGPI is a collection of phython scripts for integrating the codes needed in iVABS and the scripts can be modified to integrate other codes.
-To make use of MSGPI, `Python3 <https://www.python.org/>`_ along with necessary packages (particularly ``numpy`` and ``matplotlib``) should be installed and working on your computer. 
+To make use of MSGPI, `Python3 <https://www.python.org/>`_ along with necessary packages (particularly ``numpy``, ``scipy``, and ``pyyaml``) should be installed and working on your computer. 
 
-
-Contributing
------------------
-
-You are welcome to contribute to the iVABS documentation in the following ways:
-
-#. You can comment on a specific page on the `iVABS documentation website <http://wenbinyugroup.github.io/ivabs>`_. 
-#. `Add an issue <https://github.com/wenbinyugroup/ivabs/issues/new>`_ for bug reports or feature request. 
-#. `Start a new discussion <https://github.com/wenbinyugroup/ivabs/discussions/new>`_ if you need help running the program. 
-#. Modify existing files or contribute new files to `the github repository <https://github.com/wenbinyugroup/ivabs>`_.   
- 
-License
------------------
-
-* iVABS (excluding VABS) and its documentation is copyrighted (C) 2021- by Purdue Research Foundation and is distributed under the terms of the GNU General Public License (GPL) (version 2 or later, with an exception to allow for easier linking with external libraries).
-* VABS is a commercial code and a trial or paid license can be requested from `AnalySwift <http://analyswift.com/software-trial/>`_.
-* iVABS makes use of four open source codes: `Gmsh <https://gmsh.info/>`_, `Dakota <https://dakota.sandia.gov/>`_, `RapidXml <http://rapidxml.sourceforge.net/>`_, and `Boost <https://www.boost.org/>`_.
 
 
 .. toctree::
@@ -60,12 +43,12 @@ License
    ivabs/cs_template
 
 
-.. .. toctree::
-..    :maxdepth: 1
-..    :caption: iVABS Components
+.. toctree::
+   :maxdepth: 1
+   :caption: iVABS Components
 
-..    prevabs/index
-..    msgpi/index
+   prevabs/index
+   msgpi/index
 
 .. .. toctree::
 ..    :hidden:
@@ -93,3 +76,36 @@ License
 ..    msgpi/beam
 ..    msgpi/beam_methods
 ..    msgpi/utils
+
+
+
+
+
+
+
+
+
+Contributing
+-----------------
+
+You are welcome to contribute to the iVABS documentation in the following ways:
+
+#. You can comment on a specific page on the `iVABS documentation website <http://wenbinyugroup.github.io/ivabs>`_. 
+#. `Add an issue <https://github.com/wenbinyugroup/ivabs/issues/new>`_ for bug reports or feature request. 
+#. `Start a new discussion <https://github.com/wenbinyugroup/ivabs/discussions/new>`_ if you need help running the program. 
+#. Modify existing files or contribute new files to `the github repository <https://github.com/wenbinyugroup/ivabs>`_.   
+ 
+
+
+
+
+
+
+
+
+License
+-----------------
+
+* iVABS (excluding VABS) and its documentation is copyrighted (C) 2021- by Purdue Research Foundation and is distributed under the terms of the GNU General Public License (GPL) (version 2 or later, with an exception to allow for easier linking with external libraries).
+* VABS is a commercial code and a trial or paid license can be requested from `AnalySwift <http://analyswift.com/software-trial/>`_.
+* iVABS makes use of four open source codes: `Gmsh <https://gmsh.info/>`_, `Dakota <https://dakota.sandia.gov/>`_, `RapidXml <http://rapidxml.sourceforge.net/>`_, and `Boost <https://www.boost.org/>`_.
