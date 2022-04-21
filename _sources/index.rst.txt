@@ -30,7 +30,6 @@ MSGPI is a collection of phython scripts for integrating the codes needed in iVA
 To make use of MSGPI, `Python3 <https://www.python.org/>`_ along with necessary packages (particularly ``numpy``, ``scipy``, and ``pyyaml``) should be installed and working on your computer. 
 
 
-
 .. toctree::
    :maxdepth: 1
    :caption: Contents
