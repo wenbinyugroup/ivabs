@@ -65,6 +65,7 @@ var addUtterances = () => {
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="PreVABS Documentation" href="../../prevabs/index.html" />
@@ -1505,11 +1506,35 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#design-concept">
    Design concept
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#some-sample-designs">
+     Some sample designs
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#parameters">
    Parameters
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#general-parameters">
+     General parameters
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#shape-parameters">
+     Shape parameters
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#material-and-layup-parameters">
+     Material and layup parameters
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -1534,11 +1559,35 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#design-concept">
    Design concept
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#some-sample-designs">
+     Some sample designs
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#parameters">
    Parameters
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#general-parameters">
+     General parameters
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#shape-parameters">
+     Shape parameters
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#material-and-layup-parameters">
+     Material and layup parameters
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -1554,9 +1603,282 @@ title="Print to PDF"
 <h1>Airfoil Box-spar Uniform<a class="headerlink" href="#airfoil-box-spar-uniform" title="Permalink to this headline">#</a></h1>
 <section id="design-concept">
 <h2>Design concept<a class="headerlink" href="#design-concept" title="Permalink to this headline">#</a></h2>
+<figure class="align-center" id="fig-airfoil-box-uni-components">
+<img alt="../../_images/cs_temp_airfoil_box_uni-components.png" src="../../_images/cs_temp_airfoil_box_uni-components.png" />
+<figcaption>
+<p><span class="caption-number">Figure 1 </span><span class="caption-text">Components of the airfoil box-spar design topology.</span><a class="headerlink" href="#fig-airfoil-box-uni-components" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="some-sample-designs">
+<h3>Some sample designs<a class="headerlink" href="#some-sample-designs" title="Permalink to this headline">#</a></h3>
+<figure class="align-center" id="fig-airfoil-box-uni-example-1">
+<a class="reference internal image-reference" href="../../_images/cs_temp_airfoil_box_uni-example_1.png"><img alt="../../_images/cs_temp_airfoil_box_uni-example_1.png" src="../../_images/cs_temp_airfoil_box_uni-example_1.png" style="width: 6.5in;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 2 </span><span class="caption-text">Box-spar with two straight spar webs.</span><a class="headerlink" href="#fig-airfoil-box-uni-example-1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="fig-airfoil-box-uni-example-2">
+<a class="reference internal image-reference" href="../../_images/cs_temp_airfoil_box_uni-example_2.png"><img alt="../../_images/cs_temp_airfoil_box_uni-example_2.png" src="../../_images/cs_temp_airfoil_box_uni-example_2.png" style="width: 6.5in;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 3 </span><span class="caption-text">Box-spar with a curved front web and a straight back web.</span><a class="headerlink" href="#fig-airfoil-box-uni-example-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="fig-airfoil-box-uni-example-3">
+<a class="reference internal image-reference" href="../../_images/cs_temp_airfoil_box_uni-example_3.png"><img alt="../../_images/cs_temp_airfoil_box_uni-example_3.png" src="../../_images/cs_temp_airfoil_box_uni-example_3.png" style="width: 6.5in;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 4 </span><span class="caption-text">Box-spar with two curved spar webs.</span><a class="headerlink" href="#fig-airfoil-box-uni-example-3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
 </section>
 <section id="parameters">
 <h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">#</a></h2>
+<section id="general-parameters">
+<h3>General parameters<a class="headerlink" href="#general-parameters" title="Permalink to this headline">#</a></h3>
+<table class="colwidths-given table" id="id1">
+<caption><span class="caption-number">Table 5 </span><span class="caption-text">Shape design parameters</span><a class="headerlink" href="#id1" title="Permalink to this table">#</a></caption>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Symbol</p></th>
+<th class="head"><p>Input</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">airfoil</span></code></p></td>
+<td></td>
+<td><p>Required</p></td>
+<td><p>Airfoil file name (including file extension).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">chord</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(c\)</span></p></td>
+<td><p>Optional (Default=1)</p></td>
+<td><p>Chord length.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">gms</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(l^{gm}\)</span></p></td>
+<td><p>Required</p></td>
+<td><p>Global mesh size.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">fms</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(l^{fm}\)</span></p></td>
+<td><p>Optional (Default= <span class="math notranslate nohighlight">\(10\ l^{gm}\)</span>)</p></td>
+<td><p>Filling component mesh size.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="shape-parameters">
+<h3>Shape parameters<a class="headerlink" href="#shape-parameters" title="Permalink to this headline">#</a></h3>
+<p>All parameters in this section are in the non-dimensional scale (from 0 to 1).</p>
+<figure class="align-center" id="fig-airfoil-box-uni-shape-params">
+<img alt="../../_images/cs_temp_airfoil_box_uni-shape_params.png" src="../../_images/cs_temp_airfoil_box_uni-shape_params.png" />
+<figcaption>
+<p><span class="caption-number">Figure 5 </span><span class="caption-text">Shape parameters.</span><a class="headerlink" href="#fig-airfoil-box-uni-shape-params" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<table class="colwidths-given table" id="id2">
+<caption><span class="caption-number">Table 6 </span><span class="caption-text">Shape design parameters</span><a class="headerlink" href="#id2" title="Permalink to this table">#</a></caption>
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 35%" />
+<col style="width: 53%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Symbol</p></th>
+<th class="head"><p>Input</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">a2p1</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(a_2^{p_1}\)</span></p></td>
+<td><p>Optional (Default=0.8)</p></td>
+<td><p>Horizontal location of the point <span class="math notranslate nohighlight">\(p_1\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">a2p2</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(a_2^{p_2}\)</span></p></td>
+<td><p>Optional (Default= <span class="math notranslate nohighlight">\(a_2^{p_1}\)</span>)</p></td>
+<td><p>Horizontal location of the point <span class="math notranslate nohighlight">\(p_2\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">a2p3</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(a_2^{p_3}\)</span></p></td>
+<td><p>Optional (Default=0.6)</p></td>
+<td><p>Horizontal location of the point <span class="math notranslate nohighlight">\(p_3\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">a2p4</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(a_2^{p_4}\)</span></p></td>
+<td><p>Optional (Default= <span class="math notranslate nohighlight">\(a_2^{p_3}\)</span>)</p></td>
+<td><p>Horizontal location of the point <span class="math notranslate nohighlight">\(p_4\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">a2p5</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(a_2^{p_5}\)</span></p></td>
+<td><p>Optional (Default=0.98)</p></td>
+<td><p>Horizontal location of the point <span class="math notranslate nohighlight">\(p_5\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">a2p6</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(a_2^{p_6}\)</span></p></td>
+<td><p>Optional (Default= <span class="math notranslate nohighlight">\(a_2^{p_5}\)</span>)</p></td>
+<td><p>Horizontal location of the point <span class="math notranslate nohighlight">\(p_6\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">a2p7</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(a_2^{p_7}\)</span></p></td>
+<td><p>Optional (Default=0.2)</p></td>
+<td><p>Horizontal location of the point <span class="math notranslate nohighlight">\(p_7\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">a2p8</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(a_2^{p_8}\)</span></p></td>
+<td><p>Optional (Default= <span class="math notranslate nohighlight">\(a_2^{p_7}\)</span>)</p></td>
+<td><p>Horizontal location of the point <span class="math notranslate nohighlight">\(p_8\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">a2p9</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(a_2^{p_9}\)</span></p></td>
+<td><p>Optional (Default=0.1)</p></td>
+<td><p>Horizontal location of the point <span class="math notranslate nohighlight">\(p_9\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">a2p10</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(a_2^{p_{10}}\)</span></p></td>
+<td><p>Optional (Default= <span class="math notranslate nohighlight">\(a_2^{p_9}\)</span>)</p></td>
+<td><p>Horizontal location of the point <span class="math notranslate nohighlight">\(p_{10}\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">a2nsm</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(a_2^{nsm}\)</span></p></td>
+<td><p>Optional (Default=0.96)</p></td>
+<td><p>Horizontal location of the center of the non-structural mass.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">a3nsm</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(a_3^{nsm}\)</span></p></td>
+<td><p>Optional (Default=0)</p></td>
+<td><p>Vertical location of the center of the non-structural mass.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">rnsm</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(r^{nsm}\)</span></p></td>
+<td><p>Optional (Default=0.005)</p></td>
+<td><p>Radius of the non-structural mass.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">kw1</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(k^{w_1}\)</span></p></td>
+<td><p>Optional (Default=0)</p></td>
+<td><p>Curvature of the front spar web.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">kw2</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(k^{w_2}\)</span></p></td>
+<td><p>Optional (Default=0)</p></td>
+<td><p>Curvature of the back spar web.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="material-and-layup-parameters">
+<h3>Material and layup parameters<a class="headerlink" href="#material-and-layup-parameters" title="Permalink to this headline">#</a></h3>
+<figure class="align-center" id="fig-airfoil-box-uni-material-params">
+<img alt="../../_images/cs_temp_airfoil_box_uni-material_params.png" src="../../_images/cs_temp_airfoil_box_uni-material_params.png" />
+<figcaption>
+<p><span class="caption-number">Figure 6 </span><span class="caption-text">Material parameters.</span><a class="headerlink" href="#fig-airfoil-box-uni-material-params" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<table class="colwidths-given table" id="id3">
+<caption><span class="caption-number">Table 7 </span><span class="caption-text">Material design parameters</span><a class="headerlink" href="#id3" title="Permalink to this table">#</a></caption>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Symbol</p></th>
+<th class="head"><p>Input</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mi_spar_1</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(l^s\)</span></p></td>
+<td></td>
+<td><p>Material (lamina) selection of the box spar layup</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">fo_spar_1</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\theta_1^s\)</span></p></td>
+<td></td>
+<td><p>Fiber angle of layer 1 of the box spar layup</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">fo_spar_2</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\theta_2^s\)</span></p></td>
+<td></td>
+<td><p>Fiber angle of layer 2 of the box spar layup</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">fo_spar_3</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\theta_3^s\)</span></p></td>
+<td></td>
+<td><p>Fiber angle of layer 3 of the box spar layup</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">fo_spar_4</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\theta_4^s\)</span></p></td>
+<td></td>
+<td><p>Fiber angle of layer 4 of the box spar layup</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">np_spar_1</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(n_1^s\)</span></p></td>
+<td></td>
+<td><p>Number of plies of layer 1 of the box spar layup</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">np_spar_2</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(n_2^s\)</span></p></td>
+<td></td>
+<td><p>Number of plies of layer 2 of the box spar layup</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">np_spar_3</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(n_3^s\)</span></p></td>
+<td></td>
+<td><p>Number of plies of layer 3 of the box spar layup</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">np_spar_4</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(n_4^s\)</span></p></td>
+<td></td>
+<td><p>Number of plies of layer 4 of the box spar layup</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mi_le</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(l^c\)</span></p></td>
+<td></td>
+<td><p>Material (lamina) selection of the cap layup</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">fo_le</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\theta^c\)</span></p></td>
+<td></td>
+<td><p>Fiber angle of the cap layup</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">np_le</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(n^c\)</span></p></td>
+<td></td>
+<td><p>Number of plies of the cap layup</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mi_te</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(l^o\)</span></p></td>
+<td></td>
+<td><p>Material (lamina) selection of the overwrap layup</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">fo_te</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\theta^o\)</span></p></td>
+<td></td>
+<td><p>Fiber angle of the overwrap layup</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">np_te</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(n^o\)</span></p></td>
+<td></td>
+<td><p>Number of plies of the overwrap layup</p></td>
+</tr>
+</tbody>
+</table>
+</section>
 </section>
 </section>
 
