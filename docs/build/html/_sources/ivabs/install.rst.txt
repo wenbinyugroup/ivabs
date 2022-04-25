@@ -40,6 +40,8 @@ For more helps on setting the Python environment, see :ref:`setup-python-env`.
 Windows
 -------
 
+Below ``IVABS_ROOT`` stands for the root directory of iVABS after installation.
+
 Installer (``ivabs-#.#-windows-installer.exe``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -58,6 +60,16 @@ Portable archive (``ivabs-#.#-windows-portable.7z``)
 
 Setting environment variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Add the following directories to ``PATH``:
+
+- ``IVABS_ROOT/bin``
+- ``IVABS_ROOT/dakota/bin`` (required only if the Dakota delivered with iVABS is used)
+
+Add the following directories to ``PYTHONPATH``:
+
+- ``ivabs/scripts``
+- ``ivabs/dakota/share/dakota/Python`` (required only if the Dakota delivered with iVABS is used)
 
 
 
@@ -112,8 +124,8 @@ Add the following directory to ``LD_LIBRARY_PATH``:
 
 Add the following directories to ``PYTHONPATH``:
 
-- ``ivabs\vendors\scripts``
-- ``ivabs\vendors\dakota\share\dakota\Python`` (required only if the Dakota delivered with iVABS is used)
+- ``ivabs/scripts``
+- ``ivabs/dakota/share/dakota/Python`` (required only if the Dakota delivered with iVABS is used)
 
 
 

@@ -734,6 +734,7 @@ License should also be placed in the VABS installation directory.</p></li>
 </div>
 <div class="section" id="windows">
 <h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">#</a></h2>
+<p>Below <code class="docutils literal notranslate"><span class="pre">IVABS_ROOT</span></code> stands for the root directory of iVABS after installation.</p>
 <div class="section" id="installer-ivabs-windows-installer-exe">
 <h3>Installer (<code class="docutils literal notranslate"><span class="pre">ivabs-#.#-windows-installer.exe</span></code>)<a class="headerlink" href="#installer-ivabs-windows-installer-exe" title="Permalink to this headline">#</a></h3>
 <ol class="arabic simple">
@@ -752,6 +753,16 @@ License should also be placed in the VABS installation directory.</p></li>
 </div>
 <div class="section" id="setting-environment-variables">
 <h3>Setting environment variables<a class="headerlink" href="#setting-environment-variables" title="Permalink to this headline">#</a></h3>
+<p>Add the following directories to <code class="docutils literal notranslate"><span class="pre">PATH</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">IVABS_ROOT/bin</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IVABS_ROOT/dakota/bin</span></code> (required only if the Dakota delivered with iVABS is used)</p></li>
+</ul>
+<p>Add the following directories to <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ivabs/scripts</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ivabs/dakota/share/dakota/Python</span></code> (required only if the Dakota delivered with iVABS is used)</p></li>
+</ul>
 </div>
 </div>
 <div class="section" id="linux">
@@ -794,8 +805,8 @@ License should also be placed in the VABS installation directory.</p></li>
 </ul>
 <p>Add the following directories to <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ivabs\vendors\scripts</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ivabs\vendors\dakota\share\dakota\Python</span></code> (required only if the Dakota delivered with iVABS is used)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ivabs/scripts</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ivabs/dakota/share/dakota/Python</span></code> (required only if the Dakota delivered with iVABS is used)</p></li>
 </ul>
 </div>
 </div>

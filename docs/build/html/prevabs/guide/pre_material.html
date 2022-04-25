@@ -604,11 +604,11 @@ This can be thought as the basic commercially available “material”, such as 
 A layer is a stack of laminae with the same fiber orientation.
 The thickness of a layer can only be a multiplier of the lamina thickness.
 Layup is several layers stacked together in a specific order.
-This relationship is illustrated in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 18</span></a>.
+This relationship is illustrated in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 24</span></a>.
 More details can be found below.</p>
 <div class="figure align-center" id="fig-layup">
 <a class="reference internal image-reference" href="../../_images/layup.png"><img alt="../../_images/layup.png" src="../../_images/layup.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 18 </span><span class="caption-text">Relationship between material, lamina, layer and layup.</span><a class="headerlink" href="#fig-layup" title="Permalink to this image">#</a></p>
+<p class="caption"><span class="caption-number">Figure 24 </span><span class="caption-text">Relationship between material, lamina, layer and layup.</span><a class="headerlink" href="#fig-layup" title="Permalink to this image">#</a></p>
 </div>
 <div class="section" id="material-and-lamina">
 <h2>Material and lamina<a class="headerlink" href="#material-and-lamina" title="Permalink to this headline">#</a></h2>
@@ -758,13 +758,13 @@ The input syntax is shown in <a class="reference internal" href="#code-lamina-te
 <p>In general, there are two ways to define a layup, explicit list and stacking sequence code.
 For the explicit list, a laminate is laid onto the base line from the first layer in the list to the last one, in the direction given by the user.
 For the stacking sequence, the layup starts from left to the right.
-User should pay attention to the relations among the base line direction, elemental frame <strong>y</strong> and fiber orientation <span class="math notranslate nohighlight">\(\theta_3\)</span> of each layer, as shown in <a class="reference internal" href="#fig-elementalframe"><span class="std std-numref">Fig. 19</span></a>.
+User should pay attention to the relations among the base line direction, elemental frame <strong>y</strong> and fiber orientation <span class="math notranslate nohighlight">\(\theta_3\)</span> of each layer, as shown in <a class="reference internal" href="#fig-elementalframe"><span class="std std-numref">Fig. 25</span></a>.
 Change of direction of the base line will change the elemental frame <strong>y</strong> as defined, which will further require the user to change the fiber orientations accordingly, even though nothing changes physically.
 All layup information are included in one XML file.
 A template of this file can be found in <a class="reference internal" href="#code-layup-temp"><span class="std std-numref">Listing 16</span></a>.</p>
 <div class="figure align-center" id="fig-elementalframe">
 <a class="reference internal image-reference" href="../../_images/elementalframe.png"><img alt="../../_images/elementalframe.png" src="../../_images/elementalframe.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 19 </span><span class="caption-text">Relations among the base line direction, elemental frame <strong>y</strong> and fiber orientation (Note $y_2$ is parallel to the base line direction).</span><a class="headerlink" href="#fig-elementalframe" title="Permalink to this image">#</a></p>
+<p class="caption"><span class="caption-number">Figure 25 </span><span class="caption-text">Relations among the base line direction, elemental frame <strong>y</strong> and fiber orientation (Note $y_2$ is parallel to the base line direction).</span><a class="headerlink" href="#fig-elementalframe" title="Permalink to this image">#</a></p>
 </div>
 <div class="literal-block-wrapper docutils container" id="code-layup-temp">
 <div class="code-block-caption"><span class="caption-number">Listing 16 </span><span class="caption-text">Input syntax for layups.</span><a class="headerlink" href="#code-layup-temp" title="Permalink to this code">#</a></div>
@@ -821,7 +821,7 @@ A template for one layer is shown below.</p>
 </ul>
 </li>
 </ul>
-<p>An example for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 18</span></a> is given
+<p>An example for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 24</span></a> is given
 in <a class="reference internal" href="#code-material"><span class="std std-numref">Listing 19</span></a> and <a class="reference internal" href="#code-layup"><span class="std std-numref">Listing 20</span></a>.</p>
 </div>
 <div class="section" id="stacking-sequence-code">
@@ -856,7 +856,7 @@ sequence code. A template is shown below.</p>
 </ul>
 <p>Examples</p>
 <table class="table" id="id1">
-<caption><span class="caption-number">Table 11 </span><span class="caption-text">Examples of stacking sequence code</span><a class="headerlink" href="#id1" title="Permalink to this table">#</a></caption>
+<caption><span class="caption-number">Table 14 </span><span class="caption-text">Examples of stacking sequence code</span><a class="headerlink" href="#id1" title="Permalink to this table">#</a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -876,7 +876,7 @@ sequence code. A template is shown below.</p>
 </tbody>
 </table>
 <div class="literal-block-wrapper docutils container" id="code-material">
-<div class="code-block-caption"><span class="caption-number">Listing 19 </span><span class="caption-text">Example material and lamina input file for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 18</span></a>.</span><a class="headerlink" href="#code-material" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 19 </span><span class="caption-text">Example material and lamina input file for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 24</span></a>.</span><a class="headerlink" href="#code-material" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;materials&gt;</span>
 <span class="linenos"> 2</span>  <span class="nt">&lt;material</span> <span class="na">name=</span><span class="s">&quot;square&quot;</span> <span class="na">type=</span><span class="s">&quot;orthotropic&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 3</span>    <span class="nt">&lt;density&gt;</span>...<span class="nt">&lt;/density&gt;</span>
@@ -902,7 +902,7 @@ sequence code. A template is shown below.</p>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="code-layup">
-<div class="code-block-caption"><span class="caption-number">Listing 20 </span><span class="caption-text">Example layup input file for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 18</span></a>.</span><a class="headerlink" href="#code-layup" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 20 </span><span class="caption-text">Example layup input file for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 24</span></a>.</span><a class="headerlink" href="#code-layup" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;layups&gt;</span>
 <span class="linenos"> 2</span>  <span class="nt">&lt;layup</span> <span class="na">name=</span><span class="s">&quot;layup_el&quot;</span> <span class="na">method=</span><span class="s">&quot;explicit list&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 3</span>    <span class="nt">&lt;layer</span> <span class="na">lamina=</span><span class="s">&quot;la_hexagon_10&quot;</span><span class="nt">&gt;</span> 45:2 <span class="nt">&lt;/layer&gt;</span>
