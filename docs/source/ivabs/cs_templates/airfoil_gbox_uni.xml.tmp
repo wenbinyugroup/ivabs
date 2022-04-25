@@ -1,0 +1,210 @@
+<cross_section name="uh60a_section" format="1">
+    <include>
+        <material>{mdb_name}</material>
+    </include>
+    <analysis>
+        <model>1</model>
+    </analysis>
+    <general>
+        <scale>{chord=1}</scale>
+        <mesh_size>{gms=0.004}</mesh_size>
+        <element_type>{elm_type="linear"}</element_type>
+    </general>
+
+
+
+    <baselines>
+
+        <line name="ln_af" type="airfoil">
+            <points data="file" format="{airfoil_format=1}" direction="{airfoil_point_order=-1}" header="{airfoil_file_head=0}">{airfoil}</points>
+            <flip>{airfoil_flip=1}</flip>
+            <reverse>{aifoil_reverse_order=0}</reverse>
+        </line>
+
+        <point name="p1" on="ln_af" by="x2" which="top">{a2p1=0.8}</point>
+        <point name="p2" on="ln_af" by="x2" which="bottom">{a2p2=a2p1}</point>
+        <point name="p3" on="ln_af" by="x2" which="top">{a2p3=0.6}</point>
+        <point name="p4" on="ln_af" by="x2" which="bottom">{a2p4=a2p3}</point>
+
+        <point name="p5" on="ln_af" by="x2" which="top">{a2p5=0.98}</point>
+        <point name="p6" on="ln_af" by="x2" which="bottom">{a2p6=a2p5}</point>
+
+        <point name="p7" on="ln_af" by="x2" which="top">{a2p7=0.2}</point>
+        <point name="p8" on="ln_af" by="x2" which="bottom">{a2p8=a2p7}</point>
+
+        <point name="p9" on="ln_af" by="x2" which="top">{a2p9=0.1}</point>
+        <point name="p10" on="ln_af" by="x2" which="bottom">{a2p10=a2p9}</point>
+
+        <point name="pnsmc">{a2nsm=0.96} {a3nsm=0}</point>
+
+        <point name="pfle1">{a2fmsp1=a2nsm-rnsm-0.01} 0</point>
+        <point name="pfle2">{a2fmsp2=a2p1+0.01} 0</point>
+        <point name="pfte1">{a2fmsp3=a2p3-0.01} 0</point>
+        <point name="pfte2">{a2fmsp4=a2p9+0.01} 0</point>
+
+        <!-- Main spar -->
+        <line name="line_spar_top">
+            <points>p1:p3</points>
+        </line>
+        <line name="line_spar_bottom">
+            <points>p4:p2</points>
+        </line>
+        <line name="line_spar_web_front" type="arc">
+            <start>p2</start>
+            <end>p1</end>
+            <curvature>{kw1=0}</curvature>
+            <side>right</side>
+            <direction>ccw</direction>
+        </line>
+        <line name="line_spar_web_back" type="arc">
+            <start>p3</start>
+            <end>p4</end>
+            <curvature>{kw2=0}</curvature>
+            <side>right</side>
+            <direction>ccw</direction>
+        </line>
+
+        <line name="line_spar" method="join">
+            <line>line_spar_top</line>
+            <line>line_spar_bottom</line>
+            <line>line_spar_web_front</line>
+            <line>line_spar_web_back</line>
+        </line>
+
+        <!-- Front part and leading edge -->
+        <baseline name="bsl_le_top">
+            <points>p5:p1</points>
+        </baseline>
+        <baseline name="bsl_le">
+            <points>p6:p5</points>
+        </baseline>
+        <baseline name="bsl_le_bottom">
+            <points>p2:p6</points>
+        </baseline>
+
+        <!-- Back part and trailing edge -->
+        <baseline name="bsl_te_top">
+            <points>p3:p7</points>
+        </baseline>
+        <baseline name="bsl_te">
+            <points>p7:p8</points>
+        </baseline>
+        <baseline name="bsl_te_bottom">
+            <points>p8:p4</points>
+        </baseline>
+
+        <!-- Non-structural mass -->
+        <baseline name="bsl_nsm" type="circle">
+            <center>pnsmc</center>
+            <radius>{rnsm=0.005}</radius>
+            <discrete by="angle">9</discrete>
+        </baseline>
+
+        <!-- Filling part -->
+        
+        <point name="ptfb" constraint="middle">p9 p10</point>
+        <point name="ptf">{a2ptf=a2p9/2} 0</point>
+        <line name="bsl_te_fill_bound">
+            <points>p10,ptfb,p9</points>
+        </line>
+    </baselines>
+
+
+
+    <layups>
+        <layup name="lyp_le_cap">
+            <layer lamina="{lam_cap}">{ang_cap=0}:{ply_cap=1}</layer>
+        </layup>
+        <layup name="lyp_skin">
+            <layer lamina="{lam_skin}">{ang_skin=0}:{ply_skin=1}</layer>
+        </layup>
+
+        <layup name="lyp_spar">
+            <layer lamina="{lam_spar_1}">{ang_spar_1=0}:{ply_spar_1=1}</layer>
+            <layer lamina="{lam_spar_2=lam_spar_1}">{ang_spar_2=0}:{ply_spar_2=1}</layer>
+            <layer lamina="{lam_spar_3=lam_spar_1}">{ang_spar_3=0}:{ply_spar_3=1}</layer>
+            <layer lamina="{lam_spar_4=lam_spar_1}">{ang_spar_4=0}:{ply_spar_4=1}</layer>
+        </layup>
+
+        <layup name="lyp_le">
+            <layer lamina="{lam_front}">{ang_front=0}:{ply_front=1}</layer>
+        </layup>
+
+        <layup name="lyp_te">
+            <layer lamina="{lam_back}">{ang_back=0}:{ply_back=1}</layer>
+        </layup>
+
+    </layups>
+
+
+
+    <component name="spar">
+        <segments>
+            <baseline>line_spar</baseline>
+            <layup>lyp_skin</layup>
+            <layup>lyp_spar</layup>
+        </segments>
+    </component>
+
+    <component name="le" depend="spar">
+        <segments>
+            <baseline>bsl_le</baseline>
+            <layup>lyp_le_cap</layup>
+            <layup>lyp_skin</layup>
+            <layup>lyp_le</layup>
+        </segments>
+        <segments>
+            <baseline>bsl_le_top</baseline>
+            <layup>lyp_skin</layup>
+            <layup>lyp_le</layup>
+        </segments>
+        <segments>
+            <baseline>bsl_le_bottom</baseline>
+            <layup>lyp_skin</layup>
+            <layup>lyp_le</layup>
+        </segments>
+    </component>
+
+    <component name="te" depend="spar">
+        <segments>
+            <baseline>bsl_te_top</baseline>
+            <layup>lyp_skin</layup>
+            <layup>lyp_te</layup>
+        </segments>
+        <segment>
+            <baseline>bsl_te</baseline>
+            <layup>lyp_skin</layup>
+        </segment>
+        <segments>
+            <baseline>bsl_te_bottom</baseline>
+            <layup>lyp_skin</layup>
+            <layup>lyp_te</layup>
+        </segments>
+    </component>
+
+    <component name="ns_mass" type="fill" depend="le">
+        <baseline>bsl_nsm</baseline>
+        <location>pnsmc</location>
+        <material>{mat_nsm}</material>
+        <mesh_size at="pnsmc">{fms=10*gms}</mesh_size>
+    </component>
+
+    <component name="fill_front" type="fill" depend="spar,le,ns_mass">
+        <location>pfle1</location>
+        <material>{mat_fill_front}</material>
+        <mesh_size at="pfle1,pfle2">{fms=10*gms}</mesh_size>
+    </component>
+
+    <component name="fill_back" type="fill" depend="spar,te">
+        <baseline fillside="right">bsl_te_fill_bound</baseline>
+        <material>{mat_fill_back}</material>
+        <mesh_size at="pfte1,pfte2">{fms=10*gms}</mesh_size>
+    </component>
+
+    <component name="fill_te" type="fill" depend="te,fill_back">
+        <location>ptf</location>
+        <material>{mat_fill_te}</material>
+    </component>
+
+
+</cross_section>
