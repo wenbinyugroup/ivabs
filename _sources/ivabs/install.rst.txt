@@ -1,3 +1,5 @@
+.. _section-ivabs-install:
+
 Installation
 ============
 
