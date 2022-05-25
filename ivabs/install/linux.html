@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Installation on Linux &#8212; iVABS 0.6 documentation</title>
+    <title>Installation on Linux &#8212; iVABS 0.6-beta documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -107,7 +107,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       
       
       
-      <h1 class="site-logo" id="site-title">iVABS 0.6 documentation</h1>
+      <h1 class="site-logo" id="site-title">iVABS 0.6-beta documentation</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
@@ -127,8 +127,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
  <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../install.html">
-   Installation
+  <a class="reference internal" href="../getstart.html">
+   Get Start
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -152,11 +152,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../quickstart.html">
-   Quick Start
-  </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../examples.html">
@@ -1556,9 +1551,16 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#setting-environment-variables">
-   Setting environment variables
+  <a class="reference internal nav-link" href="#set-environment-variables">
+   Set environment variables
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bash-shell">
+     Bash shell
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -1602,9 +1604,16 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#setting-environment-variables">
-   Setting environment variables
+  <a class="reference internal nav-link" href="#set-environment-variables">
+   Set environment variables
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bash-shell">
+     Bash shell
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -1618,7 +1627,10 @@ title="Print to PDF"
                 
   <section id="installation-on-linux">
 <h1>Installation on Linux<a class="headerlink" href="#installation-on-linux" title="Permalink to this headline">#</a></h1>
-<p>Below <code class="docutils literal notranslate"><span class="pre">IVABS_ROOT</span></code> stands for the root directory of iVABS after installation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the instructions below <code class="docutils literal notranslate"><span class="pre">$IVABS_ROOT</span></code> refers to the root directory of iVABS after installation.</p>
+</div>
 <section id="installer-ivabs-linux-installer-sh">
 <h2>Installer (<code class="docutils literal notranslate"><span class="pre">ivabs-#.#-linux-installer.sh</span></code>)<a class="headerlink" href="#installer-ivabs-linux-installer-sh" title="Permalink to this headline">#</a></h2>
 <ol class="arabic">
@@ -1643,22 +1655,27 @@ title="Print to PDF"
 <li><p>Set environment variables manually.</p></li>
 </ol>
 </section>
-<section id="setting-environment-variables">
-<h2>Setting environment variables<a class="headerlink" href="#setting-environment-variables" title="Permalink to this headline">#</a></h2>
-<p>Add the following directories to <code class="docutils literal notranslate"><span class="pre">PATH</span></code>:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">IVABS_ROOT/bin</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">IVABS_ROOT/dakota/bin</span></code> (required only if the Dakota delivered with iVABS is used)</p></li>
-</ul>
-<p>Add the following directory to <code class="docutils literal notranslate"><span class="pre">LD_LIBRARY_PATH</span></code>:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">IVABS_ROOT/bin</span></code></p></li>
-</ul>
-<p>Add the following directories to <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ivabs/scripts</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ivabs/dakota/share/dakota/Python</span></code> (required only if the Dakota delivered with iVABS is used)</p></li>
-</ul>
+<section id="set-environment-variables">
+<h2>Set environment variables<a class="headerlink" href="#set-environment-variables" title="Permalink to this headline">#</a></h2>
+<p>The following scripts can set the environment variables for the current shell session.</p>
+<p>If you want to make this setting permanent, the following scripts need to be added to the startup file of the shell you use.</p>
+<section id="bash-shell">
+<h3>Bash shell<a class="headerlink" href="#bash-shell" title="Permalink to this headline">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$IVABS_ROOT</span>/bin:<span class="nv">$PATH</span>
+<span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$IVABS_ROOT</span>/bin:<span class="nv">$LD_LIBRARY_PATH</span>
+<span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$IVABS_ROOT</span>/scripts:<span class="nv">$PYTHONPATH</span>
+
+<span class="c1"># If built-in Dakota is needed</span>
+<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$IVABS_ROOT</span>/dakota/bin:<span class="nv">$PATH</span>
+<span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$IVABS_ROOT</span>/dakota/share/dakota/Python:<span class="nv">$PYTHONPATH</span>
+</pre></div>
+</div>
+<p>Typical startup files for bash shells can be <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> or <code class="docutils literal notranslate"><span class="pre">~/.bash_profile</span></code>.</p>
+<p>After editing and saving the startup file, use the following command in the shell to activate these changes:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> ~/.bash_profile  <span class="c1"># or other startup file</span>
+</pre></div>
+</div>
+</section>
 </section>
 </section>
 
@@ -1691,9 +1708,9 @@ title="Print to PDF"
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By Su Tian, Xin Liu, Haodong Du, Fei Tao and Wenbin Yu<br/>
+    By Su Tian, Haodong Du, Fei Tao and Wenbin Yu<br/>
   
-      &copy; Copyright 2021, Multiscale Structural Mechanics Group, Purdue University.<br/>
+      &copy; Copyright 2022, Multiscale Structural Mechanics Group, Purdue University.<br/>
 </p>
         </footer>
     </div>
