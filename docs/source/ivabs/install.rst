@@ -1,7 +1,10 @@
 .. _section-ivabs-install:
 
-Installation
+Download & Installation
 ============
+
+Download
+-------------
 
 iVABS can be dowloaded from `its Release Page on github <https://github.com/wenbinyugroup/ivabs/releases>`_.
 The folder ``Assets`` contains the installation files you need to download for different versions.
@@ -36,7 +39,7 @@ Python Version: 3.8 or above is required for iVABS to run. iVABS also requires t
 
 
 
-Contents
+Installation
 --------
 
 ..  toctree::
