@@ -1,3 +1,5 @@
+.. _setup-windows:
+
 Installation on Windows
 ========================
 
