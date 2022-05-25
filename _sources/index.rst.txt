@@ -81,7 +81,7 @@ You are welcome to contribute to the iVABS documentation in the following ways:
 
 #. You can comment on a specific page on the `iVABS documentation website <http://wenbinyugroup.github.io/ivabs>`_. 
 #. `Add an issue <https://github.com/wenbinyugroup/ivabs/issues/new>`_ for bug reports or feature request. 
-#. `Start a new discussion <https://github.com/wenbinyugroup/ivabs/discussions/new>`_ if you need help running the program. 
+#. `Start a new discussion <https://cdmhub.org/groups/yugroup/forum/default-section/prevabsvabs>`_ on cdmHUB if you need help running the program. 
 #. Modify existing files or contribute new files to `the github repository <https://github.com/wenbinyugroup/ivabs>`_.   
  
 
@@ -110,6 +110,6 @@ License
 Acknowledgement
 ----------------
 
-The iVABS team at the Purdue University (PoC: Prof. Wenbin Yu) completed the software development under the BAA project "Efficient High-Fidelity Framework for Structural Design and Optimization of Composite Lifting Bodies" funded by ERDC: Technical PoCs Dr. Robert Haehnel (U.S. Army ERDC) and Dr. Joon W. Lim (U.S. Army DEVCOM AvMC).
+The iVABS team at the Purdue University (PoC: Prof. Wenbin Yu) completed the software development under the BAA project "Efficient High-Fidelity Framework for Structural Design and Optimization of Composite Lifting Bodies" funded by ERDC (PoCs: Dr. Robert Haehnel from U.S. Army ERDC and Dr. Joon W. Lim from U.S. Army DEVCOM AvMC).
 
 
