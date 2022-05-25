@@ -41,9 +41,7 @@ Python Version: 3.8 or above is required for iVABS to run. iVABS also requires t
 
 Installation
 --------
-..  toctree::
-    :maxdepth: 1
 
-    install/windows
-    install/linux
-    install/python_setup
+- ref:`setup_windows`.
+- ref:`setup-linux`. 
+- ref:`setup-python-env`.
