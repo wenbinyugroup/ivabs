@@ -1,3 +1,5 @@
+.. _section-ivabs-install:
+
 Installation
 ============
 
@@ -42,13 +44,13 @@ For more helps on configuring the Python environment, see :ref:`setup-python-env
 
 
 
+Contents
+--------
 
+..  toctree::
+    :maxdepth: 1
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Contents
-
-   install/windows
-   install/linux
-   install/python_setup
+    install/windows
+    install/linux
+    install/python_setup
 

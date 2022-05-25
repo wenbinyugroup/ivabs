@@ -1,7 +1,10 @@
-.. _section-ivabs-install:
+.. _section-ivabs-start:
+
+Get Start
+=========
 
 Installation
-============
+------------
 
 iVABS can be dowloaded from `its Release Page on github <https://github.com/wenbinyugroup/ivabs/releases>`_.
 The folder ``Assets`` contains the installation files you need to download for different versions.
@@ -10,13 +13,8 @@ Installer contains a single executable for installation while Portable Archive c
 
 
 
-
-
-
-
-
 Prerequisites
--------------
+~~~~~~~~~~~~~
 
 **VABS**
 
@@ -40,13 +38,6 @@ For more helps on configuring the Python environment, see :ref:`setup-python-env
 
 
 
-
-
-
-
-Contents
---------
-
 ..  toctree::
     :maxdepth: 1
 
@@ -54,3 +45,19 @@ Contents
     install/linux
     install/python_setup
 
+
+
+
+Run iVABS with a simple example
+-------------------------------
+
+
+
+iVABS startup script options
+----------------------------
+
+
+Other examples
+--------------
+
+More examples can be found in Section :ref:`section-ivabs-examples`.
