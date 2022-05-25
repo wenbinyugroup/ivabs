@@ -1,6 +1,6 @@
 .. _setup-python-env:
 
-How to setup Python environment
+Setup Python environment
 ==================================
 
 It is highly recommended to create a local virtual Python environment and run iVABS in it.
