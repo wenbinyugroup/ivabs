@@ -6,7 +6,7 @@
 Welcome to iVABS Documentation
 ===============================
 
-iVABS (namely integrated VABS), is a design framework for composite slender structures such as helicopter rotor blades, wind turbine blades, high aspect ratio wings, bridges, shafts, etc.
+iVABS (namely integrated VABS), is a design framework for composite slender structures (also called composite beams) such as helicopter rotor blades, wind turbine blades, high aspect ratio wings, bridges, shafts, etc.
 This framework bundles PreVABS, VABS, GEBT, Dakota, along with MSGPI for integration among these codes and other codes.
 PreVABS, VABS, GEBT, and MSGPI are developed by `Prof. Wenbin Yu's research group <https://cdmhub.org/groups/yugroup>`_.
 Dakota is developed by the `Sandia National Lab <https://dakota.sandia.gov/>`_. 
