@@ -23,7 +23,7 @@ Contents
     :caption: Contents
    
     ivabs/introduction
-    .. ivabs/install
+    ivabs/install
     ivabs/getstart
     ivabs/examples
     .. ivabs/tutorials
