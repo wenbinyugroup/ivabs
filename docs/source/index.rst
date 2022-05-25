@@ -22,7 +22,6 @@ Contents
     :maxdepth: 1
     :caption: Contents
    
-    ivabs/introduction
     ivabs/install
     ivabs/getstart
     ivabs/examples
@@ -35,7 +34,8 @@ Contents
 ..  toctree::
     :maxdepth: 1
     :caption: iVABS Components
-
+   
+    ivabs/introduction
     prevabs/index
     msgpi/index
 
