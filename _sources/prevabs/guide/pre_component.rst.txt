@@ -2,7 +2,7 @@
 
 .. _section-component:
 
-Components
+Cross-sectional Components
 ==========
 
 .. code-block:: xml
@@ -32,7 +32,7 @@ Components
 Laminate-type component
 -----------------------
 
-For a cross section in PreVABS, laminates are created as segments.
+For a cross-section in PreVABS, laminates are created as segments.
 A segment is a unique combination of a base line and a layup.
 Segments are connected through different ways as shown in :numref:`Fig. %s <fig_joints>`.
 According to this, segments can be grouped into components.
@@ -224,7 +224,7 @@ Fill-type component
 -------------------
 
 Besides creating laminates, user can use one material to fill a region.
-A typical usage is a nose mass in an airfoil type cross section.
+A typical usage is a nose mass in an airfoil type cross-section.
 A schematic plot is shown in :numref:`Fig. %s <fig_filling1>`.
 
 The key to this type of component is the indication of the fill region.
@@ -249,7 +249,7 @@ A ``<location>`` element is used to store the name of a point that is inside the
   :align: center
 
   Example usage of a fill-type component as a nose mass in an airfoil
-  cross section.
+  cross-section.
 
 .. code-block:: xml
   :linenos:
