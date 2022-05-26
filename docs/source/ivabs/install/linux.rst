@@ -1,5 +1,3 @@
-.. _setup-linux:
-
 Installation on Linux
 ======================
 
