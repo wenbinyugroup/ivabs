@@ -6,9 +6,9 @@ Tutorial
 ========
 
 This tutorial provides a walkthrough for how to prepare input files for
-PreVABS given a cross section design.
+PreVABS given a cross-section design.
 
-The design of a cross section
+The design of a cross-section
 -----------------------------
 
 .. figure:: /figures/tutorial_box_0.png
@@ -16,9 +16,9 @@ The design of a cross section
   :width: 6in
   :align: center
 
-  A box-beam cross section.
+  A box-beam cross-section.
 
-The box-beam cross section shown in :numref:`Fig. %s <fig_tutorial_box>`
+The box-beam cross-section shown in :numref:`Fig. %s <fig_tutorial_box>`
 will be used in this tutorial. All four walls and two webs are made from
 composite laminates. The two webs are symmetric about a middle vertical
 line. They are inclined such that the upper portion of both webs are
@@ -34,10 +34,10 @@ values:
 - The distance :math:`d = 1` m;
 - The angle :math:`a = 100^\circ`.
 
-The materials used in this cross section are listed in
+The materials used in this cross-section are listed in
 :numref:`Table %s <tutorial_materials_iso>` and
 :numref:`Table %s <tutorial_materials_ortho>`.
-The layups used in this cross section are listed in
+The layups used in this cross-section are listed in
 :numref:`Table %s <tutorial_layups>`.
 
 .. csv-table:: Isotropic material properties
@@ -81,16 +81,16 @@ The layups used in this cross section are listed in
 Steps of preparing input files
 ------------------------------
 
-In PreVABS, a cross section is composed of components, each of which
+In PreVABS, a cross-section is composed of components, each of which
 can either be a laminate or a fill. The laminate type component is
-composed of segments with different layups. For a realistic cross section,
+composed of segments with different layups. For a realistic cross-section,
 there may be several different ways to decompose it, which may need
 different information in the input files to build the model.
 
 Hence,
-the first step is to decide a way of decomposition of the cross section.
+the first step is to decide a way of decomposition of the cross-section.
 
-For this example, the first step is trivial. The cross section can be
+For this example, the first step is trivial. The cross-section can be
 decomposed into three components: the walls, the webs, and the fill.
 
 At the same time, the order of creating components should also be decided.
@@ -117,7 +117,7 @@ A brief summary of these input files is listed below.
 - A material file (*MaterialDB.xml*), storing definitions of materials
   and laminae.
 - A layup file (*layups.xml*), storing definitions of layups.
-- A main cross section file (*box.xml*), storing definitions of components
+- A main cross-section file (*box.xml*), storing definitions of components
   and other configurations of modeling and analysis.
 
 For this tutorial, all files can have arbitrary file names and be placed at any working directory, except the material database, which must be named as *MaterialDB.xml* and placed at the same location as where the PreVABS executable is.
@@ -130,7 +130,7 @@ Prepare geometric elements
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 As shown in :numref:`Fig. %s <fig_tutorial_box_points>`, seven points
-are used to define the shape of the cross section. Points p1 to p4 define
+are used to define the shape of the cross-section. Points p1 to p4 define
 the walls, p5 and p6 define the webs, and p0 indicates the space which
 should be filled with some material. The origin of the coordinate system
 is placed at the centroid of the rectangular. Based on the design parameters
@@ -142,7 +142,7 @@ and listed in :numref:`Table %s <table_tutorial_box_points>`.
   :width: 6in
   :align: center
 
-  Key points defining the shape of the cross section.
+  Key points defining the shape of the cross-section.
 
 .. csv-table:: Key points
   :name: table_tutorial_box_points
@@ -177,7 +177,7 @@ The completed input file for geometry is shown in
   :width: 6in
   :align: center
 
-  Base lines defining the shape of the cross section.
+  Base lines defining the shape of the cross-section.
 
 .. code-block:: xml
   :linenos:
@@ -384,8 +384,7 @@ time, the dependent components are also decided, as shown in
 Set other configurations and complete the main input file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Besides the definitions of components, the main input file of the cross
-section contains several other required or optional settings.
+Besides the definitions of components, the main input file of the cross-section contains several other required or optional settings.
 
 The first part is the ``<include>`` settings, which is required. This
 contains names of the base lines and layups files.
@@ -398,15 +397,15 @@ be calculated.
 
 The last part is the ``<general>`` settings, which is optional. This
 part contains global configurations for the shape and meshing of the
-cross section. Here, the global mesh size is set to 0.02.
+cross-section. Here, the global mesh size is set to 0.02.
 
-The completed main input file for the cross section is shown in
+The completed main input file for the cross-section is shown in
 :numref:`Listing %s <code_tutorial_box_main>`.
 
 .. code-block:: xml
   :linenos:
   :name: code_tutorial_box_main
-  :caption: Input file for the cross section
+  :caption: Input file for the cross-section
 
   <cross_section name="box">
     <include>
@@ -447,14 +446,14 @@ The completed main input file for the cross section is shown in
 Execution and results
 ---------------------
 
-Once all input files are prepared, the cross section can be created and
+Once all input files are prepared, the cross-section can be created and
 homogenized using the following command:
 
 ::
 
   prevabs -i box.xml -h -v -e
 
-If everything works successfully, Gmsh will be called and the cross section
+If everything works successfully, Gmsh will be called and the cross-section
 will be plotted as shown in :numref:`Fig. %s <fig_tutorial_box_plot>`
 (the display of element edges is turned off in the figure for clarity),
 and VABS homogenization analysis will be carried out and effective beam
@@ -467,7 +466,7 @@ stiffness matrix is listed in :numref:`Table %s <tutorial_stiffness>`.
   :width: 6.5in
   :align: center
 
-  The cross section created by PreVABS and plotted by Gmsh.
+  The cross-section created by PreVABS and plotted by Gmsh.
 
 .. csv-table:: Timoshenko stiffness matrix in the file *box.sg.K*
   :name: tutorial_stiffness
