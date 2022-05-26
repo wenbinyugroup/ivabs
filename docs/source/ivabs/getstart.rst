@@ -34,8 +34,9 @@ Run the example
 
     python run.py cs_param_study.yml
 
-If everything works fine, several output files will be generated.
-In the file ``cs_param_study.out``, the following message should appear.
+If everything works fine, output files will be generated.
+A complete list of output files can be found in the section below (:ref:`section-start_file_out`).
+In the file ``cs_param_study.out``, the following message should appear at the end of the file.
 
 ..  code-block:: none
 
@@ -45,7 +46,7 @@ In the file ``cs_param_study.out``, the following message should appear.
     Total CPU        =     34.003 [parent =     34.003, child =          0]
     Total wall clock =     34.003
 
-This example runs about half minute.
+Running time may vary depending on machines.
 
 
 
@@ -88,6 +89,8 @@ Input files
     This is the startup script.
     Required for all cases, but no changes needed and can be directly copied to different working directory.
 
+
+.. _section-start_file_out:
 
 Output files
 ~~~~~~~~~~~~
