@@ -25,7 +25,6 @@ Contents
     ivabs/install
     ivabs/getstart
     ivabs/examples
-    .. ivabs/tutorials
     ivabs/main_input
     ivabs/parameterization
     ivabs/cs_template
@@ -34,33 +33,6 @@ Contents
     ivabs/introduction
     prevabs/index
     msgpi/index
-
-.. .. toctree::
-..    :hidden:
-..    :maxdepth: 2
-..    :caption: PreVABS
-
-..    prevabs/install
-..    prevabs/run
-..    prevabs/tutorial
-..    prevabs/guide
-..    prevabs/examples
-..    prevabs/changelog
-..    prevabs/xml
-..    prevabs/references
-
-
-.. .. toctree::
-..    :hidden:
-..    :maxdepth: 2
-..    :caption: MSGPI 
-
-..    msgpi/sg_structuregene
-..    msgpi/sg_materialsection
-..    msgpi/methods
-..    msgpi/beam
-..    msgpi/beam_methods
-..    msgpi/utils
 
 
 

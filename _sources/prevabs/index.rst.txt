@@ -3,18 +3,19 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-PreVABS Documentation
-=====================
+PreVABS's Documentation
+=======================
 
 .. toctree::
   :maxdepth: 2
   :caption: Table of Contents
 
-  run
-  tutorial
-  guide
-  examples
-  changelog
-  xml
-  references
+  contents/install
+  contents/run
+  contents/tutorial
+  contents/guide
+  contents/examples
+  contents/changelog
+  contents/xml
+  contents/references
 
