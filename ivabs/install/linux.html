@@ -1610,7 +1610,7 @@ title="Print to PDF"
 <h1>Installation on Linux<a class="headerlink" href="#installation-on-linux" title="Permalink to this headline">#</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In the instructions below <code class="docutils literal notranslate"><span class="pre">iVABS_ROOT</span></code> refers to the root directory of iVABS after installation.</p>
+<p>In the instructions below <code class="docutils literal notranslate"><span class="pre">IVABS_ROOT</span></code> refers to the root directory of iVABS after installation, e.g., <code class="docutils literal notranslate"><span class="pre">IVABS_ROOT=$HOME/ivabs</span></code>.</p>
 </div>
 <section id="installer-ivabs-linux-installer-sh">
 <h2>Installer (<code class="docutils literal notranslate"><span class="pre">ivabs-#.#-linux-installer.sh</span></code>)<a class="headerlink" href="#installer-ivabs-linux-installer-sh" title="Permalink to this headline">#</a></h2>
@@ -1620,9 +1620,9 @@ title="Print to PDF"
 </pre></div>
 </div>
 </li>
-<li><p>Select the installation folder of your own choice. The default folder is <code class="docutils literal notranslate"><span class="pre">ivabs</span></code> inside your home folder, i.e. <code class="docutils literal notranslate"><span class="pre">iVABS_ROOT=~/ivabs</span></code>.</p></li>
+<li><p>Select the installation directory of your own choice. The default location is <code class="docutils literal notranslate"><span class="pre">ivabs</span></code> inside your home directory, i.e. <code class="docutils literal notranslate"><span class="pre">IVABS_ROOT=$HOME/ivabs</span></code>.</p></li>
 <li><p>Dakota is optional. If you would like to use the Dakota already installed on your computer, you need to answer <code class="docutils literal notranslate"><span class="pre">no</span></code> for that question.</p></li>
-<li><p>Environment variables of PATH and PYTHONPATH can be updated automatically (write to <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> or <code class="docutils literal notranslate"><span class="pre">.zshrc</span></code> file). However, if your linux box using a different shell startup file such as <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code>, you can set these environmental variables by yourself.</p></li>
+<li><p>Environment variables of <code class="docutils literal notranslate"><span class="pre">PATH</span></code> and <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> can be updated automatically (wrote to the shell startup file such as <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code>). However, if your shell/terminal uses a different startup file such as <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code>, you can set these environmental variables by yourself.</p></li>
 </ol>
 </section>
 <section id="portable-archives-ivabs-linux-portable-tar-gz">
@@ -1642,13 +1642,13 @@ title="Print to PDF"
 <p>If you want to make this setting permanent, the following scripts need to be added to the startup file of the shell you use.</p>
 <section id="bash-shell">
 <h3>Bash shell<a class="headerlink" href="#bash-shell" title="Permalink to this headline">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>iVABS_ROOT/bin:<span class="nv">$PATH</span>
-<span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>iVABS_ROOT/bin:<span class="nv">$LD_LIBRARY_PATH</span>
-<span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span>iVABS_ROOT/scripts:<span class="nv">$PYTHONPATH</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$IVABS_ROOT</span>/bin:<span class="nv">$PATH</span>
+<span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$IVABS_ROOT</span>/bin:<span class="nv">$LD_LIBRARY_PATH</span>
+<span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$IVABS_ROOT</span>/scripts:<span class="nv">$PYTHONPATH</span>
 
 <span class="c1"># If built-in Dakota is needed</span>
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>iVABS_ROOT/dakota/bin:<span class="nv">$PATH</span>
-<span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span>iVABS_ROOT/dakota/share/dakota/Python:<span class="nv">$PYTHONPATH</span>
+<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$IVABS_ROOT</span>/dakota/bin:<span class="nv">$PATH</span>
+<span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$IVABS_ROOT</span>/dakota/share/dakota/Python:<span class="nv">$PYTHONPATH</span>
 </pre></div>
 </div>
 <p>Typical startup files for bash shells can be <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> or <code class="docutils literal notranslate"><span class="pre">~/.bash_profile</span></code>.</p>
