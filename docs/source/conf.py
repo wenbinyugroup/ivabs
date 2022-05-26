@@ -110,6 +110,7 @@ html_theme = 'sphinx_book_theme'
 #
 html_theme_options = {
     "repository_url": "https://github.com/wenbinyugroup/ivabs",
+    "repository_branch" : "main",
     "path_to_docs": "docs/source",
     'use_edit_page_button': True,
     "use_repository_button": True,
