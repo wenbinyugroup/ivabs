@@ -8,8 +8,7 @@ iVABS (namely integrated VABS), is a design framework for composite slender stru
     :width: 6in
     :align: center
 
-   The iVABS framework.
-
+    The iVABS framework.
 
 PreVABS is a preprocessor to generate composite sections with ply-level details based on a few design parameters including sectional geometry, topology, and material. 
 
