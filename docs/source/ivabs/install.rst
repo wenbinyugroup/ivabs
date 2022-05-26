@@ -1,5 +1,3 @@
-.. _section-ivabs-install:
-
 Download & Installation
 ============
 
