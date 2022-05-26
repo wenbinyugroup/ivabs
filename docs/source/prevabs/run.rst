@@ -1,6 +1,6 @@
 .. _section-run:
 
-How to Run PreVABS
+PreVABS Quick Start
 ==================
 
 PreVABS is a command line based program which acts as a general-purpose preprocessor and postprocessor based on parametric inputs necessary for designing a cross-section.
@@ -8,15 +8,6 @@ PreVABS is a command line based program which acts as a general-purpose preproce
 Download the examples package from cdmHUB (https://cdmhub.org/resources/1597/supportingdocs), and unpack it to any location.
 
 
-
-
-
-
-
-
-
-Quick start
------------
 
 If you have already added the folder where you stored VABS, Gmsh and PreVABS to the system or user environment variable ``PATH``, to execute PreVABS, you can open any command line tool (Command Prompt or PowerShell on Windows, Terminal on Linux), change directory to the root of the PreVABS package, and type the following command:
 
