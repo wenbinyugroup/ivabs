@@ -29,7 +29,7 @@ Installer (``ivabs-#.#-linux-installer.sh``)
 
 
 
-Portable archives (``ivabs-#.#-linux-portable.tar.gz``)
+Portable archive (``ivabs-#.#-linux-portable.tar.gz``)
 --------------------------------------------------------
 
 #. Uncompress the archive to a folder of your own choice.
