@@ -3,7 +3,7 @@ Installation on Linux
 
 ..  note::
 
-    In the instructions below ``$IVABS_ROOT`` refers to the root directory of iVABS after installation.
+    In the instructions below ``iIVABS_ROOT`` refers to the root directory of iVABS after installation.
 
 
 
@@ -23,7 +23,7 @@ Installer (``ivabs-#.#-linux-installer.sh``)
         bash ivabs-#.#-linux-installer.sh
 
 #.  Select the installation folder of your own choice. The default folder is ``ivabs`` inside your home folder, i.e. ``IVABS_ROOT=~/ivabs``.
-#.  Dakota is optional. If you would like to continue use the Dakota already installed on your computer, you need to uncheck the option.
+#.  Dakota is optional. If you would like to use the Dakota already installed on your computer, you need to answer ``no`` for that question. 
 #.  Environment variables of PATH and PYTHONPATH can be updated automatically (write to ``.bashrc`` or ``.zshrc`` file). However, if your linux box using a different shell startup file such as ``.bash_profile``, you can set these environmental variables by yourself. 
 
 
