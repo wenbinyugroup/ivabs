@@ -1514,7 +1514,7 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-design-of-a-cross-section">
-   The design of a cross section
+   The design of a cross-section
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1570,7 +1570,7 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-design-of-a-cross-section">
-   The design of a cross section
+   The design of a cross-section
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1618,16 +1618,16 @@ title="Print to PDF"
   <section id="tutorial">
 <span id="id1"></span><h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">#</a></h1>
 <p>This tutorial provides a walkthrough for how to prepare input files for
-PreVABS given a cross section design.</p>
+PreVABS given a cross-section design.</p>
 <section id="the-design-of-a-cross-section">
-<h2>The design of a cross section<a class="headerlink" href="#the-design-of-a-cross-section" title="Permalink to this headline">#</a></h2>
+<h2>The design of a cross-section<a class="headerlink" href="#the-design-of-a-cross-section" title="Permalink to this headline">#</a></h2>
 <figure class="align-center" id="fig-tutorial-box">
 <a class="reference internal image-reference" href="../_images/tutorial_box_0.png"><img alt="../_images/tutorial_box_0.png" src="../_images/tutorial_box_0.png" style="width: 6in;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 8 </span><span class="caption-text">A box-beam cross section.</span><a class="headerlink" href="#fig-tutorial-box" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Figure 8 </span><span class="caption-text">A box-beam cross-section.</span><a class="headerlink" href="#fig-tutorial-box" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The box-beam cross section shown in <a class="reference internal" href="#fig-tutorial-box"><span class="std std-numref">Fig. 8</span></a>
+<p>The box-beam cross-section shown in <a class="reference internal" href="#fig-tutorial-box"><span class="std std-numref">Fig. 8</span></a>
 will be used in this tutorial. All four walls and two webs are made from
 composite laminates. The two webs are symmetric about a middle vertical
 line. They are inclined such that the upper portion of both webs are
@@ -1642,10 +1642,10 @@ values:</p>
 <li><p>The distance <span class="math notranslate nohighlight">\(d = 1\)</span> m;</p></li>
 <li><p>The angle <span class="math notranslate nohighlight">\(a = 100^\circ\)</span>.</p></li>
 </ul>
-<p>The materials used in this cross section are listed in
+<p>The materials used in this cross-section are listed in
 <a class="reference internal" href="#tutorial-materials-iso"><span class="std std-numref">Table 9</span></a> and
 <a class="reference internal" href="#tutorial-materials-ortho"><span class="std std-numref">Table 10</span></a>.
-The layups used in this cross section are listed in
+The layups used in this cross-section are listed in
 <a class="reference internal" href="#tutorial-layups"><span class="std std-numref">Table 11</span></a>.</p>
 <table class="table" id="tutorial-materials-iso">
 <caption><span class="caption-number">Table 9 </span><span class="caption-text">Isotropic material properties</span><a class="headerlink" href="#tutorial-materials-iso" title="Permalink to this table">#</a></caption>
@@ -1824,14 +1824,14 @@ The layups used in this cross section are listed in
 </section>
 <section id="steps-of-preparing-input-files">
 <h2>Steps of preparing input files<a class="headerlink" href="#steps-of-preparing-input-files" title="Permalink to this headline">#</a></h2>
-<p>In PreVABS, a cross section is composed of components, each of which
+<p>In PreVABS, a cross-section is composed of components, each of which
 can either be a laminate or a fill. The laminate type component is
-composed of segments with different layups. For a realistic cross section,
+composed of segments with different layups. For a realistic cross-section,
 there may be several different ways to decompose it, which may need
 different information in the input files to build the model.</p>
 <p>Hence,
-the first step is to decide a way of decomposition of the cross section.</p>
-<p>For this example, the first step is trivial. The cross section can be
+the first step is to decide a way of decomposition of the cross-section.</p>
+<p>For this example, the first step is trivial. The cross-section can be
 decomposed into three components: the walls, the webs, and the fill.</p>
 <p>At the same time, the order of creating components should also be decided.
 This is done by figuring out the dependence relationships between
@@ -1855,7 +1855,7 @@ elements.</p></li>
 <li><p>A material file (<em>MaterialDB.xml</em>), storing definitions of materials
 and laminae.</p></li>
 <li><p>A layup file (<em>layups.xml</em>), storing definitions of layups.</p></li>
-<li><p>A main cross section file (<em>box.xml</em>), storing definitions of components
+<li><p>A main cross-section file (<em>box.xml</em>), storing definitions of components
 and other configurations of modeling and analysis.</p></li>
 </ul>
 <p>For this tutorial, all files can have arbitrary file names and be placed at any working directory, except the material database, which must be named as <em>MaterialDB.xml</em> and placed at the same location as where the PreVABS executable is.</p>
@@ -1865,7 +1865,7 @@ Please check Section: <a class="reference internal" href="guide/pre_overall.html
 <section id="prepare-geometric-elements">
 <h3>Prepare geometric elements<a class="headerlink" href="#prepare-geometric-elements" title="Permalink to this headline">#</a></h3>
 <p>As shown in <a class="reference internal" href="#fig-tutorial-box-points"><span class="std std-numref">Fig. 10</span></a>, seven points
-are used to define the shape of the cross section. Points p1 to p4 define
+are used to define the shape of the cross-section. Points p1 to p4 define
 the walls, p5 and p6 define the webs, and p0 indicates the space which
 should be filled with some material. The origin of the coordinate system
 is placed at the centroid of the rectangular. Based on the design parameters
@@ -1874,7 +1874,7 @@ and listed in <a class="reference internal" href="#table-tutorial-box-points"><s
 <figure class="align-center" id="fig-tutorial-box-points">
 <a class="reference internal image-reference" href="../_images/tutorial_box_points.png"><img alt="../_images/tutorial_box_points.png" src="../_images/tutorial_box_points.png" style="width: 6in;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 10 </span><span class="caption-text">Key points defining the shape of the cross section.</span><a class="headerlink" href="#fig-tutorial-box-points" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Figure 10 </span><span class="caption-text">Key points defining the shape of the cross-section.</span><a class="headerlink" href="#fig-tutorial-box-points" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <table class="table" id="table-tutorial-box-points">
@@ -1926,7 +1926,7 @@ is defined for each element.</p>
 <figure class="align-center" id="fig-tutorial-box-lines">
 <a class="reference internal image-reference" href="../_images/tutorial_box_lines.png"><img alt="../_images/tutorial_box_lines.png" src="../_images/tutorial_box_lines.png" style="width: 6in;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 11 </span><span class="caption-text">Base lines defining the shape of the cross section.</span><a class="headerlink" href="#fig-tutorial-box-lines" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Figure 11 </span><span class="caption-text">Base lines defining the shape of the cross-section.</span><a class="headerlink" href="#fig-tutorial-box-lines" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="literal-block-wrapper docutils container" id="code-tutorial-box-baselines">
@@ -2120,8 +2120,7 @@ time, the dependent components are also decided, as shown in
 </section>
 <section id="set-other-configurations-and-complete-the-main-input-file">
 <h3>Set other configurations and complete the main input file<a class="headerlink" href="#set-other-configurations-and-complete-the-main-input-file" title="Permalink to this headline">#</a></h3>
-<p>Besides the definitions of components, the main input file of the cross
-section contains several other required or optional settings.</p>
+<p>Besides the definitions of components, the main input file of the cross-section contains several other required or optional settings.</p>
 <p>The first part is the <code class="docutils literal notranslate"><span class="pre">&lt;include&gt;</span></code> settings, which is required. This
 contains names of the base lines and layups files.</p>
 <p>The second part is the <code class="docutils literal notranslate"><span class="pre">&lt;analysis&gt;</span></code> settings, which is optional.
@@ -2131,11 +2130,11 @@ the Timoshenko beam model will be used and the 6x6 stiffness matrix will
 be calculated.</p>
 <p>The last part is the <code class="docutils literal notranslate"><span class="pre">&lt;general&gt;</span></code> settings, which is optional. This
 part contains global configurations for the shape and meshing of the
-cross section. Here, the global mesh size is set to 0.02.</p>
-<p>The completed main input file for the cross section is shown in
+cross-section. Here, the global mesh size is set to 0.02.</p>
+<p>The completed main input file for the cross-section is shown in
 <a class="reference internal" href="#code-tutorial-box-main"><span class="std std-numref">Listing 6</span></a>.</p>
 <div class="literal-block-wrapper docutils container" id="code-tutorial-box-main">
-<div class="code-block-caption"><span class="caption-number">Listing 6 </span><span class="caption-text">Input file for the cross section</span><a class="headerlink" href="#code-tutorial-box-main" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 6 </span><span class="caption-text">Input file for the cross-section</span><a class="headerlink" href="#code-tutorial-box-main" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;cross_section</span> <span class="na">name=</span><span class="s">&quot;box&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 2</span>  <span class="nt">&lt;include&gt;</span>
 <span class="linenos"> 3</span>    <span class="nt">&lt;baseline&gt;</span>baselines<span class="nt">&lt;/baseline&gt;</span>
@@ -2177,12 +2176,12 @@ cross section. Here, the global mesh size is set to 0.02.</p>
 </section>
 <section id="execution-and-results">
 <h2>Execution and results<a class="headerlink" href="#execution-and-results" title="Permalink to this headline">#</a></h2>
-<p>Once all input files are prepared, the cross section can be created and
+<p>Once all input files are prepared, the cross-section can be created and
 homogenized using the following command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prevabs</span> <span class="o">-</span><span class="n">i</span> <span class="n">box</span><span class="o">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">h</span> <span class="o">-</span><span class="n">v</span> <span class="o">-</span><span class="n">e</span>
 </pre></div>
 </div>
-<p>If everything works successfully, Gmsh will be called and the cross section
+<p>If everything works successfully, Gmsh will be called and the cross-section
 will be plotted as shown in <a class="reference internal" href="#fig-tutorial-box-plot"><span class="std std-numref">Fig. 14</span></a>
 (the display of element edges is turned off in the figure for clarity),
 and VABS homogenization analysis will be carried out and effective beam
@@ -2191,7 +2190,7 @@ stiffness matrix is listed in <a class="reference internal" href="#tutorial-stif
 <figure class="align-center" id="fig-tutorial-box-plot">
 <a class="reference internal image-reference" href="../_images/tutorial_box.png"><img alt="../_images/tutorial_box.png" src="../_images/tutorial_box.png" style="width: 6.5in;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 14 </span><span class="caption-text">The cross section created by PreVABS and plotted by Gmsh.</span><a class="headerlink" href="#fig-tutorial-box-plot" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Figure 14 </span><span class="caption-text">The cross-section created by PreVABS and plotted by Gmsh.</span><a class="headerlink" href="#fig-tutorial-box-plot" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <table class="table" id="tutorial-stiffness">
