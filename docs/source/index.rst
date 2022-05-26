@@ -79,7 +79,7 @@ Contributing
 
 You are welcome to contribute to the iVABS documentation in the following ways:
 
-#. Suggest edits for a a specific page on the site using the middle icon on the top-right corner of the page. 
+#. Suggest edits using the middle icon on the top-right corner of the page you want to change.
 #. `Add an issue <https://github.com/wenbinyugroup/ivabs/issues/new>`_ for bug reports or feature requests. 
 #. `Start a new discussion <https://github.com/wenbinyugroup/ivabs/discussions>`_ on if you need help running iVABS. 
 #. Modify existing files or contribute new files to `the github repository <https://github.com/wenbinyugroup/ivabs>`_.   
