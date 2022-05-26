@@ -357,7 +357,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../msgpi/index.html">
-   msgpi documentation
+   MSGPI Documentation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
   <label for="toctree-checkbox-8">
@@ -803,8 +803,9 @@ For example, if Python 3 and all dependencies are installed in a virtual environ
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python run.py cs_param_study.yml
 </pre></div>
 </div>
-<p>If everything works fine, several output files will be generated.
-In the file <code class="docutils literal notranslate"><span class="pre">cs_param_study.out</span></code>, the following message should appear.</p>
+<p>If everything works fine, output files will be generated.
+A complete list of output files can be found in the section below (<a class="reference internal" href="#section-start-file-out"><span class="std std-ref">Output files</span></a>).
+In the file <code class="docutils literal notranslate"><span class="pre">cs_param_study.out</span></code>, the following message should appear at the end of the file.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;&lt;&lt;&lt;&lt; Iterator multidim_parameter_study completed.
 &lt;&lt;&lt;&lt;&lt; Environment execution completed.
 DAKOTA execution time in seconds:
@@ -812,7 +813,7 @@ Total CPU        =     34.003 [parent =     34.003, child =          0]
 Total wall clock =     34.003
 </pre></div>
 </div>
-<p>This example runs about half minute.</p>
+<p>Running time may vary depending on machines.</p>
 </section>
 <section id="files-of-this-example">
 <h2>Files of this example<a class="headerlink" href="#files-of-this-example" title="Permalink to this headline">#</a></h2>
@@ -843,7 +844,7 @@ Required for all cases, but no changes needed and can be directly copied to diff
 </dl>
 </section>
 <section id="output-files">
-<h3>Output files<a class="headerlink" href="#output-files" title="Permalink to this headline">#</a></h3>
+<span id="section-start-file-out"></span><h3>Output files<a class="headerlink" href="#output-files" title="Permalink to this headline">#</a></h3>
 <p>iVABS mainly uses Dakota as the optimization tool.
 Hence, most output files are from Dakota.</p>
 <dl>
