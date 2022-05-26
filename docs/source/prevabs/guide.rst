@@ -3,7 +3,7 @@
 Guide for Preparing Input Files
 ===============================
 
-In PreVABS, a cross section is defined through two aspects: components and global configuration, as shown in :numref:`Fig. %s <fig_csfiles1>`.
+In PreVABS, a cross-section is defined through two aspects: components and global configuration, as shown in :numref:`Fig. %s <fig_csfiles1>`.
 Components are built from geometry and materials.
 The geometry aspect comprises definitions of base points and base lines.
 The material aspect includes material properties, lamina thicknesses, layup stacking sequences, etc. The global configuration contains the files included, transformation, meshing options, and analysis settings.
@@ -13,9 +13,9 @@ The material aspect includes material properties, lamina thicknesses, layup stac
   :width: 75%
   :align: center
 
-  Cross section definition in PreVABS.
+  Cross-section definition in PreVABS.
 
-.. In PreVABS, the key to preparing input files for a cross section is
+.. In PreVABS, the key to preparing input files for a cross-section is
 .. defining *Segment*\ s. A *Segment* is a unique combination of a
 .. *Base line* and a *Layup*, as shown in :numref:`Fig. %s <fig_airfoil1>`.
 .. Another important concept is *Level*, which collects segments into
@@ -31,22 +31,22 @@ The material aspect includes material properties, lamina thicknesses, layup stac
 ..   :width: 100%
 ..   :align: center
 
-..   Basic components in a typical cross section.
+..   Basic components in a typical cross-section.
 
-To create the cross section, at least four input files are needed.
+To create the cross-section, at least four input files are needed.
 Definitions of the geometry, materials and layups are stored in three files separately.
-A top level cross section file stores the definitions of components and global configurations.
+A top level cross-section file stores the definitions of components and global configurations.
 In some cases, a separate file storing base points is needed (such as an airfoil).
 Except the base points file, which has a file extension .dat, all other files use an XML format.
 
 
-A top level cross section file stores all information that will be discussed in the following sections.
+A top level cross-section file stores all information that will be discussed in the following sections.
 The input syntax for this main file is shown in :numref:`Listing %s <code_crosssection>`.
 
 .. code-block:: xml
   :linenos:
   :name: code_crosssection
-  :caption: Input syntax for the cross section file.
+  :caption: Input syntax for the cross-section file.
 
   <cross_section name="" format="">
     <include>...</include>
