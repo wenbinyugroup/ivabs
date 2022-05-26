@@ -1517,8 +1517,13 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ivabs-startup-script-options">
-   iVABS startup script options
+  <a class="reference internal nav-link" href="#files-of-this-example">
+   Files of this example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ivabs-running-options">
+   iVABS running options
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1551,8 +1556,13 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ivabs-startup-script-options">
-   iVABS startup script options
+  <a class="reference internal nav-link" href="#files-of-this-example">
+   Files of this example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ivabs-running-options">
+   iVABS running options
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1572,11 +1582,42 @@ title="Print to PDF"
                 
   <section id="quick-start">
 <span id="section-ivabs-start"></span><h1>Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this headline">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the instructions below <code class="docutils literal notranslate"><span class="pre">$IVABS_ROOT</span></code> refers to the root directory of iVABS after installation.</p>
+</div>
 <section id="run-ivabs-with-a-simple-example">
 <h2>Run iVABS with a simple example<a class="headerlink" href="#run-ivabs-with-a-simple-example" title="Permalink to this headline">#</a></h2>
+<p>Start the shell/terminal that is configured for the installation.</p>
+<p>Optionally change the python virtual environment.
+For example, if Python 3 and all dependencies are installed in a virtual environment named <code class="docutils literal notranslate"><span class="pre">py3ivabs</span></code> using Anaconda, then activate it using</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda activate py3ivabs
+</pre></div>
+</div>
+<p>Go to the directory <code class="docutils literal notranslate"><span class="pre">$IVABS_ROOT/examples/e0_quickstart</span></code></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="nv">$IVABS_ROOT</span>/examples/e0_quickstart
+</pre></div>
+</div>
+<p>Run the example</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python run.py cs_param_study.yml
+</pre></div>
+</div>
+<p>If everything works fine, several output files will be generated.
+In the file <code class="docutils literal notranslate"><span class="pre">cs_param_study.out</span></code>, the following message should appear.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;&lt;&lt;&lt;&lt; Iterator multidim_parameter_study completed.
+&lt;&lt;&lt;&lt;&lt; Environment execution completed.
+DAKOTA execution time in seconds:
+Total CPU        =     34.003 [parent =     34.003, child =          0]
+Total wall clock =     34.003
+</pre></div>
+</div>
+<p>This example runs about half minute.</p>
 </section>
-<section id="ivabs-startup-script-options">
-<h2>iVABS startup script options<a class="headerlink" href="#ivabs-startup-script-options" title="Permalink to this headline">#</a></h2>
+<section id="files-of-this-example">
+<h2>Files of this example<a class="headerlink" href="#files-of-this-example" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="ivabs-running-options">
+<h2>iVABS running options<a class="headerlink" href="#ivabs-running-options" title="Permalink to this headline">#</a></h2>
 </section>
 <section id="other-examples">
 <h2>Other examples<a class="headerlink" href="#other-examples" title="Permalink to this headline">#</a></h2>
