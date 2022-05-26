@@ -3,6 +3,14 @@ iVABS Components
 
 iVABS (namely integrated VABS), is a design framework for composite slender structures (also called composite beams) such as helicopter rotor blades, wind turbine blades, high aspect ratio wings, bridges, shafts, etc. This framework bundles PreVABS, VABS, GEBT, Dakota, along with MSGPI for integration among these codes and other codes. The relations of different components are described in the following figure.
 
+..  figure:: /figures/ivabs_components.png
+    :name: fig-ivabs_components
+    :width: 6in
+    :align: center
+
+   The iVABS framework.
+
+
 PreVABS is a preprocessor to generate composite sections with ply-level details based on a few design parameters including sectional geometry, topology, and material. 
 
 VABS is a cross-sectional analysis code to to model composite slender structures as beams.
@@ -16,12 +24,4 @@ This code can be easily replaced by another design and optimization framework su
 
 MSGPI is a collection of phython scripts for integrating the codes needed in iVABS and the scripts can be modified to integrate other codes.
 To make use of MSGPI, `Python3 <https://www.python.org/>`_ along with necessary packages (particularly ``numpy``, ``scipy``, and ``pyyaml``) should be installed and working on your computer. 
-
-
-..  figure:: /figures/ivabs_components.png
-    :name: fig-ivabs_components
-    :width: 6in
-    :align: center
-
-    iVABS components.
 
