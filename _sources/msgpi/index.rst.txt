@@ -6,9 +6,9 @@
 msgpi documentation
 ===================
 
-.. toctree::
+..  toctree::
     :maxdepth: 2
     :caption: Content
 
-    user_guide
-    ref_manual
+    contents/user_guide
+    contents/ref_manual

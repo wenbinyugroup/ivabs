@@ -17,3 +17,11 @@ This code can be easily replaced by another design and optimization framework su
 MSGPI is a collection of phython scripts for integrating the codes needed in iVABS and the scripts can be modified to integrate other codes.
 To make use of MSGPI, `Python3 <https://www.python.org/>`_ along with necessary packages (particularly ``numpy``, ``scipy``, and ``pyyaml``) should be installed and working on your computer. 
 
+
+..  figure:: /figures/ivabs_components.png
+    :name: fig-ivabs_components
+    :width: 6in
+    :align: center
+
+    iVABS components.
+
