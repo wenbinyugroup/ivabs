@@ -20,7 +20,7 @@ Contents
 
 ..  toctree::
     :maxdepth: 1
-    :caption: Contents
+ 
    
     ivabs/install
     ivabs/getstart
@@ -29,10 +29,6 @@ Contents
     ivabs/parameterization
     ivabs/cs_template
 
-
-..  toctree::
-    :maxdepth: 1
-    :caption: iVABS Components
    
     ivabs/introduction
     prevabs/index
