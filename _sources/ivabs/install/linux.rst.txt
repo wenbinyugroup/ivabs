@@ -20,7 +20,7 @@ Installer (``ivabs-#.#-linux-installer.sh``)
 
     ..  code-block:: bash
 
-        bash installer.sh
+        bash ivabs-#.#-linux-installer.sh
 
 #.  Select the installation folder of your own choice. The default folder is ``ivabs`` inside your home folder, i.e. ``IVABS_ROOT=~/ivabs``.
 #.  Dakota is optional. If you would like to continue use the Dakota already installed on your computer, you need to uncheck the option.
