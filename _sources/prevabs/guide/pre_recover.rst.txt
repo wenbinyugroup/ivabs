@@ -2,14 +2,14 @@
 
 .. _section-recover:
 
-Specifications for recovery
+Specifications for dehomogenization
 ===========================
 
 VABS
 ----
 
 Once the 1D beam analysis is finished, those results can be used to
-recover local 3D strains and stresses at every point of the cross section.
+compute local 3D strains, stresses, failure indexes, and strength ratios at every point of the cross-section.
 As stated in the VABS manual, the following data are required to carry
 out the recover analysis at a selected location along the beam:
 
@@ -48,7 +48,7 @@ the undeformed triad.
 .. code-block:: xml
   :linenos:
   :name: code_recover
-  :caption: A template for the recover data in a *Cross section* file.
+  :caption: A template for the recover data in a *Cross-section* file.
 
   <cross_section name="cs1">
     ...
