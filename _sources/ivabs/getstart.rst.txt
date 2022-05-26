@@ -5,7 +5,7 @@ Quick Start
 
 ..  note::
 
-    In the instructions below ``$IVABS_ROOT`` refers to the root directory of iVABS after installation.
+    In the instructions below ``IVABS_ROOT`` refers to the root directory of iVABS where you installed iVABS.
 
 
 
@@ -13,7 +13,7 @@ Quick Start
 Run iVABS with a simple example
 -------------------------------
 
-Start the shell/terminal that is configured for the installation.
+Start the shell/terminal that is configured during the installation.
 
 Optionally change the python virtual environment.
 For example, if Python 3 and all dependencies are installed in a virtual environment named ``py3ivabs`` using Anaconda, then activate it using
@@ -22,11 +22,11 @@ For example, if Python 3 and all dependencies are installed in a virtual environ
 
     conda activate py3ivabs
 
-Go to the directory ``$IVABS_ROOT/examples/e0_quickstart``
+Go to the directory ``IVABS_ROOT/examples/e0_quickstart``
 
 ..  code-block:: shell
 
-    cd $IVABS_ROOT/examples/e0_quickstart
+    cd IVABS_ROOT/examples/e0_quickstart
 
 Run the example
 
