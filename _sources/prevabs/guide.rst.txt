@@ -1,6 +1,6 @@
 .. include:: /replace.txt
 
-Guide for Preparing Input Files
+Preparing Input Files for PreVABS
 ===============================
 
 In PreVABS, a cross-section is defined through two aspects: components and global configuration, as shown in :numref:`Fig. %s <fig_csfiles1>`.
