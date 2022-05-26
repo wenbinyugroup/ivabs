@@ -77,11 +77,11 @@ Global shape and mesh settings
 
 The last part contains optional global geometry and meshing settings, which are all stored in a ``<general>`` sub-element.
 
-User can set the global transformations of the cross section.
+User can set the global transformations of the cross-section.
 The three transformation operations have been discussed in Section: :ref:`section-coordinate`.
 
 - The order of transformation operation is: translating, scaling, and rotating;
-- All operations are performed on the cross section, not the frame;
+- All operations are performed on the cross-section, not the frame;
 - The scaling operation will only scale the shape (base lines), and have
   no effect on the thicknesses of laminae;
 - The rotating angle starts from the positive half of the |x2| axis,
