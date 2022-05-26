@@ -16,9 +16,9 @@ Dakota is developed by the `Sandia National Lab <https://dakota.sandia.gov/>`_. 
     :width: 6in
     :align: center
 
-    iVABS components.
+    The iVABS framework.
 
-For download and install iVABS, refer to :doc:`ivabs/install`.
+
 
 
 Contents
