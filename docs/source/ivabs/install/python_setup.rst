@@ -1,5 +1,3 @@
-.. _setup-python-env:
-
 Setup Python environment
 ==================================
 
