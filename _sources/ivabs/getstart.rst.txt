@@ -13,7 +13,7 @@ Quick Start
 Run iVABS with a simple example
 -------------------------------
 
-Start the shell/terminal that is configured during the installation.
+Start the shell/terminal that is configured during the installation. Please refer to :doc:`install`.
 
 Optionally change the python virtual environment.
 For example, if Python 3 and all dependencies are installed in a virtual environment named ``py3ivabs`` using Anaconda, then activate it using
