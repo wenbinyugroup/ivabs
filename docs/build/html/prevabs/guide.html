@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guide for Preparing Input Files &#8212; iVABS 0.6-beta documentation</title>
+    <title>Preparing Input Files for PreVABS &#8212; iVABS 0.6-beta documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -241,7 +241,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="current reference internal" href="#">
-     Guide for Preparing Input Files
+     Preparing Input Files for PreVABS
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
     <label for="toctree-checkbox-5">
@@ -266,12 +266,12 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="guide/pre_component.html">
-       Components
+       Cross-sectional Components
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="guide/pre_recover.html">
-       Specifications for recovery
+       Specifications for dehomogenization
       </a>
      </li>
      <li class="toctree-l3">
@@ -524,7 +524,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Guide for Preparing Input Files</h1>
+                <h1>Preparing Input Files for PreVABS</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -536,25 +536,25 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="section" id="guide-for-preparing-input-files">
-<h1>Guide for Preparing Input Files<a class="headerlink" href="#guide-for-preparing-input-files" title="Permalink to this headline">#</a></h1>
-<p>In PreVABS, a cross section is defined through two aspects: components and global configuration, as shown in <a class="reference internal" href="#fig-csfiles1"><span class="std std-numref">Fig. 15</span></a>.
+  <div class="section" id="preparing-input-files-for-prevabs">
+<h1>Preparing Input Files for PreVABS<a class="headerlink" href="#preparing-input-files-for-prevabs" title="Permalink to this headline">#</a></h1>
+<p>In PreVABS, a cross-section is defined through two aspects: components and global configuration, as shown in <a class="reference internal" href="#fig-csfiles1"><span class="std std-numref">Fig. 15</span></a>.
 Components are built from geometry and materials.
 The geometry aspect comprises definitions of base points and base lines.
 The material aspect includes material properties, lamina thicknesses, layup stacking sequences, etc. The global configuration contains the files included, transformation, meshing options, and analysis settings.</p>
 <div class="figure align-center" id="fig-csfiles1">
 <a class="reference internal image-reference" href="../_images/chart1.png"><img alt="../_images/chart1.png" src="../_images/chart1.png" style="width: 75%;" /></a>
-<p class="caption"><span class="caption-number">Figure 15 </span><span class="caption-text">Cross section definition in PreVABS.</span><a class="headerlink" href="#fig-csfiles1" title="Permalink to this image">#</a></p>
+<p class="caption"><span class="caption-number">Figure 15 </span><span class="caption-text">Cross-section definition in PreVABS.</span><a class="headerlink" href="#fig-csfiles1" title="Permalink to this image">#</a></p>
 </div>
-<p>To create the cross section, at least four input files are needed.
+<p>To create the cross-section, at least four input files are needed.
 Definitions of the geometry, materials and layups are stored in three files separately.
-A top level cross section file stores the definitions of components and global configurations.
+A top level cross-section file stores the definitions of components and global configurations.
 In some cases, a separate file storing base points is needed (such as an airfoil).
 Except the base points file, which has a file extension .dat, all other files use an XML format.</p>
-<p>A top level cross section file stores all information that will be discussed in the following sections.
+<p>A top level cross-section file stores all information that will be discussed in the following sections.
 The input syntax for this main file is shown in <a class="reference internal" href="#code-crosssection"><span class="std std-numref">Listing 7</span></a>.</p>
 <div class="literal-block-wrapper docutils container" id="code-crosssection">
-<div class="code-block-caption"><span class="caption-number">Listing 7 </span><span class="caption-text">Input syntax for the cross section file.</span><a class="headerlink" href="#code-crosssection" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 7 </span><span class="caption-text">Input syntax for the cross-section file.</span><a class="headerlink" href="#code-crosssection" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;cross_section</span> <span class="na">name=</span><span class="s">&quot;&quot;</span> <span class="na">format=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 2</span>  <span class="nt">&lt;include&gt;</span>...<span class="nt">&lt;/include&gt;</span>
 <span class="linenos"> 3</span>  <span class="nt">&lt;analysis&gt;</span>...<span class="nt">&lt;/analysis&gt;</span>
@@ -603,13 +603,13 @@ The input syntax for this main file is shown in <a class="reference internal" hr
 <li class="toctree-l2"><a class="reference internal" href="guide/pre_material.html#layups">Layups</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="guide/pre_component.html">Components</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="guide/pre_component.html">Cross-sectional Components</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="guide/pre_component.html#laminate-type-component">Laminate-type component</a></li>
 <li class="toctree-l2"><a class="reference internal" href="guide/pre_component.html#fill-type-component">Fill-type component</a></li>
 <li class="toctree-l2"><a class="reference internal" href="guide/pre_component.html#components-dependency">Components dependency</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="guide/pre_recover.html">Specifications for recovery</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="guide/pre_recover.html">Specifications for dehomogenization</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="guide/pre_recover.html#vabs">VABS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="guide/pre_recover.html#swiftcomp">SwiftComp</a></li>
 </ul>

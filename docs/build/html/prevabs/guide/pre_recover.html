@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Specifications for recovery &#8212; iVABS 0.6-beta documentation</title>
+    <title>Specifications for dehomogenization &#8212; iVABS 0.6-beta documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -68,7 +68,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Other input settings" href="pre_overall.html" />
-    <link rel="prev" title="Components" href="pre_component.html" />
+    <link rel="prev" title="Cross-sectional Components" href="pre_component.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -241,7 +241,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../guide.html">
-     Guide for Preparing Input Files
+     Preparing Input Files for PreVABS
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
     <label for="toctree-checkbox-5">
@@ -266,12 +266,12 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="pre_component.html">
-       Components
+       Cross-sectional Components
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       Specifications for recovery
+       Specifications for dehomogenization
       </a>
      </li>
      <li class="toctree-l3">
@@ -553,7 +553,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Specifications for recovery</h1>
+                <h1>Specifications for dehomogenization</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -583,12 +583,12 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="section" id="specifications-for-recovery">
-<span id="section-recover"></span><h1>Specifications for recovery<a class="headerlink" href="#specifications-for-recovery" title="Permalink to this headline">#</a></h1>
+  <div class="section" id="specifications-for-dehomogenization">
+<span id="section-recover"></span><h1>Specifications for dehomogenization<a class="headerlink" href="#specifications-for-dehomogenization" title="Permalink to this headline">#</a></h1>
 <div class="section" id="vabs">
 <h2>VABS<a class="headerlink" href="#vabs" title="Permalink to this headline">#</a></h2>
 <p>Once the 1D beam analysis is finished, those results can be used to
-recover local 3D strains and stresses at every point of the cross section.
+compute local 3D strains, stresses, failure indexes, and strength ratios at every point of the cross-section.
 As stated in the VABS manual, the following data are required to carry
 out the recover analysis at a selected location along the beam:</p>
 <ul class="simple">
@@ -622,7 +622,7 @@ are the base vectors of the deformed triad and <span class="math notranslate noh
 <span class="math notranslate nohighlight">\(\mathbf{b}_2\)</span>, and <span class="math notranslate nohighlight">\(\mathbf{b}_3\)</span> are the base vectors of
 the undeformed triad.</p>
 <div class="literal-block-wrapper docutils container" id="code-recover">
-<div class="code-block-caption"><span class="caption-number">Listing 27 </span><span class="caption-text">A template for the recover data in a <em>Cross section</em> file.</span><a class="headerlink" href="#code-recover" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 27 </span><span class="caption-text">A template for the recover data in a <em>Cross-section</em> file.</span><a class="headerlink" href="#code-recover" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;cross_section</span> <span class="na">name=</span><span class="s">&quot;cs1&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 2</span>  ...
 <span class="linenos"> 3</span>  <span class="nt">&lt;dehomo&gt;</span> 1 <span class="nt">&lt;/dehomo&gt;</span>
@@ -704,7 +704,7 @@ the undeformed triad.</p>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Components</p>
+            <p class="prev-next-title">Cross-sectional Components</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="pre_overall.html" title="next page">

@@ -5,7 +5,7 @@ Download
 -------------
 
 iVABS can be dowloaded from `its Release Page on github <https://github.com/wenbinyugroup/ivabs/releases>`_.
-The folder ``Assets`` contains the installation files you need to download for different versions.
+The folder ``Assets`` contains the installation files you need to download for different versions. Please discard ``Source code (zip)`` and ``Source code (tar.gz)`` because they just contain files used to generate this documentation site.
 Installer contains a single executable for installation. Portable Archive contains all the files in an archive to be extracted for installation.
 
 

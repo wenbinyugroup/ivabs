@@ -11,7 +11,7 @@ Geometry and shapes
 Base points
 -----------
 
-Base points are used to draw base lines, which form the skeleton of a cross section.
+Base points are used to draw base lines, which form the skeleton of a cross-section.
 They can be either actually on the base lines, or not, as reference points, for example the center of a circle.
 Points that are directly referred to in the definitions of base lines are called key points, such as starting and ending points of a line or an arc, or the center of a circle.
 The rest are normal points.
