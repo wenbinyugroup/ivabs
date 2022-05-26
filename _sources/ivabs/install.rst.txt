@@ -42,5 +42,5 @@ Python Version: 3.8 or above is required for iVABS to run. iVABS also requires t
 Installation
 --------
 
-- :ref:`setup_windows`.
+- :ref:`setup-windows`.
 - :ref:`setup-linux`. 
