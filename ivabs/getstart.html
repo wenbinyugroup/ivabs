@@ -1424,7 +1424,7 @@ title="Open an issue"
       </li>
       
       <li>
-        <a href="https://github.com/wenbinyugroup/ivabs/edit/master/ivabs/getstart.rst"
+        <a href="https://github.com/wenbinyugroup/ivabs/edit/master/docs/source/ivabs/getstart.rst"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1520,11 +1520,40 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#files-of-this-example">
    Files of this example
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#input-files">
+     Input files
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#output-files">
+     Output files
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ivabs-running-options">
    iVABS running options
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mode-0-generate-dakota-input-and-run">
+     Mode 0: Generate Dakota input and run
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mode-1-run-a-single-analysis">
+     Mode 1: Run a single analysis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mode-2-generate-dakota-input-only">
+     Mode 2: Generate Dakota input only
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#other-examples">
@@ -1559,11 +1588,40 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#files-of-this-example">
    Files of this example
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#input-files">
+     Input files
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#output-files">
+     Output files
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ivabs-running-options">
    iVABS running options
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mode-0-generate-dakota-input-and-run">
+     Mode 0: Generate Dakota input and run
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mode-1-run-a-single-analysis">
+     Mode 1: Run a single analysis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mode-2-generate-dakota-input-only">
+     Mode 2: Generate Dakota input only
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#other-examples">
@@ -1615,9 +1673,87 @@ Total wall clock =     34.003
 </section>
 <section id="files-of-this-example">
 <h2>Files of this example<a class="headerlink" href="#files-of-this-example" title="Permalink to this headline">#</a></h2>
+<p>Here is a quick overview of the layout of files in this example.
+Most of them are required inputs for all studies.</p>
+<p>This example carries out a simple parameter study of a single cross-section by varying two design variables.
+The base design of this cross-section has an airfoil profile with a main box-type spar, which is typically seen in helicopter rotor blades.
+The two design variables control the locations of the front and back spar webs.</p>
+<section id="input-files">
+<h3>Input files<a class="headerlink" href="#input-files" title="Permalink to this headline">#</a></h3>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">airfoil_gbox_uni.xml.tmp</span></code></dt><dd><p>This is the design template for this type of cross-section.
+Different studies may need one or more design templates.</p>
+<p>More details on design templates can be found in Section <a class="reference internal" href="cs_template.html#section-cs-templates"><span class="std std-ref">Cross-sectional Design Template</span></a>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">material_database_us_ft.xml</span></code></dt><dd><p>This is the material database used by the cross-sectional input.</p>
+<p>More details on the material input can be found in Section <a class="reference internal" href="../prevabs/guide/pre_material.html#section-material-layup"><span class="std std-ref">Materials and layups</span></a>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">SC1095.dat</span></code></dt><dd><p>This is the airfoil data file used by the cross-sectional input.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">cs_param_study.yml</span></code></dt><dd><p>This is the main input for all studies.
+It contains most of the information needed.</p>
+<p>More details on the main input can be found in Section <a class="reference internal" href="main_input.html#section-input-guide"><span class="std std-ref">Guide to Main Input File</span></a>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">run.py</span></code></dt><dd><p>This is the startup script.
+Required for all cases, but no changes needed and can be directly copied to different working directory.</p>
+</dd>
+</dl>
+</section>
+<section id="output-files">
+<h3>Output files<a class="headerlink" href="#output-files" title="Permalink to this headline">#</a></h3>
+<p>iVABS mainly uses Dakota as the optimization tool.
+Hence, most output files are from Dakota.</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">cs_param_study.dakota</span></code></dt><dd><p>This is the Dakota input generated by iVABS from <code class="docutils literal notranslate"><span class="pre">cs_param_study.yml</span></code>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">cs_param_study.out</span></code></dt><dd><p>This is the Dakota main output file including a summary of the process.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">cs_param_study.results.txt</span></code></dt><dd><p>This is the Dakota result file.
+Contents could be different for different Dakota method.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">cs_param_study_tabular.dat</span></code></dt><dd><p>This contains a table of inputs and outputs of each evaluation/iteration.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">cs_param_study.rst</span></code></dt><dd><p>This is the Dakota restart file.
+If the Dakota process stops for some reason, you can try to continue the process from the stopping point, using the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dakota</span> <span class="o">-</span><span class="n">i</span> <span class="n">cs_param_study</span><span class="o">.</span><span class="n">dakota</span> <span class="o">-</span><span class="n">read_restart</span> <span class="n">cs_param_study</span><span class="o">.</span><span class="n">rst</span>
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">cs_param_study.err</span></code></dt><dd><p>This is the Dakota error file.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">evals/eval.#/</span></code></dt><dd><p>Each folder contains all input and output files for a single evaluation/iteration.</p>
+</dd>
+</dl>
+</section>
 </section>
 <section id="ivabs-running-options">
 <h2>iVABS running options<a class="headerlink" href="#ivabs-running-options" title="Permalink to this headline">#</a></h2>
+<p>The general command syntax to run an iVABS study is</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python run.py main_input.yml <span class="o">[</span>mode<span class="o">]</span> <span class="o">[</span>dakota_params.in dakota_results.out<span class="o">]</span>
+</pre></div>
+</div>
+<p>There are several running modes.</p>
+<section id="mode-0-generate-dakota-input-and-run">
+<h3>Mode 0: Generate Dakota input and run<a class="headerlink" href="#mode-0-generate-dakota-input-and-run" title="Permalink to this headline">#</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python run.py main_input.yml
+</pre></div>
+</div>
+<p>Default mode.</p>
+</section>
+<section id="mode-1-run-a-single-analysis">
+<h3>Mode 1: Run a single analysis<a class="headerlink" href="#mode-1-run-a-single-analysis" title="Permalink to this headline">#</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python run.py main_input.yml <span class="m">1</span> params.in results.out
+</pre></div>
+</div>
+<p>This mode in mainly for the use by Dakota for each evaluation/iteration.</p>
+</section>
+<section id="mode-2-generate-dakota-input-only">
+<h3>Mode 2: Generate Dakota input only<a class="headerlink" href="#mode-2-generate-dakota-input-only" title="Permalink to this headline">#</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python run.py main_input.yml <span class="m">2</span>
+</pre></div>
+</div>
+<p>The process will stop after generating the Dakota input.</p>
+</section>
 </section>
 <section id="other-examples">
 <h2>Other examples<a class="headerlink" href="#other-examples" title="Permalink to this headline">#</a></h2>

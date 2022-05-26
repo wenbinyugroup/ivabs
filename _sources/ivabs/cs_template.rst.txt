@@ -1,3 +1,5 @@
+.. _section-cs-templates:
+
 Cross-sectional Design Template
 ===============================
 
