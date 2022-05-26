@@ -79,9 +79,9 @@ Contributing
 
 You are welcome to contribute to the iVABS documentation in the following ways:
 
-#. You can comment on a specific page on the `iVABS documentation website <http://wenbinyugroup.github.io/ivabs>`_. 
-#. `Add an issue <https://github.com/wenbinyugroup/ivabs/issues/new>`_ for bug reports or feature request. 
-#. `Start a new discussion <https://cdmhub.org/groups/yugroup/forum/default-section/prevabsvabs>`_ on cdmHUB if you need help running the program. 
+#. Suggest edits for a a specific page on the site using the middle icon on the top-right corner of the page. 
+#. `Add an issue <https://github.com/wenbinyugroup/ivabs/issues/new>`_ for bug reports or feature requests. 
+#. `Start a new discussion <https://github.com/wenbinyugroup/ivabs/discussions>`_ on if you need help running iVABS. 
 #. Modify existing files or contribute new files to `the github repository <https://github.com/wenbinyugroup/ivabs>`_.   
  
 
