@@ -11,6 +11,13 @@ This framework bundles PreVABS, VABS, GEBT, Dakota, along with MSGPI for integra
 PreVABS, VABS, GEBT, and MSGPI are developed by `Prof. Wenbin Yu's research group <https://cdmhub.org/groups/yugroup>`_.
 Dakota is developed by the `Sandia National Lab <https://dakota.sandia.gov/>`_. The relations of different components are described in the following figure. A brief introduction of different components can be found in the :doc:`ivabs/introduction` page.
 
+..  figure:: /figures/ivabs_components.png
+    :name: fig-ivabs_components
+    :width: 6in
+    :align: center
+
+    iVABS components.
+
 For download and install iVABS, refer to :doc:`ivabs/install`.
 
 
@@ -20,20 +27,15 @@ Contents
 
 ..  toctree::
     :maxdepth: 1
-    :caption: Contents
-   
+
+
     ivabs/install
     ivabs/getstart
     ivabs/examples
-    .. ivabs/tutorials
     ivabs/main_input
     ivabs/parameterization
     ivabs/cs_template
 
-
-..  toctree::
-    :maxdepth: 1
-    :caption: iVABS Components
    
     ivabs/introduction
     prevabs/index
