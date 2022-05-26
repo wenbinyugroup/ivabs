@@ -3,7 +3,7 @@ Installation on Linux
 
 ..  note::
 
-    In the instructions below ``iVABS_ROOT`` refers to the root directory of iVABS after installation.
+    In the instructions below ``IVABS_ROOT`` refers to the root directory of iVABS after installation, e.g., ``IVABS_ROOT=$HOME/ivabs``.
 
 
 
@@ -22,9 +22,9 @@ Installer (``ivabs-#.#-linux-installer.sh``)
 
         bash ivabs-#.#-linux-installer.sh
 
-#.  Select the installation folder of your own choice. The default folder is ``ivabs`` inside your home folder, i.e. ``iVABS_ROOT=~/ivabs``.
+#.  Select the installation directory of your own choice. The default location is ``ivabs`` inside your home directory, i.e. ``IVABS_ROOT=$HOME/ivabs``.
 #.  Dakota is optional. If you would like to use the Dakota already installed on your computer, you need to answer ``no`` for that question. 
-#.  Environment variables of PATH and PYTHONPATH can be updated automatically (write to ``.bashrc`` or ``.zshrc`` file). However, if your linux box using a different shell startup file such as ``.bash_profile``, you can set these environmental variables by yourself. 
+#.  Environment variables of ``PATH`` and ``PYTHONPATH`` can be updated automatically (wrote to the shell startup file such as ``.bash_profile``). However, if your shell/terminal uses a different startup file such as ``.bashrc``, you can set these environmental variables by yourself. 
 
 
 
@@ -61,13 +61,13 @@ Bash shell
 
 ..  code-block:: bash
 
-    export PATH=iVABS_ROOT/bin:$PATH
-    export LD_LIBRARY_PATH=iVABS_ROOT/bin:$LD_LIBRARY_PATH
-    export PYTHONPATH=iVABS_ROOT/scripts:$PYTHONPATH
+    export PATH=$IVABS_ROOT/bin:$PATH
+    export LD_LIBRARY_PATH=$IVABS_ROOT/bin:$LD_LIBRARY_PATH
+    export PYTHONPATH=$IVABS_ROOT/scripts:$PYTHONPATH
 
     # If built-in Dakota is needed
-    export PATH=iVABS_ROOT/dakota/bin:$PATH
-    export PYTHONPATH=iVABS_ROOT/dakota/share/dakota/Python:$PYTHONPATH
+    export PATH=$IVABS_ROOT/dakota/bin:$PATH
+    export PYTHONPATH=$IVABS_ROOT/dakota/share/dakota/Python:$PYTHONPATH
 
 
 Typical startup files for bash shells can be ``~/.bashrc`` or ``~/.bash_profile``.
