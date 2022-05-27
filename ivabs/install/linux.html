@@ -676,18 +676,6 @@ title="Print to PDF"
    )
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#set-environment-variables">
-   Set environment variables
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#bash-shell">
-     Bash shell
-    </a>
-   </li>
-  </ul>
- </li>
 </ul>
 
     </nav>
@@ -729,18 +717,6 @@ title="Print to PDF"
    )
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#set-environment-variables">
-   Set environment variables
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#bash-shell">
-     Bash shell
-    </a>
-   </li>
-  </ul>
- </li>
 </ul>
 
                         </nav>
@@ -773,36 +749,26 @@ title="Print to PDF"
 <section id="portable-archive-ivabs-linux-portable-tar-gz">
 <h2>Portable archive (<code class="docutils literal notranslate"><span class="pre">ivabs-#.#-linux-portable.tar.gz</span></code>)<a class="headerlink" href="#portable-archive-ivabs-linux-portable-tar-gz" title="Permalink to this headline">#</a></h2>
 <ol class="arabic">
-<li><p>Unpackage the archive to a location of your own choice (e.g., <code class="docutils literal notranslate"><span class="pre">INSTALL_DIR=$HOME</span></code>).</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar xzvfC ivabs_#.#_linux_portable.tar.gz <span class="nv">$INSTALL_DIR</span>
+<li><p>Unpackage the archive to a directory of your own choice. For example, you can use the following command to install iVABS in $HOME/ivabs.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar xzvfC ivabs_#.#_linux_portable.tar.gz <span class="nv">$HOME</span>
 </pre></div>
 </div>
 </li>
-<li><p>In this way, the iVABS root directory is <code class="docutils literal notranslate"><span class="pre">IVABS_ROOT=$INSTALL_DIR/ivabs</span></code>.</p></li>
-<li><p>Set environment variables manually.</p></li>
+<li><p>Set environment variables manually. For example, for bash shell, you can use the following commands to set the environment variables for the current shell session.</p></li>
 </ol>
-</section>
-<section id="set-environment-variables">
-<h2>Set environment variables<a class="headerlink" href="#set-environment-variables" title="Permalink to this headline">#</a></h2>
-<p>The following scripts can set the environment variables for the current shell session.</p>
-<p>If you want to make this setting permanent, the following scripts need to be added to the startup file of the shell you use.</p>
-<section id="bash-shell">
-<h3>Bash shell<a class="headerlink" href="#bash-shell" title="Permalink to this headline">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$IVABS_ROOT</span>/bin:<span class="nv">$PATH</span>
 <span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$IVABS_ROOT</span>/bin:<span class="nv">$LD_LIBRARY_PATH</span>
 <span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$IVABS_ROOT</span>/scripts:<span class="nv">$PYTHONPATH</span>
 
-<span class="c1"># If built-in Dakota is needed</span>
+<span class="c1"># If the Dakota included in the iVABS release is installed</span>
 <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$IVABS_ROOT</span>/dakota/bin:<span class="nv">$PATH</span>
 <span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$IVABS_ROOT</span>/dakota/share/dakota/Python:<span class="nv">$PYTHONPATH</span>
 </pre></div>
 </div>
-<p>Typical startup files for bash shells can be <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> or <code class="docutils literal notranslate"><span class="pre">~/.bash_profile</span></code>.</p>
-<p>After editing and saving the startup file, use the following command in the shell to activate these changes:</p>
+<p>If you want to make this setting permanent, you need to add the above commands to the startup file of the shell. Typical startup files for bash shells are <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> or <code class="docutils literal notranslate"><span class="pre">~/.bash_profile</span></code>. After editing and saving the startup file, use the following command in the shell to activate these changes:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> ~/.bash_profile  <span class="c1"># or other startup file</span>
 </pre></div>
 </div>
-</section>
 </section>
 </section>
 
