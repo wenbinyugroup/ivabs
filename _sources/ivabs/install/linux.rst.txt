@@ -31,18 +31,13 @@ Installer (``ivabs-#.#-linux-installer.sh``)
 
 Portable archive (``ivabs-#.#-linux-portable.tar.gz``)
 --------------------------------------------------------
-#. Unpackage the archive to a sub-directory called ivabs within the current directory using the following command. 
 
-   .. code-block:: bash
-
-      tar xzvf ivabs_#.#_linux_portable.tar.gz
-
-#. You can also unpackage the archive to a directory of your own choice. For example, you can use the following command to install iVABS in $HOME/ivabs.
+#. Unpackage the archive to a directory of your own choice. For example, you can use the following command to install iVABS in $HOME/ivabs.
 
    .. code-block:: bash
 
       tar xzvfC ivabs_#.#_linux_portable.tar.gz $HOME
-    
+
 #. Set environment variables manually. For example, for bash shell, you can use the following commands to set the environment variables for the current shell session.
 
    ..  code-block:: bash
