@@ -12,17 +12,19 @@ Installer (``ivabs-#.#-windows-installer.exe``)
 #. A shortcut can be created in the Start Menu and Desktop.
 
 
-Portable archive (``ivabs-#.#-windows-portable.7z``)
+Portable archive (``ivabs-#.#-windows-portable.zip``)
 -----------------------------------------------------
 
-#. Extract the archive to a directory of your own choice. 
-#. Use the embeded ``env.cmd`` to automatically set up environment variables, or set up environment variables manually according to ``env.cmd``. Specifically, you need to add the following directories to ``PATH``:
+#. Unzip the package to a directory of your own choice.
+    
+#. Set environment variables manually. This setting will be effective as long as the command line is open.
 
-   - ``IVABS_ROOT/bin``
-   - ``IVABS_ROOT/dakota/bin`` (required only if the Dakota included in the iVABS release is used)
+   ..  code-block:: shell
 
-   and the following directories to ``PYTHONPATH``:
+       set PATH=%IVABS_ROOT%/bin;%PATH%
+       set PYTHONPATH=%IVABS_ROOT%/scripts;%PYTHONPATH%
 
-   - ``ivabs/scripts``
-   - ``ivabs/dakota/share/dakota/Python`` (required only if the Dakota included in the iVABS release is used)
+       # If the Dakota included in the iVABS release is installed
+       set PATH=%IVABS_ROOT%/dakota/bin;%PATH%
 
+#. If you want to make this change permanent, you need to edit the environment variable in your system setting. You can try to search the system tool named "Edit environment variables for your account".
