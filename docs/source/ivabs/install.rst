@@ -43,3 +43,4 @@ Installation
     
     install/windows
     install/linux
+    install/python_setup
