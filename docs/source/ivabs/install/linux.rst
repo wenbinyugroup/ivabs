@@ -32,34 +32,13 @@ Installer (``ivabs-#.#-linux-installer.sh``)
 Portable archive (``ivabs-#.#-linux-portable.tar.gz``)
 --------------------------------------------------------
 
-#. Unpackage the archive to a location of your own choice (e.g., ``INSTALL_DIR=$HOME``).
+#. Unpackage the archive to a directory of your own choice. For example, you can use the following command to install iVABS in $HOME/ivabs.
 
    .. code-block:: bash
 
-      tar xzvfC ivabs_#.#_linux_portable.tar.gz $INSTALL_DIR
+      tar xzvfC ivabs_#.#_linux_portable.tar.gz $HOME
 
-#. In this way, the iVABS root directory is ``IVABS_ROOT=$INSTALL_DIR/ivabs``.
-
-#. Set environment variables manually.
-
-
-
-
-
-
-
-
-
-Set environment variables
--------------------------
-
-The following scripts can set the environment variables for the current shell session.
-
-If you want to make this setting permanent, the following scripts need to be added to the startup file of the shell you use.
-
-
-Bash shell
-~~~~~~~~~~
+#. Set environment variables manually. For example, for bash shell, you can use the following commands to set the environment variables for the current shell session.
 
 ..  code-block:: bash
 
@@ -67,20 +46,12 @@ Bash shell
     export LD_LIBRARY_PATH=$IVABS_ROOT/bin:$LD_LIBRARY_PATH
     export PYTHONPATH=$IVABS_ROOT/scripts:$PYTHONPATH
 
-    # If built-in Dakota is needed
+    # If the Dakota included in the iVABS release is installed
     export PATH=$IVABS_ROOT/dakota/bin:$PATH
     export PYTHONPATH=$IVABS_ROOT/dakota/share/dakota/Python:$PYTHONPATH
 
-
-Typical startup files for bash shells can be ``~/.bashrc`` or ``~/.bash_profile``.
-
-After editing and saving the startup file, use the following command in the shell to activate these changes:
+If you want to make this setting permanent, you need to add the above commands to the startup file of the shell. Typical startup files for bash shells are ``~/.bashrc`` or ``~/.bash_profile``. After editing and saving the startup file, use the following command in the shell to activate these changes:
 
 ..  code-block:: bash
 
     source ~/.bash_profile  # or other startup file
-
-
-
-
-
