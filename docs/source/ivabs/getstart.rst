@@ -16,7 +16,7 @@ Run iVABS with a simple example
 Start the shell/terminal that is configured during the installation.
 Please refer to :ref:`section-ivabs_install` for more information.
 
-    If you are using Python virtual environment managed by Anaconda, you need to activate it first.
+    If you are using Python virtual environment managed by Anaconda (see :doc:`/ivabs/install/python_setup`), you need to activate it first.
     For example, if Python 3.6 and all dependencies are installed in a virtual environment named ``py3ivabs``, then activate it using
 
     ..  code-block:: shell
