@@ -666,11 +666,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#portable-archive-ivabs-windows-portable-7z">
+  <a class="reference internal nav-link" href="#portable-archive-ivabs-windows-portable-zip">
    Portable archive (
    <code class="docutils literal notranslate">
     <span class="pre">
-     ivabs-#.#-windows-portable.7z
+     ivabs-#.#-windows-portable.zip
     </span>
    </code>
    )
@@ -707,11 +707,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#portable-archive-ivabs-windows-portable-7z">
+  <a class="reference internal nav-link" href="#portable-archive-ivabs-windows-portable-zip">
    Portable archive (
    <code class="docutils literal notranslate">
     <span class="pre">
-     ivabs-#.#-windows-portable.7z
+     ivabs-#.#-windows-portable.zip
     </span>
    </code>
    )
@@ -739,21 +739,20 @@ title="Print to PDF"
 <li><p>A shortcut can be created in the Start Menu and Desktop.</p></li>
 </ol>
 </section>
-<section id="portable-archive-ivabs-windows-portable-7z">
-<h2>Portable archive (<code class="docutils literal notranslate"><span class="pre">ivabs-#.#-windows-portable.7z</span></code>)<a class="headerlink" href="#portable-archive-ivabs-windows-portable-7z" title="Permalink to this headline">#</a></h2>
+<section id="portable-archive-ivabs-windows-portable-zip">
+<h2>Portable archive (<code class="docutils literal notranslate"><span class="pre">ivabs-#.#-windows-portable.zip</span></code>)<a class="headerlink" href="#portable-archive-ivabs-windows-portable-zip" title="Permalink to this headline">#</a></h2>
 <ol class="arabic">
-<li><p>Extract the archive to a directory of your own choice.</p></li>
-<li><p>Use the embeded <code class="docutils literal notranslate"><span class="pre">env.cmd</span></code> to automatically set up environment variables, or set up environment variables manually according to <code class="docutils literal notranslate"><span class="pre">env.cmd</span></code>. Specifically, you need to add the following directories to <code class="docutils literal notranslate"><span class="pre">PATH</span></code>:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">IVABS_ROOT/bin</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">IVABS_ROOT/dakota/bin</span></code> (required only if the Dakota included in the iVABS release is used)</p></li>
-</ul>
-<p>and the following directories to <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ivabs/scripts</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ivabs/dakota/share/dakota/Python</span></code> (required only if the Dakota included in the iVABS release is used)</p></li>
-</ul>
+<li><p>Unzip the package to a directory of your own choice.</p></li>
+<li><p>Set environment variables manually. This setting will be effective as long as the command line is open.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="nv">PATH</span><span class="o">=</span>%IVABS_ROOT%/bin<span class="p">;</span>%PATH%
+<span class="nb">set</span> <span class="nv">PYTHONPATH</span><span class="o">=</span>%IVABS_ROOT%/scripts<span class="p">;</span>%PYTHONPATH%
+
+<span class="c1"># If the Dakota included in the iVABS release is installed</span>
+<span class="nb">set</span> <span class="nv">PATH</span><span class="o">=</span>%IVABS_ROOT%/dakota/bin<span class="p">;</span>%PATH%
+</pre></div>
+</div>
 </li>
+<li><p>If you want to make this change permanent, you need to edit the environment variable in your system setting. You can try to search the system tool named “Edit environment variables for your account”.</p></li>
 </ol>
 </section>
 </section>
