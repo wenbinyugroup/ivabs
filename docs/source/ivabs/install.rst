@@ -24,7 +24,7 @@ Prerequisites
 **VABS**
 
 - Request VABS from `AnalySwift <http://analyswift.com/software-trial/>`_ and follow the VABS instruction to install.
-- The VABS installation directory ``VABS_ROOT`` should be in the environment variable (``PATH`` for Windows/Linux and ``LD_LIBRARY_PATH`` for Linux) so that iVABS can invoke VABS executable. 
+- The VABS installation directory ``VABS_ROOT`` should be in the environment variable (``PATH`` for Windows/Linux and ``LD_LIBRARY_PATH`` for Linux) so that iVABS can invoke the VABS executable. 
 - Request license from `AnalySwift <http://analyswift.com/software-trial/>`_.
   License should also be placed inside ``VABS_ROOT``.
 
