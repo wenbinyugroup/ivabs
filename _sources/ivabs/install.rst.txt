@@ -24,16 +24,15 @@ Prerequisites
 **VABS**
 
 - Request VABS from `AnalySwift <http://analyswift.com/software-trial/>`_ and follow the VABS instruction to install.
-- The VABS installation directory ``VABS_ROOT`` should be in the environment variable (``PATH`` for Windows/Linux and ``LD_LIBRARY_PATH`` for Linux) so that iVABS can invoke VABS executable. 
+- The VABS installation directory ``VABS_ROOT`` should be in the environment variable (``PATH`` for Windows/Linux and ``LD_LIBRARY_PATH`` for Linux) so that iVABS can invoke the VABS executable. 
 - Request license from `AnalySwift <http://analyswift.com/software-trial/>`_.
   License should also be placed inside ``VABS_ROOT``.
 
 
 **Python**
 
-Python Version: 3.8 or above is required for iVABS to run.
-iVABS also requires three packages: ``numpy``, ``scipy``, ``pyyaml``.
-For more helps on configuring the Python environment, see :doc:`/ivabs/install/python_setup`.
+Python 3.8 or above is required for iVABS to run. Packages ``numpy``, ``scipy``, and ``pyyaml`` should also be properly installed. 
+For help on configuring the Python environment, see :doc:`/ivabs/install/python_setup`.
 
 
 
