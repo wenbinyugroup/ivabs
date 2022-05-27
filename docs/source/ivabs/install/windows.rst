@@ -1,8 +1,6 @@
 Installation on Windows
 ========================
 
-``IVABS_ROOT`` refers to the root directory of iVABS after installation.
-
 Installer (``ivabs-#.#-windows-installer.exe``)
 ------------------------------------------------
 
@@ -17,7 +15,7 @@ Portable archive (``ivabs-#.#-windows-portable.zip``)
 
 #. Unzip the package to a directory of your own choice.
     
-#. Set environment variables manually. This setting will be effective as long as the command line window is open.
+#. Set environment variables manually. This setting will be effective as long as the command line window is open. Please note replace ``IVABS_ROOT`` with the root directory of iVABS. 
 
    ..  code-block:: shell
 
