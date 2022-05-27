@@ -3,7 +3,7 @@ Installation on Linux
 
 ..  note::
 
-    In the instructions below ``IVABS_ROOT`` refers to the root directory of iVABS after installation.
+    ``IVABS_ROOT`` refers to the root directory of iVABS after installation.
 
 
 
@@ -50,7 +50,7 @@ Portable archive (``ivabs-#.#-linux-portable.tar.gz``)
     export PATH=$IVABS_ROOT/dakota/bin:$PATH
     export PYTHONPATH=$IVABS_ROOT/dakota/share/dakota/Python:$PYTHONPATH
 
-    If you want to make this setting permanent, you need to add the above commands to the startup file of the shell. Typical startup files for bash shells are ``~/.bashrc`` or ``~/.bash_profile``. After editing and saving the startup file, use the following command in the shell to activate these changes:
+  #. If you want to make this setting permanent, you need to add the above commands to the startup file of the shell. Typical startup files for bash shells are ``~/.bashrc`` or ``~/.bash_profile``. After editing and saving the startup file, use the following command in the shell to activate these changes:
 
     ..  code-block:: bash
 

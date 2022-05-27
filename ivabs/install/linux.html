@@ -731,7 +731,7 @@ title="Print to PDF"
 <h1>Installation on Linux<a class="headerlink" href="#installation-on-linux" title="Permalink to this headline">#</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In the instructions below <code class="docutils literal notranslate"><span class="pre">IVABS_ROOT</span></code> refers to the root directory of iVABS after installation.</p>
+<p><code class="docutils literal notranslate"><span class="pre">IVABS_ROOT</span></code> refers to the root directory of iVABS after installation.</p>
 </div>
 <section id="installer-ivabs-linux-installer-sh">
 <h2>Installer (<code class="docutils literal notranslate"><span class="pre">ivabs-#.#-linux-installer.sh</span></code>)<a class="headerlink" href="#installer-ivabs-linux-installer-sh" title="Permalink to this headline">#</a></h2>
@@ -762,16 +762,21 @@ title="Print to PDF"
 <span class="c1"># If the Dakota included in the iVABS release is installed</span>
 <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$IVABS_ROOT</span>/dakota/bin:<span class="nv">$PATH</span>
 <span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$IVABS_ROOT</span>/dakota/share/dakota/Python:<span class="nv">$PYTHONPATH</span>
-
-If you want to make this setting permanent, you need to add the above commands to the startup file of the shell. Typical startup files <span class="k">for</span> bash shells are <span class="sb">``</span>~/.bashrc<span class="sb">``</span> or <span class="sb">``</span>~/.bash_profile<span class="sb">``</span>. After editing and saving the startup file, use the following <span class="nb">command</span> <span class="k">in</span> the shell to activate these changes:
-
-..  code-block:: bash
-
-<span class="nb">source</span> ~/.bash_profile  <span class="c1"># or other startup file</span>
 </pre></div>
 </div>
 </li>
 </ol>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>If you want to make this setting permanent, you need to add the above commands to the startup file of the shell. Typical startup files for bash shells are <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> or <code class="docutils literal notranslate"><span class="pre">~/.bash_profile</span></code>. After editing and saving the startup file, use the following command in the shell to activate these changes:</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>source ~/.bash_profile  # or other startup file</p>
+</div></blockquote>
+</div></blockquote>
 </section>
 </section>
 
