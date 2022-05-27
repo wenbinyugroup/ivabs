@@ -1,6 +1,6 @@
 .. _section-cs-templates:
 
-Cross-sectional Design Template
+Cross-sectional Design Templates
 ===============================
 
 .. toctree::
