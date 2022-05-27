@@ -3,7 +3,7 @@ Installation on Linux
 
 ..  note::
 
-    In the instructions below ``IVABS_ROOT`` refers to the root directory of iVABS after installation.
+    ``IVABS_ROOT`` refers to the root directory of iVABS after installation.
 
 
 
