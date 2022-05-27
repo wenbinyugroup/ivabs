@@ -17,7 +17,7 @@ Portable archive (``ivabs-#.#-windows-portable.zip``)
 
 #. Unzip the package to a directory of your own choice.
     
-#. Set environment variables manually. This setting will be effective as long as the command line is open.
+#. Set environment variables manually. This setting will be effective as long as the command line window is open.
 
    ..  code-block:: shell
 
