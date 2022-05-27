@@ -23,8 +23,9 @@ Installer (``ivabs-#.#-linux-installer.sh``)
         bash ivabs-#.#-linux-installer.sh
 
 #.  Select the installation directory of your own choice. The default is ``ivabs`` inside your home directory, i.e. ``IVABS_ROOT=$HOME/ivabs``.
-#.  If you already have Dakota already installed on your computer, you can skip Dakota installation by answering ``no`` to that question. 
+#.  If you have Dakota already installed on your computer, you can skip Dakota installation by answering ``no`` to that question. 
 #.  Environment variables of ``PATH``, ``LD_LIBRARY_PATH`` and ``PYTHONPATH`` can be updated automatically and wrote to the shell startup file. The installer will detect the shell you are currently using and use a default startup file (``.bash_profile`` for bash, ``.zshrc`` for zsh, ``.cshrc`` or ``.tcshrc`` for csh). However, if your shell/terminal uses a different startup file such as ``.bashrc``, you need to set these environmental variables by yourself as described in the next section.
+#.  You need to make these changed environment variables effective by using a correspondng command (such as ``source $HOME/.bash_profile`` for bash) or restart the terminal shell.
 
 
 
