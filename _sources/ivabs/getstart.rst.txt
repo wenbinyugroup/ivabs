@@ -5,7 +5,7 @@ Quick Start
 
 ..  note::
 
-    In the instructions below ``IVABS_ROOT`` refers to the root directory of iVABS where you installed iVABS.
+    ``IVABS_ROOT`` efers to the root directory of iVABS after installation.
 
 
 
@@ -123,7 +123,7 @@ Hence, most output files are from Dakota.
     This is the Dakota error file.
 
 ``evals/eval.#/``
-    Each folder contains all input and output files for a single evaluation/iteration.
+    Each directory contains all input and output files for a single evaluation/iteration.
 
 
 iVABS running options
