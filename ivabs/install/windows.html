@@ -204,7 +204,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../cs_template.html">
-   Cross-sectional Design Template
+   Cross-sectional Design Templates
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -676,11 +676,6 @@ title="Print to PDF"
    )
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#setting-environment-variables">
-   Setting environment variables
-  </a>
- </li>
 </ul>
 
     </nav>
@@ -722,11 +717,6 @@ title="Print to PDF"
    )
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#setting-environment-variables">
-   Setting environment variables
-  </a>
- </li>
 </ul>
 
                         </nav>
@@ -739,11 +729,11 @@ title="Print to PDF"
                 
   <section id="installation-on-windows">
 <h1>Installation on Windows<a class="headerlink" href="#installation-on-windows" title="Permalink to this headline">#</a></h1>
-<p>Below <code class="docutils literal notranslate"><span class="pre">IVABS_ROOT</span></code> stands for the root directory of iVABS after installation.</p>
+<p><code class="docutils literal notranslate"><span class="pre">IVABS_ROOT</span></code> refers to the root directory of iVABS after installation.</p>
 <section id="installer-ivabs-windows-installer-exe">
 <h2>Installer (<code class="docutils literal notranslate"><span class="pre">ivabs-#.#-windows-installer.exe</span></code>)<a class="headerlink" href="#installer-ivabs-windows-installer-exe" title="Permalink to this headline">#</a></h2>
 <ol class="arabic simple">
-<li><p>Select the installation folder of your own choice. The default folder is <code class="docutils literal notranslate"><span class="pre">iVABS</span></code> inside your home folder. You should have writing permission for the folder to install iVABS.</p></li>
+<li><p>Select the installation directory of your own choice. The default directory is <code class="docutils literal notranslate"><span class="pre">iVABS</span></code> inside your home directory. You should have writing permission for the direcotry to install iVABS.</p></li>
 <li><p>Dakota is optional. If you would like to continue use the version of Dakota you already have on your computer, you need to uncheck the option. However, you need to make sure that Dakota binary and Dakota python library are available in the Path.</p></li>
 <li><p>Environment variables of <strong>PATH</strong> and <strong>PYTHONPATH</strong> can be updated automatically. This is needed if you want to use iVABS toolset from the command prompt.</p></li>
 <li><p>A shortcut can be created in the Start Menu and Desktop.</p></li>
@@ -751,23 +741,20 @@ title="Print to PDF"
 </section>
 <section id="portable-archive-ivabs-windows-portable-7z">
 <h2>Portable archive (<code class="docutils literal notranslate"><span class="pre">ivabs-#.#-windows-portable.7z</span></code>)<a class="headerlink" href="#portable-archive-ivabs-windows-portable-7z" title="Permalink to this headline">#</a></h2>
-<ol class="arabic simple">
-<li><p>Extract the archive to a folder of your own choice.</p></li>
-<li><p>Use the embeded <code class="docutils literal notranslate"><span class="pre">env.cmd</span></code> to automatically set up environment variables, or set up environment variables manually according to <code class="docutils literal notranslate"><span class="pre">env.cmd</span></code>.</p></li>
-</ol>
-</section>
-<section id="setting-environment-variables">
-<h2>Setting environment variables<a class="headerlink" href="#setting-environment-variables" title="Permalink to this headline">#</a></h2>
-<p>Add the following directories to <code class="docutils literal notranslate"><span class="pre">PATH</span></code>:</p>
+<ol class="arabic">
+<li><p>Extract the archive to a directory of your own choice.</p></li>
+<li><p>Use the embeded <code class="docutils literal notranslate"><span class="pre">env.cmd</span></code> to automatically set up environment variables, or set up environment variables manually according to <code class="docutils literal notranslate"><span class="pre">env.cmd</span></code>. Specifically, you need to add the following directories to <code class="docutils literal notranslate"><span class="pre">PATH</span></code>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">IVABS_ROOT/bin</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">IVABS_ROOT/dakota/bin</span></code> (required only if the Dakota delivered with iVABS is used)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IVABS_ROOT/dakota/bin</span></code> (required only if the Dakota included in the iVABS release is used)</p></li>
 </ul>
-<p>Add the following directories to <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>:</p>
+<p>and the following directories to <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ivabs/scripts</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ivabs/dakota/share/dakota/Python</span></code> (required only if the Dakota delivered with iVABS is used)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ivabs/dakota/share/dakota/Python</span></code> (required only if the Dakota included in the iVABS release is used)</p></li>
 </ul>
+</li>
+</ol>
 </section>
 </section>
 

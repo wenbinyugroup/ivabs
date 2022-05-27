@@ -204,7 +204,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../cs_template.html">
-   Cross-sectional Design Template
+   Cross-sectional Design Templates
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -749,7 +749,12 @@ title="Print to PDF"
 <section id="portable-archive-ivabs-linux-portable-tar-gz">
 <h2>Portable archive (<code class="docutils literal notranslate"><span class="pre">ivabs-#.#-linux-portable.tar.gz</span></code>)<a class="headerlink" href="#portable-archive-ivabs-linux-portable-tar-gz" title="Permalink to this headline">#</a></h2>
 <ol class="arabic">
-<li><p>Unpackage the archive to a directory of your own choice. For example, you can use the following command to install iVABS in $HOME/ivabs.</p>
+<li><p>Unpackage the archive to a sub-directory called ivabs within the current directory using the following command.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar xzvf ivabs_#.#_linux_portable.tar.gz
+</pre></div>
+</div>
+</li>
+<li><p>You can also unpackage the archive to a directory of your own choice. For example, you can use the following command to install iVABS in $HOME/ivabs.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar xzvfC ivabs_#.#_linux_portable.tar.gz <span class="nv">$HOME</span>
 </pre></div>
 </div>
