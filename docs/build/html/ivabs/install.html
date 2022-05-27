@@ -66,7 +66,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Quick Start" href="getstart.html" />
+    <link rel="next" title="Installation on Windows" href="install/windows.html" />
     <link rel="prev" title="Welcome to iVABS Documentation" href="../index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -115,10 +115,27 @@ commentsRunWhenDOMLoaded(addUtterances);
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
    Download &amp; Installation
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="install/windows.html">
+     Installation on Windows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="install/linux.html">
+     Installation on Linux
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="getstart.html">
@@ -129,8 +146,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="examples.html">
    Examples
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -156,8 +173,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="main_input.html">
    Guide to Main Input File
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -188,8 +205,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="cs_template.html">
    Cross-sectional Design Template
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -208,10 +225,10 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../prevabs/index.html">
-   PreVABS’s Documentation
+   PreVABS Documentation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -235,8 +252,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="../prevabs/contents/guide.html">
      Guide for Preparing Input Files
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -277,8 +294,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="../prevabs/contents/examples.html">
      Examples
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -591,31 +608,36 @@ title="Print to PDF"
               <div>
                 
   <div class="section" id="download-installation">
-<h1>Download &amp; Installation<a class="headerlink" href="#download-installation" title="Permalink to this headline">#</a></h1>
+<span id="section-ivabs-install"></span><h1>Download &amp; Installation<a class="headerlink" href="#download-installation" title="Permalink to this headline">#</a></h1>
 <div class="section" id="download">
 <h2>Download<a class="headerlink" href="#download" title="Permalink to this headline">#</a></h2>
 <p>iVABS can be dowloaded from <a class="reference external" href="https://github.com/wenbinyugroup/ivabs/releases">its Release Page on github</a>.
-The folder <code class="docutils literal notranslate"><span class="pre">Assets</span></code> contains the installation files you need to download for different versions. Please discard <code class="docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span> <span class="pre">(zip)</span></code> and <code class="docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span> <span class="pre">(tar.gz)</span></code> because they just contain files used to generate this documentation site.
-Installer contains a single executable for installation. Portable Archive contains all the files in an archive to be extracted for installation.</p>
+The directory <code class="docutils literal notranslate"><span class="pre">Assets</span></code> contains the installation files you need to download for different versions.
+Please discard <code class="docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span> <span class="pre">(zip)</span></code> and <code class="docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span> <span class="pre">(tar.gz)</span></code> because they just contain files used to generate this documentation site.
+Installer contains a single executable for installation.
+Portable Archive contains all the files in an archive to be extracted for installation.</p>
 </div>
 <div class="section" id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
 <p><strong>VABS</strong></p>
 <ul class="simple">
 <li><p>Request VABS from <a class="reference external" href="http://analyswift.com/software-trial/">AnalySwift</a> and follow the VABS instruction to install.</p></li>
-<li><p>The VABS installation folder <code class="docutils literal notranslate"><span class="pre">VABS_ROOT</span></code> should be in the environment variable (<code class="docutils literal notranslate"><span class="pre">PATH</span></code> for Windows and <code class="docutils literal notranslate"><span class="pre">LD_LIBRARY_PATH</span></code> for Linux) so that iVABS can invoke VABS executable.</p></li>
+<li><p>The VABS installation directory <code class="docutils literal notranslate"><span class="pre">VABS_ROOT</span></code> should be in the environment variable (<code class="docutils literal notranslate"><span class="pre">PATH</span></code> for Windows/Linux and <code class="docutils literal notranslate"><span class="pre">LD_LIBRARY_PATH</span></code> for Linux) so that iVABS can invoke the VABS executable.</p></li>
 <li><p>Request license from <a class="reference external" href="http://analyswift.com/software-trial/">AnalySwift</a>.
 License should also be placed inside <code class="docutils literal notranslate"><span class="pre">VABS_ROOT</span></code>.</p></li>
 </ul>
 <p><strong>Python</strong></p>
-<p>Python Version: 3.8 or above is required for iVABS to run. iVABS also requires three packages: <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">scipy</span></code>, <code class="docutils literal notranslate"><span class="pre">pyyaml</span></code>. For more helps on configuring the Python environment, see <a class="reference internal" href="install/python_setup.html"><span class="doc">Setup Python environment</span></a>.</p>
+<p>Python 3.6 or above is required for iVABS to run. Packages <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">scipy</span></code>, and <code class="docutils literal notranslate"><span class="pre">pyyaml</span></code> should also be properly installed.
+For help on configuring the Python environment, see <a class="reference internal" href="install/python_setup.html"><span class="doc">Setup Python Environment</span></a>.</p>
 </div>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference internal" href="install/windows.html"><span class="doc">Installation on Windows</span></a>.</p></li>
-<li><p><a class="reference internal" href="install/linux.html"><span class="doc">Installation on Linux</span></a>.</p></li>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install/windows.html">Installation on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install/linux.html">Installation on Linux</a></li>
 </ul>
+</div>
 </div>
 </div>
 
@@ -634,10 +656,10 @@ License should also be placed inside <code class="docutils literal notranslate">
             <p class="prev-next-title">Welcome to iVABS Documentation</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="getstart.html" title="next page">
+    <a class='right-next' id="next-link" href="install/windows.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Quick Start</p>
+        <p class="prev-next-title">Installation on Windows</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

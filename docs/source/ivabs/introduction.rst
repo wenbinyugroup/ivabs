@@ -1,5 +1,7 @@
+.. _section-ivabs_components:
+
 iVABS Components
-============
+==================
 
 iVABS (namely integrated VABS), is a design framework for composite slender structures (also called composite beams) such as helicopter rotor blades, wind turbine blades, high aspect ratio wings, bridges, shafts, etc. This framework bundles PreVABS, VABS, GEBT, Dakota, along with MSGPI for integration among these codes and other codes. The relations of different components are described in the following figure.
 

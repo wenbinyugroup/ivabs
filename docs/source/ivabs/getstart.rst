@@ -13,14 +13,15 @@ Quick Start
 Run iVABS with a simple example
 -------------------------------
 
-Start the shell/terminal that is configured during the installation. Please refer to :doc:`install`.
+Start the shell/terminal that is configured during the installation.
+Please refer to :ref:`section-ivabs_install` for more information.
 
-Optionally change the python virtual environment.
-For example, if Python 3 and all dependencies are installed in a virtual environment named ``py3ivabs`` using Anaconda, then activate it using
+    Optionally, if you are using Python virtual environment managed by Anaconda, you need to activate it first.
+    For example, if Python 3.6 and all dependencies are installed in a virtual environment named ``py3ivabs``, then activate it using
 
-..  code-block:: shell
+    ..  code-block:: shell
 
-    conda activate py3ivabs
+        conda activate py3ivabs
 
 Go to the directory ``IVABS_ROOT/examples/e0_quickstart``
 
@@ -28,7 +29,8 @@ Go to the directory ``IVABS_ROOT/examples/e0_quickstart``
 
     cd IVABS_ROOT/examples/e0_quickstart
 
-Run the example
+Run the example using the following command.
+Note: The actual Python command may vary depending on your environment setup, such as ``python`` or ``python3``.
 
 ..  code-block:: shell
 

@@ -114,10 +114,27 @@ commentsRunWhenDOMLoaded(addUtterances);
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="ivabs/install.html">
    Download &amp; Installation
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ivabs/install/windows.html">
+     Installation on Windows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ivabs/install/linux.html">
+     Installation on Linux
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="ivabs/getstart.html">
@@ -128,8 +145,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="ivabs/examples.html">
    Examples
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -155,8 +172,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="ivabs/main_input.html">
    Guide to Main Input File
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -187,8 +204,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="ivabs/cs_template.html">
    Cross-sectional Design Template
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -207,10 +224,10 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="prevabs/index.html">
-   PreVABS’s Documentation
+   PreVABS Documentation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -234,8 +251,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="prevabs/contents/guide.html">
      Guide for Preparing Input Files
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -276,8 +293,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="prevabs/contents/examples.html">
      Examples
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -607,9 +624,8 @@ PreVABS, VABS, GEBT, and MSGPI are developed by <a class="reference external" hr
 Dakota is developed by the <a class="reference external" href="https://dakota.sandia.gov/">Sandia National Lab</a>. The relations of different components are described in the following figure. A brief introduction of different components can be found in the <a class="reference internal" href="ivabs/introduction.html"><span class="doc">iVABS Components</span></a> page.</p>
 <div class="figure align-center" id="fig-ivabs-components">
 <a class="reference internal image-reference" href="_images/ivabs_components.png"><img alt="_images/ivabs_components.png" src="_images/ivabs_components.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 1 </span><span class="caption-text">iVABS components.</span><a class="headerlink" href="#fig-ivabs-components" title="Permalink to this image">#</a></p>
+<p class="caption"><span class="caption-number">Figure 1 </span><span class="caption-text">The iVABS framework.</span><a class="headerlink" href="#fig-ivabs-components" title="Permalink to this image">#</a></p>
 </div>
-<p>For download and install iVABS, refer to <a class="reference internal" href="ivabs/install.html"><span class="doc">Download &amp; Installation</span></a>.</p>
 <div class="section" id="contents">
 <h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">#</a></h2>
 <div class="toctree-wrapper compound">
@@ -621,7 +637,7 @@ Dakota is developed by the <a class="reference external" href="https://dakota.sa
 <li class="toctree-l1"><a class="reference internal" href="ivabs/parameterization.html">Parameterization of Composite Slender Structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ivabs/cs_template.html">Cross-sectional Design Template</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ivabs/introduction.html">iVABS Components</a></li>
-<li class="toctree-l1"><a class="reference internal" href="prevabs/index.html">PreVABS’s Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prevabs/index.html">PreVABS Documentation</a></li>
 </ul>
 </div>
 </div>
@@ -631,7 +647,7 @@ Dakota is developed by the <a class="reference external" href="https://dakota.sa
 <ol class="arabic simple">
 <li><p>Suggest edits using the middle icon on the top-right corner of the page you want to change.</p></li>
 <li><p><a class="reference external" href="https://github.com/wenbinyugroup/ivabs/issues/new">Add an issue</a> for bug reports or feature requests.</p></li>
-<li><p><a class="reference external" href="https://github.com/wenbinyugroup/ivabs/discussions">Start a new discussion</a> on if you need help running iVABS.</p></li>
+<li><p><a class="reference external" href="https://github.com/wenbinyugroup/ivabs/discussions">Start a new discussion</a> if you need help running iVABS.</p></li>
 <li><p>Modify existing files or contribute new files to <a class="reference external" href="https://github.com/wenbinyugroup/ivabs">the github repository</a>.</p></li>
 </ol>
 </div>
