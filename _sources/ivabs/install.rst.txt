@@ -9,8 +9,14 @@ Download
 iVABS can be dowloaded from `its Release Page on github <https://github.com/wenbinyugroup/ivabs/releases>`_.
 The directory ``Assets`` contains the installation files you need to download for different versions.
 Please ignore ``Source code (zip)`` and ``Source code (tar.gz)`` because they just contain files used to generate this documentation site.
-Package with ``installer`` in the file name contains a single executable for the automatic installation.
-Package with ``portable`` in the file name contains all the files in an archive requiring manual extraction and setting up. Packages are released for both Windows and Linux. 
+Package with ``installer`` contains a single executable for the automatic installation.
+Package with ``portable`` contains all the files in an archive requiring manual extraction and setting up.
+
+
+
+
+
+
 
 
 
