@@ -1,3 +1,5 @@
+.. _section-ivabs_temp_airfoil_gbox_uni:
+
 Airfoil Box-spar Uniform
 ========================
 

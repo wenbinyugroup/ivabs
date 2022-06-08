@@ -160,18 +160,13 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../ivabs/examples/example_uh60a.html">
-     Example 1: Automatic Process of Cross-sectional Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../ivabs/examples/example_uh60a_sensi.html">
-     Example 2: Sensitivity analysis of UH60A with Dakota
+    <a class="reference internal" href="../../../ivabs/examples/example_quickstart_param_study.html">
+     Parameter study of a single cross-section
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../ivabs/examples/example_uh60a_opt.html">
-     Example 3: Optimization of a Cross-section using Dakota
+     Single objective optimization of multiple cross-sections to match target beam properties
     </a>
    </li>
   </ul>
@@ -724,7 +719,7 @@ title="Print to PDF"
 <p>There are three groups of these settings.</p>
 <section id="included-files">
 <h2>Included files<a class="headerlink" href="#included-files" title="Permalink to this headline">#</a></h2>
-<p>This part contains file names for base lines, materials (local) and layups as shown in <a class="reference internal" href="#code-include"><span class="std std-numref">Listing 31</span></a>.
+<p>This part contains file names for base lines, materials (local) and layups as shown in <a class="reference internal" href="#code-include"><span class="std std-numref">Listing 32</span></a>.
 The <code class="docutils literal notranslate"><span class="pre">&lt;material&gt;</span></code> sub-element is optional.
 If this is included, PreVABS will read extra materials from this local file, besides the global material database (MaterialDB.xml).
 If there are materials and laminae with the same names, data in the local material file will overwrite those in the global database.</p>
@@ -733,7 +728,7 @@ If there are materials and laminae with the same names, data in the local materi
 <li><p>File extensions <code class="docutils literal notranslate"><span class="pre">.xml</span></code> can be omitted.</p></li>
 </ul>
 <div class="literal-block-wrapper docutils container" id="code-include">
-<div class="code-block-caption"><span class="caption-number">Listing 31 </span><span class="caption-text">Input syntax for the included files.</span><a class="headerlink" href="#code-include" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 32 </span><span class="caption-text">Input syntax for the included files.</span><a class="headerlink" href="#code-include" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;include&gt;</span>
 <span class="linenos">2</span>  <span class="nt">&lt;baseline&gt;</span> path/baseline_file_name <span class="nt">&lt;/baseline&gt;</span>
 <span class="linenos">3</span>  <span class="nt">&lt;material&gt;</span> path/material_file_name <span class="nt">&lt;/material&gt;</span>
@@ -754,7 +749,7 @@ If there are materials and laminae with the same names, data in the local materi
 <p>The second part contains settings for the analysis in VABS.
 <code class="docutils literal notranslate"><span class="pre">&lt;model&gt;</span></code> can be 0 for classical beam model, or 1 for refined (Timoshenko) model.</p>
 <div class="literal-block-wrapper docutils container" id="code-analysis">
-<div class="code-block-caption"><span class="caption-number">Listing 32 </span><span class="caption-text">A template for the analysis options in a main input file.</span><a class="headerlink" href="#code-analysis" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 33 </span><span class="caption-text">A template for the analysis options in a main input file.</span><a class="headerlink" href="#code-analysis" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;analysis&gt;</span>
 <span class="linenos">2</span>  <span class="nt">&lt;model&gt;</span> 1 <span class="nt">&lt;/model&gt;</span>
 <span class="linenos">3</span><span class="nt">&lt;/analysis&gt;</span>
@@ -787,7 +782,7 @@ thickness by default;</p></li>
 <li><p>Two options for the element type are linear and quadratic.</p></li>
 </ul>
 <div class="literal-block-wrapper docutils container" id="code-general">
-<div class="code-block-caption"><span class="caption-number">Listing 33 </span><span class="caption-text">A template for the global shape and mesh settings in a main input file.</span><a class="headerlink" href="#code-general" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 34 </span><span class="caption-text">A template for the global shape and mesh settings in a main input file.</span><a class="headerlink" href="#code-general" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;general&gt;</span>
 <span class="linenos">2</span>  <span class="nt">&lt;translate&gt;</span> e2  e3 <span class="nt">&lt;/translate&gt;</span>
 <span class="linenos">3</span>  <span class="nt">&lt;scale&gt;</span> scaling_factor <span class="nt">&lt;/scale&gt;</span>

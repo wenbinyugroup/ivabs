@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Example 3: Optimization of a Cross-section using Dakota &#8212; iVABS Documentation (v0.6)</title>
+    <title>Single objective optimization of multiple cross-sections to match target beam properties &#8212; iVABS Documentation (v0.6)</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -69,7 +69,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Guide to Main Input File" href="../main_input.html" />
-    <link rel="prev" title="Example 2: Sensitivity analysis of UH60A with Dakota" href="example_uh60a_sensi.html" />
+    <link rel="prev" title="Parameter study of a single cross-section" href="example_quickstart_param_study.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -160,18 +160,13 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="example_uh60a.html">
-     Example 1: Automatic Process of Cross-sectional Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="example_uh60a_sensi.html">
-     Example 2: Sensitivity analysis of UH60A with Dakota
+    <a class="reference internal" href="example_quickstart_param_study.html">
+     Parameter study of a single cross-section
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Example 3: Optimization of a Cross-section using Dakota
+     Single objective optimization of multiple cross-sections to match target beam properties
     </a>
    </li>
   </ul>
@@ -723,7 +718,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Example 3: Optimization of a Cross-section using Dakota</h1>
+                <h1>Single objective optimization of multiple cross-sections to match target beam properties</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -797,14 +792,13 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="example-3-optimization-of-a-cross-section-using-dakota">
-<span id="example-ivabs-opt"></span><h1>Example 3: Optimization of a Cross-section using Dakota<a class="headerlink" href="#example-3-optimization-of-a-cross-section-using-dakota" title="Permalink to this headline">#</a></h1>
-<p>This example demonstrates the capability of optimization using the integrated toolset: iVABS within the Dakota framework.</p>
+  <section id="single-objective-optimization-of-multiple-cross-sections-to-match-target-beam-properties">
+<span id="example-ivabs-opt"></span><h1>Single objective optimization of multiple cross-sections to match target beam properties<a class="headerlink" href="#single-objective-optimization-of-multiple-cross-sections-to-match-target-beam-properties" title="Permalink to this headline">#</a></h1>
 <section id="problem-description">
 <h2>Problem description<a class="headerlink" href="#problem-description" title="Permalink to this headline">#</a></h2>
-<p>The example problem is to design the composite structure of a helicopter rotor blade for some desired beam properties, which could be given from an old design or requirements of rotor simulation.</p>
+<p>The goal of this problem is to design a composite rotor blade for some desired beam properties, which could be given from an old design or requirements from rotor simulations.</p>
 <p>The target beam properties are listed in the table below.</p>
-<table class="table" id="id1">
+<table class="colwidths-given table" id="id1">
 <caption><span class="caption-number">Table 1 </span><span class="caption-text">Target beam properties</span><a class="headerlink" href="#id1" title="Permalink to this table">#</a></caption>
 <colgroup>
 <col style="width: 25%" />
@@ -813,42 +807,67 @@ title="Print to PDF"
 <col style="width: 25%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>Property</p></th>
-<th class="head"><p>Value</p></th>
-<th class="head"><p>Unit</p></th>
-<th class="head"><p>Description</p></th>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(r/R\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(GJ\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(EI_f\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(EI_c\)</span></p></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\mathrm{lb \cdot ft}\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\mathrm{lb \cdot ft}\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\mathrm{lb \cdot ft}\)</span></p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(EA\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\phantom{+}52.25 \times 10^6\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\mathrm{lb}\)</span></p></td>
-<td><p>Axial stiffness</p></td>
+<tr class="row-odd"><td><p>0.2</p></td>
+<td><p>0.17976e6</p></td>
+<td><p>0.19162e6</p></td>
+<td><p>0.32572e7</p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(GJ\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\phantom{+}24.20 \times 10^6\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\mathrm{lb \cdot in}\)</span></p></td>
-<td><p>Torsional stiffness</p></td>
+<tr class="row-even"><td><p>0.3</p></td>
+<td><p>0.16882e6</p></td>
+<td><p>0.15417e6</p></td>
+<td><p>0.59786e7</p></td>
 </tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(EI_f\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\phantom{+}25.00 \times 10^6\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\mathrm{lb \cdot in}\)</span></p></td>
-<td><p>Flapwise bending stiffness</p></td>
+<tr class="row-odd"><td><p>0.4</p></td>
+<td><p>0.16882e6</p></td>
+<td><p>0.15417e6</p></td>
+<td><p>0.57986e7</p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(EI_l\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\phantom{+}1.058 \times 10^9\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\mathrm{lb \cdot in}\)</span></p></td>
-<td><p>Lead-lag bending stiffness</p></td>
+<tr class="row-even"><td><p>0.5</p></td>
+<td><p>0.17058e6</p></td>
+<td><p>0.16042e6</p></td>
+<td><p>0.58384e7</p></td>
 </tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(SC_2\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(-5.253\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\mathrm{in}\)</span></p></td>
-<td><p>Horizontal location of the shear center from the leading edge</p></td>
+<tr class="row-odd"><td><p>0.6</p></td>
+<td><p>0.17208e6</p></td>
+<td><p>0.16042e6</p></td>
+<td><p>0.58396e7</p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(MC_2\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(-5.972\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\mathrm{in}\)</span></p></td>
-<td><p>Horizontal location of the mass center from the leading edge</p></td>
+<tr class="row-even"><td><p>0.7</p></td>
+<td><p>0.17208e6</p></td>
+<td><p>0.16319e6</p></td>
+<td><p>0.48434e7</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.8</p></td>
+<td><p>0.13337e6</p></td>
+<td><p>0.12709e6</p></td>
+<td><p>0.37748e7</p></td>
+</tr>
+<tr class="row-even"><td><p>0.9</p></td>
+<td><p>0.47441e6</p></td>
+<td><p>0.38724e6</p></td>
+<td><p>0.91526e7</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.9371</p></td>
+<td><p>0.66027e6</p></td>
+<td><p>0.53895e6</p></td>
+<td><p>0.12738e8</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>22757</p></td>
+<td><p>6927.3</p></td>
+<td><p>0.41657e6</p></td>
 </tr>
 </tbody>
 </table>
@@ -899,8 +918,11 @@ Since the spar is the main load-bearing component, the geometry and layup are co
 </tr>
 </tbody>
 </table>
-<figure class="align-center" id="fig-ex-cs-opt">
-<a class="reference internal image-reference" href="../../_images/ex_cs_opt.png"><img alt="../../_images/ex_cs_opt.png" src="../../_images/ex_cs_opt.png" style="width: 6in;" /></a>
+<figure class="align-center" id="fig-ex-uh60-soga-stf-cs-geo-params">
+<a class="reference internal image-reference" href="../../_images/ex_uh60_soga_stf_cs_geo_params.png"><img alt="../../_images/ex_uh60_soga_stf_cs_geo_params.png" src="../../_images/ex_uh60_soga_stf_cs_geo_params.png" style="width: 6in;" /></a>
+</figure>
+<figure class="align-center" id="fig-ex-uh60-soga-stf-cs-layup-params">
+<a class="reference internal image-reference" href="../../_images/ex_uh60_soga_stf_cs_layup_params.png"><img alt="../../_images/ex_uh60_soga_stf_cs_layup_params.png" src="../../_images/ex_uh60_soga_stf_cs_layup_params.png" style="width: 6in;" /></a>
 </figure>
 </section>
 <section id="objective-function">
@@ -1053,11 +1075,11 @@ The total number of functional evaluation is 15,060.</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="example_uh60a_sensi.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="example_quickstart_param_study.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Example 2: Sensitivity analysis of UH60A with Dakota</p>
+            <p class="prev-next-title">Parameter study of a single cross-section</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../main_input.html" title="next page">

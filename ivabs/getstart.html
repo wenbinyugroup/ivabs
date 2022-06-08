@@ -159,18 +159,13 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="examples/example_uh60a.html">
-     Example 1: Automatic Process of Cross-sectional Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="examples/example_uh60a_sensi.html">
-     Example 2: Sensitivity analysis of UH60A with Dakota
+    <a class="reference internal" href="examples/example_quickstart_param_study.html">
+     Parameter study of a single cross-section
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="examples/example_uh60a_opt.html">
-     Example 3: Optimization of a Cross-section using Dakota
+     Single objective optimization of multiple cross-sections to match target beam properties
     </a>
    </li>
   </ul>
@@ -665,23 +660,6 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#files-for-this-example">
-   Files for this example
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#input-files">
-     Input files
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#output-files">
-     Output files
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ivabs-running-options">
    iVABS running options
   </a>
@@ -714,23 +692,6 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#run-ivabs-with-a-simple-example">
    Run iVABS with a simple example
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#files-for-this-example">
-   Files for this example
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#input-files">
-     Input files
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#output-files">
-     Output files
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ivabs-running-options">
@@ -778,7 +739,7 @@ Note: The actual Python command may vary depending on your environment setup, su
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python run.py cs_param_study.yml
 </pre></div>
 </div>
-<p>If iVABS has been installed properly, it will generate a complete list of output files shown in the section below (<a class="reference internal" href="#section-start-file-out"><span class="std std-ref">Output files</span></a>).
+<p>If iVABS has been installed properly, it will generate a complete list of output files shown in the section below (<a class="reference internal" href="examples/example_quickstart_param_study.html#section-start-file-out"><span class="std std-ref">Output files</span></a>).
 In the file <code class="docutils literal notranslate"><span class="pre">cs_param_study.out</span></code>, the following message should appear at the end of the file.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;&lt;&lt;&lt;&lt; Iterator multidim_parameter_study completed.
 &lt;&lt;&lt;&lt;&lt; Environment execution completed.
@@ -788,52 +749,7 @@ Total wall clock =     34.003
 </pre></div>
 </div>
 <p>Running time usually takes less than one minute depending on the computer.</p>
-</section>
-<section id="files-for-this-example">
-<h2>Files for this example<a class="headerlink" href="#files-for-this-example" title="Permalink to this headline">#</a></h2>
-<p>This example carries out a simple parameter study of a single cross-section by varying two design variables.
-The base design of this cross-section has an airfoil profile with a main box-type spar, which is typically seen in helicopter rotor blades.
-The two design variables control the locations of the front and back spar webs. Please refer to ???? for a detailed explanation of this example.</p>
-<p>Below is a brief explanation for the input files and output files  used for this example.</p>
-<section id="input-files">
-<h3>Input files<a class="headerlink" href="#input-files" title="Permalink to this headline">#</a></h3>
-<dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">airfoil_gbox_uni.xml.tmp</span></code></dt><dd><p>This is the design template for the type of cross-section having an airfoil profile with a main box-type spar. Depending on the problem, one or more design templates might be needed. More details on design templates can be found in Section <a class="reference internal" href="cs_template.html#section-cs-templates"><span class="std std-ref">Cross-sectional Design Templates</span></a>.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">material_database_us_ft.xml</span></code></dt><dd><p>This is the material database used by the cross-section. More details on the material inputs can be found in Section <a class="reference internal" href="../prevabs/contents/guide/pre_material.html#section-material-layup"><span class="std std-ref">Materials and layups</span></a>.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">SC1095.dat</span></code></dt><dd><p>This is the airfoil data file for the cross-section. Depending on the problem, one or more airfoil data files might be needed.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">cs_param_study.yml</span></code></dt><dd><p>This is the main input file required for all cases. It contains most of the information needed. More details on the main input file can be found in Section <a class="reference internal" href="main_input.html#section-input-guide"><span class="std std-ref">Guide to Main Input File</span></a>.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">run.py</span></code></dt><dd><p>This is the startup script. It is required for all cases, but no changes needed and can be directly copied to a different working directory.</p>
-</dd>
-</dl>
-</section>
-<section id="output-files">
-<span id="section-start-file-out"></span><h3>Output files<a class="headerlink" href="#output-files" title="Permalink to this headline">#</a></h3>
-<p>Current version of iVABS uses Dakota as the driver. Hence, most output files are related to Dakota.</p>
-<dl>
-<dt><code class="docutils literal notranslate"><span class="pre">cs_param_study.dakota</span></code></dt><dd><p>This is the Dakota input generated by iVABS from <code class="docutils literal notranslate"><span class="pre">cs_param_study.yml</span></code>.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">cs_param_study.out</span></code></dt><dd><p>This is the Dakota main output file including a summary of the process.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">cs_param_study.results.txt</span></code></dt><dd><p>This is the Dakota result file. Contents could be different for different Dakota methods.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">cs_param_study_tabular.dat</span></code></dt><dd><p>This contains a table of inputs and outputs of each evaluation/iteration.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">cs_param_study.rst</span></code></dt><dd><p>This is the Dakota restart file.
-If the Dakota process stops for some reason, you can try to continue the process from the stopping point, using the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dakota</span> <span class="o">-</span><span class="n">i</span> <span class="n">cs_param_study</span><span class="o">.</span><span class="n">dakota</span> <span class="o">-</span><span class="n">read_restart</span> <span class="n">cs_param_study</span><span class="o">.</span><span class="n">rst</span>
-</pre></div>
-</div>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">cs_param_study.err</span></code></dt><dd><p>This is the Dakota error file.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">evals/eval.#/</span></code></dt><dd><p>Each directory contains all input and output files for each evaluation/iteration. Links for the five input files are also generated in these directories.</p>
-</dd>
-</dl>
-</section>
+<p>Please refer to <a class="reference internal" href="examples/example_quickstart_param_study.html#section-ivabs-example-quickstart-param-study"><span class="std std-ref">Parameter study of a single cross-section</span></a> for a detailed explanation of this example.</p>
 </section>
 <section id="ivabs-running-options">
 <h2>iVABS running options<a class="headerlink" href="#ivabs-running-options" title="Permalink to this headline">#</a></h2>
