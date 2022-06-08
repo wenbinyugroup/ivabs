@@ -1,4 +1,4 @@
-.. _section-input-guide:
+.. _section-input_guide:
 
 Guide to Main Input File
 ========================

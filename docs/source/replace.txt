@@ -23,6 +23,8 @@
 .. |stf0_im| replace:: :math:`\mathrm{lb}`
 .. |stf1_im| replace:: :math:`\mathrm{lb \cdot in}`
 .. |stf2_im| replace:: :math:`\mathrm{lb \cdot in^2}`
+.. |stf1_im_ft| replace:: :math:`\mathrm{lb \cdot ft}`
+.. |stf2_im_ft| replace:: :math:`\mathrm{lb \cdot ft^2}`
 .. |e| replace:: :math:`E`
 .. |nu| replace:: :math:`\nu`
 .. |e1| replace:: :math:`E_{1}`

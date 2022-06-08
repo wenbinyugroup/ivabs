@@ -135,6 +135,11 @@ commentsRunWhenDOMLoaded(addUtterances);
      Installation on Linux
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="install/python_setup.html">
+     Setup Python Environment
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -153,18 +158,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="examples/example_uh60a.html">
-     Example 1: Automatic Process of Cross-sectional Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="examples/example_uh60a_sensi.html">
-     Example 2: Sensitivity analysis of UH60A with Dakota
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="examples/example_uh60a_opt.html">
-     Example 3: Optimization of a Cross-section using Dakota
+     Single objective optimization of multiple cross-sections to match target beam properties
     </a>
    </li>
   </ul>
@@ -203,7 +198,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="cs_template.html">
-   Cross-sectional Design Template
+   Cross-sectional Design Templates
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -613,9 +608,9 @@ title="Print to PDF"
 <h2>Download<a class="headerlink" href="#download" title="Permalink to this headline">#</a></h2>
 <p>iVABS can be dowloaded from <a class="reference external" href="https://github.com/wenbinyugroup/ivabs/releases">its Release Page on github</a>.
 The directory <code class="docutils literal notranslate"><span class="pre">Assets</span></code> contains the installation files you need to download for different versions.
-Please discard <code class="docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span> <span class="pre">(zip)</span></code> and <code class="docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span> <span class="pre">(tar.gz)</span></code> because they just contain files used to generate this documentation site.
-Installer contains a single executable for installation.
-Portable Archive contains all the files in an archive to be extracted for installation.</p>
+Please ignore <code class="docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span> <span class="pre">(zip)</span></code> and <code class="docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span> <span class="pre">(tar.gz)</span></code> because they just contain files used to generate this documentation site.
+Package with <code class="docutils literal notranslate"><span class="pre">installer</span></code> in the file name contains a single executable for the automatic installation.
+Package with <code class="docutils literal notranslate"><span class="pre">portable</span></code> in the file name contains all the files in an archive requiring manual extraction and setting up. Packages are released for both Windows and Linux.</p>
 </div>
 <div class="section" id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
@@ -636,6 +631,7 @@ For help on configuring the Python environment, see <a class="reference internal
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install/windows.html">Installation on Windows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install/linux.html">Installation on Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install/python_setup.html">Setup Python Environment</a></li>
 </ul>
 </div>
 </div>

@@ -1,51 +1,66 @@
-.. include:: ../replace.txt
+.. include:: /replace.txt
 
 .. _example-ivabs-opt:
 
-Example 3: Optimization of a Cross-section using Dakota
-=======================================================
-
-This example demonstrates the capability of optimization using the integrated toolset: iVABS within the Dakota framework.
+Single objective optimization of multiple cross-sections to match target beam properties
+===========================================================================================
 
 Problem description
 -------------------
 
-The example problem is to design the composite structure of a helicopter rotor blade for some desired beam properties, which could be given from an old design or requirements of rotor simulation.
+The goal of this problem is to design a composite rotor blade for some desired beam properties, which could be given from an old design or requirements from rotor simulations.
 
 The target beam properties are listed in the table below.
 
-.. list-table:: Target beam properties
-   :align: center
-   :header-rows: 1
+..  csv-table:: Target beam properties
+    :header: :math:`r/R`, :math:`GJ`, :math:`EI_f`, :math:`EI_c`
+    :widths: 10, 10, 10, 10
+    :header-rows: 1
 
-   * - Property
-     - Value
-     - Unit
-     - Description
-   * - :math:`EA`
-     - :math:`\phantom{+}52.25 \times 10^6`
-     - |stf0_im|
-     - Axial stiffness
-   * - :math:`GJ`
-     - :math:`\phantom{+}24.20 \times 10^6`
-     - |stf1_im|
-     - Torsional stiffness
-   * - :math:`EI_f`
-     - :math:`\phantom{+}25.00 \times 10^6`
-     - |stf1_im|
-     - Flapwise bending stiffness
-   * - :math:`EI_l`
-     - :math:`\phantom{+}1.058 \times 10^9`
-     - |stf1_im|
-     - Lead-lag bending stiffness
-   * - :math:`SC_2`
-     - :math:`-5.253`
-     - |len_im|
-     - Horizontal location of the shear center from the leading edge
-   * - :math:`MC_2`
-     - :math:`-5.972`
-     - |len_im|
-     - Horizontal location of the mass center from the leading edge
+    , |stf1_im_ft|, |stf1_im_ft|, |stf1_im_ft|
+    0.2, 0.17976e6, 0.19162e6, 0.32572e7
+    0.3, 0.16882e6, 0.15417e6, 0.59786e7
+    0.4, 0.16882e6, 0.15417e6, 0.57986e7
+    0.5, 0.17058e6, 0.16042e6, 0.58384e7
+    0.6, 0.17208e6, 0.16042e6, 0.58396e7
+    0.7, 0.17208e6, 0.16319e6, 0.48434e7
+    0.8, 0.13337e6, 0.12709e6, 0.37748e7
+    0.9, 0.47441e6, 0.38724e6, 0.91526e7
+    0.9371, 0.66027e6, 0.53895e6, 0.12738e8
+    1, 22757, 6927.3, 0.41657e6
+
+.. .. list-table:: Target beam properties
+..    :align: center
+..    :header-rows: 1
+
+..    * - Property
+..      - Value
+..      - Unit
+..      - Description
+..    * - :math:`EA`
+..      - :math:`\phantom{+}52.25 \times 10^6`
+..      - |stf0_im|
+..      - Axial stiffness
+..    * - :math:`GJ`
+..      - :math:`\phantom{+}24.20 \times 10^6`
+..      - |stf1_im|
+..      - Torsional stiffness
+..    * - :math:`EI_f`
+..      - :math:`\phantom{+}25.00 \times 10^6`
+..      - |stf1_im|
+..      - Flapwise bending stiffness
+..    * - :math:`EI_l`
+..      - :math:`\phantom{+}1.058 \times 10^9`
+..      - |stf1_im|
+..      - Lead-lag bending stiffness
+..    * - :math:`SC_2`
+..      - :math:`-5.253`
+..      - |len_im|
+..      - Horizontal location of the shear center from the leading edge
+..    * - :math:`MC_2`
+..      - :math:`-5.972`
+..      - |len_im|
+..      - Horizontal location of the mass center from the leading edge
 
 
 
@@ -86,8 +101,13 @@ Since the spar is the main load-bearing component, the geometry and layup are co
      - Fiber angle of layer 4
 
 
-.. figure:: figures/ex_cs_opt.png
-  :name: fig_ex_cs_opt
+.. figure:: /figures/ex_uh60_soga_stf_cs_geo_params.png
+  :name: fig-ex_uh60_soga_stf_cs_geo_params
+  :width: 6in
+  :align: center
+
+.. figure:: /figures/ex_uh60_soga_stf_cs_layup_params.png
+  :name: fig-ex_uh60_soga_stf_cs_layup_params
   :width: 6in
   :align: center
 
