@@ -890,7 +890,7 @@ Values after the keywords will be used to substitute the corresponding token dur
 <p>Meanings of the keywords/tokens can be found in section <a class="reference internal" href="../cs_templates/airfoil_gbox_uni.html#section-ivabs-temp-airfoil-gbox-uni"><span class="std std-ref">Airfoil Box-spar Uniform</span></a>.</p>
 <p>The complete input for this block is shown below.</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">design</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;uh60_cs_1&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;cs_1&quot;</span><span class="w"></span>
 <span class="w">    </span><span class="nt">structure_class</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;cs&quot;</span><span class="w"></span>
 <span class="w">    </span><span class="nt">parameters</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="nt">list</span><span class="p">:</span><span class="w"></span>
@@ -942,7 +942,7 @@ It is the following input that tells iVABS that this is a cross-sectional analys
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">structure_class</span><span class="p">:</span> <span class="s2">&quot;cs&quot;</span>
 </pre></div>
 </div>
-<p>Below this, analysis specifications are given for the cross-section <code class="docutils literal notranslate"><span class="pre">uh60_cs_1</span></code>.
+<p>Below this, analysis specifications are given for the cross-section <code class="docutils literal notranslate"><span class="pre">cs_1</span></code>.
 Since this example only carries out a direct cross-sectional analysis, we use <code class="docutils literal notranslate"><span class="pre">h</span></code> (i.e., homogenization) for the keyword <code class="docutils literal notranslate"><span class="pre">analysis</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">analysis</span><span class="p">:</span> <span class="s2">&quot;h&quot;</span>
 </pre></div>
@@ -965,8 +965,9 @@ Under this, each beam property returned to Dakota is given a name, in the follow
 <span class="w">  </span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">step</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;cs</span><span class="nv"> </span><span class="s">analysis&quot;</span><span class="w"></span>
 <span class="w">      </span><span class="nt">structure_class</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;cs&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="nt">uh60_cs_1</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">analysis</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;h&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="nt">cs_1</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">settings</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">analysis</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;h&quot;</span><span class="w"></span>
 <span class="w">        </span><span class="nt">final</span><span class="p">:</span><span class="w"></span>
 <span class="w">          </span><span class="nt">cs1_gj</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;gj&quot;</span><span class="w"></span>
 <span class="w">          </span><span class="nt">cs1_ei22</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ei22&quot;</span><span class="w"></span>
