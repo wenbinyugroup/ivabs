@@ -93,7 +93,7 @@ The complete input for this block is shown below.
 ..  code-block:: yaml
 
     design:
-      - name: "uh60_cs_1"
+      - name: "cs_1"
         structure_class: "cs"
         parameters:
           list:
@@ -148,7 +148,7 @@ It is the following input that tells iVABS that this is a cross-sectional analys
 
   structure_class: "cs"
 
-Below this, analysis specifications are given for the cross-section ``uh60_cs_1``.
+Below this, analysis specifications are given for the cross-section ``cs_1``.
 Since this example only carries out a direct cross-sectional analysis, we use ``h`` (i.e., homogenization) for the keyword ``analysis``::
 
   analysis: "h"
@@ -174,8 +174,9 @@ The complete input for this block is shown below.
       steps:
         - step: "cs analysis"
           structure_class: "cs"
-          uh60_cs_1:
-            analysis: "h"
+          cs_1:
+            settings:
+              analysis: "h"
             final:
               cs1_gj: "gj"
               cs1_ei22: "ei22"
