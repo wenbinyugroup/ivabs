@@ -1,7 +1,7 @@
 .. _section-cs-templates:
 
 Cross-sectional Design Templates
-===============================
+=================================
 
 .. toctree::
    :maxdepth: 1

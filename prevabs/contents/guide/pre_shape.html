@@ -165,7 +165,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../ivabs/examples/example_uh60a_opt.html">
+    <a class="reference internal" href="../../../ivabs/examples/example_uh60_sopt_stf.html">
      Single objective optimization of multiple cross-sections to match target beam properties
     </a>
    </li>
@@ -824,7 +824,7 @@ Otherwise, points can be arranged arbitrarily.</p>
 <p>Using the XML format, points can be defined in the following ways:</p>
 <ol class="arabic simple">
 <li><p>Specify the complete coordinates with two numbers.</p></li>
-<li><p>Confine the point on a line and specify the horizontal coordinate (<span class="math notranslate nohighlight">\(z_2\)</span> or <span class="math notranslate nohighlight">\(x_2\)</span>), as shown in <a class="reference internal" href="#fig-point-on-line"><span class="std std-numref">Fig. 21</span></a>.</p></li>
+<li><p>Confine the point on a line and specify the horizontal coordinate (<span class="math notranslate nohighlight">\(z_2\)</span> or <span class="math notranslate nohighlight">\(x_2\)</span>), as shown in <a class="reference internal" href="#fig-point-on-line"><span class="std std-numref">Fig. 23</span></a>.</p></li>
 </ol>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;point</span> <span class="pre">name=&quot;M&quot;</span> <span class="pre">on=&quot;L&quot;</span> <span class="pre">by=&quot;x2&quot;&gt;3&lt;/point&gt;</span></code></p>
@@ -832,7 +832,7 @@ Otherwise, points can be arranged arbitrarily.</p>
 <figure class="align-center" id="fig-point-on-line">
 <a class="reference internal image-reference" href="../../../_images/point_on_line.png"><img alt="../../../_images/point_on_line.png" src="../../../_images/point_on_line.png" style="width: 6in;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 21 </span><span class="caption-text">Define a new point on a line.</span><a class="headerlink" href="#fig-point-on-line" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Figure 23 </span><span class="caption-text">Define a new point on a line.</span><a class="headerlink" href="#fig-point-on-line" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p><strong>Specification</strong></p>
@@ -851,7 +851,7 @@ Otherwise, points can be arranged arbitrarily.</p>
 <section id="base-lines">
 <h2>Base lines<a class="headerlink" href="#base-lines" title="Permalink to this headline">#</a></h2>
 <p>Base lines form the skeleton of a cross section.
-PreVABS can handle three types of base lines, straight, arc and circle, as shown in <a class="reference internal" href="#fig-baselinetypes"><span class="std std-numref">Fig. 22</span></a>.
+PreVABS can handle three types of base lines, straight, arc and circle, as shown in <a class="reference internal" href="#fig-baselinetypes"><span class="std std-numref">Fig. 24</span></a>.
 Some types have several ways to define the base line.
 In PreVABS, all curved base lines are in the end converted into a chain of short straight lines.
 User can provide those short straight lines directly for spline, arc and circle.
@@ -866,7 +866,7 @@ Inside the <code class="docutils literal notranslate"><span class="pre">baseline
 <figure class="align-center" id="fig-baselinetypes">
 <a class="reference internal image-reference" href="../../../_images/baselinetypes.png"><img alt="../../../_images/baselinetypes.png" src="../../../_images/baselinetypes.png" style="width: 6in;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 22 </span><span class="caption-text">Three types of <em>Base line</em>s in PreVABS.</span><a class="headerlink" href="#fig-baselinetypes" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Figure 24 </span><span class="caption-text">Three types of <em>Base line</em>s in PreVABS.</span><a class="headerlink" href="#fig-baselinetypes" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="literal-block-wrapper docutils container" id="code-baseline-template">
@@ -896,7 +896,7 @@ Inside the <code class="docutils literal notranslate"><span class="pre">baseline
 <h3>Straight<a class="headerlink" href="#straight" title="Permalink to this headline">#</a></h3>
 <p>For this type, the basic idea is to provide key points for a chain of straight lines
 The direction of a base line is defined by the order of the point list.
-There are three ways defining a base line of this type, as shown in <a class="reference internal" href="#fig-baselinestraight"><span class="std std-numref">Fig. 23</span></a>.</p>
+There are three ways defining a base line of this type, as shown in <a class="reference internal" href="#fig-baselinestraight"><span class="std std-numref">Fig. 25</span></a>.</p>
 <ul class="simple">
 <li><p>Use an explicit list of two or more points delimited by commas to define a polyline (i, ii).</p></li>
 <li><p>Use two points delimited by a colon to represent a range of points (iii). The first two methods can be used in combination.</p></li>
@@ -907,7 +907,7 @@ The PreVABS-computed second key point will always be “not lower” than the us
 <figure class="align-center" id="fig-baselinestraight">
 <a class="reference internal image-reference" href="../../../_images/baselinestraight.png"><img alt="../../../_images/baselinestraight.png" src="../../../_images/baselinestraight.png" style="width: 100%;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 23 </span><span class="caption-text">Different ways of defining a straight type base line in PreVABS.</span><a class="headerlink" href="#fig-baselinestraight" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Figure 25 </span><span class="caption-text">Different ways of defining a straight type base line in PreVABS.</span><a class="headerlink" href="#fig-baselinestraight" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="admonition note">
@@ -915,7 +915,7 @@ The PreVABS-computed second key point will always be “not lower” than the us
 <p>Use <code class="docutils literal notranslate"><span class="pre">type=&quot;straight&quot;</span></code> for splines.</p>
 </div>
 <div class="literal-block-wrapper docutils container" id="code-baseline-straight">
-<div class="code-block-caption"><span class="caption-number">Listing 12 </span><span class="caption-text">Input syntax for the base lines shown in <a class="reference internal" href="#fig-baselinestraight"><span class="std std-numref">Fig. 23</span></a></span><a class="headerlink" href="#code-baseline-straight" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 12 </span><span class="caption-text">Input syntax for the base lines shown in <a class="reference internal" href="#fig-baselinestraight"><span class="std std-numref">Fig. 25</span></a></span><a class="headerlink" href="#code-baseline-straight" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;baselines&gt;</span>
 <span class="linenos"> 2</span>  ...
 <span class="linenos"> 3</span>  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;i&quot;</span> <span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
@@ -951,8 +951,8 @@ The PreVABS-computed second key point will always be “not lower” than the us
 <p>A real arc can also be created using a group of base points, in which case the straight type should be used.
 The arc type provides a parametric way to build this type of base line, then PreVABS will
 discretize it.
-To uniquely define an arc, user needs to provide at least four of the following six items: center, starting point, ending point, radius, angle and direction, as shown in <a class="reference internal" href="#fig-baselinearc"><span class="std std-numref">Fig. 24</span></a>.</p>
-<p>There are two ways of defining an arc as shown in <a class="reference internal" href="#fig-baselinearc2"><span class="std std-numref">Fig. 25</span></a>.</p>
+To uniquely define an arc, user needs to provide at least four of the following six items: center, starting point, ending point, radius, angle and direction, as shown in <a class="reference internal" href="#fig-baselinearc"><span class="std std-numref">Fig. 26</span></a>.</p>
+<p>There are two ways of defining an arc as shown in <a class="reference internal" href="#fig-baselinearc2"><span class="std std-numref">Fig. 27</span></a>.</p>
 <ul class="simple">
 <li><p>Use center, starting point, ending point and direction.</p></li>
 <li><p>Use center, starting point, angle and direction.</p></li>
@@ -960,17 +960,17 @@ To uniquely define an arc, user needs to provide at least four of the following 
 <figure class="align-center" id="fig-baselinearc">
 <a class="reference internal image-reference" href="../../../_images/baselinearc.png"><img alt="../../../_images/baselinearc.png" src="../../../_images/baselinearc.png" style="width: 6in;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 24 </span><span class="caption-text">Items in an arc.</span><a class="headerlink" href="#fig-baselinearc" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Figure 26 </span><span class="caption-text">Items in an arc.</span><a class="headerlink" href="#fig-baselinearc" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-center" id="fig-baselinearc2">
 <a class="reference internal image-reference" href="../../../_images/baselinearc2.png"><img alt="../../../_images/baselinearc2.png" src="../../../_images/baselinearc2.png" style="width: 6in;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 25 </span><span class="caption-text">Two possible cases of defining an arc.</span><a class="headerlink" href="#fig-baselinearc2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Figure 27 </span><span class="caption-text">Two possible cases of defining an arc.</span><a class="headerlink" href="#fig-baselinearc2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="literal-block-wrapper docutils container" id="code-baseline-arc">
-<div class="code-block-caption"><span class="caption-number">Listing 13 </span><span class="caption-text">Input syntax for the base lines shown in <a class="reference internal" href="#fig-baselinearc2"><span class="std std-numref">Fig. 25</span></a></span><a class="headerlink" href="#code-baseline-arc" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 13 </span><span class="caption-text">Input syntax for the base lines shown in <a class="reference internal" href="#fig-baselinearc2"><span class="std std-numref">Fig. 27</span></a></span><a class="headerlink" href="#code-baseline-arc" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>&lt;baselines&gt;
 <span class="linenos"> 2</span>  ...
 <span class="linenos"> 3</span>  &lt;baseline name=&quot;left&quot; type=&quot;arc&quot;&gt;

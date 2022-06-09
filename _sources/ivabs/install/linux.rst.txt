@@ -48,12 +48,12 @@ Portable archive (``ivabs-#.#-linux-portable.tar.gz``)
 
    ..  code-block:: bash
 
-    export PATH=$IVABS_ROOT/bin:$PATH
-    export LD_LIBRARY_PATH=$IVABS_ROOT/bin:$LD_LIBRARY_PATH
-    export PYTHONPATH=$IVABS_ROOT/scripts:$PYTHONPATH
+    export PATH=$PATH:$IVABS_ROOT/bin
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$IVABS_ROOT/bin
+    export PYTHONPATH=$PYTHONPATH:$IVABS_ROOT/scripts
 
     # If the Dakota included in the iVABS release is installed
-    export PATH=$IVABS_ROOT/dakota/bin:$PATH
+    export PATH=$PATH:$IVABS_ROOT/dakota/bin
 
 #. If you want to make this setting permanent, you need to add the above commands to the startup file of the shell. Typical startup files for bash shells are ``~/.bashrc`` or ``~/.bash_profile``. After editing and saving the startup file, use the following command in the shell to activate these changes:
 

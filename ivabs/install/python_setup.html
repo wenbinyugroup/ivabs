@@ -164,7 +164,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../examples/example_uh60a_opt.html">
+    <a class="reference internal" href="../examples/example_uh60_sopt_stf.html">
      Single objective optimization of multiple cross-sections to match target beam properties
     </a>
    </li>
@@ -676,11 +676,6 @@ title="Print to PDF"
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#manage-virtual-environment">
-     Manage virtual environment
-    </a>
-   </li>
   </ul>
  </li>
 </ul>
@@ -724,11 +719,6 @@ title="Print to PDF"
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#manage-virtual-environment">
-     Manage virtual environment
-    </a>
-   </li>
   </ul>
  </li>
 </ul>
@@ -743,6 +733,14 @@ title="Print to PDF"
                 
   <section id="setup-python-environment">
 <span id="section-ivabs-python"></span><h1>Setup Python Environment<a class="headerlink" href="#setup-python-environment" title="Permalink to this headline">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following instruction is mainly based on the developers’ machine (Windows 10 and CentOS Linux 7).
+Some steps and commands could be different for your machine, especially for Linux.
+If your machine is maintained by your IT department, you can ask them for help.</p>
+</div>
+<p>There are many ways to setup a Python environment.
+As long as the prerequisites for Python (<a class="reference internal" href="../install.html#section-ivabs-prerequisites"><span class="std std-ref">Prerequisites</span></a>) are met, you can do this in your own way.</p>
 <p>It is highly recommended to create a local virtual Python environment and run iVABS in it.
 The benefit is that the virtual environment is completely in the control of the local user and won’t affect and be affected by the global environment.</p>
 <p>The recommended way to setup a virtual environment is through Anaconda.</p>
@@ -757,7 +755,6 @@ The benefit is that the virtual environment is completely in the control of the 
 <li><p><a class="reference internal" href="#linux" id="id4">Linux</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#manage-virtual-environment" id="id5">Manage virtual environment</a></p></li>
 </ul>
 </li>
 </ul>
@@ -766,21 +763,17 @@ The benefit is that the virtual environment is completely in the control of the 
 <h2>Anaconda<a class="headerlink" href="#anaconda" title="Permalink to this headline">#</a></h2>
 <section id="installation">
 <h3>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h3>
+<p>Follow the official instructions for installation: <a class="reference external" href="https://conda.io/projects/conda/en/latest/user-guide/install/index.html">https://conda.io/projects/conda/en/latest/user-guide/install/index.html</a>.</p>
 <section id="windows">
 <h4>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">#</a></h4>
 </section>
 <section id="linux">
 <h4>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">#</a></h4>
-<p>Load the anaconda module.</p>
-<p>After installation and configuration, the command prompt should look like the following (could be slightly different depending on the shell/terminal):</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>base<span class="o">)</span> user_name@machine_name: ~$
+<p>Depending on the system configuration and package management, you may need to load the anaconda module before using it the first time:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">load</span> <span class="n">anaconda</span>
 </pre></div>
 </div>
-<p>where <code class="docutils literal notranslate"><span class="pre">base</span></code> is the name of the globally default virtual environment.</p>
-</section>
-</section>
-<section id="manage-virtual-environment">
-<h3>Manage virtual environment<a class="headerlink" href="#manage-virtual-environment" title="Permalink to this headline">#</a></h3>
+<p><strong>Manage virtual environment</strong></p>
 <p>To create a virtual environment named <code class="docutils literal notranslate"><span class="pre">py3ivabs</span></code> with Python 3.6 and required packages, run</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda create --name py3ivabs <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.6 numpy scipy pyyaml
 </pre></div>
@@ -789,11 +782,15 @@ The benefit is that the virtual environment is completely in the control of the 
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda activate py3ivabs
 </pre></div>
 </div>
+<p>If this is your first time activating this environment, you may some error message printed.
+Follow the instruction in that message to configure your shell.
+More instructions can be found in the official documentation: <a class="reference external" href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#activating-an-environment">https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#activating-an-environment</a>.</p>
 <p>Then the command prompt should be something like:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>py3ivabs<span class="o">)</span> user_name@machine_name: ~$
 </pre></div>
 </div>
 <p>For more detailed instructions, see <a class="reference external" href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">official documentation</a></p>
+</section>
 </section>
 </section>
 </section>
