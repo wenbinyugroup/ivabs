@@ -68,7 +68,31 @@ A summary of cross-sectional parameters and corresponding distribution functions
       - Description
     * - :math:`a^{wl}_2`
       - Linear interpolation of six pairs of :math:`(\bar{r}, \bar{a}^{wl}_2)`
-      - Location of the front (leading) spar web.
+      - Location of the front (leading) spar web
+    * - :math:`a^{wt}_2`
+      - Linear interpolation of six pairs of :math:`(\bar{r}, \bar{a}^{wt}_2)`
+      - Location of the back (trailing) spar web
+    * - :math:`a^{nsm}_2`
+      - Linear interpolation of six pairs of :math:`(\bar{r}, \bar{a}^{nsm}_2)`
+      - Location of the non-structural mass center
+    * - :math:`r^{nsm}`
+      - Constant function :math:`\bar{r}^{nsm}`
+      - Radius of the non-structural mass
+    * - :math:`\theta^s_1,\theta^s_2,\theta^s_3,\theta^s_4`
+      - Step interpolation of five pairs of :math:`(\bar{r}, \bar{\theta}^s_i)`
+      - Fiber angle of layer :math:`i` of the box spar layup
+    * - :math:`n^s`
+      - Step interpolation of five pairs of :math:`(\bar{r}, \bar{n}^s_i)`
+      - Number of plies of each layer of the box spar layup
+    * - :math:`\theta^f,\theta^b`
+      - Constant function of :math:`\bar{\theta}^f` and :math:`\bar{\theta}^b`
+      - Fiber angle of each layer of the front and back layups
+    * - :math:`n^f,n^b`
+      - Constant function of :math:`\bar{n}^f` and :math:`\bar{n}^b`
+      - Number of plies of each layer of the front and back layups
+    * - :math:`l^s, l^f, l^b`
+      - Constant function of :math:`\bar{l}^s`, :math:`\bar{l}^f` and :math:`\bar{l}^b`
+      - Lamina choice of each layer of the box spar, front, and back layups
 
 More details on the parameterization can be found in the section :ref:`section-ivabs_parameterization`.
 
@@ -95,10 +119,87 @@ A summary of design variables is given in :numref:`Table %s <tab-ivabs_ex_uh60_s
       - Symbol in optimization
       - Type
       - Range
+      - Description
     * - :math:`(\bar{a}^{wl}_2)_1,\dots,(\bar{a}^{wl}_2)_6`
       - :math:`x_1,\dots,x_6`
       - Continuous
       - [0.8, 0.9]
+      - Coefficients of the interpolation function for the leading spar web location :math:`a^{wl}_2` (non-dimensional)
+    * - :math:`(\bar{a}^{wt}_2)_1,\dots,(\bar{a}^{wt}_2)_6`
+      - :math:`x_{7},\dots,x_{12}`
+      - Continuous
+      - [0.5, 0.7]
+      - Coefficients of the interpolation function for the trailing spar web location :math:`a^{wt}_2` (non-dimensional)
+    * - :math:`(\bar{a}^{nsm}_2)_1,\dots,(\bar{a}^{nsm}_2)_6`
+      - :math:`x_{13},\dots,x_{18}`
+      - Continuous
+      - [0.95, 0.985]
+      - Coefficients of the interpolation function for the non-structural mass center location :math:`a^{nsm}_2` (non-dimensional)
+    * - :math:`\bar{r}^{nsm}`
+      - :math:`x_{19}`
+      - Continuous
+      - [0.001, 0.01]
+      - Radius of the non-structural mass for the whole blade (non-dimensional)
+    * - :math:`(\bar{\theta}^{s}_1)_1,\dots,(\bar{\theta}^{s}_1)_5`
+      - :math:`x_{20},\dots,x_{24}`
+      - Discrete
+      - [-89, 90]
+      - Coefficients of the interpolation function for fiber angle of layer 1 of the spar layup :math:`\theta^{s}_1`
+    * - :math:`(\bar{\theta}^{s}_2)_1,\dots,(\bar{\theta}^{s}_2)_5`
+      - :math:`x_{25},\dots,x_{29}`
+      - Discrete
+      - [-89, 90]
+      - Coefficients of the interpolation function for fiber angle of layer 2 of the spar layup :math:`\theta^{s}_2`
+    * - :math:`(\bar{\theta}^{s}_3)_1,\dots,(\bar{\theta}^{s}_3)_5`
+      - :math:`x_{30},\dots,x_{34}`
+      - Discrete
+      - [-89, 90]
+      - Coefficients of the interpolation function for fiber angle of layer 3 of the spar layup :math:`\theta^{s}_3`
+    * - :math:`(\bar{\theta}^{s}_4)_1,\dots,(\bar{\theta}^{s}_4)_5`
+      - :math:`x_{35},\dots,x_{39}`
+      - Discrete
+      - [-89, 90]
+      - Coefficients of the interpolation function for fiber angle of layer 4 of the spar layup :math:`\theta^{s}_4`
+    * - :math:`(\bar{n}^{s})_1,\dots,(\bar{n}^{s})_5`
+      - :math:`x_{40},\dots,x_{44}`
+      - Discrete
+      - [1, 20]
+      - Coefficients of the interpolation function for number of plies of the spar layup :math:`n^{s}`
+    * - :math:`\bar{\theta}^{f}`
+      - :math:`x_{45}`
+      - Discrete
+      - [-89, 90]
+      - Fiber angle of the front (leading) layup :math:`\theta^{f}`
+    * - :math:`\bar{\theta}^{b}`
+      - :math:`x_{46}`
+      - Discrete
+      - [-89, 90]
+      - Fiber angle of the back (trailing) layup :math:`\theta^{b}`
+    * - :math:`\bar{n}^{f}`
+      - :math:`x_{47}`
+      - Discrete
+      - [1, 20]
+      - Number of plies of the front (leading) layup :math:`n^{f}`
+    * - :math:`\bar{n}^{b}`
+      - :math:`x_{48}`
+      - Discrete
+      - [1, 20]
+      - Number of plies of the back (trailing) layup :math:`n^{b}`
+    * - :math:`\bar{l}^{s}`
+      - :math:`x_{49}`
+      - Discrete
+      - [1, 4]
+      - Lamina choice of the spar layup :math:`l^{s}`
+    * - :math:`\bar{l}^{f}`
+      - :math:`x_{50}`
+      - Discrete
+      - [1, 4]
+      - Lamina choice of the front (leading) layup :math:`l^{f}`
+    * - :math:`\bar{l}^{b}`
+      - :math:`x_{51}`
+      - Discrete
+      - [1, 4]
+      - Lamina choice of the back (trailing) layup :math:`l^{b}`
 
 
 
@@ -106,14 +207,14 @@ A summary of design variables is given in :numref:`Table %s <tab-ivabs_ex_uh60_s
 Objective function
 ~~~~~~~~~~~~~~~~~~
 
-To match the target beam properties, this example uses the min-max method, i.e., to minimize the maximum absolute value among the six differences of the calculated properties from the targets:
+To match the target beam properties, this example uses the weighted sum method, i.e., to minimize the maximum absolute value among the three differences of the calculated properties from the targets:
 
-.. math::
-   :label: eq_ivabs_ex_opt_obj
+..  math::
+    :label: eq_ivabs_ex_opt_obj
 
-   \mathrm{minimize} \quad \max \left\{ \left| \frac{d_i - \hat{d_i}}{\hat{d_i}} \right|,\ i = 1\ \mathrm{to}\ 6 \right\}
+    f(\mathbf{x}) = w_1 \left| \frac{GJ-\hat{GJ}}{\hat{GJ}} \right| + w_2 \left| \frac{EI_f-\hat{EI}_f}{\hat{EI}_f} \right| + w_3 \left| \frac{EI_c-\hat{EI}_c}{\hat{EI}_c} \right|
 
-where :math:`\hat{(\cdot)}` is the target value, and :math:`d_1` to :math:`d_6` are the six beam properties listed in the table above, respectively.
+where :math:`\hat{(\cdot)}` is the target value.
 
 
 Constraints
@@ -124,8 +225,8 @@ No other constraints are considered in this example beside the boundary constrai
 Method
 ~~~~~~
 
-SOGA (single objective genetic algorithm) provided by Dakota is used.
-Method settings are:
+Single objective genetic algorithm (SOGA) provided by Dakota is used.
+The method is configured in the following way:
 
 * Maximum number of functional evaluations: 20,000
 * Size of population: 200
@@ -147,8 +248,34 @@ Running of the example
 2. Run ``python run.py uh60_blade.yml``.
 
 
-.. Results
-.. -------
+Result
+------
+
+Evolution
+~~~~~~~~~
+
+..  figure:: /figures/ivabs_ex_uh60_sopt_stf_result_obj_histr.png
+    :name: fig-ivabs_ex_uh60_sopt_stf_result_obj_histr
+    :align: center
+
+    Evoluation of the objective function.
+
+
+
+Final design
+~~~~~~~~~~~~
+
+..  figure:: /figures/ivabs_ex_uh60_sopt_stf_result_prop_compare.png
+    :name: fig-ivabs_ex_uh60_sopt_stf_result_prop_compare
+    :align: center
+
+    Comparison of beam properties between the optimum design and target values.
+
+..  figure:: /figures/ivabs_ex_uh60_sopt_stf_result_blade_plot.png
+    :name: fig-ivabs_ex_uh60_sopt_stf_result_blade_plot
+    :align: center
+
+    Plot of the ten cross-sections of the optimum design.
 
 .. Total number of functional evaluations and running time can be found at the end of the file ``cs_tm_opt_soga_{PLATFORM}.out``.
 
