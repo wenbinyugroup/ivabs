@@ -1,0 +1,227 @@
+.. include:: /replace.txt
+
+.. _section-ivabs_example_uh60_sopt_stf:
+
+Single objective optimization of multiple cross-sections to match target beam properties
+===========================================================================================
+
+Problem description
+-------------------
+
+The goal of this problem is to design a composite rotor blade for some desired beam properties, which could be given from an old design or requirements from rotor simulations.
+
+The target beam properties are listed in the table below.
+
+..  csv-table:: Target beam properties
+    :header: :math:`r/R`, :math:`GJ`, :math:`EI_f`, :math:`EI_c`
+    :widths: 10, 10, 10, 10
+    :header-rows: 1
+
+    , |stf1_im_ft|, |stf1_im_ft|, |stf1_im_ft|
+    0.2, 0.17976e6, 0.19162e6, 0.32572e7
+    0.3, 0.16882e6, 0.15417e6, 0.59786e7
+    0.4, 0.16882e6, 0.15417e6, 0.57986e7
+    0.5, 0.17058e6, 0.16042e6, 0.58384e7
+    0.6, 0.17208e6, 0.16042e6, 0.58396e7
+    0.7, 0.17208e6, 0.16319e6, 0.48434e7
+    0.8, 0.13337e6, 0.12709e6, 0.37748e7
+    0.9, 0.47441e6, 0.38724e6, 0.91526e7
+    0.9371, 0.66027e6, 0.53895e6, 0.12738e8
+    1, 22757, 6927.3, 0.41657e6
+
+
+
+
+Parameterization
+----------------
+
+As illustrated in the previous section, parameters should be identified first at the two levels.
+At the cross-sectional level, consider a box-spar type structure as the design concept or topology, as shown in :numref:`Fig. %s <fig-ivabs_ex_uh60_sopt_stf_cs_geo_params>` and :numref:`Fig. %s <fig-ivabs_ex_uh60_sopt_stf_cs_mat_params>`.
+:numref:`Fig. %s <fig-ivabs_ex_uh60_sopt_stf_cs_geo_params>` shows the parameters controlling the shape and size of components, such as locations of spar webs, and location and size of the non-structural mass.
+:numref:`Fig. %s <fig-ivabs_ex_uh60_sopt_stf_cs_mat_params>` shows the parameters controlling the layup scheme of box spar, front and back laminates, including material selection, fiber angle, and number of plies.
+
+
+..  figure:: /figures/cs_temp_airfoil_gbox_uni-shape_params.png
+    :name: fig-ivabs_ex_uh60_sopt_stf_cs_geo_params
+    :align: center
+
+    Shape parameters.
+
+..  figure:: /figures/cs_temp_airfoil_gbox_uni-material_params.png
+    :name: fig-ivabs_ex_uh60_sopt_stf_cs_mat_params
+    :align: center
+
+    Material parameters.
+
+
+At the blade level, distribution functions of cross-sectional parameters are defined.
+In this study, three types of distributions are considered: constant, linear interpolation, and step interpolation.
+A summary of cross-sectional parameters and corresponding distribution functions are given in :numref:`Table %s <tab-ivabs_ex_uh60_sopt_stf_params>`.
+
+..  list-table:: Summary of blade level distributions of cross-sectional parameters.
+    :name: tab-ivabs_ex_uh60_sopt_stf_params
+    :align: center
+    :header-rows: 1
+
+    * - Cross-sectional parameter
+      - Blade level distribution
+      - Description
+    * - :math:`a^{wl}_2`
+      - Linear interpolation of six pairs of :math:`(\bar{r}, \bar{a}^{wl}_2)`
+      - Location of the front (leading) spar web.
+
+More details on the parameterization can be found in the section :ref:`section-ivabs_parameterization`.
+
+
+
+
+
+Optimization setup
+------------------
+
+Design variables
+~~~~~~~~~~~~~~~~
+
+The coefficients controlling the distribution functions listed in :numref:`Table %s <tab-ivabs_ex_uh60_sopt_stf_params>` are the true design variables in the optimization.
+A summary of design variables is given in :numref:`Table %s <tab-ivabs_ex_uh60_sopt_stf_design_variables>`.
+
+
+..  list-table:: Design variables
+    :name: tab-ivabs_ex_uh60_sopt_stf_design_variables
+    :align: center
+    :header-rows: 1
+
+    * - Design variable
+      - Symbol in optimization
+      - Type
+      - Range
+    * - :math:`(\bar{a}^{wl}_2)_1,\dots,(\bar{a}^{wl}_2)_6`
+      - :math:`x_1,\dots,x_6`
+      - Continuous
+      - [0.8, 0.9]
+
+
+
+
+Objective function
+~~~~~~~~~~~~~~~~~~
+
+To match the target beam properties, this example uses the min-max method, i.e., to minimize the maximum absolute value among the six differences of the calculated properties from the targets:
+
+.. math::
+   :label: eq_ivabs_ex_opt_obj
+
+   \mathrm{minimize} \quad \max \left\{ \left| \frac{d_i - \hat{d_i}}{\hat{d_i}} \right|,\ i = 1\ \mathrm{to}\ 6 \right\}
+
+where :math:`\hat{(\cdot)}` is the target value, and :math:`d_1` to :math:`d_6` are the six beam properties listed in the table above, respectively.
+
+
+Constraints
+~~~~~~~~~~~
+
+No other constraints are considered in this example beside the boundary constraints of design variables.
+
+Method
+~~~~~~
+
+SOGA (single objective genetic algorithm) provided by Dakota is used.
+Method settings are:
+
+* Maximum number of functional evaluations: 20,000
+* Size of population: 200
+* Random seed: 1027
+* Convergence
+
+  * Type: average fitness tracker
+  * Percentage change: 10%
+  * Number of generations: 10
+
+The rest are default values given by Dakota.
+
+
+
+Running of the example
+----------------------
+
+1. Go to ``{IVABS_ROOT}\examples\e1_uh60_sopt_stf``.
+2. Run ``python run.py uh60_blade.yml``.
+
+
+.. Results
+.. -------
+
+.. Total number of functional evaluations and running time can be found at the end of the file ``cs_tm_opt_soga_{PLATFORM}.out``.
+
+.. Evolution results can be found in files ``population_i.dat``, where ``i`` is the generation number.
+
+.. Final design result can be found in the file ``finaldata1.dat``, which contains design variables, responses (objective and constraints) of the optimum desgin.
+
+.. Evoluation
+.. ~~~~~~~~~~
+
+.. The optimization process stops when reaching the convergence condition.
+.. The total number of functional evaluation is 15,060.
+
+.. Final design
+.. ~~~~~~~~~~~~
+
+.. .. list-table:: Final design
+..    :align: center
+..    :header-rows: 1
+
+..    * - Symbol
+..      - Value
+..      - Unit
+..    * - :math:`a_2^{wl}`
+..      - :math:`-0.137`
+..      - 1
+..    * - :math:`a_2^{wt}`
+..      - :math:`-0.364`
+..      - 1
+..    * - :math:`\theta_1`
+..      - :math:`-43`
+..      - degree
+..    * - :math:`\theta_2`
+..      - :math:`0`
+..      - degree
+..    * - :math:`\theta_3`
+..      - :math:`74`
+..      - degree
+..    * - :math:`\theta_4`
+..      - :math:`70`
+..      - degree
+
+
+
+.. .. list-table:: Comparison of final and target beam properties
+..    :align: center
+..    :header-rows: 1
+
+..    * - 
+..      - :math:`EA` [|stf0_im|]
+..      - :math:`GJ` [|stf1_im|]
+..      - :math:`EI_f` [|stf1_im|]
+..      - :math:`EI_l` [|stf1_im|]
+..      - :math:`SC_2` [|len_im|]
+..      - :math:`MC_2` [|len_im|]
+..    * - Target
+..      - :math:`52.25 \times 10^6`
+..      - :math:`24.20 \times 10^6`
+..      - :math:`25.00 \times 10^6`
+..      - :math:`1.058 \times 10^9`
+..      - :math:`-5.253`
+..      - :math:`-5.972`
+..    * - Optimized
+..      - :math:`52.16 \times 10^6`
+..      - :math:`24.22 \times 10^6`
+..      - :math:`24.95 \times 10^6`
+..      - :math:`1.061 \times 10^9`
+..      - :math:`-5.267`
+..      - :math:`-5.960`
+..    * - Difference [%]
+..      - :math:`0.172`
+..      - :math:`0.074`
+..      - :math:`-0.185`
+..      - :math:`0.268`
+..      - :math:`0.258`
+..      - :math:`-0.201`

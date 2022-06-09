@@ -14,6 +14,8 @@ Package with ``portable`` in the file name contains all the files in an archive 
 
 
 
+.. _section-ivabs_prerequisites:
+
 Prerequisites
 -------------
 
@@ -27,10 +29,14 @@ Prerequisites
 
 **Python**
 
-Python 3.6 or above is required for iVABS to run. Packages ``numpy``, ``scipy``, and ``pyyaml`` should also be properly installed. 
+Python 3.6 or above is required for iVABS to run.
+Packages ``numpy`` (>= 1.19), ``scipy`` (>= 1.1), and ``pyyaml`` (>= 5.4) should also be properly installed.
 For help on configuring the Python environment, see :doc:`/ivabs/install/python_setup`.
 
+.. note::
 
+  Minimum versions for Python packages are roughly determined by checking some key features needed by iVABS.
+  If the versions are too low or unnecessarily high, please let the developers know.
 
 
 

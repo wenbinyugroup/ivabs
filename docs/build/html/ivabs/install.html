@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Download &amp; Installation &#8212; iVABS Documentation (v0.6)</title>
+    <title>Download &amp; Installation &#8212; iVABS Documentation (v0.7)</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -106,7 +106,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       
       
       
-      <h1 class="site-logo" id="site-title">iVABS Documentation (v0.6)</h1>
+      <h1 class="site-logo" id="site-title">iVABS Documentation (v0.7)</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -158,7 +158,12 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="examples/example_uh60a_opt.html">
+    <a class="reference internal" href="examples/example_quickstart_param_study.html">
+     Parameter study of a single cross-section
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="examples/example_uh60_sopt_stf.html">
      Single objective optimization of multiple cross-sections to match target beam properties
     </a>
    </li>
@@ -613,7 +618,7 @@ Package with <code class="docutils literal notranslate"><span class="pre">instal
 Package with <code class="docutils literal notranslate"><span class="pre">portable</span></code> in the file name contains all the files in an archive requiring manual extraction and setting up. Packages are released for both Windows and Linux.</p>
 </div>
 <div class="section" id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
+<span id="section-ivabs-prerequisites"></span><h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
 <p><strong>VABS</strong></p>
 <ul class="simple">
 <li><p>Request VABS from <a class="reference external" href="http://analyswift.com/software-trial/">AnalySwift</a> and follow the VABS instruction to install.</p></li>
@@ -622,8 +627,14 @@ Package with <code class="docutils literal notranslate"><span class="pre">portab
 License should also be placed inside <code class="docutils literal notranslate"><span class="pre">VABS_ROOT</span></code>.</p></li>
 </ul>
 <p><strong>Python</strong></p>
-<p>Python 3.6 or above is required for iVABS to run. Packages <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">scipy</span></code>, and <code class="docutils literal notranslate"><span class="pre">pyyaml</span></code> should also be properly installed.
+<p>Python 3.6 or above is required for iVABS to run.
+Packages <code class="docutils literal notranslate"><span class="pre">numpy</span></code> (&gt;= 1.19), <code class="docutils literal notranslate"><span class="pre">scipy</span></code> (&gt;= 1.1), and <code class="docutils literal notranslate"><span class="pre">pyyaml</span></code> (&gt;= 5.4) should also be properly installed.
 For help on configuring the Python environment, see <a class="reference internal" href="install/python_setup.html"><span class="doc">Setup Python Environment</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Minimum versions for Python packages are roughly determined by checking some key features needed by iVABS.
+If the versions are too low or unnecessarily high, please let the developers know.</p>
+</div>
 </div>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
