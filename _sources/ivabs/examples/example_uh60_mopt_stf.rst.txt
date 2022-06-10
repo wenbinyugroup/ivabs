@@ -40,6 +40,21 @@ Running of the example
 Result
 ------
 
+..  list-table:: Performance of the optimization
+    :align: center
+    :header-rows: 0
+
+    * - Total number of evaluations
+      - 20000
+    * - Total running time (wall clock)
+      - 22183.4 sec (~= 6 hr 10 min)
+    * - CPU model
+      - Intel(R) Xeon(R) Gold 6134 CPU @ 3.20GHz
+    * - CPU cores
+      - 16
+    * - Memory
+      - 95 GB
+
 ..  figure:: /figures/ivabs_ex_uh60_mopt_stf_result_parallel_coord.png
     :name: fig-ivabs_ex_uh60_mopt_stf_result_parallel_coord
     :align: center
