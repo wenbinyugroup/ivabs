@@ -231,11 +231,7 @@ The method is configured in the following way:
 * Maximum number of functional evaluations: 20,000
 * Size of population: 200
 * Random seed: 1027
-* Convergence
-
-  * Type: average fitness tracker
-  * Percentage change: 10%
-  * Number of generations: 10
+* Evaluation concurrency: 20
 
 The rest are default values given by Dakota.
 
@@ -250,6 +246,22 @@ Running of the example
 
 Result
 ------
+
+..  list-table:: Performance of the optimization
+    :align: center
+    :header-rows: 0
+
+    * - Total number of evaluations
+      - 16873
+    * - Total running time (wall clock)
+      - 20568.8 sec (~= 5 hr 40 min)
+    * - CPU model
+      - Intel(R) Xeon(R) Gold 6134 CPU @ 3.20GHz
+    * - CPU cores
+      - 16
+    * - Memory
+      - 95 GB
+
 
 Evolution
 ~~~~~~~~~
