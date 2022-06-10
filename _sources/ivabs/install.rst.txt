@@ -30,7 +30,7 @@ Prerequisites
 **Python**
 
 Python 3.6 or above is required for iVABS to run.
-Packages ``numpy`` (>= 1.19), ``scipy`` (>= 1.1), and ``pyyaml`` (>= 5.4) should also be properly installed.
+Packages ``numpy`` (Version 1.19 or above), ``scipy`` (Version 1.1 or above), and ``pyyaml`` (Version 5.4 or above) should also be properly installed.
 For help on configuring the Python environment, see :doc:`/ivabs/install/python_setup`.
 
 .. note::
