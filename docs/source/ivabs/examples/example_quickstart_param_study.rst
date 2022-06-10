@@ -467,7 +467,7 @@ Input files
     This is the design template for the type of cross-section having an airfoil profile with a main box-type spar. Depending on the problem, one or more design templates might be needed. More details on design templates can be found in Section :ref:`section-cs-templates`.
 
 ``material_database_us_ft.xml``
-    This is the material database used by the cross-section. More details on the material inputs can be found in Section :ref:`section-material-layup`.
+    This is the local material database used by the cross-section. There is also an global database (``MaterialDB.xml``) located in ``ivabs/bin``. Users can add more contents in both files. More details on the material inputs can be found in Section :ref:`section-material-layup`.
 
 ``SC1095.dat``
     This is the airfoil data file for the cross-section. Depending on the problem, one or more airfoil data files might be needed. 
