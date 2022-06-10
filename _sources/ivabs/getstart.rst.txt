@@ -71,7 +71,7 @@ There are three running modes:
     python run.py main_input.yml
 
 
-#. Mode 1 runs a single analysis. This mode is designed to use the simple iVABS interface to run PreVABS without using Dakota. In current verstion (v0.6), it is not useful.
+#. Mode 1 runs a single analysis. This mode is designed to use the simple iVABS interface to run PreVABS without using Dakota. 
 
 #. Mode 2 only generates Dakota input. The process stops after generating the Dakota input.
 
