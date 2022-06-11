@@ -8,7 +8,7 @@ Multiple objective optimization of multiple cross-sections to match target beam 
 Problem description
 -------------------
 
-The goal and setup are the same as the previous example (:ref:`section-ivabs_example_uh60_sopt_stf`).
+The goal and setup are the same as (:ref:`section-ivabs_example_uh60_sopt_stf`).
 The only difference is that this example carries out a multi-objective optimization.
 
 
