@@ -4,10 +4,10 @@
    contain the root `toctree` directive.
    
 .. meta::
-   :keywords: beam, beam design, composites, composite beam, ivabs, vabs, helocopter blade
+   :keywords: design optimization, composite beams, ivabs, vabs, helocopter rotor blades, wind turbine blades
    :google-site-verification: PYAQnLb7P7jrKRGfr8OlAw_x9xGZltak28MiEU3GrV0
 
-Welcome to iVABS Documentation
+iVABS, Integrated Composite Beam Design Framework based on VABS
 ===============================
 
 iVABS (namely integrated VABS), is a design framework for composite slender structures (also called composite beams) such as helicopter rotor blades, wind turbine blades, high aspect ratio wings, bridges, shafts, etc.
