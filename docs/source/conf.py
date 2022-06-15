@@ -37,6 +37,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
     'sphinx_comments',
+    'sphinx_sitemap',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -204,5 +205,7 @@ html_context = {
     "github_version": "main", # Version
     "conf_py_path": "/docs/source/", # Path in the checkout to the docs root
 }
+
+html_baseurl = 'https://wenbinyugroup.github.io/ivabs/'
 
 autosummary_generate = True
