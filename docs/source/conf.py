@@ -206,6 +206,8 @@ html_context = {
     "conf_py_path": "/docs/source/", # Path in the checkout to the docs root
 }
 
+# setting for generating sitemap
+sitemap_url_scheme = "{link}"
 html_baseurl = 'https://wenbinyugroup.github.io/ivabs/'
 
 autosummary_generate = True
