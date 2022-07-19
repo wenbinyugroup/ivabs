@@ -10,7 +10,6 @@ Overall layout of the main input file:
 .. code-block:: yaml
 
     name: "composite_blade_design"
-    version: "0.6"
     setting:
         # setting block
     design:
