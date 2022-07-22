@@ -91,6 +91,15 @@ The basic syntax is shown in :numref:`Listing %s <lst-input_design_param_distr>`
       ...
 
 
+Name (``name``) can be arbitrary for each distribution.
+Function (``function``) is specified by choosing one of the built-in types such as interpolation functions.
+
+..  note::
+    Currently only interpolation function is supported.
+
+Other specifications depend on the type of function selected.
+
+
 Interpolation function
 ~~~~~~~~~~~~~~~~~~~~~~~
 
