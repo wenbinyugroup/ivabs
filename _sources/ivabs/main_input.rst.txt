@@ -7,7 +7,7 @@ The main input file uses the format `YAML <https://yaml.org/>`_.
 
 Overall layout of the main input file:
 
-.. code-block:: yaml
+..  code-block:: yaml
 
     name: "composite_blade_design"
     setting:
@@ -24,11 +24,11 @@ Overall layout of the main input file:
 
 
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Guide to each input block
-   
-   input_guide/input_design
-   input_guide/input_analysis
-   input_guide/input_study
+..  toctree::
+    :maxdepth: 1
+
+    input_guide/intro_yaml
+    input_guide/input_design
+    input_guide/input_analysis
+    input_guide/input_study
 

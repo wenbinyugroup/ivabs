@@ -69,7 +69,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Analysis Steps" href="input_analysis.html" />
-    <link rel="prev" title="Guide to Main Input File" href="../main_input.html" />
+    <link rel="prev" title="A Brief Introduction to YAML" href="intro_yaml.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -186,6 +186,11 @@ commentsRunWhenDOMLoaded(addUtterances);
    </i>
   </label>
   <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_yaml.html">
+     A Brief Introduction to YAML
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Design Parameters
@@ -655,12 +660,55 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parameter-specifications">
+   Parameter specifications
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-of-parameters">
+     List of parameters
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#distribution-of-parameters">
+     Distribution of parameters
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#interpolation-function">
+       Interpolation function
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -672,6 +720,38 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parameter-specifications">
+   Parameter specifications
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-of-parameters">
+     List of parameters
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#distribution-of-parameters">
+     Distribution of parameters
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#interpolation-function">
+       Interpolation function
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -681,8 +761,11 @@ title="Print to PDF"
                 
   <section id="design-parameters">
 <span id="section-input-guide-design"></span><h1>Design Parameters<a class="headerlink" href="#design-parameters" title="Permalink to this headline">#</a></h1>
-<p>This block stores all information defining the structural design. The overall layout is shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Listing</span> <span class="pre">%s</span></code>.</p>
-<div class="highlight-yaml notranslate" id="lst-input-design-layout"><div class="highlight"><pre><span></span><span class="nt">design</span><span class="p">:</span><span class="w"></span>
+<p>This block stores all information defining the structural design.
+The overall layout is shown in <a class="reference internal" href="#lst-input-design-layout"><span class="std std-numref">Listing 1</span></a>.</p>
+<div class="literal-block-wrapper docutils container" id="lst-input-design-layout">
+<div class="code-block-caption"><span class="caption-number">Listing 1 </span><span class="caption-text">Layout of the design input block</span><a class="headerlink" href="#lst-input-design-layout" title="Permalink to this code">#</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">design</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"></span>
 <span class="w">    </span><span class="nt">structure_class</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"></span>
 <span class="w">    </span><span class="nt">parameters</span><span class="p">:</span><span class="w"></span>
@@ -694,6 +777,69 @@ title="Print to PDF"
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
 </pre></div>
 </div>
+</div>
+<p>Structures are arranged in a list/sequence.
+Each one requires the specifications of name, class, and parameters.
+Name (<code class="docutils literal notranslate"><span class="pre">name</span></code>) is a string that can be arbitrarily defined by the users.
+Class (<code class="docutils literal notranslate"><span class="pre">structure_class</span></code>) specifies what type of structure this is.
+Users choose one of built-in classes for this keyword.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently supported classes are blade (<code class="docutils literal notranslate"><span class="pre">blade</span></code>) and cross-section (<code class="docutils literal notranslate"><span class="pre">cs</span></code>).</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently, only one <code class="docutils literal notranslate"><span class="pre">blade</span></code> class structure is supported.</p>
+</div>
+<p>Parameters (<code class="docutils literal notranslate"><span class="pre">parameters</span></code>) specify the values defining a specific design of the structure.
+They can be given either in a list or as distributions with respect to the structural dimensions.
+Supported parameters depend on the structural class.
+For slender structures analyzed through cross-sections, please check the Section <a class="reference internal" href="../parameterization.html#section-ivabs-parameterization"><span class="std std-ref">Parameterization of Composite Slender Structures</span></a>.</p>
+<section id="parameter-specifications">
+<h2>Parameter specifications<a class="headerlink" href="#parameter-specifications" title="Permalink to this headline">#</a></h2>
+<section id="list-of-parameters">
+<h3>List of parameters<a class="headerlink" href="#list-of-parameters" title="Permalink to this headline">#</a></h3>
+<p>In this section, structural design specifications are given in a list of pairs of parameter name and value.
+The basic syntax is shown in <a class="reference internal" href="#lst-input-design-param-list"><span class="std std-numref">Listing 2</span></a>.</p>
+<div class="literal-block-wrapper docutils container" id="lst-input-design-param-list">
+<div class="code-block-caption"><span class="caption-number">Listing 2 </span><span class="caption-text">Parameter list</span><a class="headerlink" href="#lst-input-design-param-list" title="Permalink to this code">#</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">list</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">param_1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value_1</span><span class="w"></span>
+<span class="w">  </span><span class="nt">param_2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value_2</span><span class="w"></span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p>Supported value types are number, string, and boolean.
+Numbers can be integers or real numbers.
+Strings should be put in double quotes (<code class="docutils literal notranslate"><span class="pre">&quot;abc&quot;</span></code>).
+Booleans can be <code class="docutils literal notranslate"><span class="pre">true</span></code>/<code class="docutils literal notranslate"><span class="pre">false</span></code>, <code class="docutils literal notranslate"><span class="pre">yes</span></code>/<code class="docutils literal notranslate"><span class="pre">no</span></code>, or <code class="docutils literal notranslate"><span class="pre">on</span></code>/<code class="docutils literal notranslate"><span class="pre">off</span></code>.</p>
+<p>Parameter list can be used to specify a constant value for the whole structure.
+These parameters can also be varied by an optimization method.
+This is done by directly using the parameter name as the design variable name.</p>
+</section>
+<section id="distribution-of-parameters">
+<h3>Distribution of parameters<a class="headerlink" href="#distribution-of-parameters" title="Permalink to this headline">#</a></h3>
+<p>In this section, structural parameters are defined as distribution functions with respect to the structural dimensions.
+For slender structures that will be analyzed using beam models, this means that parameters are functions of a single coordinate along the longitudinal direction (e.g., blade span).
+The basic syntax is shown in <a class="reference internal" href="#lst-input-design-param-distr"><span class="std std-numref">Listing 3</span></a>.</p>
+<div class="literal-block-wrapper docutils container" id="lst-input-design-param-distr">
+<div class="code-block-caption"><span class="caption-number">Listing 3 </span><span class="caption-text">Parameter distribution</span><a class="headerlink" href="#lst-input-design-param-distr" title="Permalink to this code">#</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">distributions</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;...&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">function</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;...&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;...&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<section id="interpolation-function">
+<h4>Interpolation function<a class="headerlink" href="#interpolation-function" title="Permalink to this headline">#</a></h4>
+</section>
+</section>
+</section>
 </section>
 
 
@@ -704,11 +850,11 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../main_input.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="intro_yaml.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Guide to Main Input File</p>
+            <p class="prev-next-title">A Brief Introduction to YAML</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="input_analysis.html" title="next page">

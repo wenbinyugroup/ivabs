@@ -6,30 +6,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Parameterization of Composite Slender Structures &#8212; iVABS Documentation (v0.7)</title>
+    <title>A Brief Introduction to YAML &#8212; iVABS Documentation (v0.7)</title>
     
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
     <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
@@ -64,12 +64,12 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <link rel="canonical" href="https://wenbinyugroup.github.io/ivabs/ivabs/parameterization.html" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Cross-sectional Design Templates" href="cs_template.html" />
-    <link rel="prev" title="Design Study" href="input_guide/input_study.html" />
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <link rel="canonical" href="https://wenbinyugroup.github.io/ivabs/ivabs/input_guide/intro_yaml.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Design Parameters" href="input_design.html" />
+    <link rel="prev" title="Guide to Main Input File" href="../main_input.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -104,21 +104,21 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="bd-sidebar noprint" id="site-navigation">
     <div class="bd-sidebar__content">
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+    <a class="navbar-brand text-wrap" href="../../index.html">
       
       
       
       <h1 class="site-logo" id="site-title">iVABS Documentation (v0.7)</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="install.html">
+  <a class="reference internal" href="../install.html">
    Download &amp; Installation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -128,29 +128,29 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="install/windows.html">
+    <a class="reference internal" href="../install/windows.html">
      Installation on Windows
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="install/linux.html">
+    <a class="reference internal" href="../install/linux.html">
      Installation on Linux
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="install/python_setup.html">
+    <a class="reference internal" href="../install/python_setup.html">
      Setup Python Environment
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="getstart.html">
+  <a class="reference internal" href="../getstart.html">
    Quick Start
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="examples.html">
+  <a class="reference internal" href="../examples.html">
    Examples
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -160,61 +160,61 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="examples/example_quickstart_param_study.html">
+    <a class="reference internal" href="../examples/example_quickstart_param_study.html">
      Parameter study of a single cross-section
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="examples/example_uh60_sopt_stf.html">
+    <a class="reference internal" href="../examples/example_uh60_sopt_stf.html">
      Single objective optimization of multiple cross-sections to match target beam properties
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="examples/example_uh60_mopt_stf.html">
+    <a class="reference internal" href="../examples/example_uh60_mopt_stf.html">
      Multiple objective optimization of multiple cross-sections to match target beam properties
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="main_input.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../main_input.html">
    Guide to Main Input File
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="input_guide/intro_yaml.html">
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      A Brief Introduction to YAML
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="input_guide/input_design.html">
+    <a class="reference internal" href="input_design.html">
      Design Parameters
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="input_guide/input_analysis.html">
+    <a class="reference internal" href="input_analysis.html">
      Analysis Steps
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="input_guide/input_study.html">
+    <a class="reference internal" href="input_study.html">
      Design Study
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../parameterization.html">
    Parameterization of Composite Slender Structures
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="cs_template.html">
+  <a class="reference internal" href="../cs_template.html">
    Cross-sectional Design Templates
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
@@ -224,14 +224,14 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="cs_templates/airfoil_gbox_uni.html">
+    <a class="reference internal" href="../cs_templates/airfoil_gbox_uni.html">
      Airfoil Box-spar Uniform
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="ref_main.html">
+  <a class="reference internal" href="../ref_main.html">
    Reference manual
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
@@ -241,19 +241,19 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="reference/input_keywords_main.html">
+    <a class="reference internal" href="../reference/input_keywords_main.html">
      Main Input Keywords
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="introduction.html">
+  <a class="reference internal" href="../introduction.html">
    iVABS Components
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../prevabs/index.html">
+  <a class="reference internal" href="../../prevabs/index.html">
    PreVABS Documentation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
@@ -263,22 +263,22 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../prevabs/contents/install.html">
+    <a class="reference internal" href="../../prevabs/contents/install.html">
      Download and Installation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../prevabs/contents/run.html">
+    <a class="reference internal" href="../../prevabs/contents/run.html">
      How to Run PreVABS
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../prevabs/contents/tutorial.html">
+    <a class="reference internal" href="../../prevabs/contents/tutorial.html">
      Tutorial
     </a>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../prevabs/contents/guide.html">
+    <a class="reference internal" href="../../prevabs/contents/guide.html">
      Guide for Preparing Input Files
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
@@ -288,39 +288,39 @@ commentsRunWhenDOMLoaded(addUtterances);
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../prevabs/contents/guide/pre_coordinate.html">
+      <a class="reference internal" href="../../prevabs/contents/guide/pre_coordinate.html">
        Coordinate systems
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../prevabs/contents/guide/pre_shape.html">
+      <a class="reference internal" href="../../prevabs/contents/guide/pre_shape.html">
        Geometry and shapes
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../prevabs/contents/guide/pre_material.html">
+      <a class="reference internal" href="../../prevabs/contents/guide/pre_material.html">
        Materials and layups
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../prevabs/contents/guide/pre_component.html">
+      <a class="reference internal" href="../../prevabs/contents/guide/pre_component.html">
        Components
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../prevabs/contents/guide/pre_recover.html">
+      <a class="reference internal" href="../../prevabs/contents/guide/pre_recover.html">
        Specifications for recovery
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../prevabs/contents/guide/pre_overall.html">
+      <a class="reference internal" href="../../prevabs/contents/guide/pre_overall.html">
        Other input settings
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../prevabs/contents/examples.html">
+    <a class="reference internal" href="../../prevabs/contents/examples.html">
      Examples
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
@@ -330,61 +330,61 @@ commentsRunWhenDOMLoaded(addUtterances);
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../prevabs/contents/examples/example_box.html">
+      <a class="reference internal" href="../../prevabs/contents/examples/example_box.html">
        Box beam
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../prevabs/contents/examples/example_pipe.html">
+      <a class="reference internal" href="../../prevabs/contents/examples/example_pipe.html">
        Pipe
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../prevabs/contents/examples/example_tube.html">
+      <a class="reference internal" href="../../prevabs/contents/examples/example_tube.html">
        Circular tube
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../prevabs/contents/examples/example_channel.html">
+      <a class="reference internal" href="../../prevabs/contents/examples/example_channel.html">
        Channel
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../prevabs/contents/examples/example_airfoil.html">
+      <a class="reference internal" href="../../prevabs/contents/examples/example_airfoil.html">
        Airfoil (MH-104)
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../prevabs/contents/examples/example_airfoil_recover.html">
+      <a class="reference internal" href="../../prevabs/contents/examples/example_airfoil_recover.html">
        Airfoil (Recover)
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../prevabs/contents/examples/example_uh60a_fi.html">
+      <a class="reference internal" href="../../prevabs/contents/examples/example_uh60a_fi.html">
        UH-60A (Initial Failure Analysis)
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../prevabs/contents/changelog.html">
+    <a class="reference internal" href="../../prevabs/contents/changelog.html">
      Change log
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../prevabs/contents/xml.html">
+    <a class="reference internal" href="../../prevabs/contents/xml.html">
      Introduction to XML
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../prevabs/contents/references.html">
+    <a class="reference internal" href="../../prevabs/contents/references.html">
      References
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../msgpi/index.html">
+  <a class="reference internal" href="../../msgpi/index.html">
    MSGPI Documentation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
@@ -394,7 +394,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../msgpi/contents/user_guide.html">
+    <a class="reference internal" href="../../msgpi/contents/user_guide.html">
      User Guide
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
@@ -406,7 +406,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../msgpi/contents/ref_manual.html">
+    <a class="reference internal" href="../../msgpi/contents/ref_manual.html">
      Reference
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
@@ -416,7 +416,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     </label>
     <ul>
      <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../msgpi/contents/sg/index.html">
+      <a class="reference internal" href="../../msgpi/contents/sg/index.html">
        Structure Gene
       </a>
       <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
@@ -426,39 +426,39 @@ commentsRunWhenDOMLoaded(addUtterances);
       </label>
       <ul>
        <li class="toctree-l4">
-        <a class="reference internal" href="../msgpi/contents/sg/structuregene.html">
+        <a class="reference internal" href="../../msgpi/contents/sg/structuregene.html">
          StructureGene
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../msgpi/contents/sg/crosssection.html">
+        <a class="reference internal" href="../../msgpi/contents/sg/crosssection.html">
          CrossSection
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../msgpi/contents/sg/materialsection.html">
+        <a class="reference internal" href="../../msgpi/contents/sg/materialsection.html">
          MaterialSection
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../msgpi/contents/sg/beamproperty.html">
+        <a class="reference internal" href="../../msgpi/contents/sg/beamproperty.html">
          BeamProperty
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../msgpi/contents/sg/io.html">
+        <a class="reference internal" href="../../msgpi/contents/sg/io.html">
          Methods
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../msgpi/contents/sg/run.html">
+        <a class="reference internal" href="../../msgpi/contents/sg/run.html">
          Methods
         </a>
        </li>
       </ul>
      </li>
      <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../msgpi/contents/utils/index.html">
+      <a class="reference internal" href="../../msgpi/contents/utils/index.html">
        Utilities
       </a>
       <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
@@ -468,17 +468,17 @@ commentsRunWhenDOMLoaded(addUtterances);
       </label>
       <ul>
        <li class="toctree-l4">
-        <a class="reference internal" href="../msgpi/contents/utils/io.html">
+        <a class="reference internal" href="../../msgpi/contents/utils/io.html">
          IO
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../msgpi/contents/utils/math.html">
+        <a class="reference internal" href="../../msgpi/contents/utils/math.html">
          Math
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="../msgpi/contents/utils/logger.html">
+        <a class="reference internal" href="../../msgpi/contents/utils/logger.html">
          Logging
         </a>
        </li>
@@ -578,7 +578,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/wenbinyugroup/ivabs/issues/new?title=Issue%20on%20page%20%2Fivabs/parameterization.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/wenbinyugroup/ivabs/issues/new?title=Issue%20on%20page%20%2Fivabs/input_guide/intro_yaml.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -595,7 +595,7 @@ title="Open an issue"
       </li>
       
       <li>
-        <a href="https://github.com/wenbinyugroup/ivabs/edit/main/docs/source/ivabs/parameterization.rst"
+        <a href="https://github.com/wenbinyugroup/ivabs/edit/main/docs/source/ivabs/input_guide/intro_yaml.rst"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -623,7 +623,7 @@ title="Edit this page"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/ivabs/parameterization.rst.txt"
+        <a href="../../_sources/ivabs/input_guide/intro_yaml.rst.txt"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -672,7 +672,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Parameterization of Composite Slender Structures</h1>
+                <h1>A Brief Introduction to YAML</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -684,27 +684,13 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="parameterization-of-composite-slender-structures">
-<span id="section-ivabs-parameterization"></span><h1>Parameterization of Composite Slender Structures<a class="headerlink" href="#parameterization-of-composite-slender-structures" title="Permalink to this headline">#</a></h1>
-<p>iVABS uses a two-level, namely cross-section and blade, parameterization method, as illustrated in <a class="reference internal" href="#fig-ivabs-parameterization"><span class="std std-numref">Fig. 9</span></a>.
-The motivation of using this method is to deal with the challenge of defining a composite structure that is high-fidelity and manufacturable.
-Such method should also be able to provide large enough design spaces and accommodate common design language.</p>
-<figure class="align-center" id="fig-ivabs-parameterization">
-<a class="reference internal image-reference" href="../_images/ivabs_parameterization.png"><img alt="../_images/ivabs_parameterization.png" src="../_images/ivabs_parameterization.png" style="width: 6in;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 9 </span><span class="caption-text">The iVABS parameterization method.</span><a class="headerlink" href="#fig-ivabs-parameterization" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>At the cross-sectional level, VABS requires a high-fidelity and meshed cross-sectional model as the input.
-This means that all details in the composite structure must be created properly.
-PreVABS is the tool that creates such model data given geometric and material information, such as definitions of airfoil, spar location, material properties, layup schemes, etc.
-These inputs can be seen as the “recipe” instructing the code in how to create the cross-section.
-Some or all of them can be marked with labels and hence become the cross-sectional level design parameters.
-A PreVABS input with such parameter labels can be treated as a design template.
-By assigning specific values to those parameters, users can generate a specific PreVABS input file and carry out the cross-sectional analysis.</p>
-<p>At the blade level, manufacturability requires that designs between neighboring cross-sections should relate to each other, so that the whole structure can be manufactured as designed.
-To achieve this, iVABS uses functions to describe the distributions of cross-sectional level parameters along the blade span.
-Coefficients controlling these functions are blade-level design parameters.</p>
+  <section id="a-brief-introduction-to-yaml">
+<span id="section-yaml"></span><h1>A Brief Introduction to YAML<a class="headerlink" href="#a-brief-introduction-to-yaml" title="Permalink to this headline">#</a></h1>
+<p>More about YAML can be found from:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://yaml.org/spec/1.2.2/#chapter-2-language-overview">https://yaml.org/spec/1.2.2/#chapter-2-language-overview</a></p></li>
+<li><p><a class="reference external" href="https://www.tutorialspoint.com/yaml/yaml_basics.htm">https://www.tutorialspoint.com/yaml/yaml_basics.htm</a></p></li>
+</ul>
 </section>
 
 
@@ -715,17 +701,17 @@ Coefficients controlling these functions are blade-level design parameters.</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="input_guide/input_study.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../main_input.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Design Study</p>
+            <p class="prev-next-title">Guide to Main Input File</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="cs_template.html" title="next page">
+    <a class='right-next' id="next-link" href="input_design.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Cross-sectional Design Templates</p>
+        <p class="prev-next-title">Design Parameters</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -750,7 +736,7 @@ Coefficients controlling these functions are blade-level design parameters.</p>
     </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
 
   </body>

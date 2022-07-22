@@ -188,6 +188,11 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../../ivabs/input_guide/intro_yaml.html">
+     A Brief Introduction to YAML
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../../ivabs/input_guide/input_design.html">
      Design Parameters
     </a>
@@ -734,12 +739,12 @@ title="Print to PDF"
 <figure class="align-center" id="fig-mh104-draw">
 <a class="reference internal image-reference" href="../../../_images/examplemh1040.png"><img alt="../../../_images/examplemh1040.png" src="../../../_images/examplemh1040.png" style="width: 5.5in;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 53 </span><span class="caption-text">Sketch of a cross section for a typical wind turbine blade <a class="reference internal" href="../references.html#chen2010" id="id1"><span>[CHEN2010]</span></a>.</span><a class="headerlink" href="#fig-mh104-draw" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Figure 54 </span><span class="caption-text">Sketch of a cross section for a typical wind turbine blade <a class="reference internal" href="../references.html#chen2010" id="id1"><span>[CHEN2010]</span></a>.</span><a class="headerlink" href="#fig-mh104-draw" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>This example demonstrates the capability of building a cross section having an airfoil shape, which is commonly seen on wind turbine blades or helicopter rotor blades.
 This example is also studied in <a class="reference internal" href="../references.html#chen2010" id="id2"><span>[CHEN2010]</span></a>.
-A sketch of a cross section for a typical wind turbine blade is shown in <a class="reference internal" href="#fig-mh104-draw"><span class="std std-numref">Fig. 53</span></a>.
+A sketch of a cross section for a typical wind turbine blade is shown in <a class="reference internal" href="#fig-mh104-draw"><span class="std std-numref">Fig. 54</span></a>.
 The airfoil is MH 104 (<a class="reference external" href="http://m-selig.ae.illinois.edu/ads/coord_database.html#M">http://m-selig.ae.illinois.edu/ads/coord_database.html#M</a>).
 In this example, the chord length <span class="math notranslate nohighlight">\(CL=1.9\)</span> m.
 The origin O is set to the point at 1/4 of the chord.
@@ -785,25 +790,25 @@ Complete input files can be found in <code class="docutils literal notranslate">
 <figure class="align-center" id="fig-mh1041">
 <a class="reference internal image-reference" href="../../../_images/examplemh1041.png"><img alt="../../../_images/examplemh1041.png" src="../../../_images/examplemh1041.png" style="width: 6.5in;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 54 </span><span class="caption-text"><em>Base point</em>s of the tube cross section.</span><a class="headerlink" href="#fig-mh1041" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Figure 55 </span><span class="caption-text"><em>Base point</em>s of the tube cross section.</span><a class="headerlink" href="#fig-mh1041" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-center" id="fig-mh1042">
 <a class="reference internal image-reference" href="../../../_images/examplemh1042.png"><img alt="../../../_images/examplemh1042.png" src="../../../_images/examplemh1042.png" style="width: 6.5in;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 55 </span><span class="caption-text"><em>Base line</em>s of the tube cross section.</span><a class="headerlink" href="#fig-mh1042" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Figure 56 </span><span class="caption-text"><em>Base line</em>s of the tube cross section.</span><a class="headerlink" href="#fig-mh1042" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-center" id="fig-mh1043">
 <a class="reference internal image-reference" href="../../../_images/examplemh1043.png"><img alt="../../../_images/examplemh1043.png" src="../../../_images/examplemh1043.png" style="width: 6.5in;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 56 </span><span class="caption-text"><em>Segment</em>s of the tube cross section.</span><a class="headerlink" href="#fig-mh1043" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Figure 57 </span><span class="caption-text"><em>Segment</em>s of the tube cross section.</span><a class="headerlink" href="#fig-mh1043" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-center" id="fig-mh104">
 <a class="reference internal image-reference" href="../../../_images/examplemh1044.png"><img alt="../../../_images/examplemh1044.png" src="../../../_images/examplemh1044.png" style="width: 6.5in;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 57 </span><span class="caption-text">Meshed cross section viewed in Gmsh.</span><a class="headerlink" href="#fig-mh104" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Figure 58 </span><span class="caption-text">Meshed cross section viewed in Gmsh.</span><a class="headerlink" href="#fig-mh104" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <table class="table" id="table-mh104-materials">
@@ -1209,12 +1214,12 @@ Complete input files can be found in <code class="docutils literal notranslate">
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The errors between the result and the reference are caused by the difference of modeling of the trailing edge. If reduce the trailing edge skin to a single thin layer, then the difference between the trailing edge shapes is minimized, and the two resulting stiffness matrices are basically the same, as shown in <a class="reference internal" href="#fig-mh104-comparison"><span class="std std-numref">Fig. 58</span></a>.</p>
+<p>The errors between the result and the reference are caused by the difference of modeling of the trailing edge. If reduce the trailing edge skin to a single thin layer, then the difference between the trailing edge shapes is minimized, and the two resulting stiffness matrices are basically the same, as shown in <a class="reference internal" href="#fig-mh104-comparison"><span class="std std-numref">Fig. 59</span></a>.</p>
 </div>
 <figure class="align-center" id="fig-mh104-comparison">
 <a class="reference internal image-reference" href="../../../_images/examplemh104_comparison.png"><img alt="../../../_images/examplemh104_comparison.png" src="../../../_images/examplemh104_comparison.png" style="width: 6in;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 58 </span><span class="caption-text">Comparison of stiffness matrices after modifying the trailing edge.</span><a class="headerlink" href="#fig-mh104-comparison" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Figure 59 </span><span class="caption-text">Comparison of stiffness matrices after modifying the trailing edge.</span><a class="headerlink" href="#fig-mh104-comparison" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>

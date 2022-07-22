@@ -188,6 +188,11 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../../ivabs/input_guide/intro_yaml.html">
+     A Brief Introduction to YAML
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../../ivabs/input_guide/input_design.html">
      Design Parameters
     </a>
@@ -792,7 +797,7 @@ title="Print to PDF"
   <section id="components">
 <span id="section-component"></span><h1>Components<a class="headerlink" href="#components" title="Permalink to this headline">#</a></h1>
 <div class="literal-block-wrapper docutils container" id="code-component">
-<div class="code-block-caption"><span class="caption-number">Listing 23 </span><span class="caption-text">Input syntax for components.</span><a class="headerlink" href="#code-component" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 26 </span><span class="caption-text">Input syntax for components.</span><a class="headerlink" href="#code-component" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;&quot;</span> <span class="na">type=</span><span class="s">&quot;&quot;</span> <span class="na">depend=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/component&gt;</span>
 </pre></div>
 </div>
@@ -811,29 +816,29 @@ title="Print to PDF"
 <h2>Laminate-type component<a class="headerlink" href="#laminate-type-component" title="Permalink to this headline">#</a></h2>
 <p>For a cross section in PreVABS, laminates are created as segments.
 A segment is a unique combination of a base line and a layup.
-Segments are connected through different ways as shown in <a class="reference internal" href="#fig-joints"><span class="std std-numref">Fig. 34</span></a>.
+Segments are connected through different ways as shown in <a class="reference internal" href="#fig-joints"><span class="std std-numref">Fig. 35</span></a>.
 According to this, segments can be grouped into components.
 The rule of thumb is: if two segments are connected in the first two ways (‘V1’ and ‘V2’), then they belong to one component; if they are connected as the third way (‘T’), then they should be put into different components, and component 2 will be created after the finish of component 1.</p>
 <figure class="align-center" id="fig-joints">
 <a class="reference internal image-reference" href="../../../_images/joints.png"><img alt="../../../_images/joints.png" src="../../../_images/joints.png" style="width: 6in;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 34 </span><span class="caption-text">Three types of connections that can be created in PreVABS.</span><a class="headerlink" href="#fig-joints" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Figure 35 </span><span class="caption-text">Three types of connections that can be created in PreVABS.</span><a class="headerlink" href="#fig-joints" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>A schematic plot of a segment is shown in <a class="reference internal" href="#fig-segment"><span class="std std-numref">Fig. 35</span></a>.
+<p>A schematic plot of a segment is shown in <a class="reference internal" href="#fig-segment"><span class="std std-numref">Fig. 36</span></a>.
 The base line provides a reference for the position and direction of the layup.
 Layers can be laid to the left or right of the base line.
 The direction is defined as one’s left or right, assuming one is walking along the direction of the base line.</p>
 <figure class="align-center" id="fig-segment">
 <a class="reference internal image-reference" href="../../../_images/segment.png"><img alt="../../../_images/segment.png" src="../../../_images/segment.png" style="width: 6in;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 35 </span><span class="caption-text">A typical segment in PreVABS and the relation between base line direction
+<p><span class="caption-number">Figure 36 </span><span class="caption-text">A typical segment in PreVABS and the relation between base line direction
 and layup direction.</span><a class="headerlink" href="#fig-segment" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>All segments definitions are stored in the main input file.
 The complete format will be discussed later since the overall configurations are also included in this file, which will be explained in Section: <a class="reference internal" href="pre_overall.html#section-overall"><span class="std std-ref">Other input settings</span></a>.
-The input syntax for laminate-type components are given in <a class="reference internal" href="#code-segments"><span class="std std-numref">Listing 24</span></a>.
+The input syntax for laminate-type components are given in <a class="reference internal" href="#code-segments"><span class="std std-numref">Listing 27</span></a>.
 Each component can have multiple segments.</p>
 <p>There are two ways to define segments.</p>
 <section id="definition-1-define-segments-individually">
@@ -841,7 +846,7 @@ Each component can have multiple segments.</p>
 <p>Use a base line and a single layup to create the segment.
 In this way, the layup covers the entire of the base line.
 Each <code class="docutils literal notranslate"><span class="pre">&lt;segment&gt;</span></code> element has one attribute, <code class="docutils literal notranslate"><span class="pre">name</span></code>, and two child elements, <code class="docutils literal notranslate"><span class="pre">&lt;baseline&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;layup&gt;</span></code>.
-The <code class="docutils literal notranslate"><span class="pre">&lt;layup&gt;</span></code> element has another attribute <code class="docutils literal notranslate"><span class="pre">direction</span></code> (see <a class="reference internal" href="#fig-segment"><span class="std std-numref">Fig. 35</span></a>).</p>
+The <code class="docutils literal notranslate"><span class="pre">&lt;layup&gt;</span></code> element has another attribute <code class="docutils literal notranslate"><span class="pre">direction</span></code> (see <a class="reference internal" href="#fig-segment"><span class="std std-numref">Fig. 36</span></a>).</p>
 <p>Joint of two connecting segments can be changed from ‘V2’ (default) to ‘V1’ by using a <code class="docutils literal notranslate"><span class="pre">&lt;joint&gt;</span></code> element.
 It requires the names of two segments, delimited by a comma (‘,’) and an attribute <code class="docutils literal notranslate"><span class="pre">style</span></code> specifying the joint type.</p>
 </section>
@@ -854,9 +859,9 @@ The beginning location must be smaller than the ending one.
 If the line is open, the location can only be a number between 0 and 1.
 If the line is closed, the location can be any number, even negative, as long as the length is not greater than 1.
 Then PreVABS will split the base line, combine layups and create segments automatically.</p>
-<p>An example is provided below (<a class="reference internal" href="#fig-param-layup-example-define"><span class="std std-numref">Fig 36</span></a>, <a class="reference internal" href="#fig-param-layup-example-plot"><span class="std std-numref">Fig 37</span></a>, <a class="reference internal" href="#code-param-layup-example"><span class="std std-numref">Listing 25</span></a>).</p>
+<p>An example is provided below (<a class="reference internal" href="#fig-param-layup-example-define"><span class="std std-numref">Fig 37</span></a>, <a class="reference internal" href="#fig-param-layup-example-plot"><span class="std std-numref">Fig 38</span></a>, <a class="reference internal" href="#code-param-layup-example"><span class="std std-numref">Listing 28</span></a>).</p>
 <div class="literal-block-wrapper docutils container" id="code-segments">
-<div class="code-block-caption"><span class="caption-number">Listing 24 </span><span class="caption-text">Input syntax for the laminate-type components.</span><a class="headerlink" href="#code-segments" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 27 </span><span class="caption-text">Input syntax for the laminate-type components.</span><a class="headerlink" href="#code-segments" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_surface&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 2</span>  <span class="nt">&lt;segment</span> <span class="na">name=</span><span class="s">&quot;sgm_1&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 3</span>    <span class="nt">&lt;baseline&gt;</span> baseline1 <span class="nt">&lt;/baseline&gt;</span>
@@ -900,17 +905,17 @@ Then PreVABS will split the base line, combine layups and create segments automa
 <figure class="align-center" id="id1">
 <span id="fig-param-layup-example-define"></span><a class="reference internal image-reference" href="../../../_images/param_layup_example_design.png"><img alt="../../../_images/param_layup_example_design.png" src="../../../_images/param_layup_example_design.png" style="width: 4in;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 36 </span><span class="caption-text">Segment layup range definition.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Figure 37 </span><span class="caption-text">Segment layup range definition.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-center" id="id2">
 <span id="fig-param-layup-example-plot"></span><a class="reference internal image-reference" href="../../../_images/param_layup_example_plot.png"><img alt="../../../_images/param_layup_example_plot.png" src="../../../_images/param_layup_example_plot.png" style="width: 3in;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 37 </span><span class="caption-text">Segments plot.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Figure 38 </span><span class="caption-text">Segments plot.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="literal-block-wrapper docutils container" id="id3">
-<span id="code-param-layup-example"></span><div class="code-block-caption"><span class="caption-number">Listing 25 </span><span class="caption-text">Example input.</span><a class="headerlink" href="#id3" title="Permalink to this code">#</a></div>
+<span id="code-param-layup-example"></span><div class="code-block-caption"><span class="caption-number">Listing 28 </span><span class="caption-text">Example input.</span><a class="headerlink" href="#id3" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
 <span class="linenos">2</span>  <span class="nt">&lt;segments&gt;</span>
 <span class="linenos">3</span>    <span class="nt">&lt;baseline&gt;</span> l <span class="nt">&lt;/baseline&gt;</span>
@@ -962,7 +967,7 @@ Then PreVABS will split the base line, combine layups and create segments automa
 <h2>Fill-type component<a class="headerlink" href="#fill-type-component" title="Permalink to this headline">#</a></h2>
 <p>Besides creating laminates, user can use one material to fill a region.
 A typical usage is a nose mass in an airfoil type cross section.
-A schematic plot is shown in <a class="reference internal" href="#fig-filling1"><span class="std std-numref">Fig. 38</span></a>.</p>
+A schematic plot is shown in <a class="reference internal" href="#fig-filling1"><span class="std std-numref">Fig. 39</span></a>.</p>
 <p>The key to this type of component is the indication of the fill region.
 There are two things to pay attention to.
 First, make sure that the boundary of the region is well-defined.
@@ -971,7 +976,7 @@ User can also create some extra base lines as new boundaries.
 Second, locate the region where the material will be filled into.
 Then can be done by using a point inside the region, or if there are extra base lines, user can indicate the fill side with respect to one of the lines, similar to defining layup side in a segment.</p>
 <p>Fill-type components are also defined in the main input file.
-A template is shown in <a class="reference internal" href="#code-fillings"><span class="std std-numref">Listing 26</span></a>.
+A template is shown in <a class="reference internal" href="#code-fillings"><span class="std std-numref">Listing 29</span></a>.
 A fill-type component is indicated by the attribute <code class="docutils literal notranslate"><span class="pre">type=&quot;fill&quot;</span></code>.
 A <code class="docutils literal notranslate"><span class="pre">&lt;material&gt;</span></code> child element is required.
 A <code class="docutils literal notranslate"><span class="pre">&lt;baseline&gt;</span></code> element is optional and is used to create extra boundaries.
@@ -980,12 +985,12 @@ A <code class="docutils literal notranslate"><span class="pre">&lt;location&gt;<
 <figure class="align-center" id="fig-filling1">
 <a class="reference internal image-reference" href="../../../_images/filling1.png"><img alt="../../../_images/filling1.png" src="../../../_images/filling1.png" style="width: 6in;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 38 </span><span class="caption-text">Example usage of a fill-type component as a nose mass in an airfoil
+<p><span class="caption-number">Figure 39 </span><span class="caption-text">Example usage of a fill-type component as a nose mass in an airfoil
 cross section.</span><a class="headerlink" href="#fig-filling1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="literal-block-wrapper docutils container" id="code-fillings">
-<div class="code-block-caption"><span class="caption-number">Listing 26 </span><span class="caption-text">Input syntax for the fill-type components.</span><a class="headerlink" href="#code-fillings" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 29 </span><span class="caption-text">Input syntax for the fill-type components.</span><a class="headerlink" href="#code-fillings" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_fill_1&quot;</span> <span class="na">type=</span><span class="s">&quot;fill&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 2</span>  <span class="nt">&lt;location&gt;</span> point_fill <span class="nt">&lt;/location&gt;</span>
 <span class="linenos"> 3</span>  <span class="nt">&lt;material&gt;</span> material1 <span class="nt">&lt;/material&gt;</span>
@@ -1019,21 +1024,21 @@ Hence, one or more points need to be specified as the ‘seed’ of local mesh s
 <p>The mesh size will vary gradually from the local to the global setting.
 Hence, if only one point is used, then the local mesh size will only affect a circular region.
 If multiple points are used, then lines will be created by connecting points seqentially and assigned the local mesh size as well.</p>
-<p>An example is provided below (<a class="reference internal" href="#fig-local-mesh-example-define"><span class="std std-numref">Fig 39</span></a>, <a class="reference internal" href="#fig-local-mesh-example-plot"><span class="std std-numref">Fig 40</span></a>, <a class="reference internal" href="#code-local-mesh-example"><span class="std std-numref">Listing 27</span></a>).</p>
+<p>An example is provided below (<a class="reference internal" href="#fig-local-mesh-example-define"><span class="std std-numref">Fig 40</span></a>, <a class="reference internal" href="#fig-local-mesh-example-plot"><span class="std std-numref">Fig 41</span></a>, <a class="reference internal" href="#code-local-mesh-example"><span class="std std-numref">Listing 30</span></a>).</p>
 <figure class="align-center" id="id4">
 <span id="fig-local-mesh-example-define"></span><a class="reference internal image-reference" href="../../../_images/local_mesh_define_mark.png"><img alt="../../../_images/local_mesh_define_mark.png" src="../../../_images/local_mesh_define_mark.png" style="width: 3in;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 39 </span><span class="caption-text">Local mesh definition.</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Figure 40 </span><span class="caption-text">Local mesh definition.</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-center" id="id5">
 <span id="fig-local-mesh-example-plot"></span><a class="reference internal image-reference" href="../../../_images/local_mesh.png"><img alt="../../../_images/local_mesh.png" src="../../../_images/local_mesh.png" style="width: 3in;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 40 </span><span class="caption-text">Local mesh plot.</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Figure 41 </span><span class="caption-text">Local mesh plot.</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="literal-block-wrapper docutils container" id="id6">
-<span id="code-local-mesh-example"></span><div class="code-block-caption"><span class="caption-number">Listing 27 </span><span class="caption-text">Example input.</span><a class="headerlink" href="#id6" title="Permalink to this code">#</a></div>
+<span id="code-local-mesh-example"></span><div class="code-block-caption"><span class="caption-number">Listing 30 </span><span class="caption-text">Example input.</span><a class="headerlink" href="#id6" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;filling 1&quot;</span> <span class="na">type=</span><span class="s">&quot;fill&quot;</span> <span class="na">depend=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 2</span>  <span class="nt">&lt;location&gt;</span> A <span class="nt">&lt;/location&gt;</span>
 <span class="linenos"> 3</span>  <span class="nt">&lt;material&gt;</span> material1 <span class="nt">&lt;/material&gt;</span>
@@ -1069,12 +1074,12 @@ If multiple points are used, then lines will be created by connecting points seq
 </section>
 <section id="components-dependency">
 <h2>Components dependency<a class="headerlink" href="#components-dependency" title="Permalink to this headline">#</a></h2>
-<p>If two components are connected in the ‘T’ type (<a class="reference internal" href="#fig-joints"><span class="std std-numref">Fig. 34</span></a>), then the order of creation of the two components must be specified.
+<p>If two components are connected in the ‘T’ type (<a class="reference internal" href="#fig-joints"><span class="std std-numref">Fig. 35</span></a>), then the order of creation of the two components must be specified.
 This is done by specifying the dependency.
 For the case shown in the figure, the creation of the thin vertical component (purple) is dependent on the creation of the thick horizontal component (blue).
 Hence, in the definition of the purple component, a <code class="docutils literal notranslate"><span class="pre">depend</span></code> attribute should be specified as shown below.</p>
 <div class="literal-block-wrapper docutils container" id="code-depend">
-<div class="code-block-caption"><span class="caption-number">Listing 28 </span><span class="caption-text">Dependency.</span><a class="headerlink" href="#code-depend" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 31 </span><span class="caption-text">Dependency.</span><a class="headerlink" href="#code-depend" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_blue&quot;</span> <span class="na">type=</span><span class="s">&quot;laminate&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/component&gt;</span>
 <span class="linenos">2</span><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;cmp_purple&quot;</span> <span class="na">type=</span><span class="s">&quot;laminate&quot;</span> <span class="na">depend=</span><span class="s">&quot;cmp_blue&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/component&gt;</span>
 </pre></div>
