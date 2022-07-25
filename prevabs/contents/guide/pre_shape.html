@@ -806,7 +806,7 @@ If none of those operations are needed, then those data also define the position
 <p>The file storing these data is a plain text file, with a file extension <code class="docutils literal notranslate"><span class="pre">.dat</span></code>.
 This block of data has three columns for the name and coordinate in the cross-sectional plane.</p>
 <div class="literal-block-wrapper docutils container" id="code-point-template">
-<div class="code-block-caption"><span class="caption-number">Listing 11 </span><span class="caption-text">Template for a separate file of points (point_list_file_name.dat)</span><a class="headerlink" href="#code-point-template" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 12 </span><span class="caption-text">Template for a separate file of points (point_list_file_name.dat)</span><a class="headerlink" href="#code-point-template" title="Permalink to this code">#</a></div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>label_1  z2  z3
 <span class="linenos">2</span>label_2  z2  z3
 <span class="linenos">3</span>label_3  z2  z3
@@ -838,7 +838,7 @@ Otherwise, points can be arranged arbitrarily.</p>
 <h3>Points defined in the XML file<a class="headerlink" href="#points-defined-in-the-xml-file" title="Permalink to this headline">#</a></h3>
 <p>In this method, all points are enclosed by the XML element <code class="docutils literal notranslate"><span class="pre">&lt;basepoints&gt;</span></code>.</p>
 <div class="literal-block-wrapper docutils container" id="code-basepoing-template">
-<div class="code-block-caption"><span class="caption-number">Listing 12 </span><span class="caption-text">Base points input syntax.</span><a class="headerlink" href="#code-basepoing-template" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 13 </span><span class="caption-text">Base points input syntax.</span><a class="headerlink" href="#code-basepoing-template" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;basepoints&gt;</span>
 <span class="linenos">2</span>  <span class="nt">&lt;include&gt;</span> point_list_file_name <span class="nt">&lt;/include&gt;</span>
 <span class="linenos">3</span>  <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;p1&quot;</span><span class="nt">&gt;</span> 0 0 <span class="nt">&lt;/point&gt;</span>
@@ -885,7 +885,7 @@ In PreVABS, all curved base lines are in the end converted into a chain of short
 User can provide those short straight lines directly for spline, arc and circle.
 Or, for arc or circle, user can use simple rules to draw the shape first and then PreVABS will discretize it.</p>
 <p>Data for base points and lines are stored in an XML formatted file.
-The general arrangement of data is shown in <a class="reference internal" href="#code-baseline-template"><span class="std std-numref">Listing 13</span></a>.
+The general arrangement of data is shown in <a class="reference internal" href="#code-baseline-template"><span class="std std-numref">Listing 14</span></a>.
 The root element is <code class="docutils literal notranslate"><span class="pre">&lt;baselines&gt;</span></code>.
 Under the root element, there is a sub-element <code class="docutils literal notranslate"><span class="pre">&lt;basepoints&gt;</span></code> storing all definitions of points.</p>
 <p>Each <code class="docutils literal notranslate"><span class="pre">&lt;baseline&gt;</span></code> element is a definition of a base line.
@@ -898,7 +898,7 @@ Inside the <code class="docutils literal notranslate"><span class="pre">baseline
 </figcaption>
 </figure>
 <div class="literal-block-wrapper docutils container" id="code-baseline-template">
-<div class="code-block-caption"><span class="caption-number">Listing 13 </span><span class="caption-text"><em>Base line</em> input syntax.</span><a class="headerlink" href="#code-baseline-template" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 14 </span><span class="caption-text"><em>Base line</em> input syntax.</span><a class="headerlink" href="#code-baseline-template" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;baselines&gt;</span>
 <span class="linenos">2</span>  <span class="nt">&lt;basepoints&gt;</span>
 <span class="linenos">3</span>    ...
@@ -943,7 +943,7 @@ The PreVABS-computed second key point will always be “not lower” than the us
 <p>Use <code class="docutils literal notranslate"><span class="pre">type=&quot;straight&quot;</span></code> for splines.</p>
 </div>
 <div class="literal-block-wrapper docutils container" id="code-baseline-straight">
-<div class="code-block-caption"><span class="caption-number">Listing 14 </span><span class="caption-text">Input syntax for the base lines shown in <a class="reference internal" href="#fig-baselinestraight"><span class="std std-numref">Fig. 30</span></a></span><a class="headerlink" href="#code-baseline-straight" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 15 </span><span class="caption-text">Input syntax for the base lines shown in <a class="reference internal" href="#fig-baselinestraight"><span class="std std-numref">Fig. 30</span></a></span><a class="headerlink" href="#code-baseline-straight" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;baselines&gt;</span>
 <span class="linenos"> 2</span>  ...
 <span class="linenos"> 3</span>  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;i&quot;</span> <span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
@@ -998,7 +998,7 @@ To uniquely define an arc, user needs to provide at least four of the following 
 </figcaption>
 </figure>
 <div class="literal-block-wrapper docutils container" id="code-baseline-arc">
-<div class="code-block-caption"><span class="caption-number">Listing 15 </span><span class="caption-text">Input syntax for the base lines shown in <a class="reference internal" href="#fig-baselinearc2"><span class="std std-numref">Fig. 32</span></a></span><a class="headerlink" href="#code-baseline-arc" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 16 </span><span class="caption-text">Input syntax for the base lines shown in <a class="reference internal" href="#fig-baselinearc2"><span class="std std-numref">Fig. 32</span></a></span><a class="headerlink" href="#code-baseline-arc" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>&lt;baselines&gt;
 <span class="linenos"> 2</span>  ...
 <span class="linenos"> 3</span>  &lt;baseline name=&quot;left&quot; type=&quot;arc&quot;&gt;
@@ -1041,14 +1041,14 @@ To uniquely define an arc, user needs to provide at least four of the following 
 center with radius or another point on the circle. The corresponding
 element tags are <code class="docutils literal notranslate"><span class="pre">&lt;center&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;radius&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;point&gt;</span></code>. A sample
 input file demonstrating the two methods is presented in
-<a class="reference internal" href="#code-baseline-circle"><span class="std std-numref">Listing 16</span></a>.</p>
+<a class="reference internal" href="#code-baseline-circle"><span class="std std-numref">Listing 17</span></a>.</p>
 <p>There are two ways of defining a circle.</p>
 <ul class="simple">
 <li><p>Use center and radius.</p></li>
 <li><p>Use center and a point on the circle.</p></li>
 </ul>
 <div class="literal-block-wrapper docutils container" id="code-baseline-circle">
-<div class="code-block-caption"><span class="caption-number">Listing 16 </span><span class="caption-text">Input syntax for the ‘circle’ type base line.</span><a class="headerlink" href="#code-baseline-circle" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 17 </span><span class="caption-text">Input syntax for the ‘circle’ type base line.</span><a class="headerlink" href="#code-baseline-circle" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;baselines&gt;</span>
 <span class="linenos"> 2</span>  ...
 <span class="linenos"> 3</span>  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;circle1&quot;</span> <span class="na">type=</span><span class="s">&quot;circle&quot;</span><span class="nt">&gt;</span>

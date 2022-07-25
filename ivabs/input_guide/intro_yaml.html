@@ -660,12 +660,48 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-syntax">
+   Basic syntax
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#collections-and-structures">
+     Collections and structures
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scalars">
+     Scalars
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -677,6 +713,31 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-syntax">
+   Basic syntax
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#collections-and-structures">
+     Collections and structures
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scalars">
+     Scalars
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -686,11 +747,64 @@ title="Print to PDF"
                 
   <section id="a-brief-introduction-to-yaml">
 <span id="section-yaml"></span><h1>A Brief Introduction to YAML<a class="headerlink" href="#a-brief-introduction-to-yaml" title="Permalink to this headline">#</a></h1>
-<p>More about YAML can be found from:</p>
+<p>There are many features and functionalities of YAML.
+iVABS only use the most basic ones.
+More about YAML can be found from:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://yaml.org/spec/1.2.2/#chapter-2-language-overview">https://yaml.org/spec/1.2.2/#chapter-2-language-overview</a></p></li>
 <li><p><a class="reference external" href="https://www.tutorialspoint.com/yaml/yaml_basics.htm">https://www.tutorialspoint.com/yaml/yaml_basics.htm</a></p></li>
 </ul>
+<section id="basic-syntax">
+<span id="section-yaml-basic"></span><h2>Basic syntax<a class="headerlink" href="#basic-syntax" title="Permalink to this headline">#</a></h2>
+<section id="collections-and-structures">
+<span id="section-yaml-basic-collections"></span><h3>Collections and structures<a class="headerlink" href="#collections-and-structures" title="Permalink to this headline">#</a></h3>
+<p>Mappings use a colon and space (<code class="docutils literal notranslate"><span class="pre">:</span></code>) to mark each key/value pair:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">key1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value1</span><span class="w"></span>
+<span class="nt">key2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value2</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Supported value types are number, string, and boolean.
+Numbers can be integers or real numbers.
+Strings should be put in double quotes (<code class="docutils literal notranslate"><span class="pre">&quot;abc&quot;</span></code>).
+Booleans can be <code class="docutils literal notranslate"><span class="pre">true</span></code>/<code class="docutils literal notranslate"><span class="pre">false</span></code>, <code class="docutils literal notranslate"><span class="pre">yes</span></code>/<code class="docutils literal notranslate"><span class="pre">no</span></code>, or <code class="docutils literal notranslate"><span class="pre">on</span></code>/<code class="docutils literal notranslate"><span class="pre">off</span></code>.</p>
+<p>Sequences indicate each entry with a dash and space (<code class="docutils literal notranslate"><span class="pre">-</span></code>):</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value1</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value2</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Sequences can also be indicated using square brackets and commas:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">[</span><span class="nv">value1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">value2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">...</span><span class="p p-Indicator">]</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Indentation of whitespace is used to denote structure.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">key</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">subkey1</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">subsubkey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subsubvalue</span><span class="w"></span>
+<span class="w">  </span><span class="nt">subkey2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subvalue</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Mappings and sequences can be mixed.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">key</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value1</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value2</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">subkey</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">subvalue1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">subvalue2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">...</span><span class="p p-Indicator">]</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Comments begin with a hash tag (<code class="docutils literal notranslate"><span class="pre">#</span></code>).</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># A line of coment.</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="scalars">
+<span id="section-yaml-basic-scalars"></span><h3>Scalars<a class="headerlink" href="#scalars" title="Permalink to this headline">#</a></h3>
+<p>Literal blocks are indicated by a vertical bar (<code class="docutils literal notranslate"><span class="pre">|</span></code>):</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">  </span><span class="no">Any characters can be placed here.</span><span class="w"></span>
+<span class="w">  </span><span class="no">Line breaks will be preserved.</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
 </section>
 
 

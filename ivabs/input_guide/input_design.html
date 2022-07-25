@@ -65,6 +65,7 @@ var addUtterances = () => {
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://wenbinyugroup.github.io/ivabs/ivabs/input_guide/input_design.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -810,10 +811,6 @@ The basic syntax is shown in <a class="reference internal" href="#lst-input-desi
 </pre></div>
 </div>
 </div>
-<p>Supported value types are number, string, and boolean.
-Numbers can be integers or real numbers.
-Strings should be put in double quotes (<code class="docutils literal notranslate"><span class="pre">&quot;abc&quot;</span></code>).
-Booleans can be <code class="docutils literal notranslate"><span class="pre">true</span></code>/<code class="docutils literal notranslate"><span class="pre">false</span></code>, <code class="docutils literal notranslate"><span class="pre">yes</span></code>/<code class="docutils literal notranslate"><span class="pre">no</span></code>, or <code class="docutils literal notranslate"><span class="pre">on</span></code>/<code class="docutils literal notranslate"><span class="pre">off</span></code>.</p>
 <p>Parameter list can be used to specify a constant value for the whole structure.
 These parameters can also be varied by an optimization method.
 This is done by directly using the parameter name as the design variable name.</p>
@@ -844,6 +841,62 @@ Function (<code class="docutils literal notranslate"><span class="pre">function<
 <p>Other specifications depend on the type of function selected.</p>
 <section id="interpolation-function">
 <h4>Interpolation function<a class="headerlink" href="#interpolation-function" title="Permalink to this headline">#</a></h4>
+<p>This option (<code class="docutils literal notranslate"><span class="pre">function:</span> <span class="pre">&quot;interpolation&quot;</span></code>) creates one or multiple distribution functions by interpolating a table of data.</p>
+<div class="literal-block-wrapper docutils container" id="lst-input-design-param-distr-interp">
+<div class="code-block-caption"><span class="caption-number">Listing 4 </span><span class="caption-text">Interpolation function</span><a class="headerlink" href="#lst-input-design-param-distr-interp" title="Permalink to this code">#</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">distributions</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;...&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">function</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;interpolation&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;linear&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">xnames</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;x&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">ynames</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;a&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;b&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;c&quot;</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">    </span><span class="nt">ytypes</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;float&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;int&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;string&quot;</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">    </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">      </span><span class="no">x1, a1, b1, c1</span><span class="w"></span>
+<span class="w">      </span><span class="no">x2, a2, b2, c2</span><span class="w"></span>
+<span class="w">      </span><span class="no">...</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p>This function supports two different kinds, indicated by the keyword <code class="docutils literal notranslate"><span class="pre">kind</span></code>: linear (<code class="docutils literal notranslate"><span class="pre">linear</span></code>) and previous (<code class="docutils literal notranslate"><span class="pre">previous</span></code>).
+Suppose we want to get the value y at x which locates between x1 and x2.
+Given two data (x1, y1) and (x2, y2), <code class="docutils literal notranslate"><span class="pre">linear</span></code> kind function means that y is calculated by linearly interpolating these two data.
+<code class="docutils literal notranslate"><span class="pre">previous</span></code> kind function uses the value at the location no greater than x (y=y1 in this case).</p>
+<p>The set of data is specified by multiple keywords.
+<code class="docutils literal notranslate"><span class="pre">xnames</span></code> and <code class="docutils literal notranslate"><span class="pre">ynames</span></code> are used to specify the list of names or labels of the independent and dependent variables, respectively.
+Generally, labels should be placed in square brackets, delimited by commas.
+If there is only one label, the square brackets can be omitted.
+Currently iVABS only create scalar functions with a single output.
+Hence, the labels in <code class="docutils literal notranslate"><span class="pre">ynames</span></code> indicates all the functions that will be created.</p>
+<p><code class="docutils literal notranslate"><span class="pre">data</span></code> is used to place the actual data that will be interpolated.
+This is a literal block indicated by the vertical bar (see Section <a class="reference internal" href="intro_yaml.html#section-yaml-basic-scalars"><span class="std std-ref">Scalars</span></a>).
+Values are arranged in a tabular form.
+Each row is an entry of the data and values are separated by commas.
+If <code class="docutils literal notranslate"><span class="pre">kind</span></code> is <code class="docutils literal notranslate"><span class="pre">linear</span></code>, there should be as least two entries.
+If <code class="docutils literal notranslate"><span class="pre">kind</span></code> is <code class="docutils literal notranslate"><span class="pre">previous</span></code>, a single entry is acceptable.
+Each column is either an independent or dependent variable.
+In the most general case, the first <span class="math notranslate nohighlight">\(n\)</span> columns correspond to the <span class="math notranslate nohighlight">\(n\)</span> <code class="docutils literal notranslate"><span class="pre">xnames</span></code>.
+Then the next <span class="math notranslate nohighlight">\(m\)</span> columns correspond to the <span class="math notranslate nohighlight">\(m\)</span> <code class="docutils literal notranslate"><span class="pre">ynames</span></code>.
+Hence, the number of columns should be the same as the number of labels in both <code class="docutils literal notranslate"><span class="pre">xnames</span></code> and <code class="docutils literal notranslate"><span class="pre">ynames</span></code>.</p>
+<p>Different types of values can be specified using the keyword <code class="docutils literal notranslate"><span class="pre">ytypes</span></code>.
+By default, all values are treated as real numbers (<code class="docutils literal notranslate"><span class="pre">float</span></code>).
+Other supported types are integer numbers (<code class="docutils literal notranslate"><span class="pre">int</span></code>) and strings (<code class="docutils literal notranslate"><span class="pre">string</span></code>).
+Different parameters (<code class="docutils literal notranslate"><span class="pre">ynames</span></code>) can have the same or different types.
+If <code class="docutils literal notranslate"><span class="pre">ytypes</span></code> is a string, then the type will be applied to all parameters listed in <code class="docutils literal notranslate"><span class="pre">ynames</span></code>.
+Otherwise, <code class="docutils literal notranslate"><span class="pre">ytypes</span></code> must have the same size as <code class="docutils literal notranslate"><span class="pre">ynames</span></code>.</p>
+<p>All quantities in the data block can be marked as design variables that will be changed later by Dakota.
+The design variable name is prepended to the value followed by a colon:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">ynames</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;a&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;b&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;c&quot;</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">  </span><span class="no">x1, dv2: a1, dv3: b1, c1</span><span class="w"></span>
+<span class="w">  </span><span class="no">dv1: x2, a2, dv4: b2, c2</span><span class="w"></span>
+<span class="w">  </span><span class="no">...</span><span class="w"></span>
+</pre></div>
+</div>
+<p>In this case, “dv1” to “dv4” are four design variables used by Dakota.
+During any iterative process (parametric study, optimization, etc.), values marked by the design variable names will be substituted by new values generated in the current iteration.
+It is acceptable that a quantity is marked by a label but not used in Dakota.
+In other words, values after the colon can be treated as the default ones.</p>
 </section>
 </section>
 </section>
