@@ -660,12 +660,51 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#method">
+   Method
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables">
+   Variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#responses">
+   Responses
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interface">
+   Interface
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -677,6 +716,34 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#method">
+   Method
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables">
+   Variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#responses">
+   Responses
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interface">
+   Interface
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -686,6 +753,180 @@ title="Print to PDF"
                 
   <section id="design-study">
 <span id="section-input-guide-study"></span><h1>Design Study<a class="headerlink" href="#design-study" title="Permalink to this headline">#</a></h1>
+<p>This block specifies the actual study that is going to be carried out, e.g., parametric study or optimization.
+iVABS inherits most of the keywords and layout of Dakota.
+Users can find more detailed guide from Dakota’s manual.
+Here only the differences are explained.
+The overall layout is shown in <a class="reference internal" href="#lst-input-study-layout"><span class="std std-numref">Listing 5</span></a>.</p>
+<div class="literal-block-wrapper docutils container" id="lst-input-study-layout">
+<div class="code-block-caption"><span class="caption-number">Listing 5 </span><span class="caption-text">Layout of the study input block</span><a class="headerlink" href="#lst-input-study-layout" title="Permalink to this code">#</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">study</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">method</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+<span class="w">  </span><span class="nt">variables</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+<span class="w">  </span><span class="nt">responses</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+<span class="w">  </span><span class="nt">interface</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p>Overall, same as Dakota, specifications are grouped into blocks.
+The four important ones are method, variables, responses, and interface.</p>
+<section id="method">
+<h2>Method<a class="headerlink" href="#method" title="Permalink to this headline">#</a></h2>
+<p>This blocks specifies the configurations for the study method.
+The structure is the same as Dakota with the syntax as the only differece.
+An example is given below comparing the different formats.</p>
+<p>For example, to do 10 random sampling in the design space using the LHS method, the input using Dakota format is shown in <a class="reference internal" href="#lst-input-study-method-dakota"><span class="std std-numref">Listing 6</span></a> while the one using iVABS format is shown in <a class="reference internal" href="#lst-input-study-method-ivabs"><span class="std std-numref">Listing 7</span></a>.</p>
+<div class="literal-block-wrapper docutils container" id="lst-input-study-method-dakota">
+<div class="code-block-caption"><span class="caption-number">Listing 6 </span><span class="caption-text">Dakota input for sampling</span><a class="headerlink" href="#lst-input-study-method-dakota" title="Permalink to this code">#</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">method</span>
+  <span class="n">sampling</span>
+    <span class="n">sampling_type</span>
+      <span class="n">lhs</span>
+    <span class="n">samples</span> <span class="o">=</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="lst-input-study-method-ivabs">
+<div class="code-block-caption"><span class="caption-number">Listing 7 </span><span class="caption-text">iVABS input for sampling</span><a class="headerlink" href="#lst-input-study-method-ivabs" title="Permalink to this code">#</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">method</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">sampling</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">sample_type</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">lhs</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">samples</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">#</a></h2>
+<p>This block specifies the design variables used in the study.
+The syntax of this block has the most difference from Dakota.
+Instead of a hierarchical layout of keywords, iVABS uses a CSV style arrangement of inputs.
+The general syntax is shown in <a class="reference internal" href="#lst-input-study-variables"><span class="std std-numref">Listing 8</span></a>.</p>
+<div class="literal-block-wrapper docutils container" id="lst-input-study-variables">
+<div class="code-block-caption"><span class="caption-number">Listing 8 </span><span class="caption-text">Sample input for the variables block</span><a class="headerlink" href="#lst-input-study-variables" title="Permalink to this code">#</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">variables</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">    </span><span class="no">dv1, design, continuous, 0:1</span><span class="w"></span>
+<span class="w">    </span><span class="no">dv2, design, discrete, range, 1:9</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p>All specifications of design variables are placed under the keyword <code class="docutils literal notranslate"><span class="pre">data</span></code> using the YAML literal block (<a class="reference internal" href="intro_yaml.html#section-yaml-basic-scalars"><span class="std std-ref">Scalars</span></a>).
+Each row is a design variable entry starting by the <em>name</em>.
+Specifications for a design variable includes <em>type</em>, <em>domain</em>, <em>space</em>, <em>class</em>, and other arguments.
+<em>Name</em>, <em>type</em>, and <em>domain</em> are required for every design variable and the rest specifications depend on the choice of <em>domain</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nb">type</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">domain</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">args</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;&gt;</span></code> means a placeholder in this guide.
+It should be replaced with the actual keyword or argument in your input.</p>
+</div>
+<p><em>Type</em> can be <code class="docutils literal notranslate"><span class="pre">design</span></code> or <code class="docutils literal notranslate"><span class="pre">state</span></code>.
+<em>Domain</em> can be <code class="docutils literal notranslate"><span class="pre">continuous</span></code> or <code class="docutils literal notranslate"><span class="pre">discrete</span></code>.</p>
+<p>If <em>domain</em> is <code class="docutils literal notranslate"><span class="pre">continuous</span></code>, the last argument is the pair of numbers specifying the lower bound (<code class="docutils literal notranslate"><span class="pre">lb</span></code>) and upper bound (<code class="docutils literal notranslate"><span class="pre">ub</span></code>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">design</span><span class="p">,</span> <span class="n">continous</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">lb</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">ub</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>If <em>domain</em> is <code class="docutils literal notranslate"><span class="pre">discrete</span></code>, the next argument specifies the <em>space</em> of the design variable, which can be <code class="docutils literal notranslate"><span class="pre">range</span></code> or <code class="docutils literal notranslate"><span class="pre">set</span></code>.
+If <em>space</em> is <code class="docutils literal notranslate"><span class="pre">range</span></code>, the last argument needed is the pair of of numbers specifying the lower and upper bounds:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">design</span><span class="p">,</span> <span class="n">discrete</span><span class="p">,</span> <span class="nb">range</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">lb</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">ub</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>If <em>space</em> is <code class="docutils literal notranslate"><span class="pre">set</span></code>, the next argument specifies the <em>class</em> of the design variable, which can be <code class="docutils literal notranslate"><span class="pre">integer</span></code>, <code class="docutils literal notranslate"><span class="pre">real</span></code>, or <code class="docutils literal notranslate"><span class="pre">string</span></code>.
+Then any number of values can follow <em>class</em>, specifying all options in the <code class="docutils literal notranslate"><span class="pre">set</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">design</span><span class="p">,</span> <span class="n">discrete</span><span class="p">,</span> <span class="nb">set</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">value1</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">value2</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">value3</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">...</span>
+</pre></div>
+</div>
+<p>Comments are indicated by a starting hash tag (<code class="docutils literal notranslate"><span class="pre">#</span></code>).
+Commented lines are ignored by iVABS.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">variables</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">    </span><span class="no">dv1, design, continuous, 0:1</span><span class="w"></span>
+<span class="w">    </span><span class="no"># dv2, design, discrete, range, 1:9</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="responses">
+<h2>Responses<a class="headerlink" href="#responses" title="Permalink to this headline">#</a></h2>
+<p>This block specifies the output needed in a design study, for instance simple responses for parametric studies and objectives and constraints for optimization.
+Similar to the previous block for design variables, responses are also specified in a tabular list.
+The general syntax is shown in <a class="reference internal" href="#lst-input-study-responses"><span class="std std-numref">Listing 9</span></a>.</p>
+<div class="literal-block-wrapper docutils container" id="lst-input-study-responses">
+<div class="code-block-caption"><span class="caption-number">Listing 9 </span><span class="caption-text">Sample input for the responses block</span><a class="headerlink" href="#lst-input-study-responses" title="Permalink to this code">#</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">responses</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">    </span><span class="no">response1, objective, min, 0.5</span><span class="w"></span>
+<span class="w">    </span><span class="no">response2, objective, min, 0.8</span><span class="w"></span>
+<span class="w">    </span><span class="no">response3, inequality_constraint, 1:1e12</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p>All specifications of responses are placed under the keyword <code class="docutils literal notranslate"><span class="pre">data</span></code> using the YAML literal block (<a class="reference internal" href="intro_yaml.html#section-yaml-basic-scalars"><span class="std std-ref">Scalars</span></a>).
+Each row is a response entry starting by the <em>name</em>.
+Specifications for a response includes <em>type</em> and other arguments.
+<em>Name</em> and <em>type</em> are required for every response and the rest specifications depend on the choice of <em>type</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nb">type</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">args</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><em>Type</em> can be <code class="docutils literal notranslate"><span class="pre">response</span></code>, <code class="docutils literal notranslate"><span class="pre">objective</span></code> or <code class="docutils literal notranslate"><span class="pre">inequality_constraint</span></code>.</p>
+<p>If <em>type</em> is <code class="docutils literal notranslate"><span class="pre">response</span></code>, no more arguments needed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">response</span>
+</pre></div>
+</div>
+<p>If <em>type</em> is <code class="docutils literal notranslate"><span class="pre">objective</span></code>, the rest arguments specify the <em>sense</em> and <em>weight</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">objective</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">sense</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">weight</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><em>Sense</em> can be <code class="docutils literal notranslate"><span class="pre">min</span></code> or <code class="docutils literal notranslate"><span class="pre">max</span></code>.
+<em>Weight</em> is a number specifying the weighting factor for the current objective function.</p>
+<p>If <em>type</em> is <code class="docutils literal notranslate"><span class="pre">inequality_constraint</span></code>, the last argument is a pair of numbers specifying the lower bound (<code class="docutils literal notranslate"><span class="pre">lb</span></code>) and upper bound (<code class="docutils literal notranslate"><span class="pre">ub</span></code>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">inequality_constraint</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">lb</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">ub</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Comments are indicated by a starting hash tag (<code class="docutils literal notranslate"><span class="pre">#</span></code>).
+Commented lines are ignored by iVABS.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">responses</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">    </span><span class="no">response1, objective, min, 0.5</span><span class="w"></span>
+<span class="w">    </span><span class="no"># response2, objective, min, 0.8</span><span class="w"></span>
+<span class="w">    </span><span class="no">response3, inequality_constraint, 1:1e12</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="interface">
+<h2>Interface<a class="headerlink" href="#interface" title="Permalink to this headline">#</a></h2>
+<p>Since iVABS is mainly integrated using Python, the analysis driver used by Dakota is “fork”.
+All configurations below this keyword are supported except <code class="docutils literal notranslate"><span class="pre">link_files</span></code> and <code class="docutils literal notranslate"><span class="pre">copy_files</span></code> which are used in Linux and Windows, respectively.
+To simplify the input, a new keyword <code class="docutils literal notranslate"><span class="pre">required_files</span></code> is used to replace these two.</p>
+<p>A typical example of this block is shown in <a class="reference internal" href="#lst-input-study-interface"><span class="std std-numref">Listing 10</span></a></p>
+<div class="literal-block-wrapper docutils container" id="lst-input-study-interface">
+<div class="code-block-caption"><span class="caption-number">Listing 10 </span><span class="caption-text">Sample input for the interface block</span><a class="headerlink" href="#lst-input-study-interface" title="Permalink to this code">#</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">interface</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">fork</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">parameters_file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;params.in&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">results_file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;results.out&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">file_save</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span><span class="w"></span>
+<span class="w">    </span><span class="nt">work_directory</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">directory_tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span><span class="w"></span>
+<span class="w">      </span><span class="nt">directory_save</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on</span><span class="w"></span>
+<span class="w">  </span><span class="nt">required_files</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;airfoil.dat&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;custom/*&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">asynchronous</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">evaluation_concurrency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span><span class="w"></span>
+<span class="w">  </span><span class="nt">failure_capture</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">recover</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">-1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">-1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">-1</span><span class="p p-Indicator">]</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</section>
 </section>
 
 
