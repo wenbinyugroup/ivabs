@@ -1,10 +1,12 @@
+.. highlight:: yaml
+
 .. _section-input_guide_study:
 
 Design Study
 ============
 
 This block specifies the actual study that is going to be carried out, e.g., parametric study or optimization.
-iVABS inherits most of the keywords and layout of Dakota.
+iVABS inherits most of the keywords and layout of Dakota input.
 Users can find more detailed guide from Dakota's manual.
 Here only the differences are explained.
 The overall layout is shown in :numref:`Listing %s <lst-input_study_layout>`.
