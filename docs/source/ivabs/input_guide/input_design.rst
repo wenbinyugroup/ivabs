@@ -1,3 +1,5 @@
+.. highlight:: yaml
+
 .. _section-input_guide_design:
 
 Design Parameters

@@ -39,6 +39,7 @@ Contents
     ivabs/main_input
     ivabs/parameterization
     ivabs/cs_template
+    ivabs/analysis_step_script
     ivabs/ref_main
 
 

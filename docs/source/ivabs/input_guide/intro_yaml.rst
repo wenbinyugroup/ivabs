@@ -1,3 +1,5 @@
+.. highlight:: yaml
+
 .. _section-yaml:
 
 A Brief Introduction to YAML
