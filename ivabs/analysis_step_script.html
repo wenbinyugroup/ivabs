@@ -665,12 +665,51 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-s-the-purpose-of-this">
+   What’s the purpose of this?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-prepare-the-custom-scripts">
+   How to prepare the custom scripts?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-include-the-custom-scripts-in-the-main-input-file">
+   How to include the custom scripts in the main input file?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples">
+   Examples
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -682,6 +721,34 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-s-the-purpose-of-this">
+   What’s the purpose of this?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-prepare-the-custom-scripts">
+   How to prepare the custom scripts?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-include-the-custom-scripts-in-the-main-input-file">
+   How to include the custom scripts in the main input file?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples">
+   Examples
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -691,14 +758,42 @@ title="Print to PDF"
                 
   <section id="custom-python-script-for-analysis">
 <span id="section-guide-analysis-script"></span><h1>Custom Python Script for Analysis<a class="headerlink" href="#custom-python-script-for-analysis" title="Permalink to this headline">#</a></h1>
-<p>All functions should be defined in the following way to be correctly pluged in the analysis workflow in iVABS.</p>
+<section id="what-s-the-purpose-of-this">
+<h2>What’s the purpose of this?<a class="headerlink" href="#what-s-the-purpose-of-this" title="Permalink to this headline">#</a></h2>
+<p>The custom scripts provide users the flexibility to do calculations for special purposes that cannot be achieved using built-in functionalities in iVABS.
+Typical usages of this include the pre- and post-processing of inputs and outputs of an analysis step.</p>
+</section>
+<section id="how-to-prepare-the-custom-scripts">
+<h2>How to prepare the custom scripts?<a class="headerlink" href="#how-to-prepare-the-custom-scripts" title="Permalink to this headline">#</a></h2>
+<p>The script file can be stored anywhere in the system.
+There can be multiple functions in the file and they can be named arbitrarily.
+However, there are some rules that users should follow when writing the functions so that they can be correctly called in the analysis workflow in iVABS.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These rules only apply to the functions that will be directly linked with iVABS.
+Users can still write functions freely if they are used only by other functions in the custom script, instead of iVABS.</p>
+</div>
+<p>The functions must have the following input list (names of the input variabels can be arbitrary):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_function</span><span class="p">(</span><span class="n">ivabs_data</span><span class="p">,</span> <span class="n">structure_name</span><span class="p">,</span> <span class="n">logger</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 
     <span class="o">...</span>
-
-    <span class="k">return</span>
 </pre></div>
 </div>
+<p>From the first input variable to the last:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ivabs_data</span></code>: The core data used by iVABS.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">structure_name</span></code>: The structure or cross-section name of the current analysis step.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logger</span></code>: The logger object for generating logging information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*args</span></code>: Extra positional arguments provided by the user in the main input file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>: Extra keyword arguments provided by the user in the main input file.</p></li>
+</ul>
+</section>
+<section id="how-to-include-the-custom-scripts-in-the-main-input-file">
+<h2>How to include the custom scripts in the main input file?<a class="headerlink" href="#how-to-include-the-custom-scripts-in-the-main-input-file" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h2>
+</section>
 </section>
 
 
