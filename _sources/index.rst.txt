@@ -39,7 +39,9 @@ Contents
     ivabs/main_input
     ivabs/parameterization
     ivabs/cs_template
+    ivabs/beam_properties
     ivabs/analysis_step_script
+    ivabs/extensions
     ivabs/ref_main
 
 
