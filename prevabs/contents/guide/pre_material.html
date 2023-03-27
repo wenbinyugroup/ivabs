@@ -1,0 +1,1182 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Materials and layups &#8212; iVABS 0.8 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'prevabs/contents/guide/pre_material';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Components" href="pre_component.html" />
+    <link rel="prev" title="Geometry and shapes" href="pre_shape.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../main_ivabs.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">iVABS 0.8 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Start</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../install/index.html">Download &amp; Installation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../install/windows.html">Installation on Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install/linux.html">Installation on Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install/python_setup.html">Setup Python Environment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ivabs/getstart.html">Quick Start</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../tutorials/index.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/run_one_analysis.html">Carry out a single cross-sectional analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/opt_spar_web.html">Optimization of spar web locations for desired properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/opt_spar_layup.html">Optimize the spar layup of a cross-section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/opt_cs_init_twist.html">Optimize the cross-section considering beam initial twist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/prepare_cs_template.html">Prepare a cross-sectional design template</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv.html">Optimize a single cross-section (general)</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/running.html">Running of The Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/problem.html">Problem Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/cs_param.html">Cross-sectional Parameterization and Beam Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/opt.html">Optimization Formulation</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs.html">Preparation of Input Files</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_cs_template.html">Cross-section Main Input Template (<code class="docutils literal notranslate"><span class="pre">uh60a_section.xml.tmp</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_cs_materials.html">Material Database (<code class="docutils literal notranslate"><span class="pre">material_database.xml</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_cs_airfoil.html">Cross-section Airfoil Data (<code class="docutils literal notranslate"><span class="pre">sc1095.dat</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_interface.html">Dakota Interface Scripts (<code class="docutils literal notranslate"><span class="pre">interface.py</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_arguments.html">Interface Arguments (<code class="docutils literal notranslate"><span class="pre">interface_args.json</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_data_process.html">Data Processing Functions (<code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_dakota.html">Dakota Input File (<code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.dakota</span></code>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../examples/index.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/example_quickstart_param_study.html">Parameter study of a single cross-section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/example_uh60_sopt_stf.html">Single objective optimization of multiple cross-sections to match target beam properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/example_uh60_mopt_stf.html">Multiple objective optimization of multiple cross-sections to match target beam properties</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Guide</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../guide/index.html">Guide to Main Input File</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../guide/intro_yaml.html">A Brief Introduction to YAML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../guide/input_design.html">Design Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../guide/input_analysis.html">Analysis Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../guide/input_study.html">Design Study</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ivabs/parameterization.html">Parameterization of Composite Slender Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/custom_script.html">Custom script analysis step</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../extensions/index.html">Extensions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/galaxy_rcas.html">Link to Galaxy/RCAS</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../sg_templates/index.html">Cross-sectional Design Templates</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../sg_templates/airfoil_gbox_uni.html">Airfoil Box-spar Uniform</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/beam_properties.html">Beam Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/input_keywords_main.html">Main Input Keywords</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html">PreVABS Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../install.html">Download and Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../run.html">How to Run PreVABS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../guide.html">Guide for Preparing Input Files</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pre_coordinate.html">Coordinate systems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pre_shape.html">Geometry and shapes</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Materials and layups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pre_component.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pre_recover.html">Specifications for recovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pre_overall.html">Other input settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_box.html">Box beam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_pipe.html">Pipe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_tube.html">Circular tube</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_channel.html">Channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_airfoil.html">Airfoil (MH-104)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_airfoil_recover.html">Airfoil (Recover)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_uh60a_fi.html">UH-60A (Initial Failure Analysis)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html">Change log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../xml.html">Introduction to XML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/prevabs/contents/guide/pre_material.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Materials and layups</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#material">Material</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elastic-properties">Elastic properties</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strength-properties">Strength properties</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#failure-criteria">Failure criteria</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lamina">Lamina</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#layups">Layups</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explicit-list">Explicit list</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stacking-sequence-code">Stacking sequence code</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <blockquote>
+<div></div></blockquote>
+<section id="materials-and-layups">
+<span id="section-material-layup"></span><h1><a class="toc-backref" href="#id4" role="doc-backlink">Materials and layups</a><a class="headerlink" href="#materials-and-layups" title="Permalink to this heading">#</a></h1>
+<p>PreVABS uses the keyword <code class="docutils literal notranslate"><span class="pre">material</span></code> for the physical properties attached to any materials, while <code class="docutils literal notranslate"><span class="pre">lamina</span></code> for material plus thickness, which in a sense is fixed by manufacturers.
+This can be thought as the basic commercially available “material”, such as a composite preprag.
+A layer is a stack of laminae with the same fiber orientation.
+The thickness of a layer can only be a multiplier of the lamina thickness.
+Layup is several layers stacked together in a specific order.
+This relationship is illustrated in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 38</span></a>.
+More details can be found below.</p>
+<figure class="align-center" id="fig-layup">
+<a class="reference internal image-reference" href="../../../_images/layup.png"><img alt="../../../_images/layup.png" src="../../../_images/layup.png" style="width: 6in;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 38 </span><span class="caption-text">Relationship between material, lamina, layer and layup.</span><a class="headerlink" href="#fig-layup" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#materials-and-layups" id="id4">Materials and layups</a></p>
+<ul>
+<li><p><a class="reference internal" href="#material" id="id5">Material</a></p>
+<ul>
+<li><p><a class="reference internal" href="#elastic-properties" id="id6">Elastic properties</a></p></li>
+<li><p><a class="reference internal" href="#strength-properties" id="id7">Strength properties</a></p></li>
+<li><p><a class="reference internal" href="#failure-criteria" id="id8">Failure criteria</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#lamina" id="id9">Lamina</a></p></li>
+<li><p><a class="reference internal" href="#layups" id="id10">Layups</a></p>
+<ul>
+<li><p><a class="reference internal" href="#explicit-list" id="id11">Explicit list</a></p></li>
+<li><p><a class="reference internal" href="#stacking-sequence-code" id="id12">Stacking sequence code</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="material">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Material</a><a class="headerlink" href="#material" title="Permalink to this heading">#</a></h2>
+<p>Both materials and laminae are stored in one XML file, under the single root element <code class="docutils literal notranslate"><span class="pre">&lt;materials&gt;</span></code>.
+A template of this file is shown in <a class="reference internal" href="#code-material-temp"><span class="std std-numref">Listing 43</span></a>.
+Each material must have a name and type. Under each <code class="docutils literal notranslate"><span class="pre">&lt;material&gt;</span></code> element, there are a <code class="docutils literal notranslate"><span class="pre">&lt;density&gt;</span></code> element and an <code class="docutils literal notranslate"><span class="pre">&lt;elastic&gt;</span></code> element.
+If failure analysis is wanted, users need to provide extra data including <code class="docutils literal notranslate"><span class="pre">&lt;strength&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;failure_criterion&gt;</span></code>.</p>
+<div class="literal-block-wrapper docutils container" id="code-material-layout">
+<div class="code-block-caption"><span class="caption-number">Listing 42 </span><span class="caption-text">Input syntax for materials.</span><a class="headerlink" href="#code-material-layout" title="Permalink to this code">#</a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;materials&gt;</span>
+<span class="linenos"> 2</span><span class="w">  </span>...
+<span class="linenos"> 3</span><span class="w">  </span><span class="nt">&lt;material</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;...&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="nt">&lt;density&gt;</span>...<span class="nt">&lt;/density&gt;</span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="nt">&lt;elastic&gt;</span>...<span class="nt">&lt;/elastic&gt;</span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="nt">&lt;strength&gt;</span>...<span class="nt">&lt;/strength&gt;</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="nt">&lt;failure_criterion&gt;</span>...<span class="nt">&lt;/failure_criterion&gt;</span>
+<span class="linenos"> 8</span><span class="w">  </span><span class="nt">&lt;/material&gt;</span>
+<span class="linenos"> 9</span><span class="w">  </span>...
+<span class="linenos">10</span><span class="nt">&lt;/materials&gt;</span>
+</pre></div>
+</div>
+</div>
+<p><strong>Specification</strong></p>
+<ul class="simple">
+<li><p><strong>&lt;material&gt;</strong> - Root element for each material.</p>
+<ul>
+<li><p><em>name</em> - Name of the material.</p></li>
+<li><p><em>type</em> - Type of the material. Choose one from ‘isotropic’, ‘orthotropic’, ‘anisotropic’ and ‘lamina’.</p></li>
+<li><p><strong>&lt;density&gt;</strong> - Density of the material. Defualt is 1.0.</p></li>
+<li><p><strong>&lt;elastic&gt;</strong> - Elastic properties of the material. Specifications are different for different types.</p></li>
+<li><p><strong>&lt;strength&gt;</strong> - Strength properties of the material. Specifications are different for different types and different failure criterion.</p></li>
+<li><p><strong>&lt;failure_criterion&gt;</strong> - Failure criterion of the material. Options are different for different types.</p></li>
+</ul>
+</li>
+</ul>
+<section id="elastic-properties">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Elastic properties</a><a class="headerlink" href="#elastic-properties" title="Permalink to this heading">#</a></h3>
+<div class="literal-block-wrapper docutils container" id="code-material-temp">
+<div class="code-block-caption"><span class="caption-number">Listing 43 </span><span class="caption-text">Input syntax for materials.</span><a class="headerlink" href="#code-material-temp" title="Permalink to this code">#</a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;materials&gt;</span>
+<span class="linenos"> 2</span><span class="w">  </span>...
+<span class="linenos"> 3</span><span class="w">  </span><span class="nt">&lt;material</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;iso1&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;isotropic&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="nt">&lt;elastic&gt;</span>
+<span class="linenos"> 5</span><span class="w">      </span><span class="nt">&lt;e&gt;</span>...<span class="nt">&lt;/e&gt;</span>
+<span class="linenos"> 6</span><span class="w">      </span><span class="nt">&lt;nu&gt;</span>...<span class="nt">&lt;/nu&gt;</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="nt">&lt;/elastic&gt;</span>
+<span class="linenos"> 8</span><span class="w">  </span><span class="nt">&lt;/material&gt;</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="w">  </span><span class="nt">&lt;material</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;lam1&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;lamina&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">11</span><span class="w">    </span><span class="nt">&lt;elastic&gt;</span>
+<span class="linenos">12</span><span class="w">      </span><span class="nt">&lt;e1&gt;</span>...<span class="nt">&lt;/e1&gt;</span>
+<span class="linenos">13</span><span class="w">      </span><span class="nt">&lt;e2&gt;</span>...<span class="nt">&lt;/e2&gt;</span>
+<span class="linenos">14</span><span class="w">      </span><span class="nt">&lt;nu12&gt;</span>...<span class="nt">&lt;/nu12&gt;</span>
+<span class="linenos">15</span><span class="w">      </span><span class="nt">&lt;g12&gt;</span>...<span class="nt">&lt;/g12&gt;</span>
+<span class="linenos">16</span><span class="w">    </span><span class="nt">&lt;/elastic&gt;</span>
+<span class="linenos">17</span><span class="w">  </span><span class="nt">&lt;/material&gt;</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="w">  </span><span class="nt">&lt;material</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;orth1&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;orthotropic&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">20</span><span class="w">    </span><span class="nt">&lt;elastic&gt;</span>
+<span class="linenos">21</span><span class="w">      </span><span class="nt">&lt;e1&gt;</span>...<span class="nt">&lt;/e1&gt;</span>
+<span class="linenos">22</span><span class="w">      </span><span class="nt">&lt;e2&gt;</span>...<span class="nt">&lt;/e2&gt;</span>
+<span class="linenos">23</span><span class="w">      </span><span class="nt">&lt;e3&gt;</span>...<span class="nt">&lt;/e3&gt;</span>
+<span class="linenos">24</span><span class="w">      </span><span class="nt">&lt;g12&gt;</span>...<span class="nt">&lt;/g12&gt;</span>
+<span class="linenos">25</span><span class="w">      </span><span class="nt">&lt;g13&gt;</span>...<span class="nt">&lt;/g13&gt;</span>
+<span class="linenos">26</span><span class="w">      </span><span class="nt">&lt;g23&gt;</span>...<span class="nt">&lt;/g23&gt;</span>
+<span class="linenos">27</span><span class="w">      </span><span class="nt">&lt;nu12&gt;</span>...<span class="nt">&lt;/nu12&gt;</span>
+<span class="linenos">28</span><span class="w">      </span><span class="nt">&lt;nu13&gt;</span>...<span class="nt">&lt;/nu13&gt;</span>
+<span class="linenos">29</span><span class="w">      </span><span class="nt">&lt;nu23&gt;</span>...<span class="nt">&lt;/nu23&gt;</span>
+<span class="linenos">30</span><span class="w">    </span><span class="nt">&lt;/elastic&gt;</span>
+<span class="linenos">31</span><span class="w">  </span><span class="nt">&lt;/material&gt;</span>
+<span class="linenos">32</span>
+<span class="linenos">33</span><span class="w">  </span><span class="nt">&lt;material</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;aniso1&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;anisotropic&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">34</span><span class="w">    </span><span class="nt">&lt;elastic&gt;</span>
+<span class="linenos">35</span><span class="w">      </span><span class="nt">&lt;c11&gt;</span>...<span class="nt">&lt;/c11&gt;</span>
+<span class="linenos">36</span><span class="w">      </span><span class="nt">&lt;c12&gt;</span>...<span class="nt">&lt;/c12&gt;</span>
+<span class="linenos">37</span><span class="w">      </span><span class="nt">&lt;c13&gt;</span>...<span class="nt">&lt;/c13&gt;</span>
+<span class="linenos">38</span><span class="w">      </span><span class="nt">&lt;c14&gt;</span>...<span class="nt">&lt;/c14&gt;</span>
+<span class="linenos">39</span><span class="w">      </span><span class="nt">&lt;c15&gt;</span>...<span class="nt">&lt;/c15&gt;</span>
+<span class="linenos">40</span><span class="w">      </span><span class="nt">&lt;c16&gt;</span>...<span class="nt">&lt;/c16&gt;</span>
+<span class="linenos">41</span><span class="w">      </span><span class="nt">&lt;c22&gt;</span>...<span class="nt">&lt;/c22&gt;</span>
+<span class="linenos">42</span><span class="w">      </span><span class="nt">&lt;c23&gt;</span>...<span class="nt">&lt;/c23&gt;</span>
+<span class="linenos">43</span><span class="w">      </span><span class="nt">&lt;c24&gt;</span>...<span class="nt">&lt;/c24&gt;</span>
+<span class="linenos">44</span><span class="w">      </span><span class="nt">&lt;c25&gt;</span>...<span class="nt">&lt;/c25&gt;</span>
+<span class="linenos">45</span><span class="w">      </span><span class="nt">&lt;c26&gt;</span>...<span class="nt">&lt;/c26&gt;</span>
+<span class="linenos">46</span><span class="w">      </span><span class="nt">&lt;c33&gt;</span>...<span class="nt">&lt;/c33&gt;</span>
+<span class="linenos">47</span><span class="w">      </span><span class="nt">&lt;c34&gt;</span>...<span class="nt">&lt;/c34&gt;</span>
+<span class="linenos">48</span><span class="w">      </span><span class="nt">&lt;c35&gt;</span>...<span class="nt">&lt;/c35&gt;</span>
+<span class="linenos">49</span><span class="w">      </span><span class="nt">&lt;c36&gt;</span>...<span class="nt">&lt;/c36&gt;</span>
+<span class="linenos">50</span><span class="w">      </span><span class="nt">&lt;c44&gt;</span>...<span class="nt">&lt;/c44&gt;</span>
+<span class="linenos">51</span><span class="w">      </span><span class="nt">&lt;c45&gt;</span>...<span class="nt">&lt;/c45&gt;</span>
+<span class="linenos">52</span><span class="w">      </span><span class="nt">&lt;c46&gt;</span>...<span class="nt">&lt;/c46&gt;</span>
+<span class="linenos">53</span><span class="w">      </span><span class="nt">&lt;c55&gt;</span>...<span class="nt">&lt;/c55&gt;</span>
+<span class="linenos">54</span><span class="w">      </span><span class="nt">&lt;c56&gt;</span>...<span class="nt">&lt;/c56&gt;</span>
+<span class="linenos">55</span><span class="w">      </span><span class="nt">&lt;c66&gt;</span>...<span class="nt">&lt;/c66&gt;</span>
+<span class="linenos">56</span><span class="w">    </span><span class="nt">&lt;/elastic&gt;</span>
+<span class="linenos">57</span><span class="w">  </span><span class="nt">&lt;/material&gt;</span>
+<span class="linenos">58</span><span class="w">  </span>...
+<span class="linenos">59</span><span class="nt">&lt;/materials&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>For the <code class="docutils literal notranslate"><span class="pre">lamina</span></code> type material, the code will internally convert it to the <code class="docutils literal notranslate"><span class="pre">orthotropic</span></code> type, by assigning the rest five constants in the following way:</p>
+<ul class="simple">
+<li><p>e3 = e2</p></li>
+<li><p>nu13 = nu12</p></li>
+<li><p>nu23 = 0.3</p></li>
+<li><p>g13 = g12</p></li>
+<li><p>g23 = e2 / ( 2 * (1 + nu23) )</p></li>
+</ul>
+<p><strong>Specification</strong></p>
+<ul class="simple">
+<li><p>If <em>type=”isotropic”</em> - 2 constants: ‘e’ and ‘nu’.</p></li>
+<li><p>If <em>type=”lamina”</em> - 4 constants: ‘e1’, ‘e2’, ‘nu12’ and ‘g12’.</p></li>
+<li><p>If <em>type=”orthotropic”</em> - 9 constants: ‘e1’, ‘e2’, ‘e3’, ‘g12’, ‘g13’, ‘g23’, ‘nu12’, ‘nu13’ and ‘nu23’.</p></li>
+<li><p>If <em>type=”anisotropic”</em> - 21 constants: ‘c11’, ‘c12’, ‘c13’, ‘c14’, ‘c15’, ‘c16’, ‘c22’, ‘c23’, ‘c24’, ‘c25’, ‘c26’, ‘c33’, ‘c34’, ‘c35’, ‘c36’, ‘c44’, ‘c45’, ‘c46’, ‘c55’, ‘c56’ and ‘c66’. These constants are defined in Equation <a class="reference internal" href="#equation-hookeslaw">(2)</a>.</p></li>
+<li><p>If <em>type=”lamina”</em> - 4 constants: ‘e1’, ‘e2’, ‘g12’ and ‘nu12’. Internally, this type of material will be converted to the ‘orthotropic’ material. The default values for the rest components are: ‘e3=e2’, ‘nu13=nu12’, ‘nu23=0.3’, ‘g13=g12’ and ‘g23=e3/(2*(1+nu23))’. These default values can be overwritten by custom values.</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-hookeslaw">
+<span class="eqno">(2)<a class="headerlink" href="#equation-hookeslaw" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{Bmatrix}
+  \sigma_{11} \\ \sigma_{12} \\ \sigma_{13} \\ \sigma_{22} \\ \sigma_{23} \\ \sigma_{33}
+\end{Bmatrix} =
+\begin{bmatrix}
+  c_{11} &amp; c_{12} &amp; c_{13} &amp; c_{14} &amp; c_{15} &amp; c_{16} \\
+  c_{12} &amp; c_{22} &amp; c_{23} &amp; c_{24} &amp; c_{25} &amp; c_{26} \\
+  c_{13} &amp; c_{23} &amp; c_{33} &amp; c_{34} &amp; c_{35} &amp; c_{36} \\
+  c_{14} &amp; c_{24} &amp; c_{34} &amp; c_{44} &amp; c_{45} &amp; c_{46} \\
+  c_{15} &amp; c_{25} &amp; c_{35} &amp; c_{45} &amp; c_{55} &amp; c_{56} \\
+  c_{16} &amp; c_{26} &amp; c_{36} &amp; c_{46} &amp; c_{56} &amp; c_{66}
+\end{bmatrix}
+\begin{Bmatrix}
+  \epsilon_{11} \\ 2\epsilon_{12} \\ 2\epsilon_{13} \\ \epsilon_{22} \\ 2\epsilon_{23} \\ \epsilon_{33}
+\end{Bmatrix}\end{split}\]</div>
+</section>
+<section id="strength-properties">
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Strength properties</a><a class="headerlink" href="#strength-properties" title="Permalink to this heading">#</a></h3>
+<p>Inputs for strength properties for all types of materials have the same syntax.
+For each material, users can input at least one or at most nine properties.
+The overall syntax for each material is shown in <a class="reference internal" href="#code-material-strength-overall"><span class="std std-numref">Listing 44</span></a>.</p>
+<div class="literal-block-wrapper docutils container" id="code-material-strength-overall">
+<div class="code-block-caption"><span class="caption-number">Listing 44 </span><span class="caption-text">Overall input syntax for strength properties.</span><a class="headerlink" href="#code-material-strength-overall" title="Permalink to this code">#</a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;material</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;...&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 2</span><span class="w">  </span><span class="nt">&lt;failure_criterion&gt;</span>...<span class="nt">&lt;/failure_criterion&gt;</span>
+<span class="linenos"> 3</span><span class="w">  </span><span class="nt">&lt;strength&gt;</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="nt">&lt;xt&gt;</span>...<span class="nt">&lt;/xt&gt;</span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="nt">&lt;yt&gt;</span>...<span class="nt">&lt;/yt&gt;</span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="nt">&lt;zt&gt;</span>...<span class="nt">&lt;/zt&gt;</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="nt">&lt;xc&gt;</span>...<span class="nt">&lt;/xc&gt;</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nt">&lt;yc&gt;</span>...<span class="nt">&lt;/yc&gt;</span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="nt">&lt;zc&gt;</span>...<span class="nt">&lt;/zc&gt;</span>
+<span class="linenos">10</span><span class="w">    </span><span class="nt">&lt;r&gt;</span>...<span class="nt">&lt;/r&gt;</span>
+<span class="linenos">11</span><span class="w">    </span><span class="nt">&lt;t&gt;</span>...<span class="nt">&lt;/t&gt;</span>
+<span class="linenos">12</span><span class="w">    </span><span class="nt">&lt;s&gt;</span>...<span class="nt">&lt;/s&gt;</span>
+<span class="linenos">13</span><span class="w">  </span><span class="nt">&lt;/strength&gt;</span>
+<span class="linenos">14</span><span class="nt">&lt;/material&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>Although all properties will be stored internally, only some of them will be used in analysis depending on the failure criterion.</p>
+<p><strong>Specification</strong></p>
+<ul class="simple">
+<li><p><strong>&lt;xt&gt;</strong> - Tensile strength in <span class="math notranslate nohighlight">\(x_1\)</span> direction. Alternative tags: &lt;t1&gt; or &lt;x&gt;. (Required)</p></li>
+<li><p><strong>&lt;yt&gt;</strong> - Tensile strength in <span class="math notranslate nohighlight">\(x_2\)</span> direction. Alternative tags: &lt;t2&gt; or &lt;y&gt;. (Optional. Default = &lt;xt&gt;.)</p></li>
+<li><p><strong>&lt;zt&gt;</strong> - Tensile strength in <span class="math notranslate nohighlight">\(x_3\)</span> direction. Alternative tags: &lt;t3&gt; or &lt;z&gt;. (Optional. Default = &lt;yt&gt;.)</p></li>
+<li><p><strong>&lt;xc&gt;</strong> - Compressive strength in <span class="math notranslate nohighlight">\(x_1\)</span> direction. Alternative tag: &lt;c1&gt;. (Optional. Default = &lt;xt&gt;.)</p></li>
+<li><p><strong>&lt;yc&gt;</strong> - Compressive strength in <span class="math notranslate nohighlight">\(x_2\)</span> direction. Alternative tag: &lt;c2&gt;. (Optional. Default = &lt;yt&gt;.)</p></li>
+<li><p><strong>&lt;zc&gt;</strong> - Compressive strength in <span class="math notranslate nohighlight">\(x_3\)</span> direction. Alternative tag: &lt;c3&gt;. (Optional. Default = &lt;zt&gt;.)</p></li>
+<li><p><strong>&lt;s&gt;</strong> - Shear strength in <span class="math notranslate nohighlight">\(x_1\)</span>-<span class="math notranslate nohighlight">\(x_2\)</span> plane. Alternative tag: &lt;s12&gt;. (Required for specific failure criteria.)</p></li>
+<li><p><strong>&lt;t&gt;</strong> - Shear strength in <span class="math notranslate nohighlight">\(x_1\)</span>-<span class="math notranslate nohighlight">\(x_3\)</span> plane. Alternative tag: &lt;s13&gt;. (Optional. Default = &lt;s&gt;)</p></li>
+<li><p><strong>&lt;r&gt;</strong> - Shear strength in <span class="math notranslate nohighlight">\(x_2\)</span>-<span class="math notranslate nohighlight">\(x_3\)</span> plane. Alternative tag: &lt;s23&gt;. (Optional. Default = (&lt;yt&gt; + &lt;yc&gt;) / 4)</p></li>
+</ul>
+</section>
+<section id="failure-criteria">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Failure criteria</a><a class="headerlink" href="#failure-criteria" title="Permalink to this heading">#</a></h3>
+<p>For isotropic materials, the following five failure criteria are available, followed by the strength constants needed:</p>
+<ol class="arabic simple">
+<li><p><strong>Max principal stress</strong>. Strength constants (2):</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>1 tensile strength (<span class="math notranslate nohighlight">\(X\)</span>)</p></li>
+<li><p>1 compressive strength (<span class="math notranslate nohighlight">\(X'\)</span>).</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p><strong>Max principal strain</strong>. Strength constants (2):</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>1 tensile strength (<span class="math notranslate nohighlight">\(X_{\varepsilon}\)</span>)</p></li>
+<li><p>1 compressive strength (<span class="math notranslate nohighlight">\(X'_{\varepsilon}\)</span>).</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p><strong>Max shear stress</strong> or <strong>Tresca</strong>. Strength constant (1):</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>1 shear strength (<span class="math notranslate nohighlight">\(S\)</span>).</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p><strong>Max shear strain</strong>. Strength constant (1):</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>1 shear strength (<span class="math notranslate nohighlight">\(S_{\varepsilon}\)</span>)</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p><strong>Mises</strong>. Strength constant (1):</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>1 strength (<span class="math notranslate nohighlight">\(X\)</span>).</p></li>
+</ul>
+</div></blockquote>
+<p>For other type materials (lamina, orthotropic, anisotropic), the following five failure criteria are available:</p>
+<ol class="arabic simple">
+<li><p><strong>Max stress</strong>. Strength constants (9):</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>3 tensile strengths in three directions (<span class="math notranslate nohighlight">\(X, Y, Z\)</span>)</p></li>
+<li><p>3 compressive strengths in three directions (<span class="math notranslate nohighlight">\(X', Y', Z'\)</span>)</p></li>
+<li><p>3 shear strengths in three principal planes (<span class="math notranslate nohighlight">\(S, T, R\)</span>)</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p><strong>Max strain</strong>. Strength constants (9):</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>3 tensile strengths in three directions (<span class="math notranslate nohighlight">\(X_{\varepsilon}, Y_{\varepsilon}, Z_{\varepsilon}\)</span>)</p></li>
+<li><p>3 compressive strengths in three directions (<span class="math notranslate nohighlight">\(X'_{\varepsilon}, Y'_{\varepsilon}, Z'_{\varepsilon}\)</span>)</p></li>
+<li><p>3 shear strengths in three principal planes (<span class="math notranslate nohighlight">\(S_{\varepsilon}, T_{\varepsilon}, R_{\varepsilon}\)</span>)</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p><strong>Tsai-Hill</strong>. Strength constants (6):</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>3 normal strengths in three directions (<span class="math notranslate nohighlight">\(X, Y, Z\)</span>)</p></li>
+<li><p>3 shear shear strengths in three principal planes (<span class="math notranslate nohighlight">\(S, T, R\)</span>).</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p><strong>Tsai-Wu</strong>. Strength constants (9):</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>3 tensile strengths in three directions (<span class="math notranslate nohighlight">\(X, Y, Z\)</span>)</p></li>
+<li><p>3 compressive strengths in three directions (<span class="math notranslate nohighlight">\(X', Y', Z'\)</span>)</p></li>
+<li><p>3 shear strengths in three principal planes (<span class="math notranslate nohighlight">\(S, T, R\)</span>)</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p><strong>Hashin</strong>. Strength constants (6):</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>2 tensile strengths in two directions (<span class="math notranslate nohighlight">\(X, Y\)</span>)</p></li>
+<li><p>2 compressive strengths in two directions (<span class="math notranslate nohighlight">\(X', Y'\)</span>)</p></li>
+<li><p>2 shear strengths in two principal planes (<span class="math notranslate nohighlight">\(S, R\)</span>)</p></li>
+</ul>
+</div></blockquote>
+<p>Different failure criterion will use different strength properties.
+This is summarized in the table below.</p>
+<table class="table table-center" id="id2">
+<caption><span class="caption-number">Table 38 </span><span class="caption-text">Strength properties used by different failure criteria.</span><a class="headerlink" href="#id2" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Failure criterion</p></th>
+<th class="head"><p>x/xt/t1</p></th>
+<th class="head"><p>y/yt/t2</p></th>
+<th class="head"><p>z/zt/t3</p></th>
+<th class="head"><p>xc/c1</p></th>
+<th class="head"><p>yc/c2</p></th>
+<th class="head"><p>zc/c3</p></th>
+<th class="head"><p>s/s12</p></th>
+<th class="head"><p>t/s13</p></th>
+<th class="head"><p>r/s23</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Isotropic</strong></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Max principal stress</p></td>
+<td><p><span class="math notranslate nohighlight">\(X\)</span></p></td>
+<td></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(X'\)</span></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Max principal strain</p></td>
+<td><p><span class="math notranslate nohighlight">\(X_{\varepsilon}\)</span></p></td>
+<td></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(X'_{\varepsilon}\)</span></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Max shear stress</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(S\)</span></p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Max shear strain</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(S_{\varepsilon}\)</span></p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Mises</p></td>
+<td><p><span class="math notranslate nohighlight">\(X\)</span></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>Not isotropic</strong></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Max stress</p></td>
+<td><p><span class="math notranslate nohighlight">\(X\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Y\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Z\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(X'\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Y'\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Z'\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(S\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Max strain</p></td>
+<td><p><span class="math notranslate nohighlight">\(X_{\varepsilon}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Y_{\varepsilon}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Z_{\varepsilon}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(X'_{\varepsilon}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Y'_{\varepsilon}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Z'_{\varepsilon}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(S_{\varepsilon}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{\varepsilon}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R_{\varepsilon}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Tsai-Hill</p></td>
+<td><p><span class="math notranslate nohighlight">\(X\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Y\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Z\)</span></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(S\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Tsai-Wu</p></td>
+<td><p><span class="math notranslate nohighlight">\(X\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Y\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Z\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(X'\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Y'\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Z'\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(S\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Hashin</p></td>
+<td><p><span class="math notranslate nohighlight">\(X\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Y\)</span></p></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(X'\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Y'\)</span></p></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(S\)</span></p></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>More details can be found in the VABS users manual <a class="reference internal" href="../references.html#vabs" id="id1"><span>[VABS]</span></a>.</p>
+<p><strong>Specification</strong></p>
+<ul class="simple">
+<li><p><strong>&lt;failure_criterion&gt;</strong> - Name or ID of the failure criterion used.</p>
+<ul>
+<li><p>If <em>type=”isotropic”</em>, choose one of the following:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> or <code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">principal</span> <span class="pre">stress</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> or <code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">principal</span> <span class="pre">strain</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> or <code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">shear</span> <span class="pre">stress</span></code> or <code class="docutils literal notranslate"><span class="pre">tresca</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">4</span></code> or <code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">shear</span> <span class="pre">strain</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">5</span></code> or <code class="docutils literal notranslate"><span class="pre">mises</span></code></p></li>
+</ul>
+</li>
+<li><p>If <em>type=”lamina”</em> or <em>type=”orthotropic”</em> or <em>type=”anisotropic”</em>, choose one of the following:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> or <code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">stress</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> or <code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">strain</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> or <code class="docutils literal notranslate"><span class="pre">tsai-hill</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">4</span></code> or <code class="docutils literal notranslate"><span class="pre">tsai-wu</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">5</span></code> or <code class="docutils literal notranslate"><span class="pre">hashin</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="lamina">
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Lamina</a><a class="headerlink" href="#lamina" title="Permalink to this heading">#</a></h2>
+<p>Each lamina element has a name, and contains a material name and a value for thickness.
+The input syntax is shown in <a class="reference internal" href="#code-lamina-temp"><span class="std std-numref">Listing 45</span></a>.</p>
+<div class="literal-block-wrapper docutils container" id="code-lamina-temp">
+<div class="code-block-caption"><span class="caption-number">Listing 45 </span><span class="caption-text">Input syntax for lamina.</span><a class="headerlink" href="#code-lamina-temp" title="Permalink to this code">#</a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;materials&gt;</span>
+<span class="linenos">2</span><span class="w">  </span>...
+<span class="linenos">3</span><span class="w">  </span><span class="nt">&lt;lamina</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;lamina1&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">4</span><span class="w">    </span><span class="nt">&lt;material&gt;</span><span class="w"> </span>orth1<span class="w"> </span><span class="nt">&lt;/material&gt;</span>
+<span class="linenos">5</span><span class="w">    </span><span class="nt">&lt;thickness&gt;</span>...<span class="nt">&lt;/thickness&gt;</span>
+<span class="linenos">6</span><span class="w">  </span><span class="nt">&lt;/lamina&gt;</span>
+<span class="linenos">7</span><span class="w">  </span>...
+<span class="linenos">8</span><span class="nt">&lt;/materials&gt;</span>
+</pre></div>
+</div>
+</div>
+<p><strong>Specification</strong></p>
+<ul>
+<li><p><strong>&lt;lamina&gt;</strong> - Root element for the definition of each lamina.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><em>name</em> - Name of the lamina.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>&lt;material&gt;</strong> - Name of the material of the lamina.</p></li>
+<li><p><strong>&lt;thickness&gt;</strong> - Thickness of the lamina.</p></li>
+</ul>
+</section>
+<section id="layups">
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Layups</a><a class="headerlink" href="#layups" title="Permalink to this heading">#</a></h2>
+<p>In general, there are two ways to define a layup, explicit list and stacking sequence code.
+For the explicit list, a laminate is laid onto the base line from the first layer in the list to the last one, in the direction given by the user.
+For the stacking sequence, the layup starts from left to the right.
+User should pay attention to the relations among the base line direction, elemental frame <strong>y</strong> and fiber orientation <span class="math notranslate nohighlight">\(\theta_3\)</span> of each layer, as shown in <a class="reference internal" href="#fig-elementalframe"><span class="std std-numref">Fig. 39</span></a>.
+Change of direction of the base line will change the elemental frame <strong>y</strong> as defined, which will further require the user to change the fiber orientations accordingly, even though nothing changes physically.
+All layup information are included in one XML file.
+A template of this file can be found in <a class="reference internal" href="#code-layup-temp"><span class="std std-numref">Listing 46</span></a>.</p>
+<figure class="align-center" id="fig-elementalframe">
+<a class="reference internal image-reference" href="../../../_images/elementalframe.png"><img alt="../../../_images/elementalframe.png" src="../../../_images/elementalframe.png" style="width: 6in;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 39 </span><span class="caption-text">Relations among the base line direction, elemental frame <strong>y</strong> and fiber orientation (Note $y_2$ is parallel to the base line direction).</span><a class="headerlink" href="#fig-elementalframe" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="literal-block-wrapper docutils container" id="code-layup-temp">
+<div class="code-block-caption"><span class="caption-number">Listing 46 </span><span class="caption-text">Input syntax for layups.</span><a class="headerlink" href="#code-layup-temp" title="Permalink to this code">#</a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;layups&gt;</span>
+<span class="linenos">2</span><span class="w">  </span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;layup1&quot;</span><span class="w"> </span><span class="na">method=</span><span class="s">&quot;explicit list&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">3</span><span class="w">    </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;lamina1&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/layer&gt;</span>
+<span class="linenos">4</span><span class="w">    </span>...
+<span class="linenos">5</span><span class="w">  </span><span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">6</span><span class="w">  </span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;layup2&quot;</span><span class="w"> </span><span class="na">method=</span><span class="s">&quot;stack sequence&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">7</span><span class="w">  </span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;layup3&quot;</span><span class="w"> </span><span class="na">method=</span><span class="s">&quot;ply percentage&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">8</span><span class="w">  </span>...
+<span class="linenos">9</span><span class="nt">&lt;/layups&gt;</span>
+</pre></div>
+</div>
+</div>
+<p><strong>Specification</strong></p>
+<ul class="simple">
+<li><p><strong>&lt;layup&gt;</strong> - Root element for the definition of each layup.</p>
+<ul>
+<li><p><em>name</em> - Name of the layup.</p></li>
+<li><p><em>method</em> - Method of defining the layup. Choose one from ‘layer list’ (or ‘ll’) and ‘stack sequence’ (or ‘ss’). Default is ‘layer list’.</p></li>
+</ul>
+</li>
+</ul>
+<section id="explicit-list">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Explicit list</a><a class="headerlink" href="#explicit-list" title="Permalink to this heading">#</a></h3>
+<p>This method requires user to write down the lamina name, fiber orientation
+and number of successive laminas with the same fiber orientation, layer
+by layer. Alternatively, a layer can also be defined by the name of a sublayup.
+A sublayup must appear before the layup where it is referenced.
+A template for one layer is shown below.</p>
+<div class="literal-block-wrapper docutils container" id="code-layup-ll-temp">
+<div class="code-block-caption"><span class="caption-number">Listing 47 </span><span class="caption-text">A template for the layup layer list input.</span><a class="headerlink" href="#code-layup-ll-temp" title="Permalink to this code">#</a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;layups&gt;</span>
+<span class="linenos"> 2</span><span class="w">  </span>...
+<span class="linenos"> 3</span><span class="w">  </span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;lamina_name&quot;</span><span class="nt">&gt;</span><span class="w"> </span>angle:stack<span class="w"> </span><span class="nt">&lt;/layer&gt;</span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;lamina_name&quot;</span><span class="nt">&gt;</span><span class="w"> </span>angle:stack<span class="w"> </span><span class="nt">&lt;/layer&gt;</span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;lamina_name&quot;</span><span class="nt">&gt;</span><span class="w"> </span>angle:stack<span class="w"> </span><span class="nt">&lt;/layer&gt;</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">layup=</span><span class="s">&quot;sublayup_name&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos"> 8</span><span class="w">    </span>...
+<span class="linenos"> 9</span><span class="w">  </span><span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">10</span><span class="w">  </span>...
+<span class="linenos">11</span><span class="nt">&lt;/layups&gt;</span>
+</pre></div>
+</div>
+</div>
+<p><strong>Specification</strong></p>
+<ul class="simple">
+<li><p><strong>&lt;layer&gt;</strong> - Material orientation and number of plies separated by a colon ‘angle:stack’. Default values are 0 for ‘angle’ and 1 for ‘stack’. If there is only one number presented in this element, then it is read in as ‘angle’, not ‘stack’, which is 1 by default.</p>
+<ul>
+<li><p><em>lamina</em> - Optional. Name of the lamina used in the current layer.</p></li>
+<li><p><em>layup</em> - Optional. Name of the sublayup used in the current layer. One and only one of <em>lamina</em> and <em>layup</em> should be used. ‘angle’ and ‘stack’ are not needed when <em>layup</em> is used.</p></li>
+</ul>
+</li>
+</ul>
+<p>An example for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 38</span></a> is given
+in <a class="reference internal" href="#code-material"><span class="std std-numref">Listing 49</span></a> and <a class="reference internal" href="#code-layup"><span class="std std-numref">Listing 50</span></a>.</p>
+</section>
+<section id="stacking-sequence-code">
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">Stacking sequence code</a><a class="headerlink" href="#stacking-sequence-code" title="Permalink to this heading">#</a></h3>
+<p>This method requires users to provide one lamina name and the stacking
+sequence code. A template is shown below.</p>
+<div class="literal-block-wrapper docutils container" id="code-layup-ss-temp">
+<div class="code-block-caption"><span class="caption-number">Listing 48 </span><span class="caption-text">A template for the layup stacking sequence input.</span><a class="headerlink" href="#code-layup-ss-temp" title="Permalink to this code">#</a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;layups&gt;</span>
+<span class="linenos">2</span><span class="w">  </span>...
+<span class="linenos">3</span><span class="w">  </span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;...&quot;</span><span class="w"> </span><span class="na">method=</span><span class="s">&quot;stack sequence&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">4</span><span class="w">    </span><span class="nt">&lt;lamina&gt;</span>...<span class="nt">&lt;/lamina&gt;</span>
+<span class="linenos">5</span><span class="w">    </span><span class="nt">&lt;code&gt;</span>...<span class="nt">&lt;/code&gt;</span>
+<span class="linenos">6</span><span class="w">  </span><span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">7</span><span class="w">  </span>...
+<span class="linenos">8</span><span class="nt">&lt;/layups&gt;</span>
+</pre></div>
+</div>
+</div>
+<p><strong>Specification</strong></p>
+<ul class="simple">
+<li><p><strong>&lt;lamina&gt;</strong> - Name of the lamina used.</p></li>
+<li><p><strong>&lt;code&gt;</strong> - Stacking sequency code. Explained below.</p></li>
+</ul>
+<p><strong>Rules of writing the stacking sequence code</strong></p>
+<ul class="simple">
+<li><p>All fiber orientations should be put between a pair of square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code>;</p></li>
+<li><p>Different fiber orientations are separated by slash <code class="docutils literal notranslate"><span class="pre">/</span></code>;</p></li>
+<li><p>After the right bracket, user can add <code class="docutils literal notranslate"><span class="pre">ns</span></code> to indicate symmetry of the layup, where <code class="docutils literal notranslate"><span class="pre">n</span></code> is the number of the symmetry operations needed to generate the complete layup;</p></li>
+<li><p>Successive laminae with the same fiber orientation can be expressed using colon like <code class="docutils literal notranslate"><span class="pre">angle:stack</span></code>, where <code class="docutils literal notranslate"><span class="pre">angle</span></code> is the fiber orientation and <code class="docutils literal notranslate"><span class="pre">stack</span></code> is the number of plies;</p></li>
+<li><p>If a group of fiber orientations is repeated, user needs to close them in a pair of round brackets <code class="docutils literal notranslate"><span class="pre">()</span></code>.</p></li>
+</ul>
+<p>Examples</p>
+<table class="table table-center" id="id3">
+<caption><span class="caption-number">Table 39 </span><span class="caption-text">Examples of stacking sequence code</span><a class="headerlink" href="#id3" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Code</p></th>
+<th class="head"><p>Complete sequence</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">[0/90]2s</span></code></p></td>
+<td><p>0, 90, 90, 0, 0, 90, 90, 0</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">[(45/-45):2/0:2]s</span></code></p></td>
+<td><p>45, -45, 45, -45, 0, 0, 0, 0, -45, 45, -45, 45</p></td>
+</tr>
+</tbody>
+</table>
+<div class="literal-block-wrapper docutils container" id="code-material">
+<div class="code-block-caption"><span class="caption-number">Listing 49 </span><span class="caption-text">Example material and lamina input file for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 38</span></a>.</span><a class="headerlink" href="#code-material" title="Permalink to this code">#</a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;materials&gt;</span>
+<span class="linenos"> 2</span><span class="w">  </span><span class="nt">&lt;material</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;square&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;orthotropic&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="nt">&lt;density&gt;</span>...<span class="nt">&lt;/density&gt;</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="nt">&lt;elastic&gt;</span>...<span class="nt">&lt;/elastic&gt;</span>
+<span class="linenos"> 5</span><span class="w">  </span><span class="nt">&lt;/material&gt;</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="w">  </span><span class="nt">&lt;material</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;hexagon&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;orthotropic&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nt">&lt;density&gt;</span>...<span class="nt">&lt;/density&gt;</span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="nt">&lt;elastic&gt;</span>...<span class="nt">&lt;/elastic&gt;</span>
+<span class="linenos">10</span><span class="w">  </span><span class="nt">&lt;/material&gt;</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="w">  </span><span class="nt">&lt;lamina</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;la_square_15&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">13</span><span class="w">    </span><span class="nt">&lt;material&gt;</span><span class="w"> </span>square<span class="w"> </span><span class="nt">&lt;/material&gt;</span>
+<span class="linenos">14</span><span class="w">    </span><span class="nt">&lt;thickness&gt;</span><span class="w"> </span>1.5<span class="w"> </span><span class="nt">&lt;/thickness&gt;</span>
+<span class="linenos">15</span><span class="w">  </span><span class="nt">&lt;/lamina&gt;</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="w">  </span><span class="nt">&lt;lamina</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;la_hexagon_10&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">18</span><span class="w">    </span><span class="nt">&lt;material&gt;</span><span class="w"> </span>hexagon<span class="w"> </span><span class="nt">&lt;/material&gt;</span>
+<span class="linenos">19</span><span class="w">    </span><span class="nt">&lt;thickness&gt;</span><span class="w"> </span>1.0<span class="w"> </span><span class="nt">&lt;/thickness&gt;</span>
+<span class="linenos">20</span><span class="w">  </span><span class="nt">&lt;/lamina&gt;</span>
+<span class="linenos">21</span><span class="nt">&lt;/materials&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="code-layup">
+<div class="code-block-caption"><span class="caption-number">Listing 50 </span><span class="caption-text">Example layup input file for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 38</span></a>.</span><a class="headerlink" href="#code-layup" title="Permalink to this code">#</a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;layups&gt;</span>
+<span class="linenos"> 2</span><span class="w">  </span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;layup_el&quot;</span><span class="w"> </span><span class="na">method=</span><span class="s">&quot;explicit list&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;la_hexagon_10&quot;</span><span class="nt">&gt;</span><span class="w"> </span>45:2<span class="w"> </span><span class="nt">&lt;/layer&gt;</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;la_hexagon_10&quot;</span><span class="nt">&gt;</span><span class="w"> </span>90<span class="w"> </span><span class="nt">&lt;/layer&gt;</span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;la_square_15&quot;</span><span class="nt">&gt;&lt;/layer&gt;</span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;la_hexagon_10&quot;</span><span class="nt">&gt;</span><span class="w"> </span>-45:2<span class="w"> </span><span class="nt">&lt;/layer&gt;</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;la_square_15&quot;</span><span class="nt">&gt;</span><span class="w"> </span>0:2<span class="w"> </span><span class="nt">&lt;/layer&gt;</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;la_hexagon_10&quot;</span><span class="nt">&gt;</span><span class="w"> </span>-45:2<span class="w"> </span><span class="nt">&lt;/layer&gt;</span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;la_square_15&quot;</span><span class="nt">&gt;&lt;/layer&gt;</span>
+<span class="linenos">10</span><span class="w">    </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;la_hexagon_10&quot;</span><span class="nt">&gt;</span><span class="w"> </span>90<span class="w"> </span><span class="nt">&lt;/layer&gt;</span>
+<span class="linenos">11</span><span class="w">    </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;la_hexagon_10&quot;</span><span class="nt">&gt;</span><span class="w"> </span>45:2<span class="w"> </span><span class="nt">&lt;/layer&gt;</span>
+<span class="linenos">12</span><span class="w">  </span><span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="w">  </span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;layup_ss&quot;</span><span class="w"> </span><span class="na">method=</span><span class="s">&quot;stack sequence&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">15</span><span class="w">    </span><span class="nt">&lt;lamina&gt;</span><span class="w"> </span>la_square_15<span class="w"> </span><span class="nt">&lt;/lamina&gt;</span>
+<span class="linenos">16</span><span class="w">    </span><span class="nt">&lt;code&gt;</span><span class="w"> </span>[(45/-45):2/0:4/90]2s<span class="w"> </span><span class="nt">&lt;/code&gt;</span>
+<span class="linenos">17</span><span class="w">  </span><span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">18</span><span class="nt">&lt;/layups&gt;</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="pre_shape.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Geometry and shapes</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="pre_component.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Components</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#material">Material</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elastic-properties">Elastic properties</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strength-properties">Strength properties</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#failure-criteria">Failure criteria</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lamina">Lamina</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#layups">Layups</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explicit-list">Explicit list</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stacking-sequence-code">Stacking sequence code</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Su Tian, Haodong Du, Fei Tao and Wenbin Yu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022, Multiscale Structural Mechanics Group, Purdue University.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

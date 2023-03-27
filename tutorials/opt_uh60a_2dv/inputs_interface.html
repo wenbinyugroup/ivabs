@@ -1,0 +1,880 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Dakota Interface Scripts (interface.py) &#8212; iVABS 0.8 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/opt_uh60a_2dv/inputs_interface';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Interface Arguments (interface_args.json)" href="inputs_arguments.html" />
+    <link rel="prev" title="Cross-section Airfoil Data (sc1095.dat)" href="inputs_cs_airfoil.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../main_ivabs.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">iVABS 0.8 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Start</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../install/index.html">Download &amp; Installation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../install/windows.html">Installation on Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install/linux.html">Installation on Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install/python_setup.html">Setup Python Environment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ivabs/getstart.html">Quick Start</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Tutorials</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../run_one_analysis.html">Carry out a single cross-sectional analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opt_spar_web.html">Optimization of spar web locations for desired properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opt_spar_layup.html">Optimize the spar layup of a cross-section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opt_cs_init_twist.html">Optimize the cross-section considering beam initial twist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prepare_cs_template.html">Prepare a cross-sectional design template</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../opt_uh60a_2dv.html">Optimize a single cross-section (general)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="running.html">Running of The Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="problem.html">Problem Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cs_param.html">Cross-sectional Parameterization and Beam Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opt.html">Optimization Formulation</a></li>
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="inputs.html">Preparation of Input Files</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="inputs_cs_template.html">Cross-section Main Input Template (<code class="docutils literal notranslate"><span class="pre">uh60a_section.xml.tmp</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="inputs_cs_materials.html">Material Database (<code class="docutils literal notranslate"><span class="pre">material_database.xml</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="inputs_cs_airfoil.html">Cross-section Airfoil Data (<code class="docutils literal notranslate"><span class="pre">sc1095.dat</span></code>)</a></li>
+<li class="toctree-l4 current active"><a class="current reference internal" href="#">Dakota Interface Scripts (<code class="docutils literal notranslate"><span class="pre">interface.py</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="inputs_arguments.html">Interface Arguments (<code class="docutils literal notranslate"><span class="pre">interface_args.json</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="inputs_data_process.html">Data Processing Functions (<code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="inputs_dakota.html">Dakota Input File (<code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.dakota</span></code>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../examples/index.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example_quickstart_param_study.html">Parameter study of a single cross-section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example_uh60_sopt_stf.html">Single objective optimization of multiple cross-sections to match target beam properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example_uh60_mopt_stf.html">Multiple objective optimization of multiple cross-sections to match target beam properties</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Guide</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../guide/index.html">Guide to Main Input File</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../guide/intro_yaml.html">A Brief Introduction to YAML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../guide/input_design.html">Design Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../guide/input_analysis.html">Analysis Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../guide/input_study.html">Design Study</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ivabs/parameterization.html">Parameterization of Composite Slender Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/custom_script.html">Custom script analysis step</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../extensions/index.html">Extensions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/galaxy_rcas.html">Link to Galaxy/RCAS</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../sg_templates/index.html">Cross-sectional Design Templates</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../sg_templates/airfoil_gbox_uni.html">Airfoil Box-spar Uniform</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ref/beam_properties.html">Beam Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ref/input_keywords_main.html">Main Input Keywords</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../prevabs/index.html">PreVABS Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../prevabs/contents/install.html">Download and Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prevabs/contents/run.html">How to Run PreVABS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prevabs/contents/tutorial.html">Tutorial</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../prevabs/contents/guide.html">Guide for Preparing Input Files</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../prevabs/contents/guide/pre_coordinate.html">Coordinate systems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../prevabs/contents/guide/pre_shape.html">Geometry and shapes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../prevabs/contents/guide/pre_material.html">Materials and layups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../prevabs/contents/guide/pre_component.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../prevabs/contents/guide/pre_recover.html">Specifications for recovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../prevabs/contents/guide/pre_overall.html">Other input settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../prevabs/contents/examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../prevabs/contents/examples/example_box.html">Box beam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../prevabs/contents/examples/example_pipe.html">Pipe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../prevabs/contents/examples/example_tube.html">Circular tube</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../prevabs/contents/examples/example_channel.html">Channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../prevabs/contents/examples/example_airfoil.html">Airfoil (MH-104)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../prevabs/contents/examples/example_airfoil_recover.html">Airfoil (Recover)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../prevabs/contents/examples/example_uh60a_fi.html">UH-60A (Initial Failure Analysis)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prevabs/contents/changelog.html">Change log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prevabs/contents/xml.html">Introduction to XML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prevabs/contents/references.html">References</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/tutorials/opt_uh60a_2dv/inputs_interface.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Dakota Interface Scripts (interface.py)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-management">Data management</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-initialization">Step 1: Initialization</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-inputs-from-dakota">1.1: Reading inputs from Dakota</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-arguments-from-the-json-file">1.2: Reading arguments from the JSON file</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-module-of-data-processing-functions">1.3: Loading the module of data processing functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initializing-the-logger">1.4: Initializing the logger</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-cross-sectional-analysis">Step 2: Cross-sectional analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-processing">2.1: Pre-processing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-sectional-analysis">2.2: Cross-sectional analysis</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-post-processing">Step 3: Post-processing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-writing-outputs">Step 4: Writing outputs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exception">Exception</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-file">Complete file</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <blockquote>
+<div></div></blockquote>
+<section id="dakota-interface-scripts-interface-py">
+<span id="sect-input-interface"></span><h1>Dakota Interface Scripts (<code class="docutils literal notranslate"><span class="pre">interface.py</span></code>)<a class="headerlink" href="#dakota-interface-scripts-interface-py" title="Permalink to this heading">#</a></h1>
+<p>This interface script controls the analysis workflow in each optimization iteration.
+For this example, the analysis workflow can be overall divided into four big steps: initialization, cross-sectional analysis, post-processing and writing outputs.</p>
+<p>The overall workflow is enclosed in a <code class="docutils literal notranslate"><span class="pre">try-except</span></code> block to catch any possible errors in the process.
+The whole analysis process is scripted as a function called <code class="docutils literal notranslate"><span class="pre">process</span></code> accepting one argument: the name of the JSON argument file.</p>
+<p>The overall structure of the script is:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">fn_json_args</span><span class="p">):</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Initialization</span>
+
+        <span class="c1"># Cross-sectional analysis</span>
+
+        <span class="c1"># Post-processing</span>
+
+        <span class="c1"># Writing output</span>
+
+    <span class="k">except</span><span class="p">:</span>
+        <span class="c1"># Steps if there are errors</span>
+</pre></div>
+</div>
+<section id="data-management">
+<span id="sect-input-interface-data"></span><h2>Data management<a class="headerlink" href="#data-management" title="Permalink to this heading">#</a></h2>
+<p>One key aspect in the analysis script including different inputs, outputs, models (e.g., cross-sections) and solvers is a central data storage.
+This example uses a single dictionary object to store all parameters:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">params</span> <span class="o">=</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<p>Parameters can be from multiple sources, such as Dakota inputs, data processing results or outputs of a previous analysis.</p>
+<p>Results are also organized in a single dictionary object.
+They are further grouped into either interim outputs or final outputs:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;interim&#39;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="s1">&#39;final&#39;</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The interim results are also stored as a dictionary.
+They will be written into a JSON file at the end of the analysis process.
+On the other hand, the final results are stored in a list, since Dakota requires the order of the results in the output file is the same as the order in the <code class="docutils literal notranslate"><span class="pre">responses</span></code> section in the Dakota input file.</p>
+</section>
+<section id="step-1-initialization">
+<span id="sect-input-interface-init"></span><h2>Step 1: Initialization<a class="headerlink" href="#step-1-initialization" title="Permalink to this heading">#</a></h2>
+<p>This step initializes data objects from difference inputs and loads necessary modules.
+This can be further divided into several sub-steps.</p>
+<section id="reading-inputs-from-dakota">
+<h3>1.1: Reading inputs from Dakota<a class="headerlink" href="#reading-inputs-from-dakota" title="Permalink to this heading">#</a></h3>
+<p>First read parameters from the file generated by Dakota.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dakota.interfacing</span> <span class="k">as</span> <span class="nn">di</span>
+<span class="n">dakota_params</span><span class="p">,</span> <span class="n">dakota_results</span> <span class="o">=</span> <span class="n">di</span><span class="o">.</span><span class="n">read_parameters_file</span><span class="p">(</span>
+    <span class="s1">&#39;input.in&#39;</span><span class="p">,</span> <span class="s1">&#39;output.out&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>As stated above, since we use <code class="docutils literal notranslate"><span class="pre">params</span></code> to store all data, parameters in <code class="docutils literal notranslate"><span class="pre">dakota_params</span></code> need to be copied to <code class="docutils literal notranslate"><span class="pre">params</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">param_name</span> <span class="ow">in</span> <span class="n">dakota_params</span><span class="o">.</span><span class="n">descriptors</span><span class="p">:</span>
+    <span class="n">params</span><span class="p">[</span><span class="n">param_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">dakota_params</span><span class="p">[</span><span class="n">param_name</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Then extract the current evaluation number for the use in the logger.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">evid</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">dakota_params</span><span class="o">.</span><span class="n">eval_id</span><span class="p">)</span>
+<span class="n">log_prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;eval </span><span class="si">{</span><span class="n">evid</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="n">params</span><span class="p">[</span><span class="s1">&#39;eval_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">evid</span>
+</pre></div>
+</div>
+</section>
+<section id="reading-arguments-from-the-json-file">
+<h3>1.2: Reading arguments from the JSON file<a class="headerlink" href="#reading-arguments-from-the-json-file" title="Permalink to this heading">#</a></h3>
+<p>Arguments in the JSON file can be loaded into a dictionary object very easily using a Python build-in module.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fn_json_args</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fo</span><span class="p">:</span>
+    <span class="n">interface_args</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fo</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="loading-the-module-of-data-processing-functions">
+<h3>1.3: Loading the module of data processing functions<a class="headerlink" href="#loading-the-module-of-data-processing-functions" title="Permalink to this heading">#</a></h3>
+<p>To be able to use the data processing functions written in the file <code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code>, we need to import this file as a module.
+The file name is specified in the JSON argument <code class="docutils literal notranslate"><span class="pre">data_process_functions_file</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">fn_dpf</span> <span class="o">=</span> <span class="n">interface_args</span><span class="p">[</span><span class="s1">&#39;data_process_functions_file&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">fn_dpf</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+        <span class="n">import_str</span> <span class="o">=</span> <span class="s1">&#39;import </span><span class="si">{0}</span><span class="s1"> as dpf&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fn_dpf</span><span class="p">)</span>
+        <span class="n">exec</span><span class="p">(</span><span class="n">import_str</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<p>This means that if the file name is given (e.g., <code class="docutils literal notranslate"><span class="pre">data_proc_funcs</span></code>), then the script will execute the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">data_proc_funcs</span> <span class="k">as</span> <span class="nn">dpf</span>
+</pre></div>
+</div>
+</section>
+<section id="initializing-the-logger">
+<h3>1.4: Initializing the logger<a class="headerlink" href="#initializing-the-logger" title="Permalink to this heading">#</a></h3>
+<p>The component ‘msgpi’ included in iVABS provides a logging tool that can record different levels of messages and print them to the screen or write to a file.
+To initialize the logger, three optional arguments can be provided to customize the level of logging and the log file name.
+These three arguments are specified by the user in the JSON argument file.
+In this example, <code class="docutils literal notranslate"><span class="pre">log_level_cmd</span></code> and <code class="docutils literal notranslate"><span class="pre">log_level_file</span></code> specify the output level of log messages to the screen and file, respectively.
+The level can be one of the following: <code class="docutils literal notranslate"><span class="pre">debug</span></code>, <code class="docutils literal notranslate"><span class="pre">info</span></code>, <code class="docutils literal notranslate"><span class="pre">warning</span></code>, <code class="docutils literal notranslate"><span class="pre">error</span></code>, <code class="docutils literal notranslate"><span class="pre">critical</span></code>, with logging level increasing from the first to the last.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">msgpi.logger</span> <span class="k">as</span> <span class="nn">mlog</span>
+
+<span class="n">log_level_cmd</span> <span class="o">=</span> <span class="s1">&#39;INFO&#39;</span>
+<span class="n">log_level_file</span> <span class="o">=</span> <span class="s1">&#39;INFO&#39;</span>
+<span class="n">log_file_name</span> <span class="o">=</span> <span class="s1">&#39;log.txt&#39;</span>
+<span class="k">if</span> <span class="s1">&#39;log_level_cmd&#39;</span> <span class="ow">in</span> <span class="n">interface_args</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="n">log_level_cmd</span> <span class="o">=</span> <span class="n">interface_args</span><span class="p">[</span><span class="s1">&#39;log_level_cmd&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="k">if</span> <span class="s1">&#39;log_level_file&#39;</span> <span class="ow">in</span> <span class="n">interface_args</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="n">log_level_file</span> <span class="o">=</span> <span class="n">interface_args</span><span class="p">[</span><span class="s1">&#39;log_level_file&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="k">if</span> <span class="s1">&#39;log_file_name&#39;</span> <span class="ow">in</span> <span class="n">interface_args</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="n">log_file_name</span> <span class="o">=</span> <span class="n">interface_args</span><span class="p">[</span><span class="s1">&#39;log_file_name&#39;</span><span class="p">]</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">mlog</span><span class="o">.</span><span class="n">initLogger</span><span class="p">(</span>
+    <span class="vm">__name__</span><span class="p">,</span>
+    <span class="n">cout_level</span><span class="o">=</span><span class="n">log_level_cmd</span><span class="p">,</span> <span class="n">fout_level</span><span class="o">=</span><span class="n">log_level_file</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">log_file_name</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>To create a log, use one of the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Only messages having a higher level than that specified in the argument will be printed.
+For instance, if <code class="docutils literal notranslate"><span class="pre">log_level_cmd='error'</span></code>, only messages of <code class="docutils literal notranslate"><span class="pre">error</span></code> and <code class="docutils literal notranslate"><span class="pre">critical</span></code> will be printed to the screen.</p>
+</section>
+</section>
+<section id="step-2-cross-sectional-analysis">
+<span id="sect-input-interface-cs-analysis"></span><h2>Step 2: Cross-sectional analysis<a class="headerlink" href="#step-2-cross-sectional-analysis" title="Permalink to this heading">#</a></h2>
+<p>In general this step contains three sub-steps: pre-processing, cross-sectional analysis and post-processing.
+For this example, only first two steps are needed.</p>
+<section id="pre-processing">
+<h3>2.1: Pre-processing<a class="headerlink" href="#pre-processing" title="Permalink to this heading">#</a></h3>
+<p>In this example, two processing functions are evaluated.
+Functions are defined in the file <code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code> and their names are specified by the key <code class="docutils literal notranslate"><span class="pre">cs_pre_process</span></code> in the JSON argument file.
+Functions will be evaluated sequentially according to their order specified in the argument file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">interface_args</span><span class="p">[</span><span class="s1">&#39;cs_pre_process&#39;</span><span class="p">]:</span>
+        <span class="nb">eval</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;dpf.</span><span class="si">{</span><span class="n">func</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)(</span><span class="n">params</span><span class="p">,</span> <span class="n">results</span><span class="p">,</span> <span class="n">interface_args</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</section>
+<section id="cross-sectional-analysis">
+<h3>2.2: Cross-sectional analysis<a class="headerlink" href="#cross-sectional-analysis" title="Permalink to this heading">#</a></h3>
+<p>First, get the cross-section name and template file name from the argument file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cs_name</span><span class="p">,</span> <span class="n">cs_design_tmp</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">interface_args</span><span class="p">[</span><span class="s1">&#39;cross-section_design_template&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Then use the cross-section name to create a new <code class="docutils literal notranslate"><span class="pre">CrossSection</span></code> object:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">msgpi.cross_section</span> <span class="k">as</span> <span class="nn">mcs</span>
+<span class="n">cs</span> <span class="o">=</span> <span class="n">mcs</span><span class="o">.</span><span class="n">CrossSection</span><span class="p">(</span><span class="n">cs_name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Also the template file name needs to be added to this object:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cs</span><span class="o">.</span><span class="n">fn_design_tmp</span> <span class="o">=</span> <span class="n">cs_design_tmp</span>
+</pre></div>
+</div>
+<p>Then, the key to carry out the cross-sectional analysis is to create a <code class="docutils literal notranslate"><span class="pre">CrossSectionJob</span></code> object.
+Creating of this object requires a <code class="docutils literal notranslate"><span class="pre">CrossSection</span></code> object, a dictionary of parameters (<code class="docutils literal notranslate"><span class="pre">params</span></code>), a dictionary of interface arguments (<code class="docutils literal notranslate"><span class="pre">interface_args</span></code>) and an optional logger:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">msgpi.interface</span> <span class="k">as</span> <span class="nn">mint</span>
+<span class="n">cs_job</span> <span class="o">=</span> <span class="n">mint</span><span class="o">.</span><span class="n">CrossSectionJob</span><span class="p">(</span><span class="n">cs</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">interface_args</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Finally, to carry out the actual analysis, just simply call the <code class="docutils literal notranslate"><span class="pre">run()</span></code> function of the job:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cs_job</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The complete beam properties will be stored in <code class="docutils literal notranslate"><span class="pre">cs_job.cs.props</span></code>.
+Some of the properties requested in the argument file (<code class="docutils literal notranslate"><span class="pre">beam_properties</span></code>) will be stored in <code class="docutils literal notranslate"><span class="pre">cs_job.outputs</span></code>.</p>
+</section>
+</section>
+<section id="step-3-post-processing">
+<span id="sect-input-interface-postpro"></span><h2>Step 3: Post-processing<a class="headerlink" href="#step-3-post-processing" title="Permalink to this heading">#</a></h2>
+<p>This step is for calculating the actual responses (e.g., objective) from intermediate quantities (e.g., beam properties).
+Unlike the pre-processing, here the script only calls a single function named <code class="docutils literal notranslate"><span class="pre">postprocess</span></code> from the file <code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code>.
+This function accepts the following five arguments: <code class="docutils literal notranslate"><span class="pre">params</span></code>, <code class="docutils literal notranslate"><span class="pre">results</span></code>, <code class="docutils literal notranslate"><span class="pre">interface_args</span></code>, <code class="docutils literal notranslate"><span class="pre">cs_job.inputs</span></code>, <code class="docutils literal notranslate"><span class="pre">cs_job.outputs</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;dpf.postprocess&#39;</span><span class="p">)(</span>
+    <span class="n">params</span><span class="p">,</span> <span class="n">results</span><span class="p">,</span> <span class="n">interface_args</span><span class="p">,</span> <span class="n">cs_job</span><span class="o">.</span><span class="n">inputs</span><span class="p">,</span> <span class="n">cs_job</span><span class="o">.</span><span class="n">outputs</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Then, we need to implement this function in the file <code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code> to accomplish all kinds of calculations of the final output.
+See Section: <a class="reference internal" href="inputs_data_process.html#sect-input-process"><span class="std std-ref">Data Processing Functions (data_proc_funcs.py)</span></a>.</p>
+</section>
+<section id="step-4-writing-outputs">
+<span id="sect-input-interface-output"></span><h2>Step 4: Writing outputs<a class="headerlink" href="#step-4-writing-outputs" title="Permalink to this heading">#</a></h2>
+<p>The last step is to write results into files.
+Interim results can be directly dumped to a JSON file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;interim.out&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fo</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;interim&#39;</span><span class="p">],</span> <span class="n">fo</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For the final results that will be read by Dakota, they need to be written in a correct order:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;output.out&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fo</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">results</span><span class="p">[</span><span class="s1">&#39;final&#39;</span><span class="p">]:</span>
+        <span class="n">fo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s1">24.16E</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="exception">
+<span id="sect-input-interface-except"></span><h2>Exception<a class="headerlink" href="#exception" title="Permalink to this heading">#</a></h2>
+<p>In case that there are errors and the analysis cannot be done successfully, the keyword <code class="docutils literal notranslate"><span class="pre">FAIL</span></code> should be written into the result file, which is required by Dakota:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;output.out&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fo</span><span class="p">:</span>
+    <span class="n">fo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;FAIL&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Exception error messages can be printed out:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">traceback</span> <span class="k">as</span> <span class="nn">tb</span>
+<span class="n">e</span> <span class="o">=</span> <span class="n">tb</span><span class="o">.</span><span class="n">format_exc</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The traceback module will trace back the exception through nested functions.</p>
+</section>
+<section id="complete-file">
+<h2>Complete file<a class="headerlink" href="#complete-file" title="Permalink to this heading">#</a></h2>
+<div class="literal-block-wrapper docutils container" id="code-interface">
+<div class="code-block-caption"><span class="caption-number">Listing 3 </span><span class="caption-text">interface.py</span><a class="headerlink" href="#code-interface" title="Permalink to this code">#</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">traceback</span> <span class="k">as</span> <span class="nn">tb</span>
+
+<span class="kn">import</span> <span class="nn">msgpi.cross_section</span> <span class="k">as</span> <span class="nn">mcs</span>
+<span class="kn">import</span> <span class="nn">msgpi.interface</span> <span class="k">as</span> <span class="nn">mint</span>
+<span class="kn">import</span> <span class="nn">msgpi.logger</span> <span class="k">as</span> <span class="nn">mlog</span>
+<span class="kn">import</span> <span class="nn">dakota.interfacing</span> <span class="k">as</span> <span class="nn">di</span>
+
+
+<span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">fn_json_args</span><span class="p">):</span>
+
+    <span class="k">try</span><span class="p">:</span>
+
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">results</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;interim&quot;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="s2">&quot;final&quot;</span><span class="p">:</span> <span class="p">[]</span>
+        <span class="p">}</span>
+
+
+        <span class="c1"># ------------------------------------------------------------</span>
+        <span class="c1"># FROM DAKOTA</span>
+        <span class="c1"># ------------------------------------------------------------</span>
+
+        <span class="n">dakota_params</span><span class="p">,</span> <span class="n">dakota_results</span> <span class="o">=</span> <span class="n">di</span><span class="o">.</span><span class="n">read_parameters_file</span><span class="p">(</span>
+            <span class="s1">&#39;input.in&#39;</span><span class="p">,</span> <span class="s1">&#39;output.out&#39;</span>
+        <span class="p">)</span>
+
+        <span class="n">evid</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">dakota_params</span><span class="o">.</span><span class="n">eval_id</span><span class="p">)</span>
+        <span class="n">log_prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;eval </span><span class="si">{</span><span class="n">evid</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="n">params</span><span class="p">[</span><span class="s1">&#39;eval_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">evid</span>
+        <span class="k">for</span> <span class="n">param_name</span> <span class="ow">in</span> <span class="n">dakota_params</span><span class="o">.</span><span class="n">descriptors</span><span class="p">:</span>
+            <span class="n">params</span><span class="p">[</span><span class="n">param_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">dakota_params</span><span class="p">[</span><span class="n">param_name</span><span class="p">]</span>
+
+        <span class="c1"># ------------------------------------------------------------</span>
+        <span class="c1"># FROM DAKOTA END</span>
+        <span class="c1"># ------------------------------------------------------------</span>
+
+
+        <span class="c1"># Load JSON arguments</span>
+        <span class="c1"># -------------------</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fn_json_args</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fo</span><span class="p">:</span>
+            <span class="n">interface_args</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fo</span><span class="p">)</span>
+
+        <span class="c1"># Load data processing module</span>
+        <span class="c1"># ---------------------------</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">fn_dpf</span> <span class="o">=</span> <span class="n">interface_args</span><span class="p">[</span><span class="s1">&#39;data_process_functions_file&#39;</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">fn_dpf</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+                <span class="n">import_str</span> <span class="o">=</span> <span class="s1">&#39;import </span><span class="si">{0}</span><span class="s1"> as dpf&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fn_dpf</span><span class="p">)</span>
+                <span class="n">exec</span><span class="p">(</span><span class="n">import_str</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+
+        <span class="c1"># Logger initialization</span>
+        <span class="c1"># ---------------------</span>
+
+        <span class="n">log_level_cmd</span> <span class="o">=</span> <span class="s1">&#39;INFO&#39;</span>
+        <span class="n">log_level_file</span> <span class="o">=</span> <span class="s1">&#39;INFO&#39;</span>
+        <span class="n">log_file_name</span> <span class="o">=</span> <span class="s1">&#39;log.txt&#39;</span>
+        <span class="k">if</span> <span class="s1">&#39;log_level_cmd&#39;</span> <span class="ow">in</span> <span class="n">interface_args</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">log_level_cmd</span> <span class="o">=</span> <span class="n">interface_args</span><span class="p">[</span><span class="s1">&#39;log_level_cmd&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+        <span class="k">if</span> <span class="s1">&#39;log_level_file&#39;</span> <span class="ow">in</span> <span class="n">interface_args</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">log_level_file</span> <span class="o">=</span> <span class="n">interface_args</span><span class="p">[</span><span class="s1">&#39;log_level_file&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+        <span class="k">if</span> <span class="s1">&#39;log_file_name&#39;</span> <span class="ow">in</span> <span class="n">interface_args</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">log_file_name</span> <span class="o">=</span> <span class="n">interface_args</span><span class="p">[</span><span class="s1">&#39;log_file_name&#39;</span><span class="p">]</span>
+        <span class="n">logger</span> <span class="o">=</span> <span class="n">mlog</span><span class="o">.</span><span class="n">initLogger</span><span class="p">(</span>
+            <span class="vm">__name__</span><span class="p">,</span>
+            <span class="n">cout_level</span><span class="o">=</span><span class="n">log_level_cmd</span><span class="p">,</span> <span class="n">fout_level</span><span class="o">=</span><span class="n">log_level_file</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">log_file_name</span>
+        <span class="p">)</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">log_prompt</span><span class="si">}</span><span class="s1"> start&#39;</span><span class="p">)</span>
+
+
+
+        <span class="c1"># ------------------------------------------------------------</span>
+        <span class="c1"># CROSS-SECTION MODULE</span>
+        <span class="c1"># ------------------------------------------------------------</span>
+
+        <span class="c1"># CS pre-processing</span>
+        <span class="c1"># -----------------</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">interface_args</span><span class="p">[</span><span class="s1">&#39;cs_pre_process&#39;</span><span class="p">]:</span>
+                <span class="nb">eval</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;dpf.</span><span class="si">{</span><span class="n">func</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)(</span><span class="n">params</span><span class="p">,</span> <span class="n">results</span><span class="p">,</span> <span class="n">interface_args</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+        <span class="c1"># CS analysis</span>
+        <span class="c1"># -----------</span>
+        <span class="n">cs_name</span><span class="p">,</span> <span class="n">cs_design_tmp</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">interface_args</span><span class="p">[</span><span class="s1">&#39;cross-section_design_template&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">cs</span> <span class="o">=</span> <span class="n">mcs</span><span class="o">.</span><span class="n">CrossSection</span><span class="p">(</span><span class="n">cs_name</span><span class="p">)</span>
+        <span class="n">cs</span><span class="o">.</span><span class="n">fn_design_tmp</span> <span class="o">=</span> <span class="n">cs_design_tmp</span>
+        <span class="n">cs_job</span> <span class="o">=</span> <span class="n">mint</span><span class="o">.</span><span class="n">CrossSectionJob</span><span class="p">(</span><span class="n">cs</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">interface_args</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">)</span>
+        <span class="n">cs_job</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+
+        <span class="c1"># CS post-processing</span>
+        <span class="c1"># ------------------</span>
+
+        <span class="c1"># ------------------------------------------------------------</span>
+        <span class="c1"># CROSS-SECTION MODULE END</span>
+        <span class="c1"># ------------------------------------------------------------</span>
+
+
+        <span class="c1"># Overall post-processing of results</span>
+        <span class="c1"># ----------------------------------</span>
+
+        <span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;dpf.postprocess&#39;</span><span class="p">)(</span>
+            <span class="n">params</span><span class="p">,</span> <span class="n">results</span><span class="p">,</span> <span class="n">interface_args</span><span class="p">,</span> <span class="n">cs_job</span><span class="o">.</span><span class="n">inputs</span><span class="p">,</span> <span class="n">cs_job</span><span class="o">.</span><span class="n">outputs</span>
+        <span class="p">)</span>
+
+
+        <span class="c1"># Write output</span>
+        <span class="c1"># ------------</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;interim.out&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fo</span><span class="p">:</span>
+            <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;interim&#39;</span><span class="p">],</span> <span class="n">fo</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;output.out&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fo</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">results</span><span class="p">[</span><span class="s1">&#39;final&#39;</span><span class="p">]:</span>
+                <span class="n">fo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s1">24.16E</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">log_prompt</span><span class="si">}</span><span class="s1"> finished&#39;</span><span class="p">)</span>
+
+        <span class="k">return</span>
+
+
+
+
+    <span class="k">except</span><span class="p">:</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">log_prompt</span><span class="si">}</span><span class="s1"> failed&#39;</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;output.out&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fo</span><span class="p">:</span>
+            <span class="n">fo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;FAIL&#39;</span><span class="p">)</span>
+
+        <span class="n">e</span> <span class="o">=</span> <span class="n">tb</span><span class="o">.</span><span class="n">format_exc</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+        <span class="k">return</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">process</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="inputs_cs_airfoil.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Cross-section Airfoil Data (<code class="docutils literal notranslate"><span class="pre">sc1095.dat</span></code>)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="inputs_arguments.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Interface Arguments (<code class="docutils literal notranslate"><span class="pre">interface_args.json</span></code>)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-management">Data management</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-initialization">Step 1: Initialization</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-inputs-from-dakota">1.1: Reading inputs from Dakota</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-arguments-from-the-json-file">1.2: Reading arguments from the JSON file</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-module-of-data-processing-functions">1.3: Loading the module of data processing functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initializing-the-logger">1.4: Initializing the logger</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-cross-sectional-analysis">Step 2: Cross-sectional analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-processing">2.1: Pre-processing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-sectional-analysis">2.2: Cross-sectional analysis</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-post-processing">Step 3: Post-processing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-writing-outputs">Step 4: Writing outputs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exception">Exception</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-file">Complete file</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Su Tian, Haodong Du, Fei Tao and Wenbin Yu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022, Multiscale Structural Mechanics Group, Purdue University.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
