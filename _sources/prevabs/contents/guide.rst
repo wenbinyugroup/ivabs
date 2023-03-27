@@ -1,3 +1,5 @@
+.. _section-prevabs_guide:
+
 Guide for Preparing Input Files
 ===============================
 

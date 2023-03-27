@@ -167,7 +167,7 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../guide/index.html">Guide to Main Input File</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../guide/intro_yaml.html">A Brief Introduction to YAML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../guide/input_design.html">Design Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guide/input_design.html">Structural Design</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../guide/input_analysis.html">Analysis Steps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../guide/input_study.html">Design Study</a></li>
 </ul>
@@ -440,41 +440,41 @@ document.write(`
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">gj</span></code></p></td>
 <td><p>Torsional stiffness</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ei22</span></code></p></td>
-<td><p>Principal bending stiffness around the x2 axis (flapwise)</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">eiyy</span></code> | <code class="docutils literal notranslate"><span class="pre">ei22</span></code></p></td>
+<td><p>Principal bending stiffness around the <span class="math notranslate nohighlight">\(y\)</span> (<span class="math notranslate nohighlight">\(x_2\)</span>) axis (flapwise)</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ei33</span></code></p></td>
-<td><p>Principal bending stiffness around the x3 axis (chordwise or lead-lag)</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">eizz</span></code> | <code class="docutils literal notranslate"><span class="pre">ei33</span></code></p></td>
+<td><p>Principal bending stiffness around the <span class="math notranslate nohighlight">\(z\)</span> (<span class="math notranslate nohighlight">\(x_3\)</span>) axis (chordwise or lead-lag)</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ga22</span></code></p></td>
-<td><p>Principal shear stiffness in along the x2 axis</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">gayy</span></code> | <code class="docutils literal notranslate"><span class="pre">ga22</span></code></p></td>
+<td><p>Principal shear stiffness in along the <span class="math notranslate nohighlight">\(y\)</span> (<span class="math notranslate nohighlight">\(x_2\)</span>) axis</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ga33</span></code></p></td>
-<td><p>Principal shear stiffness in along the x3 axis</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">gazz</span></code> | <code class="docutils literal notranslate"><span class="pre">ga33</span></code></p></td>
+<td><p>Principal shear stiffness in along the <span class="math notranslate nohighlight">\(z\)</span> (<span class="math notranslate nohighlight">\(x_3\)</span>) axis</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">stfijc</span></code> (<code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">j</span></code> are numbers 1 to 6)</p></td>
-<td><p>Entry (i, j) of the 4x4 classical stiffness matrix</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">stfijc</span></code> (<code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">j</span></code> are numbers 1 to 4)</p></td>
+<td><p>Entry (i, j) of the 4x4 classical stiffness matrix (<span class="math notranslate nohighlight">\(C^b_{ij}\)</span>)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">stfijr</span></code> (<code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">j</span></code> are numbers 1 to 6)</p></td>
-<td><p>Entry (i, j) of the 6x6 refined stiffness matrix</p></td>
+<td><p>Entry (i, j) of the 6x6 refined stiffness matrix (<span class="math notranslate nohighlight">\(C^b_{ij}\)</span>)</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">cmpijc</span></code> (<code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">j</span></code> are numbers 1 to 6)</p></td>
-<td><p>Entry (i, j) of the 4x4 classical compliance matrix</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">cmpijc</span></code> (<code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">j</span></code> are numbers 1 to 4)</p></td>
+<td><p>Entry (i, j) of the 4x4 classical compliance matrix (<span class="math notranslate nohighlight">\(S^b_{ij}\)</span>)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">cmpijr</span></code> (<code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">j</span></code> are numbers 1 to 6)</p></td>
-<td><p>Entry (i, j) of the 6x6 refined compliance matrix</p></td>
+<td><p>Entry (i, j) of the 6x6 refined compliance matrix (<span class="math notranslate nohighlight">\(S^b_{ij}\)</span>)</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tcy</span></code> | <code class="docutils literal notranslate"><span class="pre">tc2</span></code></p></td>
-<td><p>y (or x2) component of the tension center</p></td>
+<td><p><span class="math notranslate nohighlight">\(y\)</span> (<span class="math notranslate nohighlight">\(x_2\)</span>) component of the tension center</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">tcz</span></code> | <code class="docutils literal notranslate"><span class="pre">tc3</span></code></p></td>
-<td><p>z (or x3) component of the tension center</p></td>
+<td><p><span class="math notranslate nohighlight">\(z\)</span> (<span class="math notranslate nohighlight">\(x_3\)</span>) component of the tension center</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">scy</span></code> | <code class="docutils literal notranslate"><span class="pre">sc2</span></code></p></td>
-<td><p>y (or x2) component of the shear center</p></td>
+<td><p><span class="math notranslate nohighlight">\(y\)</span> (<span class="math notranslate nohighlight">\(x_2\)</span>) component of the shear center</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">scz</span></code> | <code class="docutils literal notranslate"><span class="pre">sc3</span></code></p></td>
-<td><p>z (or x3) component of the shear center</p></td>
+<td><p><span class="math notranslate nohighlight">\(z\)</span> (<span class="math notranslate nohighlight">\(x_3\)</span>) component of the shear center</p></td>
 </tr>
 </tbody>
 </table>
@@ -492,6 +492,19 @@ C^b_{14} &amp; C^b_{24} &amp; C^b_{34} &amp; C^b_{44}
 \begin{Bmatrix}
 \gamma_{11} \\ \kappa_{11} \\ \kappa_{12} \\ \kappa_{13}
 \end{Bmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{Bmatrix}
+\gamma_{11} \\ \kappa_{11} \\ \kappa_{12} \\ \kappa_{13}
+\end{Bmatrix} =
+\begin{bmatrix}
+S^b_{11} &amp; S^b_{12} &amp; S^b_{13} &amp; S^b_{14} \\
+S^b_{12} &amp; S^b_{22} &amp; S^b_{23} &amp; S^b_{24} \\
+S^b_{13} &amp; S^b_{23} &amp; S^b_{33} &amp; S^b_{34} \\
+S^b_{14} &amp; S^b_{24} &amp; S^b_{34} &amp; S^b_{44}
+\end{bmatrix}
+\begin{Bmatrix}
+F_1 \\ M_1 \\ M_2 \\ M_3
+\end{Bmatrix}\end{split}\]</div>
 <p>Constitutive relation of the Timoshenko beam model:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{Bmatrix}
@@ -507,6 +520,21 @@ C^b_{16} &amp; C^b_{26} &amp; C^b_{36} &amp; C^b_{46} &amp; C^b_{56} &amp; C^b_{
 \end{bmatrix}
 \begin{Bmatrix}
 \gamma_{11} \\ \gamma_{12} \\ \gamma_{13} \\ \kappa_{11} \\ \kappa_{12} \\ \kappa_{13}
+\end{Bmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{Bmatrix}
+\gamma_{11} \\ \gamma_{12} \\ \gamma_{13} \\ \kappa_{11} \\ \kappa_{12} \\ \kappa_{13}
+\end{Bmatrix} =
+\begin{bmatrix}
+S^b_{11} &amp; S^b_{12} &amp; S^b_{13} &amp; S^b_{14} &amp; S^b_{15} &amp; S^b_{16} \\
+S^b_{12} &amp; S^b_{22} &amp; S^b_{23} &amp; S^b_{24} &amp; S^b_{25} &amp; S^b_{26} \\
+S^b_{13} &amp; S^b_{23} &amp; S^b_{33} &amp; S^b_{34} &amp; S^b_{35} &amp; S^b_{36} \\
+S^b_{14} &amp; S^b_{24} &amp; S^b_{34} &amp; S^b_{44} &amp; S^b_{45} &amp; S^b_{46} \\
+S^b_{15} &amp; S^b_{25} &amp; S^b_{35} &amp; S^b_{45} &amp; S^b_{55} &amp; S^b_{56} \\
+S^b_{16} &amp; S^b_{26} &amp; S^b_{36} &amp; S^b_{46} &amp; S^b_{56} &amp; S^b_{66} \\
+\end{bmatrix}
+\begin{Bmatrix}
+F_1 \\ F_2 \\ F_3 \\ M_1 \\ M_2 \\ M_3
 \end{Bmatrix}\end{split}\]</div>
 </section>
 </section>

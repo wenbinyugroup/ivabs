@@ -18,7 +18,7 @@ To run the tutorial, start a command line prompt, change directory to this tutor
 
     python run.py cs_design_analysis.yml
 
-Result can be found in the file `cs_design_analysis.out`.
+Result can be found in the file ``cs_design_analysis.out``.
 
 
 
@@ -34,23 +34,31 @@ All others are the supporting files.
 
     * - File
       - Description
-    * - `cs_design_analysis.yml`
+    * - ``cs_design_analysis.yml``
       - Main input file
-    * - `run.py`
+    * - ``run.py``
       - Python script running the analysis
-    * - `airfoil_simple.xml.tmp`
+    * - ``airfoil_simple.xml.tmp``
       - Cross-sectional design template
-    * - `SC1095.dat`
+    * - ``SC1095.dat``
       - Airfoil data
-    * - `material_database_us_ft.xml`
+    * - ``material_database_us_ft.xml``
       - Material database
 
 This tutorial mainly focuses on the main input file.
 Tutorials on other files will be explained later.
 
 
-Main input file specification (`cs_design_analysis.yml`)
+
+
+Main input file specification (``cs_design_analysis.yml``)
 ------------------------------------------------------------
+
+..  note::
+
+    For more details on the syntax of the YAML format, please see :ref:`section-yaml`.
+
+
 
 Basic layout of the main input file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -70,6 +78,8 @@ Basic layout of the main input file
 Define the cross-section
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+This block specifies the base design of the cross-section that will be analyzed.
+
 ..  code-block:: yaml
     :linenos:
 
@@ -87,6 +97,14 @@ Define the cross-section
             tool: "vabs"
 
 
+
+..  note::
+
+    For more details on how to prepare the parameterized base design of a cross-section (``airfoil_simple.xml.tmp``), please see :ref:`section-ivabs_parameterization`.
+
+
+
+
 Define the analysis
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -100,6 +118,11 @@ Define the analysis
           analysis: "h"
           output:
             - value: ["gj", "eiyy", "eizz"]
+
+
+..  note::
+
+    For the complete list of available keys to get beam properties, see :ref:`section-beam_properties`.
 
 
 

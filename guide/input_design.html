@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Design Parameters &#8212; iVABS 0.8 documentation</title>
+    <title>Structural Design &#8212; iVABS 0.8 documentation</title>
   
   
   
@@ -167,7 +167,7 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Guide to Main Input File</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="intro_yaml.html">A Brief Introduction to YAML</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Design Parameters</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Structural Design</a></li>
 <li class="toctree-l2"><a class="reference internal" href="input_analysis.html">Analysis Steps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="input_study.html">Design Study</a></li>
 </ul>
@@ -351,7 +351,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Design Parameters</h1>
+    <h1>Structural Design</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -361,12 +361,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameter-specifications">Parameter specifications</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-parameters">List of parameters</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-of-parameters">Distribution of parameters</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#interpolation-function">Interpolation function</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameter-specifications-parameter">Parameter specifications (<code class="docutils literal notranslate"><span class="pre">parameter</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-of-parameters-distribution">Distribution of parameters (<code class="docutils literal notranslate"><span class="pre">distribution</span></code>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpolation-function-function-interpolation">Interpolation function (<code class="docutils literal notranslate"><span class="pre">function:</span> <span class="pre">"interpolation"</span></code>)</a></li>
 </ul>
 </li>
 </ul>
@@ -382,54 +379,74 @@ document.write(`
                   
   <blockquote>
 <div></div></blockquote>
-<section id="design-parameters">
-<span id="section-input-guide-design"></span><h1>Design Parameters<a class="headerlink" href="#design-parameters" title="Permalink to this heading">#</a></h1>
+<section id="structural-design">
+<span id="section-input-guide-design"></span><h1>Structural Design<a class="headerlink" href="#structural-design" title="Permalink to this heading">#</a></h1>
 <p>This block stores all information defining the structural design.
-The overall layout is shown in <a class="reference internal" href="#lst-input-design-layout"><span class="std std-numref">Listing 7</span></a>.</p>
+The basic logic behind the parametric definition of a structure is as follows.</p>
+<ol class="arabic simple">
+<li><p>Create base designs of cross-sections</p></li>
+<li><p>Identify designable parameters</p></li>
+<li><p>Assign specific values to those parameters to define a specific design of the structure</p></li>
+<li><p>For iterative running of the structural analysis (such as optimizations), choose designed parameters as design variables and specify their design space (range or set)</p></li>
+</ol>
+<p>The overall layout is shown in <a class="reference internal" href="#lst-input-design-layout"><span class="std std-numref">Listing 7</span></a>.</p>
 <div class="literal-block-wrapper docutils container" id="lst-input-design-layout">
 <div class="code-block-caption"><span class="caption-number">Listing 7 </span><span class="caption-text">Layout of the design input block</span><a class="headerlink" href="#lst-input-design-layout" title="Permalink to this code">#</a></div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">design</span><span class="p">:</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">structure</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;...&quot;</span>
+<span class="w">  </span><span class="nt">parameter</span><span class="p">:</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">  </span><span class="nt">distribution</span><span class="p">:</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">  </span><span class="nt">design</span><span class="p">:</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">  </span><span class="nt">cs</span><span class="p">:</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+
+
+<span class="nt">cs</span><span class="p">:</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
-<span class="w">    </span><span class="nt">structure_class</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
-<span class="w">    </span><span class="nt">parameters</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">list</span><span class="p">:</span>
-<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">...</span>
-<span class="w">      </span><span class="nt">distribution</span><span class="p">:</span>
-<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">    </span><span class="nt">parameter</span><span class="p">:</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">    </span><span class="nt">design</span><span class="p">:</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">    </span><span class="nt">model</span><span class="p">:</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">...</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
 </pre></div>
 </div>
 </div>
-<p>Structures are arranged in a list/sequence.
-Each one requires the specifications of name, class, and parameters.
-Name (<code class="docutils literal notranslate"><span class="pre">name</span></code>) is a string that can be arbitrarily defined by the users.
-Class (<code class="docutils literal notranslate"><span class="pre">structure_class</span></code>) specifies what type of structure this is.
-Users choose one of built-in classes for this keyword.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Currently supported classes are blade (<code class="docutils literal notranslate"><span class="pre">blade</span></code>) and cross-section (<code class="docutils literal notranslate"><span class="pre">cs</span></code>).</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Currently, only one <code class="docutils literal notranslate"><span class="pre">blade</span></code> class structure is supported.</p>
-</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">structure</span></code> block specifies the top-level (global) structural design for the current analysis or design optimization, such as a beam structure or a plate structure.
+The <code class="docutils literal notranslate"><span class="pre">cs</span></code> block is a library storing a list of base designs of cross-sections that will be used for the global structure.
+Note that both <code class="docutils literal notranslate"><span class="pre">structure</span></code> and <code class="docutils literal notranslate"><span class="pre">cs</span></code> blocks share some common input entries.
+These entries have mostly the same input syntax and meanings.</p>
+<p>Two key entries are the <code class="docutils literal notranslate"><span class="pre">design</span></code>, which specifies the base design, and <code class="docutils literal notranslate"><span class="pre">parameter</span></code>, which specifies the designable parameters.</p>
 <p>Parameters (<code class="docutils literal notranslate"><span class="pre">parameters</span></code>) specify the values defining a specific design of the structure.
 They can be given either in a list or as distributions with respect to the structural dimensions.
-Supported parameters depend on the structural class.
-For slender structures analyzed through cross-sections, please check the Section <a class="reference internal" href="../ivabs/parameterization.html#section-ivabs-parameterization"><span class="std std-ref">Parameterization of Composite Slender Structures</span></a>.</p>
-<section id="parameter-specifications">
-<h2>Parameter specifications<a class="headerlink" href="#parameter-specifications" title="Permalink to this heading">#</a></h2>
-<section id="list-of-parameters">
-<h3>List of parameters<a class="headerlink" href="#list-of-parameters" title="Permalink to this heading">#</a></h3>
+Supported parameters depend on the structural class.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more information on the parameterization of beam structures and cross-sections, please check the Section <a class="reference internal" href="../ivabs/parameterization.html#section-ivabs-parameterization"><span class="std std-ref">Parameterization of Composite Slender Structures</span></a>.</p>
+</div>
+<section id="parameter-specifications-parameter">
+<h2>Parameter specifications (<code class="docutils literal notranslate"><span class="pre">parameter</span></code>)<a class="headerlink" href="#parameter-specifications-parameter" title="Permalink to this heading">#</a></h2>
 <p>In this section, structural design specifications are given in a list of pairs of parameter name and value.
 The basic syntax is shown in <a class="reference internal" href="#lst-input-design-param-list"><span class="std std-numref">Listing 8</span></a>.</p>
 <div class="literal-block-wrapper docutils container" id="lst-input-design-param-list">
 <div class="code-block-caption"><span class="caption-number">Listing 8 </span><span class="caption-text">Parameter list</span><a class="headerlink" href="#lst-input-design-param-list" title="Permalink to this code">#</a></div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">list</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">param_1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value_1</span>
-<span class="w">  </span><span class="nt">param_2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value_2</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">structure</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">parameter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">param_1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value_1</span>
+<span class="w">    </span><span class="nt">param_2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value_2</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+
+<span class="nt">cs</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;cs1&quot;</span>
+<span class="w">    </span><span class="nt">parameter</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">param_3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value_3</span>
+<span class="w">      </span><span class="nt">param_4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value_4</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">...</span>
 </pre></div>
 </div>
 </div>
@@ -437,20 +454,21 @@ The basic syntax is shown in <a class="reference internal" href="#lst-input-desi
 These parameters can also be varied by an optimization method.
 This is done by directly using the parameter name as the design variable name.</p>
 </section>
-<section id="distribution-of-parameters">
-<h3>Distribution of parameters<a class="headerlink" href="#distribution-of-parameters" title="Permalink to this heading">#</a></h3>
+<section id="distribution-of-parameters-distribution">
+<h2>Distribution of parameters (<code class="docutils literal notranslate"><span class="pre">distribution</span></code>)<a class="headerlink" href="#distribution-of-parameters-distribution" title="Permalink to this heading">#</a></h2>
 <p>In this section, structural parameters are defined as distribution functions with respect to the structural dimensions.
 For slender structures that will be analyzed using beam models, this means that parameters are functions of a single coordinate along the longitudinal direction (e.g., blade span).
 The basic syntax is shown in <a class="reference internal" href="#lst-input-design-param-distr"><span class="std std-numref">Listing 9</span></a>.</p>
 <div class="literal-block-wrapper docutils container" id="lst-input-design-param-distr">
 <div class="code-block-caption"><span class="caption-number">Listing 9 </span><span class="caption-text">Parameter distribution</span><a class="headerlink" href="#lst-input-design-param-distr" title="Permalink to this code">#</a></div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">distributions</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;...&quot;</span>
-<span class="w">    </span><span class="nt">function</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;...&quot;</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">structure</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">distribution</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;...&quot;</span>
+<span class="w">      </span><span class="nt">function</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;...&quot;</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;...&quot;</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">...</span>
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;...&quot;</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">...</span>
 </pre></div>
 </div>
 </div>
@@ -461,22 +479,23 @@ Function (<code class="docutils literal notranslate"><span class="pre">function<
 <p>Currently only interpolation function is supported.</p>
 </div>
 <p>Other specifications depend on the type of function selected.</p>
-<section id="interpolation-function">
-<h4>Interpolation function<a class="headerlink" href="#interpolation-function" title="Permalink to this heading">#</a></h4>
-<p>This option (<code class="docutils literal notranslate"><span class="pre">function:</span> <span class="pre">&quot;interpolation&quot;</span></code>) creates one or multiple distribution functions by interpolating a table of data.</p>
+<section id="interpolation-function-function-interpolation">
+<h3>Interpolation function (<code class="docutils literal notranslate"><span class="pre">function:</span> <span class="pre">&quot;interpolation&quot;</span></code>)<a class="headerlink" href="#interpolation-function-function-interpolation" title="Permalink to this heading">#</a></h3>
+<p>This option creates one or multiple distribution functions by interpolating a table of data.</p>
 <div class="literal-block-wrapper docutils container" id="lst-input-design-param-distr-interp">
 <div class="code-block-caption"><span class="caption-number">Listing 10 </span><span class="caption-text">Interpolation function</span><a class="headerlink" href="#lst-input-design-param-distr-interp" title="Permalink to this code">#</a></div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">distributions</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;...&quot;</span>
-<span class="w">    </span><span class="nt">function</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;interpolation&quot;</span>
-<span class="w">    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;linear&quot;</span>
-<span class="w">    </span><span class="nt">xnames</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;x&quot;</span>
-<span class="w">    </span><span class="nt">ynames</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;a&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;b&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;c&quot;</span><span class="p p-Indicator">]</span>
-<span class="w">    </span><span class="nt">ytypes</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;float&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;int&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;string&quot;</span><span class="p p-Indicator">]</span>
-<span class="w">    </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<span class="w">      </span><span class="no">x1, a1, b1, c1</span>
-<span class="w">      </span><span class="no">x2, a2, b2, c2</span>
-<span class="w">      </span><span class="no">...</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">structure</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">distribution</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;...&quot;</span>
+<span class="w">      </span><span class="nt">function</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;interpolation&quot;</span>
+<span class="w">      </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;linear&quot;</span>
+<span class="w">      </span><span class="nt">xnames</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;x&quot;</span>
+<span class="w">      </span><span class="nt">ynames</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;a&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;b&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;c&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">ytypes</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;float&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;int&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;string&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">x1, a1, b1, c1</span>
+<span class="w">        </span><span class="no">x2, a2, b2, c2</span>
+<span class="w">        </span><span class="no">...</span>
 </pre></div>
 </div>
 </div>
@@ -519,7 +538,6 @@ The design variable name is prepended to the value followed by a colon:</p>
 During any iterative process (parametric study, optimization, etc.), values marked by the design variable names will be substituted by new values generated in the current iteration.
 It is acceptable that a quantity is marked by a label but not used in Dakota.
 In other words, values after the colon can be treated as the default ones.</p>
-</section>
 </section>
 </section>
 </section>
@@ -566,12 +584,9 @@ In other words, values after the colon can be treated as the default ones.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameter-specifications">Parameter specifications</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-parameters">List of parameters</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-of-parameters">Distribution of parameters</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#interpolation-function">Interpolation function</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameter-specifications-parameter">Parameter specifications (<code class="docutils literal notranslate"><span class="pre">parameter</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-of-parameters-distribution">Distribution of parameters (<code class="docutils literal notranslate"><span class="pre">distribution</span></code>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpolation-function-function-interpolation">Interpolation function (<code class="docutils literal notranslate"><span class="pre">function:</span> <span class="pre">"interpolation"</span></code>)</a></li>
 </ul>
 </li>
 </ul>

@@ -167,7 +167,7 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../guide/index.html">Guide to Main Input File</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../guide/intro_yaml.html">A Brief Introduction to YAML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../guide/input_design.html">Design Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guide/input_design.html">Structural Design</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../guide/input_analysis.html">Analysis Steps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../guide/input_study.html">Design Study</a></li>
 </ul>
@@ -338,7 +338,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -354,6 +356,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structural-parameterization-at-the-cross-sectional-level">Structural parameterization at the cross-sectional level</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structural-parameterization-at-the-blade-level">Structural parameterization at the blade level</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -376,6 +387,8 @@ Such method should also be able to provide large enough design spaces and accomm
 <p><span class="caption-number">Figure 14 </span><span class="caption-text">The iVABS parameterization method.</span><a class="headerlink" href="#fig-ivabs-parameterization" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<section id="structural-parameterization-at-the-cross-sectional-level">
+<h2>Structural parameterization at the cross-sectional level<a class="headerlink" href="#structural-parameterization-at-the-cross-sectional-level" title="Permalink to this heading">#</a></h2>
 <p>At the cross-sectional level, VABS requires a high-fidelity and meshed cross-sectional model as the input.
 This means that all details in the composite structure must be created properly.
 PreVABS is the tool that creates such model data given geometric and material information, such as definitions of airfoil, spar location, material properties, layup schemes, etc.
@@ -383,9 +396,17 @@ These inputs can be seen as the “recipe” instructing the code in how to crea
 Some or all of them can be marked with labels and hence become the cross-sectional level design parameters.
 A PreVABS input with such parameter labels can be treated as a design template.
 By assigning specific values to those parameters, users can generate a specific PreVABS input file and carry out the cross-sectional analysis.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more guides to preparing cross-sectional design inputs and templates, please see <a class="reference internal" href="../prevabs/contents/guide.html#section-prevabs-guide"><span class="std std-ref">Guide for Preparing Input Files</span></a>.</p>
+</div>
+</section>
+<section id="structural-parameterization-at-the-blade-level">
+<h2>Structural parameterization at the blade level<a class="headerlink" href="#structural-parameterization-at-the-blade-level" title="Permalink to this heading">#</a></h2>
 <p>At the blade level, manufacturability requires that designs between neighboring cross-sections should relate to each other, so that the whole structure can be manufactured as designed.
 To achieve this, iVABS uses functions to describe the distributions of cross-sectional level parameters along the blade span.
 Coefficients controlling these functions are blade-level design parameters.</p>
+</section>
 </section>
 
 
@@ -421,6 +442,21 @@ Coefficients controlling these functions are blade-level design parameters.</p>
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structural-parameterization-at-the-cross-sectional-level">Structural parameterization at the cross-sectional level</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structural-parameterization-at-the-blade-level">Structural parameterization at the blade level</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

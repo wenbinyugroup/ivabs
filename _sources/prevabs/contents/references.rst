@@ -1,8 +1,6 @@
 References
 ==========
 
-.. [VABS] :download:`VABS Manual </contents/vabs_4_manual.pdf>`
-
 .. [YU2012] Yu, W., Hodges, D. H. and Ho, J. C. (2012) ‘Variational asymptotic beam sectional analysis – An updated version’, International Journal of Engineering Science, 59, pp. 40–64.
 
 .. [YU2005] Yu, W. and Hodges, D. H. (2005) ‘Generalized Timoshenko Theory of the Variational Asymptotic Beam Sectional Analysis’, Journal of the American Helicopter Society, 50(1), pp. 46–55.

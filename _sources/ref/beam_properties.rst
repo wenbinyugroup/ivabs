@@ -60,30 +60,30 @@ Stiffness properties
       - Axial stiffness
     * - ``gj``
       - Torsional stiffness
-    * - ``ei22``
-      - Principal bending stiffness around the x2 axis (flapwise)
-    * - ``ei33``
-      - Principal bending stiffness around the x3 axis (chordwise or lead-lag)
-    * - ``ga22``
-      - Principal shear stiffness in along the x2 axis
-    * - ``ga33``
-      - Principal shear stiffness in along the x3 axis
-    * - ``stfijc`` (``i``, ``j`` are numbers 1 to 6)
-      - Entry (i, j) of the 4x4 classical stiffness matrix
+    * - ``eiyy`` | ``ei22``
+      - Principal bending stiffness around the |y| (|x2|) axis (flapwise)
+    * - ``eizz`` | ``ei33``
+      - Principal bending stiffness around the |z| (|x3|) axis (chordwise or lead-lag)
+    * - ``gayy`` | ``ga22``
+      - Principal shear stiffness in along the |y| (|x2|) axis
+    * - ``gazz`` | ``ga33``
+      - Principal shear stiffness in along the |z| (|x3|) axis
+    * - ``stfijc`` (``i``, ``j`` are numbers 1 to 4)
+      - Entry (i, j) of the 4x4 classical stiffness matrix (:math:`C^b_{ij}`)
     * - ``stfijr`` (``i``, ``j`` are numbers 1 to 6)
-      - Entry (i, j) of the 6x6 refined stiffness matrix
-    * - ``cmpijc`` (``i``, ``j`` are numbers 1 to 6)
-      - Entry (i, j) of the 4x4 classical compliance matrix
+      - Entry (i, j) of the 6x6 refined stiffness matrix (:math:`C^b_{ij}`)
+    * - ``cmpijc`` (``i``, ``j`` are numbers 1 to 4)
+      - Entry (i, j) of the 4x4 classical compliance matrix (:math:`S^b_{ij}`)
     * - ``cmpijr`` (``i``, ``j`` are numbers 1 to 6)
-      - Entry (i, j) of the 6x6 refined compliance matrix
+      - Entry (i, j) of the 6x6 refined compliance matrix (:math:`S^b_{ij}`)
     * - ``tcy`` | ``tc2``
-      - y (or x2) component of the tension center
+      - |y| (|x2|) component of the tension center
     * - ``tcz`` | ``tc3``
-      - z (or x3) component of the tension center
+      - |z| (|x3|) component of the tension center
     * - ``scy`` | ``sc2``
-      - y (or x2) component of the shear center
+      - |y| (|x2|) component of the shear center
     * - ``scz`` | ``sc3``
-      - z (or x3) component of the shear center
+      - |z| (|x3|) component of the shear center
 
 
 Constitutive relation of the Euler-Bernoulli beam model:
@@ -101,6 +101,21 @@ Constitutive relation of the Euler-Bernoulli beam model:
     \end{bmatrix}
     \begin{Bmatrix}
     \gamma_{11} \\ \kappa_{11} \\ \kappa_{12} \\ \kappa_{13}
+    \end{Bmatrix}
+
+..  math::
+
+    \begin{Bmatrix}
+    \gamma_{11} \\ \kappa_{11} \\ \kappa_{12} \\ \kappa_{13}
+    \end{Bmatrix} =
+    \begin{bmatrix}
+    S^b_{11} & S^b_{12} & S^b_{13} & S^b_{14} \\
+    S^b_{12} & S^b_{22} & S^b_{23} & S^b_{24} \\
+    S^b_{13} & S^b_{23} & S^b_{33} & S^b_{34} \\
+    S^b_{14} & S^b_{24} & S^b_{34} & S^b_{44}
+    \end{bmatrix}
+    \begin{Bmatrix}
+    F_1 \\ M_1 \\ M_2 \\ M_3
     \end{Bmatrix}
 
 
@@ -121,5 +136,22 @@ Constitutive relation of the Timoshenko beam model:
     \end{bmatrix}
     \begin{Bmatrix}
     \gamma_{11} \\ \gamma_{12} \\ \gamma_{13} \\ \kappa_{11} \\ \kappa_{12} \\ \kappa_{13}
+    \end{Bmatrix}
+
+..  math::
+
+    \begin{Bmatrix}
+    \gamma_{11} \\ \gamma_{12} \\ \gamma_{13} \\ \kappa_{11} \\ \kappa_{12} \\ \kappa_{13}
+    \end{Bmatrix} =
+    \begin{bmatrix}
+    S^b_{11} & S^b_{12} & S^b_{13} & S^b_{14} & S^b_{15} & S^b_{16} \\
+    S^b_{12} & S^b_{22} & S^b_{23} & S^b_{24} & S^b_{25} & S^b_{26} \\
+    S^b_{13} & S^b_{23} & S^b_{33} & S^b_{34} & S^b_{35} & S^b_{36} \\
+    S^b_{14} & S^b_{24} & S^b_{34} & S^b_{44} & S^b_{45} & S^b_{46} \\
+    S^b_{15} & S^b_{25} & S^b_{35} & S^b_{45} & S^b_{55} & S^b_{56} \\
+    S^b_{16} & S^b_{26} & S^b_{36} & S^b_{46} & S^b_{56} & S^b_{66} \\
+    \end{bmatrix}
+    \begin{Bmatrix}
+    F_1 \\ F_2 \\ F_3 \\ M_1 \\ M_2 \\ M_3
     \end{Bmatrix}
 

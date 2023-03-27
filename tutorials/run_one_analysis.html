@@ -167,7 +167,7 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../guide/index.html">Guide to Main Input File</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../guide/intro_yaml.html">A Brief Introduction to YAML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../guide/input_design.html">Design Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guide/input_design.html">Structural Design</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../guide/input_analysis.html">Analysis Steps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../guide/input_study.html">Design Study</a></li>
 </ul>
@@ -363,7 +363,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-example">Run the example</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#files-of-this-tutorial">Files of this tutorial</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#main-input-file-specification-cs-design-analysis-yml">Main input file specification (<cite>cs_design_analysis.yml</cite>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#main-input-file-specification-cs-design-analysis-yml">Main input file specification (<code class="docutils literal notranslate"><span class="pre">cs_design_analysis.yml</span></code>)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-layout-of-the-main-input-file">Basic layout of the main input file</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define-the-cross-section">Define the cross-section</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define-the-analysis">Define the analysis</a></li>
@@ -394,7 +394,7 @@ Specifically, in this tutorial, we want to set values to the locations of spar w
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>run.py<span class="w"> </span>cs_design_analysis.yml
 </pre></div>
 </div>
-<p>Result can be found in the file <cite>cs_design_analysis.out</cite>.</p>
+<p>Result can be found in the file <code class="docutils literal notranslate"><span class="pre">cs_design_analysis.out</span></code>.</p>
 </section>
 <section id="files-of-this-tutorial">
 <h2>Files of this tutorial<a class="headerlink" href="#files-of-this-tutorial" title="Permalink to this heading">#</a></h2>
@@ -408,19 +408,19 @@ All others are the supporting files.</p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><cite>cs_design_analysis.yml</cite></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">cs_design_analysis.yml</span></code></p></td>
 <td><p>Main input file</p></td>
 </tr>
-<tr class="row-odd"><td><p><cite>run.py</cite></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">run.py</span></code></p></td>
 <td><p>Python script running the analysis</p></td>
 </tr>
-<tr class="row-even"><td><p><cite>airfoil_simple.xml.tmp</cite></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">airfoil_simple.xml.tmp</span></code></p></td>
 <td><p>Cross-sectional design template</p></td>
 </tr>
-<tr class="row-odd"><td><p><cite>SC1095.dat</cite></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SC1095.dat</span></code></p></td>
 <td><p>Airfoil data</p></td>
 </tr>
-<tr class="row-even"><td><p><cite>material_database_us_ft.xml</cite></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">material_database_us_ft.xml</span></code></p></td>
 <td><p>Material database</p></td>
 </tr>
 </tbody>
@@ -429,7 +429,11 @@ All others are the supporting files.</p>
 Tutorials on other files will be explained later.</p>
 </section>
 <section id="main-input-file-specification-cs-design-analysis-yml">
-<h2>Main input file specification (<cite>cs_design_analysis.yml</cite>)<a class="headerlink" href="#main-input-file-specification-cs-design-analysis-yml" title="Permalink to this heading">#</a></h2>
+<h2>Main input file specification (<code class="docutils literal notranslate"><span class="pre">cs_design_analysis.yml</span></code>)<a class="headerlink" href="#main-input-file-specification-cs-design-analysis-yml" title="Permalink to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more details on the syntax of the YAML format, please see <a class="reference internal" href="../guide/intro_yaml.html#section-yaml"><span class="std std-ref">A Brief Introduction to YAML</span></a>.</p>
+</div>
 <section id="basic-layout-of-the-main-input-file">
 <h3>Basic layout of the main input file<a class="headerlink" href="#basic-layout-of-the-main-input-file" title="Permalink to this heading">#</a></h3>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">cs</span><span class="p">:</span>
@@ -442,6 +446,7 @@ Tutorials on other files will be explained later.</p>
 </section>
 <section id="define-the-cross-section">
 <h3>Define the cross-section<a class="headerlink" href="#define-the-cross-section" title="Permalink to this heading">#</a></h3>
+<p>This block specifies the base design of the cross-section that will be analyzed.</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">cs</span><span class="p">:</span>
 <span class="linenos"> 2</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;airfoil&quot;</span>
 <span class="linenos"> 3</span><span class="w">    </span><span class="nt">parameter</span><span class="p">:</span>
@@ -456,6 +461,10 @@ Tutorials on other files will be explained later.</p>
 <span class="linenos">12</span><span class="w">        </span><span class="nt">tool</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;vabs&quot;</span>
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more details on how to prepare the parameterized base design of a cross-section (<code class="docutils literal notranslate"><span class="pre">airfoil_simple.xml.tmp</span></code>), please see <a class="reference internal" href="../ivabs/parameterization.html#section-ivabs-parameterization"><span class="std std-ref">Parameterization of Composite Slender Structures</span></a>.</p>
+</div>
 </section>
 <section id="define-the-analysis">
 <h3>Define the analysis<a class="headerlink" href="#define-the-analysis" title="Permalink to this heading">#</a></h3>
@@ -467,6 +476,10 @@ Tutorials on other files will be explained later.</p>
 <span class="linenos">6</span><span class="w">      </span><span class="nt">output</span><span class="p">:</span>
 <span class="linenos">7</span><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;gj&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;eiyy&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;eizz&quot;</span><span class="p p-Indicator">]</span>
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For the complete list of available keys to get beam properties, see <a class="reference internal" href="../ref/beam_properties.html#section-beam-properties"><span class="std std-ref">Beam Properties</span></a>.</p>
 </div>
 </section>
 </section>
@@ -516,7 +529,7 @@ Tutorials on other files will be explained later.</p>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-example">Run the example</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#files-of-this-tutorial">Files of this tutorial</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#main-input-file-specification-cs-design-analysis-yml">Main input file specification (<cite>cs_design_analysis.yml</cite>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#main-input-file-specification-cs-design-analysis-yml">Main input file specification (<code class="docutils literal notranslate"><span class="pre">cs_design_analysis.yml</span></code>)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-layout-of-the-main-input-file">Basic layout of the main input file</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define-the-cross-section">Define the cross-section</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define-the-analysis">Define the analysis</a></li>
