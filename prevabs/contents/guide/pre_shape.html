@@ -1,826 +1,395 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-    <title>Geometry and shapes &#8212; iVABS Documentation (v0.7)</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry and shapes &#8212; iVABS 0.8 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
-    
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script kind="utterances">
-
-    var commentsRunWhenDOMLoaded = cb => {
-    if (document.readyState != 'loading') {
-        cb()
-    } else if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', cb)
-    } else {
-        document.attachEvent('onreadystatechange', function() {
-        if (document.readyState == 'complete') cb()
-        })
-    }
-}
-
-var addUtterances = () => {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://utteranc.es/client.js";
-    script.async = "async";
-
-    script.setAttribute("repo", "wenbinyugroup/ivabs");
-    script.setAttribute("issue-term", "pathname");
-    script.setAttribute("theme", "github-light");
-    script.setAttribute("label", "💬 comment");
-    script.setAttribute("crossorigin", "anonymous");
-
-    sections = document.querySelectorAll("div.section");
-    if (sections !== null) {
-        section = sections[sections.length-1];
-        section.appendChild(script);
-    }
-}
-commentsRunWhenDOMLoaded(addUtterances);
-</script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="canonical" href="https://wenbinyugroup.github.io/ivabs/prevabs/contents/guide/pre_shape.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'prevabs/contents/guide/pre_shape';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Materials and layups" href="pre_material.html" />
     <link rel="prev" title="Coordinate systems" href="pre_coordinate.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">iVABS Documentation (v0.7)</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../ivabs/install.html">
-   Download &amp; Installation
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../ivabs/install/windows.html">
-     Installation on Windows
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../ivabs/install/linux.html">
-     Installation on Linux
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../ivabs/install/python_setup.html">
-     Setup Python Environment
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../ivabs/getstart.html">
-   Quick Start
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../ivabs/examples.html">
-   Examples
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../ivabs/examples/example_quickstart_param_study.html">
-     Parameter study of a single cross-section
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../ivabs/examples/example_uh60_sopt_stf.html">
-     Single objective optimization of multiple cross-sections to match target beam properties
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../ivabs/examples/example_uh60_mopt_stf.html">
-     Multiple objective optimization of multiple cross-sections to match target beam properties
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../ivabs/main_input.html">
-   Guide to Main Input File
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../ivabs/input_guide/intro_yaml.html">
-     A Brief Introduction to YAML
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../ivabs/input_guide/input_design.html">
-     Design Parameters
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../ivabs/input_guide/input_analysis.html">
-     Analysis Steps
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../ivabs/input_guide/input_study.html">
-     Design Study
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../ivabs/parameterization.html">
-   Parameterization of Composite Slender Structures
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../ivabs/cs_template.html">
-   Cross-sectional Design Templates
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../ivabs/cs_templates/airfoil_gbox_uni.html">
-     Airfoil Box-spar Uniform
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../ivabs/beam_properties.html">
-   Beam Properties
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../ivabs/analysis_step_script.html">
-   Custom Python Script for Analysis
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../ivabs/extensions.html">
-   Extensions
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../ivabs/extensions/galaxy_rcas.html">
-     Link to Galaxy/RCAS
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../ivabs/ref_main.html">
-   Reference manual
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../ivabs/reference/input_keywords_main.html">
-     Main Input Keywords
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../ivabs/introduction.html">
-   iVABS Components
-  </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../../index.html">
-   PreVABS Documentation
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../install.html">
-     Download and Installation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../run.html">
-     How to Run PreVABS
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tutorial.html">
-     Tutorial
-    </a>
-   </li>
-   <li class="toctree-l2 current active has-children">
-    <a class="reference internal" href="../guide.html">
-     Guide for Preparing Input Files
-    </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-    <label for="toctree-checkbox-8">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul class="current">
-     <li class="toctree-l3">
-      <a class="reference internal" href="pre_coordinate.html">
-       Coordinate systems
-      </a>
-     </li>
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
-       Geometry and shapes
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pre_material.html">
-       Materials and layups
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pre_component.html">
-       Components
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pre_recover.html">
-       Specifications for recovery
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pre_overall.html">
-       Other input settings
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../examples.html">
-     Examples
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-    <label for="toctree-checkbox-9">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../examples/example_box.html">
-       Box beam
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../examples/example_pipe.html">
-       Pipe
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../examples/example_tube.html">
-       Circular tube
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../examples/example_channel.html">
-       Channel
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../examples/example_airfoil.html">
-       Airfoil (MH-104)
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../examples/example_airfoil_recover.html">
-       Airfoil (Recover)
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../examples/example_uh60a_fi.html">
-       UH-60A (Initial Failure Analysis)
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../changelog.html">
-     Change log
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../xml.html">
-     Introduction to XML
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../references.html">
-     References
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../msgpi/index.html">
-   MSGPI Documentation
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../../msgpi/contents/user_guide.html">
-     User Guide
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul class="simple">
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../../msgpi/contents/ref_manual.html">
-     Reference
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-    <label for="toctree-checkbox-12">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../../../msgpi/contents/sg/index.html">
-       Structure Gene
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-      <label for="toctree-checkbox-13">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../../../msgpi/contents/sg/structuregene.html">
-         StructureGene
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../../../msgpi/contents/sg/crosssection.html">
-         CrossSection
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../../../msgpi/contents/sg/materialsection.html">
-         MaterialSection
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../../../msgpi/contents/sg/beamproperty.html">
-         BeamProperty
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../../../msgpi/contents/sg/io.html">
-         Methods
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../../../msgpi/contents/sg/run.html">
-         Methods
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../../../msgpi/contents/utils/index.html">
-       Utilities
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-      <label for="toctree-checkbox-14">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../../../msgpi/contents/utils/io.html">
-         IO
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../../../msgpi/contents/utils/math.html">
-         Math
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../../../msgpi/contents/utils/logger.html">
-         Logging
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
+<a class="navbar-brand logo" href="../../../main_ivabs.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">iVABS 0.8 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Start</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../install/index.html">Download &amp; Installation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../install/windows.html">Installation on Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install/linux.html">Installation on Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install/python_setup.html">Setup Python Environment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ivabs/getstart.html">Quick Start</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../tutorials/index.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/run_one_analysis.html">Carry out a single cross-sectional analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/opt_spar_web.html">Optimization of spar web locations for desired properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/opt_spar_layup.html">Optimize the spar layup of a cross-section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/opt_cs_init_twist.html">Optimize the cross-section considering beam initial twist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/prepare_cs_template.html">Prepare a cross-sectional design template</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv.html">Optimize a single cross-section (general)</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/running.html">Running of The Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/problem.html">Problem Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/cs_param.html">Cross-sectional Parameterization and Beam Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/opt.html">Optimization Formulation</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs.html">Preparation of Input Files</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_cs_template.html">Cross-section Main Input Template (<code class="docutils literal notranslate"><span class="pre">uh60a_section.xml.tmp</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_cs_materials.html">Material Database (<code class="docutils literal notranslate"><span class="pre">material_database.xml</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_cs_airfoil.html">Cross-section Airfoil Data (<code class="docutils literal notranslate"><span class="pre">sc1095.dat</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_interface.html">Dakota Interface Scripts (<code class="docutils literal notranslate"><span class="pre">interface.py</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_arguments.html">Interface Arguments (<code class="docutils literal notranslate"><span class="pre">interface_args.json</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_data_process.html">Data Processing Functions (<code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_dakota.html">Dakota Input File (<code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.dakota</span></code>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../examples/index.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/example_quickstart_param_study.html">Parameter study of a single cross-section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/example_uh60_sopt_stf.html">Single objective optimization of multiple cross-sections to match target beam properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/example_uh60_mopt_stf.html">Multiple objective optimization of multiple cross-sections to match target beam properties</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Guide</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../guide/index.html">Guide to Main Input File</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../guide/intro_yaml.html">A Brief Introduction to YAML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../guide/input_design.html">Design Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../guide/input_analysis.html">Analysis Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../guide/input_study.html">Design Study</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ivabs/parameterization.html">Parameterization of Composite Slender Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/custom_script.html">Custom script analysis step</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../extensions/index.html">Extensions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/galaxy_rcas.html">Link to Galaxy/RCAS</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../sg_templates/index.html">Cross-sectional Design Templates</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../sg_templates/airfoil_gbox_uni.html">Airfoil Box-spar Uniform</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/beam_properties.html">Beam Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/input_keywords_main.html">Main Input Keywords</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html">PreVABS Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../install.html">Download and Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../run.html">How to Run PreVABS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../guide.html">Guide for Preparing Input Files</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pre_coordinate.html">Coordinate systems</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Geometry and shapes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pre_material.html">Materials and layups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pre_component.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pre_recover.html">Specifications for recovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pre_overall.html">Other input settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_box.html">Box beam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_pipe.html">Pipe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_tube.html">Circular tube</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_channel.html">Channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_airfoil.html">Airfoil (MH-104)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_airfoil_recover.html">Airfoil (Recover)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_uh60a_fi.html">UH-60A (Initial Failure Analysis)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html">Change log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../xml.html">Introduction to XML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/prevabs/contents/guide/pre_shape.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
 
 
-          
 
 
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/wenbinyugroup/ivabs"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/wenbinyugroup/ivabs/issues/new?title=Issue%20on%20page%20%2Fprevabs/contents/guide/pre_shape.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/wenbinyugroup/ivabs/edit/main/docs/source/prevabs/contents/guide/pre_shape.rst"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Edit this page"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="headerbtn__text-container">suggest edit</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../../_sources/prevabs/contents/guide/pre_shape.rst.txt"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.rst</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#base-points">
-   Base points
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#points-defined-in-a-data-file">
-     Points defined in a data file
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#points-defined-in-the-xml-file">
-     Points defined in the XML file
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#base-lines">
-   Base lines
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#straight">
-     Straight
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#arc">
-     Arc
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#circle">
-     Circle
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Geometry and shapes</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#base-points">
-   Base points
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#points-defined-in-a-data-file">
-     Points defined in a data file
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#points-defined-in-the-xml-file">
-     Points defined in the XML file
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#base-lines">
-   Base lines
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#straight">
-     Straight
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#arc">
-     Arc
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#circle">
-     Circle
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Geometry and shapes</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#base-points">Base points</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#points-defined-in-a-data-file">Points defined in a data file</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#points-defined-in-the-xml-file">Points defined in the XML file</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#base-lines">Base lines</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#straight">Straight</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arc">Arc</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#circle">Circle</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
-  <section id="geometry-and-shapes">
-<span id="section-shape"></span><h1>Geometry and shapes<a class="headerlink" href="#geometry-and-shapes" title="Permalink to this headline">#</a></h1>
-<section id="base-points">
-<h2>Base points<a class="headerlink" href="#base-points" title="Permalink to this headline">#</a></h2>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <blockquote>
+<div></div></blockquote>
+<div class="section" id="geometry-and-shapes">
+<span id="section-shape"></span><h1>Geometry and shapes<a class="headerlink" href="#geometry-and-shapes" title="Permalink to this heading">#</a></h1>
+<div class="section" id="base-points">
+<h2>Base points<a class="headerlink" href="#base-points" title="Permalink to this heading">#</a></h2>
 <p>Base points are used to draw base lines, which form the skeleton of a cross section.
 They can be either actually on the base lines, or not, as reference points, for example the center of a circle.
 Points that are directly referred to in the definitions of base lines are called key points, such as starting and ending points of a line or an arc, or the center of a circle.
@@ -828,12 +397,12 @@ The rest are normal points.
 The coordinates provided in the input file are defined in the basic frame <strong>z</strong> and then transformed into the cross-sectional frame <strong>x</strong>, through processes like translating, scaling and rotating.
 If none of those operations are needed, then those data also define the position of each point in the frame <strong>x</strong>.</p>
 <p>Users can define points using sub-element <code class="docutils literal notranslate"><span class="pre">&lt;point&gt;</span></code> one-by-one, or list all points in a sepsrate file and include it here.</p>
-<section id="points-defined-in-a-data-file">
-<h3>Points defined in a data file<a class="headerlink" href="#points-defined-in-a-data-file" title="Permalink to this headline">#</a></h3>
+<div class="section" id="points-defined-in-a-data-file">
+<h3>Points defined in a data file<a class="headerlink" href="#points-defined-in-a-data-file" title="Permalink to this heading">#</a></h3>
 <p>The file storing these data is a plain text file, with a file extension <code class="docutils literal notranslate"><span class="pre">.dat</span></code>.
 This block of data has three columns for the name and coordinate in the cross-sectional plane.</p>
 <div class="literal-block-wrapper docutils container" id="code-point-template">
-<div class="code-block-caption"><span class="caption-number">Listing 22 </span><span class="caption-text">Template for a separate file of points (point_list_file_name.dat)</span><a class="headerlink" href="#code-point-template" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 36 </span><span class="caption-text">Template for a separate file of points (point_list_file_name.dat)</span><a class="headerlink" href="#code-point-template" title="Permalink to this code">#</a></div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>label_1  z2  z3
 <span class="linenos">2</span>label_2  z2  z3
 <span class="linenos">3</span>label_3  z2  z3
@@ -860,18 +429,18 @@ Otherwise, points can be arranged arbitrarily.</p>
 <p class="admonition-title">Note</p>
 <p>This data file can be used for storing airfoil data.</p>
 </div>
-</section>
-<section id="points-defined-in-the-xml-file">
-<h3>Points defined in the XML file<a class="headerlink" href="#points-defined-in-the-xml-file" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="points-defined-in-the-xml-file">
+<h3>Points defined in the XML file<a class="headerlink" href="#points-defined-in-the-xml-file" title="Permalink to this heading">#</a></h3>
 <p>In this method, all points are enclosed by the XML element <code class="docutils literal notranslate"><span class="pre">&lt;basepoints&gt;</span></code>.</p>
 <div class="literal-block-wrapper docutils container" id="code-basepoing-template">
-<div class="code-block-caption"><span class="caption-number">Listing 23 </span><span class="caption-text">Base points input syntax.</span><a class="headerlink" href="#code-basepoing-template" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 37 </span><span class="caption-text">Base points input syntax.</span><a class="headerlink" href="#code-basepoing-template" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;basepoints&gt;</span>
-<span class="linenos">2</span>  <span class="nt">&lt;include&gt;</span> point_list_file_name <span class="nt">&lt;/include&gt;</span>
-<span class="linenos">3</span>  <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;p1&quot;</span><span class="nt">&gt;</span> 0 0 <span class="nt">&lt;/point&gt;</span>
-<span class="linenos">4</span>  <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;p2&quot;</span><span class="nt">&gt;</span> 1 0 <span class="nt">&lt;/point&gt;</span>
-<span class="linenos">5</span>  <span class="nt">&lt;point</span> <span class="na">name=</span><span class="s">&quot;M&quot;</span> <span class="na">on=</span><span class="s">&quot;L&quot;</span> <span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span> 3 <span class="nt">&lt;/point&gt;</span>
-<span class="linenos">6</span>  ...
+<span class="linenos">2</span><span class="w">  </span><span class="nt">&lt;include&gt;</span><span class="w"> </span>point_list_file_name<span class="w"> </span><span class="nt">&lt;/include&gt;</span>
+<span class="linenos">3</span><span class="w">  </span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;p1&quot;</span><span class="nt">&gt;</span><span class="w"> </span>0<span class="w"> </span>0<span class="w"> </span><span class="nt">&lt;/point&gt;</span>
+<span class="linenos">4</span><span class="w">  </span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;p2&quot;</span><span class="nt">&gt;</span><span class="w"> </span>1<span class="w"> </span>0<span class="w"> </span><span class="nt">&lt;/point&gt;</span>
+<span class="linenos">5</span><span class="w">  </span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;M&quot;</span><span class="w"> </span><span class="na">on=</span><span class="s">&quot;L&quot;</span><span class="w"> </span><span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span><span class="w"> </span>3<span class="w"> </span><span class="nt">&lt;/point&gt;</span>
+<span class="linenos">6</span><span class="w">  </span>...
 <span class="linenos">7</span><span class="nt">&lt;/basepoints&gt;</span>
 </pre></div>
 </div>
@@ -879,17 +448,15 @@ Otherwise, points can be arranged arbitrarily.</p>
 <p>Using the XML format, points can be defined in the following ways:</p>
 <ol class="arabic simple">
 <li><p>Specify the complete coordinates with two numbers.</p></li>
-<li><p>Confine the point on a line and specify the horizontal coordinate (<span class="math notranslate nohighlight">\(z_2\)</span> or <span class="math notranslate nohighlight">\(x_2\)</span>), as shown in <a class="reference internal" href="#fig-point-on-line"><span class="std std-numref">Fig. 28</span></a>.</p></li>
+<li><p>Confine the point on a line and specify the horizontal coordinate (<span class="math notranslate nohighlight">\(z_2\)</span> or <span class="math notranslate nohighlight">\(x_2\)</span>), as shown in <a class="reference internal" href="#fig-point-on-line"><span class="std std-numref">Fig. 33</span></a>.</p></li>
 </ol>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;point</span> <span class="pre">name=&quot;M&quot;</span> <span class="pre">on=&quot;L&quot;</span> <span class="pre">by=&quot;x2&quot;&gt;3&lt;/point&gt;</span></code></p>
 </div></blockquote>
-<figure class="align-center" id="fig-point-on-line">
+<div class="figure align-center" id="fig-point-on-line">
 <a class="reference internal image-reference" href="../../../_images/point_on_line.png"><img alt="../../../_images/point_on_line.png" src="../../../_images/point_on_line.png" style="width: 6in;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 28 </span><span class="caption-text">Define a new point on a line.</span><a class="headerlink" href="#fig-point-on-line" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Figure 33 </span><span class="caption-text">Define a new point on a line.</span><a class="headerlink" href="#fig-point-on-line" title="Permalink to this image">#</a></p>
+</div>
 <p><strong>Specification</strong></p>
 <ul class="simple">
 <li><p><strong>&lt;include&gt;</strong> - Name of the point data file, without the file extension.</p></li>
@@ -901,39 +468,37 @@ Otherwise, points can be arranged arbitrarily.</p>
 </ul>
 </li>
 </ul>
-</section>
-</section>
-<section id="base-lines">
-<h2>Base lines<a class="headerlink" href="#base-lines" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+<div class="section" id="base-lines">
+<h2>Base lines<a class="headerlink" href="#base-lines" title="Permalink to this heading">#</a></h2>
 <p>Base lines form the skeleton of a cross section.
-PreVABS can handle three types of base lines, straight, arc and circle, as shown in <a class="reference internal" href="#fig-baselinetypes"><span class="std std-numref">Fig. 29</span></a>.
+PreVABS can handle three types of base lines, straight, arc and circle, as shown in <a class="reference internal" href="#fig-baselinetypes"><span class="std std-numref">Fig. 34</span></a>.
 Some types have several ways to define the base line.
 In PreVABS, all curved base lines are in the end converted into a chain of short straight lines.
 User can provide those short straight lines directly for spline, arc and circle.
 Or, for arc or circle, user can use simple rules to draw the shape first and then PreVABS will discretize it.</p>
 <p>Data for base points and lines are stored in an XML formatted file.
-The general arrangement of data is shown in <a class="reference internal" href="#code-baseline-template"><span class="std std-numref">Listing 24</span></a>.
+The general arrangement of data is shown in <a class="reference internal" href="#code-baseline-template"><span class="std std-numref">Listing 38</span></a>.
 The root element is <code class="docutils literal notranslate"><span class="pre">&lt;baselines&gt;</span></code>.
 Under the root element, there is a sub-element <code class="docutils literal notranslate"><span class="pre">&lt;basepoints&gt;</span></code> storing all definitions of points.</p>
 <p>Each <code class="docutils literal notranslate"><span class="pre">&lt;baseline&gt;</span></code> element is a definition of a base line.
 Each one has a unique <code class="docutils literal notranslate"><span class="pre">name</span></code> and a <code class="docutils literal notranslate"><span class="pre">type</span></code>, which can be <code class="docutils literal notranslate"><span class="pre">straight</span></code>, <code class="docutils literal notranslate"><span class="pre">arc</span></code> or <code class="docutils literal notranslate"><span class="pre">circle</span></code>.
 Inside the <code class="docutils literal notranslate"><span class="pre">baseline</span></code> element, the <code class="docutils literal notranslate"><span class="pre">straight</span></code> and <code class="docutils literal notranslate"><span class="pre">arc</span></code> types have several different ways of definition, and thus the arrangements of data are different, which will be explained in details below.</p>
-<figure class="align-center" id="fig-baselinetypes">
+<div class="figure align-center" id="fig-baselinetypes">
 <a class="reference internal image-reference" href="../../../_images/baselinetypes.png"><img alt="../../../_images/baselinetypes.png" src="../../../_images/baselinetypes.png" style="width: 6in;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 29 </span><span class="caption-text">Three types of <em>Base line</em>s in PreVABS.</span><a class="headerlink" href="#fig-baselinetypes" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Figure 34 </span><span class="caption-text">Three types of <em>Base line</em>s in PreVABS.</span><a class="headerlink" href="#fig-baselinetypes" title="Permalink to this image">#</a></p>
+</div>
 <div class="literal-block-wrapper docutils container" id="code-baseline-template">
-<div class="code-block-caption"><span class="caption-number">Listing 24 </span><span class="caption-text"><em>Base line</em> input syntax.</span><a class="headerlink" href="#code-baseline-template" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 38 </span><span class="caption-text"><em>Base line</em> input syntax.</span><a class="headerlink" href="#code-baseline-template" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;baselines&gt;</span>
-<span class="linenos">2</span>  <span class="nt">&lt;basepoints&gt;</span>
-<span class="linenos">3</span>    ...
-<span class="linenos">4</span>  <span class="nt">&lt;/basepoints&gt;</span>
-<span class="linenos">5</span>  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;name1&quot;</span> <span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/baseline&gt;</span>
-<span class="linenos">6</span>  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;name2&quot;</span> <span class="na">type=</span><span class="s">&quot;arc&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/baseline&gt;</span>
-<span class="linenos">7</span>  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;name3&quot;</span> <span class="na">type=</span><span class="s">&quot;circle&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/baseline&gt;</span>
-<span class="linenos">8</span>  ...
+<span class="linenos">2</span><span class="w">  </span><span class="nt">&lt;basepoints&gt;</span>
+<span class="linenos">3</span><span class="w">    </span>...
+<span class="linenos">4</span><span class="w">  </span><span class="nt">&lt;/basepoints&gt;</span>
+<span class="linenos">5</span><span class="w">  </span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;name1&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">6</span><span class="w">  </span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;name2&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;arc&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">7</span><span class="w">  </span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;name3&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;circle&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">8</span><span class="w">  </span>...
 <span class="linenos">9</span><span class="nt">&lt;/baselines&gt;</span>
 </pre></div>
 </div>
@@ -947,11 +512,11 @@ Inside the <code class="docutils literal notranslate"><span class="pre">baseline
 </ul>
 </li>
 </ul>
-<section id="straight">
-<h3>Straight<a class="headerlink" href="#straight" title="Permalink to this headline">#</a></h3>
+<div class="section" id="straight">
+<h3>Straight<a class="headerlink" href="#straight" title="Permalink to this heading">#</a></h3>
 <p>For this type, the basic idea is to provide key points for a chain of straight lines
 The direction of a base line is defined by the order of the point list.
-There are three ways defining a base line of this type, as shown in <a class="reference internal" href="#fig-baselinestraight"><span class="std std-numref">Fig. 30</span></a>.</p>
+There are three ways defining a base line of this type, as shown in <a class="reference internal" href="#fig-baselinestraight"><span class="std std-numref">Fig. 35</span></a>.</p>
 <ul class="simple">
 <li><p>Use an explicit list of two or more points delimited by commas to define a polyline (i, ii).</p></li>
 <li><p>Use two points delimited by a colon to represent a range of points (iii). The first two methods can be used in combination.</p></li>
@@ -959,37 +524,35 @@ There are three ways defining a base line of this type, as shown in <a class="re
 In this case, PreVABS will calculate the second key point (a’) and generate the base line.
 The PreVABS-computed second key point will always be “not lower” than the user-provided key point, which means the base line will always be pointing to the upper left or upper right, or to the right if it is horizontal.</p></li>
 </ul>
-<figure class="align-center" id="fig-baselinestraight">
+<div class="figure align-center" id="fig-baselinestraight">
 <a class="reference internal image-reference" href="../../../_images/baselinestraight.png"><img alt="../../../_images/baselinestraight.png" src="../../../_images/baselinestraight.png" style="width: 100%;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 30 </span><span class="caption-text">Different ways of defining a straight type base line in PreVABS.</span><a class="headerlink" href="#fig-baselinestraight" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Figure 35 </span><span class="caption-text">Different ways of defining a straight type base line in PreVABS.</span><a class="headerlink" href="#fig-baselinestraight" title="Permalink to this image">#</a></p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Use <code class="docutils literal notranslate"><span class="pre">type=&quot;straight&quot;</span></code> for splines.</p>
 </div>
 <div class="literal-block-wrapper docutils container" id="code-baseline-straight">
-<div class="code-block-caption"><span class="caption-number">Listing 25 </span><span class="caption-text">Input syntax for the base lines shown in <a class="reference internal" href="#fig-baselinestraight"><span class="std std-numref">Fig. 30</span></a></span><a class="headerlink" href="#code-baseline-straight" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 39 </span><span class="caption-text">Input syntax for the base lines shown in <a class="reference internal" href="#fig-baselinestraight"><span class="std std-numref">Fig. 35</span></a></span><a class="headerlink" href="#code-baseline-straight" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;baselines&gt;</span>
-<span class="linenos"> 2</span>  ...
-<span class="linenos"> 3</span>  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;i&quot;</span> <span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 4</span>    <span class="nt">&lt;points&gt;</span> a,z <span class="nt">&lt;/points&gt;</span>
-<span class="linenos"> 5</span>  <span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 2</span><span class="w">  </span>...
+<span class="linenos"> 3</span><span class="w">  </span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;i&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="nt">&lt;points&gt;</span><span class="w"> </span>a,z<span class="w"> </span><span class="nt">&lt;/points&gt;</span>
+<span class="linenos"> 5</span><span class="w">  </span><span class="nt">&lt;/baseline&gt;</span>
 <span class="linenos"> 6</span>
-<span class="linenos"> 7</span>  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;ii&quot;</span> <span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 8</span>    <span class="nt">&lt;points&gt;</span> a,b,c,z <span class="nt">&lt;/points&gt;</span>
-<span class="linenos"> 9</span>  <span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 7</span><span class="w">  </span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ii&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nt">&lt;points&gt;</span><span class="w"> </span>a,b,c,z<span class="w"> </span><span class="nt">&lt;/points&gt;</span>
+<span class="linenos"> 9</span><span class="w">  </span><span class="nt">&lt;/baseline&gt;</span>
 <span class="linenos">10</span>
-<span class="linenos">11</span>  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;iii&quot;</span> <span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">12</span>    <span class="nt">&lt;points&gt;</span> a:z <span class="nt">&lt;/points&gt;</span>
-<span class="linenos">13</span>  <span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">11</span><span class="w">  </span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;iii&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">12</span><span class="w">    </span><span class="nt">&lt;points&gt;</span><span class="w"> </span>a:z<span class="w"> </span><span class="nt">&lt;/points&gt;</span>
+<span class="linenos">13</span><span class="w">  </span><span class="nt">&lt;/baseline&gt;</span>
 <span class="linenos">14</span>
-<span class="linenos">15</span>  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;iv&quot;</span> <span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">16</span>    <span class="nt">&lt;point&gt;</span> a <span class="nt">&lt;/point&gt;</span>
-<span class="linenos">17</span>    <span class="nt">&lt;angle&gt;</span> theta <span class="nt">&lt;/angle&gt;</span>
-<span class="linenos">18</span>  <span class="nt">&lt;/baseline&gt;</span>
-<span class="linenos">19</span>  ...
+<span class="linenos">15</span><span class="w">  </span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;iv&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">16</span><span class="w">    </span><span class="nt">&lt;point&gt;</span><span class="w"> </span>a<span class="w"> </span><span class="nt">&lt;/point&gt;</span>
+<span class="linenos">17</span><span class="w">    </span><span class="nt">&lt;angle&gt;</span><span class="w"> </span>theta<span class="w"> </span><span class="nt">&lt;/angle&gt;</span>
+<span class="linenos">18</span><span class="w">  </span><span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">19</span><span class="w">  </span>...
 <span class="linenos">20</span><span class="nt">&lt;/baselines&gt;</span>
 </pre></div>
 </div>
@@ -1000,32 +563,28 @@ The PreVABS-computed second key point will always be “not lower” than the us
 <li><p><strong>&lt;point&gt;</strong> - Name of a point.</p></li>
 <li><p><strong>&lt;angle&gt;</strong> - Incline angle of the line. The positive angle (degree) is defined from the positive <span class="math notranslate nohighlight">\(z_2\)</span> axis, counter-clockwise.</p></li>
 </ul>
-</section>
-<section id="arc">
-<h3>Arc<a class="headerlink" href="#arc" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="arc">
+<h3>Arc<a class="headerlink" href="#arc" title="Permalink to this heading">#</a></h3>
 <p>A real arc can also be created using a group of base points, in which case the straight type should be used.
 The arc type provides a parametric way to build this type of base line, then PreVABS will
 discretize it.
-To uniquely define an arc, user needs to provide at least four of the following six items: center, starting point, ending point, radius, angle and direction, as shown in <a class="reference internal" href="#fig-baselinearc"><span class="std std-numref">Fig. 31</span></a>.</p>
-<p>There are two ways of defining an arc as shown in <a class="reference internal" href="#fig-baselinearc2"><span class="std std-numref">Fig. 32</span></a>.</p>
+To uniquely define an arc, user needs to provide at least four of the following six items: center, starting point, ending point, radius, angle and direction, as shown in <a class="reference internal" href="#fig-baselinearc"><span class="std std-numref">Fig. 36</span></a>.</p>
+<p>There are two ways of defining an arc as shown in <a class="reference internal" href="#fig-baselinearc2"><span class="std std-numref">Fig. 37</span></a>.</p>
 <ul class="simple">
 <li><p>Use center, starting point, ending point and direction.</p></li>
 <li><p>Use center, starting point, angle and direction.</p></li>
 </ul>
-<figure class="align-center" id="fig-baselinearc">
+<div class="figure align-center" id="fig-baselinearc">
 <a class="reference internal image-reference" href="../../../_images/baselinearc.png"><img alt="../../../_images/baselinearc.png" src="../../../_images/baselinearc.png" style="width: 6in;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 31 </span><span class="caption-text">Items in an arc.</span><a class="headerlink" href="#fig-baselinearc" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="fig-baselinearc2">
+<p class="caption"><span class="caption-number">Figure 36 </span><span class="caption-text">Items in an arc.</span><a class="headerlink" href="#fig-baselinearc" title="Permalink to this image">#</a></p>
+</div>
+<div class="figure align-center" id="fig-baselinearc2">
 <a class="reference internal image-reference" href="../../../_images/baselinearc2.png"><img alt="../../../_images/baselinearc2.png" src="../../../_images/baselinearc2.png" style="width: 6in;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 32 </span><span class="caption-text">Two possible cases of defining an arc.</span><a class="headerlink" href="#fig-baselinearc2" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Figure 37 </span><span class="caption-text">Two possible cases of defining an arc.</span><a class="headerlink" href="#fig-baselinearc2" title="Permalink to this image">#</a></p>
+</div>
 <div class="literal-block-wrapper docutils container" id="code-baseline-arc">
-<div class="code-block-caption"><span class="caption-number">Listing 26 </span><span class="caption-text">Input syntax for the base lines shown in <a class="reference internal" href="#fig-baselinearc2"><span class="std std-numref">Fig. 32</span></a></span><a class="headerlink" href="#code-baseline-arc" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 40 </span><span class="caption-text">Input syntax for the base lines shown in <a class="reference internal" href="#fig-baselinearc2"><span class="std std-numref">Fig. 37</span></a></span><a class="headerlink" href="#code-baseline-arc" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>&lt;baselines&gt;
 <span class="linenos"> 2</span>  ...
 <span class="linenos"> 3</span>  &lt;baseline name=&quot;left&quot; type=&quot;arc&quot;&gt;
@@ -1061,34 +620,34 @@ To uniquely define an arc, user needs to provide at least four of the following 
 </ul>
 </li>
 </ul>
-</section>
-<section id="circle">
-<h3>Circle<a class="headerlink" href="#circle" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="circle">
+<h3>Circle<a class="headerlink" href="#circle" title="Permalink to this heading">#</a></h3>
 <p>Defining a circle is simpler than an arc. User only need to provide a
 center with radius or another point on the circle. The corresponding
 element tags are <code class="docutils literal notranslate"><span class="pre">&lt;center&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;radius&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;point&gt;</span></code>. A sample
 input file demonstrating the two methods is presented in
-<a class="reference internal" href="#code-baseline-circle"><span class="std std-numref">Listing 27</span></a>.</p>
+<a class="reference internal" href="#code-baseline-circle"><span class="std std-numref">Listing 41</span></a>.</p>
 <p>There are two ways of defining a circle.</p>
 <ul class="simple">
 <li><p>Use center and radius.</p></li>
 <li><p>Use center and a point on the circle.</p></li>
 </ul>
 <div class="literal-block-wrapper docutils container" id="code-baseline-circle">
-<div class="code-block-caption"><span class="caption-number">Listing 27 </span><span class="caption-text">Input syntax for the ‘circle’ type base line.</span><a class="headerlink" href="#code-baseline-circle" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 41 </span><span class="caption-text">Input syntax for the ‘circle’ type base line.</span><a class="headerlink" href="#code-baseline-circle" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;baselines&gt;</span>
-<span class="linenos"> 2</span>  ...
-<span class="linenos"> 3</span>  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;circle1&quot;</span> <span class="na">type=</span><span class="s">&quot;circle&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 4</span>    <span class="nt">&lt;center&gt;</span> c <span class="nt">&lt;/center&gt;</span>
-<span class="linenos"> 5</span>    <span class="nt">&lt;radius&gt;</span> r <span class="nt">&lt;/radius&gt;</span>
-<span class="linenos"> 6</span>  <span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 2</span><span class="w">  </span>...
+<span class="linenos"> 3</span><span class="w">  </span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;circle1&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;circle&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="nt">&lt;center&gt;</span><span class="w"> </span>c<span class="w"> </span><span class="nt">&lt;/center&gt;</span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="nt">&lt;radius&gt;</span><span class="w"> </span>r<span class="w"> </span><span class="nt">&lt;/radius&gt;</span>
+<span class="linenos"> 6</span><span class="w">  </span><span class="nt">&lt;/baseline&gt;</span>
 <span class="linenos"> 7</span>
-<span class="linenos"> 8</span>  <span class="nt">&lt;baseline</span> <span class="na">name=</span><span class="s">&quot;circle2&quot;</span> <span class="na">type=</span><span class="s">&quot;circle&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 9</span>    <span class="nt">&lt;center&gt;</span> c <span class="nt">&lt;/center&gt;</span>
-<span class="linenos">10</span>    <span class="nt">&lt;point&gt;</span> p <span class="nt">&lt;/point&gt;</span>
-<span class="linenos">11</span>    <span class="nt">&lt;direction&gt;</span> cw <span class="nt">&lt;/direction&gt;</span>
-<span class="linenos">12</span>  <span class="nt">&lt;/baseline&gt;</span>
-<span class="linenos">13</span>  ...
+<span class="linenos"> 8</span><span class="w">  </span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;circle2&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;circle&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="nt">&lt;center&gt;</span><span class="w"> </span>c<span class="w"> </span><span class="nt">&lt;/center&gt;</span>
+<span class="linenos">10</span><span class="w">    </span><span class="nt">&lt;point&gt;</span><span class="w"> </span>p<span class="w"> </span><span class="nt">&lt;/point&gt;</span>
+<span class="linenos">11</span><span class="w">    </span><span class="nt">&lt;direction&gt;</span><span class="w"> </span>cw<span class="w"> </span><span class="nt">&lt;/direction&gt;</span>
+<span class="linenos">12</span><span class="w">  </span><span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">13</span><span class="w">  </span>...
 <span class="linenos">14</span><span class="nt">&lt;/baselines&gt;</span>
 </pre></div>
 </div>
@@ -1105,55 +664,114 @@ input file demonstrating the two methods is presented in
 </ul>
 </li>
 </ul>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="pre_coordinate.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Coordinate systems</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="pre_coordinate.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Coordinate systems</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="pre_material.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="pre_material.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Materials and layups</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#base-points">Base points</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#points-defined-in-a-data-file">Points defined in a data file</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#points-defined-in-the-xml-file">Points defined in the XML file</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#base-lines">Base lines</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#straight">Straight</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arc">Arc</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#circle">Circle</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
   
-    By Su Tian, Haodong Du, Fei Tao and Wenbin Yu<br/>
-  
-      &copy; Copyright 2022, Multiscale Structural Mechanics Group, Purdue University.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
-</div>
+<p class="component-author">
+By Su Tian, Haodong Du, Fei Tao and Wenbin Yu
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022, Multiscale Structural Mechanics Group, Purdue University.
+      <br/>
+    
+  </p>
 
-      </div>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

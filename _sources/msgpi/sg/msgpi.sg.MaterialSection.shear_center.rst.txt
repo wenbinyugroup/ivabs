@@ -1,6 +1,0 @@
-﻿msgpi.sg.MaterialSection.shear\_center
-======================================
-
-.. currentmodule:: msgpi.sg
-
-.. autoattribute:: MaterialSection.shear_center

@@ -1,6 +1,0 @@
-﻿msgpi.ms.beam.Beam.echo
-=======================
-
-.. currentmodule:: msgpi.ms.beam
-
-.. automethod:: Beam.echo
