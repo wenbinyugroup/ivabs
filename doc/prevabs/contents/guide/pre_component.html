@@ -1,0 +1,793 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Components &#8212; iVABS 0.8 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'prevabs/contents/guide/pre_component';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Specifications for recovery" href="pre_recover.html" />
+    <link rel="prev" title="Materials and layups" href="pre_material.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../main_ivabs.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">iVABS 0.8 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Start</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../install/index.html">Download &amp; Installation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../install/windows.html">Installation on Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install/linux.html">Installation on Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install/python_setup.html">Setup Python Environment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ivabs/getstart.html">Quick Start</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../tutorials/index.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/run_one_analysis.html">Carry out a single cross-sectional analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/opt_spar_web.html">Optimization of spar web locations for desired properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/opt_spar_layup.html">Optimize the spar layup of a cross-section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/opt_cs_init_twist.html">Optimize the cross-section considering beam initial twist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/prepare_cs_template.html">Prepare a cross-sectional design template</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv.html">Optimize a single cross-section (general)</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/running.html">Running of The Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/problem.html">Problem Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/cs_param.html">Cross-sectional Parameterization and Beam Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/opt.html">Optimization Formulation</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs.html">Preparation of Input Files</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_cs_template.html">Cross-section Main Input Template (<code class="docutils literal notranslate"><span class="pre">uh60a_section.xml.tmp</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_cs_materials.html">Material Database (<code class="docutils literal notranslate"><span class="pre">material_database.xml</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_cs_airfoil.html">Cross-section Airfoil Data (<code class="docutils literal notranslate"><span class="pre">sc1095.dat</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_interface.html">Dakota Interface Scripts (<code class="docutils literal notranslate"><span class="pre">interface.py</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_arguments.html">Interface Arguments (<code class="docutils literal notranslate"><span class="pre">interface_args.json</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_data_process.html">Data Processing Functions (<code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_dakota.html">Dakota Input File (<code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.dakota</span></code>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../examples/index.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/example_quickstart_param_study.html">Parameter study of a single cross-section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/example_uh60_sopt_stf.html">Single objective optimization of multiple cross-sections to match target beam properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/example_uh60_mopt_stf.html">Multiple objective optimization of multiple cross-sections to match target beam properties</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Guide</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../guide/index.html">Guide to Main Input File</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../guide/intro_yaml.html">A Brief Introduction to YAML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../guide/input_design.html">Design Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../guide/input_analysis.html">Analysis Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../guide/input_study.html">Design Study</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ivabs/parameterization.html">Parameterization of Composite Slender Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/custom_script.html">Custom script analysis step</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../extensions/index.html">Extensions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/galaxy_rcas.html">Link to Galaxy/RCAS</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../sg_templates/index.html">Cross-sectional Design Templates</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../sg_templates/airfoil_gbox_uni.html">Airfoil Box-spar Uniform</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/beam_properties.html">Beam Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/input_keywords_main.html">Main Input Keywords</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html">PreVABS Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../install.html">Download and Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../run.html">How to Run PreVABS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../guide.html">Guide for Preparing Input Files</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pre_coordinate.html">Coordinate systems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pre_shape.html">Geometry and shapes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pre_material.html">Materials and layups</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pre_recover.html">Specifications for recovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pre_overall.html">Other input settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_box.html">Box beam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_pipe.html">Pipe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_tube.html">Circular tube</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_channel.html">Channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_airfoil.html">Airfoil (MH-104)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_airfoil_recover.html">Airfoil (Recover)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_uh60a_fi.html">UH-60A (Initial Failure Analysis)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html">Change log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../xml.html">Introduction to XML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/prevabs/contents/guide/pre_component.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Components</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#laminate-type-component">Laminate-type component</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-1-define-segments-individually">DEFINITION 1: Define segments individually</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-2-define-segments-collectively">DEFINITION 2: Define segments collectively</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fill-type-component">Fill-type component</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local-mesh-size">Local mesh size</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#components-dependency">Components dependency</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <blockquote>
+<div></div></blockquote>
+<section id="components">
+<span id="section-component"></span><h1>Components<a class="headerlink" href="#components" title="Permalink to this heading">#</a></h1>
+<div class="literal-block-wrapper docutils container" id="code-component">
+<div class="code-block-caption"><span class="caption-number">Listing 51 </span><span class="caption-text">Input syntax for components.</span><a class="headerlink" href="#code-component" title="Permalink to this code">#</a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="na">depend=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/component&gt;</span>
+</pre></div>
+</div>
+</div>
+<p><strong>Specification</strong></p>
+<ul class="simple">
+<li><p><strong>&lt;component&gt;</strong> - Root element for the definition of each component.</p>
+<ul>
+<li><p><em>name</em> - Name of the component.</p></li>
+<li><p><em>type</em> - Type of the component. Choose one from ‘laminate’ and ‘fill’. Default is ‘laminate’.</p></li>
+<li><p><em>depend</em> - List of name of dependent components, delimited by commas.</p></li>
+</ul>
+</li>
+</ul>
+<section id="laminate-type-component">
+<h2>Laminate-type component<a class="headerlink" href="#laminate-type-component" title="Permalink to this heading">#</a></h2>
+<p>For a cross section in PreVABS, laminates are created as segments.
+A segment is a unique combination of a base line and a layup.
+Segments are connected through different ways as shown in <a class="reference internal" href="#fig-joints"><span class="std std-numref">Fig. 40</span></a>.
+According to this, segments can be grouped into components.
+The rule of thumb is: if two segments are connected in the first two ways (‘V1’ and ‘V2’), then they belong to one component; if they are connected as the third way (‘T’), then they should be put into different components, and component 2 will be created after the finish of component 1.</p>
+<figure class="align-center" id="fig-joints">
+<a class="reference internal image-reference" href="../../../_images/joints.png"><img alt="../../../_images/joints.png" src="../../../_images/joints.png" style="width: 6in;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 40 </span><span class="caption-text">Three types of connections that can be created in PreVABS.</span><a class="headerlink" href="#fig-joints" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>A schematic plot of a segment is shown in <a class="reference internal" href="#fig-segment"><span class="std std-numref">Fig. 41</span></a>.
+The base line provides a reference for the position and direction of the layup.
+Layers can be laid to the left or right of the base line.
+The direction is defined as one’s left or right, assuming one is walking along the direction of the base line.</p>
+<figure class="align-center" id="fig-segment">
+<a class="reference internal image-reference" href="../../../_images/segment.png"><img alt="../../../_images/segment.png" src="../../../_images/segment.png" style="width: 6in;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 41 </span><span class="caption-text">A typical segment in PreVABS and the relation between base line direction
+and layup direction.</span><a class="headerlink" href="#fig-segment" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>All segments definitions are stored in the main input file.
+The complete format will be discussed later since the overall configurations are also included in this file, which will be explained in Section: <a class="reference internal" href="pre_overall.html#section-overall"><span class="std std-ref">Other input settings</span></a>.
+The input syntax for laminate-type components are given in <a class="reference internal" href="#code-segments"><span class="std std-numref">Listing 52</span></a>.
+Each component can have multiple segments.</p>
+<p>There are two ways to define segments.</p>
+<section id="definition-1-define-segments-individually">
+<h3>DEFINITION 1: Define segments individually<a class="headerlink" href="#definition-1-define-segments-individually" title="Permalink to this heading">#</a></h3>
+<p>Use a base line and a single layup to create the segment.
+In this way, the layup covers the entire of the base line.
+Each <code class="docutils literal notranslate"><span class="pre">&lt;segment&gt;</span></code> element has one attribute, <code class="docutils literal notranslate"><span class="pre">name</span></code>, and two child elements, <code class="docutils literal notranslate"><span class="pre">&lt;baseline&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;layup&gt;</span></code>.
+The <code class="docutils literal notranslate"><span class="pre">&lt;layup&gt;</span></code> element has another attribute <code class="docutils literal notranslate"><span class="pre">direction</span></code> (see <a class="reference internal" href="#fig-segment"><span class="std std-numref">Fig. 41</span></a>).</p>
+<p>Joint of two connecting segments can be changed from ‘V2’ (default) to ‘V1’ by using a <code class="docutils literal notranslate"><span class="pre">&lt;joint&gt;</span></code> element.
+It requires the names of two segments, delimited by a comma (‘,’) and an attribute <code class="docutils literal notranslate"><span class="pre">style</span></code> specifying the joint type.</p>
+</section>
+<section id="definition-2-define-segments-collectively">
+<h3>DEFINITION 2: Define segments collectively<a class="headerlink" href="#definition-2-define-segments-collectively" title="Permalink to this heading">#</a></h3>
+<p>Use a base line and multiple layups to create multiple segments.
+Each layup can be assigned to a portion of the base line, using a beginning and an ending locations.
+These locations are normalized parametric positions on the base line.
+The beginning location must be smaller than the ending one.
+If the line is open, the location can only be a number between 0 and 1.
+If the line is closed, the location can be any number, even negative, as long as the length is not greater than 1.
+Then PreVABS will split the base line, combine layups and create segments automatically.</p>
+<p>An example is provided below (<a class="reference internal" href="#fig-param-layup-example-define"><span class="std std-numref">Fig 42</span></a>, <a class="reference internal" href="#fig-param-layup-example-plot"><span class="std std-numref">Fig 43</span></a>, <a class="reference internal" href="#code-param-layup-example"><span class="std std-numref">Listing 53</span></a>).</p>
+<div class="literal-block-wrapper docutils container" id="code-segments">
+<div class="code-block-caption"><span class="caption-number">Listing 52 </span><span class="caption-text">Input syntax for the laminate-type components.</span><a class="headerlink" href="#code-segments" title="Permalink to this code">#</a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;cmp_surface&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 2</span><span class="w">  </span><span class="nt">&lt;segment</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;sgm_1&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="nt">&lt;baseline&gt;</span><span class="w"> </span>baseline1<span class="w"> </span><span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">direction=</span><span class="s">&quot;right&quot;</span><span class="nt">&gt;</span><span class="w"> </span>layup1<span class="w"> </span><span class="nt">&lt;/layup&gt;</span>
+<span class="linenos"> 5</span><span class="w">  </span><span class="nt">&lt;/segment&gt;</span>
+<span class="linenos"> 6</span><span class="w">  </span><span class="nt">&lt;segment</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;sgm_2&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="nt">&lt;baseline&gt;</span>...<span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nt">&lt;layup&gt;</span>...<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos"> 9</span><span class="w">  </span><span class="nt">&lt;/segment&gt;</span>
+<span class="linenos">10</span><span class="w">  </span>...
+<span class="linenos">11</span><span class="w">  </span><span class="nt">&lt;joint</span><span class="w"> </span><span class="na">style=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span><span class="w"> </span>sgm_1,sgm_2<span class="w"> </span><span class="nt">&lt;/joint&gt;</span>
+<span class="linenos">12</span><span class="w">  </span>...
+<span class="linenos">13</span><span class="nt">&lt;/component&gt;</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;cmp_web&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">17</span><span class="w">  </span><span class="nt">&lt;segment&gt;</span>
+<span class="linenos">18</span><span class="w">    </span><span class="nt">&lt;baseline&gt;</span><span class="w"> </span>baseline2<span class="w"> </span><span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">19</span><span class="w">    </span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">direction=</span><span class="s">&quot;left&quot;</span><span class="nt">&gt;</span><span class="w"> </span>layup2<span class="w"> </span><span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">20</span><span class="w">  </span><span class="nt">&lt;/segment&gt;</span>
+<span class="linenos">21</span><span class="w">  </span>...
+<span class="linenos">22</span><span class="nt">&lt;/component&gt;</span>
+<span class="linenos">23</span>
+<span class="linenos">24</span>
+<span class="linenos">25</span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">26</span><span class="w">  </span><span class="nt">&lt;segments&gt;</span>
+<span class="linenos">27</span><span class="w">    </span><span class="nt">&lt;baseline&gt;</span><span class="w"> </span>base_line_3_name<span class="w"> </span><span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">28</span><span class="w">    </span><span class="nt">&lt;layup_side&gt;</span><span class="w"> </span>left<span class="w"> </span><span class="nt">&lt;/layup_side&gt;</span>
+<span class="linenos">29</span><span class="w">    </span><span class="nt">&lt;layup&gt;</span><span class="w"> </span>layup_1_name<span class="w"> </span><span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">30</span><span class="w">    </span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">begin=</span><span class="s">&quot;0.1&quot;</span><span class="nt">&gt;</span><span class="w"> </span>layup_2_name<span class="w"> </span><span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">31</span><span class="w">    </span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">end=</span><span class="s">&quot;0.7&quot;</span><span class="nt">&gt;</span><span class="w"> </span>layup_3_name<span class="w"> </span><span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">32</span><span class="w">    </span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">begin=</span><span class="s">&quot;0.2&quot;</span><span class="w"> </span><span class="na">end=</span><span class="s">&quot;0.9&quot;</span><span class="nt">&gt;</span><span class="w"> </span>layup_4_name<span class="w"> </span><span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">33</span><span class="w">    </span>...
+<span class="linenos">34</span><span class="w">  </span><span class="nt">&lt;/segments&gt;</span>
+<span class="linenos">35</span><span class="nt">&lt;/component&gt;</span>
+</pre></div>
+</div>
+</div>
+<section id="example">
+<h4>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h4>
+<figure class="align-center" id="id1">
+<span id="fig-param-layup-example-define"></span><a class="reference internal image-reference" href="../../../_images/param_layup_example_design.png"><img alt="../../../_images/param_layup_example_design.png" src="../../../_images/param_layup_example_design.png" style="width: 4in;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 42 </span><span class="caption-text">Segment layup range definition.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id2">
+<span id="fig-param-layup-example-plot"></span><a class="reference internal image-reference" href="../../../_images/param_layup_example_plot.png"><img alt="../../../_images/param_layup_example_plot.png" src="../../../_images/param_layup_example_plot.png" style="width: 3in;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 43 </span><span class="caption-text">Segments plot.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="literal-block-wrapper docutils container" id="id3">
+<span id="code-param-layup-example"></span><div class="code-block-caption"><span class="caption-number">Listing 53 </span><span class="caption-text">Example input.</span><a class="headerlink" href="#id3" title="Permalink to this code">#</a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">2</span><span class="w">  </span><span class="nt">&lt;segments&gt;</span>
+<span class="linenos">3</span><span class="w">    </span><span class="nt">&lt;baseline&gt;</span><span class="w"> </span>l<span class="w"> </span><span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">4</span><span class="w">    </span><span class="nt">&lt;layup&gt;</span><span class="w"> </span>layup1<span class="w"> </span><span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">5</span><span class="w">    </span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">begin=</span><span class="s">&quot;0.2&quot;</span><span class="w"> </span><span class="na">end=</span><span class="s">&quot;0.75&quot;</span><span class="nt">&gt;</span><span class="w"> </span>layup2<span class="w"> </span><span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">6</span><span class="w">    </span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">begin=</span><span class="s">&quot;-0.1&quot;</span><span class="w"> </span><span class="na">end=</span><span class="s">&quot;0.5&quot;</span><span class="nt">&gt;</span><span class="w"> </span>layup3<span class="w"> </span><span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">7</span><span class="w">    </span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">begin=</span><span class="s">&quot;-0.6&quot;</span><span class="w"> </span><span class="na">end=</span><span class="s">&quot;-0.2&quot;</span><span class="nt">&gt;</span><span class="w"> </span>layup4<span class="w"> </span><span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">8</span><span class="w">  </span><span class="nt">&lt;/segments&gt;</span>
+<span class="linenos">9</span><span class="nt">&lt;/component&gt;</span>
+</pre></div>
+</div>
+</div>
+<p><strong>Specification</strong></p>
+<p><em>DEFINITION 1</em></p>
+<ul class="simple">
+<li><p><strong>&lt;segment&gt;</strong> - Root element of the definition of the segment.</p>
+<ul>
+<li><p><em>name</em> - Name of the segment.</p></li>
+</ul>
+</li>
+<li><p><strong>&lt;baseline&gt;</strong> - Name of the base line defining this segment.</p></li>
+<li><p><strong>&lt;layup&gt;</strong> - Name of the layup defining this segment.</p>
+<ul>
+<li><p><em>direction</em> - Direction of layup. Choose one from ‘left’ and ‘right’. Default is ‘left’.</p></li>
+</ul>
+</li>
+<li><p><strong>&lt;joint&gt;</strong> - Names of two segments delimited by a comma (‘,’) that will be joined.</p>
+<ul>
+<li><p><em>style</em> - Style of the joint. Choose one from ‘1’ and ‘2’. Default is ‘1’.</p></li>
+</ul>
+</li>
+</ul>
+<p><em>DEFINITION 2</em></p>
+<ul class="simple">
+<li><p><strong>&lt;segments&gt;</strong> - Root element of the definition.</p></li>
+<li><p><strong>&lt;baseline&gt;</strong> - Name of the base line definint these segments.</p></li>
+<li><p><strong>&lt;layup_side&gt;</strong> - Direction of the following layups. Choose one from ‘left’ and ‘right’. Default is ‘left’.</p></li>
+<li><p><strong>&lt;layup&gt;</strong> - Name of the layup.</p>
+<ul>
+<li><p><em>begin</em> - Normalized parametric beginning location of the layup on the base line. Defualt is ‘0.0’.</p></li>
+<li><p><em>end</em> - Normalized parametric ending location of the layup on the base line. Defualt is ‘1.0’.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="fill-type-component">
+<h2>Fill-type component<a class="headerlink" href="#fill-type-component" title="Permalink to this heading">#</a></h2>
+<p>Besides creating laminates, user can use one material to fill a region.
+A typical usage is a nose mass in an airfoil type cross section.
+A schematic plot is shown in <a class="reference internal" href="#fig-filling1"><span class="std std-numref">Fig. 44</span></a>.</p>
+<p>The key to this type of component is the indication of the fill region.
+There are two things to pay attention to.
+First, make sure that the boundary of the region is well-defined.
+The region can be surrounded by a number of components.
+User can also create some extra base lines as new boundaries.
+Second, locate the region where the material will be filled into.
+Then can be done by using a point inside the region, or if there are extra base lines, user can indicate the fill side with respect to one of the lines, similar to defining layup side in a segment.</p>
+<p>Fill-type components are also defined in the main input file.
+A template is shown in <a class="reference internal" href="#code-fillings"><span class="std std-numref">Listing 54</span></a>.
+A fill-type component is indicated by the attribute <code class="docutils literal notranslate"><span class="pre">type=&quot;fill&quot;</span></code>.
+A <code class="docutils literal notranslate"><span class="pre">&lt;material&gt;</span></code> child element is required.
+A <code class="docutils literal notranslate"><span class="pre">&lt;baseline&gt;</span></code> element is optional and is used to create extra boundaries.
+This sub-element has one attribute <code class="docutils literal notranslate"><span class="pre">fillside</span></code>, which can be either left or right.
+A <code class="docutils literal notranslate"><span class="pre">&lt;location&gt;</span></code> element is used to store the name of a point that is inside the desired fill region, and is also optional.</p>
+<figure class="align-center" id="fig-filling1">
+<a class="reference internal image-reference" href="../../../_images/filling1.png"><img alt="../../../_images/filling1.png" src="../../../_images/filling1.png" style="width: 6in;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 44 </span><span class="caption-text">Example usage of a fill-type component as a nose mass in an airfoil
+cross section.</span><a class="headerlink" href="#fig-filling1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="literal-block-wrapper docutils container" id="code-fillings">
+<div class="code-block-caption"><span class="caption-number">Listing 54 </span><span class="caption-text">Input syntax for the fill-type components.</span><a class="headerlink" href="#code-fillings" title="Permalink to this code">#</a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;cmp_fill_1&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;fill&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 2</span><span class="w">  </span><span class="nt">&lt;location&gt;</span><span class="w"> </span>point_fill<span class="w"> </span><span class="nt">&lt;/location&gt;</span>
+<span class="linenos"> 3</span><span class="w">  </span><span class="nt">&lt;material&gt;</span><span class="w"> </span>material1<span class="w"> </span><span class="nt">&lt;/material&gt;</span>
+<span class="linenos"> 4</span><span class="nt">&lt;/component&gt;</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;cmp_fill_2&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;fill&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 8</span><span class="w">  </span><span class="nt">&lt;baseline&gt;</span><span class="w"> </span>bsl<span class="w"> </span><span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 9</span><span class="w">  </span><span class="nt">&lt;location&gt;</span><span class="w"> </span>point_fill<span class="w"> </span><span class="nt">&lt;/location&gt;</span>
+<span class="linenos">10</span><span class="w">  </span><span class="nt">&lt;material&gt;</span><span class="w"> </span>material1<span class="w"> </span><span class="nt">&lt;/material&gt;</span>
+<span class="linenos">11</span><span class="w">  </span><span class="nt">&lt;mesh_size</span><span class="w"> </span><span class="na">at=</span><span class="s">&quot;p1,p2&quot;</span><span class="nt">&gt;</span><span class="w"> </span>0.1<span class="w"> </span><span class="nt">&lt;/mesh_size&gt;</span>
+<span class="linenos">12</span><span class="nt">&lt;/component&gt;</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;cmp_fill_3&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;fill&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">16</span><span class="w">  </span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">fillside=</span><span class="s">&quot;right&quot;</span><span class="nt">&gt;</span><span class="w"> </span>bsl_3<span class="w"> </span><span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">17</span><span class="w">  </span><span class="nt">&lt;material&gt;</span><span class="w"> </span>material1<span class="w"> </span><span class="nt">&lt;/material&gt;</span>
+<span class="linenos">18</span><span class="nt">&lt;/component&gt;</span>
+</pre></div>
+</div>
+</div>
+<section id="local-mesh-size">
+<h3>Local mesh size<a class="headerlink" href="#local-mesh-size" title="Permalink to this heading">#</a></h3>
+<p>Besides the mesh size set globally in the main input file, filling type components can be assigned local mesh sizes.
+This is usually for the purpose of reducing the total number of elements and computational cost.
+This feature is based on the embedded objects (points and lines) provided by Gmsh.
+Hence, one or more points need to be specified as the ‘seed’ of local mesh sizes.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;mesh_size</span><span class="w"> </span><span class="na">at=</span><span class="s">&quot;p1,p2&quot;</span><span class="nt">&gt;</span>0.1<span class="nt">&lt;/mesh_size&gt;</span>
+</pre></div>
+</div>
+<p>The mesh size will vary gradually from the local to the global setting.
+Hence, if only one point is used, then the local mesh size will only affect a circular region.
+If multiple points are used, then lines will be created by connecting points seqentially and assigned the local mesh size as well.</p>
+<p>An example is provided below (<a class="reference internal" href="#fig-local-mesh-example-define"><span class="std std-numref">Fig 45</span></a>, <a class="reference internal" href="#fig-local-mesh-example-plot"><span class="std std-numref">Fig 46</span></a>, <a class="reference internal" href="#code-local-mesh-example"><span class="std std-numref">Listing 55</span></a>).</p>
+<figure class="align-center" id="id4">
+<span id="fig-local-mesh-example-define"></span><a class="reference internal image-reference" href="../../../_images/local_mesh_define_mark.png"><img alt="../../../_images/local_mesh_define_mark.png" src="../../../_images/local_mesh_define_mark.png" style="width: 3in;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 45 </span><span class="caption-text">Local mesh definition.</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id5">
+<span id="fig-local-mesh-example-plot"></span><a class="reference internal image-reference" href="../../../_images/local_mesh.png"><img alt="../../../_images/local_mesh.png" src="../../../_images/local_mesh.png" style="width: 3in;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 46 </span><span class="caption-text">Local mesh plot.</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="literal-block-wrapper docutils container" id="id6">
+<span id="code-local-mesh-example"></span><div class="code-block-caption"><span class="caption-number">Listing 55 </span><span class="caption-text">Example input.</span><a class="headerlink" href="#id6" title="Permalink to this code">#</a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;filling 1&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;fill&quot;</span><span class="w"> </span><span class="na">depend=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 2</span><span class="w">  </span><span class="nt">&lt;location&gt;</span><span class="w"> </span>A<span class="w"> </span><span class="nt">&lt;/location&gt;</span>
+<span class="linenos"> 3</span><span class="w">  </span><span class="nt">&lt;material&gt;</span><span class="w"> </span>material1<span class="w"> </span><span class="nt">&lt;/material&gt;</span>
+<span class="linenos"> 4</span><span class="w">  </span><span class="nt">&lt;mesh_size</span><span class="w"> </span><span class="na">at=</span><span class="s">&quot;A&quot;</span><span class="nt">&gt;</span><span class="w"> </span>0.2<span class="w"> </span><span class="nt">&lt;/mesh_size&gt;</span>
+<span class="linenos"> 5</span><span class="nt">&lt;/component&gt;</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;filling 2&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;fill&quot;</span><span class="w"> </span><span class="na">depend=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 8</span><span class="w">  </span><span class="nt">&lt;location&gt;</span><span class="w"> </span>B<span class="w"> </span><span class="nt">&lt;/location&gt;</span>
+<span class="linenos"> 9</span><span class="w">  </span><span class="nt">&lt;material&gt;</span><span class="w"> </span>material2<span class="w"> </span><span class="nt">&lt;/material&gt;</span>
+<span class="linenos">10</span><span class="w">  </span><span class="nt">&lt;mesh_size</span><span class="w"> </span><span class="na">at=</span><span class="s">&quot;B,C&quot;</span><span class="nt">&gt;</span><span class="w"> </span>0.2<span class="w"> </span><span class="nt">&lt;/mesh_size&gt;</span>
+<span class="linenos">11</span><span class="nt">&lt;/component&gt;</span>
+</pre></div>
+</div>
+</div>
+<p><strong>Specification</strong></p>
+<ul class="simple">
+<li><p><strong>&lt;material&gt;</strong> - Name of the material to be filled. Required.</p></li>
+<li><p><strong>&lt;location&gt;</strong> - Name of the point located in the fill region. Optional.</p></li>
+<li><p><strong>&lt;baseline&gt;</strong> - Name of the base line defining part or complete boundary. Optional.</p>
+<ul>
+<li><p><em>fillside</em> - Side of the fill with respect to the base line. Optional.</p></li>
+</ul>
+</li>
+<li><p><strong>&lt;theta1&gt;</strong> - Rotating angle in degree about the <span class="math notranslate nohighlight">\(x_1\)</span> axis. Optional. Default is 0 degree.</p></li>
+<li><p><strong>&lt;theta3&gt;</strong> - Rotating angle in degree about the <span class="math notranslate nohighlight">\(y_3\)</span> axis. Optional. Default is 0 degree.</p></li>
+<li><p><strong>&lt;mesh_size&gt;</strong> - Local mesh size. Optional.</p>
+<ul>
+<li><p><em>at</em> - A list of names of points where the local mesh size will be assgined. Required.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="components-dependency">
+<h2>Components dependency<a class="headerlink" href="#components-dependency" title="Permalink to this heading">#</a></h2>
+<p>If two components are connected in the ‘T’ type (<a class="reference internal" href="#fig-joints"><span class="std std-numref">Fig. 40</span></a>), then the order of creation of the two components must be specified.
+This is done by specifying the dependency.
+For the case shown in the figure, the creation of the thin vertical component (purple) is dependent on the creation of the thick horizontal component (blue).
+Hence, in the definition of the purple component, a <code class="docutils literal notranslate"><span class="pre">depend</span></code> attribute should be specified as shown below.</p>
+<div class="literal-block-wrapper docutils container" id="code-depend">
+<div class="code-block-caption"><span class="caption-number">Listing 56 </span><span class="caption-text">Dependency.</span><a class="headerlink" href="#code-depend" title="Permalink to this code">#</a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;cmp_blue&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;laminate&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/component&gt;</span>
+<span class="linenos">2</span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;cmp_purple&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;laminate&quot;</span><span class="w"> </span><span class="na">depend=</span><span class="s">&quot;cmp_blue&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/component&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>If a component is dependent on multiple components, their names shoule all be listed, delimited by comma.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="pre_material.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Materials and layups</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="pre_recover.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Specifications for recovery</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#laminate-type-component">Laminate-type component</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-1-define-segments-individually">DEFINITION 1: Define segments individually</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-2-define-segments-collectively">DEFINITION 2: Define segments collectively</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fill-type-component">Fill-type component</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local-mesh-size">Local mesh size</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#components-dependency">Components dependency</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Su Tian, Haodong Du, Fei Tao and Wenbin Yu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022, Multiscale Structural Mechanics Group, Purdue University.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
