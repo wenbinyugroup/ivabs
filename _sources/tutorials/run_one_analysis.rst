@@ -16,7 +16,7 @@ To run the tutorial, start a command line prompt, change directory to this tutor
 
 ..  code-block:: shell
 
-    python run.py cs_design_analysis.yml
+    python run.py cs_design_analysis.yml 1
 
 Result can be found in the file ``cs_design_analysis.out``.
 
