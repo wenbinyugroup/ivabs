@@ -362,7 +362,11 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-example">Run the example</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#files-of-this-tutorial">Files of this tutorial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#files-of-this-tutorial">Files of this tutorial</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input">Input</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output">Output</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#main-input-file-specification-cs-design-analysis-yml">Main input file specification (<code class="docutils literal notranslate"><span class="pre">cs_design_analysis.yml</span></code>)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-layout-of-the-main-input-file">Basic layout of the main input file</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define-the-cross-section">Define the cross-section</a></li>
@@ -398,10 +402,12 @@ Specifically, in this tutorial, we want to set values to the locations of spar w
 </section>
 <section id="files-of-this-tutorial">
 <h2>Files of this tutorial<a class="headerlink" href="#files-of-this-tutorial" title="Permalink to this heading">#</a></h2>
+<section id="input">
+<h3>Input<a class="headerlink" href="#input" title="Permalink to this heading">#</a></h3>
 <p>For this and all analysis of iVABS, there is one top-level yaml file as the main input and a Python script to trigger the analysis.
 All others are the supporting files.</p>
 <table class="table" id="id1">
-<caption><span class="caption-number">Table 1 </span><span class="caption-text">Tutorial files</span><a class="headerlink" href="#id1" title="Permalink to this table">#</a></caption>
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Tutorial input files</span><a class="headerlink" href="#id1" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>File</p></th>
 <th class="head"><p>Description</p></th>
@@ -427,6 +433,23 @@ All others are the supporting files.</p>
 </table>
 <p>This tutorial mainly focuses on the main input file.
 Tutorials on other files will be explained later.</p>
+</section>
+<section id="output">
+<h3>Output<a class="headerlink" href="#output" title="Permalink to this heading">#</a></h3>
+<table class="table" id="id2">
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">Tutorial output files</span><a class="headerlink" href="#id2" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>File</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">cs_design_analysis.out</span></code></p></td>
+<td><p>Analysis result</p></td>
+</tr>
+</tbody>
+</table>
+</section>
 </section>
 <section id="main-input-file-specification-cs-design-analysis-yml">
 <h2>Main input file specification (<code class="docutils literal notranslate"><span class="pre">cs_design_analysis.yml</span></code>)<a class="headerlink" href="#main-input-file-specification-cs-design-analysis-yml" title="Permalink to this heading">#</a></h2>
@@ -461,6 +484,14 @@ Tutorials on other files will be explained later.</p>
 <span class="linenos">12</span><span class="w">        </span><span class="nt">tool</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;vabs&quot;</span>
 </pre></div>
 </div>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cs</span></code></dt><dd><p>Root key of the list of cross-section base designs.</p>
+</dd>
+<dt>``  - name: “airfoil”``</dt><dd><p>Name of the cross-section.</p>
+</dd>
+<dt>``    parameter:``</dt><dd><p>Root key of the parameter specification.</p>
+</dd>
+</dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For more details on how to prepare the parameterized base design of a cross-section (<code class="docutils literal notranslate"><span class="pre">airfoil_simple.xml.tmp</span></code>), please see <a class="reference internal" href="../ivabs/parameterization.html#section-ivabs-parameterization"><span class="std std-ref">Parameterization of Composite Slender Structures</span></a>.</p>
@@ -528,7 +559,11 @@ Tutorials on other files will be explained later.</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-example">Run the example</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#files-of-this-tutorial">Files of this tutorial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#files-of-this-tutorial">Files of this tutorial</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input">Input</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output">Output</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#main-input-file-specification-cs-design-analysis-yml">Main input file specification (<code class="docutils literal notranslate"><span class="pre">cs_design_analysis.yml</span></code>)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-layout-of-the-main-input-file">Basic layout of the main input file</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define-the-cross-section">Define the cross-section</a></li>

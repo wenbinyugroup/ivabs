@@ -26,10 +26,13 @@ Result can be found in the file ``cs_design_analysis.out``.
 Files of this tutorial
 -----------------------
 
+Input
+^^^^^^
+
 For this and all analysis of |msgd|, there is one top-level yaml file as the main input and a Python script to trigger the analysis.
 All others are the supporting files.
 
-..  list-table:: Tutorial files
+..  list-table:: Tutorial input files
     :header-rows: 1
 
     * - File
@@ -48,7 +51,16 @@ All others are the supporting files.
 This tutorial mainly focuses on the main input file.
 Tutorials on other files will be explained later.
 
+Output
+^^^^^^^^
 
+..  list-table:: Tutorial output files
+    :header-rows: 1
+
+    * - File
+      - Description
+    * - ``cs_design_analysis.out``
+      - Analysis result
 
 
 Main input file specification (``cs_design_analysis.yml``)
@@ -96,6 +108,14 @@ This block specifies the base design of the cross-section that will be analyzed.
           md1:
             tool: "vabs"
 
+``cs``
+    Root key of the list of cross-section base designs.
+
+``  - name: "airfoil"``
+    Name of the cross-section.
+
+``    parameter:``
+    Root key of the parameter specification.
 
 
 ..  note::
