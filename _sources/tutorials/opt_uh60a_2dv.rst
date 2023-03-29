@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Optimize a single cross-section (general)
-=============================================
+Optimization of spar web locations for desired properties
+============================================================
 
 .. toctree::
    :maxdepth: 3

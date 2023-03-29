@@ -45,7 +45,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Problem Description" href="problem.html" />
-    <link rel="prev" title="Optimize a single cross-section (general)" href="../opt_uh60a_2dv.html" />
+    <link rel="prev" title="Optimization of spar web locations for desired properties" href="../opt_uh60a_2dv.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -133,11 +133,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/getstart.html">Quick Start</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Tutorials</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../run_one_analysis.html">Carry out a single cross-sectional analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../opt_spar_web.html">Optimization of spar web locations for desired properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../opt_spar_layup.html">Optimize the spar layup of a cross-section</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../opt_cs_init_twist.html">Optimize the cross-section considering beam initial twist</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../prepare_cs_template.html">Prepare a cross-sectional design template</a></li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="../opt_uh60a_2dv.html">Optimize a single cross-section (general)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../opt_uh60a_2dv.html">Optimization of spar web locations for desired properties</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Running of The Tutorial</a></li>
 <li class="toctree-l3"><a class="reference internal" href="problem.html">Problem Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cs_param.html">Cross-sectional Parameterization and Beam Properties</a></li>
@@ -154,6 +150,9 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../opt_spar_layup.html">Optimize the spar layup of a cross-section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opt_cs_init_twist.html">Optimize the cross-section considering beam initial twist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prepare_cs_template.html">Prepare a cross-sectional design template</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../examples/index.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -366,13 +365,13 @@ document.write(`
   <blockquote>
 <div></div></blockquote>
 <section id="running-of-the-tutorial">
-<span id="running"></span><h1>Running of The Tutorial<a class="headerlink" href="#running-of-the-tutorial" title="Permalink to this heading">#</a></h1>
+<h1>Running of The Tutorial<a class="headerlink" href="#running-of-the-tutorial" title="Permalink to this heading">#</a></h1>
 <p>To run the tutorial, use the following command:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dakota<span class="w"> </span>-i<span class="w"> </span>cs_tm_opt_soga.dakota
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>run.py<span class="w"> </span>cs_design_opt_soga.yml
 </pre></div>
 </div>
 <p>If the optimization stops for some reason, to restart the optimization without doing everything from the beginning, use the following command:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dakota<span class="w"> </span>-i<span class="w"> </span>cs_tm_opt_soga.dakota<span class="w"> </span>--read_restart<span class="w"> </span>cs_tm_opt_soga.rst
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dakota<span class="w"> </span>-i<span class="w"> </span>cs_design_opt_soga.dakota<span class="w"> </span>--read_restart<span class="w"> </span>cs_design_opt_soga.rst
 </pre></div>
 </div>
 </section>
@@ -392,7 +391,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Optimize a single cross-section (general)</p>
+        <p class="prev-next-title">Optimization of spar web locations for desired properties</p>
       </div>
     </a>
     <a class="right-next"
