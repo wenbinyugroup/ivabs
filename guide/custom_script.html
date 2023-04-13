@@ -360,9 +360,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-the-custom-scripts">Prepare the custom scripts</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-preproess-of-parameters-before-cross-sectional-analysis">Example 1: Preproess of parameters before cross-sectional analysis</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-postprocess-of-analysis-results-for-calculating-final-objectives">Example 2: Postprocess of analysis results for calculating final objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-the-custom-scripts">Prepare the custom scripts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#postprocess-of-analysis-results-for-calculating-final-objectives">#. Postprocess of analysis results for calculating final objectives</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#include-the-custom-scripts-in-the-main-input-file">Include the custom scripts in the main input file</a></li>
@@ -394,7 +394,7 @@ However, there are some rules that users should follow when writing the function
 Users can still write functions freely if they are used only by other functions in the custom script, instead of iVABS.</p>
 </div>
 <p>The functions must have the following input list (names of the input variabels can be arbitrary):</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_function</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">structure_name</span><span class="p">,</span> <span class="n">logger</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_function</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">sname</span><span class="p">,</span> <span class="n">logger</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 
     <span class="o">...</span>
 </pre></div>
@@ -403,7 +403,7 @@ Users can still write functions freely if they are used only by other functions 
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">data</span></code></dt><dd><p>The core data used by iVABS.</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">structure_name</span></code></dt><dd><p>The structure or cross-section name of the current analysis step.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">sname</span></code></dt><dd><p>The structure or cross-section name of the current analysis step.</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">logger</span></code></dt><dd><p>The logger object for generating logging information.</p>
 </dd>
@@ -428,15 +428,23 @@ This is a Python dictionary object and its data layout is:</p>
         <span class="s1">&#39;mdao_design_response_2&#39;</span><span class="p">:</span> <span class="n">dr_value_2</span><span class="p">,</span>
         <span class="o">...</span>
     <span class="p">}</span>
-    <span class="s1">&#39;structures&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s1">&#39;design&#39;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s1">&#39;parameters&#39;</span><span class="p">:</span> <span class="p">{}</span>
-        <span class="p">},</span>
-        <span class="s1">&#39;sgs_data&#39;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s1">&#39;sg1&#39;</span><span class="p">:</span> <span class="p">{}</span>
+    <span class="s1">&#39;structure&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;parameter&#39;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s1">&#39;design&#39;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s1">&#39;css_data&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;cs_set1&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;parameter&#39;</span><span class="p">:</span> <span class="p">{},</span>
+                <span class="s1">&#39;property&#39;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s1">&#39;md1&#39;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="o">...</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="s1">&#39;cs_set2&#39;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="o">...</span>
         <span class="p">}</span>
     <span class="p">},</span>
-    <span class="s1">&#39;sgdb&#39;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="s1">&#39;csdb&#39;</span><span class="p">:</span> <span class="p">{},</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -445,16 +453,27 @@ This is a Python dictionary object and its data layout is:</p>
 <dt><code class="docutils literal notranslate"><span class="pre">main</span></code></dt><dd><p>Data exchanged between Dakota methods (e.g., parametric study or optimization) and the structural design and analysis.
 Dakota will look for needed results in this key only.</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">structures</span></code></dt><dd><p>All data related with the structure.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">structure</span></code></dt><dd><p>All data related with the structure.</p>
 </dd>
 </dl>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">sgdb</span></code></dt><dd><p>SG database.</p>
 </dd>
 </dl>
-<section id="example-1-preproess-of-parameters-before-cross-sectional-analysis">
-<h3>Example 1: Preproess of parameters before cross-sectional analysis<a class="headerlink" href="#example-1-preproess-of-parameters-before-cross-sectional-analysis" title="Permalink to this heading">#</a></h3>
-<p>Suppose that there are two design variables “a” and “b” used by Dakota declared in the main input file.
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This data object is written into three files (<code class="docutils literal notranslate"><span class="pre">msgd.data.yml</span></code>, <code class="docutils literal notranslate"><span class="pre">msgd.structure_data.yml</span></code>, and <code class="docutils literal notranslate"><span class="pre">cs_db.yml</span></code>) as interim output in the same folder as the main input file.
+Users can always check these files for more details.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>More details on the available beam properties can be found in <a class="reference internal" href="../ref/beam_properties.html#section-beam-properties"><span class="std std-ref">Beam Properties</span></a>.</p>
+</div>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>Suppose that there are two design variables “a” and “b” used by Dakota declared in the main input file.
 However, the real design parameter labeled in the cross-sectional template is “c”, which is defined as the average of “a” and “b”.
 Then, for the cross-sectional analysis of each iteration, we need to calculate “c” using “a” and “b” before the substitution of parameters.
 This can be done using a custom function as following.</p>
@@ -466,18 +485,18 @@ This can be done using a custom function as following.</p>
 </pre></div>
 </div>
 <p>The value passed to the argument <code class="docutils literal notranslate"><span class="pre">structure_name</span></code> from iVABS will always be the name of current cross-section that is going to be analyzed.</p>
-</section>
-<section id="example-2-postprocess-of-analysis-results-for-calculating-final-objectives">
-<h3>Example 2: Postprocess of analysis results for calculating final objectives<a class="headerlink" href="#example-2-postprocess-of-analysis-results-for-calculating-final-objectives" title="Permalink to this heading">#</a></h3>
+</div></blockquote>
+<section id="postprocess-of-analysis-results-for-calculating-final-objectives">
+<h3>#. Postprocess of analysis results for calculating final objectives<a class="headerlink" href="#postprocess-of-analysis-results-for-calculating-final-objectives" title="Permalink to this heading">#</a></h3>
 <p>Suppose that we are dealing with a blade analyzed using 10 cross-sections.
 The design goal here is to maximize the torsional stiffness GJ.
 Specifically, assume the optimization objective is to maximize the minimum GJ among all cross-sections.
 The objective required by Dakota is <code class="docutils literal notranslate"><span class="pre">gj_min</span></code>, declared in the main input file.
 This can be done using a custom function as following.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcMinGJ</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">structure_name</span><span class="p">,</span> <span class="n">logger</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcMinGJ</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">sname</span><span class="p">,</span> <span class="n">logger</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="n">gj_list</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">cs_name</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;structures&#39;</span><span class="p">][</span><span class="s1">&#39;cs&#39;</span><span class="p">]:</span>
-        <span class="n">gj</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">cs_name</span><span class="p">][</span><span class="s1">&#39;gj&#39;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">_cs_name</span><span class="p">,</span> <span class="n">_cs_data</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;structure&#39;</span><span class="p">][</span><span class="s1">&#39;css_data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">gj</span> <span class="o">=</span> <span class="n">_cs_data</span><span class="p">[</span><span class="s1">&#39;property&#39;</span><span class="p">][</span><span class="s1">&#39;md1&#39;</span><span class="p">][</span><span class="s1">&#39;gj&#39;</span><span class="p">]</span>
         <span class="n">gj_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">gj</span><span class="p">)</span>
     <span class="n">gj_min</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">gj_list</span><span class="p">)</span>
     <span class="n">data</span><span class="p">[</span><span class="s1">&#39;main&#39;</span><span class="p">][</span><span class="s1">&#39;gj_min&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gj_min</span>
@@ -494,66 +513,42 @@ This can be done using a custom function as following.</p>
 </pre></div>
 </div>
 <p>and consider the following functions in <code class="docutils literal notranslate"><span class="pre">my_functions.py</span></code> that will be used in the analysis:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">csPreProcess1</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">structure_name</span><span class="p">,</span> <span class="n">logger</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="c1"># Called before a cross-sectional analysis</span>
-    <span class="c1"># Can be used for preprocessing cross-sectional parameters</span>
-    <span class="o">...</span>
-
-<span class="k">def</span> <span class="nf">csPreProcess2</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">structure_name</span><span class="p">,</span> <span class="n">logger</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="c1"># Called before a cross-sectional analysis</span>
-    <span class="c1"># Can be used for preprocessing cross-sectional parameters</span>
-    <span class="o">...</span>
-
-<span class="k">def</span> <span class="nf">csPostProcess</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">structure_name</span><span class="p">,</span> <span class="n">logger</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="c1"># Called after a cross-sectional analysis</span>
-    <span class="c1"># Can be used for postprocessing cross-sectional analysis outputs</span>
-    <span class="o">...</span>
-
-<span class="k">def</span> <span class="nf">finalProcess</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">structure_name</span><span class="p">,</span> <span class="n">logger</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">finalProcess</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">sname</span><span class="p">,</span> <span class="n">logger</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="c1"># Called as a single analysis step</span>
     <span class="c1"># Can be used for calculating the final objectives and constraints after all analysis steps</span>
+    <span class="o">...</span>
+    <span class="n">subProcess</span><span class="p">()</span>
+    <span class="o">...</span>
+
+
+<span class="k">def</span> <span class="nf">subProcess</span><span class="p">():</span>
     <span class="o">...</span>
 </pre></div>
 </div>
 <p>To let iVABS call these functions properly, the main input file should be configured in the following way (other inputs are omitted and represented using “…”):</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">setting</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">data_process_functions_file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_functions&quot;</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">...</span>
-
-<span class="nn">...</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">...</span>
 
 <span class="nt">analysis</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">steps</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">...</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">step</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;cs</span><span class="nv"> </span><span class="s">analysis&quot;</span>
-<span class="w">    </span><span class="nt">structure_class</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;cs&quot;</span>
-<span class="w">    </span><span class="nt">all</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">preprocess</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">function</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;csPreProcess1&quot;</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">step</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;final</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">process&quot;</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;script&quot;</span>
+<span class="w">        </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_scripts&quot;</span>
+<span class="w">        </span><span class="nt">function</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;finalProcess&quot;</span>
 <span class="w">        </span><span class="nt">args</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
 <span class="w">        </span><span class="nt">kwargs</span><span class="p">:</span>
-<span class="w">          </span><span class="l l-Scalar l-Scalar-Plain">...</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">function</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;csPreProcess2&quot;</span>
-<span class="w">      </span><span class="nt">postprocess</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">function</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;csPostProcess&quot;</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">...</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">step</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;final</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">process&quot;</span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;script&quot;</span>
-<span class="w">    </span><span class="nt">function</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;finalProcess&quot;</span>
-<span class="w">    </span><span class="nt">args</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
-<span class="w">    </span><span class="nt">kwargs</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">11</span>
-<span class="w">      </span><span class="nt">b</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">22</span>
+<span class="w">            </span><span class="nt">a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">11</span>
+<span class="w">            </span><span class="nt">b</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">22</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">...</span>
 
 <span class="nt">study</span><span class="p">:</span>
 <span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">...</span>
 <span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">interface</span><span class="p p-Indicator">:</span>
 <span class="w">    </span><span class="nt">required_files</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;my_scripts/my_functions.py&quot;</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;my_scripts/my_functions.py&quot;</span><span class="w">  </span><span class="c1"># or &quot;my_scripts/*&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">...</span>
 </pre></div>
 </div>
 </section>
@@ -601,9 +596,9 @@ This can be done using a custom function as following.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-the-custom-scripts">Prepare the custom scripts</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-preproess-of-parameters-before-cross-sectional-analysis">Example 1: Preproess of parameters before cross-sectional analysis</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-postprocess-of-analysis-results-for-calculating-final-objectives">Example 2: Postprocess of analysis results for calculating final objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-the-custom-scripts">Prepare the custom scripts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#postprocess-of-analysis-results-for-calculating-final-objectives">#. Postprocess of analysis results for calculating final objectives</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#include-the-custom-scripts-in-the-main-input-file">Include the custom scripts in the main input file</a></li>
