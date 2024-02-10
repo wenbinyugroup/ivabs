@@ -1,0 +1,705 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Cross-section Airfoil Data (sc1095.dat) &#8212; iVABS Documentation (v0.7)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "wenbinyugroup/ivabs");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ivabs/tutorials/opt_uh60a_2dv/inputs_cs_airfoil';</script>
+    <link rel="canonical" href="https://wenbinyugroup.github.io/ivabs/ivabs/tutorials/opt_uh60a_2dv/inputs_cs_airfoil.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">iVABS Documentation (v0.7)</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../install.html">Download &amp; Installation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../install/windows.html">Installation on Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install/linux.html">Installation on Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install/python_setup.html">Setup Python Environment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../getstart.html">Quick Start</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example_quickstart_param_study.html">Parameter study of a single cross-section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example_uh60_sopt_stf.html">Single objective optimization of multiple cross-sections to match target beam properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example_uh60_mopt_stf.html">Multiple objective optimization of multiple cross-sections to match target beam properties</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../main_input.html">Guide to Main Input File</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../input_guide/intro_yaml.html">A Brief Introduction to YAML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../input_guide/input_design.html">Design Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../input_guide/input_analysis.html">Analysis Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../input_guide/input_study.html">Design Study</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../parameterization.html">Parameterization of Composite Slender Structures</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../cs_template.html">Cross-sectional Design Templates</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cs_templates/airfoil_gbox_uni.html">Airfoil Box-spar Uniform</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../beam_properties.html">Beam Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../analysis_step_script.html">Custom Python Script for Analysis</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../extensions.html">Extensions</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/galaxy_rcas.html">Link to Galaxy/RCAS</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ref_main.html">Reference manual</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/input_keywords_main.html">Main Input Keywords</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">iVABS Components</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../prevabs/index.html">PreVABS Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/contents/install.html">Download and Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/contents/run.html">How to Run PreVABS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/contents/tutorial.html">Tutorial</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../prevabs/contents/guide.html">Guide for Preparing Input Files</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/guide/pre_coordinate.html">Coordinate systems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/guide/pre_shape.html">Geometry and shapes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/guide/pre_material.html">Materials and layups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/guide/pre_component.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/guide/pre_recover.html">Specifications for recovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/guide/pre_overall.html">Other input settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../prevabs/contents/examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_box.html">Box beam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_pipe.html">Pipe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_tube.html">Circular tube</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_channel.html">Channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_airfoil.html">Airfoil (MH-104)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_airfoil_recover.html">Airfoil (Recover)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_uh60a_fi.html">UH-60A (Initial Failure Analysis)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/contents/changelog.html">Change log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/contents/xml.html">Introduction to XML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/contents/references.html">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../msgpi/index.html">MSGPI Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../msgpi/contents/user_guide.html">User Guide</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../msgpi/contents/ref_manual.html">Reference</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../msgpi/contents/sg/index.html">Structure Gene</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/structuregene.html">StructureGene</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/crosssection.html">CrossSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/materialsection.html">MaterialSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/beamproperty.html">BeamProperty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/io.html">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/run.html">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../msgpi/contents/utils/index.html">Utilities</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/utils/io.html">IO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/utils/math.html">Math</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/utils/logger.html">Logging</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/wenbinyugroup/ivabs" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/wenbinyugroup/ivabs/edit/main/docs/source/ivabs/tutorials/opt_uh60a_2dv/inputs_cs_airfoil.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/wenbinyugroup/ivabs/issues/new?title=Issue%20on%20page%20%2Fivabs/tutorials/opt_uh60a_2dv/inputs_cs_airfoil.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/ivabs/tutorials/opt_uh60a_2dv/inputs_cs_airfoil.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Cross-section Airfoil Data (sc1095.dat)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="cross-section-airfoil-data-sc1095-dat">
+<span id="sect-input-airfoil"></span><h1>Cross-section Airfoil Data (<code class="docutils literal notranslate"><span class="pre">sc1095.dat</span></code>)<a class="headerlink" href="#cross-section-airfoil-data-sc1095-dat" title="Permalink to this heading">#</a></h1>
+<p>In this example, the base points are supplied via a separate base points file.
+The cross section are oriented to the right and points are given in the counterclockwise direction.
+This is shown in the figure below.
+The orientation of cross section and points order can also be chosen by your preference or convention.</p>
+<figure class="align-center" id="uh60a-airfoil-points-order">
+<a class="reference internal image-reference" href="../../../_images/uh60a_point_order.jpg"><img alt="../../../_images/uh60a_point_order.jpg" src="../../../_images/uh60a_point_order.jpg" style="width: 6in;" /></a>
+</figure>
+<p>The base points file includes arbitrary number of lines. each line includes</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">lable</span> <span class="n">a_2</span> <span class="n">a_3</span>
+</pre></div>
+</div>
+<p>The label can be any number or just strings.
+You could assign a meaningful name for important points like intersections and
+assign numbers sequentially for other points.
+The label will be used to reference the points in building the cross section.</p>
+<div class="literal-block-wrapper docutils container" id="code-cs-airfoil">
+<div class="code-block-caption"><span class="caption-text">sc1095.dat</span><a class="headerlink" href="#code-cs-airfoil" title="Permalink to this code">#</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="mi">1</span>  <span class="mi">0</span>  <span class="mi">0</span>
+<span class="linenos">  2</span><span class="mi">2</span>  <span class="o">-</span><span class="mf">0.000102</span>  <span class="mf">0.001466</span>
+<span class="linenos">  3</span><span class="mi">3</span>  <span class="o">-</span><span class="mf">0.000813</span>  <span class="mf">0.003959</span>
+<span class="linenos">  4</span><span class="mi">4</span>  <span class="o">-</span><span class="mf">0.002034</span>  <span class="mf">0.006255</span>
+<span class="linenos">  5</span><span class="mi">5</span>  <span class="o">-</span><span class="mf">0.004067</span>  <span class="mf">0.009133</span>
+<span class="linenos">  6</span><span class="mi">6</span>  <span class="o">-</span><span class="mf">0.006609</span>  <span class="mf">0.012145</span>
+<span class="linenos">  7</span><span class="mi">7</span>  <span class="o">-</span><span class="mf">0.009151</span>  <span class="mf">0.014727</span>
+<span class="linenos">  8</span><span class="mi">8</span>  <span class="o">-</span><span class="mf">0.012201</span>  <span class="mf">0.017476</span>
+<span class="linenos">  9</span><span class="mi">9</span>  <span class="o">-</span><span class="mf">0.018302</span>  <span class="mf">0.022201</span>
+<span class="linenos"> 10</span><span class="mi">10</span>  <span class="o">-</span><span class="mf">0.024403</span>  <span class="mf">0.026083</span>
+<span class="linenos"> 11</span><span class="mi">11</span>  <span class="o">-</span><span class="mf">0.030503</span>  <span class="mf">0.029338</span>
+<span class="linenos"> 12</span><span class="mi">12</span>  <span class="o">-</span><span class="mf">0.036604</span>  <span class="mf">0.032084</span>
+<span class="linenos"> 13</span><span class="mi">13</span>  <span class="o">-</span><span class="mf">0.042705</span>  <span class="mf">0.034427</span>
+<span class="linenos"> 14</span><span class="mi">14</span>  <span class="o">-</span><span class="mf">0.050839</span>  <span class="mf">0.037069</span>
+<span class="linenos"> 15</span><span class="mi">15</span>  <span class="o">-</span><span class="mf">0.061007</span>  <span class="mf">0.039788</span>
+<span class="linenos"> 16</span><span class="mi">16</span>  <span class="o">-</span><span class="mf">0.071174</span>  <span class="mf">0.042051</span>
+<span class="linenos"> 17</span><span class="mi">17</span>  <span class="o">-</span><span class="mf">0.081342</span>  <span class="mf">0.043977</span>
+<span class="linenos"> 18</span><span class="mi">18</span>  <span class="o">-</span><span class="mf">0.09151</span>  <span class="mf">0.045624</span>
+<span class="linenos"> 19</span><span class="mi">19</span>  <span class="o">-</span><span class="mf">0.101678</span>  <span class="mf">0.047049</span>
+<span class="linenos"> 20</span><span class="mi">20</span>  <span class="o">-</span><span class="mf">0.116929</span>  <span class="mf">0.048852</span>
+<span class="linenos"> 21</span><span class="mi">21</span>  <span class="o">-</span><span class="mf">0.132181</span>  <span class="mf">0.050333</span>
+<span class="linenos"> 22</span><span class="mi">22</span>  <span class="o">-</span><span class="mf">0.147433</span>  <span class="mf">0.051581</span>
+<span class="linenos"> 23</span><span class="mi">23</span>  <span class="o">-</span><span class="mf">0.162684</span>  <span class="mf">0.052648</span>
+<span class="linenos"> 24</span><span class="mi">24</span>  <span class="o">-</span><span class="mf">0.177936</span>  <span class="mf">0.05354</span>
+<span class="linenos"> 25</span><span class="mi">25</span>  <span class="o">-</span><span class="mf">0.193188</span>  <span class="mf">0.054258</span>
+<span class="linenos"> 26</span><span class="mi">26</span>  <span class="o">-</span><span class="mf">0.208439</span>  <span class="mf">0.054802</span>
+<span class="linenos"> 27</span><span class="mi">27</span>  <span class="o">-</span><span class="mf">0.223691</span>  <span class="mf">0.055178</span>
+<span class="linenos"> 28</span><span class="mi">28</span>  <span class="o">-</span><span class="mf">0.238943</span>  <span class="mf">0.055414</span>
+<span class="linenos"> 29</span><span class="mi">29</span>  <span class="o">-</span><span class="mf">0.254194</span>  <span class="mf">0.055527</span>
+<span class="linenos"> 30</span><span class="mi">30</span>  <span class="o">-</span><span class="mf">0.269446</span>  <span class="mf">0.05554</span>
+<span class="linenos"> 31</span><span class="mi">31</span>  <span class="o">-</span><span class="mf">0.284697</span>  <span class="mf">0.055472</span>
+<span class="linenos"> 32</span><span class="mi">32</span>  <span class="o">-</span><span class="mf">0.305033</span>  <span class="mf">0.055281</span>
+<span class="linenos"> 33</span><span class="mi">33</span>  <span class="o">-</span><span class="mf">0.325369</span>  <span class="mf">0.05498</span>
+<span class="linenos"> 34</span><span class="mi">34</span>  <span class="o">-</span><span class="mf">0.345704</span>  <span class="mf">0.054576</span>
+<span class="linenos"> 35</span><span class="mi">35</span>  <span class="o">-</span><span class="mf">0.36604</span>  <span class="mf">0.054074</span>
+<span class="linenos"> 36</span><span class="mi">36</span>  <span class="o">-</span><span class="mf">0.386375</span>  <span class="mf">0.053479</span>
+<span class="linenos"> 37</span><span class="mi">37</span>  <span class="o">-</span><span class="mf">0.406711</span>  <span class="mf">0.052796</span>
+<span class="linenos"> 38</span><span class="mi">38</span>  <span class="o">-</span><span class="mf">0.427046</span>  <span class="mf">0.052028</span>
+<span class="linenos"> 39</span><span class="mi">39</span>  <span class="o">-</span><span class="mf">0.447382</span>  <span class="mf">0.051176</span>
+<span class="linenos"> 40</span><span class="mi">40</span>  <span class="o">-</span><span class="mf">0.467717</span>  <span class="mf">0.050241</span>
+<span class="linenos"> 41</span><span class="mi">41</span>  <span class="o">-</span><span class="mf">0.488053</span>  <span class="mf">0.049223</span>
+<span class="linenos"> 42</span><span class="mi">42</span>  <span class="o">-</span><span class="mf">0.508388</span>  <span class="mf">0.048123</span>
+<span class="linenos"> 43</span><span class="mi">43</span>  <span class="o">-</span><span class="mf">0.528724</span>  <span class="mf">0.046942</span>
+<span class="linenos"> 44</span><span class="mi">44</span>  <span class="o">-</span><span class="mf">0.549059</span>  <span class="mf">0.045679</span>
+<span class="linenos"> 45</span><span class="mi">45</span>  <span class="o">-</span><span class="mf">0.569395</span>  <span class="mf">0.044336</span>
+<span class="linenos"> 46</span><span class="mi">46</span>  <span class="o">-</span><span class="mf">0.589731</span>  <span class="mf">0.042911</span>
+<span class="linenos"> 47</span><span class="mi">47</span>  <span class="o">-</span><span class="mf">0.610066</span>  <span class="mf">0.041404</span>
+<span class="linenos"> 48</span><span class="mi">48</span>  <span class="o">-</span><span class="mf">0.630402</span>  <span class="mf">0.039817</span>
+<span class="linenos"> 49</span><span class="mi">49</span>  <span class="o">-</span><span class="mf">0.650737</span>  <span class="mf">0.038149</span>
+<span class="linenos"> 50</span><span class="mi">50</span>  <span class="o">-</span><span class="mf">0.671073</span>  <span class="mf">0.036402</span>
+<span class="linenos"> 51</span><span class="mi">51</span>  <span class="o">-</span><span class="mf">0.691408</span>  <span class="mf">0.034577</span>
+<span class="linenos"> 52</span><span class="mi">52</span>  <span class="o">-</span><span class="mf">0.711744</span>  <span class="mf">0.032673</span>
+<span class="linenos"> 53</span><span class="mi">53</span>  <span class="o">-</span><span class="mf">0.732079</span>  <span class="mf">0.030696</span>
+<span class="linenos"> 54</span><span class="mi">54</span>  <span class="o">-</span><span class="mf">0.752415</span>  <span class="mf">0.028652</span>
+<span class="linenos"> 55</span><span class="mi">55</span>  <span class="o">-</span><span class="mf">0.77275</span>  <span class="mf">0.026547</span>
+<span class="linenos"> 56</span><span class="mi">56</span>  <span class="o">-</span><span class="mf">0.793086</span>  <span class="mf">0.024387</span>
+<span class="linenos"> 57</span><span class="mi">57</span>  <span class="o">-</span><span class="mf">0.813421</span>  <span class="mf">0.02218</span>
+<span class="linenos"> 58</span><span class="mi">58</span>  <span class="o">-</span><span class="mf">0.833757</span>  <span class="mf">0.01993</span>
+<span class="linenos"> 59</span><span class="mi">59</span>  <span class="o">-</span><span class="mf">0.854092</span>  <span class="mf">0.017642</span>
+<span class="linenos"> 60</span><span class="mi">60</span>  <span class="o">-</span><span class="mf">0.874428</span>  <span class="mf">0.01532</span>
+<span class="linenos"> 61</span><span class="mi">61</span>  <span class="o">-</span><span class="mf">0.894764</span>  <span class="mf">0.01297</span>
+<span class="linenos"> 62</span><span class="mi">62</span>  <span class="o">-</span><span class="mf">0.915099</span>  <span class="mf">0.010595</span>
+<span class="linenos"> 63</span><span class="mi">63</span>  <span class="o">-</span><span class="mf">0.925267</span>  <span class="mf">0.009393</span>
+<span class="linenos"> 64</span><span class="mi">64</span>  <span class="o">-</span><span class="mf">0.935435</span>  <span class="mf">0.008179</span>
+<span class="linenos"> 65</span><span class="mi">65</span>  <span class="o">-</span><span class="mf">0.945602</span>  <span class="mf">0.00695</span>
+<span class="linenos"> 66</span><span class="mi">66</span>  <span class="o">-</span><span class="mf">0.95577</span>  <span class="mf">0.005702</span>
+<span class="linenos"> 67</span><span class="mi">67</span>  <span class="o">-</span><span class="mf">0.965938</span>  <span class="mf">0.004433</span>
+<span class="linenos"> 68</span><span class="mi">68</span>  <span class="o">-</span><span class="mf">0.976106</span>  <span class="mf">0.003603</span>
+<span class="linenos"> 69</span><span class="mi">69</span>  <span class="o">-</span><span class="mf">0.986274</span>  <span class="mf">0.002805</span>
+<span class="linenos"> 70</span><span class="mi">70</span>  <span class="o">-</span><span class="mf">0.996441</span>  <span class="mf">0.002008</span>
+<span class="linenos"> 71</span><span class="mi">71</span>  <span class="o">-</span><span class="mi">1</span>  <span class="mf">0.001729</span>
+<span class="linenos"> 72</span><span class="mi">72</span>  <span class="o">-</span><span class="mi">1</span>  <span class="o">-</span><span class="mf">0.001729</span>
+<span class="linenos"> 73</span><span class="mi">73</span>  <span class="o">-</span><span class="mf">0.996441</span>  <span class="o">-</span><span class="mf">0.001875</span>
+<span class="linenos"> 74</span><span class="mi">74</span>  <span class="o">-</span><span class="mf">0.986274</span>  <span class="o">-</span><span class="mf">0.002294</span>
+<span class="linenos"> 75</span><span class="mi">75</span>  <span class="o">-</span><span class="mf">0.976106</span>  <span class="o">-</span><span class="mf">0.002713</span>
+<span class="linenos"> 76</span><span class="mi">76</span>  <span class="o">-</span><span class="mf">0.965938</span>  <span class="o">-</span><span class="mf">0.003131</span>
+<span class="linenos"> 77</span><span class="mi">77</span>  <span class="o">-</span><span class="mf">0.95577</span>  <span class="o">-</span><span class="mf">0.004019</span>
+<span class="linenos"> 78</span><span class="mi">78</span>  <span class="o">-</span><span class="mf">0.945602</span>  <span class="o">-</span><span class="mf">0.004889</span>
+<span class="linenos"> 79</span><span class="mi">79</span>  <span class="o">-</span><span class="mf">0.935435</span>  <span class="o">-</span><span class="mf">0.005745</span>
+<span class="linenos"> 80</span><span class="mi">80</span>  <span class="o">-</span><span class="mf">0.925267</span>  <span class="o">-</span><span class="mf">0.006589</span>
+<span class="linenos"> 81</span><span class="mi">81</span>  <span class="o">-</span><span class="mf">0.915099</span>  <span class="o">-</span><span class="mf">0.007424</span>
+<span class="linenos"> 82</span><span class="mi">82</span>  <span class="o">-</span><span class="mf">0.894764</span>  <span class="o">-</span><span class="mf">0.009078</span>
+<span class="linenos"> 83</span><span class="mi">83</span>  <span class="o">-</span><span class="mf">0.874428</span>  <span class="o">-</span><span class="mf">0.010723</span>
+<span class="linenos"> 84</span><span class="mi">84</span>  <span class="o">-</span><span class="mf">0.854092</span>  <span class="o">-</span><span class="mf">0.012355</span>
+<span class="linenos"> 85</span><span class="mi">85</span>  <span class="o">-</span><span class="mf">0.833757</span>  <span class="o">-</span><span class="mf">0.013971</span>
+<span class="linenos"> 86</span><span class="mi">86</span>  <span class="o">-</span><span class="mf">0.813421</span>  <span class="o">-</span><span class="mf">0.015566</span>
+<span class="linenos"> 87</span><span class="mi">87</span>  <span class="o">-</span><span class="mf">0.793086</span>  <span class="o">-</span><span class="mf">0.017137</span>
+<span class="linenos"> 88</span><span class="mi">88</span>  <span class="o">-</span><span class="mf">0.77275</span>  <span class="o">-</span><span class="mf">0.018679</span>
+<span class="linenos"> 89</span><span class="mi">89</span>  <span class="o">-</span><span class="mf">0.752415</span>  <span class="o">-</span><span class="mf">0.020187</span>
+<span class="linenos"> 90</span><span class="mi">90</span>  <span class="o">-</span><span class="mf">0.732079</span>  <span class="o">-</span><span class="mf">0.021655</span>
+<span class="linenos"> 91</span><span class="mi">91</span>  <span class="o">-</span><span class="mf">0.711744</span>  <span class="o">-</span><span class="mf">0.023078</span>
+<span class="linenos"> 92</span><span class="mi">92</span>  <span class="o">-</span><span class="mf">0.691408</span>  <span class="o">-</span><span class="mf">0.024452</span>
+<span class="linenos"> 93</span><span class="mi">93</span>  <span class="o">-</span><span class="mf">0.671073</span>  <span class="o">-</span><span class="mf">0.025771</span>
+<span class="linenos"> 94</span><span class="mi">94</span>  <span class="o">-</span><span class="mf">0.650737</span>  <span class="o">-</span><span class="mf">0.027033</span>
+<span class="linenos"> 95</span><span class="mi">95</span>  <span class="o">-</span><span class="mf">0.630402</span>  <span class="o">-</span><span class="mf">0.028238</span>
+<span class="linenos"> 96</span><span class="mi">96</span>  <span class="o">-</span><span class="mf">0.610066</span>  <span class="o">-</span><span class="mf">0.029384</span>
+<span class="linenos"> 97</span><span class="mi">97</span>  <span class="o">-</span><span class="mf">0.589731</span>  <span class="o">-</span><span class="mf">0.030467</span>
+<span class="linenos"> 98</span><span class="mi">98</span>  <span class="o">-</span><span class="mf">0.569395</span>  <span class="o">-</span><span class="mf">0.031488</span>
+<span class="linenos"> 99</span><span class="mi">99</span>  <span class="o">-</span><span class="mf">0.549059</span>  <span class="o">-</span><span class="mf">0.032448</span>
+<span class="linenos">100</span><span class="mi">100</span>  <span class="o">-</span><span class="mf">0.528724</span>  <span class="o">-</span><span class="mf">0.033347</span>
+<span class="linenos">101</span><span class="mi">101</span>  <span class="o">-</span><span class="mf">0.508388</span>  <span class="o">-</span><span class="mf">0.034186</span>
+<span class="linenos">102</span><span class="mi">102</span>  <span class="o">-</span><span class="mf">0.488053</span>  <span class="o">-</span><span class="mf">0.034966</span>
+<span class="linenos">103</span><span class="mi">103</span>  <span class="o">-</span><span class="mf">0.467717</span>  <span class="o">-</span><span class="mf">0.035688</span>
+<span class="linenos">104</span><span class="mi">104</span>  <span class="o">-</span><span class="mf">0.447382</span>  <span class="o">-</span><span class="mf">0.03635</span>
+<span class="linenos">105</span><span class="mi">105</span>  <span class="o">-</span><span class="mf">0.427046</span>  <span class="o">-</span><span class="mf">0.036952</span>
+<span class="linenos">106</span><span class="mi">106</span>  <span class="o">-</span><span class="mf">0.406711</span>  <span class="o">-</span><span class="mf">0.037494</span>
+<span class="linenos">107</span><span class="mi">107</span>  <span class="o">-</span><span class="mf">0.386375</span>  <span class="o">-</span><span class="mf">0.037974</span>
+<span class="linenos">108</span><span class="mi">108</span>  <span class="o">-</span><span class="mf">0.36604</span>  <span class="o">-</span><span class="mf">0.038392</span>
+<span class="linenos">109</span><span class="mi">109</span>  <span class="o">-</span><span class="mf">0.345704</span>  <span class="o">-</span><span class="mf">0.038744</span>
+<span class="linenos">110</span><span class="mi">110</span>  <span class="o">-</span><span class="mf">0.325369</span>  <span class="o">-</span><span class="mf">0.039027</span>
+<span class="linenos">111</span><span class="mi">111</span>  <span class="o">-</span><span class="mf">0.305033</span>  <span class="o">-</span><span class="mf">0.039236</span>
+<span class="linenos">112</span><span class="mi">112</span>  <span class="o">-</span><span class="mf">0.284697</span>  <span class="o">-</span><span class="mf">0.039368</span>
+<span class="linenos">113</span><span class="mi">113</span>  <span class="o">-</span><span class="mf">0.269446</span>  <span class="o">-</span><span class="mf">0.039414</span>
+<span class="linenos">114</span><span class="mi">114</span>  <span class="o">-</span><span class="mf">0.254194</span>  <span class="o">-</span><span class="mf">0.03941</span>
+<span class="linenos">115</span><span class="mi">115</span>  <span class="o">-</span><span class="mf">0.238943</span>  <span class="o">-</span><span class="mf">0.039348</span>
+<span class="linenos">116</span><span class="mi">116</span>  <span class="o">-</span><span class="mf">0.223691</span>  <span class="o">-</span><span class="mf">0.039225</span>
+<span class="linenos">117</span><span class="mi">117</span>  <span class="o">-</span><span class="mf">0.208439</span>  <span class="o">-</span><span class="mf">0.039032</span>
+<span class="linenos">118</span><span class="mi">118</span>  <span class="o">-</span><span class="mf">0.193188</span>  <span class="o">-</span><span class="mf">0.038762</span>
+<span class="linenos">119</span><span class="mi">119</span>  <span class="o">-</span><span class="mf">0.177936</span>  <span class="o">-</span><span class="mf">0.038406</span>
+<span class="linenos">120</span><span class="mi">120</span>  <span class="o">-</span><span class="mf">0.162684</span>  <span class="o">-</span><span class="mf">0.037948</span>
+<span class="linenos">121</span><span class="mi">121</span>  <span class="o">-</span><span class="mf">0.147433</span>  <span class="o">-</span><span class="mf">0.037372</span>
+<span class="linenos">122</span><span class="mi">122</span>  <span class="o">-</span><span class="mf">0.132181</span>  <span class="o">-</span><span class="mf">0.03666</span>
+<span class="linenos">123</span><span class="mi">123</span>  <span class="o">-</span><span class="mf">0.116929</span>  <span class="o">-</span><span class="mf">0.035795</span>
+<span class="linenos">124</span><span class="mi">124</span>  <span class="o">-</span><span class="mf">0.101678</span>  <span class="o">-</span><span class="mf">0.03476</span>
+<span class="linenos">125</span><span class="mi">125</span>  <span class="o">-</span><span class="mf">0.09151</span>  <span class="o">-</span><span class="mf">0.033965</span>
+<span class="linenos">126</span><span class="mi">126</span>  <span class="o">-</span><span class="mf">0.081342</span>  <span class="o">-</span><span class="mf">0.033043</span>
+<span class="linenos">127</span><span class="mi">127</span>  <span class="o">-</span><span class="mf">0.071174</span>  <span class="o">-</span><span class="mf">0.031911</span>
+<span class="linenos">128</span><span class="mi">128</span>  <span class="o">-</span><span class="mf">0.061007</span>  <span class="o">-</span><span class="mf">0.03048</span>
+<span class="linenos">129</span><span class="mi">129</span>  <span class="o">-</span><span class="mf">0.050839</span>  <span class="o">-</span><span class="mf">0.02862</span>
+<span class="linenos">130</span><span class="mi">130</span>  <span class="o">-</span><span class="mf">0.042705</span>  <span class="o">-</span><span class="mf">0.026694</span>
+<span class="linenos">131</span><span class="mi">131</span>  <span class="o">-</span><span class="mf">0.036604</span>  <span class="o">-</span><span class="mf">0.024941</span>
+<span class="linenos">132</span><span class="mi">132</span>  <span class="o">-</span><span class="mf">0.030503</span>  <span class="o">-</span><span class="mf">0.022933</span>
+<span class="linenos">133</span><span class="mi">133</span>  <span class="o">-</span><span class="mf">0.024403</span>  <span class="o">-</span><span class="mf">0.020662</span>
+<span class="linenos">134</span><span class="mi">134</span>  <span class="o">-</span><span class="mf">0.018302</span>  <span class="o">-</span><span class="mf">0.01798</span>
+<span class="linenos">135</span><span class="mi">135</span>  <span class="o">-</span><span class="mf">0.012201</span>  <span class="o">-</span><span class="mf">0.014526</span>
+<span class="linenos">136</span><span class="mi">136</span>  <span class="o">-</span><span class="mf">0.009151</span>  <span class="o">-</span><span class="mf">0.01236</span>
+<span class="linenos">137</span><span class="mi">137</span>  <span class="o">-</span><span class="mf">0.006609</span>  <span class="o">-</span><span class="mf">0.010198</span>
+<span class="linenos">138</span><span class="mi">138</span>  <span class="o">-</span><span class="mf">0.004067</span>  <span class="o">-</span><span class="mf">0.007565</span>
+<span class="linenos">139</span><span class="mi">139</span>  <span class="o">-</span><span class="mf">0.002034</span>  <span class="o">-</span><span class="mf">0.005099</span>
+<span class="linenos">140</span><span class="mi">140</span>  <span class="o">-</span><span class="mf">0.000813</span>  <span class="o">-</span><span class="mf">0.003219</span>
+<span class="linenos">141</span><span class="mi">141</span>  <span class="o">-</span><span class="mf">0.000102</span>  <span class="o">-</span><span class="mf">0.001117</span>
+<span class="linenos">142</span><span class="mi">142</span>  <span class="mi">0</span>  <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Su Tian, Haodong Du, Fei Tao and Wenbin Yu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Multiscale Structural Mechanics Group, Purdue University.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

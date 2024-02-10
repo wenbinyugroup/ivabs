@@ -1,0 +1,1204 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>StructureGene &#8212; iVABS Documentation (v0.7)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "wenbinyugroup/ivabs");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'msgpi/contents/sg/structuregene';</script>
+    <link rel="canonical" href="https://wenbinyugroup.github.io/ivabs/msgpi/contents/sg/structuregene.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="CrossSection" href="crosssection.html" />
+    <link rel="prev" title="Structure Gene" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">iVABS Documentation (v0.7)</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../ivabs/install.html">Download &amp; Installation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/install/windows.html">Installation on Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/install/linux.html">Installation on Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/install/python_setup.html">Setup Python Environment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ivabs/getstart.html">Quick Start</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../ivabs/examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/examples/example_quickstart_param_study.html">Parameter study of a single cross-section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/examples/example_uh60_sopt_stf.html">Single objective optimization of multiple cross-sections to match target beam properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/examples/example_uh60_mopt_stf.html">Multiple objective optimization of multiple cross-sections to match target beam properties</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../ivabs/main_input.html">Guide to Main Input File</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/input_guide/intro_yaml.html">A Brief Introduction to YAML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/input_guide/input_design.html">Design Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/input_guide/input_analysis.html">Analysis Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/input_guide/input_study.html">Design Study</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ivabs/parameterization.html">Parameterization of Composite Slender Structures</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../ivabs/cs_template.html">Cross-sectional Design Templates</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/cs_templates/airfoil_gbox_uni.html">Airfoil Box-spar Uniform</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ivabs/beam_properties.html">Beam Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ivabs/analysis_step_script.html">Custom Python Script for Analysis</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../ivabs/extensions.html">Extensions</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/extensions/galaxy_rcas.html">Link to Galaxy/RCAS</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../ivabs/ref_main.html">Reference manual</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/reference/input_keywords_main.html">Main Input Keywords</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ivabs/introduction.html">iVABS Components</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../prevabs/index.html">PreVABS Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/contents/install.html">Download and Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/contents/run.html">How to Run PreVABS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/contents/tutorial.html">Tutorial</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../prevabs/contents/guide.html">Guide for Preparing Input Files</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/guide/pre_coordinate.html">Coordinate systems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/guide/pre_shape.html">Geometry and shapes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/guide/pre_material.html">Materials and layups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/guide/pre_component.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/guide/pre_recover.html">Specifications for recovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/guide/pre_overall.html">Other input settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../prevabs/contents/examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_box.html">Box beam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_pipe.html">Pipe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_tube.html">Circular tube</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_channel.html">Channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_airfoil.html">Airfoil (MH-104)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_airfoil_recover.html">Airfoil (Recover)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_uh60a_fi.html">UH-60A (Initial Failure Analysis)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/contents/changelog.html">Change log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/contents/xml.html">Introduction to XML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/contents/references.html">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html">MSGPI Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../user_guide.html">User Guide</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../ref_manual.html">Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="index.html">Structure Gene</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l4 current active"><a class="current reference internal" href="#">StructureGene</a></li>
+<li class="toctree-l4"><a class="reference internal" href="crosssection.html">CrossSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="materialsection.html">MaterialSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="beamproperty.html">BeamProperty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="io.html">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="run.html">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../utils/index.html">Utilities</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../utils/io.html">IO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../utils/math.html">Math</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../utils/logger.html">Logging</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/wenbinyugroup/ivabs" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/wenbinyugroup/ivabs/edit/main/docs/source/msgpi/contents/sg/structuregene.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/wenbinyugroup/ivabs/issues/new?title=Issue%20on%20page%20%2Fmsgpi/contents/sg/structuregene.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/msgpi/contents/sg/structuregene.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>StructureGene</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene"><code class="docutils literal notranslate"><span class="pre">StructureGene</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.analysis"><code class="docutils literal notranslate"><span class="pre">StructureGene.analysis</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.damping"><code class="docutils literal notranslate"><span class="pre">StructureGene.damping</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.degen_element"><code class="docutils literal notranslate"><span class="pre">StructureGene.degen_element</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.elem_orient"><code class="docutils literal notranslate"><span class="pre">StructureGene.elem_orient</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.elem_prop"><code class="docutils literal notranslate"><span class="pre">StructureGene.elem_prop</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.elementids"><code class="docutils literal notranslate"><span class="pre">StructureGene.elementids</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.elementids1d"><code class="docutils literal notranslate"><span class="pre">StructureGene.elementids1d</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.elementids2d"><code class="docutils literal notranslate"><span class="pre">StructureGene.elementids2d</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.elementids3d"><code class="docutils literal notranslate"><span class="pre">StructureGene.elementids3d</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.elements"><code class="docutils literal notranslate"><span class="pre">StructureGene.elements</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.findComboByMaterialOrientation"><code class="docutils literal notranslate"><span class="pre">StructureGene.findComboByMaterialOrientation()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.findMaterialByName"><code class="docutils literal notranslate"><span class="pre">StructureGene.findMaterialByName()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.fn_gmsh_msh"><code class="docutils literal notranslate"><span class="pre">StructureGene.fn_gmsh_msh</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.global_displacements"><code class="docutils literal notranslate"><span class="pre">StructureGene.global_displacements</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.global_loads"><code class="docutils literal notranslate"><span class="pre">StructureGene.global_loads</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.global_loads_dist"><code class="docutils literal notranslate"><span class="pre">StructureGene.global_loads_dist</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.global_loads_type"><code class="docutils literal notranslate"><span class="pre">StructureGene.global_loads_type</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.global_rotations"><code class="docutils literal notranslate"><span class="pre">StructureGene.global_rotations</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.initial_curvature"><code class="docutils literal notranslate"><span class="pre">StructureGene.initial_curvature</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.initial_twist"><code class="docutils literal notranslate"><span class="pre">StructureGene.initial_twist</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.lame_params"><code class="docutils literal notranslate"><span class="pre">StructureGene.lame_params</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.materials"><code class="docutils literal notranslate"><span class="pre">StructureGene.materials</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.mocombos"><code class="docutils literal notranslate"><span class="pre">StructureGene.mocombos</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.model"><code class="docutils literal notranslate"><span class="pre">StructureGene.model</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.name"><code class="docutils literal notranslate"><span class="pre">StructureGene.name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.nodes"><code class="docutils literal notranslate"><span class="pre">StructureGene.nodes</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.nonuniform_temperature"><code class="docutils literal notranslate"><span class="pre">StructureGene.nonuniform_temperature</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.num_slavenodes"><code class="docutils literal notranslate"><span class="pre">StructureGene.num_slavenodes</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.oblique"><code class="docutils literal notranslate"><span class="pre">StructureGene.oblique</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.omega"><code class="docutils literal notranslate"><span class="pre">StructureGene.omega</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.physics"><code class="docutils literal notranslate"><span class="pre">StructureGene.physics</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.prop_elem"><code class="docutils literal notranslate"><span class="pre">StructureGene.prop_elem</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.sgdim"><code class="docutils literal notranslate"><span class="pre">StructureGene.sgdim</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.smdim"><code class="docutils literal notranslate"><span class="pre">StructureGene.smdim</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.summary"><code class="docutils literal notranslate"><span class="pre">StructureGene.summary()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.trans_element"><code class="docutils literal notranslate"><span class="pre">StructureGene.trans_element</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.writeGmshElements"><code class="docutils literal notranslate"><span class="pre">StructureGene.writeGmshElements()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.writeGmshMsh"><code class="docutils literal notranslate"><span class="pre">StructureGene.writeGmshMsh()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.writeGmshNodes"><code class="docutils literal notranslate"><span class="pre">StructureGene.writeGmshNodes()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.writeInput"><code class="docutils literal notranslate"><span class="pre">StructureGene.writeInput()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.writeInputGlobal"><code class="docutils literal notranslate"><span class="pre">StructureGene.writeInputGlobal()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.writeInputSG"><code class="docutils literal notranslate"><span class="pre">StructureGene.writeInputSG()</span></code></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="structuregene">
+<h1>StructureGene<a class="headerlink" href="#structuregene" title="Permalink to this heading">#</a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">msgpi</span><span class="o">.</span><span class="n">sg</span><span class="o">.</span><span class="n">sg</span><span class="o">.</span><span class="n">StructureGene</span>
+</pre></div>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">msgpi.sg.sg.</span></span><span class="sig-name descname"><span class="pre">StructureGene</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sgdim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smdim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.sg.sg.StructureGene" title="Permalink to this definition">#</a></dt>
+<dd><p>A finite element level structure gene model in the theory of MSG.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Name of the SG.</p></li>
+<li><p><strong>sgdim</strong> (<em>int</em>) – Dimension of the SG.</p></li>
+<li><p><strong>smdim</strong> (<em>int</em>) – Dimension of the material/structural model.
+Beam (1), plate/shell (2), 3D continuum (3).</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.analysis">
+<span class="sig-name descname"><span class="pre">analysis</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.analysis" title="Permalink to this definition">#</a></dt>
+<dd><p>Analysis configurations</p>
+<ul class="simple">
+<li><p>0 - homogenization (default)</p></li>
+<li><p>1 - dehomogenization/localization/recover</p></li>
+<li><p>2 - failure (SwiftComp only)</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.damping">
+<span class="sig-name descname"><span class="pre">damping</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.damping" title="Permalink to this definition">#</a></dt>
+<dd><p>Flag of damping computation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.degen_element">
+<span class="sig-name descname"><span class="pre">degen_element</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.degen_element" title="Permalink to this definition">#</a></dt>
+<dd><p>Flag of the type of elements (SC)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.elem_orient">
+<span class="sig-name descname"><span class="pre">elem_orient</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.elem_orient" title="Permalink to this definition">#</a></dt>
+<dd><p>Element local orientations.</p>
+<p><cite>{eid: [[a1, a2, a3], [b1, b2, b3], [c1, c2, c3]], …}</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict of {int, list of lists of floats}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.elem_prop">
+<span class="sig-name descname"><span class="pre">elem_prop</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.elem_prop" title="Permalink to this definition">#</a></dt>
+<dd><p>Material/Combination id for each element.</p>
+<p><cite>{eid: mid/cid, …}</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict of {int, int}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.elementids">
+<span class="sig-name descname"><span class="pre">elementids</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.elementids" title="Permalink to this definition">#</a></dt>
+<dd><p>Element ids</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of ints</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.elementids1d">
+<span class="sig-name descname"><span class="pre">elementids1d</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.elementids1d" title="Permalink to this definition">#</a></dt>
+<dd><p>1D element ids</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of ints</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.elementids2d">
+<span class="sig-name descname"><span class="pre">elementids2d</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.elementids2d" title="Permalink to this definition">#</a></dt>
+<dd><p>2D element ids</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of ints</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.elementids3d">
+<span class="sig-name descname"><span class="pre">elementids3d</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.elementids3d" title="Permalink to this definition">#</a></dt>
+<dd><p>3D element ids</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of ints</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.elements">
+<span class="sig-name descname"><span class="pre">elements</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.elements" title="Permalink to this definition">#</a></dt>
+<dd><p>Elemental connectivities</p>
+<p><cite>{eid: [nid1, nid2, …], …}</cite>, no zeros</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict of {int, list of ints}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.findComboByMaterialOrientation">
+<span class="sig-name descname"><span class="pre">findComboByMaterialOrientation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.findComboByMaterialOrientation" title="Permalink to this definition">#</a></dt>
+<dd><p>Find material-orientation combination.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Material name.</p></li>
+<li><p><strong>angle</strong> (<em>float</em>) – Orientation angle.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Combination id. 0 if not found.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.findMaterialByName">
+<span class="sig-name descname"><span class="pre">findMaterialByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.findMaterialByName" title="Permalink to this definition">#</a></dt>
+<dd><p>Find material by name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Material name.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Material id. 0 if not found.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.fn_gmsh_msh">
+<span class="sig-name descname"><span class="pre">fn_gmsh_msh</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.fn_gmsh_msh" title="Permalink to this definition">#</a></dt>
+<dd><p>File name of the Gmsh mesh file</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.global_displacements">
+<span class="sig-name descname"><span class="pre">global_displacements</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.global_displacements" title="Permalink to this definition">#</a></dt>
+<dd><p>Global displacements.</p>
+<p><cite>[u1, u2, u3]</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.global_loads">
+<span class="sig-name descname"><span class="pre">global_loads</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.global_loads" title="Permalink to this definition">#</a></dt>
+<dd><p>Global loads</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Model</p></th>
+<th class="head"><p>Generalized stresses</p></th>
+<th class="head"><p>Generalized strains</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Continuum</p></td>
+<td><p><cite>[s11, s22, s33, s23, s13, s12]</cite></p></td>
+<td><p><cite>[e11, e22, e33, e23, e13, e12]</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>Kirchhoff-Love plate/shell</p></td>
+<td><p><cite>[N11, N22, N12, M11, M22, M12]</cite></p></td>
+<td><p><cite>[e11, e22, 2e12, k11, k22, 2k12]</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>Reissner-Mindlin plate/shell</p></td>
+<td><p><cite>[N11, N22, N12, M11, M22, M12, N13, N23]</cite></p></td>
+<td><p><cite>[e11, e22, 2e12, k11, k22, 2k12, g13, g23]</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>Euler-Bernoulli beam</p></td>
+<td><p><cite>[F1, M1, M2, M3]</cite></p></td>
+<td><p><cite>[e11, k11, k12, k13]</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>Timoshenko beam</p></td>
+<td><p><cite>[F1, F2, F3, M1, M2, M3]</cite></p></td>
+<td><p><cite>[e11, g12, g13, k11, k12, k13]</cite></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.global_loads_dist">
+<span class="sig-name descname"><span class="pre">global_loads_dist</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.global_loads_dist" title="Permalink to this definition">#</a></dt>
+<dd><p>list of lists of floats:
+Distributed loads for Timoshenko beam model (VABS only)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.global_loads_type">
+<span class="sig-name descname"><span class="pre">global_loads_type</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.global_loads_type" title="Permalink to this definition">#</a></dt>
+<dd><p>Global load type.</p>
+<ul class="simple">
+<li><p>0 - generalized stresses</p></li>
+<li><p>1 - generalized strains</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.global_rotations">
+<span class="sig-name descname"><span class="pre">global_rotations</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.global_rotations" title="Permalink to this definition">#</a></dt>
+<dd><p>Global rotation matrix.</p>
+<p><cite>[[C11, C12, C13], [C21, C22, C23], [C31, C32, C33]]</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of lists floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.initial_curvature">
+<span class="sig-name descname"><span class="pre">initial_curvature</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.initial_curvature" title="Permalink to this definition">#</a></dt>
+<dd><p>Initial curvature</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.initial_twist">
+<span class="sig-name descname"><span class="pre">initial_twist</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.initial_twist" title="Permalink to this definition">#</a></dt>
+<dd><p>Initial twist (beam only)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.lame_params">
+<span class="sig-name descname"><span class="pre">lame_params</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.lame_params" title="Permalink to this definition">#</a></dt>
+<dd><p>Lame parameters for geometrically corrected shell model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.materials">
+<span class="sig-name descname"><span class="pre">materials</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.materials" title="Permalink to this definition">#</a></dt>
+<dd><p>Materials</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict of {int, <code class="xref py py-obj docutils literal notranslate"><span class="pre">msgpi.sg.MaterialProperty</span></code>}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.mocombos">
+<span class="sig-name descname"><span class="pre">mocombos</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.mocombos" title="Permalink to this definition">#</a></dt>
+<dd><p>Material-orientation (deg) combinations</p>
+<p><cite>{cid: [mid, orientation], …}</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict of {int, list of (int, float)}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.model" title="Permalink to this definition">#</a></dt>
+<dd><p>Macroscopic structural model</p>
+<ul class="simple">
+<li><p>0 - classical (default)</p></li>
+<li><p>1 - refined (e.g. generalized Timoshenko)</p></li>
+<li><p>2 - Vlasov model (beam only)</p></li>
+<li><p>3 - trapeze effect (beam only)</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.name" title="Permalink to this definition">#</a></dt>
+<dd><p>Name of the SG.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.nodes">
+<span class="sig-name descname"><span class="pre">nodes</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.nodes" title="Permalink to this definition">#</a></dt>
+<dd><p>Nodal coordinates</p>
+<ul class="simple">
+<li><p>3D SG: <cite>{nid: [y1, y2, y3], …}</cite></p></li>
+<li><p>2D SG: <cite>{nid: [y2, y3], …}</cite></p></li>
+<li><p>1D SG: <cite>{nid: [y3], …}</cite></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict of {int, list of floats}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.nonuniform_temperature">
+<span class="sig-name descname"><span class="pre">nonuniform_temperature</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.nonuniform_temperature" title="Permalink to this definition">#</a></dt>
+<dd><p>Flag of uniform temperature</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.num_slavenodes">
+<span class="sig-name descname"><span class="pre">num_slavenodes</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.num_slavenodes" title="Permalink to this definition">#</a></dt>
+<dd><p>Number of slave nodes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.oblique">
+<span class="sig-name descname"><span class="pre">oblique</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.oblique" title="Permalink to this definition">#</a></dt>
+<dd><p>Oblique (beam only)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.omega">
+<span class="sig-name descname"><span class="pre">omega</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.omega" title="Permalink to this definition">#</a></dt>
+<dd><p>Omega (see SwiftComp manual).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.physics">
+<span class="sig-name descname"><span class="pre">physics</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.physics" title="Permalink to this definition">#</a></dt>
+<dd><p>Physics included in the analysis</p>
+<ul class="simple">
+<li><p>0 - elastic (default)</p></li>
+<li><p>1 - thermoelastic</p></li>
+<li><p>2 - conduction</p></li>
+<li><p>3 - piezoelectric/piezomagnetic</p></li>
+<li><p>4 - thermopiezoelectric/thermopiezomagnetic</p></li>
+<li><p>5 - piezoelectromagnetic</p></li>
+<li><p>6 - thermopiezoelectromagnetic</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.prop_elem">
+<span class="sig-name descname"><span class="pre">prop_elem</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.prop_elem" title="Permalink to this definition">#</a></dt>
+<dd><p>Element id for each material/combination.</p>
+<p><cite>{mid/cid: [eid, …], …}</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict of {int, int}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.sgdim">
+<span class="sig-name descname"><span class="pre">sgdim</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.sgdim" title="Permalink to this definition">#</a></dt>
+<dd><p>Dimension of the SG.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.smdim">
+<span class="sig-name descname"><span class="pre">smdim</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.smdim" title="Permalink to this definition">#</a></dt>
+<dd><p>Dimension of the material/structural model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.summary">
+<span class="sig-name descname"><span class="pre">summary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.summary" title="Permalink to this definition">#</a></dt>
+<dd><p>Print a brief summary of the SG.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.trans_element">
+<span class="sig-name descname"><span class="pre">trans_element</span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.trans_element" title="Permalink to this definition">#</a></dt>
+<dd><p>Flag of transformation of elements</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.writeGmshElements">
+<span class="sig-name descname"><span class="pre">writeGmshElements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nid_begin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eid_begin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.writeGmshElements" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.writeGmshMsh">
+<span class="sig-name descname"><span class="pre">writeGmshMsh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nid_begin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eid_begin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">0]</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.writeGmshMsh" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.writeGmshNodes">
+<span class="sig-name descname"><span class="pre">writeGmshNodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nid_begin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">0]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.writeGmshNodes" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.writeInput">
+<span class="sig-name descname"><span class="pre">writeInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">analysis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'h'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sg_fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.writeInput" title="Permalink to this definition">#</a></dt>
+<dd><p>Write analysis input</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fn</strong> (<em>str</em>) – Name of the input file</p></li>
+<li><p><strong>solver</strong> (<em>{'vabs'</em><em> (or </em><em>'v'</em><em>)</em><em>, </em><em>'swfitcomp'</em><em> (or </em><em>'sc'</em><em>, </em><em>'s'</em><em>)</em><em>}</em>) – Solver of the analysis</p></li>
+<li><p><strong>analysis</strong> (<em>{0</em><em>, </em><em>1</em><em>, </em><em>2</em><em>, </em><em>3</em><em>, </em><em>''</em><em>, </em><em>'h'</em><em>, </em><em>'dn'</em><em>, </em><em>'dl'</em><em>, </em><em>'d'</em><em>, </em><em>'l'</em><em>, </em><em>'fi'}</em><em>, </em><em>optional</em>) – Analysis type, by default ‘h’</p></li>
+<li><p><strong>sg_fmt</strong> (<em>{0</em><em>, </em><em>1}</em><em>, </em><em>optional</em>) – Format for the VABS input, by default 1</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Name of the input file</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.writeInputGlobal">
+<span class="sig-name descname"><span class="pre">writeInputGlobal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sfi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">analysis</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.writeInputGlobal" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="msgpi.sg.sg.StructureGene.writeInputSG">
+<span class="sig-name descname"><span class="pre">writeInputSG</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sfi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sg_fmt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#msgpi.sg.sg.StructureGene.writeInputSG" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Structure Gene</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="crosssection.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">CrossSection</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene"><code class="docutils literal notranslate"><span class="pre">StructureGene</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.analysis"><code class="docutils literal notranslate"><span class="pre">StructureGene.analysis</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.damping"><code class="docutils literal notranslate"><span class="pre">StructureGene.damping</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.degen_element"><code class="docutils literal notranslate"><span class="pre">StructureGene.degen_element</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.elem_orient"><code class="docutils literal notranslate"><span class="pre">StructureGene.elem_orient</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.elem_prop"><code class="docutils literal notranslate"><span class="pre">StructureGene.elem_prop</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.elementids"><code class="docutils literal notranslate"><span class="pre">StructureGene.elementids</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.elementids1d"><code class="docutils literal notranslate"><span class="pre">StructureGene.elementids1d</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.elementids2d"><code class="docutils literal notranslate"><span class="pre">StructureGene.elementids2d</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.elementids3d"><code class="docutils literal notranslate"><span class="pre">StructureGene.elementids3d</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.elements"><code class="docutils literal notranslate"><span class="pre">StructureGene.elements</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.findComboByMaterialOrientation"><code class="docutils literal notranslate"><span class="pre">StructureGene.findComboByMaterialOrientation()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.findMaterialByName"><code class="docutils literal notranslate"><span class="pre">StructureGene.findMaterialByName()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.fn_gmsh_msh"><code class="docutils literal notranslate"><span class="pre">StructureGene.fn_gmsh_msh</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.global_displacements"><code class="docutils literal notranslate"><span class="pre">StructureGene.global_displacements</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.global_loads"><code class="docutils literal notranslate"><span class="pre">StructureGene.global_loads</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.global_loads_dist"><code class="docutils literal notranslate"><span class="pre">StructureGene.global_loads_dist</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.global_loads_type"><code class="docutils literal notranslate"><span class="pre">StructureGene.global_loads_type</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.global_rotations"><code class="docutils literal notranslate"><span class="pre">StructureGene.global_rotations</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.initial_curvature"><code class="docutils literal notranslate"><span class="pre">StructureGene.initial_curvature</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.initial_twist"><code class="docutils literal notranslate"><span class="pre">StructureGene.initial_twist</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.lame_params"><code class="docutils literal notranslate"><span class="pre">StructureGene.lame_params</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.materials"><code class="docutils literal notranslate"><span class="pre">StructureGene.materials</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.mocombos"><code class="docutils literal notranslate"><span class="pre">StructureGene.mocombos</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.model"><code class="docutils literal notranslate"><span class="pre">StructureGene.model</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.name"><code class="docutils literal notranslate"><span class="pre">StructureGene.name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.nodes"><code class="docutils literal notranslate"><span class="pre">StructureGene.nodes</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.nonuniform_temperature"><code class="docutils literal notranslate"><span class="pre">StructureGene.nonuniform_temperature</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.num_slavenodes"><code class="docutils literal notranslate"><span class="pre">StructureGene.num_slavenodes</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.oblique"><code class="docutils literal notranslate"><span class="pre">StructureGene.oblique</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.omega"><code class="docutils literal notranslate"><span class="pre">StructureGene.omega</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.physics"><code class="docutils literal notranslate"><span class="pre">StructureGene.physics</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.prop_elem"><code class="docutils literal notranslate"><span class="pre">StructureGene.prop_elem</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.sgdim"><code class="docutils literal notranslate"><span class="pre">StructureGene.sgdim</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.smdim"><code class="docutils literal notranslate"><span class="pre">StructureGene.smdim</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.summary"><code class="docutils literal notranslate"><span class="pre">StructureGene.summary()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.trans_element"><code class="docutils literal notranslate"><span class="pre">StructureGene.trans_element</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.writeGmshElements"><code class="docutils literal notranslate"><span class="pre">StructureGene.writeGmshElements()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.writeGmshMsh"><code class="docutils literal notranslate"><span class="pre">StructureGene.writeGmshMsh()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.writeGmshNodes"><code class="docutils literal notranslate"><span class="pre">StructureGene.writeGmshNodes()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.writeInput"><code class="docutils literal notranslate"><span class="pre">StructureGene.writeInput()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.writeInputGlobal"><code class="docutils literal notranslate"><span class="pre">StructureGene.writeInputGlobal()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#msgpi.sg.sg.StructureGene.writeInputSG"><code class="docutils literal notranslate"><span class="pre">StructureGene.writeInputSG()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Su Tian, Haodong Du, Fei Tao and Wenbin Yu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Multiscale Structural Mechanics Group, Purdue University.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

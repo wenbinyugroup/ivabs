@@ -1,3 +1,5 @@
+.. include:: /replace.txt
+
 .. _section-airfoil:
 
 Airfoil (MH-104)

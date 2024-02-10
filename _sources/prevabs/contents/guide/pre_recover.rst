@@ -1,3 +1,5 @@
+.. include:: /replace.txt
+
 .. _section-recover:
 
 Specifications for recovery

@@ -1,3 +1,5 @@
+.. include:: /replace.txt
+
 .. _section-shape:
 
 Geometry and shapes

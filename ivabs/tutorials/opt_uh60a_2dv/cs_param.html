@@ -1,0 +1,1045 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Cross-sectional Parameterization and Beam Properties &#8212; iVABS Documentation (v0.7)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "wenbinyugroup/ivabs");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ivabs/tutorials/opt_uh60a_2dv/cs_param';</script>
+    <link rel="canonical" href="https://wenbinyugroup.github.io/ivabs/ivabs/tutorials/opt_uh60a_2dv/cs_param.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">iVABS Documentation (v0.7)</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../install.html">Download &amp; Installation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../install/windows.html">Installation on Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install/linux.html">Installation on Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install/python_setup.html">Setup Python Environment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../getstart.html">Quick Start</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example_quickstart_param_study.html">Parameter study of a single cross-section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example_uh60_sopt_stf.html">Single objective optimization of multiple cross-sections to match target beam properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example_uh60_mopt_stf.html">Multiple objective optimization of multiple cross-sections to match target beam properties</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../main_input.html">Guide to Main Input File</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../input_guide/intro_yaml.html">A Brief Introduction to YAML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../input_guide/input_design.html">Design Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../input_guide/input_analysis.html">Analysis Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../input_guide/input_study.html">Design Study</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../parameterization.html">Parameterization of Composite Slender Structures</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../cs_template.html">Cross-sectional Design Templates</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cs_templates/airfoil_gbox_uni.html">Airfoil Box-spar Uniform</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../beam_properties.html">Beam Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../analysis_step_script.html">Custom Python Script for Analysis</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../extensions.html">Extensions</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/galaxy_rcas.html">Link to Galaxy/RCAS</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ref_main.html">Reference manual</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/input_keywords_main.html">Main Input Keywords</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">iVABS Components</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../prevabs/index.html">PreVABS Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/contents/install.html">Download and Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/contents/run.html">How to Run PreVABS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/contents/tutorial.html">Tutorial</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../prevabs/contents/guide.html">Guide for Preparing Input Files</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/guide/pre_coordinate.html">Coordinate systems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/guide/pre_shape.html">Geometry and shapes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/guide/pre_material.html">Materials and layups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/guide/pre_component.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/guide/pre_recover.html">Specifications for recovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/guide/pre_overall.html">Other input settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../prevabs/contents/examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_box.html">Box beam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_pipe.html">Pipe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_tube.html">Circular tube</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_channel.html">Channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_airfoil.html">Airfoil (MH-104)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_airfoil_recover.html">Airfoil (Recover)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_uh60a_fi.html">UH-60A (Initial Failure Analysis)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/contents/changelog.html">Change log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/contents/xml.html">Introduction to XML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/contents/references.html">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../msgpi/index.html">MSGPI Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../msgpi/contents/user_guide.html">User Guide</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../msgpi/contents/ref_manual.html">Reference</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../msgpi/contents/sg/index.html">Structure Gene</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/structuregene.html">StructureGene</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/crosssection.html">CrossSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/materialsection.html">MaterialSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/beamproperty.html">BeamProperty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/io.html">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/run.html">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../msgpi/contents/utils/index.html">Utilities</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/utils/io.html">IO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/utils/math.html">Math</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/utils/logger.html">Logging</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/wenbinyugroup/ivabs" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/wenbinyugroup/ivabs/edit/main/docs/source/ivabs/tutorials/opt_uh60a_2dv/cs_param.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/wenbinyugroup/ivabs/issues/new?title=Issue%20on%20page%20%2Fivabs/tutorials/opt_uh60a_2dv/cs_param.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/ivabs/tutorials/opt_uh60a_2dv/cs_param.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Cross-sectional Parameterization and Beam Properties</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameterization">Parameterization</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geometry">Geometry</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layup">Layup</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#materials">Materials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties">Properties</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="cross-sectional-parameterization-and-beam-properties">
+<span id="sect-cs-param"></span><h1>Cross-sectional Parameterization and Beam Properties<a class="headerlink" href="#cross-sectional-parameterization-and-beam-properties" title="Permalink to this heading">#</a></h1>
+<p>The cross-section is comprised of the following components: box spar, front laminate, back laminate, front filling, back filling and non-structural mass, as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code>.</p>
+<figure class="align-center" id="fig-cs-comp">
+<img alt="../../../_images/cs_comp.png" src="../../../_images/cs_comp.png" />
+<figcaption>
+<p><span class="caption-text">Components of the cross-section.</span><a class="headerlink" href="#fig-cs-comp" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="parameterization">
+<h2>Parameterization<a class="headerlink" href="#parameterization" title="Permalink to this heading">#</a></h2>
+<p>Parameters can be in general grouped into two sets, geometry related and layup related.</p>
+<section id="geometry">
+<h3>Geometry<a class="headerlink" href="#geometry" title="Permalink to this heading">#</a></h3>
+<p>In this example, four geometric parameters are defined in the non-dimensional frame where the chord length is 1, as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code>.
+The origin of this frame is placed at the leading edge.
+The size and location of the box spar are defined by the two parameters <span class="math notranslate nohighlight">\(a_2^{wl}\)</span> and <span class="math notranslate nohighlight">\(a_2^{wt}\)</span>, which are in fact the horizontal coordinates of the leading and trailing webs, respectively.
+The non-structural mass is assumed to be a circular object in this example.
+Hence, the three parameters defining the size and location are the horizontal coordinate <span class="math notranslate nohighlight">\(a_2^{nsm}\)</span> and vertical coordinate <span class="math notranslate nohighlight">\(a_3^{nsm}\)</span> of the center, and the radius <span class="math notranslate nohighlight">\(r^{nsm}\)</span>.</p>
+<figure class="align-center" id="fig-cs-param-geo">
+<img alt="../../../_images/cs_param_geo.png" src="../../../_images/cs_param_geo.png" />
+<figcaption>
+<p><span class="caption-text">Parameters for the geometry in the non-dimensional frame, where the chord length is 1.</span><a class="headerlink" href="#fig-cs-param-geo" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="layup">
+<h3>Layup<a class="headerlink" href="#layup" title="Permalink to this heading">#</a></h3>
+<p>Layup related parameters are used to define materials (<span class="math notranslate nohighlight">\(l\)</span>), fiber angles (<span class="math notranslate nohighlight">\(\theta\)</span>) and numbers of plies (<span class="math notranslate nohighlight">\(n\)</span>) for the laminates of box spar, cap and overwrap.
+In this example, the box spar laminate is assumed to have four layers.
+All four layers have the same material (<span class="math notranslate nohighlight">\(l^s\)</span>), but can have different fiber angles (<span class="math notranslate nohighlight">\(\theta_1^s, \theta_2^s, \theta_3^s, \theta_4^s\)</span>) and numbers of plies (<span class="math notranslate nohighlight">\(n_1^s, n_2^s, n_3^s, n_4^s\)</span>).
+The cap laminate is assumed to have a single layer with three parameters: <span class="math notranslate nohighlight">\(l^c, \theta^c, n^c\)</span>.
+The overwrap laminate is also assumed having a single layer with three parameters: <span class="math notranslate nohighlight">\(l^o, \theta^o, n^o\)</span>.</p>
+<p>The overall layup design of the three lamiante components are listed in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Table</span> <span class="pre">%s</span></code>, <code class="xref std std-numref docutils literal notranslate"><span class="pre">Table</span> <span class="pre">%s</span></code> and <code class="xref std std-numref docutils literal notranslate"><span class="pre">Table</span> <span class="pre">%s</span></code>.</p>
+<table class="table table-center" id="tab-layup-box">
+<caption><span class="caption-text">Layup of the box spar laminate</span><a class="headerlink" href="#tab-layup-box" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Layer</p></th>
+<th class="head"><p>Lamina</p></th>
+<th class="head"><p>Fiber angle [deg]</p></th>
+<th class="head"><p>Ply count</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Base</p></td>
+<td><p>T300 15k/976</p></td>
+<td><p>0</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p><span class="math notranslate nohighlight">\(l^s\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\theta^s_1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(n^s_1\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p><span class="math notranslate nohighlight">\(l^s\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\theta^s_2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(n^s_2\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p><span class="math notranslate nohighlight">\(l^s\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\theta^s_3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(n^s_3\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p><span class="math notranslate nohighlight">\(l^s\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\theta^s_4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(n^s_4\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<table class="table table-center" id="tab-layup-front">
+<caption><span class="caption-text">Layup of the front laminate</span><a class="headerlink" href="#tab-layup-front" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Layer</p></th>
+<th class="head"><p>Lamina</p></th>
+<th class="head"><p>Fiber angle [deg]</p></th>
+<th class="head"><p>Ply count</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Cap</p></td>
+<td><p>Aluminum 8009</p></td>
+<td><p>0</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Base</p></td>
+<td><p>T300 15k/976</p></td>
+<td><p>0</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p><span class="math notranslate nohighlight">\(l^f\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\theta^f\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(n^f\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<table class="table table-center" id="tab-layup-back">
+<caption><span class="caption-text">Layup of the back laminate</span><a class="headerlink" href="#tab-layup-back" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Layer</p></th>
+<th class="head"><p>Lamina</p></th>
+<th class="head"><p>Fiber angle [deg]</p></th>
+<th class="head"><p>Ply count</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Base</p></td>
+<td><p>T300 15k/976</p></td>
+<td><p>0</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p><span class="math notranslate nohighlight">\(l^b\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\theta^b\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(n^b\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>A summary of the parameters is listed in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Table</span> <span class="pre">%s</span></code>.</p>
+<table class="table table-center" id="tab-params">
+<caption><span class="caption-text">Summary of parameters</span><a class="headerlink" href="#tab-params" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Symbol</p></th>
+<th class="head"><p>Name in input files</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(a_2^{wl}\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">wl_a2</span></code></p></td>
+<td><p>Non-dimensional horizontal coordinate of the leading web of the box spar</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(a_2^{wt}\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">wt_a2</span></code></p></td>
+<td><p>Non-dimensional horizontal coordinate of the trailing web of the box spar</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(a_2^{nsm}\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pnsmc_a2</span></code></p></td>
+<td><p>Non-dimensional horizontal coordinate of the center of the non-structural mass</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(a_3^{nsm}\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pnsmc_a3</span></code></p></td>
+<td><p>Non-dimensional vertical coordinate of the center of the non-structural mass</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(r^{nsm}\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">nsmr</span></code></p></td>
+<td><p>Non-dimensional radius of the non-structural mass</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(l^s\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">mi_spar_1</span></code></p></td>
+<td><p>Material (lamina) selection of the box spar layup</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\theta_1^s\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fo_spar_1</span></code></p></td>
+<td><p>Fiber angle of layer 1 of the box spar layup</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\theta_2^s\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fo_spar_2</span></code></p></td>
+<td><p>Fiber angle of layer 2 of the box spar layup</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\theta_3^s\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fo_spar_3</span></code></p></td>
+<td><p>Fiber angle of layer 3 of the box spar layup</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\theta_4^s\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fo_spar_4</span></code></p></td>
+<td><p>Fiber angle of layer 4 of the box spar layup</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(n_1^s\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">np_spar_1</span></code></p></td>
+<td><p>Number of plies of layer 1 of the box spar layup</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(n_2^s\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">np_spar_2</span></code></p></td>
+<td><p>Number of plies of layer 2 of the box spar layup</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(n_3^s\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">np_spar_3</span></code></p></td>
+<td><p>Number of plies of layer 3 of the box spar layup</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(n_4^s\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">np_spar_4</span></code></p></td>
+<td><p>Number of plies of layer 4 of the box spar layup</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(l^c\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">mi_le</span></code></p></td>
+<td><p>Material (lamina) selection of the cap layup</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\theta^c\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fo_le</span></code></p></td>
+<td><p>Fiber angle of the cap layup</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(n^c\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">np_le</span></code></p></td>
+<td><p>Number of plies of the cap layup</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(l^o\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">mi_te</span></code></p></td>
+<td><p>Material (lamina) selection of the overwrap layup</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\theta^o\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fo_te</span></code></p></td>
+<td><p>Fiber angle of the overwrap layup</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(n^o\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">np_te</span></code></p></td>
+<td><p>Number of plies of the overwrap layup</p></td>
+</tr>
+</tbody>
+</table>
+<p>Some other parameters used are listed below:</p>
+<table class="table table-center" id="tab-params-others">
+<caption><span class="caption-text">Summary of other parameters</span><a class="headerlink" href="#tab-params-others" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name in input files</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">chord</span></code></p></td>
+<td><p>Chord length of the cross-section</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">oa2</span></code></p></td>
+<td><p>Non-dimensional horizontal coordinate of the origin of the frame <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> used in VABS.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pfte2_a2</span></code></p></td>
+<td><p>Non-dimensional location of point marking the coarse meshes in the filling region</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mesh_size</span></code></p></td>
+<td><p>Global mesh size</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mesh_size_fill</span></code></p></td>
+<td><p>Mesh size for the filling regions</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="materials">
+<h2>Materials<a class="headerlink" href="#materials" title="Permalink to this heading">#</a></h2>
+<p>Materials used in this example are summarized in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Table</span> <span class="pre">%s</span></code>.
+Lamina thickness is given in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Table</span> <span class="pre">%s</span></code>.
+‘Aluminum 80009’ is used as the outermost layer of the cap.
+‘Lead’ is used for the non-structural mass.
+‘Rohacell 70’ is used at the leading filling region.
+‘Plascore PN2-3/16OX3.0’ is used at the trailing filling region.
+‘T300 15k/976’ is used as the base layer for the spar, cap and overwrap, to prevent zero layers during the optimization.
+The last four rows in the table are the candidate materials for the layup design of the three components.</p>
+<table class="table table-center" id="tab-materials">
+<caption><span class="caption-text">Material properties</span><a class="headerlink" href="#tab-materials" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Material</p></th>
+<th class="head"><p>Density</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(E_1\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(E_2\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(E_3\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\nu_{12}\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\nu_{13}\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\nu_{23}\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(G_{12}\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(G_{13}\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(G_{23}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td></td>
+<td><p>[<span class="math notranslate nohighlight">\(\mathrm{lbf\cdot s^2/in^4}\)</span>]</p></td>
+<td><p>[<span class="math notranslate nohighlight">\(\mathrm{psi}\)</span>]</p></td>
+<td><p>[<span class="math notranslate nohighlight">\(\mathrm{psi}\)</span>]</p></td>
+<td><p>[<span class="math notranslate nohighlight">\(\mathrm{psi}\)</span>]</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>[<span class="math notranslate nohighlight">\(\mathrm{psi}\)</span>]</p></td>
+<td><p>[<span class="math notranslate nohighlight">\(\mathrm{psi}\)</span>]</p></td>
+<td><p>[<span class="math notranslate nohighlight">\(\mathrm{psi}\)</span>]</p></td>
+</tr>
+<tr class="row-odd"><td><p>Aluminum 8009</p></td>
+<td><p><span class="math notranslate nohighlight">\(0.271959\times 10^{-3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(13.1\times 10^6\)</span></p></td>
+<td></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(0.33\)</span></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Lead</p></td>
+<td><p><span class="math notranslate nohighlight">\(1.060957\times 10^{-3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.0\times 10^{-3}\)</span></p></td>
+<td></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Rohacell 70</p></td>
+<td><p><span class="math notranslate nohighlight">\(7.040895\times 10^{-6}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(13.125\times 10^3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(13.125\times 10^3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(13.125\times 10^3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0.315\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0.315\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0.300\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(4.118\times 10^3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(4.118\times 10^3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(4.118\times 10^3\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Plascore PN2-3/16OX3.0</p></td>
+<td><p><span class="math notranslate nohighlight">\(4.509066\times 10^{-6}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.0\times 10^3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.0\times 10^3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(20\times 10^3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0.30\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0.01\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0.01\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.0\times 10^3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(3.5\times 10^3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(5.799\times 10^3\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>T300 15k/976</p></td>
+<td><p><span class="math notranslate nohighlight">\(0.149716\times 10^{-3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(19.6\times 10^6\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.34\times 10^6\)</span></p></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(0.348\)</span></p></td>
+<td></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(0.91\times 10^6\)</span></p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>AS4 12k/E7K8</p></td>
+<td><p><span class="math notranslate nohighlight">\(0.145973\times 10^{-3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(19.3\times 10^6\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.23\times 10^6\)</span></p></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(0.32\)</span></p></td>
+<td></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(7.31\times 10^6\)</span></p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>S2/SP381</p></td>
+<td><p><span class="math notranslate nohighlight">\(0.173109\times 10^{-3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(7.05\times 10^6\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.97\times 10^6\)</span></p></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(0.263\)</span></p></td>
+<td></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(0.59\times 10^6\)</span></p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>T650-35 12k/976</p></td>
+<td><p><span class="math notranslate nohighlight">\(0.148781\times 10^{-3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(22.0\times 10^6\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.30\times 10^6\)</span></p></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(0.115\)</span></p></td>
+<td></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(0.745\times 10^6\)</span></p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>T700 24K/E765</p></td>
+<td><p><span class="math notranslate nohighlight">\(0.145037\times 10^{-3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(18.71\times 10^6\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.36\times 10^6\)</span></p></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(0.319\)</span></p></td>
+<td></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(0.65\times 10^6\)</span></p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="table table-center" id="tab-thickness">
+<caption><span class="caption-text">Lamina thickness</span><a class="headerlink" href="#tab-thickness" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Material</p></th>
+<th class="head"><p>Thickness [<span class="math notranslate nohighlight">\(in\)</span>]</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Aluminum 8009</p></td>
+<td><p>0.01</p></td>
+</tr>
+<tr class="row-odd"><td><p>T300 15k/976</p></td>
+<td><p>0.0053</p></td>
+</tr>
+<tr class="row-even"><td><p>AS4 12k/E7K8</p></td>
+<td><p>0.0054</p></td>
+</tr>
+<tr class="row-odd"><td><p>S2/SP381</p></td>
+<td><p>0.0092</p></td>
+</tr>
+<tr class="row-even"><td><p>T650-35 12k/976</p></td>
+<td><p>0.0052</p></td>
+</tr>
+<tr class="row-odd"><td><p>T700 24K/E765</p></td>
+<td><p>0.0056</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this heading">#</a></h2>
+<p>The beam properties calculated by VABS listed in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Table</span> <span class="pre">%s</span></code> will be needed in the optimization.
+<code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code> shows the points and axes with respect to which some properties are calculated.
+The two bending stiffnesses are given with respect to the principal bending axes.
+The horizontal locations of the shear and mass centers are given with respect to the modeling origin, which is the quarder chord in this example.</p>
+<figure class="align-center" id="fig-cs-props">
+<img alt="../../../_images/cs_prop.png" src="../../../_images/cs_prop.png" />
+<figcaption>
+<p><span class="caption-text">Beam properties and their reference of calculation.</span><a class="headerlink" href="#fig-cs-props" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>A summary of the properties is listed in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Table</span> <span class="pre">%s</span></code>.</p>
+<table class="table table-center" id="tab-props">
+<caption><span class="caption-text">Summary of properties</span><a class="headerlink" href="#tab-props" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Symbol</p></th>
+<th class="head"><p>Name in input files</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(m\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">mu</span></code></p></td>
+<td><p>Mass per unit length</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(GJ\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gj</span></code></p></td>
+<td><p>Torsional stiffness</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(EI_f\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ei22</span></code></p></td>
+<td><p>Flapping bending stiffness</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(EI_l\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ei33</span></code></p></td>
+<td><p>Lead-lag bending stiffness</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(SC_2\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">sc2</span></code></p></td>
+<td><p>Horizontal coordinate of the shear center in the frame x.</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(MC_2\)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">mc2</span></code></p></td>
+<td><p>Horizontal coordinate of the mass center in the frame x.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameterization">Parameterization</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geometry">Geometry</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layup">Layup</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#materials">Materials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties">Properties</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Su Tian, Haodong Du, Fei Tao and Wenbin Yu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Multiscale Structural Mechanics Group, Purdue University.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

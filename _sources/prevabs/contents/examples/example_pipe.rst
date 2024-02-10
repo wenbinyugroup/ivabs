@@ -1,3 +1,5 @@
+.. include:: /replace.txt
+
 .. _example-pipe:
 
 Pipe

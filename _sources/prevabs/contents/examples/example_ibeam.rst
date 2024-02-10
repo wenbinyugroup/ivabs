@@ -1,3 +1,5 @@
+.. include:: /replace.txt
+
 .. _example-i-beam:
 
 I-beam

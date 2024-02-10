@@ -3,12 +3,13 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Airfoil (MH-104) &#8212; iVABS 0.8 documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Airfoil (MH-104) &#8212; iVABS Documentation (v0.7)</title>
   
   
   
@@ -18,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -32,17 +33,51 @@
     <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "wenbinyugroup/ivabs");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
     <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'prevabs/contents/examples/example_airfoil';</script>
+    <link rel="canonical" href="https://wenbinyugroup.github.io/ivabs/prevabs/contents/examples/example_airfoil.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Airfoil (Recover)" href="example_airfoil_recover.html" />
@@ -57,6 +92,15 @@
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -110,89 +154,63 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
-<a class="navbar-brand logo" href="../../../main_ivabs.html">
+<a class="navbar-brand logo" href="../../../index.html">
   
   
   
   
   
-    <p class="title logo__title">iVABS 0.8 documentation</p>
+  
+    <p class="title logo__title">iVABS Documentation (v0.7)</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Start</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../install/index.html">Download &amp; Installation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../install/windows.html">Installation on Windows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install/linux.html">Installation on Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install/python_setup.html">Setup Python Environment</a></li>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../ivabs/install.html">Download &amp; Installation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/install/windows.html">Installation on Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/install/linux.html">Installation on Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/install/python_setup.html">Setup Python Environment</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ivabs/getstart.html">Quick Start</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../tutorials/index.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/run_one_analysis.html">Carry out a single cross-sectional analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/opt_spar_web.html">Optimization of spar web locations for desired properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/opt_spar_layup.html">Optimize the spar layup of a cross-section</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/opt_cs_init_twist.html">Optimize the cross-section considering beam initial twist</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/prepare_cs_template.html">Prepare a cross-sectional design template</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv.html">Optimize a single cross-section (general)</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/running.html">Running of The Tutorial</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/problem.html">Problem Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/cs_param.html">Cross-sectional Parameterization and Beam Properties</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/opt.html">Optimization Formulation</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs.html">Preparation of Input Files</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_cs_template.html">Cross-section Main Input Template (<code class="docutils literal notranslate"><span class="pre">uh60a_section.xml.tmp</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_cs_materials.html">Material Database (<code class="docutils literal notranslate"><span class="pre">material_database.xml</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_cs_airfoil.html">Cross-section Airfoil Data (<code class="docutils literal notranslate"><span class="pre">sc1095.dat</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_interface.html">Dakota Interface Scripts (<code class="docutils literal notranslate"><span class="pre">interface.py</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_arguments.html">Interface Arguments (<code class="docutils literal notranslate"><span class="pre">interface_args.json</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_data_process.html">Data Processing Functions (<code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_dakota.html">Dakota Input File (<code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.dakota</span></code>)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../ivabs/examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/examples/example_quickstart_param_study.html">Parameter study of a single cross-section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/examples/example_uh60_sopt_stf.html">Single objective optimization of multiple cross-sections to match target beam properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/examples/example_uh60_mopt_stf.html">Multiple objective optimization of multiple cross-sections to match target beam properties</a></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../examples/index.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples/example_quickstart_param_study.html">Parameter study of a single cross-section</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples/example_uh60_sopt_stf.html">Single objective optimization of multiple cross-sections to match target beam properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples/example_uh60_mopt_stf.html">Multiple objective optimization of multiple cross-sections to match target beam properties</a></li>
-</ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Guide</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../guide/index.html">Guide to Main Input File</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../guide/intro_yaml.html">A Brief Introduction to YAML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../guide/input_design.html">Design Parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../guide/input_analysis.html">Analysis Steps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../guide/input_study.html">Design Study</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../ivabs/main_input.html">Guide to Main Input File</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/input_guide/intro_yaml.html">A Brief Introduction to YAML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/input_guide/input_design.html">Design Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/input_guide/input_analysis.html">Analysis Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/input_guide/input_study.html">Design Study</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ivabs/parameterization.html">Parameterization of Composite Slender Structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../guide/custom_script.html">Custom script analysis step</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../extensions/index.html">Extensions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../extensions/galaxy_rcas.html">Link to Galaxy/RCAS</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../ivabs/cs_template.html">Cross-sectional Design Templates</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/cs_templates/airfoil_gbox_uni.html">Airfoil Box-spar Uniform</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../sg_templates/index.html">Cross-sectional Design Templates</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../sg_templates/airfoil_gbox_uni.html">Airfoil Box-spar Uniform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ivabs/beam_properties.html">Beam Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ivabs/analysis_step_script.html">Custom Python Script for Analysis</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../ivabs/extensions.html">Extensions</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/extensions/galaxy_rcas.html">Link to Galaxy/RCAS</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../ref/beam_properties.html">Beam Properties</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../ref/input_keywords_main.html">Main Input Keywords</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html">PreVABS Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../ivabs/ref_main.html">Reference manual</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/reference/input_keywords_main.html">Main Input Keywords</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ivabs/introduction.html">iVABS Components</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html">PreVABS Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../install.html">Download and Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../run.html">How to Run PreVABS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../guide.html">Guide for Preparing Input Files</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../guide.html">Guide for Preparing Input Files</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../guide/pre_coordinate.html">Coordinate systems</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../guide/pre_shape.html">Geometry and shapes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../guide/pre_material.html">Materials and layups</a></li>
@@ -201,7 +219,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../guide/pre_overall.html">Other input settings</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="../examples.html">Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../examples.html">Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="example_box.html">Box beam</a></li>
 <li class="toctree-l3"><a class="reference internal" href="example_pipe.html">Pipe</a></li>
 <li class="toctree-l3"><a class="reference internal" href="example_tube.html">Circular tube</a></li>
@@ -214,6 +232,30 @@
 <li class="toctree-l2"><a class="reference internal" href="../changelog.html">Change log</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../xml.html">Introduction to XML</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../msgpi/index.html">MSGPI Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../msgpi/contents/user_guide.html">User Guide</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../msgpi/contents/ref_manual.html">Reference</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../msgpi/contents/sg/index.html">Structure Gene</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/structuregene.html">StructureGene</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/crosssection.html">CrossSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/materialsection.html">MaterialSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/beamproperty.html">BeamProperty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/io.html">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/run.html">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../msgpi/contents/utils/index.html">Utilities</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/utils/io.html">IO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/utils/math.html">Math</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/utils/logger.html">Logging</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -257,6 +299,70 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/wenbinyugroup/ivabs" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/wenbinyugroup/ivabs/edit/main/docs/source/prevabs/contents/examples/example_airfoil.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/wenbinyugroup/ivabs/issues/new?title=Issue%20on%20page%20%2Fprevabs/contents/examples/example_airfoil.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
 
 
 
@@ -322,20 +428,22 @@
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -375,36 +483,31 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <blockquote>
-<div></div></blockquote>
-<div class="section" id="airfoil-mh-104">
+  <section id="airfoil-mh-104">
 <span id="section-airfoil"></span><h1>Airfoil (MH-104)<a class="headerlink" href="#airfoil-mh-104" title="Permalink to this heading">#</a></h1>
-<div class="section" id="problem-description">
+<section id="problem-description">
 <h2>Problem description<a class="headerlink" href="#problem-description" title="Permalink to this heading">#</a></h2>
-<div class="figure align-center" id="fig-mh104-draw">
+<figure class="align-center" id="fig-mh104-draw">
 <a class="reference internal image-reference" href="../../../_images/examplemh1040.png"><img alt="../../../_images/examplemh1040.png" src="../../../_images/examplemh1040.png" style="width: 5.5in;" /></a>
-<p class="caption"><span class="caption-number">Figure 59 </span><span class="caption-text">Sketch of a cross section for a typical wind turbine blade <a class="reference internal" href="../references.html#chen2010" id="id1"><span>[CHEN2010]</span></a>.</span><a class="headerlink" href="#fig-mh104-draw" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Figure 54 </span><span class="caption-text">Sketch of a cross section for a typical wind turbine blade <a class="reference internal" href="../references.html#chen2010" id="id1"><span>[CHEN2010]</span></a>.</span><a class="headerlink" href="#fig-mh104-draw" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>This example demonstrates the capability of building a cross section having an airfoil shape, which is commonly seen on wind turbine blades or helicopter rotor blades.
 This example is also studied in <a class="reference internal" href="../references.html#chen2010" id="id2"><span>[CHEN2010]</span></a>.
-A sketch of a cross section for a typical wind turbine blade is shown in <a class="reference internal" href="#fig-mh104-draw"><span class="std std-numref">Fig. 59</span></a>.
+A sketch of a cross section for a typical wind turbine blade is shown in <a class="reference internal" href="#fig-mh104-draw"><span class="std std-numref">Fig. 54</span></a>.
 The airfoil is MH 104 (<a class="reference external" href="http://m-selig.ae.illinois.edu/ads/coord_database.html#M">http://m-selig.ae.illinois.edu/ads/coord_database.html#M</a>).
 In this example, the chord length <span class="math notranslate nohighlight">\(CL=1.9\)</span> m.
 The origin O is set to the point at 1/4 of the chord.
 Twist angle <span class="math notranslate nohighlight">\(\theta\)</span> is <span class="math notranslate nohighlight">\(0^\circ\)</span>.
 There are two webs, whose right boundaries are at the 20% and 50% location of the chord, respectively.
 Both low pressure and high pressure surfaces have four segments.
-The dividing points between segments are listed in <a class="reference internal" href="#table-div-pts"><span class="std std-numref">Table 53</span></a>.
-Materials are given in <a class="reference internal" href="#table-mh104-materials"><span class="std std-numref">Table 54</span></a> and layups are given in <a class="reference internal" href="#table-mh104-layups"><span class="std std-numref">Table 55</span></a>.
-A complete <span class="math notranslate nohighlight">\(6\times 6\)</span> stiffness matrix is given in <a class="reference internal" href="#table-airfoil-result"><span class="std std-numref">Table 56</span></a>.
+The dividing points between segments are listed in <a class="reference internal" href="#table-div-pts"><span class="std std-numref">Table 37</span></a>.
+Materials are given in <a class="reference internal" href="#table-mh104-materials"><span class="std std-numref">Table 38</span></a> and layups are given in <a class="reference internal" href="#table-mh104-layups"><span class="std std-numref">Table 39</span></a>.
+A complete <span class="math notranslate nohighlight">\(6\times 6\)</span> stiffness matrix is given in <a class="reference internal" href="#table-airfoil-result"><span class="std std-numref">Table 40</span></a>.
 Complete input files can be found in <code class="docutils literal notranslate"><span class="pre">examples\ex_airfoil\</span></code>, including <code class="docutils literal notranslate"><span class="pre">mh104.xml</span></code>, <code class="docutils literal notranslate"><span class="pre">basepoints.dat</span></code>, <code class="docutils literal notranslate"><span class="pre">baselines.xml</span></code>, <code class="docutils literal notranslate"><span class="pre">materials.xml</span></code>, and <code class="docutils literal notranslate"><span class="pre">layups.xml</span></code>.</p>
 <table class="table table-center" id="table-div-pts">
-<caption><span class="caption-number">Table 53 </span><span class="caption-text">Dividing points</span><a class="headerlink" href="#table-div-pts" title="Permalink to this table">#</a></caption>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
+<caption><span class="caption-number">Table 37 </span><span class="caption-text">Dividing points</span><a class="headerlink" href="#table-div-pts" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Between segments</p></th>
 <th class="head"><p>Low pressure surface</p></th>
@@ -430,38 +533,32 @@ Complete input files can be found in <code class="docutils literal notranslate">
 </tr>
 </tbody>
 </table>
-<div class="figure align-center" id="fig-mh1041">
+<figure class="align-center" id="fig-mh1041">
 <a class="reference internal image-reference" href="../../../_images/examplemh1041.png"><img alt="../../../_images/examplemh1041.png" src="../../../_images/examplemh1041.png" style="width: 6.5in;" /></a>
-<p class="caption"><span class="caption-number">Figure 60 </span><span class="caption-text"><em>Base point</em>s of the tube cross section.</span><a class="headerlink" href="#fig-mh1041" title="Permalink to this image">#</a></p>
-</div>
-<div class="figure align-center" id="fig-mh1042">
+<figcaption>
+<p><span class="caption-number">Figure 55 </span><span class="caption-text"><em>Base point</em>s of the tube cross section.</span><a class="headerlink" href="#fig-mh1041" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="fig-mh1042">
 <a class="reference internal image-reference" href="../../../_images/examplemh1042.png"><img alt="../../../_images/examplemh1042.png" src="../../../_images/examplemh1042.png" style="width: 6.5in;" /></a>
-<p class="caption"><span class="caption-number">Figure 61 </span><span class="caption-text"><em>Base line</em>s of the tube cross section.</span><a class="headerlink" href="#fig-mh1042" title="Permalink to this image">#</a></p>
-</div>
-<div class="figure align-center" id="fig-mh1043">
+<figcaption>
+<p><span class="caption-number">Figure 56 </span><span class="caption-text"><em>Base line</em>s of the tube cross section.</span><a class="headerlink" href="#fig-mh1042" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="fig-mh1043">
 <a class="reference internal image-reference" href="../../../_images/examplemh1043.png"><img alt="../../../_images/examplemh1043.png" src="../../../_images/examplemh1043.png" style="width: 6.5in;" /></a>
-<p class="caption"><span class="caption-number">Figure 62 </span><span class="caption-text"><em>Segment</em>s of the tube cross section.</span><a class="headerlink" href="#fig-mh1043" title="Permalink to this image">#</a></p>
-</div>
-<div class="figure align-center" id="fig-mh104">
+<figcaption>
+<p><span class="caption-number">Figure 57 </span><span class="caption-text"><em>Segment</em>s of the tube cross section.</span><a class="headerlink" href="#fig-mh1043" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="fig-mh104">
 <a class="reference internal image-reference" href="../../../_images/examplemh1044.png"><img alt="../../../_images/examplemh1044.png" src="../../../_images/examplemh1044.png" style="width: 6.5in;" /></a>
-<p class="caption"><span class="caption-number">Figure 63 </span><span class="caption-text">Meshed cross section viewed in Gmsh.</span><a class="headerlink" href="#fig-mh104" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Figure 58 </span><span class="caption-text">Meshed cross section viewed in Gmsh.</span><a class="headerlink" href="#fig-mh104" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <table class="table table-center" id="table-mh104-materials">
-<caption><span class="caption-number">Table 54 </span><span class="caption-text">Material properties</span><a class="headerlink" href="#table-mh104-materials" title="Permalink to this table">#</a></caption>
-<colgroup>
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-</colgroup>
+<caption><span class="caption-number">Table 38 </span><span class="caption-text">Material properties</span><a class="headerlink" href="#table-mh104-materials" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
 <th class="head"><p>Type</p></th>
@@ -559,15 +656,7 @@ Complete input files can be found in <code class="docutils literal notranslate">
 </tbody>
 </table>
 <table class="table table-center" id="table-mh104-layups">
-<caption><span class="caption-number">Table 55 </span><span class="caption-text">Layups</span><a class="headerlink" href="#table-mh104-layups" title="Permalink to this table">#</a></caption>
-<colgroup>
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-</colgroup>
+<caption><span class="caption-number">Table 39 </span><span class="caption-text">Layups</span><a class="headerlink" href="#table-mh104-layups" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
 <th class="head"><p>Layer</p></th>
@@ -734,19 +823,11 @@ Complete input files can be found in <code class="docutils literal notranslate">
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="result">
+</section>
+<section id="result">
 <h2>Result<a class="headerlink" href="#result" title="Permalink to this heading">#</a></h2>
 <table class="table" id="table-airfoil-result">
-<caption><span class="caption-number">Table 56 </span><span class="caption-text">Effective Timoshenko stiffness matrix</span><a class="headerlink" href="#table-airfoil-result" title="Permalink to this table">#</a></caption>
-<colgroup>
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-</colgroup>
+<caption><span class="caption-number">Table 40 </span><span class="caption-text">Effective Timoshenko stiffness matrix</span><a class="headerlink" href="#table-airfoil-result" title="Permalink to this table">#</a></caption>
 <tbody>
 <tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\phantom{-}2.395\times 10^9\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(\phantom{-}1.588\times 10^6\)</span></p></td>
@@ -793,15 +874,7 @@ Complete input files can be found in <code class="docutils literal notranslate">
 </tbody>
 </table>
 <table class="table" id="table-airfoil-result-ref">
-<caption><span class="caption-number">Table 57 </span><span class="caption-text">Results from reference <a class="reference internal" href="../references.html#chen2010" id="id3"><span>[CHEN2010]</span></a></span><a class="headerlink" href="#table-airfoil-result-ref" title="Permalink to this table">#</a></caption>
-<colgroup>
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-</colgroup>
+<caption><span class="caption-number">Table 41 </span><span class="caption-text">Results from reference <a class="reference internal" href="../references.html#chen2010" id="id3"><span>[CHEN2010]</span></a></span><a class="headerlink" href="#table-airfoil-result-ref" title="Permalink to this table">#</a></caption>
 <tbody>
 <tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\phantom{-}2.389\times 10^9\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(\phantom{-}1.524\times 10^6\)</span></p></td>
@@ -849,14 +922,16 @@ Complete input files can be found in <code class="docutils literal notranslate">
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The errors between the result and the reference are caused by the difference of modeling of the trailing edge. If reduce the trailing edge skin to a single thin layer, then the difference between the trailing edge shapes is minimized, and the two resulting stiffness matrices are basically the same, as shown in <a class="reference internal" href="#fig-mh104-comparison"><span class="std std-numref">Fig. 64</span></a>.</p>
+<p>The errors between the result and the reference are caused by the difference of modeling of the trailing edge. If reduce the trailing edge skin to a single thin layer, then the difference between the trailing edge shapes is minimized, and the two resulting stiffness matrices are basically the same, as shown in <a class="reference internal" href="#fig-mh104-comparison"><span class="std std-numref">Fig. 59</span></a>.</p>
 </div>
-<div class="figure align-center" id="fig-mh104-comparison">
+<figure class="align-center" id="fig-mh104-comparison">
 <a class="reference internal image-reference" href="../../../_images/examplemh104_comparison.png"><img alt="../../../_images/examplemh104_comparison.png" src="../../../_images/examplemh104_comparison.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 64 </span><span class="caption-text">Comparison of stiffness matrices after modifying the trailing edge.</span><a class="headerlink" href="#fig-mh104-comparison" title="Permalink to this image">#</a></p>
-</div>
-</div>
-</div>
+<figcaption>
+<p><span class="caption-number">Figure 59 </span><span class="caption-text">Comparison of stiffness matrices after modifying the trailing edge.</span><a class="headerlink" href="#fig-mh104-comparison" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
 
 
                 </article>
@@ -864,8 +939,10 @@ Complete input files can be found in <code class="docutils literal notranslate">
 
               
               
-                <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="example_channel.html"
@@ -910,7 +987,7 @@ Complete input files can be found in <code class="docutils literal notranslate">
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -923,6 +1000,7 @@ By Su Tian, Haodong Du, Fei Tao and Wenbin Yu
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2022, Multiscale Structural Mechanics Group, Purdue University.
@@ -940,7 +1018,7 @@ By Su Tian, Haodong Du, Fei Tao and Wenbin Yu
     
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -949,8 +1027,8 @@ By Su Tian, Haodong Du, Fei Tao and Wenbin Yu
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>

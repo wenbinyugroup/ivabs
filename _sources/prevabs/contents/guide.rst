@@ -1,3 +1,5 @@
+.. include:: /replace.txt
+
 Guide for Preparing Input Files
 ===============================
 

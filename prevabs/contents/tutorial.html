@@ -3,12 +3,13 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tutorial &#8212; iVABS 0.8 documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Tutorial &#8212; iVABS Documentation (v0.7)</title>
   
   
   
@@ -18,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -32,17 +33,51 @@
     <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "wenbinyugroup/ivabs");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'prevabs/contents/tutorial';</script>
+    <link rel="canonical" href="https://wenbinyugroup.github.io/ivabs/prevabs/contents/tutorial.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Guide for Preparing Input Files" href="guide.html" />
@@ -57,6 +92,15 @@
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -110,89 +154,63 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
-<a class="navbar-brand logo" href="../../main_ivabs.html">
+<a class="navbar-brand logo" href="../../index.html">
   
   
   
   
   
-    <p class="title logo__title">iVABS 0.8 documentation</p>
+  
+    <p class="title logo__title">iVABS Documentation (v0.7)</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Start</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../install/index.html">Download &amp; Installation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../install/windows.html">Installation on Windows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../install/linux.html">Installation on Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../install/python_setup.html">Setup Python Environment</a></li>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ivabs/install.html">Download &amp; Installation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/install/windows.html">Installation on Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/install/linux.html">Installation on Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/install/python_setup.html">Setup Python Environment</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/getstart.html">Quick Start</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/index.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/run_one_analysis.html">Carry out a single cross-sectional analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/opt_spar_web.html">Optimization of spar web locations for desired properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/opt_spar_layup.html">Optimize the spar layup of a cross-section</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/opt_cs_init_twist.html">Optimize the cross-section considering beam initial twist</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/prepare_cs_template.html">Prepare a cross-sectional design template</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/opt_uh60a_2dv.html">Optimize a single cross-section (general)</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/opt_uh60a_2dv/running.html">Running of The Tutorial</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/opt_uh60a_2dv/problem.html">Problem Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/opt_uh60a_2dv/cs_param.html">Cross-sectional Parameterization and Beam Properties</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/opt_uh60a_2dv/opt.html">Optimization Formulation</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../tutorials/opt_uh60a_2dv/inputs.html">Preparation of Input Files</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../tutorials/opt_uh60a_2dv/inputs_cs_template.html">Cross-section Main Input Template (<code class="docutils literal notranslate"><span class="pre">uh60a_section.xml.tmp</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../tutorials/opt_uh60a_2dv/inputs_cs_materials.html">Material Database (<code class="docutils literal notranslate"><span class="pre">material_database.xml</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../tutorials/opt_uh60a_2dv/inputs_cs_airfoil.html">Cross-section Airfoil Data (<code class="docutils literal notranslate"><span class="pre">sc1095.dat</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../tutorials/opt_uh60a_2dv/inputs_interface.html">Dakota Interface Scripts (<code class="docutils literal notranslate"><span class="pre">interface.py</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../tutorials/opt_uh60a_2dv/inputs_arguments.html">Interface Arguments (<code class="docutils literal notranslate"><span class="pre">interface_args.json</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../tutorials/opt_uh60a_2dv/inputs_data_process.html">Data Processing Functions (<code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../tutorials/opt_uh60a_2dv/inputs_dakota.html">Dakota Input File (<code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.dakota</span></code>)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ivabs/examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/examples/example_quickstart_param_study.html">Parameter study of a single cross-section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/examples/example_uh60_sopt_stf.html">Single objective optimization of multiple cross-sections to match target beam properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/examples/example_uh60_mopt_stf.html">Multiple objective optimization of multiple cross-sections to match target beam properties</a></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../examples/index.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../examples/example_quickstart_param_study.html">Parameter study of a single cross-section</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../examples/example_uh60_sopt_stf.html">Single objective optimization of multiple cross-sections to match target beam properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../examples/example_uh60_mopt_stf.html">Multiple objective optimization of multiple cross-sections to match target beam properties</a></li>
-</ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Guide</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../guide/index.html">Guide to Main Input File</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/intro_yaml.html">A Brief Introduction to YAML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/input_design.html">Design Parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/input_analysis.html">Analysis Steps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../guide/input_study.html">Design Study</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ivabs/main_input.html">Guide to Main Input File</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/input_guide/intro_yaml.html">A Brief Introduction to YAML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/input_guide/input_design.html">Design Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/input_guide/input_analysis.html">Analysis Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/input_guide/input_study.html">Design Study</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../ivabs/parameterization.html">Parameterization of Composite Slender Structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../guide/custom_script.html">Custom script analysis step</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../extensions/index.html">Extensions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../extensions/galaxy_rcas.html">Link to Galaxy/RCAS</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ivabs/cs_template.html">Cross-sectional Design Templates</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/cs_templates/airfoil_gbox_uni.html">Airfoil Box-spar Uniform</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../sg_templates/index.html">Cross-sectional Design Templates</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../sg_templates/airfoil_gbox_uni.html">Airfoil Box-spar Uniform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ivabs/beam_properties.html">Beam Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ivabs/analysis_step_script.html">Custom Python Script for Analysis</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ivabs/extensions.html">Extensions</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/extensions/galaxy_rcas.html">Link to Galaxy/RCAS</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../ref/beam_properties.html">Beam Properties</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../ref/input_keywords_main.html">Main Input Keywords</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">PreVABS Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ivabs/ref_main.html">Reference manual</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ivabs/reference/input_keywords_main.html">Main Input Keywords</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ivabs/introduction.html">iVABS Components</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">PreVABS Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="install.html">Download and Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="run.html">How to Run PreVABS</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Tutorial</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="guide.html">Guide for Preparing Input Files</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="guide.html">Guide for Preparing Input Files</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="guide/pre_coordinate.html">Coordinate systems</a></li>
 <li class="toctree-l3"><a class="reference internal" href="guide/pre_shape.html">Geometry and shapes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="guide/pre_material.html">Materials and layups</a></li>
@@ -201,7 +219,7 @@
 <li class="toctree-l3"><a class="reference internal" href="guide/pre_overall.html">Other input settings</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="examples/example_box.html">Box beam</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/example_pipe.html">Pipe</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/example_tube.html">Circular tube</a></li>
@@ -214,6 +232,30 @@
 <li class="toctree-l2"><a class="reference internal" href="changelog.html">Change log</a></li>
 <li class="toctree-l2"><a class="reference internal" href="xml.html">Introduction to XML</a></li>
 <li class="toctree-l2"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../msgpi/index.html">MSGPI Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../msgpi/contents/user_guide.html">User Guide</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../msgpi/contents/ref_manual.html">Reference</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../msgpi/contents/sg/index.html">Structure Gene</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../msgpi/contents/sg/structuregene.html">StructureGene</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../msgpi/contents/sg/crosssection.html">CrossSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../msgpi/contents/sg/materialsection.html">MaterialSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../msgpi/contents/sg/beamproperty.html">BeamProperty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../msgpi/contents/sg/io.html">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../msgpi/contents/sg/run.html">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../msgpi/contents/utils/index.html">Utilities</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../msgpi/contents/utils/io.html">IO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../msgpi/contents/utils/math.html">Math</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../msgpi/contents/utils/logger.html">Logging</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -257,6 +299,70 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/wenbinyugroup/ivabs" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/wenbinyugroup/ivabs/edit/main/docs/source/prevabs/contents/tutorial.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/wenbinyugroup/ivabs/issues/new?title=Issue%20on%20page%20%2Fprevabs/contents/tutorial.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
 
 
 
@@ -322,20 +428,22 @@
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -382,19 +490,19 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <blockquote>
-<div></div></blockquote>
-<div class="section" id="tutorial">
+  <section id="tutorial">
 <span id="id1"></span><h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this heading">#</a></h1>
 <p>This tutorial provides a walkthrough for how to prepare input files for
 PreVABS given a cross section design.</p>
-<div class="section" id="the-design-of-a-cross-section">
+<section id="the-design-of-a-cross-section">
 <h2>The design of a cross section<a class="headerlink" href="#the-design-of-a-cross-section" title="Permalink to this heading">#</a></h2>
-<div class="figure align-center" id="fig-tutorial-box">
+<figure class="align-center" id="fig-tutorial-box">
 <a class="reference internal image-reference" href="../../_images/tutorial_box_0.png"><img alt="../../_images/tutorial_box_0.png" src="../../_images/tutorial_box_0.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 23 </span><span class="caption-text">A box-beam cross section.</span><a class="headerlink" href="#fig-tutorial-box" title="Permalink to this image">#</a></p>
-</div>
-<p>The box-beam cross section shown in <a class="reference internal" href="#fig-tutorial-box"><span class="std std-numref">Fig. 23</span></a>
+<figcaption>
+<p><span class="caption-number">Figure 18 </span><span class="caption-text">A box-beam cross section.</span><a class="headerlink" href="#fig-tutorial-box" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The box-beam cross section shown in <a class="reference internal" href="#fig-tutorial-box"><span class="std std-numref">Fig. 18</span></a>
 will be used in this tutorial. All four walls and two webs are made from
 composite laminates. The two webs are symmetric about a middle vertical
 line. They are inclined such that the upper portion of both webs are
@@ -410,18 +518,12 @@ values:</p>
 <li><p>The angle <span class="math notranslate nohighlight">\(a = 100^\circ\)</span>.</p></li>
 </ul>
 <p>The materials used in this cross section are listed in
-<a class="reference internal" href="#tutorial-materials-iso"><span class="std std-numref">Table 33</span></a> and
-<a class="reference internal" href="#tutorial-materials-ortho"><span class="std std-numref">Table 34</span></a>.
+<a class="reference internal" href="#tutorial-materials-iso"><span class="std std-numref">Table 17</span></a> and
+<a class="reference internal" href="#tutorial-materials-ortho"><span class="std std-numref">Table 18</span></a>.
 The layups used in this cross section are listed in
-<a class="reference internal" href="#tutorial-layups"><span class="std std-numref">Table 35</span></a>.</p>
+<a class="reference internal" href="#tutorial-layups"><span class="std std-numref">Table 19</span></a>.</p>
 <table class="table table-center" id="tutorial-materials-iso">
-<caption><span class="caption-number">Table 33 </span><span class="caption-text">Isotropic material properties</span><a class="headerlink" href="#tutorial-materials-iso" title="Permalink to this table">#</a></caption>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
+<caption><span class="caption-number">Table 17 </span><span class="caption-text">Isotropic material properties</span><a class="headerlink" href="#tutorial-materials-iso" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
 <th class="head"><p>Density</p></th>
@@ -443,20 +545,7 @@ The layups used in this cross section are listed in
 </tbody>
 </table>
 <table class="table table-center" id="tutorial-materials-ortho">
-<caption><span class="caption-number">Table 34 </span><span class="caption-text">Orthotropic material properties</span><a class="headerlink" href="#tutorial-materials-ortho" title="Permalink to this table">#</a></caption>
-<colgroup>
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-</colgroup>
+<caption><span class="caption-number">Table 18 </span><span class="caption-text">Orthotropic material properties</span><a class="headerlink" href="#tutorial-materials-ortho" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
 <th class="head"><p>Density</p></th>
@@ -511,15 +600,7 @@ The layups used in this cross section are listed in
 </tbody>
 </table>
 <table class="table table-center" id="tutorial-layups">
-<caption><span class="caption-number">Table 35 </span><span class="caption-text">Layups</span><a class="headerlink" href="#tutorial-layups" title="Permalink to this table">#</a></caption>
-<colgroup>
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-</colgroup>
+<caption><span class="caption-number">Table 19 </span><span class="caption-text">Layups</span><a class="headerlink" href="#tutorial-layups" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Component</p></th>
 <th class="head"><p>Name</p></th>
@@ -588,8 +669,8 @@ The layups used in this cross section are listed in
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="steps-of-preparing-input-files">
+</section>
+<section id="steps-of-preparing-input-files">
 <h2>Steps of preparing input files<a class="headerlink" href="#steps-of-preparing-input-files" title="Permalink to this heading">#</a></h2>
 <p>In PreVABS, a cross section is composed of components, each of which
 can either be a laminate or a fill. The laminate type component is
@@ -606,11 +687,13 @@ components. For this example, the exact shape of each web depends on
 the shape of the walls, and the shape of the fill depends on both the
 webs and the walls. Then the order of creation should be: first creating
 the walls, then the webs, and at last the fill, as shown in
-<a class="reference internal" href="#fig-tutorial-box-order"><span class="std std-numref">Fig. 24</span></a>.</p>
-<div class="figure align-center" id="fig-tutorial-box-order">
+<a class="reference internal" href="#fig-tutorial-box-order"><span class="std std-numref">Fig. 19</span></a>.</p>
+<figure class="align-center" id="fig-tutorial-box-order">
 <a class="reference internal image-reference" href="../../_images/tutorial_box_order.png"><img alt="../../_images/tutorial_box_order.png" src="../../_images/tutorial_box_order.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 24 </span><span class="caption-text">Order of components creation.</span><a class="headerlink" href="#fig-tutorial-box-order" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Figure 19 </span><span class="caption-text">Order of components creation.</span><a class="headerlink" href="#fig-tutorial-box-order" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The next step is to prepare various input files based on all design
 parameters listed above. In this example, all files are in the XML format.
 A brief summary of these input files is listed below.</p>
@@ -627,25 +710,23 @@ and other configurations of modeling and analysis.</p></li>
 <p>Another option is to use a local file in the working directory with an arbitrary name storing the material properties.
 The requirement of using this local file is to explicitly provide the material file name in the main input file.
 Please check Section: <a class="reference internal" href="guide/pre_overall.html#section-overall"><span class="std std-ref">Other input settings</span></a>.</p>
-<div class="section" id="prepare-geometric-elements">
+<section id="prepare-geometric-elements">
 <h3>Prepare geometric elements<a class="headerlink" href="#prepare-geometric-elements" title="Permalink to this heading">#</a></h3>
-<p>As shown in <a class="reference internal" href="#fig-tutorial-box-points"><span class="std std-numref">Fig. 25</span></a>, seven points
+<p>As shown in <a class="reference internal" href="#fig-tutorial-box-points"><span class="std std-numref">Fig. 20</span></a>, seven points
 are used to define the shape of the cross section. Points p1 to p4 define
 the walls, p5 and p6 define the webs, and p0 indicates the space which
 should be filled with some material. The origin of the coordinate system
 is placed at the centroid of the rectangular. Based on the design parameters
 <span class="math notranslate nohighlight">\(w\)</span>, <span class="math notranslate nohighlight">\(h\)</span> and <span class="math notranslate nohighlight">\(d\)</span>, coordinates of all points are found
-and listed in <a class="reference internal" href="#table-tutorial-box-points"><span class="std std-numref">Table 36</span></a>.</p>
-<div class="figure align-center" id="fig-tutorial-box-points">
+and listed in <a class="reference internal" href="#table-tutorial-box-points"><span class="std std-numref">Table 20</span></a>.</p>
+<figure class="align-center" id="fig-tutorial-box-points">
 <a class="reference internal image-reference" href="../../_images/tutorial_box_points.png"><img alt="../../_images/tutorial_box_points.png" src="../../_images/tutorial_box_points.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 25 </span><span class="caption-text">Key points defining the shape of the cross section.</span><a class="headerlink" href="#fig-tutorial-box-points" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Figure 20 </span><span class="caption-text">Key points defining the shape of the cross section.</span><a class="headerlink" href="#fig-tutorial-box-points" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <table class="table table-center" id="table-tutorial-box-points">
-<caption><span class="caption-number">Table 36 </span><span class="caption-text">Key points</span><a class="headerlink" href="#table-tutorial-box-points" title="Permalink to this table">#</a></caption>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
+<caption><span class="caption-number">Table 20 </span><span class="caption-text">Key points</span><a class="headerlink" href="#table-tutorial-box-points" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
 <th class="head"><p>Coordinate</p></th>
@@ -676,7 +757,7 @@ and listed in <a class="reference internal" href="#table-tutorial-box-points"><s
 </tbody>
 </table>
 <p>Base lines are created based on key points defined above. As shown in
-<a class="reference internal" href="#fig-tutorial-box-lines"><span class="std std-numref">Fig. 26</span></a>, three lines are created.
+<a class="reference internal" href="#fig-tutorial-box-lines"><span class="std std-numref">Fig. 21</span></a>, three lines are created.
 Line 1 is defined by connecting the four points (p1 -&gt; p2 -&gt; p3 -&gt; p4 -&gt; p1).
 Line 2 and 3 are defined by a single point with an incline angle. For
 line 2, it is the point p5 with an angle of 100 degrees. For line 3, it is
@@ -685,13 +766,15 @@ the point p6 with an angle of 80 degrees.</p>
 laminate is created for each segment, and how the local coordinate system
 is defined for each element.</p>
 <p>The completed input file for geometry is shown in
-<a class="reference internal" href="#code-tutorial-box-baselines"><span class="std std-numref">Listing 29</span></a>.</p>
-<div class="figure align-center" id="fig-tutorial-box-lines">
+<a class="reference internal" href="#code-tutorial-box-baselines"><span class="std std-numref">Listing 15</span></a>.</p>
+<figure class="align-center" id="fig-tutorial-box-lines">
 <a class="reference internal image-reference" href="../../_images/tutorial_box_lines.png"><img alt="../../_images/tutorial_box_lines.png" src="../../_images/tutorial_box_lines.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 26 </span><span class="caption-text">Base lines defining the shape of the cross section.</span><a class="headerlink" href="#fig-tutorial-box-lines" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Figure 21 </span><span class="caption-text">Base lines defining the shape of the cross section.</span><a class="headerlink" href="#fig-tutorial-box-lines" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="literal-block-wrapper docutils container" id="code-tutorial-box-baselines">
-<div class="code-block-caption"><span class="caption-number">Listing 29 </span><span class="caption-text">Input file for geometric elements (<em>baseline.xml</em>).</span><a class="headerlink" href="#code-tutorial-box-baselines" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 15 </span><span class="caption-text">Input file for geometric elements (<em>baseline.xml</em>).</span><a class="headerlink" href="#code-tutorial-box-baselines" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;baselines&gt;</span>
 <span class="linenos"> 2</span><span class="w">  </span><span class="nt">&lt;basepoints&gt;</span>
 <span class="linenos"> 3</span><span class="w">    </span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;p0&quot;</span><span class="nt">&gt;</span>0<span class="w">  </span>0<span class="nt">&lt;/point&gt;</span>
@@ -717,23 +800,23 @@ is defined for each element.</p>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="prepare-materials-and-layups">
+</section>
+<section id="prepare-materials-and-layups">
 <h3>Prepare materials and layups<a class="headerlink" href="#prepare-materials-and-layups" title="Permalink to this heading">#</a></h3>
 <p>Material data are stored in the material database. As stated above, this
 file must be named as <em>MaterialDB.xml</em> and placed at the directory where
 the PreVABS executable is. The format of this file is shown in
-<a class="reference internal" href="#code-tutorial-box-materials"><span class="std std-numref">Listing 30</span></a>. Arrangement of data
+<a class="reference internal" href="#code-tutorial-box-materials"><span class="std std-numref">Listing 16</span></a>. Arrangement of data
 under the <code class="docutils literal notranslate"><span class="pre">&lt;elastic&gt;</span></code> element are different for different material
 types, which can be isotropic, orthotropic, or anisotropic.</p>
 <p>Another part of the file is the lamina data. A lamina is a unique combination
 of material and ply thickness. For this example, according to the layup
-table (:<a class="reference internal" href="#tutorial-layups"><span class="std std-numref">Table 35</span></a>) given above, there are two
+table (:<a class="reference internal" href="#tutorial-layups"><span class="std std-numref">Table 19</span></a>) given above, there are two
 laminae. One has material m1 and thickness 0.02, and another one has
 material m2 and thickness 0.05. It is the lamina, instead of the material,
 that will be used to define each layer of the layup.</p>
 <div class="literal-block-wrapper docutils container" id="code-tutorial-box-materials">
-<div class="code-block-caption"><span class="caption-number">Listing 30 </span><span class="caption-text">Input file for materials (<em>MaterialDB.xml</em>).</span><a class="headerlink" href="#code-tutorial-box-materials" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 16 </span><span class="caption-text">Input file for materials (<em>MaterialDB.xml</em>).</span><a class="headerlink" href="#code-tutorial-box-materials" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;materials&gt;</span>
 <span class="linenos"> 2</span><span class="w">  </span><span class="nt">&lt;material</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;m0&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;isotropic&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 3</span><span class="w">    </span><span class="nt">&lt;density&gt;</span>1.0<span class="nt">&lt;/density&gt;</span>
@@ -786,14 +869,14 @@ that will be used to define each layer of the layup.</p>
 </div>
 <p>Layup information is stored in a separate file. Based on the layup table,
 the input file can be prepared with the format shown in
-<a class="reference internal" href="#code-tutorial-box-layups"><span class="std std-numref">Listing 31</span></a>. The order of the layers
+<a class="reference internal" href="#code-tutorial-box-layups"><span class="std std-numref">Listing 17</span></a>. The order of the layers
 defines the laying sequence from the base line. The number in the <code class="docutils literal notranslate"><span class="pre">&lt;layer&gt;</span></code>
 element stands for the orientation. If there is a colon, then the number
 behind it stands for the number of plies in this layer. If there is no
 number at all, then by default this layer has only one ply with orientation
 of 0 degree.</p>
 <div class="literal-block-wrapper docutils container" id="code-tutorial-box-layups">
-<div class="code-block-caption"><span class="caption-number">Listing 31 </span><span class="caption-text">Input file for layups (<em>layups.xml</em>).</span><a class="headerlink" href="#code-tutorial-box-layups" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 17 </span><span class="caption-text">Input file for layups (<em>layups.xml</em>).</span><a class="headerlink" href="#code-tutorial-box-layups" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;layups&gt;</span>
 <span class="linenos"> 2</span><span class="w">  </span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;layup1&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 3</span><span class="w">    </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;la_m1_002&quot;</span><span class="nt">&gt;</span>45<span class="nt">&lt;/layer&gt;</span>
@@ -810,8 +893,8 @@ of 0 degree.</p>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="create-components">
+</section>
+<section id="create-components">
 <h3>Create components<a class="headerlink" href="#create-components" title="Permalink to this heading">#</a></h3>
 <p>There are two types of components in PreVABS, laminate and fill. For
 this example, based on the decomposition we did at the begining of this
@@ -824,17 +907,19 @@ segment is a unique combination of a base line and a layup. The layup
 can be created on either side of the base line. This is controlled by
 an attribute <code class="docutils literal notranslate"><span class="pre">direction</span></code>, which can be either left or right. This can
 be understood as the left- or right-hand side when walking along the
-base line, as shown in <a class="reference internal" href="#fig-tutorial-box-segments"><span class="std std-numref">Fig. 27</span></a>.</p>
+base line, as shown in <a class="reference internal" href="#fig-tutorial-box-segments"><span class="std std-numref">Fig. 22</span></a>.</p>
 <p>As for the ordering, the walls should be completed first, since its
 inner boundary is needed to trim the base lines of both webs. Hence,
 each web component depends on the walls component, as shown in
-<a class="reference internal" href="#code-tutorial-box-laminate"><span class="std std-numref">Listing 32</span></a>.</p>
-<div class="figure align-center" id="fig-tutorial-box-segments">
+<a class="reference internal" href="#code-tutorial-box-laminate"><span class="std std-numref">Listing 18</span></a>.</p>
+<figure class="align-center" id="fig-tutorial-box-segments">
 <a class="reference internal image-reference" href="../../_images/tutorial_box_segments.png"><img alt="../../_images/tutorial_box_segments.png" src="../../_images/tutorial_box_segments.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 27 </span><span class="caption-text">Layup directions for each segment.</span><a class="headerlink" href="#fig-tutorial-box-segments" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Figure 22 </span><span class="caption-text">Layup directions for each segment.</span><a class="headerlink" href="#fig-tutorial-box-segments" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="literal-block-wrapper docutils container" id="code-tutorial-box-laminate">
-<div class="code-block-caption"><span class="caption-number">Listing 32 </span><span class="caption-text">Input elements for the laminate-type components</span><a class="headerlink" href="#code-tutorial-box-laminate" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 18 </span><span class="caption-text">Input elements for the laminate-type components</span><a class="headerlink" href="#code-tutorial-box-laminate" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;walls&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 2</span><span class="w">  </span><span class="nt">&lt;segment&gt;</span>
 <span class="linenos"> 3</span><span class="w">    </span><span class="nt">&lt;baseline&gt;</span>line1<span class="nt">&lt;/baseline&gt;</span>
@@ -860,13 +945,15 @@ each web component depends on the walls component, as shown in
 point p0 is used to indicate that the material should be filled in the
 space in the middle enclosed by the walls and both webs. At the same
 time, the dependent components are also decided, as shown in
-<a class="reference internal" href="#code-tutorial-box-fill"><span class="std std-numref">Listing 33</span></a>.</p>
-<div class="figure align-center" id="fig-tutorial-box-fill">
+<a class="reference internal" href="#code-tutorial-box-fill"><span class="std std-numref">Listing 19</span></a>.</p>
+<figure class="align-center" id="fig-tutorial-box-fill">
 <a class="reference internal image-reference" href="../../_images/tutorial_box_fill.png"><img alt="../../_images/tutorial_box_fill.png" src="../../_images/tutorial_box_fill.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 28 </span><span class="caption-text">The fill-type component.</span><a class="headerlink" href="#fig-tutorial-box-fill" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Figure 23 </span><span class="caption-text">The fill-type component.</span><a class="headerlink" href="#fig-tutorial-box-fill" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="literal-block-wrapper docutils container" id="code-tutorial-box-fill">
-<div class="code-block-caption"><span class="caption-number">Listing 33 </span><span class="caption-text">Input elements for the fill-type component</span><a class="headerlink" href="#code-tutorial-box-fill" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 19 </span><span class="caption-text">Input elements for the fill-type component</span><a class="headerlink" href="#code-tutorial-box-fill" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;fill&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;fill&quot;</span><span class="w"> </span><span class="na">depend=</span><span class="s">&quot;walls,web1,web2&quot;</span><span class="nt">&gt;</span>
 <span class="linenos">2</span><span class="w">  </span><span class="nt">&lt;location&gt;</span>p0<span class="nt">&lt;/location&gt;</span>
 <span class="linenos">3</span><span class="w">  </span><span class="nt">&lt;material&gt;</span>m0<span class="nt">&lt;/material&gt;</span>
@@ -874,8 +961,8 @@ time, the dependent components are also decided, as shown in
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="set-other-configurations-and-complete-the-main-input-file">
+</section>
+<section id="set-other-configurations-and-complete-the-main-input-file">
 <h3>Set other configurations and complete the main input file<a class="headerlink" href="#set-other-configurations-and-complete-the-main-input-file" title="Permalink to this heading">#</a></h3>
 <p>Besides the definitions of components, the main input file of the cross
 section contains several other required or optional settings.</p>
@@ -890,9 +977,9 @@ be calculated.</p>
 part contains global configurations for the shape and meshing of the
 cross section. Here, the global mesh size is set to 0.02.</p>
 <p>The completed main input file for the cross section is shown in
-<a class="reference internal" href="#code-tutorial-box-main"><span class="std std-numref">Listing 34</span></a>.</p>
+<a class="reference internal" href="#code-tutorial-box-main"><span class="std std-numref">Listing 20</span></a>.</p>
 <div class="literal-block-wrapper docutils container" id="code-tutorial-box-main">
-<div class="code-block-caption"><span class="caption-number">Listing 34 </span><span class="caption-text">Input file for the cross section</span><a class="headerlink" href="#code-tutorial-box-main" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 20 </span><span class="caption-text">Input file for the cross section</span><a class="headerlink" href="#code-tutorial-box-main" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;cross_section</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;box&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 2</span><span class="w">  </span><span class="nt">&lt;include&gt;</span>
 <span class="linenos"> 3</span><span class="w">    </span><span class="nt">&lt;baseline&gt;</span>baselines<span class="nt">&lt;/baseline&gt;</span>
@@ -930,9 +1017,9 @@ cross section. Here, the global mesh size is set to 0.02.</p>
 </pre></div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="execution-and-results">
+</section>
+</section>
+<section id="execution-and-results">
 <h2>Execution and results<a class="headerlink" href="#execution-and-results" title="Permalink to this heading">#</a></h2>
 <p>Once all input files are prepared, the cross section can be created and
 homogenized using the following command:</p>
@@ -940,25 +1027,19 @@ homogenized using the following command:</p>
 </pre></div>
 </div>
 <p>If everything works successfully, Gmsh will be called and the cross section
-will be plotted as shown in <a class="reference internal" href="#fig-tutorial-box-plot"><span class="std std-numref">Fig. 29</span></a>
+will be plotted as shown in <a class="reference internal" href="#fig-tutorial-box-plot"><span class="std std-numref">Fig. 24</span></a>
 (the display of element edges is turned off in the figure for clarity),
 and VABS homogenization analysis will be carried out and effective beam
 properties can be found in the file <code class="docutils literal notranslate"><span class="pre">box.sg.K</span></code>. The effective Timoshenko
-stiffness matrix is listed in <a class="reference internal" href="#tutorial-stiffness"><span class="std std-numref">Table 37</span></a>.</p>
-<div class="figure align-center" id="fig-tutorial-box-plot">
+stiffness matrix is listed in <a class="reference internal" href="#tutorial-stiffness"><span class="std std-numref">Table 21</span></a>.</p>
+<figure class="align-center" id="fig-tutorial-box-plot">
 <a class="reference internal image-reference" href="../../_images/tutorial_box.png"><img alt="../../_images/tutorial_box.png" src="../../_images/tutorial_box.png" style="width: 6.5in;" /></a>
-<p class="caption"><span class="caption-number">Figure 29 </span><span class="caption-text">The cross section created by PreVABS and plotted by Gmsh.</span><a class="headerlink" href="#fig-tutorial-box-plot" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Figure 24 </span><span class="caption-text">The cross section created by PreVABS and plotted by Gmsh.</span><a class="headerlink" href="#fig-tutorial-box-plot" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <table class="table table-center" id="tutorial-stiffness">
-<caption><span class="caption-number">Table 37 </span><span class="caption-text">Timoshenko stiffness matrix in the file <em>box.sg.K</em></span><a class="headerlink" href="#tutorial-stiffness" title="Permalink to this table">#</a></caption>
-<colgroup>
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-</colgroup>
+<caption><span class="caption-number">Table 21 </span><span class="caption-text">Timoshenko stiffness matrix in the file <em>box.sg.K</em></span><a class="headerlink" href="#tutorial-stiffness" title="Permalink to this table">#</a></caption>
 <tbody>
 <tr class="row-odd"><td><p>3.991E+10</p></td>
 <td><p>-1.662E+05</p></td>
@@ -1004,8 +1085,8 @@ stiffness matrix is listed in <a class="reference internal" href="#tutorial-stif
 </tr>
 </tbody>
 </table>
-</div>
-</div>
+</section>
+</section>
 
 
                 </article>
@@ -1013,8 +1094,10 @@ stiffness matrix is listed in <a class="reference internal" href="#tutorial-stif
 
               
               
-                <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="run.html"
@@ -1066,7 +1149,7 @@ stiffness matrix is listed in <a class="reference internal" href="#tutorial-stif
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -1079,6 +1162,7 @@ By Su Tian, Haodong Du, Fei Tao and Wenbin Yu
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2022, Multiscale Structural Mechanics Group, Purdue University.
@@ -1096,7 +1180,7 @@ By Su Tian, Haodong Du, Fei Tao and Wenbin Yu
     
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -1105,8 +1189,8 @@ By Su Tian, Haodong Du, Fei Tao and Wenbin Yu
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>

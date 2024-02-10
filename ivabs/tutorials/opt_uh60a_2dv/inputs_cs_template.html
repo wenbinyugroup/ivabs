@@ -1,0 +1,1119 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Cross-section Main Input Template (uh60a_section.xml.tmp) &#8212; iVABS Documentation (v0.7)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "wenbinyugroup/ivabs");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ivabs/tutorials/opt_uh60a_2dv/inputs_cs_template';</script>
+    <link rel="canonical" href="https://wenbinyugroup.github.io/ivabs/ivabs/tutorials/opt_uh60a_2dv/inputs_cs_template.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">iVABS Documentation (v0.7)</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../install.html">Download &amp; Installation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../install/windows.html">Installation on Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install/linux.html">Installation on Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install/python_setup.html">Setup Python Environment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../getstart.html">Quick Start</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example_quickstart_param_study.html">Parameter study of a single cross-section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example_uh60_sopt_stf.html">Single objective optimization of multiple cross-sections to match target beam properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example_uh60_mopt_stf.html">Multiple objective optimization of multiple cross-sections to match target beam properties</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../main_input.html">Guide to Main Input File</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../input_guide/intro_yaml.html">A Brief Introduction to YAML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../input_guide/input_design.html">Design Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../input_guide/input_analysis.html">Analysis Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../input_guide/input_study.html">Design Study</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../parameterization.html">Parameterization of Composite Slender Structures</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../cs_template.html">Cross-sectional Design Templates</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cs_templates/airfoil_gbox_uni.html">Airfoil Box-spar Uniform</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../beam_properties.html">Beam Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../analysis_step_script.html">Custom Python Script for Analysis</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../extensions.html">Extensions</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/galaxy_rcas.html">Link to Galaxy/RCAS</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ref_main.html">Reference manual</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/input_keywords_main.html">Main Input Keywords</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">iVABS Components</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../prevabs/index.html">PreVABS Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/contents/install.html">Download and Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/contents/run.html">How to Run PreVABS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/contents/tutorial.html">Tutorial</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../prevabs/contents/guide.html">Guide for Preparing Input Files</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/guide/pre_coordinate.html">Coordinate systems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/guide/pre_shape.html">Geometry and shapes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/guide/pre_material.html">Materials and layups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/guide/pre_component.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/guide/pre_recover.html">Specifications for recovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/guide/pre_overall.html">Other input settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../prevabs/contents/examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_box.html">Box beam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_pipe.html">Pipe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_tube.html">Circular tube</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_channel.html">Channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_airfoil.html">Airfoil (MH-104)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_airfoil_recover.html">Airfoil (Recover)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../prevabs/contents/examples/example_uh60a_fi.html">UH-60A (Initial Failure Analysis)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/contents/changelog.html">Change log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/contents/xml.html">Introduction to XML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prevabs/contents/references.html">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../msgpi/index.html">MSGPI Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../msgpi/contents/user_guide.html">User Guide</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../msgpi/contents/ref_manual.html">Reference</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../msgpi/contents/sg/index.html">Structure Gene</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/structuregene.html">StructureGene</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/crosssection.html">CrossSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/materialsection.html">MaterialSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/beamproperty.html">BeamProperty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/io.html">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/run.html">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../msgpi/contents/utils/index.html">Utilities</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/utils/io.html">IO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/utils/math.html">Math</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/utils/logger.html">Logging</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/wenbinyugroup/ivabs" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/wenbinyugroup/ivabs/edit/main/docs/source/ivabs/tutorials/opt_uh60a_2dv/inputs_cs_template.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/wenbinyugroup/ivabs/issues/new?title=Issue%20on%20page%20%2Fivabs/tutorials/opt_uh60a_2dv/inputs_cs_template.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/ivabs/tutorials/opt_uh60a_2dv/inputs_cs_template.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Cross-section Main Input Template (uh60a_section.xml.tmp)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-1-including-files">Section 1: Including files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-2-analysis-settings">Section 2: Analysis settings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-3-general-settings">Section 3: General settings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-4-geoemtry">Section 4: Geoemtry</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#primitives">Primitives</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#base-point">Base point</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#include-base-points">Include base points</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#individual-base-points">Individual base points</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#base-line">Base line</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-the-geometry">Build the geometry</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-5-layups">Section 5: Layups</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-6-components">Section 6: Components</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#component-format">Component format</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-file">Complete file</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="cross-section-main-input-template-uh60a-section-xml-tmp">
+<span id="sect-input-template"></span><h1>Cross-section Main Input Template (<code class="docutils literal notranslate"><span class="pre">uh60a_section.xml.tmp</span></code>)<a class="headerlink" href="#cross-section-main-input-template-uh60a-section-xml-tmp" title="Permalink to this heading">#</a></h1>
+<p>This file contains the overall design of the cross-section.
+All data are enclosed in a root tag <code class="docutils literal notranslate"><span class="pre">&lt;cross_section&gt;</span></code>.
+It contains the following sections: include, analysis, general, geometry, layups and components.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;cross_section</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;uh60a_section&quot;</span><span class="w"> </span><span class="na">format=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">2</span><span class="w">    </span>...
+<span class="linenos">3</span><span class="nt">&lt;/cross_section&gt;</span>
+</pre></div>
+</div>
+<p>The format 0 refers to the old format where base lines and layups definition are given in separate files.
+The format 1 is the new format where these information are included in the main cross section definition file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A natural procedure of preparing this file would be:
+1. Create the xml file with arbitrary values for parameters and run PreVABS to check syntax errors.
+2. If no error, for those quantities that will receive values from Dakota, replace the value with the parameter name enclosed by <code class="docutils literal notranslate"><span class="pre">{}</span></code>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more detailed instruction, please go to the <a class="reference external" href="https://wenbinyugroup.github.io/ivabs/prevabs/index.html">PreVABS documentation</a></p>
+</div>
+<section id="section-1-including-files">
+<h2>Section 1: Including files<a class="headerlink" href="#section-1-including-files" title="Permalink to this heading">#</a></h2>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;include&gt;</span>
+<span class="linenos">2</span><span class="w">    </span><span class="nt">&lt;material&gt;</span>material_database<span class="nt">&lt;/material&gt;</span>
+<span class="linenos">3</span><span class="nt">&lt;/include&gt;</span>
+</pre></div>
+</div>
+<p>The material database is included here. The .xml extension is omitted.</p>
+</section>
+<section id="section-2-analysis-settings">
+<h2>Section 2: Analysis settings<a class="headerlink" href="#section-2-analysis-settings" title="Permalink to this heading">#</a></h2>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;analysis&gt;</span>
+<span class="linenos">2</span><span class="w">    </span><span class="nt">&lt;model&gt;</span>1<span class="nt">&lt;/model&gt;</span>
+<span class="linenos">3</span><span class="nt">&lt;/analysis&gt;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">model</span></code> being 0 means classical analysis only. <code class="docutils literal notranslate"><span class="pre">model</span></code> being 1 means both classical and refined/Timoshenko analysis.</p>
+</section>
+<section id="section-3-general-settings">
+<h2>Section 3: General settings<a class="headerlink" href="#section-3-general-settings" title="Permalink to this heading">#</a></h2>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;general&gt;</span>
+<span class="linenos">2</span><span class="w">    </span><span class="nt">&lt;translate&gt;</span>{oa2}<span class="w"> </span>0<span class="nt">&lt;/translate&gt;</span>
+<span class="linenos">3</span><span class="w">    </span><span class="nt">&lt;scale&gt;</span>{chord}<span class="nt">&lt;/scale&gt;</span>
+<span class="linenos">4</span><span class="w">    </span><span class="nt">&lt;mesh_size&gt;</span>{mesh_size}<span class="nt">&lt;/mesh_size&gt;</span>
+<span class="linenos">5</span><span class="w">    </span><span class="nt">&lt;element_type&gt;</span>linear<span class="nt">&lt;/element_type&gt;</span>
+<span class="linenos">6</span><span class="nt">&lt;/general&gt;</span>
+</pre></div>
+</div>
+<p>This part defines translation, scaling, rotating, global mesh size and element types.
+The transformation is done in the order of translation, scaling and rotating.
+The placeholder <code class="docutils literal notranslate"><span class="pre">{}</span></code> is put here for dakota to fill in with a number.</p>
+</section>
+<section id="section-4-geoemtry">
+<h2>Section 4: Geoemtry<a class="headerlink" href="#section-4-geoemtry" title="Permalink to this heading">#</a></h2>
+<section id="primitives">
+<h3>Primitives<a class="headerlink" href="#primitives" title="Permalink to this heading">#</a></h3>
+<p>We will first introduce the format for defining geometry</p>
+<section id="base-point">
+<h4>Base point<a class="headerlink" href="#base-point" title="Permalink to this heading">#</a></h4>
+<p>Base points can be added by including a data file or created directly in the input file.</p>
+<section id="include-base-points">
+<h5>Include base points<a class="headerlink" href="#include-base-points" title="Permalink to this heading">#</a></h5>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;basepoints&gt;</span>
+<span class="linenos">2</span><span class="w">    </span><span class="nt">&lt;include&gt;</span>sc1095<span class="nt">&lt;/include&gt;</span>
+<span class="linenos">3</span><span class="nt">&lt;/basepoints&gt;</span>
+</pre></div>
+</div>
+<p>This refers to sc1095.dat base points definition file.
+The extension is omitted here.
+This file is introduced in Section <a class="reference internal" href="inputs_cs_airfoil.html#sect-input-airfoil"><span class="std std-ref">Cross-section Airfoil Data (sc1095.dat)</span></a>.</p>
+</section>
+<section id="individual-base-points">
+<h5>Individual base points<a class="headerlink" href="#individual-base-points" title="Permalink to this heading">#</a></h5>
+<p>By coordinates:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;pnsmc&quot;</span><span class="nt">&gt;</span>{pnsmc_a2}<span class="w"> </span>{pnsmc_a3}<span class="nt">&lt;/point&gt;</span>
+</pre></div>
+</div>
+<p>A new point is defined by x2 and x3 coordinates.</p>
+<p>By intersections:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;p5&quot;</span><span class="w"> </span><span class="na">on=</span><span class="s">&quot;bsl_upper&quot;</span><span class="w"> </span><span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>-0.02<span class="nt">&lt;/point&gt;</span>
+</pre></div>
+</div>
+<p>The points is the intersection of the “bsl_upper” and “x2=-0.02”.
+This is done before any scaling, translating or rotating.</p>
+</section>
+</section>
+<section id="base-line">
+<h4>Base line<a class="headerlink" href="#base-line" title="Permalink to this heading">#</a></h4>
+<p>Define a straight base line by a sequence of points.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;bsl_le&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">2</span><span class="w">    </span><span class="nt">&lt;points&gt;</span>p6:141,1:p5<span class="nt">&lt;/points&gt;</span>
+<span class="linenos">3</span><span class="nt">&lt;/baseline&gt;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">141</span></code> are points in the data file.
+<code class="docutils literal notranslate"><span class="pre">p5</span></code> and <code class="docutils literal notranslate"><span class="pre">p6</span></code> are points defined by intersection.
+The intersecton point can be inserted back into the data file.
+When you use pA:pB, all points between the two are included in the base line.</p>
+<p>Define a circular base line.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;bsl_nsm&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;circle&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">2</span><span class="w">    </span><span class="nt">&lt;center&gt;</span>pnsmc<span class="nt">&lt;/center&gt;</span>
+<span class="linenos">3</span><span class="w">    </span><span class="nt">&lt;radius&gt;</span>{nsmr}<span class="nt">&lt;/radius&gt;</span>
+<span class="linenos">4</span><span class="w">    </span><span class="nt">&lt;discrete</span><span class="w"> </span><span class="na">by=</span><span class="s">&quot;angle&quot;</span><span class="nt">&gt;</span>9<span class="nt">&lt;/discrete&gt;</span>
+<span class="linenos">5</span><span class="nt">&lt;/baseline&gt;</span>
+</pre></div>
+</div>
+<p>This is a circular base line defined for the non-structural mass using a center and a radius.
+The discrete tag specifies number of lines this circle is divided into.</p>
+</section>
+</section>
+<section id="build-the-geometry">
+<h3>Build the geometry<a class="headerlink" href="#build-the-geometry" title="Permalink to this heading">#</a></h3>
+<p>First, we need to define some additional base points</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;p1&quot;</span><span class="w"> </span><span class="na">on=</span><span class="s">&quot;bsl_upper&quot;</span><span class="w"> </span><span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>{wl_a2}<span class="nt">&lt;/point&gt;</span>
+<span class="linenos">2</span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;p2&quot;</span><span class="w"> </span><span class="na">on=</span><span class="s">&quot;bsl_upper&quot;</span><span class="w"> </span><span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>{wt_a2}<span class="nt">&lt;/point&gt;</span>
+<span class="linenos">3</span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;p3&quot;</span><span class="w"> </span><span class="na">on=</span><span class="s">&quot;bsl_lower&quot;</span><span class="w"> </span><span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>{wt_a2}<span class="nt">&lt;/point&gt;</span>
+<span class="linenos">4</span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;p4&quot;</span><span class="w"> </span><span class="na">on=</span><span class="s">&quot;bsl_lower&quot;</span><span class="w"> </span><span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>{wl_a2}<span class="nt">&lt;/point&gt;</span>
+<span class="linenos">5</span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;p5&quot;</span><span class="w"> </span><span class="na">on=</span><span class="s">&quot;bsl_upper&quot;</span><span class="w"> </span><span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>-0.02<span class="nt">&lt;/point&gt;</span>
+<span class="linenos">6</span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;p6&quot;</span><span class="w"> </span><span class="na">on=</span><span class="s">&quot;bsl_lower&quot;</span><span class="w"> </span><span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>-0.02<span class="nt">&lt;/point&gt;</span>
+<span class="linenos">7</span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;p7&quot;</span><span class="w"> </span><span class="na">on=</span><span class="s">&quot;bsl_upper&quot;</span><span class="w"> </span><span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>-0.8<span class="nt">&lt;/point&gt;</span>
+<span class="linenos">8</span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;p8&quot;</span><span class="w"> </span><span class="na">on=</span><span class="s">&quot;bsl_lower&quot;</span><span class="w"> </span><span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>-0.8<span class="nt">&lt;/point&gt;</span>
+<span class="linenos">9</span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;pnsmc&quot;</span><span class="nt">&gt;</span>{pnsmc_a2}<span class="w"> </span>{pnsmc_a3}<span class="nt">&lt;/point&gt;</span>
+</pre></div>
+</div>
+<p>Now we have all the pieces. We can primitives and base points introduced to define some base lines.
+The base lines and base points are illustrated in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">%s</span></code>.
+The point 1 is the rightmost point or starting point;
+the point 71 is leftmost point on the upper half;
+the point 72 is the leftmost point on the lower half (71 and 72 has the same x2 value);
+the point 141 is the last point before getting back to the starting point.</p>
+<figure class="align-center" id="fig-uh60a-baselines">
+<a class="reference internal image-reference" href="../../../_images/uh60a_baselines.jpg"><img alt="../../../_images/uh60a_baselines.jpg" src="../../../_images/uh60a_baselines.jpg" style="width: 6in;" /></a>
+<figcaption>
+<p><span class="caption-text">Base lines and base points definition</span><a class="headerlink" href="#fig-uh60a-baselines" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic">
+<li><p>The upper half of the airfoil</p>
+<blockquote>
+<div><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;bsl_upper&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">2</span><span class="w">    </span><span class="nt">&lt;points&gt;</span>1:71<span class="nt">&lt;/points&gt;</span>
+<span class="linenos">3</span><span class="nt">&lt;/baseline&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>The lower half of the airfoil</p>
+<blockquote>
+<div><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;bsl_lower&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">2</span><span class="w">    </span><span class="nt">&lt;points&gt;</span>72:141,1<span class="nt">&lt;/points&gt;</span>
+<span class="linenos">3</span><span class="nt">&lt;/baseline&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>The spar box</p>
+<blockquote>
+<div><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;bsl_spar_all&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">2</span><span class="w">    </span><span class="nt">&lt;points&gt;</span>p1:p2,p3:p4,p1<span class="nt">&lt;/points&gt;</span>
+<span class="linenos">3</span><span class="nt">&lt;/baseline&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">p1</span></code>, <code class="docutils literal notranslate"><span class="pre">p2</span></code>, <code class="docutils literal notranslate"><span class="pre">p3</span></code>, <code class="docutils literal notranslate"><span class="pre">p4</span></code> are defined by intersections of web locations and airfoil.</p>
+<ol class="arabic" start="4">
+<li><p>The leading edge</p>
+<blockquote>
+<div><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;bsl_le_top&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">2</span><span class="w">    </span><span class="nt">&lt;points&gt;</span>p5:p1<span class="nt">&lt;/points&gt;</span>
+<span class="linenos">3</span><span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">4</span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;bsl_le&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">5</span><span class="w">    </span><span class="nt">&lt;points&gt;</span>p6:141,1:p5<span class="nt">&lt;/points&gt;</span>
+<span class="linenos">6</span><span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">7</span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;bsl_le_bot&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">8</span><span class="w">    </span><span class="nt">&lt;points&gt;</span>p4:p6<span class="nt">&lt;/points&gt;</span>
+<span class="linenos">9</span><span class="nt">&lt;/baseline&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>The trailing edge</p>
+<blockquote>
+<div><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;bsl_te_top&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">2</span><span class="w">    </span><span class="nt">&lt;points&gt;</span>p2:p7<span class="nt">&lt;/points&gt;</span>
+<span class="linenos">3</span><span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">4</span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;bsl_te&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">5</span><span class="w">    </span><span class="nt">&lt;points&gt;</span>p7:71,72:p8<span class="nt">&lt;/points&gt;</span>
+<span class="linenos">6</span><span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">7</span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;bsl_te_bot&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">8</span><span class="w">    </span><span class="nt">&lt;points&gt;</span>p8:p3<span class="nt">&lt;/points&gt;</span>
+<span class="linenos">9</span><span class="nt">&lt;/baseline&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</section>
+</section>
+<section id="section-5-layups">
+<h2>Section 5: Layups<a class="headerlink" href="#section-5-layups" title="Permalink to this heading">#</a></h2>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;lyp_spar&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">2</span><span class="w">    </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;{mn_spar_1}&quot;</span><span class="nt">&gt;</span>{fo_spar_1}:{np_spar_1}<span class="nt">&lt;/layer&gt;</span>
+<span class="linenos">3</span><span class="w">    </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;{mn_spar_1}&quot;</span><span class="nt">&gt;</span>{fo_spar_2}:{np_spar_2}<span class="nt">&lt;/layer&gt;</span>
+<span class="linenos">4</span><span class="w">    </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;{mn_spar_1}&quot;</span><span class="nt">&gt;</span>{fo_spar_3}:{np_spar_3}<span class="nt">&lt;/layer&gt;</span>
+<span class="linenos">5</span><span class="w">    </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;{mn_spar_1}&quot;</span><span class="nt">&gt;</span>{fo_spar_4}:{np_spar_4}<span class="nt">&lt;/layer&gt;</span>
+<span class="linenos">6</span><span class="nt">&lt;/layup&gt;</span>
+</pre></div>
+</div>
+<p>Each layup tag could include multiple layer tags.
+For each layer tag, you need to specify lamina as defined in material database, fiber orientation and number of plies.
+For definition of other layups, refer to the complete input file <code class="xref std std-numref docutils literal notranslate"><span class="pre">Listing</span> <span class="pre">%s</span></code>.</p>
+</section>
+<section id="section-6-components">
+<h2>Section 6: Components<a class="headerlink" href="#section-6-components" title="Permalink to this heading">#</a></h2>
+<p>There are 6 components in the cross section model: the spar box, the leading edge, the trailing edge, the non-structural mass, the filling on the leading and trailing edge.</p>
+<section id="component-format">
+<h3>Component format<a class="headerlink" href="#component-format" title="Permalink to this heading">#</a></h3>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>&lt;component name=&quot;[string]&quot;&gt;
+<span class="linenos"> 2</span>    &lt;segment&gt;
+<span class="linenos"> 3</span>        &lt;baseline&gt; [string] &lt;/baseline&gt;
+<span class="linenos"> 4</span>        &lt;layup&gt; [string] &lt;/layup&gt;
+<span class="linenos"> 5</span>    &lt;/segment&gt;
+<span class="linenos"> 6</span>    &lt;/segments&gt;
+<span class="linenos"> 7</span>        &lt;baseline&gt; [string] &lt;/baseline&gt;
+<span class="linenos"> 8</span>        &lt;layup (begin=&quot;[number]&quot;) (end=&quot;[number]&quot;)&gt; [string] &lt;/layup&gt;
+<span class="linenos"> 9</span>        &lt;layup&gt; [string] &lt;/layup&gt;
+<span class="linenos">10</span>    &lt;/segments&gt;
+<span class="linenos">11</span>&lt;/component&gt;
+</pre></div>
+</div>
+<p>You can include arbitrary number of <code class="docutils literal notranslate"><span class="pre">segment</span></code>/<code class="docutils literal notranslate"><span class="pre">segments</span></code>.
+The <code class="docutils literal notranslate"><span class="pre">segment</span></code> tag is for simple definitions.
+The <code class="docutils literal notranslate"><span class="pre">segments</span></code> tag allows you to specify multiple layups to be stacked.
+It also allows you to specify the parametric starting and end location of the layup on the base line.</p>
+<ol class="arabic">
+<li><p>The spar box</p>
+<blockquote>
+<div><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;spar&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">2</span><span class="nt">&lt;segments&gt;</span>
+<span class="linenos">3</span><span class="w">    </span><span class="nt">&lt;baseline&gt;</span>bsl_spar_all<span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">4</span><span class="w">    </span><span class="nt">&lt;layup&gt;</span>lyp_skin_graphite<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">5</span><span class="w">    </span><span class="nt">&lt;layup&gt;</span>lyp_spar<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">6</span><span class="nt">&lt;/segments&gt;</span>
+<span class="linenos">7</span><span class="nt">&lt;/component&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>We use the aforementioned <code class="docutils literal notranslate"><span class="pre">bsl_spar_all</span></code> base line.
+Two layups are stacked on the base line.</p>
+</li>
+<li><p>The leading edge</p>
+<blockquote>
+<div><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;le&quot;</span><span class="w"> </span><span class="na">depend=</span><span class="s">&quot;spar&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="nt">&lt;segments&gt;</span>
+<span class="linenos"> 3</span><span class="w">        </span><span class="nt">&lt;baseline&gt;</span>bsl_le<span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 4</span><span class="w">        </span><span class="nt">&lt;layup&gt;</span>lyp_steel<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="nt">&lt;layup&gt;</span>lyp_skin_graphite<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="nt">&lt;layup&gt;</span>lyp_le<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="nt">&lt;/segments&gt;</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nt">&lt;segments&gt;</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="nt">&lt;baseline&gt;</span>bsl_le_top<span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">10</span><span class="w">        </span><span class="nt">&lt;layup&gt;</span>lyp_steel<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">11</span><span class="w">        </span><span class="nt">&lt;layup&gt;</span>lyp_skin_graphite<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">12</span><span class="w">        </span><span class="nt">&lt;layup&gt;</span>lyp_le<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">13</span><span class="w">    </span><span class="nt">&lt;/segments&gt;</span>
+<span class="linenos">14</span><span class="w">    </span><span class="nt">&lt;segments&gt;</span>
+<span class="linenos">15</span><span class="w">        </span><span class="nt">&lt;baseline&gt;</span>bsl_le_bottom<span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">16</span><span class="w">        </span><span class="nt">&lt;layup&gt;</span>lyp_steel<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">17</span><span class="w">        </span><span class="nt">&lt;layup&gt;</span>lyp_skin_graphite<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">18</span><span class="w">        </span><span class="nt">&lt;layup&gt;</span>lyp_le<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">19</span><span class="w">    </span><span class="nt">&lt;/segments&gt;</span>
+<span class="linenos">20</span><span class="nt">&lt;/component&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>This component includes 3 segments.
+They use the 3 base lines defined for leading edge.
+The leading edge component has connection with the spar component.
+This is indicated in the depend attribute.</p>
+</li>
+<li><p>The trailing edge</p>
+<blockquote>
+<div><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;te&quot;</span><span class="w"> </span><span class="na">depend=</span><span class="s">&quot;spar&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="nt">&lt;segments&gt;</span>
+<span class="linenos"> 3</span><span class="w">        </span><span class="nt">&lt;baseline&gt;</span>bsl_te_top<span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 4</span><span class="w">        </span><span class="nt">&lt;layup&gt;</span>lyp_skin_graphite<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="nt">&lt;layup&gt;</span>lyp_te<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="nt">&lt;/segments&gt;</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="nt">&lt;segment&gt;</span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="nt">&lt;baseline&gt;</span>bsl_te<span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="nt">&lt;layup&gt;</span>lyp_skin_graphite<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">10</span><span class="w">    </span><span class="nt">&lt;/segment&gt;</span>
+<span class="linenos">11</span><span class="w">    </span><span class="nt">&lt;segments&gt;</span>
+<span class="linenos">12</span><span class="w">        </span><span class="nt">&lt;baseline&gt;</span>bsl_te_bottom<span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">13</span><span class="w">        </span><span class="nt">&lt;layup&gt;</span>lyp_skin_graphite<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">14</span><span class="w">        </span><span class="nt">&lt;layup&gt;</span>lyp_te<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">15</span><span class="w">    </span><span class="nt">&lt;/segments&gt;</span>
+<span class="linenos">16</span><span class="nt">&lt;/component&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>This component also includes 3 segments.
+The trailing edge component has connection with the spar component.
+This is indicated in the depend attribute.</p>
+</li>
+<li><p>The non-structural mass</p>
+<blockquote>
+<div><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;nsm&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;fill&quot;</span><span class="w"> </span><span class="na">depend=</span><span class="s">&quot;le&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">2</span><span class="w">    </span><span class="nt">&lt;baseline&gt;</span>bsl_nsm<span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">3</span><span class="w">    </span><span class="nt">&lt;location&gt;</span>pnsmc<span class="nt">&lt;/location&gt;</span>
+<span class="linenos">4</span><span class="w">    </span><span class="nt">&lt;material&gt;</span>lead<span class="nt">&lt;/material&gt;</span>
+<span class="linenos">5</span><span class="w">    </span><span class="nt">&lt;theta3&gt;</span>0<span class="nt">&lt;/theta3&gt;</span>
+<span class="linenos">6</span><span class="w">    </span><span class="nt">&lt;mesh_size</span><span class="w"> </span><span class="na">at=</span><span class="s">&quot;pnsmc&quot;</span><span class="nt">&gt;</span>{mesh_size_fill}<span class="nt">&lt;/mesh_size&gt;</span>
+<span class="linenos">7</span><span class="nt">&lt;/component&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The non-structural mass is a circular area filled with a material.
+So we specify the type to be <code class="docutils literal notranslate"><span class="pre">fill</span></code>.
+The circular base <code class="docutils literal notranslate"><span class="pre">line</span> <span class="pre">bsl_nsm</span></code> is used as the boundary.
+The base point <code class="docutils literal notranslate"><span class="pre">pnsmc</span></code> is used to tell the program which side of the base line is to be filled.
+The <code class="docutils literal notranslate"><span class="pre">mesh_size</span></code> is to set local mesh size at the given position.</p>
+</li>
+<li><p>The filling</p>
+<blockquote>
+<div><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;fill_le&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;fill&quot;</span><span class="w"> </span><span class="na">depend=</span><span class="s">&quot;spar,le,nsm&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="nt">&lt;location&gt;</span>pfle1<span class="nt">&lt;/location&gt;</span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="nt">&lt;material&gt;</span>Rohacell<span class="w"> </span>70<span class="nt">&lt;/material&gt;</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="nt">&lt;theta3&gt;</span>0<span class="nt">&lt;/theta3&gt;</span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="nt">&lt;mesh_size</span><span class="w"> </span><span class="na">at=</span><span class="s">&quot;pfle1,pfle2&quot;</span><span class="nt">&gt;</span>{mesh_size_fill}<span class="nt">&lt;/mesh_size&gt;</span>
+<span class="linenos"> 6</span><span class="nt">&lt;/component&gt;</span>
+<span class="linenos"> 7</span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;fill_te&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;fill&quot;</span><span class="w"> </span><span class="na">depend=</span><span class="s">&quot;spar,te&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nt">&lt;location&gt;</span>pfte1<span class="nt">&lt;/location&gt;</span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="nt">&lt;material&gt;</span>Plascore<span class="w"> </span>PN2-3/16OX3.0<span class="nt">&lt;/material&gt;</span>
+<span class="linenos">10</span><span class="w">    </span><span class="nt">&lt;theta3&gt;</span>0<span class="nt">&lt;/theta3&gt;</span>
+<span class="linenos">11</span><span class="w">    </span><span class="nt">&lt;mesh_size</span><span class="w"> </span><span class="na">at=</span><span class="s">&quot;pfte1,pfte2&quot;</span><span class="nt">&gt;</span>{mesh_size_fill}<span class="nt">&lt;/mesh_size&gt;</span>
+<span class="linenos">12</span><span class="nt">&lt;/component&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The component is similar to the non-structural mass definition.
+Notice that they depend on the components that they have connection with.
+The <code class="docutils literal notranslate"><span class="pre">location</span></code> is to tell the where to fill the material.
+Local mesh size control is used to refine the mesh near the specified location.</p>
+</li>
+</ol>
+</section>
+</section>
+<section id="complete-file">
+<h2>Complete file<a class="headerlink" href="#complete-file" title="Permalink to this heading">#</a></h2>
+<div class="literal-block-wrapper docutils container" id="code-cs-tmp-complete">
+<div class="code-block-caption"><span class="caption-text">uh60a_section.xml.tmp</span><a class="headerlink" href="#code-cs-tmp-complete" title="Permalink to this code">#</a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="nt">&lt;cross_section</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;uh60a_section&quot;</span><span class="w"> </span><span class="na">format=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">  2</span><span class="w">    </span><span class="nt">&lt;include&gt;</span>
+<span class="linenos">  3</span><span class="w">        </span><span class="nt">&lt;material&gt;</span>material_database<span class="nt">&lt;/material&gt;</span>
+<span class="linenos">  4</span><span class="w">    </span><span class="nt">&lt;/include&gt;</span>
+<span class="linenos">  5</span><span class="w">    </span><span class="nt">&lt;analysis&gt;</span>
+<span class="linenos">  6</span><span class="w">        </span><span class="nt">&lt;model&gt;</span>1<span class="nt">&lt;/model&gt;</span>
+<span class="linenos">  7</span><span class="w">    </span><span class="nt">&lt;/analysis&gt;</span>
+<span class="linenos">  8</span><span class="w">    </span><span class="nt">&lt;general&gt;</span>
+<span class="linenos">  9</span><span class="w">        </span><span class="nt">&lt;translate&gt;</span>{oa2}<span class="w"> </span>0<span class="nt">&lt;/translate&gt;</span>
+<span class="linenos"> 10</span><span class="w">        </span><span class="nt">&lt;scale&gt;</span>{chord}<span class="nt">&lt;/scale&gt;</span>
+<span class="linenos"> 11</span><span class="w">        </span><span class="nt">&lt;mesh_size&gt;</span>{mesh_size}<span class="nt">&lt;/mesh_size&gt;</span>
+<span class="linenos"> 12</span><span class="w">        </span><span class="nt">&lt;element_type&gt;</span>linear<span class="nt">&lt;/element_type&gt;</span>
+<span class="linenos"> 13</span><span class="w">    </span><span class="nt">&lt;/general&gt;</span>
+<span class="linenos"> 14</span><span class="w">    </span><span class="nt">&lt;baselines&gt;</span>
+<span class="linenos"> 15</span><span class="w">        </span><span class="nt">&lt;basepoints&gt;</span>
+<span class="linenos"> 16</span><span class="w">            </span><span class="nt">&lt;include&gt;</span>sc1095<span class="nt">&lt;/include&gt;</span>
+<span class="linenos"> 17</span><span class="w">        </span><span class="nt">&lt;/basepoints&gt;</span>
+<span class="linenos"> 18</span><span class="w">        </span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;bsl_upper&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 19</span><span class="w">            </span><span class="nt">&lt;points&gt;</span>1:71<span class="nt">&lt;/points&gt;</span>
+<span class="linenos"> 20</span><span class="w">        </span><span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 21</span><span class="w">        </span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;bsl_lower&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 22</span><span class="w">            </span><span class="nt">&lt;points&gt;</span>72:141,1<span class="nt">&lt;/points&gt;</span>
+<span class="linenos"> 23</span><span class="w">        </span><span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 24</span><span class="w">        </span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;p1&quot;</span><span class="w"> </span><span class="na">on=</span><span class="s">&quot;bsl_upper&quot;</span><span class="w"> </span><span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>{wl_a2}<span class="nt">&lt;/point&gt;</span>
+<span class="linenos"> 25</span><span class="w">        </span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;p2&quot;</span><span class="w"> </span><span class="na">on=</span><span class="s">&quot;bsl_upper&quot;</span><span class="w"> </span><span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>{wt_a2}<span class="nt">&lt;/point&gt;</span>
+<span class="linenos"> 26</span><span class="w">        </span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;p3&quot;</span><span class="w"> </span><span class="na">on=</span><span class="s">&quot;bsl_lower&quot;</span><span class="w"> </span><span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>{wt_a2}<span class="nt">&lt;/point&gt;</span>
+<span class="linenos"> 27</span><span class="w">        </span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;p4&quot;</span><span class="w"> </span><span class="na">on=</span><span class="s">&quot;bsl_lower&quot;</span><span class="w"> </span><span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>{wl_a2}<span class="nt">&lt;/point&gt;</span>
+<span class="linenos"> 28</span><span class="w">        </span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;p5&quot;</span><span class="w"> </span><span class="na">on=</span><span class="s">&quot;bsl_upper&quot;</span><span class="w"> </span><span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>-0.02<span class="nt">&lt;/point&gt;</span>
+<span class="linenos"> 29</span><span class="w">        </span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;p6&quot;</span><span class="w"> </span><span class="na">on=</span><span class="s">&quot;bsl_lower&quot;</span><span class="w"> </span><span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>-0.02<span class="nt">&lt;/point&gt;</span>
+<span class="linenos"> 30</span><span class="w">        </span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;p7&quot;</span><span class="w"> </span><span class="na">on=</span><span class="s">&quot;bsl_upper&quot;</span><span class="w"> </span><span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>-0.8<span class="nt">&lt;/point&gt;</span>
+<span class="linenos"> 31</span><span class="w">        </span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;p8&quot;</span><span class="w"> </span><span class="na">on=</span><span class="s">&quot;bsl_lower&quot;</span><span class="w"> </span><span class="na">by=</span><span class="s">&quot;x2&quot;</span><span class="nt">&gt;</span>-0.8<span class="nt">&lt;/point&gt;</span>
+<span class="linenos"> 32</span><span class="w">        </span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;bsl_spar_all&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 33</span><span class="w">            </span><span class="nt">&lt;points&gt;</span>p1:p2,p3:p4,p1<span class="nt">&lt;/points&gt;</span>
+<span class="linenos"> 34</span><span class="w">        </span><span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 35</span><span class="w">        </span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;bsl_le_top&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 36</span><span class="w">            </span><span class="nt">&lt;points&gt;</span>p5:p1<span class="nt">&lt;/points&gt;</span>
+<span class="linenos"> 37</span><span class="w">        </span><span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 38</span><span class="w">        </span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;bsl_le&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 39</span><span class="w">            </span><span class="nt">&lt;points&gt;</span>p6:141,1:p5<span class="nt">&lt;/points&gt;</span>
+<span class="linenos"> 40</span><span class="w">        </span><span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 41</span><span class="w">        </span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;bsl_le_bottom&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 42</span><span class="w">            </span><span class="nt">&lt;points&gt;</span>p4:p6<span class="nt">&lt;/points&gt;</span>
+<span class="linenos"> 43</span><span class="w">        </span><span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 44</span><span class="w">        </span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;bsl_te_top&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 45</span><span class="w">            </span><span class="nt">&lt;points&gt;</span>p2:p7<span class="nt">&lt;/points&gt;</span>
+<span class="linenos"> 46</span><span class="w">        </span><span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 47</span><span class="w">        </span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;bsl_te&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 48</span><span class="w">            </span><span class="nt">&lt;points&gt;</span>p7:71,72:p8<span class="nt">&lt;/points&gt;</span>
+<span class="linenos"> 49</span><span class="w">        </span><span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 50</span><span class="w">        </span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;bsl_te_bottom&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;straight&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 51</span><span class="w">            </span><span class="nt">&lt;points&gt;</span>p8:p3<span class="nt">&lt;/points&gt;</span>
+<span class="linenos"> 52</span><span class="w">        </span><span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 53</span><span class="w">        </span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;pnsmc&quot;</span><span class="nt">&gt;</span>{pnsmc_a2}<span class="w"> </span>{pnsmc_a3}<span class="nt">&lt;/point&gt;</span>
+<span class="linenos"> 54</span><span class="w">        </span><span class="nt">&lt;baseline</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;bsl_nsm&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;circle&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 55</span><span class="w">            </span><span class="nt">&lt;center&gt;</span>pnsmc<span class="nt">&lt;/center&gt;</span>
+<span class="linenos"> 56</span><span class="w">            </span><span class="nt">&lt;radius&gt;</span>{nsmr}<span class="nt">&lt;/radius&gt;</span>
+<span class="linenos"> 57</span><span class="w">            </span><span class="nt">&lt;discrete</span><span class="w"> </span><span class="na">by=</span><span class="s">&quot;angle&quot;</span><span class="nt">&gt;</span>9<span class="nt">&lt;/discrete&gt;</span>
+<span class="linenos"> 58</span><span class="w">        </span><span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 59</span><span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="linenos"> 60</span><span class="cm">            The following four points are used to define locations of larger</span>
+<span class="linenos"> 61</span><span class="cm">            mesh size in the two filling regions.</span>
+<span class="linenos"> 62</span><span class="cm">        --&gt;</span>
+<span class="linenos"> 63</span><span class="w">        </span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;pfle1&quot;</span><span class="nt">&gt;</span>{pnsmc_a2<span class="w"> </span>-<span class="w"> </span>nsmr<span class="w"> </span>-<span class="w"> </span>0.005}<span class="w"> </span>0<span class="nt">&lt;/point&gt;</span>
+<span class="linenos"> 64</span><span class="w">        </span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;pfle2&quot;</span><span class="nt">&gt;</span>{wl_a2<span class="w"> </span>+<span class="w"> </span>0.005}<span class="w"> </span>0<span class="nt">&lt;/point&gt;</span>
+<span class="linenos"> 65</span><span class="w">        </span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;pfte1&quot;</span><span class="nt">&gt;</span>{wt_a2<span class="w"> </span>-<span class="w"> </span>0.01}<span class="w"> </span>0<span class="nt">&lt;/point&gt;</span>
+<span class="linenos"> 66</span><span class="w">        </span><span class="nt">&lt;point</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;pfte2&quot;</span><span class="nt">&gt;</span>{pfte2_a2}<span class="w"> </span>0<span class="nt">&lt;/point&gt;</span>
+<span class="linenos"> 67</span><span class="w">    </span><span class="nt">&lt;/baselines&gt;</span>
+<span class="linenos"> 68</span>
+<span class="linenos"> 69</span><span class="w">    </span><span class="nt">&lt;layups&gt;</span>
+<span class="linenos"> 70</span><span class="w">        </span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;lyp_steel&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 71</span><span class="w">            </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;Aluminum 8009_0.01&quot;</span><span class="nt">&gt;</span>0:2<span class="nt">&lt;/layer&gt;</span>
+<span class="linenos"> 72</span><span class="w">        </span><span class="nt">&lt;/layup&gt;</span>
+<span class="linenos"> 73</span><span class="w">        </span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;lyp_skin_graphite&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 74</span><span class="w">            </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;T300 15k/976_0.0053&quot;</span><span class="nt">&gt;</span>0:2<span class="nt">&lt;/layer&gt;</span>
+<span class="linenos"> 75</span><span class="w">        </span><span class="nt">&lt;/layup&gt;</span>
+<span class="linenos"> 76</span><span class="w">        </span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;lyp_spar&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 77</span><span class="w">            </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;{mn_spar_1}&quot;</span><span class="nt">&gt;</span>{fo_spar_1}:{np_spar_1}<span class="nt">&lt;/layer&gt;</span>
+<span class="linenos"> 78</span><span class="w">            </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;{mn_spar_1}&quot;</span><span class="nt">&gt;</span>{fo_spar_2}:{np_spar_2}<span class="nt">&lt;/layer&gt;</span>
+<span class="linenos"> 79</span><span class="w">            </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;{mn_spar_1}&quot;</span><span class="nt">&gt;</span>{fo_spar_3}:{np_spar_3}<span class="nt">&lt;/layer&gt;</span>
+<span class="linenos"> 80</span><span class="w">            </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;{mn_spar_1}&quot;</span><span class="nt">&gt;</span>{fo_spar_4}:{np_spar_4}<span class="nt">&lt;/layer&gt;</span>
+<span class="linenos"> 81</span><span class="w">        </span><span class="nt">&lt;/layup&gt;</span>
+<span class="linenos"> 82</span><span class="w">        </span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;lyp_le&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 83</span><span class="w">            </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;{mn_le}&quot;</span><span class="nt">&gt;</span>{fo_le}:{np_le}<span class="nt">&lt;/layer&gt;</span>
+<span class="linenos"> 84</span><span class="w">        </span><span class="nt">&lt;/layup&gt;</span>
+<span class="linenos"> 85</span><span class="w">        </span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;lyp_te&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 86</span><span class="w">            </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;{mn_te}&quot;</span><span class="nt">&gt;</span>{fo_te}:{np_te}<span class="nt">&lt;/layer&gt;</span>
+<span class="linenos"> 87</span><span class="w">        </span><span class="nt">&lt;/layup&gt;</span>
+<span class="linenos"> 88</span><span class="w">    </span><span class="nt">&lt;/layups&gt;</span>
+<span class="linenos"> 89</span>
+<span class="linenos"> 90</span><span class="w">    </span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;spar&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 91</span><span class="w">        </span><span class="nt">&lt;segments&gt;</span>
+<span class="linenos"> 92</span><span class="w">            </span><span class="nt">&lt;baseline&gt;</span>bsl_spar_all<span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos"> 93</span><span class="w">            </span><span class="nt">&lt;layup&gt;</span>lyp_skin_graphite<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos"> 94</span><span class="w">            </span><span class="nt">&lt;layup&gt;</span>lyp_spar<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos"> 95</span><span class="w">        </span><span class="nt">&lt;/segments&gt;</span>
+<span class="linenos"> 96</span><span class="w">    </span><span class="nt">&lt;/component&gt;</span>
+<span class="linenos"> 97</span><span class="w">    </span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;le&quot;</span><span class="w"> </span><span class="na">depend=</span><span class="s">&quot;spar&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 98</span><span class="w">        </span><span class="nt">&lt;segments&gt;</span>
+<span class="linenos"> 99</span><span class="w">            </span><span class="nt">&lt;baseline&gt;</span>bsl_le<span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">100</span><span class="w">            </span><span class="nt">&lt;layup&gt;</span>lyp_steel<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">101</span><span class="w">            </span><span class="nt">&lt;layup&gt;</span>lyp_skin_graphite<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">102</span><span class="w">            </span><span class="nt">&lt;layup&gt;</span>lyp_le<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">103</span><span class="w">        </span><span class="nt">&lt;/segments&gt;</span>
+<span class="linenos">104</span><span class="w">        </span><span class="nt">&lt;segments&gt;</span>
+<span class="linenos">105</span><span class="w">            </span><span class="nt">&lt;baseline&gt;</span>bsl_le_top<span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">106</span><span class="w">            </span><span class="nt">&lt;layup&gt;</span>lyp_steel<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">107</span><span class="w">            </span><span class="nt">&lt;layup&gt;</span>lyp_skin_graphite<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">108</span><span class="w">            </span><span class="nt">&lt;layup&gt;</span>lyp_le<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">109</span><span class="w">        </span><span class="nt">&lt;/segments&gt;</span>
+<span class="linenos">110</span><span class="w">        </span><span class="nt">&lt;segments&gt;</span>
+<span class="linenos">111</span><span class="w">            </span><span class="nt">&lt;baseline&gt;</span>bsl_le_bottom<span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">112</span><span class="w">            </span><span class="nt">&lt;layup&gt;</span>lyp_steel<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">113</span><span class="w">            </span><span class="nt">&lt;layup&gt;</span>lyp_skin_graphite<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">114</span><span class="w">            </span><span class="nt">&lt;layup&gt;</span>lyp_le<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">115</span><span class="w">        </span><span class="nt">&lt;/segments&gt;</span>
+<span class="linenos">116</span><span class="w">    </span><span class="nt">&lt;/component&gt;</span>
+<span class="linenos">117</span><span class="w">    </span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;te&quot;</span><span class="w"> </span><span class="na">depend=</span><span class="s">&quot;spar&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">118</span><span class="w">        </span><span class="nt">&lt;segments&gt;</span>
+<span class="linenos">119</span><span class="w">            </span><span class="nt">&lt;baseline&gt;</span>bsl_te_top<span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">120</span><span class="w">            </span><span class="nt">&lt;layup&gt;</span>lyp_skin_graphite<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">121</span><span class="w">            </span><span class="nt">&lt;layup&gt;</span>lyp_te<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">122</span><span class="w">        </span><span class="nt">&lt;/segments&gt;</span>
+<span class="linenos">123</span><span class="w">        </span><span class="nt">&lt;segment&gt;</span>
+<span class="linenos">124</span><span class="w">            </span><span class="nt">&lt;baseline&gt;</span>bsl_te<span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">125</span><span class="w">            </span><span class="nt">&lt;layup&gt;</span>lyp_skin_graphite<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">126</span><span class="w">        </span><span class="nt">&lt;/segment&gt;</span>
+<span class="linenos">127</span><span class="w">        </span><span class="nt">&lt;segments&gt;</span>
+<span class="linenos">128</span><span class="w">            </span><span class="nt">&lt;baseline&gt;</span>bsl_te_bottom<span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">129</span><span class="w">            </span><span class="nt">&lt;layup&gt;</span>lyp_skin_graphite<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">130</span><span class="w">            </span><span class="nt">&lt;layup&gt;</span>lyp_te<span class="nt">&lt;/layup&gt;</span>
+<span class="linenos">131</span><span class="w">        </span><span class="nt">&lt;/segments&gt;</span>
+<span class="linenos">132</span><span class="w">    </span><span class="nt">&lt;/component&gt;</span>
+<span class="linenos">133</span><span class="w">    </span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;nsm&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;fill&quot;</span><span class="w"> </span><span class="na">depend=</span><span class="s">&quot;le&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">134</span><span class="w">        </span><span class="nt">&lt;baseline&gt;</span>bsl_nsm<span class="nt">&lt;/baseline&gt;</span>
+<span class="linenos">135</span><span class="w">        </span><span class="nt">&lt;location&gt;</span>pnsmc<span class="nt">&lt;/location&gt;</span>
+<span class="linenos">136</span><span class="w">        </span><span class="nt">&lt;material&gt;</span>lead<span class="nt">&lt;/material&gt;</span>
+<span class="linenos">137</span><span class="w">        </span><span class="nt">&lt;theta3&gt;</span>0<span class="nt">&lt;/theta3&gt;</span>
+<span class="linenos">138</span><span class="w">        </span><span class="nt">&lt;mesh_size</span><span class="w"> </span><span class="na">at=</span><span class="s">&quot;pnsmc&quot;</span><span class="nt">&gt;</span>{mesh_size_fill}<span class="nt">&lt;/mesh_size&gt;</span>
+<span class="linenos">139</span><span class="w">    </span><span class="nt">&lt;/component&gt;</span>
+<span class="linenos">140</span><span class="w">    </span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;fill_le&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;fill&quot;</span><span class="w"> </span><span class="na">depend=</span><span class="s">&quot;spar,le,nsm&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">141</span><span class="w">        </span><span class="nt">&lt;location&gt;</span>pfle1<span class="nt">&lt;/location&gt;</span>
+<span class="linenos">142</span><span class="w">        </span><span class="nt">&lt;material&gt;</span>Rohacell<span class="w"> </span>70<span class="nt">&lt;/material&gt;</span>
+<span class="linenos">143</span><span class="w">        </span><span class="nt">&lt;theta3&gt;</span>0<span class="nt">&lt;/theta3&gt;</span>
+<span class="linenos">144</span><span class="w">        </span><span class="nt">&lt;mesh_size</span><span class="w"> </span><span class="na">at=</span><span class="s">&quot;pfle1,pfle2&quot;</span><span class="nt">&gt;</span>{mesh_size_fill}<span class="nt">&lt;/mesh_size&gt;</span>
+<span class="linenos">145</span><span class="w">    </span><span class="nt">&lt;/component&gt;</span>
+<span class="linenos">146</span><span class="w">    </span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;fill_te&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;fill&quot;</span><span class="w"> </span><span class="na">depend=</span><span class="s">&quot;spar,te&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">147</span><span class="w">        </span><span class="nt">&lt;location&gt;</span>pfte1<span class="nt">&lt;/location&gt;</span>
+<span class="linenos">148</span><span class="w">        </span><span class="nt">&lt;material&gt;</span>Plascore<span class="w"> </span>PN2-3/16OX3.0<span class="nt">&lt;/material&gt;</span>
+<span class="linenos">149</span><span class="w">        </span><span class="nt">&lt;theta3&gt;</span>0<span class="nt">&lt;/theta3&gt;</span>
+<span class="linenos">150</span><span class="w">        </span><span class="nt">&lt;mesh_size</span><span class="w"> </span><span class="na">at=</span><span class="s">&quot;pfte1,pfte2&quot;</span><span class="nt">&gt;</span>{mesh_size_fill}<span class="nt">&lt;/mesh_size&gt;</span>
+<span class="linenos">151</span><span class="w">    </span><span class="nt">&lt;/component&gt;</span>
+<span class="linenos">152</span><span class="nt">&lt;/cross_section&gt;</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-1-including-files">Section 1: Including files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-2-analysis-settings">Section 2: Analysis settings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-3-general-settings">Section 3: General settings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-4-geoemtry">Section 4: Geoemtry</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#primitives">Primitives</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#base-point">Base point</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#include-base-points">Include base points</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#individual-base-points">Individual base points</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#base-line">Base line</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-the-geometry">Build the geometry</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-5-layups">Section 5: Layups</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-6-components">Section 6: Components</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#component-format">Component format</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-file">Complete file</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Su Tian, Haodong Du, Fei Tao and Wenbin Yu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Multiscale Structural Mechanics Group, Purdue University.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

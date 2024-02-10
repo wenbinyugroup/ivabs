@@ -3,12 +3,13 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Materials and layups &#8212; iVABS 0.8 documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Materials and layups &#8212; iVABS Documentation (v0.7)</title>
   
   
   
@@ -18,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -32,17 +33,51 @@
     <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "wenbinyugroup/ivabs");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
     <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'prevabs/contents/guide/pre_material';</script>
+    <link rel="canonical" href="https://wenbinyugroup.github.io/ivabs/prevabs/contents/guide/pre_material.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Components" href="pre_component.html" />
@@ -57,6 +92,15 @@
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -110,89 +154,63 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
-<a class="navbar-brand logo" href="../../../main_ivabs.html">
+<a class="navbar-brand logo" href="../../../index.html">
   
   
   
   
   
-    <p class="title logo__title">iVABS 0.8 documentation</p>
+  
+    <p class="title logo__title">iVABS Documentation (v0.7)</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Start</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../install/index.html">Download &amp; Installation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../install/windows.html">Installation on Windows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install/linux.html">Installation on Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install/python_setup.html">Setup Python Environment</a></li>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../ivabs/install.html">Download &amp; Installation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/install/windows.html">Installation on Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/install/linux.html">Installation on Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/install/python_setup.html">Setup Python Environment</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ivabs/getstart.html">Quick Start</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../tutorials/index.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/run_one_analysis.html">Carry out a single cross-sectional analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/opt_spar_web.html">Optimization of spar web locations for desired properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/opt_spar_layup.html">Optimize the spar layup of a cross-section</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/opt_cs_init_twist.html">Optimize the cross-section considering beam initial twist</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/prepare_cs_template.html">Prepare a cross-sectional design template</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv.html">Optimize a single cross-section (general)</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/running.html">Running of The Tutorial</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/problem.html">Problem Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/cs_param.html">Cross-sectional Parameterization and Beam Properties</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/opt.html">Optimization Formulation</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs.html">Preparation of Input Files</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_cs_template.html">Cross-section Main Input Template (<code class="docutils literal notranslate"><span class="pre">uh60a_section.xml.tmp</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_cs_materials.html">Material Database (<code class="docutils literal notranslate"><span class="pre">material_database.xml</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_cs_airfoil.html">Cross-section Airfoil Data (<code class="docutils literal notranslate"><span class="pre">sc1095.dat</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_interface.html">Dakota Interface Scripts (<code class="docutils literal notranslate"><span class="pre">interface.py</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_arguments.html">Interface Arguments (<code class="docutils literal notranslate"><span class="pre">interface_args.json</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_data_process.html">Data Processing Functions (<code class="docutils literal notranslate"><span class="pre">data_proc_funcs.py</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/opt_uh60a_2dv/inputs_dakota.html">Dakota Input File (<code class="docutils literal notranslate"><span class="pre">cs_tm_opt_soga.dakota</span></code>)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../ivabs/examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/examples/example_quickstart_param_study.html">Parameter study of a single cross-section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/examples/example_uh60_sopt_stf.html">Single objective optimization of multiple cross-sections to match target beam properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/examples/example_uh60_mopt_stf.html">Multiple objective optimization of multiple cross-sections to match target beam properties</a></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../examples/index.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples/example_quickstart_param_study.html">Parameter study of a single cross-section</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples/example_uh60_sopt_stf.html">Single objective optimization of multiple cross-sections to match target beam properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples/example_uh60_mopt_stf.html">Multiple objective optimization of multiple cross-sections to match target beam properties</a></li>
-</ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Guide</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../guide/index.html">Guide to Main Input File</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../guide/intro_yaml.html">A Brief Introduction to YAML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../guide/input_design.html">Design Parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../guide/input_analysis.html">Analysis Steps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../guide/input_study.html">Design Study</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../ivabs/main_input.html">Guide to Main Input File</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/input_guide/intro_yaml.html">A Brief Introduction to YAML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/input_guide/input_design.html">Design Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/input_guide/input_analysis.html">Analysis Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/input_guide/input_study.html">Design Study</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ivabs/parameterization.html">Parameterization of Composite Slender Structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../guide/custom_script.html">Custom script analysis step</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../extensions/index.html">Extensions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../extensions/galaxy_rcas.html">Link to Galaxy/RCAS</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../ivabs/cs_template.html">Cross-sectional Design Templates</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/cs_templates/airfoil_gbox_uni.html">Airfoil Box-spar Uniform</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../sg_templates/index.html">Cross-sectional Design Templates</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../sg_templates/airfoil_gbox_uni.html">Airfoil Box-spar Uniform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ivabs/beam_properties.html">Beam Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ivabs/analysis_step_script.html">Custom Python Script for Analysis</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../ivabs/extensions.html">Extensions</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/extensions/galaxy_rcas.html">Link to Galaxy/RCAS</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../ref/beam_properties.html">Beam Properties</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../ref/input_keywords_main.html">Main Input Keywords</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html">PreVABS Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../ivabs/ref_main.html">Reference manual</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ivabs/reference/input_keywords_main.html">Main Input Keywords</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ivabs/introduction.html">iVABS Components</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html">PreVABS Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../install.html">Download and Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../run.html">How to Run PreVABS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="../guide.html">Guide for Preparing Input Files</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../guide.html">Guide for Preparing Input Files</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="pre_coordinate.html">Coordinate systems</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pre_shape.html">Geometry and shapes</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Materials and layups</a></li>
@@ -201,7 +219,7 @@
 <li class="toctree-l3"><a class="reference internal" href="pre_overall.html">Other input settings</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../examples/example_box.html">Box beam</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/example_pipe.html">Pipe</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/example_tube.html">Circular tube</a></li>
@@ -214,6 +232,30 @@
 <li class="toctree-l2"><a class="reference internal" href="../changelog.html">Change log</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../xml.html">Introduction to XML</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../msgpi/index.html">MSGPI Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../msgpi/contents/user_guide.html">User Guide</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../msgpi/contents/ref_manual.html">Reference</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../msgpi/contents/sg/index.html">Structure Gene</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/structuregene.html">StructureGene</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/crosssection.html">CrossSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/materialsection.html">MaterialSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/beamproperty.html">BeamProperty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/io.html">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/sg/run.html">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../msgpi/contents/utils/index.html">Utilities</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/utils/io.html">IO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/utils/math.html">Math</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../msgpi/contents/utils/logger.html">Logging</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -257,6 +299,70 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/wenbinyugroup/ivabs" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/wenbinyugroup/ivabs/edit/main/docs/source/prevabs/contents/guide/pre_material.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/wenbinyugroup/ivabs/issues/new?title=Issue%20on%20page%20%2Fprevabs/contents/guide/pre_material.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
 
 
 
@@ -322,20 +428,22 @@
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -385,22 +493,22 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <blockquote>
-<div></div></blockquote>
-<div class="section" id="materials-and-layups">
-<span id="section-material-layup"></span><h1><a class="toc-backref" href="#id4">Materials and layups</a><a class="headerlink" href="#materials-and-layups" title="Permalink to this heading">#</a></h1>
+  <section id="materials-and-layups">
+<span id="section-material-layup"></span><h1><a class="toc-backref" href="#id4" role="doc-backlink">Materials and layups</a><a class="headerlink" href="#materials-and-layups" title="Permalink to this heading">#</a></h1>
 <p>PreVABS uses the keyword <code class="docutils literal notranslate"><span class="pre">material</span></code> for the physical properties attached to any materials, while <code class="docutils literal notranslate"><span class="pre">lamina</span></code> for material plus thickness, which in a sense is fixed by manufacturers.
 This can be thought as the basic commercially available “material”, such as a composite preprag.
 A layer is a stack of laminae with the same fiber orientation.
 The thickness of a layer can only be a multiplier of the lamina thickness.
 Layup is several layers stacked together in a specific order.
-This relationship is illustrated in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 38</span></a>.
+This relationship is illustrated in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 33</span></a>.
 More details can be found below.</p>
-<div class="figure align-center" id="fig-layup">
+<figure class="align-center" id="fig-layup">
 <a class="reference internal image-reference" href="../../../_images/layup.png"><img alt="../../../_images/layup.png" src="../../../_images/layup.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 38 </span><span class="caption-text">Relationship between material, lamina, layer and layup.</span><a class="headerlink" href="#fig-layup" title="Permalink to this image">#</a></p>
-</div>
-<div class="contents topic" id="contents">
+<figcaption>
+<p><span class="caption-number">Figure 33 </span><span class="caption-text">Relationship between material, lamina, layer and layup.</span><a class="headerlink" href="#fig-layup" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<nav class="contents" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#materials-and-layups" id="id4">Materials and layups</a></p>
@@ -422,15 +530,15 @@ More details can be found below.</p>
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="material">
-<h2><a class="toc-backref" href="#id5">Material</a><a class="headerlink" href="#material" title="Permalink to this heading">#</a></h2>
+</nav>
+<section id="material">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Material</a><a class="headerlink" href="#material" title="Permalink to this heading">#</a></h2>
 <p>Both materials and laminae are stored in one XML file, under the single root element <code class="docutils literal notranslate"><span class="pre">&lt;materials&gt;</span></code>.
-A template of this file is shown in <a class="reference internal" href="#code-material-temp"><span class="std std-numref">Listing 43</span></a>.
+A template of this file is shown in <a class="reference internal" href="#code-material-temp"><span class="std std-numref">Listing 29</span></a>.
 Each material must have a name and type. Under each <code class="docutils literal notranslate"><span class="pre">&lt;material&gt;</span></code> element, there are a <code class="docutils literal notranslate"><span class="pre">&lt;density&gt;</span></code> element and an <code class="docutils literal notranslate"><span class="pre">&lt;elastic&gt;</span></code> element.
 If failure analysis is wanted, users need to provide extra data including <code class="docutils literal notranslate"><span class="pre">&lt;strength&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;failure_criterion&gt;</span></code>.</p>
 <div class="literal-block-wrapper docutils container" id="code-material-layout">
-<div class="code-block-caption"><span class="caption-number">Listing 42 </span><span class="caption-text">Input syntax for materials.</span><a class="headerlink" href="#code-material-layout" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 28 </span><span class="caption-text">Input syntax for materials.</span><a class="headerlink" href="#code-material-layout" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;materials&gt;</span>
 <span class="linenos"> 2</span><span class="w">  </span>...
 <span class="linenos"> 3</span><span class="w">  </span><span class="nt">&lt;material</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;...&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
@@ -457,10 +565,10 @@ If failure analysis is wanted, users need to provide extra data including <code 
 </ul>
 </li>
 </ul>
-<div class="section" id="elastic-properties">
-<h3><a class="toc-backref" href="#id6">Elastic properties</a><a class="headerlink" href="#elastic-properties" title="Permalink to this heading">#</a></h3>
+<section id="elastic-properties">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Elastic properties</a><a class="headerlink" href="#elastic-properties" title="Permalink to this heading">#</a></h3>
 <div class="literal-block-wrapper docutils container" id="code-material-temp">
-<div class="code-block-caption"><span class="caption-number">Listing 43 </span><span class="caption-text">Input syntax for materials.</span><a class="headerlink" href="#code-material-temp" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 29 </span><span class="caption-text">Input syntax for materials.</span><a class="headerlink" href="#code-material-temp" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;materials&gt;</span>
 <span class="linenos"> 2</span><span class="w">  </span>...
 <span class="linenos"> 3</span><span class="w">  </span><span class="nt">&lt;material</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;iso1&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;isotropic&quot;</span><span class="nt">&gt;</span>
@@ -554,14 +662,14 @@ If failure analysis is wanted, users need to provide extra data including <code 
 \begin{Bmatrix}
   \epsilon_{11} \\ 2\epsilon_{12} \\ 2\epsilon_{13} \\ \epsilon_{22} \\ 2\epsilon_{23} \\ \epsilon_{33}
 \end{Bmatrix}\end{split}\]</div>
-</div>
-<div class="section" id="strength-properties">
-<h3><a class="toc-backref" href="#id7">Strength properties</a><a class="headerlink" href="#strength-properties" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="strength-properties">
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Strength properties</a><a class="headerlink" href="#strength-properties" title="Permalink to this heading">#</a></h3>
 <p>Inputs for strength properties for all types of materials have the same syntax.
 For each material, users can input at least one or at most nine properties.
-The overall syntax for each material is shown in <a class="reference internal" href="#code-material-strength-overall"><span class="std std-numref">Listing 44</span></a>.</p>
+The overall syntax for each material is shown in <a class="reference internal" href="#code-material-strength-overall"><span class="std std-numref">Listing 30</span></a>.</p>
 <div class="literal-block-wrapper docutils container" id="code-material-strength-overall">
-<div class="code-block-caption"><span class="caption-number">Listing 44 </span><span class="caption-text">Overall input syntax for strength properties.</span><a class="headerlink" href="#code-material-strength-overall" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 30 </span><span class="caption-text">Overall input syntax for strength properties.</span><a class="headerlink" href="#code-material-strength-overall" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;material</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;...&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 2</span><span class="w">  </span><span class="nt">&lt;failure_criterion&gt;</span>...<span class="nt">&lt;/failure_criterion&gt;</span>
 <span class="linenos"> 3</span><span class="w">  </span><span class="nt">&lt;strength&gt;</span>
@@ -592,9 +700,9 @@ The overall syntax for each material is shown in <a class="reference internal" h
 <li><p><strong>&lt;t&gt;</strong> - Shear strength in <span class="math notranslate nohighlight">\(x_1\)</span>-<span class="math notranslate nohighlight">\(x_3\)</span> plane. Alternative tag: &lt;s13&gt;. (Optional. Default = &lt;s&gt;)</p></li>
 <li><p><strong>&lt;r&gt;</strong> - Shear strength in <span class="math notranslate nohighlight">\(x_2\)</span>-<span class="math notranslate nohighlight">\(x_3\)</span> plane. Alternative tag: &lt;s23&gt;. (Optional. Default = (&lt;yt&gt; + &lt;yc&gt;) / 4)</p></li>
 </ul>
-</div>
-<div class="section" id="failure-criteria">
-<h3><a class="toc-backref" href="#id8">Failure criteria</a><a class="headerlink" href="#failure-criteria" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="failure-criteria">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Failure criteria</a><a class="headerlink" href="#failure-criteria" title="Permalink to this heading">#</a></h3>
 <p>For isotropic materials, the following five failure criteria are available, followed by the strength constants needed:</p>
 <ol class="arabic simple">
 <li><p><strong>Max principal stress</strong>. Strength constants (2):</p></li>
@@ -691,19 +799,7 @@ The overall syntax for each material is shown in <a class="reference internal" h
 <p>Different failure criterion will use different strength properties.
 This is summarized in the table below.</p>
 <table class="table table-center" id="id2">
-<caption><span class="caption-number">Table 38 </span><span class="caption-text">Strength properties used by different failure criteria.</span><a class="headerlink" href="#id2" title="Permalink to this table">#</a></caption>
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 10%" />
-</colgroup>
+<caption><span class="caption-number">Table 22 </span><span class="caption-text">Strength properties used by different failure criteria.</span><a class="headerlink" href="#id2" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Failure criterion</p></th>
 <th class="head"><p>x/xt/t1</p></th>
@@ -878,14 +974,14 @@ This is summarized in the table below.</p>
 </ul>
 </li>
 </ul>
-</div>
-</div>
-<div class="section" id="lamina">
-<h2><a class="toc-backref" href="#id9">Lamina</a><a class="headerlink" href="#lamina" title="Permalink to this heading">#</a></h2>
+</section>
+</section>
+<section id="lamina">
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Lamina</a><a class="headerlink" href="#lamina" title="Permalink to this heading">#</a></h2>
 <p>Each lamina element has a name, and contains a material name and a value for thickness.
-The input syntax is shown in <a class="reference internal" href="#code-lamina-temp"><span class="std std-numref">Listing 45</span></a>.</p>
+The input syntax is shown in <a class="reference internal" href="#code-lamina-temp"><span class="std std-numref">Listing 31</span></a>.</p>
 <div class="literal-block-wrapper docutils container" id="code-lamina-temp">
-<div class="code-block-caption"><span class="caption-number">Listing 45 </span><span class="caption-text">Input syntax for lamina.</span><a class="headerlink" href="#code-lamina-temp" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 31 </span><span class="caption-text">Input syntax for lamina.</span><a class="headerlink" href="#code-lamina-temp" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;materials&gt;</span>
 <span class="linenos">2</span><span class="w">  </span>...
 <span class="linenos">3</span><span class="w">  </span><span class="nt">&lt;lamina</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;lamina1&quot;</span><span class="nt">&gt;</span>
@@ -909,22 +1005,24 @@ The input syntax is shown in <a class="reference internal" href="#code-lamina-te
 <li><p><strong>&lt;material&gt;</strong> - Name of the material of the lamina.</p></li>
 <li><p><strong>&lt;thickness&gt;</strong> - Thickness of the lamina.</p></li>
 </ul>
-</div>
-<div class="section" id="layups">
-<h2><a class="toc-backref" href="#id10">Layups</a><a class="headerlink" href="#layups" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="layups">
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Layups</a><a class="headerlink" href="#layups" title="Permalink to this heading">#</a></h2>
 <p>In general, there are two ways to define a layup, explicit list and stacking sequence code.
 For the explicit list, a laminate is laid onto the base line from the first layer in the list to the last one, in the direction given by the user.
 For the stacking sequence, the layup starts from left to the right.
-User should pay attention to the relations among the base line direction, elemental frame <strong>y</strong> and fiber orientation <span class="math notranslate nohighlight">\(\theta_3\)</span> of each layer, as shown in <a class="reference internal" href="#fig-elementalframe"><span class="std std-numref">Fig. 39</span></a>.
+User should pay attention to the relations among the base line direction, elemental frame <strong>y</strong> and fiber orientation <span class="math notranslate nohighlight">\(\theta_3\)</span> of each layer, as shown in <a class="reference internal" href="#fig-elementalframe"><span class="std std-numref">Fig. 34</span></a>.
 Change of direction of the base line will change the elemental frame <strong>y</strong> as defined, which will further require the user to change the fiber orientations accordingly, even though nothing changes physically.
 All layup information are included in one XML file.
-A template of this file can be found in <a class="reference internal" href="#code-layup-temp"><span class="std std-numref">Listing 46</span></a>.</p>
-<div class="figure align-center" id="fig-elementalframe">
+A template of this file can be found in <a class="reference internal" href="#code-layup-temp"><span class="std std-numref">Listing 32</span></a>.</p>
+<figure class="align-center" id="fig-elementalframe">
 <a class="reference internal image-reference" href="../../../_images/elementalframe.png"><img alt="../../../_images/elementalframe.png" src="../../../_images/elementalframe.png" style="width: 6in;" /></a>
-<p class="caption"><span class="caption-number">Figure 39 </span><span class="caption-text">Relations among the base line direction, elemental frame <strong>y</strong> and fiber orientation (Note $y_2$ is parallel to the base line direction).</span><a class="headerlink" href="#fig-elementalframe" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Figure 34 </span><span class="caption-text">Relations among the base line direction, elemental frame <strong>y</strong> and fiber orientation (Note $y_2$ is parallel to the base line direction).</span><a class="headerlink" href="#fig-elementalframe" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="literal-block-wrapper docutils container" id="code-layup-temp">
-<div class="code-block-caption"><span class="caption-number">Listing 46 </span><span class="caption-text">Input syntax for layups.</span><a class="headerlink" href="#code-layup-temp" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 32 </span><span class="caption-text">Input syntax for layups.</span><a class="headerlink" href="#code-layup-temp" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;layups&gt;</span>
 <span class="linenos">2</span><span class="w">  </span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;layup1&quot;</span><span class="w"> </span><span class="na">method=</span><span class="s">&quot;explicit list&quot;</span><span class="nt">&gt;</span>
 <span class="linenos">3</span><span class="w">    </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;lamina1&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/layer&gt;</span>
@@ -946,15 +1044,15 @@ A template of this file can be found in <a class="reference internal" href="#cod
 </ul>
 </li>
 </ul>
-<div class="section" id="explicit-list">
-<h3><a class="toc-backref" href="#id11">Explicit list</a><a class="headerlink" href="#explicit-list" title="Permalink to this heading">#</a></h3>
+<section id="explicit-list">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Explicit list</a><a class="headerlink" href="#explicit-list" title="Permalink to this heading">#</a></h3>
 <p>This method requires user to write down the lamina name, fiber orientation
 and number of successive laminas with the same fiber orientation, layer
 by layer. Alternatively, a layer can also be defined by the name of a sublayup.
 A sublayup must appear before the layup where it is referenced.
 A template for one layer is shown below.</p>
 <div class="literal-block-wrapper docutils container" id="code-layup-ll-temp">
-<div class="code-block-caption"><span class="caption-number">Listing 47 </span><span class="caption-text">A template for the layup layer list input.</span><a class="headerlink" href="#code-layup-ll-temp" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 33 </span><span class="caption-text">A template for the layup layer list input.</span><a class="headerlink" href="#code-layup-ll-temp" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;layups&gt;</span>
 <span class="linenos"> 2</span><span class="w">  </span>...
 <span class="linenos"> 3</span><span class="w">  </span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
@@ -978,15 +1076,15 @@ A template for one layer is shown below.</p>
 </ul>
 </li>
 </ul>
-<p>An example for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 38</span></a> is given
-in <a class="reference internal" href="#code-material"><span class="std std-numref">Listing 49</span></a> and <a class="reference internal" href="#code-layup"><span class="std std-numref">Listing 50</span></a>.</p>
-</div>
-<div class="section" id="stacking-sequence-code">
-<h3><a class="toc-backref" href="#id12">Stacking sequence code</a><a class="headerlink" href="#stacking-sequence-code" title="Permalink to this heading">#</a></h3>
+<p>An example for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 33</span></a> is given
+in <a class="reference internal" href="#code-material"><span class="std std-numref">Listing 35</span></a> and <a class="reference internal" href="#code-layup"><span class="std std-numref">Listing 36</span></a>.</p>
+</section>
+<section id="stacking-sequence-code">
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">Stacking sequence code</a><a class="headerlink" href="#stacking-sequence-code" title="Permalink to this heading">#</a></h3>
 <p>This method requires users to provide one lamina name and the stacking
 sequence code. A template is shown below.</p>
 <div class="literal-block-wrapper docutils container" id="code-layup-ss-temp">
-<div class="code-block-caption"><span class="caption-number">Listing 48 </span><span class="caption-text">A template for the layup stacking sequence input.</span><a class="headerlink" href="#code-layup-ss-temp" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 34 </span><span class="caption-text">A template for the layup stacking sequence input.</span><a class="headerlink" href="#code-layup-ss-temp" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nt">&lt;layups&gt;</span>
 <span class="linenos">2</span><span class="w">  </span>...
 <span class="linenos">3</span><span class="w">  </span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;...&quot;</span><span class="w"> </span><span class="na">method=</span><span class="s">&quot;stack sequence&quot;</span><span class="nt">&gt;</span>
@@ -1013,11 +1111,7 @@ sequence code. A template is shown below.</p>
 </ul>
 <p>Examples</p>
 <table class="table table-center" id="id3">
-<caption><span class="caption-number">Table 39 </span><span class="caption-text">Examples of stacking sequence code</span><a class="headerlink" href="#id3" title="Permalink to this table">#</a></caption>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
+<caption><span class="caption-number">Table 23 </span><span class="caption-text">Examples of stacking sequence code</span><a class="headerlink" href="#id3" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Code</p></th>
 <th class="head"><p>Complete sequence</p></th>
@@ -1033,7 +1127,7 @@ sequence code. A template is shown below.</p>
 </tbody>
 </table>
 <div class="literal-block-wrapper docutils container" id="code-material">
-<div class="code-block-caption"><span class="caption-number">Listing 49 </span><span class="caption-text">Example material and lamina input file for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 38</span></a>.</span><a class="headerlink" href="#code-material" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 35 </span><span class="caption-text">Example material and lamina input file for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 33</span></a>.</span><a class="headerlink" href="#code-material" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;materials&gt;</span>
 <span class="linenos"> 2</span><span class="w">  </span><span class="nt">&lt;material</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;square&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;orthotropic&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 3</span><span class="w">    </span><span class="nt">&lt;density&gt;</span>...<span class="nt">&lt;/density&gt;</span>
@@ -1059,7 +1153,7 @@ sequence code. A template is shown below.</p>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="code-layup">
-<div class="code-block-caption"><span class="caption-number">Listing 50 </span><span class="caption-text">Example layup input file for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 38</span></a>.</span><a class="headerlink" href="#code-layup" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 36 </span><span class="caption-text">Example layup input file for the layup shown in <a class="reference internal" href="#fig-layup"><span class="std std-numref">Fig. 33</span></a>.</span><a class="headerlink" href="#code-layup" title="Permalink to this code">#</a></div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;layups&gt;</span>
 <span class="linenos"> 2</span><span class="w">  </span><span class="nt">&lt;layup</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;layup_el&quot;</span><span class="w"> </span><span class="na">method=</span><span class="s">&quot;explicit list&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 3</span><span class="w">    </span><span class="nt">&lt;layer</span><span class="w"> </span><span class="na">lamina=</span><span class="s">&quot;la_hexagon_10&quot;</span><span class="nt">&gt;</span><span class="w"> </span>45:2<span class="w"> </span><span class="nt">&lt;/layer&gt;</span>
@@ -1081,9 +1175,9 @@ sequence code. A template is shown below.</p>
 </pre></div>
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
                 </article>
@@ -1091,8 +1185,10 @@ sequence code. A template is shown below.</p>
 
               
               
-                <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="pre_shape.html"
@@ -1147,7 +1243,7 @@ sequence code. A template is shown below.</p>
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -1160,6 +1256,7 @@ By Su Tian, Haodong Du, Fei Tao and Wenbin Yu
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2022, Multiscale Structural Mechanics Group, Purdue University.
@@ -1177,7 +1274,7 @@ By Su Tian, Haodong Du, Fei Tao and Wenbin Yu
     
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -1186,8 +1283,8 @@ By Su Tian, Haodong Du, Fei Tao and Wenbin Yu
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>

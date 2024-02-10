@@ -1,3 +1,5 @@
+.. include:: /replace.txt
+
 .. _section-material-layup:
 
 Materials and layups
